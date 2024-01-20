@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\nPython test:\n\nimport matplotlib.pyplot as plt\nplt.scatter([1, 2], [3, 4])"
+    "text": "About this site\nPython test:\n\nimport matplotlib.pyplot as plt\nplt.scatter([1, 2], [3, 4])\n\n\n\n\n\n\n\n\nR test:"
   },
   {
     "objectID": "index.html",
