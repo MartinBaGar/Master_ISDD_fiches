@@ -4,11 +4,15 @@ project:
 website:
   title: "Master ISDD fiches"
   navbar:
-    logo: "images/UniParisCite_logo_horizontal_noir_RVB.png"
-    left:
-      - href: index.qmd
-        text: Home
+    logo: "images/UniversiteParisCite_logo_horizontal_noir_RVB.png"
+    left: 
+      - text: "MDA"
+        menu:
+        - mda/mda.qmd
+        - mda/a.qmd
+        - mda/b.qmd
       - about.qmd
+  reader-mode: true
 
 format:
   html:
@@ -16,6 +20,3 @@ format:
       - custom.scss
     css: styles.css
     toc: true
-
-
-

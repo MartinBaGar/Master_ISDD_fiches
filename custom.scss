@@ -1,17 +1,11 @@
 /*-- scss:defaults --*/
-$h2-font-size:          1.6rem !default;
-$headings-font-weight:  500 !default;
+$upcolour: #8a1538;
 
 /*-- scss:rules --*/
 h1 {
-    // color: #8a1538 !important; // Replace with the current color code
     color: black;
 }
 
 header > nav {
-    background-color: #8a1538 !important;
+    background-color: $upcolour !important;
 }
-
-// .navbar-brand {
-//     color: black;
-//   }

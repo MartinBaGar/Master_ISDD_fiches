@@ -1,19 +1,7 @@
 ---
-title: "About"
+title: "About Me"
+title-block: none
+engine: knitr
 ---
 
-About this site
-
-Python test:
-
-```{python}
-import matplotlib.pyplot as plt
-plt.scatter([1, 2], [3, 4])
-```
-
-R test:
-
-```{r}
-data(cars)
-plot(cars)
-```
+Hi ! My name is Martin Bari Garnier, I'm currently in my first year in the Master ISDD (last run: `{r} format(Sys.Date(), "%B %Y")`).
