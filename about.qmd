@@ -13,3 +13,7 @@ plt.scatter([1, 2], [3, 4])
 
 R test:
 
+```{r}
+data(cars)
+plot(cars)
+```
