@@ -3,3 +3,10 @@ title: "About"
 ---
 
 About this site
+
+Python test:
+
+```{python}
+import matplotlib.pyplot as plt
+plt.scatter([1, 2], [3, 4])
+```
