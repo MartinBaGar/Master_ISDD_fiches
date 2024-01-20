@@ -2,7 +2,8 @@ project:
   type: website
 
 website:
-  title: "Master_ISDD_fiches"
+  title: "Master ISDD fiches"
+  favicon: "images/UniversiteParisCite_logo_horizontal_couleur_RVB.png"
   navbar:
     logo: "images/UniversiteParisCite_logo_horizontal_couleur_RVB.png"
     left:
