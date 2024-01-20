@@ -4,7 +4,7 @@ project:
 website:
   title: "Master ISDD fiches"
   navbar:
-    logo: "images/UniversiteParisCite_logo_horizontal_couleur_RVB.png"
+    logo: "images/UniversiteParisCite_logo_horizontal_noir_RVB.png"
     left:
       - href: index.qmd
         text: Home
@@ -12,7 +12,8 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      - custom.scss
     css: styles.css
     toc: true
 
