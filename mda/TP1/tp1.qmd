@@ -1,0 +1,132 @@
+---
+title: "TP1 : Classification des données"
+author: Martin Bari Garnier
+format: html
+---
+
+Dans ce TP, l'objectif est d'utiliser des méthodes de classification non-supervisées sur des variables indépendantes de notre jeu de données. Ce dernier contient des poches de protéines décrites par 18 descripteurs, les variables indépendantes.
+
+Chargeons les données dans un premier temps
+
+```{r}
+load('../data/X.Rdata')
+```
+
+Visualisation des données du dataframe X
+```{r}
+par(mfrow = c(1, 2))
+boxplot(X, las = 2)
+boxplot(scale(X), las = 2)
+```
+
+# Hierarchical classification
+
+```{r}
+# Mise à l'échelle des données
+x_scaled <- scale(X)
+
+# Justifier les méthodes
+mat_dist <- dist(x_scaled, method = "euclidian")
+x_classif <- hclust(mat_dist, method = "ward.D")
+```
+
+Nous utilisons une méthode euclidienne pour la matrice de distance car nous travaillons sur des grandeurs géométriques.
+
+```{r}
+library(factoextra)
+
+par(mfrow = c(1, 1))
+# Détermination du nombre optimal de clusters
+fviz_nbclust(x_scaled, method = "wss", FUNcluster=hcut)
+
+# Représentation de l'arbre de classification
+plot(x_classif, labels = FALSE)
+rect.hclust(x_classif, k=5)
+
+# Récupération des clusters
+cutree(x_classif, k=10)
+table(cutree(x_classif, k=10))
+```
+
+```{r}
+loc <- cmdscale(mat_dist)
+x <- loc[, 1]
+y <- loc[, 2]
+
+## note asp = 1, to ensure Euclidean distances are represented correctly
+plot(x, y, type = "n", xlab = "", ylab = "", asp = 1, axes = FALSE,
+     main = "cmdscale(eurodist)")
+text(x, y, rownames(loc), cex = 0.6)
+```
+
+# kmeans
+
+```{r}
+# Clustering des infividus
+x_clust <- kmeans(mat_dist, centers=10)
+plot(x_scaled, col = x_clust$cluster)
+points(x_clust$centers, col = 1:5, pch = 8)
+```
+
+## Combien de clusters faut-il faire
+
+## `nstart`
+
+`nstart` permet de choisir le nombre de sets aléatoires de centres à tester. Si nous prenons `nstart = 1`, un seul set aléatoire de centres sera testé. Cela donc générer des clusters différents entre deux réalisation de kmeans. Si nous prenons `nstart = 50`, 50 sets différents seront testés. Ainsi les résultats convergeront vers les mêmes clusters, garantissant une reproductibilité des résultat entre deux itérations. Un équilibre est à trouver en fonction de la taille du jeu de données, pour un petit jeu tel que le nôtre un `nstart = 50` pourrait être trop élevé.
+
+
+```{r}
+x_clust_1 <- kmeans(mat_dist, centers=10, nstart=1)
+tb_1 <- table(x_clust_1$cluster)
+
+x_clust_5 <- kmeans(mat_dist, centers=10, nstart=5)
+tb_5 <- table(x_clust_5$cluster)
+
+x_clust_10 <- kmeans(mat_dist, centers=10, nstart=10)
+tb_10 <- table(x_clust_10$cluster)
+
+x_clust_25 <- kmeans(mat_dist, centers=10, nstart=25)
+tb_25 <- table(x_clust_25$cluster)
+
+x_clust_50 <- kmeans(mat_dist, centers=10, nstart=50)
+tb_50 <- table(x_clust_50$cluster)
+```
+
+Différentes valeurs de nstart on été testées: 1, 5 10, 25, 50, 100. La répartition étant identique à partir de 5 donc nous allons continuer avec elle.
+
+```{r}
+loc <- cmdscale(mat_dist)
+x <- loc[, 1]
+y <- loc[, 2]
+
+## note asp = 1, to ensure Euclidean distances are represented correctly
+plot(x, y, type = "n", xlab = "", ylab = "", asp = 1, axes = FALSE,
+     main = "cmdscale(eurodist)")
+text(x, y, rownames(loc), cex = 0.6)
+```
+
+```{r}
+# Clustering des individus final
+plot(x_scaled, col = x_clust_5$cluster)
+points(x_clust$centers, col = 1:5, pch = 8)
+```
+cmd
+Recherche du nombre optimal de clusters
+
+```{r}
+fviz_nbclust(x_scaled, method = "wss", FUNcluster=hcut)
+```
+
+# Comparaison classification et clusters
+
+# Classification des descripteurs
+
+```{r}
+mat_cor <- cor(X)
+mat_cor_dist <- as.dist(1 - mat_cor**2)
+```
+
+```{r}
+# library(gplots)
+# heatmap.2(mat_cor_dist, hclustfun=hclust)
+```

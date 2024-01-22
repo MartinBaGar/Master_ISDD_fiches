@@ -1,0 +1,241 @@
+---
+title: "Comparaison des performances de méthodes de régression et d'arbres de partitionnement pour la prédiction de la druggabilité d'une poche de protéine"
+author: "Martin Bari Garnier M1ISDD"
+output:
+  pdf_document:     
+    df_print: kable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, results = "hide", fig.show = "hide", echo = FALSE) 
+```
+
+```{r}
+library(caret)
+library(dplyr)
+library(tidyr)
+```
+
+```{r}
+load("../data/X.Rdata")
+load("../data/Y.Rdata")
+load("../data/train.dtf.Rdata")
+load("../data/test.dtf.Rdata")
+```
+
+```{r}
+train_score <- train.dtf[, -which(colnames(train.dtf)=="drugg")]
+lm_score <- lm(score~., data = train_score)
+```
+
+```{r}
+# Création de la matrice de corrélation
+cor_x <- cor(X)
+
+# Mise en évidence des descripteurs corrélés et colinéaires
+findCorrelation(cor_x)
+findLinearCombos(cor_x)
+colnames(X[, c(6, 11, 13)])
+```
+
+```{r}
+slm_original <- lm(score~., data = train_score)
+slm_original_res <- slm_original$residuals
+slm_stepped <- step(slm_original, direction = "both")
+```
+
+```{r}
+spred_train <- predict.lm(slm_stepped, newdata = train.dtf)
+spred_test <- predict.lm(slm_stepped, newdata = test.dtf)
+```
+
+```{r}
+sperf_train_lm <- postResample(spred_train, train.dtf$score)
+sperf_test_lm <- postResample(spred_test, test.dtf$score)
+```
+
+```{r}
+slm_summary <- summary(slm_stepped)
+
+adj_r2 <- function(ind, desc, r2) {
+   return (1 - ((1- r2)*(ind-1)/(ind-desc-1)))
+}
+
+slm_rsq <- adj_r2(37, length(slm_stepped$coefficients), sperf_test_lm[2])
+slm_summary$adj.r.squared
+slm_rsq
+```
+
+```{r}
+train_drugg <- train.dtf[, -which(colnames(train.dtf)=="score")]
+train_drugg$drugg <- as.factor(train_drugg$drugg)
+
+glm_original <- glm(drugg~., data = train_drugg, family = "binomial", maxit = 1000)
+glm_stepped <- step(glm_original, direction = "both")
+```
+
+```{r}
+glm_ori_res <- glm_original$residuals
+glm_stp_res <- glm_stepped$residuals
+```
+
+```{r}
+dpred_train_logi <- predict.glm(glm_stepped, newdata = train.dtf, type = "response")
+dpred_test_logi <- predict.glm(glm_stepped, newdata = test.dtf, type = "response")
+
+dpred_train_logi_round <- as.factor(round(dpred_train_logi))
+dpred_test_logi_round <- as.factor(round(dpred_test_logi))
+```
+
+```{r}
+conf_glm_train <- confusionMatrix(dpred_train_logi_round, train.dtf$drugg)
+conf_glm_test <- confusionMatrix(dpred_test_logi_round, test.dtf$drugg)
+```
+
+```{r}
+library(rpart)
+library(rpart.plot)
+
+load("../data/train.dtf.Rdata")
+load("../data/test.dtf.Rdata")
+```
+
+```{r}
+train_drugg <- train.dtf[, -which(colnames(train.dtf) == "score")]
+test_drugg <- test.dtf[, -which(colnames(test.dtf) == "score")]
+```
+
+```{r}
+Fit <- rpart(drugg~., data = train_drugg, control = rpart.control(minsplit = 1))
+
+# Train set
+fit_predict_train <- predict(Fit, newdata = train_drugg)
+conf_train_fit <- confusionMatrix(as.factor(round(fit_predict_train[, 2])),
+                               as.factor(train_drugg$drugg))
+# Test set
+fit_predict_test <- predict(Fit, newdata = test_drugg)
+conf_test_fit <- confusionMatrix(as.factor(round(fit_predict_test[, 2])),
+                               as.factor(test_drugg$drugg))
+```
+
+```{r}
+Ness <- prune(Fit, cp = 0.057)
+
+# Train set
+ness_predict_train <- predict(Ness, newdata = train_drugg)
+conf_train_ness <- confusionMatrix(as.factor(round(ness_predict_train[, 2])),
+                               as.factor(train_drugg$drugg))
+
+# Test set
+ness_predict_test <- predict(Ness, newdata = test_drugg)
+conf_test_ness <- confusionMatrix(as.factor(round(ness_predict_test[, 2])),
+                               as.factor(test_drugg$drugg))
+```
+
+```{r}
+df_acc <- data.frame(
+  train_fit = conf_train_fit$overall[1],
+  test_fit = conf_test_fit$overall[1],
+  train_ness = conf_train_ness$overall[1],
+  test_ness = conf_test_ness$overall[1]
+)
+
+t(df_acc)
+```
+
+```{r}
+train_score <- train.dtf[, -which(colnames(train.dtf) == "drugg")]
+test_score <- test.dtf[, -which(colnames(test.dtf) == "drugg")]
+```
+
+```{r}
+Fit <- rpart(score~., data = train_score, control = rpart.control(minsplit = 2))
+
+# Train set
+fit_spred_train <- predict(Fit, newdata = train_score)
+sperf_train_fit <- postResample(fit_spred_train, train_score$score)
+
+# Test set
+fit_spred_test <- predict(Fit, newdata = test_score)
+sperf_test_fit <- postResample(fit_spred_test, test_score$score)
+```
+
+```{r}
+Ness <- prune(Fit, cp = 0.042)
+
+# Train set
+ness_spred_train <- predict(Ness, newdata = train_drugg)
+sperf_train_ness <- postResample(ness_spred_train, train_score$score)
+
+# Test set
+ness_spred_test <- predict(Ness, newdata = test_drugg)
+sperf_test_ness <- postResample(ness_spred_test, test_score$score)
+```
+
+```{r}
+slm_summary <- summary(slm_stepped)
+
+adj_r2 <- function(ind, desc, r2) {
+   return (1 - ((1- r2)*(ind-1)/(ind-desc-1)))
+}
+
+slm_rsq <- adj_r2(37, length(slm_stepped$coefficients), sperf_test_lm[2])
+slm_summary$adj.r.squared
+slm_rsq
+cart_train_rsq <- adj_r2(72, 3, sperf_train_ness[2])
+cart_test_rsq <- adj_r2(37, length(slm_stepped$coefficients), sperf_test_ness[2])
+
+accuracy_test <- conf_glm_test$overall[1]
+sensitivity_test <- conf_glm_test$byClass[1]
+specificity_test <- conf_glm_test$byClass[2]
+
+accuracy_train <- conf_glm_train$overall[1]
+sensitivity_train <- conf_glm_train$byClass[1]
+specificity_train <- conf_glm_train$byClass[2]
+```
+
+# Introduction 
+
+Lors de cette séance de travaux pratiques, nous avons comparé la capacité de prédiction de druggabilité de molécules de méthodes de régression linéaire, régression logistique multiple et d'arbre de partitionnement (CART). Pour cela nous avons utilisé un jeu de données constitué de 109 poches de protéines décrites par 18 descripteurs. Des informations sur leur druggabilité  en faisant partie ont été utilisées afin de créer un modèle statistique permettant de prédire la druggabilité de poches dont cette information n'est pas connue. Afin de réaliser nos modèles, nous avons séparé notre jeu de données initial en un jeu d'apprentissage et un jeu de validation, de proportions respectives 2/3, 1/3.
+
+# Prédiction du *score*
+
+```{r, results=TRUE}
+drugg_df <- data.frame(
+  Méthode = c("Reg. lin - Train", "Reg. lin - Test", "CART - Train", "CART - Test"),
+  Rsquared = c(sperf_train_lm[2], sperf_test_lm[2], sperf_train_ness[2], sperf_test_ness[2]),
+  Radjusted = c(slm_summary$adj.r.squared, slm_rsq, cart_train_rsq, cart_test_rsq),
+  RMSE = c(sperf_train_lm[1], sperf_test_lm[1], sperf_train_ness[1], sperf_train_ness[1])
+)
+
+drugg_df
+```
+
+La première propriété que nous avons tenté de prédire est le score. C'est une variable quantitative que nous avons approché à l'aide d'une régression linéaire et de CART. Pour la régression linéaire, nous avons sélectionné les descripteurs les plus pertinents à l'aide d'une méthode automatisée *step-wise*.
+
+## Résultats
+
+Nous voyons tout d'abord que les R carré et R carré ajusté présentent des résultats similaires. En effet pour la régression linéaire (RL) nous trouvons des valeurs plus élevées de R carré et R carré ajusté (RCA) pour le jeu de validation que pour le jeu d'entraînement, et pour la CART nous trouvons des valeurs plus élevés pour le jeu d'apprentissage que pour le jeu de validation. Le RCA étant plus caractéristique de nos données que le R carré, nous ne continuons l'analyse qu'avec ce dernier. Nous voyons que nos deux méthodes ont produit des modèles efficaces car les RCA sont élevés pour la CART (>0,86) et très élevés pour la RL (>0,94). Cela indique que ces modèles ont une forte capacité d'ajustement à nos données afin de prédire un bon score. De plus ces modèles sont fiables car nous avons un RCA de validation supérieur à celui d'apprentissage pour la RL et un RCA de validation très proche de celui d'apprentissage pour la CART, montrant ainsi qu'il n'y a pas de risque de sur-apprentissage de notre modèle sur nos données spécifiquement. Nous voyons également que pour les deux méthodes, nous avons des RMSE basses comparé au score moyen de 246. Nous observons des valeurs plus élevées pour le jeu de validation ce que nous pouvions attendre car le modèle a été construit sur ce dernier. Cette anaylse du RMSE indique donc une bonne précision de nos modèles à prédire des score corrects.
+
+# Prédiction de la *druggabilité*
+
+```{r, results=TRUE}
+drugg_df <- data.frame(
+  Méthode = c("Reg. log. - Train", "Reg. log. - Test", "CART - Train", "CART - Test"),
+  Accuracy = c(accuracy_train, accuracy_test, conf_train_ness$overall[1], conf_test_ness$overall[1]),
+  Sensitivity = c(sensitivity_train, sensitivity_test, conf_train_ness$byClass[1], conf_test_ness$byClass[1]),
+  Specificity = c(specificity_train, specificity_test, conf_train_ness$byClass[2], conf_test_ness$byClass[2])
+)
+
+drugg_df
+```
+
+La druggabilité que nous avons ensuite essayé de prédire est une variable dichotomique (1 - druggable; 0 - non druggable). Nous l'avons étudiée à l'aide d'une régression logistique et de la même CART que précédemment (modèle différent du score). 
+
+# Résultats
+
+Nous voyons des résultats plus mitigés que pour la prédiction du score. Tout d'abord, nous observons des valeurs toujours supérieures pour le jeu d'apprentissage que pour le jeu de validation pour les trois performances. Si nous nous penchons sur l'accuracy de la RL, nous voyons une différence de valeur d'environ 0,6 ce qui indique qu'il n'y a pas eu de sur-apprentissage. En nous intéressant aux valeurs en elles mêmes, nous voyons de bonnes performances donc une bonne capacité à déterminer si une poche est druggable. Pour la CART, nous avons une différence d'environ 0,23 ce qui pourrait indiquer un possible sur-apprentissage du modèle sur le jeu d'apprentissage. L'accuracy reste néanmoins élevée ce qui pourrait laisser une possibilité d'optimisation de la technique. Nous pourrions par exemple optimiser l'élaguage ou modifier les descripteurs utilisés. Les observations sont similaires pour la sensitivité et la sélectivité de CART ce qui empêche une analyse plus en profondeur de cette méthode pour l prédiction de la druggabilité. Si nous revenons sur la régression logistique, nous observons de bonnes sensitivités et spécificités ce qui indique une bonne capacité de discrimination des vrais positifs et négatifs, ajoutant ainsi un degré de qualité au taux de positifs rapportés par l'accuracy. En effet l'accuracy peut être biaisée dans le cas d'échantillons peu homogènes.
+
+# Conclusion
+
+Nous avons ici mis en évidence l'impact que peut avoir le type de donnée à prédire sur les méthodes employées. Nous avons vu d'un côte une méthode CART robuste dans la prédiction d'une variable quantitative mais moins fiable dans le cas d'une variable dichotomique, avec cependant des résultats acceptables. De l'autre côté nous avons vu que les méthodes de régression peuvent s'avérer très puissantes lors que le bon type est associé à la bonne variable. Avec des résultats robustes pour le score et la druggabilité, nous avons observé des performances supérieurs que la CART pour le score. Il faut cependant mettre en perspective la mise en place du protocole car nous avons utilisé des méthodes diffférentes pour les modèles de régression alors que la même méthode CART a permis de produire nos différents modèles. Dans notre cas, la liste de descripteurs est assez courte et permet avec d'émettre une hypothèse de lien entre la variable à prédire et les descripteurs. Avec des connaissance, il peut être plus ou moins hasardeux de faire une lien de linéarité et donc d'aller préferentiellement vers un modèle de régression ou non. Si certains descripteurs ont réellement un lien linéaire avec la variable, il y aura de forte chance pour qu'un modèle de régression linéaire soit plus efficace. Pour la méthode de CART, le sur-apprentissage peut être le résultat d'une protocole non optimisé car elle peut être optimisée selon le critère de division, de profondeur maximale ou bien d'arrêt. Dans le cas de descripteurs moins linéaires elle pourrait s'avérer plus flexible. La petite taille de notre jeu de données a probablement eu aussi un impact sur les performances des modèles avec notamment CART qui selon l'élaguage pourrait être plus sensible au sur-apprentissage. Pour construire un modèle robuste à l'aide d'une méthode d'arbre de partitionnement il faudrait donc effectuer une optimisation du protocole en fonction du jeu de données ou encore essayer d'autres méthodes de cette catégorie telle que la forêt aléatoire.

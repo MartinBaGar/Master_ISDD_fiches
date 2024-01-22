@@ -1,0 +1,173 @@
+---
+title: "TP3"
+author: "Martin Bari Garnier"
+date: "2024-01-15"
+output: html_document
+---
+
+# Régression linéaire sur les données initiales, non nettoyées
+
+```{r}
+load("../data/X.Rdata")
+load("../data/Y.Rdata")
+load("../data/train.dtf.Rdata")
+load("../data/test.dtf.Rdata")
+```
+
+```{r}
+train_score <- train.dtf[, -which(colnames(train.dtf)=="drugg")]
+```
+
+
+```{r}
+library(caret)
+lm_score <- lm(score~., data = train_score)
+summary(lm_score)
+plot(lm_score)
+# plot(lm_score$fitted.values, dtf_new$score)
+```
+Nous avons un modèle avec un R-carré ajusté à 0.9392 donc notre modèle est très performant. Il faut cependant avoir en tête que les données n'ont pas été normalisées. En effet, Real_volume prend toute la variabilité du fait de son ordre de grandeur bien supérieur aux autres descripteurs. Nous voyons aussi qu'il y a un descripteur avec des coefficients NA ce qui indique une corrélation ou une colinéarité avec un ou plusieurs autres descripteurs.
+
+# Calcul du modèle de régression linéaire multiple
+
+## Préparation du jeu de données
+
+A l'aide d'un `summary()`, nous avons vu qu'il n'y avait pas de NA dans notre jeu de données. Nous devons enlever les valeurs manquantes car la régression effectuée requiert une matrice complète. D'autres méthodes par inférence existent afin de remplacer des valeurs manquantes mais par définition elles dénaturent la qualité des résultats. Pour ne pas prendre ne compte les valeurs manquantes, nous pouvons modifier le df en utilisant na.omit() ou nous pouvons effectuer la régression multiple sans prendre en compte les colonnes ou lignes contenant les valeurs manquantes.
+
+## Etude de l'autocorrélation
+
+```{r}
+# Création de la matrice de corrélation
+cor_x <- cor(X)
+
+# Heatmap
+heatmap(cor_x)
+
+# Mise en évidence des descripteurs corrélés et colinéaires
+findCorrelation(cor_x)
+findLinearCombos(cor_x)
+colnames(X[, c(6, 11, 13)])
+```
+Nous avons choisi un seuil de corrélation de 0,9 correspondant à la valeur par défaut car elle nous permet de retirer uniquement deux colonnes. Nous voulons garder un jeu de descripteurs large et varié.
+Cette fonction nous indique que les colonnes 6, 4, 5 sont colinéaires. Elle nous conseille de retirer la colonne 6. 
+
+## Sélection des descripteurs pertinents
+
+Nous réalisons une régression linéaire pour chaque descripteur en fonction du score.
+
+```{r, eval=F}
+clean_train_score <- train_score[, which(!colnames(train_score) %in% c("C_RESIDUES", "positive", "Real_volume"))]
+p_values <- NULL
+
+for (i in 1:(length(clean_train_score)-1)) {
+  lm_tmp <- lm(clean_train_score$score~clean_train_score[, i])
+  summary_model <- summary(lm_tmp)
+  p_value <- summary_model$coefficients[, "Pr(>|t|)"][2]
+  p_values <- c(p_values, p_value)
+}
+
+names(p_values) <- colnames(clean_train_score)[2:14]
+val_desc <- names(p_values[which(p_values<0.2)])
+dtf_final <- dtf_new[c("score", val_desc)]
+```
+
+## Etablissement du modèle
+
+## Réalisation du step
+
+```{r}
+slm_original <- lm(score~., data = train_score)
+slm_original_res <- slm_original$residuals
+slm_stepped <- step(slm_original, direction = "both")
+
+summary(slm_stepped)
+hist(slm_original_res, breaks = 10)
+plot(slm_stepped)
+```
+
+Nous pouvons voir deux lignes horizontales à -100 et 100 ce qui signifie que les variances sont égales et on est dans le cas d'homoscédasticité
+
+```{r}
+spred_train <- predict.lm(slm_original, newdata = train.dtf)
+spred_test <- predict.lm(slm_original, newdata = test.dtf)
+plot(spred_train, train.dtf$score)
+plot(spred_test, test.dtf$score)
+```
+
+```{r}
+sperf_train_lm <- postResample(spred_train, train.dtf$score)
+sperf_test_lm <- postResample(spred_test, test.dtf$score)
+sperf_train_lm
+sperf_test_lm
+```
+
+# Regression logistique multiple
+
+```{r}
+train_drugg <- train.dtf[, -which(colnames(train.dtf)=="score")]
+train_drugg$drugg <- as.factor(train_drugg$drugg)
+
+glm_original <- glm(drugg~., data = train_drugg, family = "binomial", maxit = 1000)
+glm_stepped <- step(glm_original, direction = "both")
+
+plot(glm_original$fitted.values, train_drugg$drugg)
+```
+
+```{r}
+glm_ori_res <- glm_original$residuals
+glm_stp_res <- glm_stepped$residuals
+hist(glm_ori_res, breaks = 10)
+hist(glm_stp_res, breaks = 10)
+plot(glm_ori_res)
+plot(glm_stp_res)
+```
+
+```{r, eval=F}
+dtf_train_clean <- train.dtf[, which(!colnames(dtf_new) %in% c("C_RESIDUES", "positive", "Real_volume"))]
+p_values <- NULL
+
+for (i in 1:(length(clean_dtf)-1)) {
+  glm_tmp <- glm(dtf_train_clean$drugg~dtf_train_clean[, i], family = "binomial", maxit = 1000)
+  summary_model <- summary(glm_tmp)
+  p_value <- summary_model$coefficients[, "Pr(>|z|)"][2]
+  p_values <- c(p_values, p_value)
+}
+
+names(p_values) <- colnames(dtf_train_clean)[2:14]
+val_desc <- names(p_values[which(p_values<0.05)])
+dtf_train_final <- train_log[c("drugg", val_desc)]
+```
+
+Nous pouvons voir deux lignes horizontales à -100 et 100 ce qui signifie que les variances sont égales et on est dans le cas d'homoscédasticité
+
+```{r}
+dpred_train_logi <- predict.glm(glm_stepped, newdata = train.dtf, type = "response")
+dpred_test_logi <- predict.glm(glm_stepped, newdata = test.dtf, type = "response")
+
+dpred_train_logi_round <- as.factor(round(dpred_train_logi))
+dpred_test_logi_round <- as.factor(round(dpred_test_logi))
+
+plot(dpred_train_logi, train.dtf$drugg)
+plot(dpred_test_logi, test.dtf$drugg)
+```
+
+```{r}
+confusionMatrix(dpred_train_logi_round, train.dtf$drugg)
+confusionMatrix(dpred_test_logi_round, test.dtf$drugg)
+```
+
+
+```{r, eval=F}
+library(pROC)
+roc_curve_test <- roc(test.dtf$drugg, pred_test_logi)
+
+plot(roc_curve_test)
+legend("bottomright", legend = paste("AUC = ", round(auc(roc_curve_test), 2)), col = "blue", lty = 1)
+
+roc_curve_train <- roc(train.dtf$drugg, pred_train_logi)
+
+plot(roc_curve_train)
+legend("bottomright", legend = paste("AUC = ", round(auc(roc_curve_train), 2)), col = "blue", lty = 1)
+```
+
+
