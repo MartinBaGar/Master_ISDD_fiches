@@ -26,11 +26,7 @@ format:
       - custom.scss
     css: styles.css
     toc: true
-    code-fold: true
-    code-tools:
-      source: true
-      toggle: false
-      caption: none
+    smooth-scroll: true
 
 execute:
   freeze: auto

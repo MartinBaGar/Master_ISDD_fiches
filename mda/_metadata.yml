@@ -1,0 +1,5 @@
+# Options that will apply to all the files in the folder
+code-fold: show
+code-line-numbers: true
+code-overflow: wrap
+code-copy: true
