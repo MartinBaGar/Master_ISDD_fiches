@@ -1,1 +1,1 @@
-Sitemap: https://MartinBaGar.github.io/Master_ISDD_fiches/sitemap.xml
+Sitemap: https://github.com/MartinBaGar/Master_ISDD_fiches/sitemap.xml
