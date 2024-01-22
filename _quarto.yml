@@ -27,3 +27,6 @@ format:
     css: styles.css
     toc: true
     code-tools: true
+
+execute:
+  freeze: auto
