@@ -1,45 +1,129 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Master ISDD fiches",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
     "section": "",
-    "text": "In this website, I’ll present various topics that were covered during my Master Bio-Informatics: In Silico Drug Design at the Université Paris-Cité.\nThis is not professional content so if you see that something isn’t right and would like to volunteer, please contact me at this address: martin.bari-garnier@etu.unistra.fr. Enjoy !"
+    "text": "Hi ! My name is Martin Bari Garnier, I’m currently in my first year in the Master ISDD (last run: January 2024).\nTest.\n\ndata(cars)\nplot(cars)"
   },
   {
-    "objectID": "mda/b.html",
-    "href": "mda/b.html",
-    "title": "My Second Page",
+    "objectID": "mda/TP1/tp1.html",
+    "href": "mda/TP1/tp1.html",
+    "title": "TP1 : Classification des données",
     "section": "",
-    "text": "Welcome to the second page of my website! This is another QMD file that you can use as a starting point for your website.\n\n\nIn this section, you can introduce the second page and provide some background information about it.\n\n\n\nHere, you can list the features and functionalities of the second page.\n\n\n\nIn this section, you can provide instructions on how to navigate and use the second page.\n\n\n\nIf users have any questions or feedback, they can reach out to you through the contact information provided here."
+    "text": "Dans ce TP, l’objectif est d’utiliser des méthodes de classification non-supervisées sur des variables indépendantes de notre jeu de données. Ce dernier contient des poches de protéines décrites par 18 descripteurs, les variables indépendantes.\nChargeons les données dans un premier temps\nload('../data/X.Rdata')\nVisualisation des données du dataframe X\npar(mfrow = c(1, 2))\nboxplot(X, las = 2)\nboxplot(scale(X), las = 2)"
   },
   {
-    "objectID": "mda/b.html#introduction",
-    "href": "mda/b.html#introduction",
-    "title": "My Second Page",
-    "section": "",
-    "text": "In this section, you can introduce the second page and provide some background information about it."
+    "objectID": "mda/TP1/tp1.html#combien-de-clusters-faut-il-faire",
+    "href": "mda/TP1/tp1.html#combien-de-clusters-faut-il-faire",
+    "title": "TP1 : Classification des données",
+    "section": "Combien de clusters faut-il faire",
+    "text": "Combien de clusters faut-il faire"
   },
   {
-    "objectID": "mda/b.html#features",
-    "href": "mda/b.html#features",
-    "title": "My Second Page",
-    "section": "",
-    "text": "Here, you can list the features and functionalities of the second page."
+    "objectID": "mda/TP1/tp1.html#nstart",
+    "href": "mda/TP1/tp1.html#nstart",
+    "title": "TP1 : Classification des données",
+    "section": "nstart",
+    "text": "nstart\nnstart permet de choisir le nombre de sets aléatoires de centres à tester. Si nous prenons nstart = 1, un seul set aléatoire de centres sera testé. Cela donc générer des clusters différents entre deux réalisation de kmeans. Si nous prenons nstart = 50, 50 sets différents seront testés. Ainsi les résultats convergeront vers les mêmes clusters, garantissant une reproductibilité des résultat entre deux itérations. Un équilibre est à trouver en fonction de la taille du jeu de données, pour un petit jeu tel que le nôtre un nstart = 50 pourrait être trop élevé.\n\nx_clust_1 &lt;- kmeans(mat_dist, centers=10, nstart=1)\ntb_1 &lt;- table(x_clust_1$cluster)\n\nx_clust_5 &lt;- kmeans(mat_dist, centers=10, nstart=5)\ntb_5 &lt;- table(x_clust_5$cluster)\n\nx_clust_10 &lt;- kmeans(mat_dist, centers=10, nstart=10)\ntb_10 &lt;- table(x_clust_10$cluster)\n\nx_clust_25 &lt;- kmeans(mat_dist, centers=10, nstart=25)\ntb_25 &lt;- table(x_clust_25$cluster)\n\nx_clust_50 &lt;- kmeans(mat_dist, centers=10, nstart=50)\ntb_50 &lt;- table(x_clust_50$cluster)\n\nDifférentes valeurs de nstart on été testées: 1, 5 10, 25, 50, 100. La répartition étant identique à partir de 5 donc nous allons continuer avec elle.\n\nloc &lt;- cmdscale(mat_dist)\nx &lt;- loc[, 1]\ny &lt;- loc[, 2]\n\n## note asp = 1, to ensure Euclidean distances are represented correctly\nplot(x, y, type = \"n\", xlab = \"\", ylab = \"\", asp = 1, axes = FALSE,\n     main = \"cmdscale(eurodist)\")\ntext(x, y, rownames(loc), cex = 0.6)\n\n\n\n\n\n\n\n\n\n# Clustering des individus final\nplot(x_scaled, col = x_clust_5$cluster)\npoints(x_clust$centers, col = 1:5, pch = 8)\n\n\n\n\n\n\n\n\ncmd Recherche du nombre optimal de clusters\n\nfviz_nbclust(x_scaled, method = \"wss\", FUNcluster=hcut)"
   },
   {
-    "objectID": "mda/b.html#how-to-use",
-    "href": "mda/b.html#how-to-use",
-    "title": "My Second Page",
+    "objectID": "mda/TP3/tp3.html",
+    "href": "mda/TP3/tp3.html",
+    "title": "TP3",
     "section": "",
-    "text": "In this section, you can provide instructions on how to navigate and use the second page."
+    "text": "load(\"../data/X.Rdata\")\nload(\"../data/Y.Rdata\")\nload(\"../data/train.dtf.Rdata\")\nload(\"../data/test.dtf.Rdata\")\n\n\ntrain_score &lt;- train.dtf[, -which(colnames(train.dtf)==\"drugg\")]\n\n\nlibrary(caret)\n\nLoading required package: ggplot2\n\n\nLoading required package: lattice\n\nlm_score &lt;- lm(score~., data = train_score)\nsummary(lm_score)\n\n\nCall:\nlm(formula = score ~ ., data = train_score)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-106.08  -21.10    2.80   21.39   93.09 \n\nCoefficients: (1 not defined because of singularities)\n                                    Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)                        -77.74671  154.75161  -0.502   0.6174    \naromatic                             7.14923   81.80382   0.087   0.9307    \npolar                               11.97115   69.71791   0.172   0.8643    \naliphatic                          111.34361   82.29585   1.353   0.1815    \ncharged                            -76.68689  105.91847  -0.724   0.4721    \nnegative                           -17.76245  120.01168  -0.148   0.8829    \npositive                                  NA         NA      NA       NA    \nhydrophobic                       -124.73217   80.54730  -1.549   0.1271    \nsmall                              -36.48391   70.13055  -0.520   0.6050    \ntiny                                80.08128   77.04033   1.039   0.3031    \nC_ATOM                               0.44659    0.59816   0.747   0.4584    \nC_RESIDUES                          -0.74231    1.56561  -0.474   0.6372    \nMean_alpha.sphere_radius            73.90467   37.38355   1.977   0.0530 .  \nReal_volume                          0.19245    0.02564   7.505 5.07e-10 ***\nProportion_of_apolar_alpha_sphere  -32.00992   47.84819  -0.669   0.5063    \nMean_B.factor                      -75.21093   41.35019  -1.819   0.0743 .  \nMean_alpha.sphere_SA              -229.92250  196.10652  -1.172   0.2460    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 38.33 on 56 degrees of freedom\nMultiple R-squared:  0.9485,    Adjusted R-squared:  0.9347 \nF-statistic: 68.74 on 15 and 56 DF,  p-value: &lt; 2.2e-16\n\nplot(lm_score)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# plot(lm_score$fitted.values, dtf_new$score)\n\nNous avons un modèle avec un R-carré ajusté à 0.9392 donc notre modèle est très performant. Il faut cependant avoir en tête que les données n’ont pas été normalisées. En effet, Real_volume prend toute la variabilité du fait de son ordre de grandeur bien supérieur aux autres descripteurs. Nous voyons aussi qu’il y a un descripteur avec des coefficients NA ce qui indique une corrélation ou une colinéarité avec un ou plusieurs autres descripteurs."
   },
   {
-    "objectID": "mda/b.html#contact",
-    "href": "mda/b.html#contact",
-    "title": "My Second Page",
+    "objectID": "mda/TP3/tp3.html#préparation-du-jeu-de-données",
+    "href": "mda/TP3/tp3.html#préparation-du-jeu-de-données",
+    "title": "TP3",
+    "section": "Préparation du jeu de données",
+    "text": "Préparation du jeu de données\nA l’aide d’un summary(), nous avons vu qu’il n’y avait pas de NA dans notre jeu de données. Nous devons enlever les valeurs manquantes car la régression effectuée requiert une matrice complète. D’autres méthodes par inférence existent afin de remplacer des valeurs manquantes mais par définition elles dénaturent la qualité des résultats. Pour ne pas prendre ne compte les valeurs manquantes, nous pouvons modifier le df en utilisant na.omit() ou nous pouvons effectuer la régression multiple sans prendre en compte les colonnes ou lignes contenant les valeurs manquantes."
+  },
+  {
+    "objectID": "mda/TP3/tp3.html#etude-de-lautocorrélation",
+    "href": "mda/TP3/tp3.html#etude-de-lautocorrélation",
+    "title": "TP3",
+    "section": "Etude de l’autocorrélation",
+    "text": "Etude de l’autocorrélation\n\n# Création de la matrice de corrélation\ncor_x &lt;- cor(X)\n\n# Heatmap\nheatmap(cor_x)\n\n\n\n\n\n\n\n# Mise en évidence des descripteurs corrélés et colinéaires\nfindCorrelation(cor_x)\n\n[1] 11 13\n\nfindLinearCombos(cor_x)\n\n$linearCombos\n$linearCombos[[1]]\n[1] 6 4 5\n\n\n$remove\n[1] 6\n\ncolnames(X[, c(6, 11, 13)])\n\n[1] \"positive\"    \"C_RESIDUES\"  \"Real_volume\"\n\n\nNous avons choisi un seuil de corrélation de 0,9 correspondant à la valeur par défaut car elle nous permet de retirer uniquement deux colonnes. Nous voulons garder un jeu de descripteurs large et varié. Cette fonction nous indique que les colonnes 6, 4, 5 sont colinéaires. Elle nous conseille de retirer la colonne 6."
+  },
+  {
+    "objectID": "mda/TP3/tp3.html#sélection-des-descripteurs-pertinents",
+    "href": "mda/TP3/tp3.html#sélection-des-descripteurs-pertinents",
+    "title": "TP3",
+    "section": "Sélection des descripteurs pertinents",
+    "text": "Sélection des descripteurs pertinents\nNous réalisons une régression linéaire pour chaque descripteur en fonction du score.\n\nclean_train_score &lt;- train_score[, which(!colnames(train_score) %in% c(\"C_RESIDUES\", \"positive\", \"Real_volume\"))]\np_values &lt;- NULL\n\nfor (i in 1:(length(clean_train_score)-1)) {\n  lm_tmp &lt;- lm(clean_train_score$score~clean_train_score[, i])\n  summary_model &lt;- summary(lm_tmp)\n  p_value &lt;- summary_model$coefficients[, \"Pr(&gt;|t|)\"][2]\n  p_values &lt;- c(p_values, p_value)\n}\n\nnames(p_values) &lt;- colnames(clean_train_score)[2:14]\nval_desc &lt;- names(p_values[which(p_values&lt;0.2)])\ndtf_final &lt;- dtf_new[c(\"score\", val_desc)]"
+  },
+  {
+    "objectID": "mda/TP3/tp3.html#etablissement-du-modèle",
+    "href": "mda/TP3/tp3.html#etablissement-du-modèle",
+    "title": "TP3",
+    "section": "Etablissement du modèle",
+    "text": "Etablissement du modèle"
+  },
+  {
+    "objectID": "mda/TP3/tp3.html#réalisation-du-step",
+    "href": "mda/TP3/tp3.html#réalisation-du-step",
+    "title": "TP3",
+    "section": "Réalisation du step",
+    "text": "Réalisation du step\n\nslm_original &lt;- lm(score~., data = train_score)\nslm_original_res &lt;- slm_original$residuals\nslm_stepped &lt;- step(slm_original, direction = \"both\")\n\nStart:  AIC=538.98\nscore ~ aromatic + polar + aliphatic + charged + negative + positive + \n    hydrophobic + small + tiny + C_ATOM + C_RESIDUES + Mean_alpha.sphere_radius + \n    Real_volume + Proportion_of_apolar_alpha_sphere + Mean_B.factor + \n    Mean_alpha.sphere_SA\n\n\nStep:  AIC=538.98\nscore ~ aromatic + polar + aliphatic + charged + negative + hydrophobic + \n    small + tiny + C_ATOM + C_RESIDUES + Mean_alpha.sphere_radius + \n    Real_volume + Proportion_of_apolar_alpha_sphere + Mean_B.factor + \n    Mean_alpha.sphere_SA\n\n                                    Df Sum of Sq    RSS    AIC\n- aromatic                           1        11  82303 536.99\n- negative                           1        32  82324 537.01\n- polar                              1        43  82335 537.02\n- C_RESIDUES                         1       330  82622 537.27\n- small                              1       398  82690 537.33\n- Proportion_of_apolar_alpha_sphere  1       658  82950 537.55\n- charged                            1       770  83062 537.65\n- C_ATOM                             1       819  83111 537.69\n- tiny                               1      1588  83880 538.35\n- Mean_alpha.sphere_SA               1      2020  84312 538.72\n&lt;none&gt;                                            82292 538.98\n- aliphatic                          1      2690  84982 539.29\n- hydrophobic                        1      3524  85816 540.00\n- Mean_B.factor                      1      4862  87153 541.11\n- Mean_alpha.sphere_radius           1      5743  88035 541.84\n- Real_volume                        1     82760 165052 587.09\n\nStep:  AIC=536.99\nscore ~ polar + aliphatic + charged + negative + hydrophobic + \n    small + tiny + C_ATOM + C_RESIDUES + Mean_alpha.sphere_radius + \n    Real_volume + Proportion_of_apolar_alpha_sphere + Mean_B.factor + \n    Mean_alpha.sphere_SA\n\n                                    Df Sum of Sq    RSS    AIC\n- negative                           1        28  82332 535.01\n- polar                              1        72  82375 535.05\n- C_RESIDUES                         1       335  82638 535.28\n- small                              1       524  82827 535.44\n- Proportion_of_apolar_alpha_sphere  1       649  82952 535.55\n- C_ATOM                             1       810  83113 535.69\n- charged                            1       897  83200 535.77\n- tiny                               1      1677  83980 536.44\n- Mean_alpha.sphere_SA               1      2021  84324 536.73\n&lt;none&gt;                                            82303 536.99\n- aliphatic                          1      3358  85661 537.87\n- hydrophobic                        1      4610  86913 538.91\n+ aromatic                           1        11  82292 538.98\n- Mean_B.factor                      1      5214  87517 539.41\n- Mean_alpha.sphere_radius           1      5940  88243 540.00\n- Real_volume                        1     84993 167296 586.06\n\nStep:  AIC=535.01\nscore ~ polar + aliphatic + charged + hydrophobic + small + tiny + \n    C_ATOM + C_RESIDUES + Mean_alpha.sphere_radius + Real_volume + \n    Proportion_of_apolar_alpha_sphere + Mean_B.factor + Mean_alpha.sphere_SA\n\n                                    Df Sum of Sq    RSS    AIC\n- polar                              1       129  82461 533.13\n- C_RESIDUES                         1       311  82643 533.28\n- C_ATOM                             1       788  83119 533.70\n- Proportion_of_apolar_alpha_sphere  1       841  83173 533.74\n- small                              1       948  83279 533.84\n- Mean_alpha.sphere_SA               1      1996  84327 534.74\n- tiny                               1      2244  84575 534.95\n&lt;none&gt;                                            82332 535.01\n- charged                            1      2374  84706 535.06\n- aliphatic                          1      3585  85917 536.08\n+ negative                           1        28  82303 536.99\n+ positive                           1        28  82303 536.99\n+ aromatic                           1         7  82324 537.01\n- hydrophobic                        1      4927  87258 537.20\n- Mean_B.factor                      1      5195  87527 537.42\n- Mean_alpha.sphere_radius           1      6125  88456 538.18\n- Real_volume                        1     94755 177086 588.16\n\nStep:  AIC=533.13\nscore ~ aliphatic + charged + hydrophobic + small + tiny + C_ATOM + \n    C_RESIDUES + Mean_alpha.sphere_radius + Real_volume + Proportion_of_apolar_alpha_sphere + \n    Mean_B.factor + Mean_alpha.sphere_SA\n\n                                    Df Sum of Sq    RSS    AIC\n- C_RESIDUES                         1       311  82772 531.40\n- C_ATOM                             1       755  83216 531.78\n- Proportion_of_apolar_alpha_sphere  1       899  83360 531.91\n- small                              1      1103  83564 532.08\n- Mean_alpha.sphere_SA               1      1949  84410 532.81\n- tiny                               1      2236  84697 533.05\n- charged                            1      2322  84783 533.13\n&lt;none&gt;                                            82461 533.13\n- aliphatic                          1      3682  86143 534.27\n+ polar                              1       129  82332 535.01\n+ negative                           1        86  82375 535.05\n+ positive                           1        86  82375 535.05\n+ aromatic                           1        45  82416 535.09\n- Mean_B.factor                      1      5181  87642 535.51\n- Mean_alpha.sphere_radius           1      6005  88466 536.19\n- hydrophobic                        1      6063  88524 536.23\n- Real_volume                        1     97115 179576 587.16\n\nStep:  AIC=531.4\nscore ~ aliphatic + charged + hydrophobic + small + tiny + C_ATOM + \n    Mean_alpha.sphere_radius + Real_volume + Proportion_of_apolar_alpha_sphere + \n    Mean_B.factor + Mean_alpha.sphere_SA\n\n                                    Df Sum of Sq    RSS    AIC\n- C_ATOM                             1       524  83296 529.85\n- Proportion_of_apolar_alpha_sphere  1       688  83460 529.99\n- small                              1      1229  84002 530.46\n- Mean_alpha.sphere_SA               1      1638  84410 530.81\n- tiny                               1      1998  84771 531.11\n- charged                            1      2293  85065 531.36\n&lt;none&gt;                                            82772 531.40\n- aliphatic                          1      3412  86185 532.31\n+ C_RESIDUES                         1       311  82461 533.13\n+ polar                              1       130  82643 533.28\n+ aromatic                           1        57  82716 533.35\n+ negative                           1        41  82732 533.36\n+ positive                           1        41  82732 533.36\n- Mean_B.factor                      1      4869  87642 533.51\n- Mean_alpha.sphere_radius           1      5699  88472 534.19\n- hydrophobic                        1      5990  88762 534.43\n- Real_volume                        1     96959 179731 585.22\n\nStep:  AIC=529.85\nscore ~ aliphatic + charged + hydrophobic + small + tiny + Mean_alpha.sphere_radius + \n    Real_volume + Proportion_of_apolar_alpha_sphere + Mean_B.factor + \n    Mean_alpha.sphere_SA\n\n                                    Df Sum of Sq     RSS    AIC\n- Proportion_of_apolar_alpha_sphere  1       790   84086 528.53\n- Mean_alpha.sphere_SA               1      1452   84748 529.10\n- small                              1      1627   84923 529.24\n- tiny                               1      2238   85534 529.76\n&lt;none&gt;                                             83296 529.85\n- charged                            1      2497   85794 529.98\n- aliphatic                          1      3637   86933 530.93\n+ C_ATOM                             1       524   82772 531.40\n+ polar                              1        82   83214 531.78\n+ C_RESIDUES                         1        81   83216 531.78\n+ aromatic                           1        12   83284 531.84\n+ negative                           1         0   83296 531.85\n+ positive                           1         0   83296 531.85\n- Mean_B.factor                      1      5075   88371 532.11\n- hydrophobic                        1      6002   89298 532.86\n- Mean_alpha.sphere_radius           1      6597   89893 533.34\n- Real_volume                        1   1335762 1419058 732.00\n\nStep:  AIC=528.53\nscore ~ aliphatic + charged + hydrophobic + small + tiny + Mean_alpha.sphere_radius + \n    Real_volume + Mean_B.factor + Mean_alpha.sphere_SA\n\n                                    Df Sum of Sq     RSS    AIC\n- small                              1       960   85046 527.35\n- Mean_alpha.sphere_SA               1      1081   85167 527.45\n- charged                            1      1867   85953 528.11\n- tiny                               1      2110   86196 528.32\n&lt;none&gt;                                             84086 528.53\n- aliphatic                          1      2877   86963 528.95\n+ Proportion_of_apolar_alpha_sphere  1       790   83296 529.85\n+ C_ATOM                             1       626   83460 529.99\n- Mean_B.factor                      1      4428   88514 530.23\n+ C_RESIDUES                         1       220   83866 530.34\n+ polar                              1       122   83964 530.43\n+ negative                           1       108   83978 530.44\n+ positive                           1       108   83978 530.44\n+ aromatic                           1         0   84086 530.53\n- hydrophobic                        1      5820   89906 531.35\n- Mean_alpha.sphere_radius           1      6384   90470 531.80\n- Real_volume                        1   1355876 1439962 731.05\n\nStep:  AIC=527.35\nscore ~ aliphatic + charged + hydrophobic + tiny + Mean_alpha.sphere_radius + \n    Real_volume + Mean_B.factor + Mean_alpha.sphere_SA\n\n                                    Df Sum of Sq     RSS    AIC\n- tiny                               1      1164   86211 526.33\n- Mean_alpha.sphere_SA               1      1347   86394 526.48\n- charged                            1      1463   86509 526.58\n&lt;none&gt;                                             85046 527.35\n- aliphatic                          1      2694   87740 527.59\n+ small                              1       960   84086 528.53\n+ C_ATOM                             1       912   84134 528.57\n+ negative                           1       485   84561 528.94\n+ positive                           1       485   84561 528.94\n+ polar                              1       231   84815 529.15\n+ C_RESIDUES                         1       231   84816 529.15\n+ aromatic                           1       220   84826 529.16\n- Mean_B.factor                      1      4672   89718 529.20\n+ Proportion_of_apolar_alpha_sphere  1       124   84923 529.24\n- hydrophobic                        1      4865   89912 529.35\n- Mean_alpha.sphere_radius           1      6723   91769 530.83\n- Real_volume                        1   1387743 1472790 730.67\n\nStep:  AIC=526.33\nscore ~ aliphatic + charged + hydrophobic + Mean_alpha.sphere_radius + \n    Real_volume + Mean_B.factor + Mean_alpha.sphere_SA\n\n                                    Df Sum of Sq     RSS    AIC\n- aliphatic                          1      1677   87887 525.71\n- Mean_alpha.sphere_SA               1      1929   88140 525.92\n&lt;none&gt;                                             86211 526.33\n- charged                            1      3014   89224 526.80\n+ tiny                               1      1164   85046 527.35\n+ C_ATOM                             1       880   85330 527.59\n- hydrophobic                        1      4172   90383 527.73\n+ negative                           1       659   85551 527.77\n+ positive                           1       659   85551 527.77\n+ C_RESIDUES                         1       493   85718 527.91\n+ Proportion_of_apolar_alpha_sphere  1       405   85805 527.99\n- Mean_B.factor                      1      4582   90792 528.06\n+ polar                              1       113   86098 528.23\n+ aromatic                           1       105   86106 528.24\n+ small                              1        15   86196 528.32\n- Mean_alpha.sphere_radius           1      7003   93214 529.95\n- Real_volume                        1   1405963 1492173 729.61\n\nStep:  AIC=525.71\nscore ~ charged + hydrophobic + Mean_alpha.sphere_radius + Real_volume + \n    Mean_B.factor + Mean_alpha.sphere_SA\n\n                                    Df Sum of Sq     RSS    AIC\n&lt;none&gt;                                             87887 525.71\n- Mean_alpha.sphere_SA               1      2636   90524 525.84\n- hydrophobic                        1      2700   90587 525.89\n+ aliphatic                          1      1677   86211 526.33\n- charged                            1      3582   91469 526.59\n+ C_ATOM                             1      1003   86885 526.89\n- Mean_B.factor                      1      4176   92063 527.06\n+ aromatic                           1       521   87367 527.29\n+ C_RESIDUES                         1       473   87415 527.33\n+ negative                           1       273   87614 527.49\n+ positive                           1       273   87614 527.49\n+ small                              1       189   87698 527.56\n+ tiny                               1       148   87740 527.59\n+ polar                              1       103   87785 527.63\n+ Proportion_of_apolar_alpha_sphere  1         0   87887 527.71\n- Mean_alpha.sphere_radius           1      7422   95310 529.55\n- Real_volume                        1   1404611 1492498 727.63\n\nsummary(slm_stepped)\n\n\nCall:\nlm(formula = score ~ charged + hydrophobic + Mean_alpha.sphere_radius + \n    Real_volume + Mean_B.factor + Mean_alpha.sphere_SA, data = train_score)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-118.179  -21.801    6.118   25.229   96.618 \n\nCoefficients:\n                           Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)              -3.742e+01  8.277e+01  -0.452   0.6527    \ncharged                  -8.619e+01  5.296e+01  -1.628   0.1085    \nhydrophobic              -6.769e+01  4.790e+01  -1.413   0.1624    \nMean_alpha.sphere_radius  5.674e+01  2.422e+01   2.343   0.0222 *  \nReal_volume               2.067e-01  6.413e-03  32.231   &lt;2e-16 ***\nMean_B.factor            -6.366e+01  3.623e+01  -1.757   0.0836 .  \nMean_alpha.sphere_SA     -2.241e+02  1.605e+02  -1.396   0.1674    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 36.77 on 65 degrees of freedom\nMultiple R-squared:  0.945, Adjusted R-squared:  0.9399 \nF-statistic: 186.1 on 6 and 65 DF,  p-value: &lt; 2.2e-16\n\nhist(slm_original_res, breaks = 10)\n\n\n\n\n\n\n\nplot(slm_stepped)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNous pouvons voir deux lignes horizontales à -100 et 100 ce qui signifie que les variances sont égales et on est dans le cas d’homoscédasticité\n\nspred_train &lt;- predict.lm(slm_original, newdata = train.dtf)\n\nWarning in predict.lm(slm_original, newdata = train.dtf): prediction from\nrank-deficient fit; attr(*, \"non-estim\") has doubtful cases\n\nspred_test &lt;- predict.lm(slm_original, newdata = test.dtf)\n\nWarning in predict.lm(slm_original, newdata = test.dtf): prediction from\nrank-deficient fit; attr(*, \"non-estim\") has doubtful cases\n\nplot(spred_train, train.dtf$score)\n\n\n\n\n\n\n\nplot(spred_test, test.dtf$score)\n\n\n\n\n\n\n\n\n\nsperf_train_lm &lt;- postResample(spred_train, train.dtf$score)\nsperf_test_lm &lt;- postResample(spred_test, test.dtf$score)\nsperf_train_lm\n\n      RMSE   Rsquared        MAE \n33.8074404  0.9484854 26.0540532 \n\nsperf_test_lm\n\n      RMSE   Rsquared        MAE \n47.6112194  0.9435464 35.8992548"
+  },
+  {
+    "objectID": "mda/TP2/tp2.html",
+    "href": "mda/TP2/tp2.html",
+    "title": "TP2 : Analyse en Composantes Principales",
     "section": "",
-    "text": "If users have any questions or feedback, they can reach out to you through the contact information provided here."
+    "text": "Chargement de l’environnement"
+  },
+  {
+    "objectID": "mda/TP2/tp2.html#présentation-des-données",
+    "href": "mda/TP2/tp2.html#présentation-des-données",
+    "title": "TP2 : Analyse en Composantes Principales",
+    "section": "Présentation des données",
+    "text": "Présentation des données\nChargement des données\n\nload(\"../data/X.Rdata\")\nload(\"../data/Y.Rdata\")\n\nNotre jeu de données contient 109 poches, chacune décrite par 18 descripteurs.\n\nlibrary(FactoMineR)\n\nres.pca &lt;- PCA(X, scale.unit = TRUE, graph = TRUE, ncp = 5)\n\n# Visualisation des descripteurs\nbarplot(res.pca$eig[, 1:3], beside = TRUE)\n\n\n# Etude de l'espace des variables\nplot(res.pca, choix = 'var')\n\n\n\n\n\n\n\n# Etude de l'espace des individus\nplot(res.pca, choix = 'ind', label=\"none\")"
+  },
+  {
+    "objectID": "mda/TP2/tp2.html#comparaisons-des-données-en-fonction-de-la-mise-à-léchelle",
+    "href": "mda/TP2/tp2.html#comparaisons-des-données-en-fonction-de-la-mise-à-léchelle",
+    "title": "TP2 : Analyse en Composantes Principales",
+    "section": "Comparaisons des données en fonction de la mise à l’échelle",
+    "text": "Comparaisons des données en fonction de la mise à l’échelle\nNous observons que pour les données mises à l’échelle nous avons plusieurs valeurs propres des importances décroissante. Si nous observons le barplot des données non mises à l’échelle, nous n’avons qu’une seule valeur propre dont la valeur est très élevée. Si nous comparons les graphes des variables, nous voyons pour les données mises à l’échelle deux composantes principales expliquant respectivement 25,86% et 18,74% de descripteurs. Pour les données non mises à l’échelle nous voyons une première CP à 99,91%. Cela est dû à l’ordre de grandeur du volume réel qui est bien supérieur à celui des autres descripteurs.\nPour travailler sur la suite, nous allons donc utiliser les valeurs mises à l’échelle et nous choissons donc de travailler avec les trois premières composantes principales qui expliquent environ 60% des résultats."
+  },
+  {
+    "objectID": "mda/TP2/tp2.html#etude-du-graphe-des-variables",
+    "href": "mda/TP2/tp2.html#etude-du-graphe-des-variables",
+    "title": "TP2 : Analyse en Composantes Principales",
+    "section": "Etude du graphe des variables",
+    "text": "Etude du graphe des variables\nSur ce plan, nous avons 44,6% de variabilité ce qui implique que toute la variance du jeu de données n’est pas expliquée par ces deux vecteurs propres. Nous voyons qu’il y bien des variables mieux représentées que d’autres, elles correspondent à celles s’éloignant le plus de centre du graphe (ex: C_ATOM, polar, aliphatic) Les variables corrélées sont celles situées dans les mêmes régions par rapport à un axe et les anti-corrélées sont celles dans les régions opposées par rapport à un axe. Les variables “indépendantes” sont celles n’étant pas expliquées par les deux axes. Nous n’avons pas d’information sur elles et ne peuvent donc pas être comparées aux autres. Nous avons donc un premier axe qui caractérise la polarité"
+  },
+  {
+    "objectID": "mda/TP2/tp2.html#etude-du-graphe-des-individus",
+    "href": "mda/TP2/tp2.html#etude-du-graphe-des-individus",
+    "title": "TP2 : Analyse en Composantes Principales",
+    "section": "Etude du graphe des individus",
+    "text": "Etude du graphe des individus\nIl y bien des outliers, points isolés du reste. Pour les proches au centre de la projection sont celles étant mal expliquées par nos deux composantes principales.\n\nplot(res.pca, choix = 'ind', select = poches, axes = c(3,4))\n\nWarning: ggrepel: 3 unlabeled data points (too many overlaps). Consider\nincreasing max.overlaps\n\n\n\n\n\n\n\n\n\n\nlibrary(corrplot)\n\ncorrplot 0.92 loaded\n\ncorrplot(cor(X), tl.cex = 0.7)"
+  },
+  {
+    "objectID": "mda/TP2/tp2.html#biplot",
+    "href": "mda/TP2/tp2.html#biplot",
+    "title": "TP2 : Analyse en Composantes Principales",
+    "section": "Biplot",
+    "text": "Biplot\n\nlibrary(ggplot2)\nlibrary(factoextra)\n\nWelcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa\n\nfviz_pca_biplot(res.pca, label=\"var\", repel = TRUE)"
+  },
+  {
+    "objectID": "mda/TP2/tp2.html#réalisation-de-deux-échantillons-train-et-test-set",
+    "href": "mda/TP2/tp2.html#réalisation-de-deux-échantillons-train-et-test-set",
+    "title": "TP2 : Analyse en Composantes Principales",
+    "section": "Réalisation de deux échantillons, train et test set",
+    "text": "Réalisation de deux échantillons, train et test set\n\ntrain.names &lt;- sample(rownames(X), 2*nrow(X)/3, replace = FALSE)\ntest.names &lt;- rownames(X)[-which(rownames(X) %in% train.names)]\n\n\nres.sample &lt;- PCA(X, scale.unit = TRUE, ind.sup = match(test.names, rownames(X)))\nfviz_pca_biplot(res.sample, geom='point')\n\n\ntrain.set &lt;- X[train.names,]\ntest.set &lt;- X[test.names,]\n\ntrain.dtf &lt;- cbind(train.set, Y[train.names,])\ntest.dtf &lt;- cbind(test.set, Y[test.names,])"
+  },
+  {
+    "objectID": "mda/TP2/tp2.html#réitération-du-protocole-avec-les-résultats-du-tp1",
+    "href": "mda/TP2/tp2.html#réitération-du-protocole-avec-les-résultats-du-tp1",
+    "title": "TP2 : Analyse en Composantes Principales",
+    "section": "Réitération du protocole avec les résultats du TP1",
+    "text": "Réitération du protocole avec les résultats du TP1\n\n# res.cutree &lt;- cutree(x_classif, k=4)\n\n# clust_colors &lt;- c(\"red\", \"blue\", \"green\", \"yellow\")\n\n# fviz_pca_biplot(res.pca, col.ind = res.cutree, label = \"var\", choix = \"ind\")"
   },
   {
     "objectID": "mda/mda.html",
@@ -49,45 +133,17 @@
     "text": "Massive Data Analysis\nThis is the index page for the Massive Data Analysis section."
   },
   {
-    "objectID": "mda/a.html",
-    "href": "mda/a.html",
-    "title": "My Website",
+    "objectID": "mda/TP4/tp4.html",
+    "href": "mda/TP4/tp4.html",
+    "title": "TP4 : arbres de partitionnement, cart",
     "section": "",
-    "text": "Welcome to my website! This is a simple QMD file that you can use as a starting point for your website.\n\n\nIn this section, you can introduce yourself and provide some background information about your website.\n\n\n\nHere, you can list the features and functionalities of your website.\n\n\n\nIn this section, you can provide instructions on how to navigate and use your website.\n\n\n\nIf users have any questions or feedback, they can reach out to you through the contact information provided here."
+    "text": "load(\"../data/train.dtf.Rdata\")\nload(\"../data/test.dtf.Rdata\")\n\n\nlibrary(rpart)\nlibrary(rpart.plot)\n\nCréation de jeux de données corrects\n\n#train.names &lt;- sample(rownames(X), 2*nrow(X)/3, replace = FALSE)\n#test.names &lt;- rownames(X)[-which(rownames(X) %in% train.names)]\n\n#res.sample &lt;- PCA(X, scale.unit = TRUE, ind.sup = match(test.names, rownames(X)))\n#fviz_pca_biplot(res.sample, geom='point')\n\n#train.set &lt;- X[train.names,]\n#test.set &lt;- X[test.names,]\n\n#train.dtf &lt;- cbind(train.set, Y[train.names,])\n#test.dtf &lt;- cbind(test.set, Y[test.names,])\n\n#save(train.dtf, file = \"../data/train.dtf.Rdata\")\n#save(test.dtf, file = \"../data/test.dtf.Rdata\")\n\n\ntrain_drugg &lt;- train.dtf[, -which(colnames(train.dtf) == \"score\")]\ntest_drugg &lt;- test.dtf[, -which(colnames(test.dtf) == \"score\")]\n\nFit &lt;- rpart(drugg~., data = train_drugg, control = rpart.control(minsplit = 1))\nrpart.plot(Fit, extra = 2)\n\n\n\n\n\n\n\n\n\nlibrary(caret)\n\nLoading required package: ggplot2\n\n\nLoading required package: lattice\n\n# Train set\nfit_predict_train &lt;- predict(Fit, newdata = train_drugg)\nconf_train_fit &lt;- confusionMatrix(as.factor(round(fit_predict_train[, 2])),\n                               as.factor(train_drugg$drugg))\n# Test set\nfit_predict_test &lt;- predict(Fit, newdata = test_drugg)\nconf_test_fit &lt;- confusionMatrix(as.factor(round(fit_predict_test[, 2])),\n                               as.factor(test_drugg$drugg))\n# Plot\nplotcp(Fit)\n\n\n\n\n\n\n\n\n\nNess &lt;- prune(Fit, cp = 0.057)\nrpart.plot(Ness)\n\n\n\n\n\n\n\n\n\n# Train set\nness_predict_train &lt;- predict(Ness, newdata = train_drugg)\nconf_train_ness &lt;- confusionMatrix(as.factor(round(ness_predict_train[, 2])),\n                               as.factor(train_drugg$drugg))\n\n# Test set\nness_predict_test &lt;- predict(Ness, newdata = test_drugg)\nconf_test_ness &lt;- confusionMatrix(as.factor(round(ness_predict_test[, 2])),\n                               as.factor(test_drugg$drugg))\n\n\nconf_train_fit$overall[1]\n\nAccuracy \n       1 \n\nconf_test_fit$overall[1]\n\n Accuracy \n0.7027027 \n\nconf_train_ness$overall[1]\n\n Accuracy \n0.9305556 \n\nconf_test_ness$overall[1]\n\n Accuracy \n0.7027027 \n\ndf_acc &lt;- data.frame(\n  train_fit = conf_train_fit$overall[1],\n  test_fit = conf_test_fit$overall[1],\n  train_ness = conf_train_ness$overall[1],\n  test_ness = conf_test_ness$overall[1]\n)\n\ndf_acc &lt;- t(df_acc)\n\n\ntrain_score &lt;- train.dtf[, -which(colnames(train.dtf) == \"drugg\")]\ntest_score &lt;- test.dtf[, -which(colnames(test.dtf) == \"drugg\")]\n\nFit &lt;- rpart(score~., data = train_score, control = rpart.control(minsplit = 2))\nrpart.plot(Fit)\n\n\n\n\n\n\n\n\n\nlibrary(caret)\n\n# Train set\nfit_spred_train &lt;- predict(Fit, newdata = train_score)\nsperf_train_fit &lt;- postResample(fit_spred_train, train_score$score)\n\n# Test set\nfit_spred_test &lt;- predict(Fit, newdata = test_score)\nsperf_test_fit &lt;- postResample(fit_spred_test, test_score$score)\n\n# Plot\nplotcp(Fit)\n\n\n\n\n\n\n\n\n\nNess &lt;- prune(Fit, cp = 0.042)\nrpart.plot(Ness)\n\n\n\n\n\n\n\n\n\n# Train set\nness_spred_train &lt;- predict(Ness, newdata = train_drugg)\nsperf_train_ness &lt;- postResample(ness_spred_train, train_score$score)\n\n# Test set\nness_spred_test &lt;- predict(Ness, newdata = test_drugg)\nsperf_test_ness &lt;- postResample(ness_spred_test, test_score$score)\n\n\n# Create a dataframe\nresults_df &lt;- data.frame(\n  RMSE = c(41.3386484, 50.6410931, 46.5379404, 50.6410931),\n  Rsquared = c(0.9229773, 0.9299857, 0.9023842, 0.9299857),\n  MAE = c(33.3168518, 39.2805625, 37.7836200, 39.2805625),\n  row.names = c(\"train_original\", \"test_original\", \"train_pruned\", \"test_pruned\")\n)\n\n\nprint(\"hello world!\")"
   },
   {
-    "objectID": "mda/a.html#introduction",
-    "href": "mda/a.html#introduction",
-    "title": "My Website",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Master ISDD fiches",
     "section": "",
-    "text": "In this section, you can introduce yourself and provide some background information about your website."
-  },
-  {
-    "objectID": "mda/a.html#features",
-    "href": "mda/a.html#features",
-    "title": "My Website",
-    "section": "",
-    "text": "Here, you can list the features and functionalities of your website."
-  },
-  {
-    "objectID": "mda/a.html#how-to-use",
-    "href": "mda/a.html#how-to-use",
-    "title": "My Website",
-    "section": "",
-    "text": "In this section, you can provide instructions on how to navigate and use your website."
-  },
-  {
-    "objectID": "mda/a.html#contact",
-    "href": "mda/a.html#contact",
-    "title": "My Website",
-    "section": "",
-    "text": "If users have any questions or feedback, they can reach out to you through the contact information provided here."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "Hi ! My name is Martin Bari Garnier, I’m currently in my first year in the Master ISDD (last run: {r} format(Sys.Date(), \"%B %Y\")).\nTest.\n\ndata(cars)\nplot(cars)"
+    "text": "In this website, I’ll present various topics that were covered during my Master Bio-Informatics: In Silico Drug Design at the Université Paris-Cité.\nThis is not professional content so if you see that something isn’t right and would like to volunteer, please contact me at this address: martin.bari-garnier@etu.unistra.fr. Enjoy !"
   }
 ]

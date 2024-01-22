@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/MartinBaGar/Master_ISDD_fiches/index.html</loc>
-    <lastmod>2024-01-22T15:53:50.504Z</lastmod>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/about.html</loc>
+    <lastmod>2024-01-22T18:34:26.468Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/MartinBaGar/Master_ISDD_fiches/mda/b.html</loc>
-    <lastmod>2024-01-22T15:53:48.904Z</lastmod>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/TP1/tp1.html</loc>
+    <lastmod>2024-01-22T21:27:01.835Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/MartinBaGar/Master_ISDD_fiches/mda/mda.html</loc>
-    <lastmod>2024-01-22T15:53:48.288Z</lastmod>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/TP3/tp3.html</loc>
+    <lastmod>2024-01-22T22:09:25.891Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/MartinBaGar/Master_ISDD_fiches/mda/a.html</loc>
-    <lastmod>2024-01-22T15:53:48.596Z</lastmod>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/TP2/tp2.html</loc>
+    <lastmod>2024-01-22T22:04:06.177Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/MartinBaGar/Master_ISDD_fiches/about.html</loc>
-    <lastmod>2024-01-22T15:53:50.204Z</lastmod>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/mda.html</loc>
+    <lastmod>2024-01-20T22:02:27.597Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/TP4/tp4.html</loc>
+    <lastmod>2024-01-22T22:12:52.937Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/index.html</loc>
+    <lastmod>2024-01-22T20:54:37.468Z</lastmod>
   </url>
 </urlset>
