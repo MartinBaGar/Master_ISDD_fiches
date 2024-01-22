@@ -27,7 +27,10 @@ format:
     css: styles.css
     toc: true
     code-fold: true
-    code-tools: true
-    
+    code-tools:
+      source: true
+      toggle: false
+      caption: none
+
 execute:
   freeze: auto
