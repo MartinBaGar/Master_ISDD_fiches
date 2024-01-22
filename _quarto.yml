@@ -16,7 +16,7 @@ website:
       - about.qmd
     right:
       - icon: github
-        href: https://martinbagar.github.io/Master_ISDD_fiches/
+        href: https://github.com/MartinBaGar/Master_ISDD_fiches
         aria-label: GitHub
   reader-mode: true
 
@@ -26,7 +26,8 @@ format:
       - custom.scss
     css: styles.css
     toc: true
+    code-fold: true
     code-tools: true
-
+    
 execute:
   freeze: auto
