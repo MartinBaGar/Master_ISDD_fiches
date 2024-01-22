@@ -1,0 +1,6 @@
+{
+  "name": "R",
+  "image": "rocker/rstudio",
+  "forwardPorts": [8787],
+  "postCreateCommand": "install2.r --error --skipinstalled devtools"
+}
