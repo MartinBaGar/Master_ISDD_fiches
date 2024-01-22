@@ -88,6 +88,6 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "Hi ! My name is Martin Bari Garnier, I’m currently in my first year in the Master ISDD (last run: {r} format(Sys.Date(), \"%B %Y\")).\nTest."
+    "text": "Hi ! My name is Martin Bari Garnier, I’m currently in my first year in the Master ISDD (last run: {r} format(Sys.Date(), \"%B %Y\")).\nTest.\n\ndata(cars)\nplot(cars)"
   }
 ]
