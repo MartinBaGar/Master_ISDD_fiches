@@ -1,0 +1,492 @@
+{
+  "build": "mro350hbc2858b_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.2.0",
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "r-magic",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-geometry-0.3_6-mro350hbc2858b_0",
+  "files": [
+    "lib/R/library/geometry/DESCRIPTION",
+    "lib/R/library/geometry/INDEX",
+    "lib/R/library/geometry/LICENSE",
+    "lib/R/library/geometry/Meta/Rd.rds",
+    "lib/R/library/geometry/Meta/features.rds",
+    "lib/R/library/geometry/Meta/hsearch.rds",
+    "lib/R/library/geometry/Meta/links.rds",
+    "lib/R/library/geometry/Meta/nsInfo.rds",
+    "lib/R/library/geometry/Meta/package.rds",
+    "lib/R/library/geometry/NAMESPACE",
+    "lib/R/library/geometry/NEWS",
+    "lib/R/library/geometry/R/geometry",
+    "lib/R/library/geometry/R/geometry.rdb",
+    "lib/R/library/geometry/R/geometry.rdx",
+    "lib/R/library/geometry/doc/Announce.txt",
+    "lib/R/library/geometry/doc/COPYING.txt",
+    "lib/R/library/geometry/doc/File_id.diz",
+    "lib/R/library/geometry/doc/MODIFIED.txt",
+    "lib/R/library/geometry/doc/README.txt",
+    "lib/R/library/geometry/doc/REGISTER.txt",
+    "lib/R/library/geometry/doc/html/index.html",
+    "lib/R/library/geometry/doc/html/qconvex.html",
+    "lib/R/library/geometry/doc/html/qdelau_f.html",
+    "lib/R/library/geometry/doc/html/qdelaun.html",
+    "lib/R/library/geometry/doc/html/qh-code.html",
+    "lib/R/library/geometry/doc/html/qh-eg.html",
+    "lib/R/library/geometry/doc/html/qh-faq.html",
+    "lib/R/library/geometry/doc/html/qh-get.html",
+    "lib/R/library/geometry/doc/html/qh-impre.html",
+    "lib/R/library/geometry/doc/html/qh-optc.html",
+    "lib/R/library/geometry/doc/html/qh-optf.html",
+    "lib/R/library/geometry/doc/html/qh-optg.html",
+    "lib/R/library/geometry/doc/html/qh-opto.html",
+    "lib/R/library/geometry/doc/html/qh-optp.html",
+    "lib/R/library/geometry/doc/html/qh-optq.html",
+    "lib/R/library/geometry/doc/html/qh-optt.html",
+    "lib/R/library/geometry/doc/html/qh-quick.html",
+    "lib/R/library/geometry/doc/html/qhalf.html",
+    "lib/R/library/geometry/doc/html/qhull-cpp.xml",
+    "lib/R/library/geometry/doc/html/qhull.html",
+    "lib/R/library/geometry/doc/html/qhull.man",
+    "lib/R/library/geometry/doc/html/qhull.txt",
+    "lib/R/library/geometry/doc/html/qvoron_f.html",
+    "lib/R/library/geometry/doc/html/qvoronoi.html",
+    "lib/R/library/geometry/doc/html/rbox.html",
+    "lib/R/library/geometry/doc/html/rbox.man",
+    "lib/R/library/geometry/doc/html/rbox.txt",
+    "lib/R/library/geometry/doc/index.html",
+    "lib/R/library/geometry/extdata/ordination.Rdata",
+    "lib/R/library/geometry/help/AnIndex",
+    "lib/R/library/geometry/help/aliases.rds",
+    "lib/R/library/geometry/help/geometry.rdb",
+    "lib/R/library/geometry/help/geometry.rdx",
+    "lib/R/library/geometry/help/paths.rds",
+    "lib/R/library/geometry/html/00Index.html",
+    "lib/R/library/geometry/html/R.css",
+    "lib/R/library/geometry/libs/geometry.so"
+  ],
+  "fn": "r-geometry-0.3_6-mro350hbc2858b_0.conda",
+  "license": "GPL (>= 3) + file LICENSE",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-geometry-0.3_6-mro350hbc2858b_0",
+    "type": 1
+  },
+  "md5": "079cd435ef513bf37497a9cd91684fdc",
+  "name": "r-geometry",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-geometry-0.3_6-mro350hbc2858b_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/geometry/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "e05a187875e74236cc082b1598fc85f31d441caa06ed6c505d1d3056aa490cdf",
+        "sha256_in_prefix": "e05a187875e74236cc082b1598fc85f31d441caa06ed6c505d1d3056aa490cdf",
+        "size_in_bytes": 1818
+      },
+      {
+        "_path": "lib/R/library/geometry/INDEX",
+        "path_type": "hardlink",
+        "sha256": "35f05a295d44dfa6761e85fa876e3fa962121ae73a3136375c6b6790f8956d35",
+        "sha256_in_prefix": "35f05a295d44dfa6761e85fa876e3fa962121ae73a3136375c6b6790f8956d35",
+        "size_in_bytes": 1596
+      },
+      {
+        "_path": "lib/R/library/geometry/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "dbf63cf933041e21d18fc568f76eee33e790876d6f7d489ec24fec8ae512420a",
+        "sha256_in_prefix": "dbf63cf933041e21d18fc568f76eee33e790876d6f7d489ec24fec8ae512420a",
+        "size_in_bytes": 1879
+      },
+      {
+        "_path": "lib/R/library/geometry/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "1b99d69cb74849d7b50d375a7acb11c50371729f0905f8bfbe5d956718525b47",
+        "sha256_in_prefix": "1b99d69cb74849d7b50d375a7acb11c50371729f0905f8bfbe5d956718525b47",
+        "size_in_bytes": 1115
+      },
+      {
+        "_path": "lib/R/library/geometry/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/geometry/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "98dc570f99493c4941b63cadf4adef096c01edcb759215b6bccf2df7fa5fa204",
+        "sha256_in_prefix": "98dc570f99493c4941b63cadf4adef096c01edcb759215b6bccf2df7fa5fa204",
+        "size_in_bytes": 1099
+      },
+      {
+        "_path": "lib/R/library/geometry/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "3141a58bdd64b40c1458c4b2eae8039405c794853658893175d316711538a622",
+        "sha256_in_prefix": "3141a58bdd64b40c1458c4b2eae8039405c794853658893175d316711538a622",
+        "size_in_bytes": 417
+      },
+      {
+        "_path": "lib/R/library/geometry/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "71f5cbc232ae8c592190f3d9a4062bc676366f5977cd395943d520243ee1c2d8",
+        "sha256_in_prefix": "71f5cbc232ae8c592190f3d9a4062bc676366f5977cd395943d520243ee1c2d8",
+        "size_in_bytes": 440
+      },
+      {
+        "_path": "lib/R/library/geometry/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "19eb7422b5be7d9a21112987ec2eafe9b08c9cc1e481420911488c081173ae0d",
+        "sha256_in_prefix": "19eb7422b5be7d9a21112987ec2eafe9b08c9cc1e481420911488c081173ae0d",
+        "size_in_bytes": 1341
+      },
+      {
+        "_path": "lib/R/library/geometry/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "42e1c5060df235a0ecdba4bcf46d27bc924c92bc6f517d922d8006e95cd656ec",
+        "sha256_in_prefix": "42e1c5060df235a0ecdba4bcf46d27bc924c92bc6f517d922d8006e95cd656ec",
+        "size_in_bytes": 714
+      },
+      {
+        "_path": "lib/R/library/geometry/NEWS",
+        "path_type": "hardlink",
+        "sha256": "bd556dbc61eeff2e0b4f43d1cf965ebf05c69055fb83c643362ff56870f15d4f",
+        "sha256_in_prefix": "bd556dbc61eeff2e0b4f43d1cf965ebf05c69055fb83c643362ff56870f15d4f",
+        "size_in_bytes": 7700
+      },
+      {
+        "_path": "lib/R/library/geometry/R/geometry",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/geometry/R/geometry.rdb",
+        "path_type": "hardlink",
+        "sha256": "c996c2c88ae2d58d4262f08fd4530d3da3b2d9e261a473600c9e78337926b46f",
+        "sha256_in_prefix": "c996c2c88ae2d58d4262f08fd4530d3da3b2d9e261a473600c9e78337926b46f",
+        "size_in_bytes": 47468
+      },
+      {
+        "_path": "lib/R/library/geometry/R/geometry.rdx",
+        "path_type": "hardlink",
+        "sha256": "c43773d024543671614f85d65187045fbdb6c04e406603abe438cdb75d439966",
+        "sha256_in_prefix": "c43773d024543671614f85d65187045fbdb6c04e406603abe438cdb75d439966",
+        "size_in_bytes": 656
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/Announce.txt",
+        "path_type": "hardlink",
+        "sha256": "3c3ce09ca47f1208126e3e886ec8eb35a08c047ee07a51b29525595f8c74e1d9",
+        "sha256_in_prefix": "3c3ce09ca47f1208126e3e886ec8eb35a08c047ee07a51b29525595f8c74e1d9",
+        "size_in_bytes": 2458
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/COPYING.txt",
+        "path_type": "hardlink",
+        "sha256": "7839af0cb456f93ed30a12de1264bd6d02171f6ee00f1c2758a9b79c5517a80d",
+        "sha256_in_prefix": "7839af0cb456f93ed30a12de1264bd6d02171f6ee00f1c2758a9b79c5517a80d",
+        "size_in_bytes": 1635
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/File_id.diz",
+        "path_type": "hardlink",
+        "sha256": "d13cac27d4e3e1356f71e7235bfd06aca1843ead84389ec3f18ea0c2e1ef46cb",
+        "sha256_in_prefix": "d13cac27d4e3e1356f71e7235bfd06aca1843ead84389ec3f18ea0c2e1ef46cb",
+        "size_in_bytes": 421
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/MODIFIED.txt",
+        "path_type": "hardlink",
+        "sha256": "a489ad16fb80586cbafa25def31b24721855806c55eaef5df534412dee240b63",
+        "sha256_in_prefix": "a489ad16fb80586cbafa25def31b24721855806c55eaef5df534412dee240b63",
+        "size_in_bytes": 579
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/README.txt",
+        "path_type": "hardlink",
+        "sha256": "79807db54f679be160cb32efd73dbaed624d30af709537d2ffaef82b0f35ad00",
+        "sha256_in_prefix": "79807db54f679be160cb32efd73dbaed624d30af709537d2ffaef82b0f35ad00",
+        "size_in_bytes": 17514
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/REGISTER.txt",
+        "path_type": "hardlink",
+        "sha256": "1e33fa52e6acc47fe5480faab9e6669dbf582472dccb38c4316af977d5d72109",
+        "sha256_in_prefix": "1e33fa52e6acc47fe5480faab9e6669dbf582472dccb38c4316af977d5d72109",
+        "size_in_bytes": 958
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/index.html",
+        "path_type": "hardlink",
+        "sha256": "27f5d32de06f14a3f45030f74d4760706728826410a000beff7bdb7a7541ec66",
+        "sha256_in_prefix": "27f5d32de06f14a3f45030f74d4760706728826410a000beff7bdb7a7541ec66",
+        "size_in_bytes": 32046
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qconvex.html",
+        "path_type": "hardlink",
+        "sha256": "cd40ad5ff1603eb705ad5b5872e78b0c353d397982e5053c14647d269ab4b1bb",
+        "sha256_in_prefix": "cd40ad5ff1603eb705ad5b5872e78b0c353d397982e5053c14647d269ab4b1bb",
+        "size_in_bytes": 25508
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qdelau_f.html",
+        "path_type": "hardlink",
+        "sha256": "0e5c8e254002e744f704b9a5af34f084b6b3e8d9c2427dcb5cd09bce7f4c62fa",
+        "sha256_in_prefix": "0e5c8e254002e744f704b9a5af34f084b6b3e8d9c2427dcb5cd09bce7f4c62fa",
+        "size_in_bytes": 17476
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qdelaun.html",
+        "path_type": "hardlink",
+        "sha256": "d0cddffb421535d34981886bca350cdfdd870b4dcbb8223ee258c33fbefca30c",
+        "sha256_in_prefix": "d0cddffb421535d34981886bca350cdfdd870b4dcbb8223ee258c33fbefca30c",
+        "size_in_bytes": 26598
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-code.html",
+        "path_type": "hardlink",
+        "sha256": "db79c1d97d99b32b9bcfad3dec58392a2546e23460e28c331294067223e15c87",
+        "sha256_in_prefix": "db79c1d97d99b32b9bcfad3dec58392a2546e23460e28c331294067223e15c87",
+        "size_in_bytes": 43408
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-eg.html",
+        "path_type": "hardlink",
+        "sha256": "8b819b10977708469d608f87770c7198dd64a16ea12b6ba5ebf87bed4fb25b5d",
+        "sha256_in_prefix": "8b819b10977708469d608f87770c7198dd64a16ea12b6ba5ebf87bed4fb25b5d",
+        "size_in_bytes": 30885
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-faq.html",
+        "path_type": "hardlink",
+        "sha256": "eb58e284ad397f97e067bbd2628a003f9411a840140410d720fedbf2a8a1bc51",
+        "sha256_in_prefix": "eb58e284ad397f97e067bbd2628a003f9411a840140410d720fedbf2a8a1bc51",
+        "size_in_bytes": 51961
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-get.html",
+        "path_type": "hardlink",
+        "sha256": "432c7142da100c7ac4e09daa102d64030c16b727060ffb022e803e576d929967",
+        "sha256_in_prefix": "432c7142da100c7ac4e09daa102d64030c16b727060ffb022e803e576d929967",
+        "size_in_bytes": 6340
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-impre.html",
+        "path_type": "hardlink",
+        "sha256": "31a4074be2ae5d365edb6f9d9f58ef4a6d991d242133e677474502ee360954b7",
+        "sha256_in_prefix": "31a4074be2ae5d365edb6f9d9f58ef4a6d991d242133e677474502ee360954b7",
+        "size_in_bytes": 34662
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-optc.html",
+        "path_type": "hardlink",
+        "sha256": "9540c4b123ae48118a376fa5f26e82cb2e5b861058a3d7065df326d82faf6f18",
+        "sha256_in_prefix": "9540c4b123ae48118a376fa5f26e82cb2e5b861058a3d7065df326d82faf6f18",
+        "size_in_bytes": 11895
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-optf.html",
+        "path_type": "hardlink",
+        "sha256": "8e0c62b6791aaaca68e4cada1b8a4ecbf61377c3f29060071fe7acc959422caa",
+        "sha256_in_prefix": "8e0c62b6791aaaca68e4cada1b8a4ecbf61377c3f29060071fe7acc959422caa",
+        "size_in_bytes": 31301
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-optg.html",
+        "path_type": "hardlink",
+        "sha256": "0b0b75878368718347c625527dc1fcc6eeadbd3b206e1ad8a3b594727e858c5f",
+        "sha256_in_prefix": "0b0b75878368718347c625527dc1fcc6eeadbd3b206e1ad8a3b594727e858c5f",
+        "size_in_bytes": 11021
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-opto.html",
+        "path_type": "hardlink",
+        "sha256": "a037e0f8abba19bd699ddf377763ad507d573c54e1b33515797716618bce6710",
+        "sha256_in_prefix": "a037e0f8abba19bd699ddf377763ad507d573c54e1b33515797716618bce6710",
+        "size_in_bytes": 14766
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-optp.html",
+        "path_type": "hardlink",
+        "sha256": "a66a70728e572495b6792cad4bebd7a1ce7dcf47008abd08860da4bc79479ce0",
+        "sha256_in_prefix": "a66a70728e572495b6792cad4bebd7a1ce7dcf47008abd08860da4bc79479ce0",
+        "size_in_bytes": 9688
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-optq.html",
+        "path_type": "hardlink",
+        "sha256": "65bdf1c7ce665cbef2afc15d2b6b85b34e6b2c05da0dbf5f8286ef25d49c7eef",
+        "sha256_in_prefix": "65bdf1c7ce665cbef2afc15d2b6b85b34e6b2c05da0dbf5f8286ef25d49c7eef",
+        "size_in_bytes": 31857
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-optt.html",
+        "path_type": "hardlink",
+        "sha256": "b41521766cddf62312e034b3b517312eb3dc2b82a83b0bc4e6d6c390623b3c76",
+        "sha256_in_prefix": "b41521766cddf62312e034b3b517312eb3dc2b82a83b0bc4e6d6c390623b3c76",
+        "size_in_bytes": 11124
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qh-quick.html",
+        "path_type": "hardlink",
+        "sha256": "2509e88c137916495d11b0b8758cf1491b2cb14c93ddab14619ca7bc13ed5b06",
+        "sha256_in_prefix": "2509e88c137916495d11b0b8758cf1491b2cb14c93ddab14619ca7bc13ed5b06",
+        "size_in_bytes": 17650
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qhalf.html",
+        "path_type": "hardlink",
+        "sha256": "83d38ad5620183e6bf266581b90394748a598ba79bd6ee91fc49d2c69dfea8f1",
+        "sha256_in_prefix": "83d38ad5620183e6bf266581b90394748a598ba79bd6ee91fc49d2c69dfea8f1",
+        "size_in_bytes": 24765
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qhull-cpp.xml",
+        "path_type": "hardlink",
+        "sha256": "3eefe253292f78c7138493a91e82435e119e089eef4ed498ecdda561f2918d70",
+        "sha256_in_prefix": "3eefe253292f78c7138493a91e82435e119e089eef4ed498ecdda561f2918d70",
+        "size_in_bytes": 11726
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qhull.html",
+        "path_type": "hardlink",
+        "sha256": "aaa978de571db4b41789784037e1a50c039b5cdbc84c7c71240f18b676ead42f",
+        "sha256_in_prefix": "aaa978de571db4b41789784037e1a50c039b5cdbc84c7c71240f18b676ead42f",
+        "size_in_bytes": 18980
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qhull.man",
+        "path_type": "hardlink",
+        "sha256": "77c7f4eaf9848030fc4e664f8bd8043c0f37dd6d3420e09cfae438f1c6fd2433",
+        "sha256_in_prefix": "77c7f4eaf9848030fc4e664f8bd8043c0f37dd6d3420e09cfae438f1c6fd2433",
+        "size_in_bytes": 38002
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qhull.txt",
+        "path_type": "hardlink",
+        "sha256": "78ae7f88fc39dc94b7ace976ef683399c000fc89497c9a70407965e0adf2e422",
+        "sha256_in_prefix": "78ae7f88fc39dc94b7ace976ef683399c000fc89497c9a70407965e0adf2e422",
+        "size_in_bytes": 49344
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qvoron_f.html",
+        "path_type": "hardlink",
+        "sha256": "602b8a37eed6f688de57e6b5bc6b0309ae6c14ac60fe8fb924e4062ffffca350",
+        "sha256_in_prefix": "602b8a37eed6f688de57e6b5bc6b0309ae6c14ac60fe8fb924e4062ffffca350",
+        "size_in_bytes": 17370
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/qvoronoi.html",
+        "path_type": "hardlink",
+        "sha256": "4099500472355f890590752cecdb86bbcb00bd9ea9cf242f20364871ede7455f",
+        "sha256_in_prefix": "4099500472355f890590752cecdb86bbcb00bd9ea9cf242f20364871ede7455f",
+        "size_in_bytes": 28136
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/rbox.html",
+        "path_type": "hardlink",
+        "sha256": "d0a69f3fe484c5124cb934625ad73226f080b0ab721797bc9d623c42a27868e9",
+        "sha256_in_prefix": "d0a69f3fe484c5124cb934625ad73226f080b0ab721797bc9d623c42a27868e9",
+        "size_in_bytes": 9362
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/rbox.man",
+        "path_type": "hardlink",
+        "sha256": "6cba4fb49f8c509c6617cf1ae6e64d13c3afdcbb1027537a84ca077ae130c643",
+        "sha256_in_prefix": "6cba4fb49f8c509c6617cf1ae6e64d13c3afdcbb1027537a84ca077ae130c643",
+        "size_in_bytes": 4317
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/html/rbox.txt",
+        "path_type": "hardlink",
+        "sha256": "add3ab370cf1a6a82460d490d60dfecd8f36817ab2b658411d30117866f09ca8",
+        "sha256_in_prefix": "add3ab370cf1a6a82460d490d60dfecd8f36817ab2b658411d30117866f09ca8",
+        "size_in_bytes": 5139
+      },
+      {
+        "_path": "lib/R/library/geometry/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "118fd3baf89c13365751a6e182eecefa8b57eedd26e5037cd386c09ef08246ad",
+        "sha256_in_prefix": "118fd3baf89c13365751a6e182eecefa8b57eedd26e5037cd386c09ef08246ad",
+        "size_in_bytes": 12365
+      },
+      {
+        "_path": "lib/R/library/geometry/extdata/ordination.Rdata",
+        "path_type": "hardlink",
+        "sha256": "3b6f92072380457a510df39be0c3144bcf742648785f3aa57ac6cb56bc8da1e7",
+        "sha256_in_prefix": "3b6f92072380457a510df39be0c3144bcf742648785f3aa57ac6cb56bc8da1e7",
+        "size_in_bytes": 419
+      },
+      {
+        "_path": "lib/R/library/geometry/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "c2245f477330db1f444dcd0000c4d3ea4b8c5802848127d740b4ba25cdd83a44",
+        "sha256_in_prefix": "c2245f477330db1f444dcd0000c4d3ea4b8c5802848127d740b4ba25cdd83a44",
+        "size_in_bytes": 553
+      },
+      {
+        "_path": "lib/R/library/geometry/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "40d94aff7a9ee26711fc3d1435774b3b6e7138d7f86a03045107ca89f1ddc509",
+        "sha256_in_prefix": "40d94aff7a9ee26711fc3d1435774b3b6e7138d7f86a03045107ca89f1ddc509",
+        "size_in_bytes": 282
+      },
+      {
+        "_path": "lib/R/library/geometry/help/geometry.rdb",
+        "path_type": "hardlink",
+        "sha256": "fb4801653f9ee3953cf9c1f37b73b7e7150527afc19b3630de76a4a67133c23f",
+        "sha256_in_prefix": "fb4801653f9ee3953cf9c1f37b73b7e7150527afc19b3630de76a4a67133c23f",
+        "size_in_bytes": 62090
+      },
+      {
+        "_path": "lib/R/library/geometry/help/geometry.rdx",
+        "path_type": "hardlink",
+        "sha256": "b7f1f078438feb3cf0d729fbe18afd530d3419f2d6aba273a9bba81f6f488c08",
+        "sha256_in_prefix": "b7f1f078438feb3cf0d729fbe18afd530d3419f2d6aba273a9bba81f6f488c08",
+        "size_in_bytes": 624
+      },
+      {
+        "_path": "lib/R/library/geometry/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "a12f3a16cab7571fbdae480670f8eaaae0e96319c540f6408aa08db6f4e68425",
+        "sha256_in_prefix": "a12f3a16cab7571fbdae480670f8eaaae0e96319c540f6408aa08db6f4e68425",
+        "size_in_bytes": 313
+      },
+      {
+        "_path": "lib/R/library/geometry/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "0bd96c35e1abb1f3ab15a1def1461b91cb5cf40f45837e0541630d0a2e182121",
+        "sha256_in_prefix": "0bd96c35e1abb1f3ab15a1def1461b91cb5cf40f45837e0541630d0a2e182121",
+        "size_in_bytes": 4643
+      },
+      {
+        "_path": "lib/R/library/geometry/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      },
+      {
+        "_path": "lib/R/library/geometry/libs/geometry.so",
+        "path_type": "hardlink",
+        "sha256": "6bf108cad7b10d40de92c15b08d01116509886c4ffff9ac728c0a17ac049e9af",
+        "sha256_in_prefix": "6bf108cad7b10d40de92c15b08d01116509886c4ffff9ac728c0a17ac049e9af",
+        "size_in_bytes": 404240
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "a66f9ee275e1c77958bd243c661ba635a139d5144b7f6d91dfde76b6a0f55115",
+  "size": 415012,
+  "subdir": "linux-64",
+  "timestamp": 1532053284000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-geometry-0.3_6-mro350hbc2858b_0.conda",
+  "version": "0.3_6"
+}

@@ -1,0 +1,30 @@
+{
+  "build": "mro_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/_r-mutex-1.0.0-mro_2",
+  "files": [],
+  "fn": "_r-mutex-1.0.0-mro_2.conda",
+  "license": "BSD",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/_r-mutex-1.0.0-mro_2",
+    "type": 1
+  },
+  "md5": "3a2fee3b3f2fe9ddab1001d8fa3d0b01",
+  "name": "_r-mutex",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/_r-mutex-1.0.0-mro_2.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "a98156b8177e86e3e75ddf1f23737b41cb0f1bdba2366a28e44ffda377e57474",
+  "size": 2412,
+  "subdir": "linux-64",
+  "timestamp": 1519568984000,
+  "track_features": "mro_is_not_default",
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/_r-mutex-1.0.0-mro_2.conda",
+  "version": "1.0.0"
+}

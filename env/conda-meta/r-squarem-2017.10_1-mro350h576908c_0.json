@@ -1,0 +1,282 @@
+{
+  "build": "mro350h576908c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-squarem-2017.10_1-mro350h576908c_0",
+  "files": [
+    "lib/R/library/SQUAREM/DESCRIPTION",
+    "lib/R/library/SQUAREM/INDEX",
+    "lib/R/library/SQUAREM/Meta/Rd.rds",
+    "lib/R/library/SQUAREM/Meta/demo.rds",
+    "lib/R/library/SQUAREM/Meta/features.rds",
+    "lib/R/library/SQUAREM/Meta/hsearch.rds",
+    "lib/R/library/SQUAREM/Meta/links.rds",
+    "lib/R/library/SQUAREM/Meta/nsInfo.rds",
+    "lib/R/library/SQUAREM/Meta/package.rds",
+    "lib/R/library/SQUAREM/Meta/vignette.rds",
+    "lib/R/library/SQUAREM/NAMESPACE",
+    "lib/R/library/SQUAREM/NEWS",
+    "lib/R/library/SQUAREM/R/SQUAREM",
+    "lib/R/library/SQUAREM/R/SQUAREM.rdb",
+    "lib/R/library/SQUAREM/R/SQUAREM.rdx",
+    "lib/R/library/SQUAREM/demo/factoranalysis.R",
+    "lib/R/library/SQUAREM/demo/intcensoring.R",
+    "lib/R/library/SQUAREM/demo/mmlogistic.R",
+    "lib/R/library/SQUAREM/demo/poissonmix.R",
+    "lib/R/library/SQUAREM/demo/squarem.R",
+    "lib/R/library/SQUAREM/doc/SQUAREM.R",
+    "lib/R/library/SQUAREM/doc/SQUAREM.Rnw",
+    "lib/R/library/SQUAREM/doc/SQUAREM.pdf",
+    "lib/R/library/SQUAREM/doc/index.html",
+    "lib/R/library/SQUAREM/help/AnIndex",
+    "lib/R/library/SQUAREM/help/SQUAREM.rdb",
+    "lib/R/library/SQUAREM/help/SQUAREM.rdx",
+    "lib/R/library/SQUAREM/help/aliases.rds",
+    "lib/R/library/SQUAREM/help/paths.rds",
+    "lib/R/library/SQUAREM/html/00Index.html",
+    "lib/R/library/SQUAREM/html/R.css"
+  ],
+  "fn": "r-squarem-2017.10_1-mro350h576908c_0.conda",
+  "license": "GPL (>= 2)",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-squarem-2017.10_1-mro350h576908c_0",
+    "type": 1
+  },
+  "md5": "ad9832abcc70f9e5ee5198eb43b4f573",
+  "name": "r-squarem",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-squarem-2017.10_1-mro350h576908c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/SQUAREM/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "8451a2c9dbb94b9d37b1579ccda2846b26b40398ca45654d0ff37eac8c2cbd5d",
+        "sha256_in_prefix": "8451a2c9dbb94b9d37b1579ccda2846b26b40398ca45654d0ff37eac8c2cbd5d",
+        "size_in_bytes": 999
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/INDEX",
+        "path_type": "hardlink",
+        "sha256": "a9c68000c08aaff99675dfff5f24a6938f316c9d7831ab91cf2b6b88b1f6c5ef",
+        "sha256_in_prefix": "a9c68000c08aaff99675dfff5f24a6938f316c9d7831ab91cf2b6b88b1f6c5ef",
+        "size_in_bytes": 189
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "055f9ad25876108bce1b38b0b80f0e9ee0c9dc690ce668d20ffcc4f1adeb8dab",
+        "sha256_in_prefix": "055f9ad25876108bce1b38b0b80f0e9ee0c9dc690ce668d20ffcc4f1adeb8dab",
+        "size_in_bytes": 379
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "380a5943dc2b2d34054f4e5d1e0f9bcc5d8da554a0b4a06a55b71920337d4e54",
+        "sha256_in_prefix": "380a5943dc2b2d34054f4e5d1e0f9bcc5d8da554a0b4a06a55b71920337d4e54",
+        "size_in_bytes": 282
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "da893b911f6914eb060aa3cbbab8f75a95344711b74a5f795e3dfc69af224bb7",
+        "sha256_in_prefix": "da893b911f6914eb060aa3cbbab8f75a95344711b74a5f795e3dfc69af224bb7",
+        "size_in_bytes": 414
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "34b54c622e98a99e5ee16ae812064886e526168c92c743313cd147035db10cea",
+        "sha256_in_prefix": "34b54c622e98a99e5ee16ae812064886e526168c92c743313cd147035db10cea",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "cc5cbfa992f123a3be2c46bda2b77c92f7758c597ac1bd1824d8d10d7bf0bb9b",
+        "sha256_in_prefix": "cc5cbfa992f123a3be2c46bda2b77c92f7758c597ac1bd1824d8d10d7bf0bb9b",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "5a8fd6dd728c6389a9b5aa8819e705e87b9bca415b2476f117a4b42af19d4b45",
+        "sha256_in_prefix": "5a8fd6dd728c6389a9b5aa8819e705e87b9bca415b2476f117a4b42af19d4b45",
+        "size_in_bytes": 948
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "5e79f02fbf2017a458fa4c4017bb359b03af9b66ca86da13b851fc98d6b11b08",
+        "sha256_in_prefix": "5e79f02fbf2017a458fa4c4017bb359b03af9b66ca86da13b851fc98d6b11b08",
+        "size_in_bytes": 263
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "d5e28199ac20dd03996d7fa172281bab3244f3b6f6786d17b51b855bc398f5ed",
+        "sha256_in_prefix": "d5e28199ac20dd03996d7fa172281bab3244f3b6f6786d17b51b855bc398f5ed",
+        "size_in_bytes": 70
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/NEWS",
+        "path_type": "hardlink",
+        "sha256": "937d85049ac95f99ab29bf9afbd16c01d87d5d2809f89f7b40069dadd58548bf",
+        "sha256_in_prefix": "937d85049ac95f99ab29bf9afbd16c01d87d5d2809f89f7b40069dadd58548bf",
+        "size_in_bytes": 981
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/R/SQUAREM",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/R/SQUAREM.rdb",
+        "path_type": "hardlink",
+        "sha256": "9bdc28cf2b3b2e256dbcab2d57a7a64d5b776ae0694052a3a855b19320fe558a",
+        "sha256_in_prefix": "9bdc28cf2b3b2e256dbcab2d57a7a64d5b776ae0694052a3a855b19320fe558a",
+        "size_in_bytes": 28935
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/R/SQUAREM.rdx",
+        "path_type": "hardlink",
+        "sha256": "fa0635982e48cf275ac7631ae8e395f4f7f05a62fb0585b4d764085da00d9925",
+        "sha256_in_prefix": "fa0635982e48cf275ac7631ae8e395f4f7f05a62fb0585b4d764085da00d9925",
+        "size_in_bytes": 312
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/demo/factoranalysis.R",
+        "path_type": "hardlink",
+        "sha256": "dda18c4aec577e3c218df07b80b08ba9cd7fcca798f92e050948b69840175ead",
+        "sha256_in_prefix": "dda18c4aec577e3c218df07b80b08ba9cd7fcca798f92e050948b69840175ead",
+        "size_in_bytes": 8126
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/demo/intcensoring.R",
+        "path_type": "hardlink",
+        "sha256": "9b1d95b560071791fdd5799f306dcf76f854b87bdc2d52b7d70c41ce4bd98281",
+        "sha256_in_prefix": "9b1d95b560071791fdd5799f306dcf76f854b87bdc2d52b7d70c41ce4bd98281",
+        "size_in_bytes": 4616
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/demo/mmlogistic.R",
+        "path_type": "hardlink",
+        "sha256": "011bcade89404fc442e7a5733b9e2e8c81b5ac70bb957a32e5e227b50731991a",
+        "sha256_in_prefix": "011bcade89404fc442e7a5733b9e2e8c81b5ac70bb957a32e5e227b50731991a",
+        "size_in_bytes": 5504
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/demo/poissonmix.R",
+        "path_type": "hardlink",
+        "sha256": "84b9f0e94597b710f9a1bb8838403721c2b696595d99e8ad453d9436ef10c5ee",
+        "sha256_in_prefix": "84b9f0e94597b710f9a1bb8838403721c2b696595d99e8ad453d9436ef10c5ee",
+        "size_in_bytes": 3369
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/demo/squarem.R",
+        "path_type": "hardlink",
+        "sha256": "17703b4e3808c55745c5aaf52f75d1eeb84bcc6d75aa113f6d48e51526334a29",
+        "sha256_in_prefix": "17703b4e3808c55745c5aaf52f75d1eeb84bcc6d75aa113f6d48e51526334a29",
+        "size_in_bytes": 2165
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/doc/SQUAREM.R",
+        "path_type": "hardlink",
+        "sha256": "bbbfd19a771143deeeacc499d738dd9bd0a4b2ccc28f62500622b8c2793e0548",
+        "sha256_in_prefix": "bbbfd19a771143deeeacc499d738dd9bd0a4b2ccc28f62500622b8c2793e0548",
+        "size_in_bytes": 4838
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/doc/SQUAREM.Rnw",
+        "path_type": "hardlink",
+        "sha256": "99ce64bb7cf64c87f367e10ff7b41ffe66bacd47a56c1dcbaec920d0f5d06368",
+        "sha256_in_prefix": "99ce64bb7cf64c87f367e10ff7b41ffe66bacd47a56c1dcbaec920d0f5d06368",
+        "size_in_bytes": 34243
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/doc/SQUAREM.pdf",
+        "path_type": "hardlink",
+        "sha256": "5ec504a45112a55b83def3486bf7d4e89d59d07cd30bdd56ba10c42cfaf9a191",
+        "sha256_in_prefix": "5ec504a45112a55b83def3486bf7d4e89d59d07cd30bdd56ba10c42cfaf9a191",
+        "size_in_bytes": 216543
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "7fd5b43859d000f483698c53c5498ee87f90ee279d9689f4930849d6b1c27be3",
+        "sha256_in_prefix": "7fd5b43859d000f483698c53c5498ee87f90ee279d9689f4930849d6b1c27be3",
+        "size_in_bytes": 1326
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "125e49149429000b42281347bc5416825cc29fa845eaf9340043d56f4e968c8a",
+        "sha256_in_prefix": "125e49149429000b42281347bc5416825cc29fa845eaf9340043d56f4e968c8a",
+        "size_in_bytes": 100
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/help/SQUAREM.rdb",
+        "path_type": "hardlink",
+        "sha256": "78d7340e97f5fe29eb8c1b851b11040d8183d2b2e3e481bd5f00564a05f7b546",
+        "sha256_in_prefix": "78d7340e97f5fe29eb8c1b851b11040d8183d2b2e3e481bd5f00564a05f7b546",
+        "size_in_bytes": 19933
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/help/SQUAREM.rdx",
+        "path_type": "hardlink",
+        "sha256": "8ee7d0e6ea5be377ab296679377574ee53fd30ad9e53d57d715383f37d832630",
+        "sha256_in_prefix": "8ee7d0e6ea5be377ab296679377574ee53fd30ad9e53d57d715383f37d832630",
+        "size_in_bytes": 199
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "d200c76e9e433792438f98235f9c43f70f26e676f0e4a6150ebd0e3fe27ddb35",
+        "sha256_in_prefix": "d200c76e9e433792438f98235f9c43f70f26e676f0e4a6150ebd0e3fe27ddb35",
+        "size_in_bytes": 111
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "9b14c596db2bfcab9e2bee1ca4acd210c7d47e7c28915f1e84c0dd9e4e8c397d",
+        "sha256_in_prefix": "9b14c596db2bfcab9e2bee1ca4acd210c7d47e7c28915f1e84c0dd9e4e8c397d",
+        "size_in_bytes": 149
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "0dc69b078d12b1f100f76d236079452eaadeb34f307e0c6d323a7aecd99485ea",
+        "sha256_in_prefix": "0dc69b078d12b1f100f76d236079452eaadeb34f307e0c6d323a7aecd99485ea",
+        "size_in_bytes": 1552
+      },
+      {
+        "_path": "lib/R/library/SQUAREM/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "37c2643cd9bff702c5a42a38f8f02d5380a16574c7b57408fc43d477440eac38",
+  "size": 289211,
+  "subdir": "linux-64",
+  "timestamp": 1532052814000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-squarem-2017.10_1-mro350h576908c_0.conda",
+  "version": "2017.10_1"
+}

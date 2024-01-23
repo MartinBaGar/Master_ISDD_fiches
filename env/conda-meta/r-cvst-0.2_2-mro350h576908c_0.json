@@ -1,0 +1,188 @@
+{
+  "build": "mro350h576908c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "r-kernlab",
+    "r-matrix",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-cvst-0.2_2-mro350h576908c_0",
+  "files": [
+    "lib/R/library/CVST/DESCRIPTION",
+    "lib/R/library/CVST/INDEX",
+    "lib/R/library/CVST/Meta/Rd.rds",
+    "lib/R/library/CVST/Meta/features.rds",
+    "lib/R/library/CVST/Meta/hsearch.rds",
+    "lib/R/library/CVST/Meta/links.rds",
+    "lib/R/library/CVST/Meta/nsInfo.rds",
+    "lib/R/library/CVST/Meta/package.rds",
+    "lib/R/library/CVST/NAMESPACE",
+    "lib/R/library/CVST/R/CVST",
+    "lib/R/library/CVST/R/CVST.rdb",
+    "lib/R/library/CVST/R/CVST.rdx",
+    "lib/R/library/CVST/help/AnIndex",
+    "lib/R/library/CVST/help/CVST.rdb",
+    "lib/R/library/CVST/help/CVST.rdx",
+    "lib/R/library/CVST/help/aliases.rds",
+    "lib/R/library/CVST/help/paths.rds",
+    "lib/R/library/CVST/html/00Index.html",
+    "lib/R/library/CVST/html/R.css"
+  ],
+  "fn": "r-cvst-0.2_2-mro350h576908c_0.conda",
+  "license": "GPL (>= 2.0)",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-cvst-0.2_2-mro350h576908c_0",
+    "type": 1
+  },
+  "md5": "e7618fcf20fcd5daca3bace00d0dbb8b",
+  "name": "r-cvst",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-cvst-0.2_2-mro350h576908c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/CVST/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "c5abd2eb92cbd8a4f3cc9813664bf22b34cf2f9997633f640202367c19dc4454",
+        "sha256_in_prefix": "c5abd2eb92cbd8a4f3cc9813664bf22b34cf2f9997633f640202367c19dc4454",
+        "size_in_bytes": 1272
+      },
+      {
+        "_path": "lib/R/library/CVST/INDEX",
+        "path_type": "hardlink",
+        "sha256": "954e8578b78d455186d6b0d3bf432e7fc6016cf274b0bb079407d9e529b9f252",
+        "sha256_in_prefix": "954e8578b78d455186d6b0d3bf432e7fc6016cf274b0bb079407d9e529b9f252",
+        "size_in_bytes": 774
+      },
+      {
+        "_path": "lib/R/library/CVST/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "c8fc816951c8e33e16746683571292b8c33052ca05ed0578537d9f57ff5373ac",
+        "sha256_in_prefix": "c8fc816951c8e33e16746683571292b8c33052ca05ed0578537d9f57ff5373ac",
+        "size_in_bytes": 766
+      },
+      {
+        "_path": "lib/R/library/CVST/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/CVST/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "f24645002f56104c98c9d1a4455c545039432c412e992777ab5ce2c791bd4a9d",
+        "sha256_in_prefix": "f24645002f56104c98c9d1a4455c545039432c412e992777ab5ce2c791bd4a9d",
+        "size_in_bytes": 771
+      },
+      {
+        "_path": "lib/R/library/CVST/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "2750af299cffa27de763e9a9790c8b0877ac431dc8cf6d5f8e887c065d81b5ca",
+        "sha256_in_prefix": "2750af299cffa27de763e9a9790c8b0877ac431dc8cf6d5f8e887c065d81b5ca",
+        "size_in_bytes": 405
+      },
+      {
+        "_path": "lib/R/library/CVST/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "b9e37e1b1f77a966e1b6be1d9c26953263506bb05cb191903483b4b70d4c680c",
+        "sha256_in_prefix": "b9e37e1b1f77a966e1b6be1d9c26953263506bb05cb191903483b4b70d4c680c",
+        "size_in_bytes": 297
+      },
+      {
+        "_path": "lib/R/library/CVST/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "0e02a7a9611dbded72e340c98230756b686b6979029d93b2e982579f1435f99b",
+        "sha256_in_prefix": "0e02a7a9611dbded72e340c98230756b686b6979029d93b2e982579f1435f99b",
+        "size_in_bytes": 1037
+      },
+      {
+        "_path": "lib/R/library/CVST/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "9daf9c48377d1ce5c3f35fb7f65d25f80d2ac74b99bf9a3e9eb890de8910fc90",
+        "sha256_in_prefix": "9daf9c48377d1ce5c3f35fb7f65d25f80d2ac74b99bf9a3e9eb890de8910fc90",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "lib/R/library/CVST/R/CVST",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/CVST/R/CVST.rdb",
+        "path_type": "hardlink",
+        "sha256": "c9caa4466547c65ae17756861feb51143ac234a9af6ef2d21281badea0271471",
+        "sha256_in_prefix": "c9caa4466547c65ae17756861feb51143ac234a9af6ef2d21281badea0271471",
+        "size_in_bytes": 45597
+      },
+      {
+        "_path": "lib/R/library/CVST/R/CVST.rdx",
+        "path_type": "hardlink",
+        "sha256": "f07bc284e3ad89032ee15d4e1b64ea5dc023f9c0636491ed4c148ffe0b53baf9",
+        "sha256_in_prefix": "f07bc284e3ad89032ee15d4e1b64ea5dc023f9c0636491ed4c148ffe0b53baf9",
+        "size_in_bytes": 789
+      },
+      {
+        "_path": "lib/R/library/CVST/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "3cfd160db0d02d6b2e148e87cadc7830980bf904389c797897d1cd076235914e",
+        "sha256_in_prefix": "3cfd160db0d02d6b2e148e87cadc7830980bf904389c797897d1cd076235914e",
+        "size_in_bytes": 823
+      },
+      {
+        "_path": "lib/R/library/CVST/help/CVST.rdb",
+        "path_type": "hardlink",
+        "sha256": "2fb96ae56768bacb415211e9acf940d59faadf5546681f24617c51616dae22ba",
+        "sha256_in_prefix": "2fb96ae56768bacb415211e9acf940d59faadf5546681f24617c51616dae22ba",
+        "size_in_bytes": 28962
+      },
+      {
+        "_path": "lib/R/library/CVST/help/CVST.rdx",
+        "path_type": "hardlink",
+        "sha256": "63facbd5c848addf664ddf3bce15215e898db5d8924b4403bf42c96650a22de3",
+        "sha256_in_prefix": "63facbd5c848addf664ddf3bce15215e898db5d8924b4403bf42c96650a22de3",
+        "size_in_bytes": 439
+      },
+      {
+        "_path": "lib/R/library/CVST/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "47de9cf5b05a390a5740e495d65a1d9e22d673097432b869934edfbcac90fa1d",
+        "sha256_in_prefix": "47de9cf5b05a390a5740e495d65a1d9e22d673097432b869934edfbcac90fa1d",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/R/library/CVST/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "6c087733bc9c9301007e41044b77119a39744a3a427a43c194a15978991b193e",
+        "sha256_in_prefix": "6c087733bc9c9301007e41044b77119a39744a3a427a43c194a15978991b193e",
+        "size_in_bytes": 252
+      },
+      {
+        "_path": "lib/R/library/CVST/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "eb4b19263c8ed29fcdbf38ec38eb6014bea1e9160c1ddc4d045127e53a586ac5",
+        "sha256_in_prefix": "eb4b19263c8ed29fcdbf38ec38eb6014bea1e9160c1ddc4d045127e53a586ac5",
+        "size_in_bytes": 5000
+      },
+      {
+        "_path": "lib/R/library/CVST/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "335ac12786cec68cfd89401cae6289d2d965adb7cb9bb1bb9809bcd92c94967d",
+  "size": 88859,
+  "subdir": "linux-64",
+  "timestamp": 1532053681000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-cvst-0.2_2-mro350h576908c_0.conda",
+  "version": "0.2_2"
+}

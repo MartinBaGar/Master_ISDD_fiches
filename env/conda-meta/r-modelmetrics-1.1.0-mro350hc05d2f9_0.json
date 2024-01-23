@@ -1,0 +1,237 @@
+{
+  "build": "mro350hc05d2f9_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.2.0",
+    "libstdcxx-ng >=7.2.0",
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "r-rcpp",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-modelmetrics-1.1.0-mro350hc05d2f9_0",
+  "files": [
+    "lib/R/library/ModelMetrics/DESCRIPTION",
+    "lib/R/library/ModelMetrics/INDEX",
+    "lib/R/library/ModelMetrics/Meta/Rd.rds",
+    "lib/R/library/ModelMetrics/Meta/data.rds",
+    "lib/R/library/ModelMetrics/Meta/features.rds",
+    "lib/R/library/ModelMetrics/Meta/hsearch.rds",
+    "lib/R/library/ModelMetrics/Meta/links.rds",
+    "lib/R/library/ModelMetrics/Meta/nsInfo.rds",
+    "lib/R/library/ModelMetrics/Meta/package.rds",
+    "lib/R/library/ModelMetrics/NAMESPACE",
+    "lib/R/library/ModelMetrics/NEWS.md",
+    "lib/R/library/ModelMetrics/R/ModelMetrics",
+    "lib/R/library/ModelMetrics/R/ModelMetrics.rdb",
+    "lib/R/library/ModelMetrics/R/ModelMetrics.rdx",
+    "lib/R/library/ModelMetrics/data/Rdata.rdb",
+    "lib/R/library/ModelMetrics/data/Rdata.rds",
+    "lib/R/library/ModelMetrics/data/Rdata.rdx",
+    "lib/R/library/ModelMetrics/help/AnIndex",
+    "lib/R/library/ModelMetrics/help/ModelMetrics.rdb",
+    "lib/R/library/ModelMetrics/help/ModelMetrics.rdx",
+    "lib/R/library/ModelMetrics/help/aliases.rds",
+    "lib/R/library/ModelMetrics/help/paths.rds",
+    "lib/R/library/ModelMetrics/html/00Index.html",
+    "lib/R/library/ModelMetrics/html/R.css",
+    "lib/R/library/ModelMetrics/libs/ModelMetrics.so"
+  ],
+  "fn": "r-modelmetrics-1.1.0-mro350hc05d2f9_0.conda",
+  "license": "GPL (>= 2)",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-modelmetrics-1.1.0-mro350hc05d2f9_0",
+    "type": 1
+  },
+  "md5": "0471867b04f7dc671d6bde549ac34432",
+  "name": "r-modelmetrics",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-modelmetrics-1.1.0-mro350hc05d2f9_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/ModelMetrics/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "ae70c36838dcf5bb5ae389f556b78202bc3baacf8ba691db57031aec86a6babb",
+        "sha256_in_prefix": "ae70c36838dcf5bb5ae389f556b78202bc3baacf8ba691db57031aec86a6babb",
+        "size_in_bytes": 664
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/INDEX",
+        "path_type": "hardlink",
+        "sha256": "3220c7531deeeba978500f083efe9ea2d0f63dce88149b1e3996266ec4c0740a",
+        "sha256_in_prefix": "3220c7531deeeba978500f083efe9ea2d0f63dce88149b1e3996266ec4c0740a",
+        "size_in_bytes": 860
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "48bacfb275677113abf0a46ebcf371c638b7560c33039c30aae43b6f47f142a7",
+        "sha256_in_prefix": "48bacfb275677113abf0a46ebcf371c638b7560c33039c30aae43b6f47f142a7",
+        "size_in_bytes": 677
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "6fd0a118ee1ad9f39fde4f579e2976053b155939ecfabee27512c0f68e2e3fb4",
+        "sha256_in_prefix": "6fd0a118ee1ad9f39fde4f579e2976053b155939ecfabee27512c0f68e2e3fb4",
+        "size_in_bytes": 80
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "48abcb2ce34d964b056169b76f9b1fc439861203104b94f1c624f520c4ae4028",
+        "sha256_in_prefix": "48abcb2ce34d964b056169b76f9b1fc439861203104b94f1c624f520c4ae4028",
+        "size_in_bytes": 653
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "d29176e00e7834a7ce7758a8747c34d494123cbc39efe609cd4445372d402876",
+        "sha256_in_prefix": "d29176e00e7834a7ce7758a8747c34d494123cbc39efe609cd4445372d402876",
+        "size_in_bytes": 332
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "4a75ebd39b85c1a800f4fa9c483dcf6c8329b6bb9ebf604db7a37433f9458270",
+        "sha256_in_prefix": "4a75ebd39b85c1a800f4fa9c483dcf6c8329b6bb9ebf604db7a37433f9458270",
+        "size_in_bytes": 335
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "1c9b6020fe7a9ff76910d342d58db5ebaa35107c6299cc470b9f9fa8f8422c4e",
+        "sha256_in_prefix": "1c9b6020fe7a9ff76910d342d58db5ebaa35107c6299cc470b9f9fa8f8422c4e",
+        "size_in_bytes": 815
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "7b8d15fddde9818b1a1cc57b30543107b60220021dad291db2079255c3a31741",
+        "sha256_in_prefix": "7b8d15fddde9818b1a1cc57b30543107b60220021dad291db2079255c3a31741",
+        "size_in_bytes": 417
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "03147daab3389fcb7360e8478852ad84b161b8a743eeea1e25c0a564edc927f3",
+        "sha256_in_prefix": "03147daab3389fcb7360e8478852ad84b161b8a743eeea1e25c0a564edc927f3",
+        "size_in_bytes": 288
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/R/ModelMetrics",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/R/ModelMetrics.rdb",
+        "path_type": "hardlink",
+        "sha256": "0e83e73c9b7ad1f827613f1e8df42f750241dd35582f39d770e6f41c3a83c199",
+        "sha256_in_prefix": "0e83e73c9b7ad1f827613f1e8df42f750241dd35582f39d770e6f41c3a83c199",
+        "size_in_bytes": 14479
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/R/ModelMetrics.rdx",
+        "path_type": "hardlink",
+        "sha256": "bf334503d8df8f800282cdb0f587f458301c0c8750e71dde492b4a11bd5a7113",
+        "sha256_in_prefix": "bf334503d8df8f800282cdb0f587f458301c0c8750e71dde492b4a11bd5a7113",
+        "size_in_bytes": 654
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "874b54078dc7c738fb86a342673c6111bcb69af39264eab6e38d49ffe777a89c",
+        "sha256_in_prefix": "874b54078dc7c738fb86a342673c6111bcb69af39264eab6e38d49ffe777a89c",
+        "size_in_bytes": 1775
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "fd479d7cafc7e92a6e4edce32aba149cd48204eb5966350325e52daa1e8b9fb7",
+        "sha256_in_prefix": "fd479d7cafc7e92a6e4edce32aba149cd48204eb5966350325e52daa1e8b9fb7",
+        "size_in_bytes": 69
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "ba95f0dba91a81ed4cbd38335f906209d0a658d0d28400151218a114a94f95a1",
+        "sha256_in_prefix": "ba95f0dba91a81ed4cbd38335f906209d0a658d0d28400151218a114a94f95a1",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "2b4173e8b0e12035df92e694e27d4df6fa10362764f2ef5db43e0afc4b0963f4",
+        "sha256_in_prefix": "2b4173e8b0e12035df92e694e27d4df6fa10362764f2ef5db43e0afc4b0963f4",
+        "size_in_bytes": 286
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/help/ModelMetrics.rdb",
+        "path_type": "hardlink",
+        "sha256": "4b77f5173a4c83bc2155dd3ce6d0439ac78f844795f7e4566eeed6725beb6938",
+        "sha256_in_prefix": "4b77f5173a4c83bc2155dd3ce6d0439ac78f844795f7e4566eeed6725beb6938",
+        "size_in_bytes": 21576
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/help/ModelMetrics.rdx",
+        "path_type": "hardlink",
+        "sha256": "45173ab4c3bebb66821257ad0704016a62979638a279bd535f06ba305e34e08b",
+        "sha256_in_prefix": "45173ab4c3bebb66821257ad0704016a62979638a279bd535f06ba305e34e08b",
+        "size_in_bytes": 507
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "93c966dfaaa54b13ff5a68e9eb84fe29802bd7f4280bacfa36802de148f6725f",
+        "sha256_in_prefix": "93c966dfaaa54b13ff5a68e9eb84fe29802bd7f4280bacfa36802de148f6725f",
+        "size_in_bytes": 211
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "1166e5b6648076d6284cf738d7e55e2b84bb67d592016dfb52b4002b6516816e",
+        "sha256_in_prefix": "1166e5b6648076d6284cf738d7e55e2b84bb67d592016dfb52b4002b6516816e",
+        "size_in_bytes": 263
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "2c645977c04dfcd9ac34a35fadaa88d53e6d522f53d1048f98dc73b43e00c9fc",
+        "sha256_in_prefix": "2c645977c04dfcd9ac34a35fadaa88d53e6d522f53d1048f98dc73b43e00c9fc",
+        "size_in_bytes": 3263
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      },
+      {
+        "_path": "lib/R/library/ModelMetrics/libs/ModelMetrics.so",
+        "path_type": "hardlink",
+        "sha256": "685a9ef6f7e25e927adb90e2dba4e1ea417c502359d9c4938959a2ba114a9ae1",
+        "sha256_in_prefix": "685a9ef6f7e25e927adb90e2dba4e1ea417c502359d9c4938959a2ba114a9ae1",
+        "size_in_bytes": 147472
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "56d52ab7de5bab29afad5e4746ace0b24417c5e6a391382b7b1b587b44037203",
+  "size": 90988,
+  "subdir": "linux-64",
+  "timestamp": 1532053995000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-modelmetrics-1.1.0-mro350hc05d2f9_0.conda",
+  "version": "1.1.0"
+}

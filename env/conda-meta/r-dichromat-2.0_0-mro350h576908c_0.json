@@ -1,0 +1,218 @@
+{
+  "build": "mro350h576908c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-dichromat-2.0_0-mro350h576908c_0",
+  "files": [
+    "lib/R/library/dichromat/DESCRIPTION",
+    "lib/R/library/dichromat/INDEX",
+    "lib/R/library/dichromat/Meta/Rd.rds",
+    "lib/R/library/dichromat/Meta/data.rds",
+    "lib/R/library/dichromat/Meta/features.rds",
+    "lib/R/library/dichromat/Meta/hsearch.rds",
+    "lib/R/library/dichromat/Meta/links.rds",
+    "lib/R/library/dichromat/Meta/nsInfo.rds",
+    "lib/R/library/dichromat/Meta/package.rds",
+    "lib/R/library/dichromat/NAMESPACE",
+    "lib/R/library/dichromat/R/dichromat",
+    "lib/R/library/dichromat/R/dichromat.rdb",
+    "lib/R/library/dichromat/R/dichromat.rdx",
+    "lib/R/library/dichromat/R/sysdata.rdb",
+    "lib/R/library/dichromat/R/sysdata.rdx",
+    "lib/R/library/dichromat/data/dalton.rda",
+    "lib/R/library/dichromat/help/AnIndex",
+    "lib/R/library/dichromat/help/aliases.rds",
+    "lib/R/library/dichromat/help/dichromat.rdb",
+    "lib/R/library/dichromat/help/dichromat.rdx",
+    "lib/R/library/dichromat/help/paths.rds",
+    "lib/R/library/dichromat/html/00Index.html",
+    "lib/R/library/dichromat/html/R.css"
+  ],
+  "fn": "r-dichromat-2.0_0-mro350h576908c_0.conda",
+  "license": "GPL-2",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-dichromat-2.0_0-mro350h576908c_0",
+    "type": 1
+  },
+  "md5": "3d5507c3d31fc77b03f86d8d718085b7",
+  "name": "r-dichromat",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-dichromat-2.0_0-mro350h576908c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/dichromat/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "41d0baf057b739d6f0191eef0d83492f609e477f5c7b58fa6adfa70a89a1b3cb",
+        "sha256_in_prefix": "41d0baf057b739d6f0191eef0d83492f609e477f5c7b58fa6adfa70a89a1b3cb",
+        "size_in_bytes": 1030
+      },
+      {
+        "_path": "lib/R/library/dichromat/INDEX",
+        "path_type": "hardlink",
+        "sha256": "4fb6fb0af2e50a7aaed2a100fefd276b8f05d1d245ef9b615100cf177f260351",
+        "sha256_in_prefix": "4fb6fb0af2e50a7aaed2a100fefd276b8f05d1d245ef9b615100cf177f260351",
+        "size_in_bytes": 236
+      },
+      {
+        "_path": "lib/R/library/dichromat/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "99a6dfe66b0f2615cb344b200d68753ed0b26948d694a7c14a9734cdec6c53ec",
+        "sha256_in_prefix": "99a6dfe66b0f2615cb344b200d68753ed0b26948d694a7c14a9734cdec6c53ec",
+        "size_in_bytes": 344
+      },
+      {
+        "_path": "lib/R/library/dichromat/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "bf824ee46f1f378f540e1ad576248cf2c94a39afc59f490268a7d4d9fd4ed62d",
+        "sha256_in_prefix": "bf824ee46f1f378f540e1ad576248cf2c94a39afc59f490268a7d4d9fd4ed62d",
+        "size_in_bytes": 131
+      },
+      {
+        "_path": "lib/R/library/dichromat/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/dichromat/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "3fea0cc358d531362804d4494d194e3715b13c5ae853fbf3ac77e967dbb3ff6e",
+        "sha256_in_prefix": "3fea0cc358d531362804d4494d194e3715b13c5ae853fbf3ac77e967dbb3ff6e",
+        "size_in_bytes": 377
+      },
+      {
+        "_path": "lib/R/library/dichromat/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "58e36e24036faa1c3c084a065ecca208c972e72862194219257d922d1f835e49",
+        "sha256_in_prefix": "58e36e24036faa1c3c084a065ecca208c972e72862194219257d922d1f835e49",
+        "size_in_bytes": 137
+      },
+      {
+        "_path": "lib/R/library/dichromat/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "e28da21270ff79efcfb0b71a6f24e271ab2111c4251b40bc753ecbc089405f8c",
+        "sha256_in_prefix": "e28da21270ff79efcfb0b71a6f24e271ab2111c4251b40bc753ecbc089405f8c",
+        "size_in_bytes": 201
+      },
+      {
+        "_path": "lib/R/library/dichromat/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "f80861324c196cf2b5b85eee9bf6b46b03c922ed6bfaa4faf7655f831c4bf780",
+        "sha256_in_prefix": "f80861324c196cf2b5b85eee9bf6b46b03c922ed6bfaa4faf7655f831c4bf780",
+        "size_in_bytes": 907
+      },
+      {
+        "_path": "lib/R/library/dichromat/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "50eb3e5fe569954724e9ef1adfe2340859f2f478207577c83e719aefb0672edd",
+        "sha256_in_prefix": "50eb3e5fe569954724e9ef1adfe2340859f2f478207577c83e719aefb0672edd",
+        "size_in_bytes": 31
+      },
+      {
+        "_path": "lib/R/library/dichromat/R/dichromat",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/dichromat/R/dichromat.rdb",
+        "path_type": "hardlink",
+        "sha256": "ffaac9b24903ed889d34df536ca7983c6853f455f913a54c0261cdc1ecf67743",
+        "sha256_in_prefix": "ffaac9b24903ed889d34df536ca7983c6853f455f913a54c0261cdc1ecf67743",
+        "size_in_bytes": 3284
+      },
+      {
+        "_path": "lib/R/library/dichromat/R/dichromat.rdx",
+        "path_type": "hardlink",
+        "sha256": "6b5b37b4de1c52556f2b34d32fa476b824dc2603a9bdc778402beb31695ac7e6",
+        "sha256_in_prefix": "6b5b37b4de1c52556f2b34d32fa476b824dc2603a9bdc778402beb31695ac7e6",
+        "size_in_bytes": 266
+      },
+      {
+        "_path": "lib/R/library/dichromat/R/sysdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "c0b6338de669f1e8f8851e3325efbc75ff3fbc1d6012c63d42676f92fcbe16a7",
+        "sha256_in_prefix": "c0b6338de669f1e8f8851e3325efbc75ff3fbc1d6012c63d42676f92fcbe16a7",
+        "size_in_bytes": 120475
+      },
+      {
+        "_path": "lib/R/library/dichromat/R/sysdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "214ed8deaf015d9965d7cd855e2eed7032af80ca9f8e99fcd6c3bd829a200f18",
+        "sha256_in_prefix": "214ed8deaf015d9965d7cd855e2eed7032af80ca9f8e99fcd6c3bd829a200f18",
+        "size_in_bytes": 227
+      },
+      {
+        "_path": "lib/R/library/dichromat/data/dalton.rda",
+        "path_type": "hardlink",
+        "sha256": "925d7e7def9ebabcf98265b44ec5d8307d7b768830795c6704f7451b39610546",
+        "sha256_in_prefix": "925d7e7def9ebabcf98265b44ec5d8307d7b768830795c6704f7451b39610546",
+        "size_in_bytes": 8596
+      },
+      {
+        "_path": "lib/R/library/dichromat/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "582b48d760c3bda8f249550d88c73e9420fc87ab974e24a9c6d92c2fab3996c7",
+        "sha256_in_prefix": "582b48d760c3bda8f249550d88c73e9420fc87ab974e24a9c6d92c2fab3996c7",
+        "size_in_bytes": 81
+      },
+      {
+        "_path": "lib/R/library/dichromat/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "3edc3c731bb034baa32083d94300c29cb68118b84a2da4c45a94ff67f78f09cf",
+        "sha256_in_prefix": "3edc3c731bb034baa32083d94300c29cb68118b84a2da4c45a94ff67f78f09cf",
+        "size_in_bytes": 102
+      },
+      {
+        "_path": "lib/R/library/dichromat/help/dichromat.rdb",
+        "path_type": "hardlink",
+        "sha256": "6b42af49b0d8ec29c2e521c92c98c70896873ba540f06df9edb8f12853d035be",
+        "sha256_in_prefix": "6b42af49b0d8ec29c2e521c92c98c70896873ba540f06df9edb8f12853d035be",
+        "size_in_bytes": 10325
+      },
+      {
+        "_path": "lib/R/library/dichromat/help/dichromat.rdx",
+        "path_type": "hardlink",
+        "sha256": "5d36736b81a7b49c04487a6fcabc5b2cd230a8e515b2e4626871fb74446892a9",
+        "sha256_in_prefix": "5d36736b81a7b49c04487a6fcabc5b2cd230a8e515b2e4626871fb74446892a9",
+        "size_in_bytes": 204
+      },
+      {
+        "_path": "lib/R/library/dichromat/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "74d4fd22b322d93a89c59f4b7a572963477f1bb81a2a9e0e3b0fd02567b5af92",
+        "sha256_in_prefix": "74d4fd22b322d93a89c59f4b7a572963477f1bb81a2a9e0e3b0fd02567b5af92",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "lib/R/library/dichromat/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "c363b444b8640258e17d7e80ad7ac4d10a5d6d1217ad681f6bb6e17d9e73eea4",
+        "sha256_in_prefix": "c363b444b8640258e17d7e80ad7ac4d10a5d6d1217ad681f6bb6e17d9e73eea4",
+        "size_in_bytes": 1443
+      },
+      {
+        "_path": "lib/R/library/dichromat/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "b49f6c724b5f0e0aa840c34d8bd6aaa2b18f5c6f11c9f16be8fe2aa8bd084eb7",
+  "size": 150964,
+  "subdir": "linux-64",
+  "timestamp": 1531851652000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-dichromat-2.0_0-mro350h576908c_0.conda",
+  "version": "2.0_0"
+}

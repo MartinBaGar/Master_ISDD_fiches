@@ -1,0 +1,197 @@
+{
+  "build": "mro350hc05d2f9_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.2.0",
+    "libstdcxx-ng >=7.2.0",
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "r-rcpp",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-rcpproll-0.2.2-mro350hc05d2f9_0",
+  "files": [
+    "lib/R/library/RcppRoll/DESCRIPTION",
+    "lib/R/library/RcppRoll/INDEX",
+    "lib/R/library/RcppRoll/Meta/Rd.rds",
+    "lib/R/library/RcppRoll/Meta/features.rds",
+    "lib/R/library/RcppRoll/Meta/hsearch.rds",
+    "lib/R/library/RcppRoll/Meta/links.rds",
+    "lib/R/library/RcppRoll/Meta/nsInfo.rds",
+    "lib/R/library/RcppRoll/Meta/package.rds",
+    "lib/R/library/RcppRoll/NAMESPACE",
+    "lib/R/library/RcppRoll/R/RcppRoll",
+    "lib/R/library/RcppRoll/R/RcppRoll.rdb",
+    "lib/R/library/RcppRoll/R/RcppRoll.rdx",
+    "lib/R/library/RcppRoll/help/AnIndex",
+    "lib/R/library/RcppRoll/help/RcppRoll.rdb",
+    "lib/R/library/RcppRoll/help/RcppRoll.rdx",
+    "lib/R/library/RcppRoll/help/aliases.rds",
+    "lib/R/library/RcppRoll/help/paths.rds",
+    "lib/R/library/RcppRoll/html/00Index.html",
+    "lib/R/library/RcppRoll/html/R.css",
+    "lib/R/library/RcppRoll/libs/RcppRoll.so"
+  ],
+  "fn": "r-rcpproll-0.2.2-mro350hc05d2f9_0.conda",
+  "license": "GPL (>= 2)",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-rcpproll-0.2.2-mro350hc05d2f9_0",
+    "type": 1
+  },
+  "md5": "d8118cd83890a5f7d519e48f38d5df1d",
+  "name": "r-rcpproll",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-rcpproll-0.2.2-mro350hc05d2f9_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/RcppRoll/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "341ce9f9002b285765f79b606c772e938cd5cc508bab864796b6654330877e22",
+        "sha256_in_prefix": "341ce9f9002b285765f79b606c772e938cd5cc508bab864796b6654330877e22",
+        "size_in_bytes": 747
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/INDEX",
+        "path_type": "hardlink",
+        "sha256": "f10705934fc3521849611e2ab0e27a07c3c8c5887a39f779ef29ff45ea59ac38",
+        "sha256_in_prefix": "f10705934fc3521849611e2ab0e27a07c3c8c5887a39f779ef29ff45ea59ac38",
+        "size_in_bytes": 385
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "08b8b6d84ddcd41cc1da120800fc32cf640d24b8f589d12265b21fc354e72038",
+        "sha256_in_prefix": "08b8b6d84ddcd41cc1da120800fc32cf640d24b8f589d12265b21fc354e72038",
+        "size_in_bytes": 508
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "fd9392f2c47a001267e01d44de2fe8a26b47de5cd36a06490f4481894d9d8507",
+        "sha256_in_prefix": "fd9392f2c47a001267e01d44de2fe8a26b47de5cd36a06490f4481894d9d8507",
+        "size_in_bytes": 522
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "c01de02df2e4dc6cccbfe4deb90a5550b46e4302652f3544767ee954745b7994",
+        "sha256_in_prefix": "c01de02df2e4dc6cccbfe4deb90a5550b46e4302652f3544767ee954745b7994",
+        "size_in_bytes": 295
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "8f67e8ea8b5ed43f6327bdedac529ce1a319f171698db1b5d9fa49629d120697",
+        "sha256_in_prefix": "8f67e8ea8b5ed43f6327bdedac529ce1a319f171698db1b5d9fa49629d120697",
+        "size_in_bytes": 331
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "dca5aa2cad8f64e80b307fd3b3ac0dc787b414229f0b8d5dede9b89d3c947eb7",
+        "sha256_in_prefix": "dca5aa2cad8f64e80b307fd3b3ac0dc787b414229f0b8d5dede9b89d3c947eb7",
+        "size_in_bytes": 857
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "0b70826c2aaba7553115ec661e32dbf06156831b183c8808dfc31a980d6266e4",
+        "sha256_in_prefix": "0b70826c2aaba7553115ec661e32dbf06156831b183c8808dfc31a980d6266e4",
+        "size_in_bytes": 597
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/R/RcppRoll",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/R/RcppRoll.rdb",
+        "path_type": "hardlink",
+        "sha256": "18bb02e9054e96f2f71eb5ddab0a0b4369b9441a5dd849b5339e21fc86d82027",
+        "sha256_in_prefix": "18bb02e9054e96f2f71eb5ddab0a0b4369b9441a5dd849b5339e21fc86d82027",
+        "size_in_bytes": 31047
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/R/RcppRoll.rdx",
+        "path_type": "hardlink",
+        "sha256": "1c9e7d5a3489643b4ada3f9c2490a5d765f92f56063e1d5e964aafe184713ad0",
+        "sha256_in_prefix": "1c9e7d5a3489643b4ada3f9c2490a5d765f92f56063e1d5e964aafe184713ad0",
+        "size_in_bytes": 595
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "af844464a8d13db1e88696d2249fc9304a341606e38e0245b53c2af675e87c17",
+        "sha256_in_prefix": "af844464a8d13db1e88696d2249fc9304a341606e38e0245b53c2af675e87c17",
+        "size_in_bytes": 832
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/help/RcppRoll.rdb",
+        "path_type": "hardlink",
+        "sha256": "7627eff49395cb36bfcada95e7b2b4c48fb4811deadd638f3d274e4e429ce850",
+        "sha256_in_prefix": "7627eff49395cb36bfcada95e7b2b4c48fb4811deadd638f3d274e4e429ce850",
+        "size_in_bytes": 18606
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/help/RcppRoll.rdx",
+        "path_type": "hardlink",
+        "sha256": "c8199393d5172be1bfe1524a28db9efe3488b5193afe1df9600db33253fd6263",
+        "sha256_in_prefix": "c8199393d5172be1bfe1524a28db9efe3488b5193afe1df9600db33253fd6263",
+        "size_in_bytes": 285
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "371475f877c0f50eada04a1408fd3d80797ee53274f1786b8a396b7ce93ecaf7",
+        "sha256_in_prefix": "371475f877c0f50eada04a1408fd3d80797ee53274f1786b8a396b7ce93ecaf7",
+        "size_in_bytes": 238
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "e2237cf6c02a38ce48948ce40a9c2ff8268a0220ff69b794a26007e031ca03e6",
+        "sha256_in_prefix": "e2237cf6c02a38ce48948ce40a9c2ff8268a0220ff69b794a26007e031ca03e6",
+        "size_in_bytes": 191
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "76e79ecdcfbc157ed50a41a2f4236f681033a34ca2e237ca3becf3b45619bdb4",
+        "sha256_in_prefix": "76e79ecdcfbc157ed50a41a2f4236f681033a34ca2e237ca3becf3b45619bdb4",
+        "size_in_bytes": 4274
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      },
+      {
+        "_path": "lib/R/library/RcppRoll/libs/RcppRoll.so",
+        "path_type": "hardlink",
+        "sha256": "b97f5c3ca2c896bd8e1ef865ee3a7ca88b8522b9b8661185ee81705554de1357",
+        "sha256_in_prefix": "b97f5c3ca2c896bd8e1ef865ee3a7ca88b8522b9b8661185ee81705554de1357",
+        "size_in_bytes": 230064
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "26616462396599b7e6707a12b0b0810df00063362d05590d7492b99503bb2968",
+  "size": 119333,
+  "subdir": "linux-64",
+  "timestamp": 1532053105000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-rcpproll-0.2.2-mro350hc05d2f9_0.conda",
+  "version": "0.2.2"
+}

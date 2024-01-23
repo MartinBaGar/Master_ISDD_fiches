@@ -1,0 +1,203 @@
+{
+  "build": "mro350h576908c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "r-drr",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-dimred-0.1.0-mro350h576908c_0",
+  "files": [
+    "lib/R/library/dimRed/DESCRIPTION",
+    "lib/R/library/dimRed/INDEX",
+    "lib/R/library/dimRed/LICENSE",
+    "lib/R/library/dimRed/Meta/Rd.rds",
+    "lib/R/library/dimRed/Meta/features.rds",
+    "lib/R/library/dimRed/Meta/hsearch.rds",
+    "lib/R/library/dimRed/Meta/links.rds",
+    "lib/R/library/dimRed/Meta/nsInfo.rds",
+    "lib/R/library/dimRed/Meta/package.rds",
+    "lib/R/library/dimRed/NAMESPACE",
+    "lib/R/library/dimRed/NEWS.md",
+    "lib/R/library/dimRed/R/dimRed",
+    "lib/R/library/dimRed/R/dimRed.rdb",
+    "lib/R/library/dimRed/R/dimRed.rdx",
+    "lib/R/library/dimRed/help/AnIndex",
+    "lib/R/library/dimRed/help/aliases.rds",
+    "lib/R/library/dimRed/help/dimRed.rdb",
+    "lib/R/library/dimRed/help/dimRed.rdx",
+    "lib/R/library/dimRed/help/paths.rds",
+    "lib/R/library/dimRed/html/00Index.html",
+    "lib/R/library/dimRed/html/R.css"
+  ],
+  "fn": "r-dimred-0.1.0-mro350h576908c_0.conda",
+  "license": "GPL-3 | file LICENSE",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-dimred-0.1.0-mro350h576908c_0",
+    "type": 1
+  },
+  "md5": "467187c5c84b7998de2b3011b2efe90d",
+  "name": "r-dimred",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-dimred-0.1.0-mro350h576908c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/dimRed/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "fb380575107d71a6101b38c441b4144ecb08eeec40272c89e827419060f959bc",
+        "sha256_in_prefix": "fb380575107d71a6101b38c441b4144ecb08eeec40272c89e827419060f959bc",
+        "size_in_bytes": 1327
+      },
+      {
+        "_path": "lib/R/library/dimRed/INDEX",
+        "path_type": "hardlink",
+        "sha256": "57f23836d974615c58de93ee409c42853d989fd015d4b71941f730914c27bb62",
+        "sha256_in_prefix": "57f23836d974615c58de93ee409c42853d989fd015d4b71941f730914c27bb62",
+        "size_in_bytes": 2995
+      },
+      {
+        "_path": "lib/R/library/dimRed/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "199bbb8b61b5b317643b0e7d93ba41f7368b9017f19b8c83be6dfe81ee07e3b6",
+        "sha256_in_prefix": "199bbb8b61b5b317643b0e7d93ba41f7368b9017f19b8c83be6dfe81ee07e3b6",
+        "size_in_bytes": 32229
+      },
+      {
+        "_path": "lib/R/library/dimRed/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "31af4fa1e06acbf8e8ea34f1d92728cd462a29908d8ddb53a43b3754a027e25b",
+        "sha256_in_prefix": "31af4fa1e06acbf8e8ea34f1d92728cd462a29908d8ddb53a43b3754a027e25b",
+        "size_in_bytes": 1992
+      },
+      {
+        "_path": "lib/R/library/dimRed/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/dimRed/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "1b6291e14e5466edb27c6df9e6de78da96c79d49dacf0e30b7185075bfa46298",
+        "sha256_in_prefix": "1b6291e14e5466edb27c6df9e6de78da96c79d49dacf0e30b7185075bfa46298",
+        "size_in_bytes": 1880
+      },
+      {
+        "_path": "lib/R/library/dimRed/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "3e3ac6bae057cab4af3a93dd83c8814a7a032e058b4601ebaa3ff221b889669a",
+        "sha256_in_prefix": "3e3ac6bae057cab4af3a93dd83c8814a7a032e058b4601ebaa3ff221b889669a",
+        "size_in_bytes": 1247
+      },
+      {
+        "_path": "lib/R/library/dimRed/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "35b6f5d9215ff470f875e9b17694c1c92caa32e2c51d85d151c2a6cc2a1ceebd",
+        "sha256_in_prefix": "35b6f5d9215ff470f875e9b17694c1c92caa32e2c51d85d151c2a6cc2a1ceebd",
+        "size_in_bytes": 759
+      },
+      {
+        "_path": "lib/R/library/dimRed/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "aff59cae8fb69b3b52a6a2605d090375a999cbcb8822f40f9e65eb3e2365c028",
+        "sha256_in_prefix": "aff59cae8fb69b3b52a6a2605d090375a999cbcb8822f40f9e65eb3e2365c028",
+        "size_in_bytes": 1328
+      },
+      {
+        "_path": "lib/R/library/dimRed/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "94d9af8875d35b298c8918ff67d625dff717f7bf44d0b2c4e19ddeec89dc23ba",
+        "sha256_in_prefix": "94d9af8875d35b298c8918ff67d625dff717f7bf44d0b2c4e19ddeec89dc23ba",
+        "size_in_bytes": 2200
+      },
+      {
+        "_path": "lib/R/library/dimRed/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "24f10c1b7057c12423a2854fc0e87cc606eed886c6a78e47730c09053e0afea1",
+        "sha256_in_prefix": "24f10c1b7057c12423a2854fc0e87cc606eed886c6a78e47730c09053e0afea1",
+        "size_in_bytes": 248
+      },
+      {
+        "_path": "lib/R/library/dimRed/R/dimRed",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/dimRed/R/dimRed.rdb",
+        "path_type": "hardlink",
+        "sha256": "25d7a5934c67726d5cab4a6d2d4b7a9812b46485e07428a8dcc78b60066ea9f0",
+        "sha256_in_prefix": "25d7a5934c67726d5cab4a6d2d4b7a9812b46485e07428a8dcc78b60066ea9f0",
+        "size_in_bytes": 623380
+      },
+      {
+        "_path": "lib/R/library/dimRed/R/dimRed.rdx",
+        "path_type": "hardlink",
+        "sha256": "9a99aa85fc7d598027ae2c3de05b3b0792d75279bbbcfeff61f5c199c30b7b40",
+        "sha256_in_prefix": "9a99aa85fc7d598027ae2c3de05b3b0792d75279bbbcfeff61f5c199c30b7b40",
+        "size_in_bytes": 3317
+      },
+      {
+        "_path": "lib/R/library/dimRed/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "9a0139cb202c414941ea21c8257e42c4870539bbfba8e76d9283c0c783e4a4cb",
+        "sha256_in_prefix": "9a0139cb202c414941ea21c8257e42c4870539bbfba8e76d9283c0c783e4a4cb",
+        "size_in_bytes": 4030
+      },
+      {
+        "_path": "lib/R/library/dimRed/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "a11b427cbea3cc311653fa88cad7edbc164e803a07271b4ec2352121857999a3",
+        "sha256_in_prefix": "a11b427cbea3cc311653fa88cad7edbc164e803a07271b4ec2352121857999a3",
+        "size_in_bytes": 1036
+      },
+      {
+        "_path": "lib/R/library/dimRed/help/dimRed.rdb",
+        "path_type": "hardlink",
+        "sha256": "1ecb690bc6b48c630249d5571844ea9f07b36f56aa9e97dfac96c871c91657f2",
+        "sha256_in_prefix": "1ecb690bc6b48c630249d5571844ea9f07b36f56aa9e97dfac96c871c91657f2",
+        "size_in_bytes": 127099
+      },
+      {
+        "_path": "lib/R/library/dimRed/help/dimRed.rdx",
+        "path_type": "hardlink",
+        "sha256": "659827d566a080131e190b96e4ab0fcd24aa7ce4da5b43f3e907b7526710eaed",
+        "sha256_in_prefix": "659827d566a080131e190b96e4ab0fcd24aa7ce4da5b43f3e907b7526710eaed",
+        "size_in_bytes": 1326
+      },
+      {
+        "_path": "lib/R/library/dimRed/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "f113660be0783a73fc685ad6ee997618a68361e4a8bb6a59656b8a16633a71e8",
+        "sha256_in_prefix": "f113660be0783a73fc685ad6ee997618a68361e4a8bb6a59656b8a16633a71e8",
+        "size_in_bytes": 623
+      },
+      {
+        "_path": "lib/R/library/dimRed/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "c45a0ffe7168c3ee216ad6f22b2567ec0f59d9bcb943b8020ab359a645aa3e1d",
+        "sha256_in_prefix": "c45a0ffe7168c3ee216ad6f22b2567ec0f59d9bcb943b8020ab359a645aa3e1d",
+        "size_in_bytes": 16121
+      },
+      {
+        "_path": "lib/R/library/dimRed/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "236bbbbdc322ca5067f3b958f10edd39bcc395ea573208e62faff6be7311ec5f",
+  "size": 533141,
+  "subdir": "linux-64",
+  "timestamp": 1532053805000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-dimred-0.1.0-mro350h576908c_0.conda",
+  "version": "0.1.0"
+}

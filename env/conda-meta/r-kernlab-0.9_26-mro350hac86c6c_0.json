@@ -1,0 +1,317 @@
+{
+  "build": "mro350hac86c6c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.2.0",
+    "libgfortran-ng >=7,<8.0a0",
+    "libstdcxx-ng >=7.2.0",
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-kernlab-0.9_26-mro350hac86c6c_0",
+  "files": [
+    "lib/R/library/kernlab/CITATION",
+    "lib/R/library/kernlab/COPYRIGHTS",
+    "lib/R/library/kernlab/DESCRIPTION",
+    "lib/R/library/kernlab/INDEX",
+    "lib/R/library/kernlab/Meta/Rd.rds",
+    "lib/R/library/kernlab/Meta/data.rds",
+    "lib/R/library/kernlab/Meta/features.rds",
+    "lib/R/library/kernlab/Meta/hsearch.rds",
+    "lib/R/library/kernlab/Meta/links.rds",
+    "lib/R/library/kernlab/Meta/nsInfo.rds",
+    "lib/R/library/kernlab/Meta/package.rds",
+    "lib/R/library/kernlab/Meta/vignette.rds",
+    "lib/R/library/kernlab/NAMESPACE",
+    "lib/R/library/kernlab/R/kernlab",
+    "lib/R/library/kernlab/R/kernlab.rdb",
+    "lib/R/library/kernlab/R/kernlab.rdx",
+    "lib/R/library/kernlab/data/income.rda",
+    "lib/R/library/kernlab/data/musk.rda",
+    "lib/R/library/kernlab/data/promotergene.rda",
+    "lib/R/library/kernlab/data/reuters.rda",
+    "lib/R/library/kernlab/data/spam.rda",
+    "lib/R/library/kernlab/data/spirals.rda",
+    "lib/R/library/kernlab/data/ticdata.rda",
+    "lib/R/library/kernlab/doc/index.html",
+    "lib/R/library/kernlab/doc/kernlab.R",
+    "lib/R/library/kernlab/doc/kernlab.Rnw",
+    "lib/R/library/kernlab/doc/kernlab.pdf",
+    "lib/R/library/kernlab/help/AnIndex",
+    "lib/R/library/kernlab/help/aliases.rds",
+    "lib/R/library/kernlab/help/kernlab.rdb",
+    "lib/R/library/kernlab/help/kernlab.rdx",
+    "lib/R/library/kernlab/help/paths.rds",
+    "lib/R/library/kernlab/html/00Index.html",
+    "lib/R/library/kernlab/html/R.css",
+    "lib/R/library/kernlab/libs/kernlab.so"
+  ],
+  "fn": "r-kernlab-0.9_26-mro350hac86c6c_0.conda",
+  "license": "GPL-2",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-kernlab-0.9_26-mro350hac86c6c_0",
+    "type": 1
+  },
+  "md5": "bcf023e551aa47e362004bb9283af4a5",
+  "name": "r-kernlab",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-kernlab-0.9_26-mro350hac86c6c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/kernlab/CITATION",
+        "path_type": "hardlink",
+        "sha256": "e54a3a931b98668c7afe43e043593f5103d212877a67a92e17749322e0541a75",
+        "sha256_in_prefix": "e54a3a931b98668c7afe43e043593f5103d212877a67a92e17749322e0541a75",
+        "size_in_bytes": 840
+      },
+      {
+        "_path": "lib/R/library/kernlab/COPYRIGHTS",
+        "path_type": "hardlink",
+        "sha256": "a02443a47bb91ef44a0637dd976f4149544946eb563d7bfd5f0758ba1bf0bfdc",
+        "sha256_in_prefix": "a02443a47bb91ef44a0637dd976f4149544946eb563d7bfd5f0758ba1bf0bfdc",
+        "size_in_bytes": 371
+      },
+      {
+        "_path": "lib/R/library/kernlab/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "6ed768d500f6a315d787bef4a16b0ad783a7d5a23ba0d7621069a37687e495af",
+        "sha256_in_prefix": "6ed768d500f6a315d787bef4a16b0ad783a7d5a23ba0d7621069a37687e495af",
+        "size_in_bytes": 1085
+      },
+      {
+        "_path": "lib/R/library/kernlab/INDEX",
+        "path_type": "hardlink",
+        "sha256": "7b08da39499aababf093240dc0cef5e38244cee58e18afad8ec3348250933913",
+        "sha256_in_prefix": "7b08da39499aababf093240dc0cef5e38244cee58e18afad8ec3348250933913",
+        "size_in_bytes": 2779
+      },
+      {
+        "_path": "lib/R/library/kernlab/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "810d9c8e2e7c3602dedef7020af6bb92a20ee661af50e68c757bb342be7652dc",
+        "sha256_in_prefix": "810d9c8e2e7c3602dedef7020af6bb92a20ee661af50e68c757bb342be7652dc",
+        "size_in_bytes": 3706
+      },
+      {
+        "_path": "lib/R/library/kernlab/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "b66194f3fc5490a62c663676ca8c11098728c30efdff42247ecdef52c2f23a28",
+        "sha256_in_prefix": "b66194f3fc5490a62c663676ca8c11098728c30efdff42247ecdef52c2f23a28",
+        "size_in_bytes": 247
+      },
+      {
+        "_path": "lib/R/library/kernlab/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/kernlab/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "99ed5c211af3bae5167f77f67d166e46cf5c10f558b88d99a838161985922755",
+        "sha256_in_prefix": "99ed5c211af3bae5167f77f67d166e46cf5c10f558b88d99a838161985922755",
+        "size_in_bytes": 3813
+      },
+      {
+        "_path": "lib/R/library/kernlab/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "f10ec910afcd7cfff9b314dc13872abfd7a543153871035ca6ee002b3d9c39d8",
+        "sha256_in_prefix": "f10ec910afcd7cfff9b314dc13872abfd7a543153871035ca6ee002b3d9c39d8",
+        "size_in_bytes": 2629
+      },
+      {
+        "_path": "lib/R/library/kernlab/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "c83ab5fea711d1158421a048ac04f20698ad548fef0bda39fddf974a346184c6",
+        "sha256_in_prefix": "c83ab5fea711d1158421a048ac04f20698ad548fef0bda39fddf974a346184c6",
+        "size_in_bytes": 1005
+      },
+      {
+        "_path": "lib/R/library/kernlab/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "2b865c2a0419d105c0b194503ce9db309347a45c672102cd6927c3d89da18520",
+        "sha256_in_prefix": "2b865c2a0419d105c0b194503ce9db309347a45c672102cd6927c3d89da18520",
+        "size_in_bytes": 992
+      },
+      {
+        "_path": "lib/R/library/kernlab/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "4642d3108748de946a3bb744bf6f5ba2526228c4978d602a253b280d514e5429",
+        "sha256_in_prefix": "4642d3108748de946a3bb744bf6f5ba2526228c4978d602a253b280d514e5429",
+        "size_in_bytes": 301
+      },
+      {
+        "_path": "lib/R/library/kernlab/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "19ae5ff80304f43cec81922de9381b9c787fdc291481ed633d4a6991bdbf3828",
+        "sha256_in_prefix": "19ae5ff80304f43cec81922de9381b9c787fdc291481ed633d4a6991bdbf3828",
+        "size_in_bytes": 2771
+      },
+      {
+        "_path": "lib/R/library/kernlab/R/kernlab",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/kernlab/R/kernlab.rdb",
+        "path_type": "hardlink",
+        "sha256": "8ace30294f80acf0f153b42fc3ead3acb1be840442a67f127f16453a8525f06f",
+        "sha256_in_prefix": "8ace30294f80acf0f153b42fc3ead3acb1be840442a67f127f16453a8525f06f",
+        "size_in_bytes": 1290889
+      },
+      {
+        "_path": "lib/R/library/kernlab/R/kernlab.rdx",
+        "path_type": "hardlink",
+        "sha256": "05a751afa09ed618f7fd6a60a2a57702659c80f2a286954ad94deecf3f0baaba",
+        "sha256_in_prefix": "05a751afa09ed618f7fd6a60a2a57702659c80f2a286954ad94deecf3f0baaba",
+        "size_in_bytes": 9343
+      },
+      {
+        "_path": "lib/R/library/kernlab/data/income.rda",
+        "path_type": "hardlink",
+        "sha256": "0084e972e6d4f1c559cce4ac280dab889cfa8b35dd2c4f7fbe15f37ffce27a8e",
+        "sha256_in_prefix": "0084e972e6d4f1c559cce4ac280dab889cfa8b35dd2c4f7fbe15f37ffce27a8e",
+        "size_in_bytes": 42632
+      },
+      {
+        "_path": "lib/R/library/kernlab/data/musk.rda",
+        "path_type": "hardlink",
+        "sha256": "743e2195754d5defab8f23f038aa4939d0432d3d97f80bf413d71d0507c740c2",
+        "sha256_in_prefix": "743e2195754d5defab8f23f038aa4939d0432d3d97f80bf413d71d0507c740c2",
+        "size_in_bytes": 88228
+      },
+      {
+        "_path": "lib/R/library/kernlab/data/promotergene.rda",
+        "path_type": "hardlink",
+        "sha256": "1adae57c753c657d7283a91fc650bf1ed50f2ea0fd10fd0ed383d508d8fdab30",
+        "sha256_in_prefix": "1adae57c753c657d7283a91fc650bf1ed50f2ea0fd10fd0ed383d508d8fdab30",
+        "size_in_bytes": 2265
+      },
+      {
+        "_path": "lib/R/library/kernlab/data/reuters.rda",
+        "path_type": "hardlink",
+        "sha256": "8039f07324fc0ed6940edd46185f707f15a0423ee5590a8cfa6580461ee0840d",
+        "sha256_in_prefix": "8039f07324fc0ed6940edd46185f707f15a0423ee5590a8cfa6580461ee0840d",
+        "size_in_bytes": 16344
+      },
+      {
+        "_path": "lib/R/library/kernlab/data/spam.rda",
+        "path_type": "hardlink",
+        "sha256": "05a2fdef38d389f671205a564a17864897c0d74176abead11bc8f4c963c3c44b",
+        "sha256_in_prefix": "05a2fdef38d389f671205a564a17864897c0d74176abead11bc8f4c963c3c44b",
+        "size_in_bytes": 107769
+      },
+      {
+        "_path": "lib/R/library/kernlab/data/spirals.rda",
+        "path_type": "hardlink",
+        "sha256": "0d5939649acfe5173cdb22ef51bc5be9090026f3dfb392bdaed64d984d2a7766",
+        "sha256_in_prefix": "0d5939649acfe5173cdb22ef51bc5be9090026f3dfb392bdaed64d984d2a7766",
+        "size_in_bytes": 4716
+      },
+      {
+        "_path": "lib/R/library/kernlab/data/ticdata.rda",
+        "path_type": "hardlink",
+        "sha256": "1f6037c9a394c84a65923aee7660313b3766410b2cc93c9561614b74177839be",
+        "sha256_in_prefix": "1f6037c9a394c84a65923aee7660313b3766410b2cc93c9561614b74177839be",
+        "size_in_bytes": 193004
+      },
+      {
+        "_path": "lib/R/library/kernlab/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "0c5ea152481712769dbb5d82b3d45ba08196edbd7c49a7d0ffb20a6adf5aab39",
+        "sha256_in_prefix": "0c5ea152481712769dbb5d82b3d45ba08196edbd7c49a7d0ffb20a6adf5aab39",
+        "size_in_bytes": 1357
+      },
+      {
+        "_path": "lib/R/library/kernlab/doc/kernlab.R",
+        "path_type": "hardlink",
+        "sha256": "5701461a38424f5d28d2a0a6fe2677a07df8ad7513a5f76f9bd62c15a62f171a",
+        "sha256_in_prefix": "5701461a38424f5d28d2a0a6fe2677a07df8ad7513a5f76f9bd62c15a62f171a",
+        "size_in_bytes": 4421
+      },
+      {
+        "_path": "lib/R/library/kernlab/doc/kernlab.Rnw",
+        "path_type": "hardlink",
+        "sha256": "56a358c787c9c409cd66742861351fe995207589b7e490733598f4c613e916aa",
+        "sha256_in_prefix": "56a358c787c9c409cd66742861351fe995207589b7e490733598f4c613e916aa",
+        "size_in_bytes": 50373
+      },
+      {
+        "_path": "lib/R/library/kernlab/doc/kernlab.pdf",
+        "path_type": "hardlink",
+        "sha256": "66b9eb25934945e7adf0e1c8060df19e4afefdb1069bde778204986b4130b3e9",
+        "sha256_in_prefix": "66b9eb25934945e7adf0e1c8060df19e4afefdb1069bde778204986b4130b3e9",
+        "size_in_bytes": 538650
+      },
+      {
+        "_path": "lib/R/library/kernlab/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "814c6e7d4f43f99f048551ac57f6c7d24512a72f316ba3d81dc7f6485223647c",
+        "sha256_in_prefix": "814c6e7d4f43f99f048551ac57f6c7d24512a72f316ba3d81dc7f6485223647c",
+        "size_in_bytes": 10892
+      },
+      {
+        "_path": "lib/R/library/kernlab/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "57fa2e6c81d8784de588739b9b27f4b9d0652fa06ba9faae545e0b2b5407979a",
+        "sha256_in_prefix": "57fa2e6c81d8784de588739b9b27f4b9d0652fa06ba9faae545e0b2b5407979a",
+        "size_in_bytes": 2628
+      },
+      {
+        "_path": "lib/R/library/kernlab/help/kernlab.rdb",
+        "path_type": "hardlink",
+        "sha256": "20b9df1dd68da3aae1d17969c19b7346e358dd6aa8e592a4c165955597447b24",
+        "sha256_in_prefix": "20b9df1dd68da3aae1d17969c19b7346e358dd6aa8e592a4c165955597447b24",
+        "size_in_bytes": 275094
+      },
+      {
+        "_path": "lib/R/library/kernlab/help/kernlab.rdx",
+        "path_type": "hardlink",
+        "sha256": "ff123dfd01ae476cc4554af30ec80b53a58e7f784d851a7aec29202b5fa03798",
+        "sha256_in_prefix": "ff123dfd01ae476cc4554af30ec80b53a58e7f784d851a7aec29202b5fa03798",
+        "size_in_bytes": 1211
+      },
+      {
+        "_path": "lib/R/library/kernlab/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "5ebe665445067164893e209afaca1e257c7619bb550a0a81aa2b5a710ca576ca",
+        "sha256_in_prefix": "5ebe665445067164893e209afaca1e257c7619bb550a0a81aa2b5a710ca576ca",
+        "size_in_bytes": 471
+      },
+      {
+        "_path": "lib/R/library/kernlab/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "75d160bf76a0fefe6d9341cb90fccc6d1588a3ea80458b156ea13af00793b6dd",
+        "sha256_in_prefix": "75d160bf76a0fefe6d9341cb90fccc6d1588a3ea80458b156ea13af00793b6dd",
+        "size_in_bytes": 39134
+      },
+      {
+        "_path": "lib/R/library/kernlab/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      },
+      {
+        "_path": "lib/R/library/kernlab/libs/kernlab.so",
+        "path_type": "hardlink",
+        "sha256": "3bcd504d241c7242f1704b3ebf7d59a966368ff8e4667982eebcd606d4651ef9",
+        "sha256_in_prefix": "3bcd504d241c7242f1704b3ebf7d59a966368ff8e4667982eebcd606d4651ef9",
+        "size_in_bytes": 210072
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "eac717536ca33c01fa52983870f8183ec485c6e9f027f96e7b99a5a8040fce08",
+  "size": 2052028,
+  "subdir": "linux-64",
+  "timestamp": 1532053621000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-kernlab-0.9_26-mro350hac86c6c_0.conda",
+  "version": "0.9_26"
+}

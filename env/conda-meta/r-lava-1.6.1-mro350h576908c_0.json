@@ -1,0 +1,421 @@
+{
+  "build": "mro350h576908c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "r-numderiv",
+    "r-squarem",
+    "r-survival",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-lava-1.6.1-mro350h576908c_0",
+  "files": [
+    "lib/R/library/lava/CITATION",
+    "lib/R/library/lava/DESCRIPTION",
+    "lib/R/library/lava/INDEX",
+    "lib/R/library/lava/Meta/Rd.rds",
+    "lib/R/library/lava/Meta/data.rds",
+    "lib/R/library/lava/Meta/demo.rds",
+    "lib/R/library/lava/Meta/features.rds",
+    "lib/R/library/lava/Meta/hsearch.rds",
+    "lib/R/library/lava/Meta/links.rds",
+    "lib/R/library/lava/Meta/nsInfo.rds",
+    "lib/R/library/lava/Meta/package.rds",
+    "lib/R/library/lava/NAMESPACE",
+    "lib/R/library/lava/NEWS",
+    "lib/R/library/lava/R/lava",
+    "lib/R/library/lava/R/lava.rdb",
+    "lib/R/library/lava/R/lava.rdx",
+    "lib/R/library/lava/data/bmd.rda",
+    "lib/R/library/lava/data/bmidata.rda",
+    "lib/R/library/lava/data/brisa.rda",
+    "lib/R/library/lava/data/calcium.rda",
+    "lib/R/library/lava/data/hubble.rda",
+    "lib/R/library/lava/data/hubble2.rda",
+    "lib/R/library/lava/data/indoorenv.rda",
+    "lib/R/library/lava/data/missingdata.rda",
+    "lib/R/library/lava/data/nldata.rda",
+    "lib/R/library/lava/data/nsem.rda",
+    "lib/R/library/lava/data/semdata.rda",
+    "lib/R/library/lava/data/serotonin.rda",
+    "lib/R/library/lava/data/serotonin2.rda",
+    "lib/R/library/lava/data/twindata.rda",
+    "lib/R/library/lava/demo/estimation.R",
+    "lib/R/library/lava/demo/inference.R",
+    "lib/R/library/lava/demo/lava.R",
+    "lib/R/library/lava/demo/model.R",
+    "lib/R/library/lava/demo/simulation.R",
+    "lib/R/library/lava/doc/reference.pdf",
+    "lib/R/library/lava/gof1.png",
+    "lib/R/library/lava/help/AnIndex",
+    "lib/R/library/lava/help/aliases.rds",
+    "lib/R/library/lava/help/lava.rdb",
+    "lib/R/library/lava/help/lava.rdx",
+    "lib/R/library/lava/help/paths.rds",
+    "lib/R/library/lava/html/00Index.html",
+    "lib/R/library/lava/html/R.css",
+    "lib/R/library/lava/lava1.png",
+    "lib/R/library/lava/me1.png",
+    "lib/R/library/lava/mediation1.png",
+    "lib/R/library/lava/mediation2.png"
+  ],
+  "fn": "r-lava-1.6.1-mro350h576908c_0.conda",
+  "license": "GPL-3",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-lava-1.6.1-mro350h576908c_0",
+    "type": 1
+  },
+  "md5": "66b03ba3c0ae03445525bb562938d229",
+  "name": "r-lava",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-lava-1.6.1-mro350h576908c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/lava/CITATION",
+        "path_type": "hardlink",
+        "sha256": "0b35e54171c7d2e46d02337df9693a25218e5f3d9de3fd2491b37019354b850b",
+        "sha256_in_prefix": "0b35e54171c7d2e46d02337df9693a25218e5f3d9de3fd2491b37019354b850b",
+        "size_in_bytes": 1062
+      },
+      {
+        "_path": "lib/R/library/lava/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "2c95d7a8dbd6ae73cef36f9edd64be56d66d6e33936b1ab740d26a13ae297282",
+        "sha256_in_prefix": "2c95d7a8dbd6ae73cef36f9edd64be56d66d6e33936b1ab740d26a13ae297282",
+        "size_in_bytes": 1684
+      },
+      {
+        "_path": "lib/R/library/lava/INDEX",
+        "path_type": "hardlink",
+        "sha256": "c3346c7c65e7ea7a53b9a1a01908391f0ee38e4000d36f87e7c497f359a4eebb",
+        "sha256_in_prefix": "c3346c7c65e7ea7a53b9a1a01908391f0ee38e4000d36f87e7c497f359a4eebb",
+        "size_in_bytes": 7552
+      },
+      {
+        "_path": "lib/R/library/lava/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "371314968631ee9b231ad74498e85e82b917643a925e495d8c1ba8946036d7c1",
+        "sha256_in_prefix": "371314968631ee9b231ad74498e85e82b917643a925e495d8c1ba8946036d7c1",
+        "size_in_bytes": 5310
+      },
+      {
+        "_path": "lib/R/library/lava/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "7d761629b4b8b629ef148a52ec9993c00d975d9e62cb3ee58d58f2b5b77473d2",
+        "sha256_in_prefix": "7d761629b4b8b629ef148a52ec9993c00d975d9e62cb3ee58d58f2b5b77473d2",
+        "size_in_bytes": 305
+      },
+      {
+        "_path": "lib/R/library/lava/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "ffd0071afbbcf3e44ffe2ee95ea67d1a5cadcae85ee2b73d786ebbb612d7583c",
+        "sha256_in_prefix": "ffd0071afbbcf3e44ffe2ee95ea67d1a5cadcae85ee2b73d786ebbb612d7583c",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "lib/R/library/lava/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/lava/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "1d8b7697989f60d3909ed0b6f83fb9b08d86940066954c4f48d7d0f2dc2829bd",
+        "sha256_in_prefix": "1d8b7697989f60d3909ed0b6f83fb9b08d86940066954c4f48d7d0f2dc2829bd",
+        "size_in_bytes": 5058
+      },
+      {
+        "_path": "lib/R/library/lava/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "61d4f88e0cea286e74b24a689da3b9af962d09e1507e12e61f73b8d9188ef364",
+        "sha256_in_prefix": "61d4f88e0cea286e74b24a689da3b9af962d09e1507e12e61f73b8d9188ef364",
+        "size_in_bytes": 2922
+      },
+      {
+        "_path": "lib/R/library/lava/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "f4f8cce4dabee9b19046f066c109556de842d79953b374c824aaffbe280a955b",
+        "sha256_in_prefix": "f4f8cce4dabee9b19046f066c109556de842d79953b374c824aaffbe280a955b",
+        "size_in_bytes": 3370
+      },
+      {
+        "_path": "lib/R/library/lava/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "25c83f2ec4cd49fbf886e55c40ad6d9994d394862817685dfd42511118eaa151",
+        "sha256_in_prefix": "25c83f2ec4cd49fbf886e55c40ad6d9994d394862817685dfd42511118eaa151",
+        "size_in_bytes": 1615
+      },
+      {
+        "_path": "lib/R/library/lava/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "5834ebf7cf9fa566f79a21553f657856a6fc66ee0d7daf52108d754f76116039",
+        "sha256_in_prefix": "5834ebf7cf9fa566f79a21553f657856a6fc66ee0d7daf52108d754f76116039",
+        "size_in_bytes": 15847
+      },
+      {
+        "_path": "lib/R/library/lava/NEWS",
+        "path_type": "hardlink",
+        "sha256": "73fb07ca67067583de890ff33a8fc443777c1c92ec62ae8eb61f4bbf8b45c5ff",
+        "sha256_in_prefix": "73fb07ca67067583de890ff33a8fc443777c1c92ec62ae8eb61f4bbf8b45c5ff",
+        "size_in_bytes": 14886
+      },
+      {
+        "_path": "lib/R/library/lava/R/lava",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/lava/R/lava.rdb",
+        "path_type": "hardlink",
+        "sha256": "c200b105af650dfee6e26da08c4e6a3a0683ddadfcdfdf2eed6600119e22886d",
+        "sha256_in_prefix": "c200b105af650dfee6e26da08c4e6a3a0683ddadfcdfdf2eed6600119e22886d",
+        "size_in_bytes": 1436047
+      },
+      {
+        "_path": "lib/R/library/lava/R/lava.rdx",
+        "path_type": "hardlink",
+        "sha256": "c0cdea980af83d406069ffe32fdeb252b5bd077c65ff499aad2204579ed3b318",
+        "sha256_in_prefix": "c0cdea980af83d406069ffe32fdeb252b5bd077c65ff499aad2204579ed3b318",
+        "size_in_bytes": 9241
+      },
+      {
+        "_path": "lib/R/library/lava/data/bmd.rda",
+        "path_type": "hardlink",
+        "sha256": "aa5bee95d63ba7b9fcdeacdd905328367825fad571c03393aebc23864b160f82",
+        "sha256_in_prefix": "aa5bee95d63ba7b9fcdeacdd905328367825fad571c03393aebc23864b160f82",
+        "size_in_bytes": 2055
+      },
+      {
+        "_path": "lib/R/library/lava/data/bmidata.rda",
+        "path_type": "hardlink",
+        "sha256": "a3c5be7533e56ecfe40f664f1ac288fe622816ac7f5e0fcddad259cd2f054a1c",
+        "sha256_in_prefix": "a3c5be7533e56ecfe40f664f1ac288fe622816ac7f5e0fcddad259cd2f054a1c",
+        "size_in_bytes": 39870
+      },
+      {
+        "_path": "lib/R/library/lava/data/brisa.rda",
+        "path_type": "hardlink",
+        "sha256": "7d53d504812c4df87250317bd0d9c204513e01ac1841aa9f7efabbfaadb2804d",
+        "sha256_in_prefix": "7d53d504812c4df87250317bd0d9c204513e01ac1841aa9f7efabbfaadb2804d",
+        "size_in_bytes": 16020
+      },
+      {
+        "_path": "lib/R/library/lava/data/calcium.rda",
+        "path_type": "hardlink",
+        "sha256": "d8a5fa3eb0be01a4cb4d24eaeb3583b87cff7caf81b2b4ea28822ac6f05ad28a",
+        "sha256_in_prefix": "d8a5fa3eb0be01a4cb4d24eaeb3583b87cff7caf81b2b4ea28822ac6f05ad28a",
+        "size_in_bytes": 6225
+      },
+      {
+        "_path": "lib/R/library/lava/data/hubble.rda",
+        "path_type": "hardlink",
+        "sha256": "2afb56b63f2c79ac53671fc651634641178964b28a2bc2f05842efd10bdd09cf",
+        "sha256_in_prefix": "2afb56b63f2c79ac53671fc651634641178964b28a2bc2f05842efd10bdd09cf",
+        "size_in_bytes": 542
+      },
+      {
+        "_path": "lib/R/library/lava/data/hubble2.rda",
+        "path_type": "hardlink",
+        "sha256": "0832b1fc9afbfee43ef1b83f4f3d10ed11f46b5235251b89a94944dcea7fff8b",
+        "sha256_in_prefix": "0832b1fc9afbfee43ef1b83f4f3d10ed11f46b5235251b89a94944dcea7fff8b",
+        "size_in_bytes": 605
+      },
+      {
+        "_path": "lib/R/library/lava/data/indoorenv.rda",
+        "path_type": "hardlink",
+        "sha256": "32118479e76052fa72e0983e2e2a9ec63241ef6d5533ebc566bc538e43fd12de",
+        "sha256_in_prefix": "32118479e76052fa72e0983e2e2a9ec63241ef6d5533ebc566bc538e43fd12de",
+        "size_in_bytes": 18846
+      },
+      {
+        "_path": "lib/R/library/lava/data/missingdata.rda",
+        "path_type": "hardlink",
+        "sha256": "abed5a0f8160e1e37290dde614623c0c25abafac78fbc39e3c23768c026bd117",
+        "sha256_in_prefix": "abed5a0f8160e1e37290dde614623c0c25abafac78fbc39e3c23768c026bd117",
+        "size_in_bytes": 32960
+      },
+      {
+        "_path": "lib/R/library/lava/data/nldata.rda",
+        "path_type": "hardlink",
+        "sha256": "6196157282555c72282cdca607a2f25d5287593fa601f2f6b9c589f1835c9437",
+        "sha256_in_prefix": "6196157282555c72282cdca607a2f25d5287593fa601f2f6b9c589f1835c9437",
+        "size_in_bytes": 1353
+      },
+      {
+        "_path": "lib/R/library/lava/data/nsem.rda",
+        "path_type": "hardlink",
+        "sha256": "d51cf1d00d2fc6173be2b4808b14bfa4280c49de04949a22b759fee3b282e0b4",
+        "sha256_in_prefix": "d51cf1d00d2fc6173be2b4808b14bfa4280c49de04949a22b759fee3b282e0b4",
+        "size_in_bytes": 27193
+      },
+      {
+        "_path": "lib/R/library/lava/data/semdata.rda",
+        "path_type": "hardlink",
+        "sha256": "121614535aae05b70bf9d710e56dcad5abd71712c1d5661a66c3421875f3333f",
+        "sha256_in_prefix": "121614535aae05b70bf9d710e56dcad5abd71712c1d5661a66c3421875f3333f",
+        "size_in_bytes": 15976
+      },
+      {
+        "_path": "lib/R/library/lava/data/serotonin.rda",
+        "path_type": "hardlink",
+        "sha256": "c45f78c6eee162cffe1f2dd0d3f34a53c92f93b7d3150aaf7074da2d560db7f8",
+        "sha256_in_prefix": "c45f78c6eee162cffe1f2dd0d3f34a53c92f93b7d3150aaf7074da2d560db7f8",
+        "size_in_bytes": 27313
+      },
+      {
+        "_path": "lib/R/library/lava/data/serotonin2.rda",
+        "path_type": "hardlink",
+        "sha256": "10b1ef094c106081fd957395fd01f2f9a362ead1bbe129fc0ec744323d030da0",
+        "sha256_in_prefix": "10b1ef094c106081fd957395fd01f2f9a362ead1bbe129fc0ec744323d030da0",
+        "size_in_bytes": 28477
+      },
+      {
+        "_path": "lib/R/library/lava/data/twindata.rda",
+        "path_type": "hardlink",
+        "sha256": "ed38714475dbd31a3dcfd06c2641fedffc0d7001cca32e61a863c22752ec6dca",
+        "sha256_in_prefix": "ed38714475dbd31a3dcfd06c2641fedffc0d7001cca32e61a863c22752ec6dca",
+        "size_in_bytes": 58896
+      },
+      {
+        "_path": "lib/R/library/lava/demo/estimation.R",
+        "path_type": "hardlink",
+        "sha256": "e27d2e7257748b70cb0aaec5bcba46ab76e4dd7b15d10982b00eb93b96e7846f",
+        "sha256_in_prefix": "e27d2e7257748b70cb0aaec5bcba46ab76e4dd7b15d10982b00eb93b96e7846f",
+        "size_in_bytes": 53
+      },
+      {
+        "_path": "lib/R/library/lava/demo/inference.R",
+        "path_type": "hardlink",
+        "sha256": "cffca0d4b52853fa33af76b1445487adb118daf058ed7e6281362a46986d8c1f",
+        "sha256_in_prefix": "cffca0d4b52853fa33af76b1445487adb118daf058ed7e6281362a46986d8c1f",
+        "size_in_bytes": 98
+      },
+      {
+        "_path": "lib/R/library/lava/demo/lava.R",
+        "path_type": "hardlink",
+        "sha256": "530f86e02d717d024e12d3775cd533b57ec81b21340236559a3ee7ead3b5d65b",
+        "sha256_in_prefix": "530f86e02d717d024e12d3775cd533b57ec81b21340236559a3ee7ead3b5d65b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/R/library/lava/demo/model.R",
+        "path_type": "hardlink",
+        "sha256": "82bc88d9ac8460520371ea7b7aaa39ca5ed116c5f0242d3c02a7c6d037a93ef6",
+        "sha256_in_prefix": "82bc88d9ac8460520371ea7b7aaa39ca5ed116c5f0242d3c02a7c6d037a93ef6",
+        "size_in_bytes": 106
+      },
+      {
+        "_path": "lib/R/library/lava/demo/simulation.R",
+        "path_type": "hardlink",
+        "sha256": "ddf893bb03705f368b45ffd016ea8d883664dc659beeba0f493059f64eaeafa9",
+        "sha256_in_prefix": "ddf893bb03705f368b45ffd016ea8d883664dc659beeba0f493059f64eaeafa9",
+        "size_in_bytes": 32
+      },
+      {
+        "_path": "lib/R/library/lava/doc/reference.pdf",
+        "path_type": "hardlink",
+        "sha256": "d7c41d42ea22916abb8b66a14bd47436e7c5dea4a1a2c35e22fe9b1f5c982f81",
+        "sha256_in_prefix": "d7c41d42ea22916abb8b66a14bd47436e7c5dea4a1a2c35e22fe9b1f5c982f81",
+        "size_in_bytes": 140894
+      },
+      {
+        "_path": "lib/R/library/lava/gof1.png",
+        "path_type": "hardlink",
+        "sha256": "1750310d1121a5a7f7545d6e15ee2d42697c1b32c7ea74f44e1359e445c4d08b",
+        "sha256_in_prefix": "1750310d1121a5a7f7545d6e15ee2d42697c1b32c7ea74f44e1359e445c4d08b",
+        "size_in_bytes": 48621
+      },
+      {
+        "_path": "lib/R/library/lava/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "15862b0c1ff1941fb46877a4abc532a97fb6a6b885a50141b858395515cf6673",
+        "sha256_in_prefix": "15862b0c1ff1941fb46877a4abc532a97fb6a6b885a50141b858395515cf6673",
+        "size_in_bytes": 6798
+      },
+      {
+        "_path": "lib/R/library/lava/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "122690d249a0d23e7131dae26bbbb6651806170fc5268acbb4547b47c0dfbb7f",
+        "sha256_in_prefix": "122690d249a0d23e7131dae26bbbb6651806170fc5268acbb4547b47c0dfbb7f",
+        "size_in_bytes": 2623
+      },
+      {
+        "_path": "lib/R/library/lava/help/lava.rdb",
+        "path_type": "hardlink",
+        "sha256": "23d2e60daac7ac62ac56b28d9e3fa042f00108202624988bb56ff59477009022",
+        "sha256_in_prefix": "23d2e60daac7ac62ac56b28d9e3fa042f00108202624988bb56ff59477009022",
+        "size_in_bytes": 240453
+      },
+      {
+        "_path": "lib/R/library/lava/help/lava.rdx",
+        "path_type": "hardlink",
+        "sha256": "ef4e9eb628203825bdda56ab776eaa31f243116347e8389bba92654a709026c1",
+        "sha256_in_prefix": "ef4e9eb628203825bdda56ab776eaa31f243116347e8389bba92654a709026c1",
+        "size_in_bytes": 2449
+      },
+      {
+        "_path": "lib/R/library/lava/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "b4bf64e0265eab0adeb56ba27769d32be0c8e74ee76f2a0969823e8ed2ab3481",
+        "sha256_in_prefix": "b4bf64e0265eab0adeb56ba27769d32be0c8e74ee76f2a0969823e8ed2ab3481",
+        "size_in_bytes": 948
+      },
+      {
+        "_path": "lib/R/library/lava/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "c460fa7ad59d69821e7531a15c135d64fbde304a69dbee571b9bb62a110de60e",
+        "sha256_in_prefix": "c460fa7ad59d69821e7531a15c135d64fbde304a69dbee571b9bb62a110de60e",
+        "size_in_bytes": 45376
+      },
+      {
+        "_path": "lib/R/library/lava/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      },
+      {
+        "_path": "lib/R/library/lava/lava1.png",
+        "path_type": "hardlink",
+        "sha256": "7afd3b99687f69ec62bda124ca623b8819f5b9b734fff2735e159ba87b95cbe2",
+        "sha256_in_prefix": "7afd3b99687f69ec62bda124ca623b8819f5b9b734fff2735e159ba87b95cbe2",
+        "size_in_bytes": 20732
+      },
+      {
+        "_path": "lib/R/library/lava/me1.png",
+        "path_type": "hardlink",
+        "sha256": "8bd63d0508f674b2d28d480fa8d41f15a52c81e78cb089b9eb20184348b6bdb4",
+        "sha256_in_prefix": "8bd63d0508f674b2d28d480fa8d41f15a52c81e78cb089b9eb20184348b6bdb4",
+        "size_in_bytes": 6316
+      },
+      {
+        "_path": "lib/R/library/lava/mediation1.png",
+        "path_type": "hardlink",
+        "sha256": "b60edaf21e9d0cb68c149bab6530f0d45de0e2eb6919049c846c8ef3ff8058ab",
+        "sha256_in_prefix": "b60edaf21e9d0cb68c149bab6530f0d45de0e2eb6919049c846c8ef3ff8058ab",
+        "size_in_bytes": 15305
+      },
+      {
+        "_path": "lib/R/library/lava/mediation2.png",
+        "path_type": "hardlink",
+        "sha256": "02cf2847e268b5f0f35e1ebb3dcd5b34edfc0c03441e134f3a0dbbc05a8ebb19",
+        "sha256_in_prefix": "02cf2847e268b5f0f35e1ebb3dcd5b34edfc0c03441e134f3a0dbbc05a8ebb19",
+        "size_in_bytes": 31274
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ef8eb8c72adf4aa0437c096e58a1be1c21459a3891943c46b6e4b78764c13cb0",
+  "size": 2207270,
+  "subdir": "linux-64",
+  "timestamp": 1532052893000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-lava-1.6.1-mro350h576908c_0.conda",
+  "version": "1.6.1"
+}

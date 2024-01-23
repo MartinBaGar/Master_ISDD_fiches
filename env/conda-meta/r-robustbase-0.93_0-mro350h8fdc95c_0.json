@@ -1,0 +1,501 @@
+{
+  "build": "mro350h8fdc95c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.2.0",
+    "libgfortran-ng >=7,<8.0a0",
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "r-deoptimr",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-robustbase-0.93_0-mro350h8fdc95c_0",
+  "files": [
+    "lib/R/library/robustbase/CITATION",
+    "lib/R/library/robustbase/Copyrights",
+    "lib/R/library/robustbase/DESCRIPTION",
+    "lib/R/library/robustbase/INDEX",
+    "lib/R/library/robustbase/Meta/Rd.rds",
+    "lib/R/library/robustbase/Meta/data.rds",
+    "lib/R/library/robustbase/Meta/demo.rds",
+    "lib/R/library/robustbase/Meta/features.rds",
+    "lib/R/library/robustbase/Meta/hsearch.rds",
+    "lib/R/library/robustbase/Meta/links.rds",
+    "lib/R/library/robustbase/Meta/nsInfo.rds",
+    "lib/R/library/robustbase/Meta/package.rds",
+    "lib/R/library/robustbase/Meta/vignette.rds",
+    "lib/R/library/robustbase/NAMESPACE",
+    "lib/R/library/robustbase/NEWS.Rd",
+    "lib/R/library/robustbase/R/robustbase",
+    "lib/R/library/robustbase/R/robustbase.rdb",
+    "lib/R/library/robustbase/R/robustbase.rdx",
+    "lib/R/library/robustbase/data/Rdata.rdb",
+    "lib/R/library/robustbase/data/Rdata.rds",
+    "lib/R/library/robustbase/data/Rdata.rdx",
+    "lib/R/library/robustbase/demo/determinMCD.R",
+    "lib/R/library/robustbase/doc/aggr_results.Rdata",
+    "lib/R/library/robustbase/doc/asymptotic.max.bias.Rdata",
+    "lib/R/library/robustbase/doc/error.distributions.R",
+    "lib/R/library/robustbase/doc/estimating.functions.R",
+    "lib/R/library/robustbase/doc/fastMcd-kmini.R",
+    "lib/R/library/robustbase/doc/fastMcd-kmini.Rnw",
+    "lib/R/library/robustbase/doc/fastMcd-kmini.pdf",
+    "lib/R/library/robustbase/doc/graphics.functions.R",
+    "lib/R/library/robustbase/doc/index.html",
+    "lib/R/library/robustbase/doc/lmrob_simulation.R",
+    "lib/R/library/robustbase/doc/lmrob_simulation.Rnw",
+    "lib/R/library/robustbase/doc/lmrob_simulation.pdf",
+    "lib/R/library/robustbase/doc/psi_functions.R",
+    "lib/R/library/robustbase/doc/psi_functions.Rnw",
+    "lib/R/library/robustbase/doc/psi_functions.pdf",
+    "lib/R/library/robustbase/doc/simulation.functions.R",
+    "lib/R/library/robustbase/doc/simulation.init.R",
+    "lib/R/library/robustbase/external/d1k27.rda",
+    "lib/R/library/robustbase/help/AnIndex",
+    "lib/R/library/robustbase/help/aliases.rds",
+    "lib/R/library/robustbase/help/paths.rds",
+    "lib/R/library/robustbase/help/robustbase.rdb",
+    "lib/R/library/robustbase/help/robustbase.rdx",
+    "lib/R/library/robustbase/html/00Index.html",
+    "lib/R/library/robustbase/html/R.css",
+    "lib/R/library/robustbase/include/robustbase.h",
+    "lib/R/library/robustbase/libs/robustbase.so",
+    "lib/R/library/robustbase/po/en@quot/LC_MESSAGES/R-robustbase.mo",
+    "lib/R/library/robustbase/xtraR/ex-funs.R",
+    "lib/R/library/robustbase/xtraR/lmrob-trace_lev.R",
+    "lib/R/library/robustbase/xtraR/m-s_fns.R",
+    "lib/R/library/robustbase/xtraR/mcnaive.R",
+    "lib/R/library/robustbase/xtraR/plot-psiFun.R",
+    "lib/R/library/robustbase/xtraR/subsample-fns.R",
+    "lib/R/library/robustbase/xtraR/test_LTS.R",
+    "lib/R/library/robustbase/xtraR/test_MCD.R"
+  ],
+  "fn": "r-robustbase-0.93_0-mro350h8fdc95c_0.conda",
+  "license": "GPL (>= 2)",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-robustbase-0.93_0-mro350h8fdc95c_0",
+    "type": 1
+  },
+  "md5": "788b9136da3586c411bbfb79fbed0869",
+  "name": "r-robustbase",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-robustbase-0.93_0-mro350h8fdc95c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/robustbase/CITATION",
+        "path_type": "hardlink",
+        "sha256": "d239e7d6ef38a5611d1205ec5f96de074b6862b7aab4ab9a7f8e1d63f8de729d",
+        "sha256_in_prefix": "d239e7d6ef38a5611d1205ec5f96de074b6862b7aab4ab9a7f8e1d63f8de729d",
+        "size_in_bytes": 1766
+      },
+      {
+        "_path": "lib/R/library/robustbase/Copyrights",
+        "path_type": "hardlink",
+        "sha256": "f0b39fb2fa14426cade7be4240c1f2a604806e5c38b8cd31297aa2056510b79a",
+        "sha256_in_prefix": "f0b39fb2fa14426cade7be4240c1f2a604806e5c38b8cd31297aa2056510b79a",
+        "size_in_bytes": 1308
+      },
+      {
+        "_path": "lib/R/library/robustbase/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "2d8291b054b2f94ad5f4df5481ed2f3cbc7982e72dd644f315a401b8d5e67c56",
+        "sha256_in_prefix": "2d8291b054b2f94ad5f4df5481ed2f3cbc7982e72dd644f315a401b8d5e67c56",
+        "size_in_bytes": 2804
+      },
+      {
+        "_path": "lib/R/library/robustbase/INDEX",
+        "path_type": "hardlink",
+        "sha256": "3636c7396a6e082d7b2ae8fb8ac67ef8f357f818a190b241dc33fb66750bdf76",
+        "sha256_in_prefix": "3636c7396a6e082d7b2ae8fb8ac67ef8f357f818a190b241dc33fb66750bdf76",
+        "size_in_bytes": 7566
+      },
+      {
+        "_path": "lib/R/library/robustbase/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "31ee21440bc4033b578862526d803b6dcb3c5d85ee18d39c242077272923de42",
+        "sha256_in_prefix": "31ee21440bc4033b578862526d803b6dcb3c5d85ee18d39c242077272923de42",
+        "size_in_bytes": 4954
+      },
+      {
+        "_path": "lib/R/library/robustbase/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "7d4cc724db60f889b8beb542e4e2b52ef1472287f6bb90758b57289b69a36385",
+        "sha256_in_prefix": "7d4cc724db60f889b8beb542e4e2b52ef1472287f6bb90758b57289b69a36385",
+        "size_in_bytes": 1109
+      },
+      {
+        "_path": "lib/R/library/robustbase/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "1966113cb51669d039b99cda5743817b48293ad2425ff0f2df744e5712507509",
+        "sha256_in_prefix": "1966113cb51669d039b99cda5743817b48293ad2425ff0f2df744e5712507509",
+        "size_in_bytes": 134
+      },
+      {
+        "_path": "lib/R/library/robustbase/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/robustbase/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "94f7a73a7d8221b9b580fe5b9625c06cc8c28061687fbfb953d665d65bb403a7",
+        "sha256_in_prefix": "94f7a73a7d8221b9b580fe5b9625c06cc8c28061687fbfb953d665d65bb403a7",
+        "size_in_bytes": 4675
+      },
+      {
+        "_path": "lib/R/library/robustbase/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "46f5f60fc6632c58c11961861447df76f5cbe7a3860a334a9e795a1d8e39729c",
+        "sha256_in_prefix": "46f5f60fc6632c58c11961861447df76f5cbe7a3860a334a9e795a1d8e39729c",
+        "size_in_bytes": 1982
+      },
+      {
+        "_path": "lib/R/library/robustbase/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "2a9f28fac1f806b0be608444e7eb3414b983fbe94afcc05cdc174f19760846b2",
+        "sha256_in_prefix": "2a9f28fac1f806b0be608444e7eb3414b983fbe94afcc05cdc174f19760846b2",
+        "size_in_bytes": 1810
+      },
+      {
+        "_path": "lib/R/library/robustbase/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "11df3b1d5109cc34ec42aa4bf93cb3688eb7dddf6685398c657b4ba7706f3f6a",
+        "sha256_in_prefix": "11df3b1d5109cc34ec42aa4bf93cb3688eb7dddf6685398c657b4ba7706f3f6a",
+        "size_in_bytes": 1839
+      },
+      {
+        "_path": "lib/R/library/robustbase/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "7f42c8314a68fd60415173632d948fcd2de38b62f7134b89243522354035d196",
+        "sha256_in_prefix": "7f42c8314a68fd60415173632d948fcd2de38b62f7134b89243522354035d196",
+        "size_in_bytes": 404
+      },
+      {
+        "_path": "lib/R/library/robustbase/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "a91200c4ae7e2d1a3a220dde8104ce7419d08bbd196a86c043292cfc16d1f4d5",
+        "sha256_in_prefix": "a91200c4ae7e2d1a3a220dde8104ce7419d08bbd196a86c043292cfc16d1f4d5",
+        "size_in_bytes": 5994
+      },
+      {
+        "_path": "lib/R/library/robustbase/NEWS.Rd",
+        "path_type": "hardlink",
+        "sha256": "3a3559c584c6aa466e8085f97787fdc8a9c4cbb1ac25f5a91ae5ddd48d0a44ac",
+        "sha256_in_prefix": "3a3559c584c6aa466e8085f97787fdc8a9c4cbb1ac25f5a91ae5ddd48d0a44ac",
+        "size_in_bytes": 9187
+      },
+      {
+        "_path": "lib/R/library/robustbase/R/robustbase",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/robustbase/R/robustbase.rdb",
+        "path_type": "hardlink",
+        "sha256": "90ce58a687e274e9e4efca2efe1bb931dc284ebaa179466111ff86743a77b9ce",
+        "sha256_in_prefix": "90ce58a687e274e9e4efca2efe1bb931dc284ebaa179466111ff86743a77b9ce",
+        "size_in_bytes": 613259
+      },
+      {
+        "_path": "lib/R/library/robustbase/R/robustbase.rdx",
+        "path_type": "hardlink",
+        "sha256": "7ef3d921861d91ff9c30e4764d0cd36b1faf9b58d299dac0c138ebfe8fcf72d2",
+        "sha256_in_prefix": "7ef3d921861d91ff9c30e4764d0cd36b1faf9b58d299dac0c138ebfe8fcf72d2",
+        "size_in_bytes": 4029
+      },
+      {
+        "_path": "lib/R/library/robustbase/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "c26f522138bc6490d423ce758dbe99f266b7aaae9fafa010c472663247f6914e",
+        "sha256_in_prefix": "c26f522138bc6490d423ce758dbe99f266b7aaae9fafa010c472663247f6914e",
+        "size_in_bytes": 228947
+      },
+      {
+        "_path": "lib/R/library/robustbase/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "b0acb140c590d6847d4d723541a32cd47464b9c37c37910a4a16723df000f505",
+        "sha256_in_prefix": "b0acb140c590d6847d4d723541a32cd47464b9c37c37910a4a16723df000f505",
+        "size_in_bytes": 462
+      },
+      {
+        "_path": "lib/R/library/robustbase/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "325115bef04fd6432916df772a2a5f93a03e82ff62aa3cd71e0be948b0e4784a",
+        "sha256_in_prefix": "325115bef04fd6432916df772a2a5f93a03e82ff62aa3cd71e0be948b0e4784a",
+        "size_in_bytes": 697
+      },
+      {
+        "_path": "lib/R/library/robustbase/demo/determinMCD.R",
+        "path_type": "hardlink",
+        "sha256": "b0b29ef88ca6170b4b15ed884c85750e17a314e058f3a46e8c881e755eeb315e",
+        "sha256_in_prefix": "b0b29ef88ca6170b4b15ed884c85750e17a314e058f3a46e8c881e755eeb315e",
+        "size_in_bytes": 4561
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/aggr_results.Rdata",
+        "path_type": "hardlink",
+        "sha256": "e29f2c94806ee194734cfd12a453ca655000d8b93b51e8d7c648840a10d94a94",
+        "sha256_in_prefix": "e29f2c94806ee194734cfd12a453ca655000d8b93b51e8d7c648840a10d94a94",
+        "size_in_bytes": 489677
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/asymptotic.max.bias.Rdata",
+        "path_type": "hardlink",
+        "sha256": "7a7b591bf27ad45da84f6388355dd8dc6fa1c104673aee7fb57c6efdd3c938d3",
+        "sha256_in_prefix": "7a7b591bf27ad45da84f6388355dd8dc6fa1c104673aee7fb57c6efdd3c938d3",
+        "size_in_bytes": 4065
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/error.distributions.R",
+        "path_type": "hardlink",
+        "sha256": "53ed91e9694c8b3a84324f353ea567bc12639cd82c0f2bcdd9f87c47cecc227c",
+        "sha256_in_prefix": "53ed91e9694c8b3a84324f353ea567bc12639cd82c0f2bcdd9f87c47cecc227c",
+        "size_in_bytes": 1483
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/estimating.functions.R",
+        "path_type": "hardlink",
+        "sha256": "432fb32fd29bb8eda9f49c88c8c2be67818e296285498b066501772095f3356f",
+        "sha256_in_prefix": "432fb32fd29bb8eda9f49c88c8c2be67818e296285498b066501772095f3356f",
+        "size_in_bytes": 23048
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/fastMcd-kmini.R",
+        "path_type": "hardlink",
+        "sha256": "22925389d60561de972a9a51a34e9c3d74775850c3d0d99ae6c6c51ea3ba86dc",
+        "sha256_in_prefix": "22925389d60561de972a9a51a34e9c3d74775850c3d0d99ae6c6c51ea3ba86dc",
+        "size_in_bytes": 756
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/fastMcd-kmini.Rnw",
+        "path_type": "hardlink",
+        "sha256": "b3098960436a3c63fda48200b160e3e610fb52c54be4551e3333b87edf2e04c9",
+        "sha256_in_prefix": "b3098960436a3c63fda48200b160e3e610fb52c54be4551e3333b87edf2e04c9",
+        "size_in_bytes": 12890
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/fastMcd-kmini.pdf",
+        "path_type": "hardlink",
+        "sha256": "6d23d9eb433108fb2573acb69528182a27a3b48b31a10fc26149ecfea5ee7787",
+        "sha256_in_prefix": "6d23d9eb433108fb2573acb69528182a27a3b48b31a10fc26149ecfea5ee7787",
+        "size_in_bytes": 68803
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/graphics.functions.R",
+        "path_type": "hardlink",
+        "sha256": "694ff2d1db87ef9027ce04df8ff83613a78f5c314915ae7b1739e3b12278e0e0",
+        "sha256_in_prefix": "694ff2d1db87ef9027ce04df8ff83613a78f5c314915ae7b1739e3b12278e0e0",
+        "size_in_bytes": 20668
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "52b3e6f462fd9463e4a27475820ad2cbccfb959e65ffa3747446a1e3dc44ccc3",
+        "sha256_in_prefix": "52b3e6f462fd9463e4a27475820ad2cbccfb959e65ffa3747446a1e3dc44ccc3",
+        "size_in_bytes": 3456
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/lmrob_simulation.R",
+        "path_type": "hardlink",
+        "sha256": "b2fbe55eeefec80182b8f9437632618c182228167e974d224275260ebd9c2e9d",
+        "sha256_in_prefix": "b2fbe55eeefec80182b8f9437632618c182228167e974d224275260ebd9c2e9d",
+        "size_in_bytes": 44217
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/lmrob_simulation.Rnw",
+        "path_type": "hardlink",
+        "sha256": "63d2973ffe6f3ea4df9f071319e7d334df00e5b90833f1692253eb72d2ef1779",
+        "sha256_in_prefix": "63d2973ffe6f3ea4df9f071319e7d334df00e5b90833f1692253eb72d2ef1779",
+        "size_in_bytes": 59296
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/lmrob_simulation.pdf",
+        "path_type": "hardlink",
+        "sha256": "a41511fdd1e72879798b2b169ba7d25dd2a1c9feb625cc1477b7d393f0d91a67",
+        "sha256_in_prefix": "a41511fdd1e72879798b2b169ba7d25dd2a1c9feb625cc1477b7d393f0d91a67",
+        "size_in_bytes": 825329
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/psi_functions.R",
+        "path_type": "hardlink",
+        "sha256": "4c0fa54c090c7d2ff5756d54de7c9f77d0199970e84236c14cc897436c61e28c",
+        "sha256_in_prefix": "4c0fa54c090c7d2ff5756d54de7c9f77d0199970e84236c14cc897436c61e28c",
+        "size_in_bytes": 4299
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/psi_functions.Rnw",
+        "path_type": "hardlink",
+        "sha256": "58ebc819b5c738e26c0b806f517f898c6cd0fc0870007ea09e1110741d368888",
+        "sha256_in_prefix": "58ebc819b5c738e26c0b806f517f898c6cd0fc0870007ea09e1110741d368888",
+        "size_in_bytes": 17236
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/psi_functions.pdf",
+        "path_type": "hardlink",
+        "sha256": "6ae5a3432d8db98c34bc0026db6e505ad546922a56dad20dedf6c3904373aafb",
+        "sha256_in_prefix": "6ae5a3432d8db98c34bc0026db6e505ad546922a56dad20dedf6c3904373aafb",
+        "size_in_bytes": 310104
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/simulation.functions.R",
+        "path_type": "hardlink",
+        "sha256": "6efb4ac78de2f5583e20d6f878a916a7b3b51f78c0dbde99dcc49885257717ad",
+        "sha256_in_prefix": "6efb4ac78de2f5583e20d6f878a916a7b3b51f78c0dbde99dcc49885257717ad",
+        "size_in_bytes": 53072
+      },
+      {
+        "_path": "lib/R/library/robustbase/doc/simulation.init.R",
+        "path_type": "hardlink",
+        "sha256": "a7c8f4889728dc72c8b30adaaaa357d759e4322a405415e45295f316ac51ac4e",
+        "sha256_in_prefix": "a7c8f4889728dc72c8b30adaaaa357d759e4322a405415e45295f316ac51ac4e",
+        "size_in_bytes": 2754
+      },
+      {
+        "_path": "lib/R/library/robustbase/external/d1k27.rda",
+        "path_type": "hardlink",
+        "sha256": "3eda8d1d0afb14740230027eb12018f0306d6a43f8e1b00243420ec3f818540a",
+        "sha256_in_prefix": "3eda8d1d0afb14740230027eb12018f0306d6a43f8e1b00243420ec3f818540a",
+        "size_in_bytes": 122181
+      },
+      {
+        "_path": "lib/R/library/robustbase/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "ab7318d23e62e341ee729ef542cc3e569bf92da081f14ebbf6fbdbc09edeecd2",
+        "sha256_in_prefix": "ab7318d23e62e341ee729ef542cc3e569bf92da081f14ebbf6fbdbc09edeecd2",
+        "size_in_bytes": 3802
+      },
+      {
+        "_path": "lib/R/library/robustbase/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "5c733894a7b606f893f81f00b99649460f8ae049b4f8f3fd3c76580a9498e82a",
+        "sha256_in_prefix": "5c733894a7b606f893f81f00b99649460f8ae049b4f8f3fd3c76580a9498e82a",
+        "size_in_bytes": 1492
+      },
+      {
+        "_path": "lib/R/library/robustbase/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "dfe964b47d251c3e6f043b0a9f7f27823621e12e3bec8c567cf121d6c888a716",
+        "sha256_in_prefix": "dfe964b47d251c3e6f043b0a9f7f27823621e12e3bec8c567cf121d6c888a716",
+        "size_in_bytes": 972
+      },
+      {
+        "_path": "lib/R/library/robustbase/help/robustbase.rdb",
+        "path_type": "hardlink",
+        "sha256": "a7f0e9acfca6f4ce42ca157d2ad15af273ccc79dbed2a4139ecb14995c6958f8",
+        "sha256_in_prefix": "a7f0e9acfca6f4ce42ca157d2ad15af273ccc79dbed2a4139ecb14995c6958f8",
+        "size_in_bytes": 475219
+      },
+      {
+        "_path": "lib/R/library/robustbase/help/robustbase.rdx",
+        "path_type": "hardlink",
+        "sha256": "f6459c34acd39e3f01cb8e0ea629d08c94c61f475bcbfeb83ce338b34436fbfd",
+        "sha256_in_prefix": "f6459c34acd39e3f01cb8e0ea629d08c94c61f475bcbfeb83ce338b34436fbfd",
+        "size_in_bytes": 2444
+      },
+      {
+        "_path": "lib/R/library/robustbase/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "13d125c6c9b4bc95c83a38fcc265ea19f554bdbea42faa4847dce4d7cc28b463",
+        "sha256_in_prefix": "13d125c6c9b4bc95c83a38fcc265ea19f554bdbea42faa4847dce4d7cc28b463",
+        "size_in_bytes": 26025
+      },
+      {
+        "_path": "lib/R/library/robustbase/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      },
+      {
+        "_path": "lib/R/library/robustbase/include/robustbase.h",
+        "path_type": "hardlink",
+        "sha256": "871e2b69c571d1c8286a89afcea3f439d6816ef06e6fe527446193b1475574db",
+        "sha256_in_prefix": "871e2b69c571d1c8286a89afcea3f439d6816ef06e6fe527446193b1475574db",
+        "size_in_bytes": 2825
+      },
+      {
+        "_path": "lib/R/library/robustbase/libs/robustbase.so",
+        "path_type": "hardlink",
+        "sha256": "cdb11b8b613e6af5a16c8bffa78b57820e09ffffe3ea5772ab3041993c7a39b4",
+        "sha256_in_prefix": "cdb11b8b613e6af5a16c8bffa78b57820e09ffffe3ea5772ab3041993c7a39b4",
+        "size_in_bytes": 181488
+      },
+      {
+        "_path": "lib/R/library/robustbase/po/en@quot/LC_MESSAGES/R-robustbase.mo",
+        "path_type": "hardlink",
+        "sha256": "2114244eaa6faa66d2f901bebc901996279250b1fe52ab343b25c4327bab10aa",
+        "sha256_in_prefix": "2114244eaa6faa66d2f901bebc901996279250b1fe52ab343b25c4327bab10aa",
+        "size_in_bytes": 35496
+      },
+      {
+        "_path": "lib/R/library/robustbase/xtraR/ex-funs.R",
+        "path_type": "hardlink",
+        "sha256": "cede9a92d85ad5f1d5670250ac74ac19bf975f5a77d02bd8e640d25ae1042af6",
+        "sha256_in_prefix": "cede9a92d85ad5f1d5670250ac74ac19bf975f5a77d02bd8e640d25ae1042af6",
+        "size_in_bytes": 2258
+      },
+      {
+        "_path": "lib/R/library/robustbase/xtraR/lmrob-trace_lev.R",
+        "path_type": "hardlink",
+        "sha256": "c48a89649592660894a9b4d995868d808b01d7f9ea09789a5a1d803cbdf5855e",
+        "sha256_in_prefix": "c48a89649592660894a9b4d995868d808b01d7f9ea09789a5a1d803cbdf5855e",
+        "size_in_bytes": 2386
+      },
+      {
+        "_path": "lib/R/library/robustbase/xtraR/m-s_fns.R",
+        "path_type": "hardlink",
+        "sha256": "79010b070f4ba62f74c3e4ab2eca7d8df705614f314196155eb1e1406cb542fe",
+        "sha256_in_prefix": "79010b070f4ba62f74c3e4ab2eca7d8df705614f314196155eb1e1406cb542fe",
+        "size_in_bytes": 5894
+      },
+      {
+        "_path": "lib/R/library/robustbase/xtraR/mcnaive.R",
+        "path_type": "hardlink",
+        "sha256": "4412664e1b7cea844f3886fa53eb0f00b7ea7bc5c16cbc8f4579e8f1f42fcd84",
+        "sha256_in_prefix": "4412664e1b7cea844f3886fa53eb0f00b7ea7bc5c16cbc8f4579e8f1f42fcd84",
+        "size_in_bytes": 2271
+      },
+      {
+        "_path": "lib/R/library/robustbase/xtraR/plot-psiFun.R",
+        "path_type": "hardlink",
+        "sha256": "f1f3cf8811b2ce1a97e65ed41ec6a893d3f4fbc1a212a888e4f95bad5853fc9a",
+        "sha256_in_prefix": "f1f3cf8811b2ce1a97e65ed41ec6a893d3f4fbc1a212a888e4f95bad5853fc9a",
+        "size_in_bytes": 4359
+      },
+      {
+        "_path": "lib/R/library/robustbase/xtraR/subsample-fns.R",
+        "path_type": "hardlink",
+        "sha256": "971736deb046e0840163ca6bd4ade8025cce324ed5f5165b63c10004ebff5e23",
+        "sha256_in_prefix": "971736deb046e0840163ca6bd4ade8025cce324ed5f5165b63c10004ebff5e23",
+        "size_in_bytes": 5594
+      },
+      {
+        "_path": "lib/R/library/robustbase/xtraR/test_LTS.R",
+        "path_type": "hardlink",
+        "sha256": "f7589b19c8554bceaa8014416006bd6e27a2dcda3d17b81d5a82c6e45e59cbdb",
+        "sha256_in_prefix": "f7589b19c8554bceaa8014416006bd6e27a2dcda3d17b81d5a82c6e45e59cbdb",
+        "size_in_bytes": 4315
+      },
+      {
+        "_path": "lib/R/library/robustbase/xtraR/test_MCD.R",
+        "path_type": "hardlink",
+        "sha256": "d48916d68d014ae5b9f1292a0145a3ac5019380f788d50df955045d02748f0ca",
+        "sha256_in_prefix": "d48916d68d014ae5b9f1292a0145a3ac5019380f788d50df955045d02748f0ca",
+        "size_in_bytes": 12669
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "1ed0dc0044f95793a681f8331e595c772eecadf512a97a2b68537fbac822765c",
+  "size": 3077680,
+  "subdir": "linux-64",
+  "timestamp": 1532022075000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-robustbase-0.93_0-mro350h8fdc95c_0.conda",
+  "version": "0.93_0"
+}

@@ -1,0 +1,299 @@
+{
+  "build": "mro350h576908c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "r-abind",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-magic-1.5_8-mro350h576908c_0",
+  "files": [
+    "lib/R/library/magic/CITATION",
+    "lib/R/library/magic/DESCRIPTION",
+    "lib/R/library/magic/INDEX",
+    "lib/R/library/magic/Meta/Rd.rds",
+    "lib/R/library/magic/Meta/data.rds",
+    "lib/R/library/magic/Meta/features.rds",
+    "lib/R/library/magic/Meta/hsearch.rds",
+    "lib/R/library/magic/Meta/links.rds",
+    "lib/R/library/magic/Meta/nsInfo.rds",
+    "lib/R/library/magic/Meta/package.rds",
+    "lib/R/library/magic/Meta/vignette.rds",
+    "lib/R/library/magic/NAMESPACE",
+    "lib/R/library/magic/R/magic",
+    "lib/R/library/magic/R/magic.rdb",
+    "lib/R/library/magic/R/magic.rdx",
+    "lib/R/library/magic/data/Frankenstein.rda",
+    "lib/R/library/magic/data/Ollerenshaw.rda",
+    "lib/R/library/magic/data/cube2.rda",
+    "lib/R/library/magic/data/hendricks.rda",
+    "lib/R/library/magic/data/magiccubes.rda",
+    "lib/R/library/magic/data/perfectcube5.rda",
+    "lib/R/library/magic/data/perfectcube6.rda",
+    "lib/R/library/magic/doc/index.html",
+    "lib/R/library/magic/doc/magicpaper.R",
+    "lib/R/library/magic/doc/magicpaper.Rnw",
+    "lib/R/library/magic/doc/magicpaper.pdf",
+    "lib/R/library/magic/help/AnIndex",
+    "lib/R/library/magic/help/aliases.rds",
+    "lib/R/library/magic/help/magic.rdb",
+    "lib/R/library/magic/help/magic.rdx",
+    "lib/R/library/magic/help/paths.rds",
+    "lib/R/library/magic/html/00Index.html",
+    "lib/R/library/magic/html/R.css"
+  ],
+  "fn": "r-magic-1.5_8-mro350h576908c_0.conda",
+  "license": "GPL-2",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-magic-1.5_8-mro350h576908c_0",
+    "type": 1
+  },
+  "md5": "d4f0a049d14618d069fa44a0bd91c48d",
+  "name": "r-magic",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-magic-1.5_8-mro350h576908c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/magic/CITATION",
+        "path_type": "hardlink",
+        "sha256": "06073fbb2f794770b4dd11b4309b625764ba5d93f64e59acffb4ddf568e5ac77",
+        "sha256_in_prefix": "06073fbb2f794770b4dd11b4309b625764ba5d93f64e59acffb4ddf568e5ac77",
+        "size_in_bytes": 627
+      },
+      {
+        "_path": "lib/R/library/magic/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "c01cac7b8b723332d6861251206c2b25e78e64daf72ec5fbc45702a75da42cc6",
+        "sha256_in_prefix": "c01cac7b8b723332d6861251206c2b25e78e64daf72ec5fbc45702a75da42cc6",
+        "size_in_bytes": 1172
+      },
+      {
+        "_path": "lib/R/library/magic/INDEX",
+        "path_type": "hardlink",
+        "sha256": "a2fd6e79a5287ff99097e7d596a9192fc6b5ee9e9d8db2994849347e57f92a0d",
+        "sha256_in_prefix": "a2fd6e79a5287ff99097e7d596a9192fc6b5ee9e9d8db2994849347e57f92a0d",
+        "size_in_bytes": 3393
+      },
+      {
+        "_path": "lib/R/library/magic/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "b7a0ec4b7a735de39259a51a3e2342d1d4c9b03bd6cc581f4bc4b717d1ed4a9f",
+        "sha256_in_prefix": "b7a0ec4b7a735de39259a51a3e2342d1d4c9b03bd6cc581f4bc4b717d1ed4a9f",
+        "size_in_bytes": 2394
+      },
+      {
+        "_path": "lib/R/library/magic/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "acafe967867268cc4229eaadb7c9bafa7e755bb222018b9a4caa3febff82e591",
+        "sha256_in_prefix": "acafe967867268cc4229eaadb7c9bafa7e755bb222018b9a4caa3febff82e591",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "lib/R/library/magic/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/magic/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "761c5f0a722d0ca795323abf04190ff02792dd5cd46ab99118632d120b3a2b52",
+        "sha256_in_prefix": "761c5f0a722d0ca795323abf04190ff02792dd5cd46ab99118632d120b3a2b52",
+        "size_in_bytes": 2193
+      },
+      {
+        "_path": "lib/R/library/magic/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "c5f72fe4d0db38fa8d368770cfc08dd59820aa5e4e30798585a8c950216229ad",
+        "sha256_in_prefix": "c5f72fe4d0db38fa8d368770cfc08dd59820aa5e4e30798585a8c950216229ad",
+        "size_in_bytes": 1204
+      },
+      {
+        "_path": "lib/R/library/magic/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "36da8e891a57ef8f4335f8d55775274c20f19142809bd27420b9d722abc85c79",
+        "sha256_in_prefix": "36da8e891a57ef8f4335f8d55775274c20f19142809bd27420b9d722abc85c79",
+        "size_in_bytes": 291
+      },
+      {
+        "_path": "lib/R/library/magic/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "574df1dc667686fc27cca4b4384adc9c6e97cacf4dc4527193baca7c9366b8c6",
+        "sha256_in_prefix": "574df1dc667686fc27cca4b4384adc9c6e97cacf4dc4527193baca7c9366b8c6",
+        "size_in_bytes": 1025
+      },
+      {
+        "_path": "lib/R/library/magic/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "0d042f7f9779eee43280453dec920795460bdde8018aefb7dae6753be3607ae2",
+        "sha256_in_prefix": "0d042f7f9779eee43280453dec920795460bdde8018aefb7dae6753be3607ae2",
+        "size_in_bytes": 220
+      },
+      {
+        "_path": "lib/R/library/magic/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "6fd6bd06433e858668f721cae6f4f99232e633b4e7023f495742d34eba3fcef3",
+        "sha256_in_prefix": "6fd6bd06433e858668f721cae6f4f99232e633b4e7023f495742d34eba3fcef3",
+        "size_in_bytes": 307
+      },
+      {
+        "_path": "lib/R/library/magic/R/magic",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/magic/R/magic.rdb",
+        "path_type": "hardlink",
+        "sha256": "a313af55b3bf298fc5225318a66dcd2276b52c7473a7c153679f1ab6cb8303ad",
+        "sha256_in_prefix": "a313af55b3bf298fc5225318a66dcd2276b52c7473a7c153679f1ab6cb8303ad",
+        "size_in_bytes": 108774
+      },
+      {
+        "_path": "lib/R/library/magic/R/magic.rdx",
+        "path_type": "hardlink",
+        "sha256": "42999906df9897a5da080d40c2acf9bff6d7735dbc2b9fcb854fb82d802b6363",
+        "sha256_in_prefix": "42999906df9897a5da080d40c2acf9bff6d7735dbc2b9fcb854fb82d802b6363",
+        "size_in_bytes": 1560
+      },
+      {
+        "_path": "lib/R/library/magic/data/Frankenstein.rda",
+        "path_type": "hardlink",
+        "sha256": "4c817e2dbb68ba31965b5b0d49552a1b36b9bdde6039840090ce942f88e27de6",
+        "sha256_in_prefix": "4c817e2dbb68ba31965b5b0d49552a1b36b9bdde6039840090ce942f88e27de6",
+        "size_in_bytes": 969
+      },
+      {
+        "_path": "lib/R/library/magic/data/Ollerenshaw.rda",
+        "path_type": "hardlink",
+        "sha256": "4d18a322903fa7dd6a6ff44f46c585c235972914abd9063b7a94bb19743873c5",
+        "sha256_in_prefix": "4d18a322903fa7dd6a6ff44f46c585c235972914abd9063b7a94bb19743873c5",
+        "size_in_bytes": 401
+      },
+      {
+        "_path": "lib/R/library/magic/data/cube2.rda",
+        "path_type": "hardlink",
+        "sha256": "8938d69aa73940574d2d7ff6531c1808e05c9823f7754a78e250313a2a9bf5ba",
+        "sha256_in_prefix": "8938d69aa73940574d2d7ff6531c1808e05c9823f7754a78e250313a2a9bf5ba",
+        "size_in_bytes": 230
+      },
+      {
+        "_path": "lib/R/library/magic/data/hendricks.rda",
+        "path_type": "hardlink",
+        "sha256": "52bcb1f6958d0e7ae7d5901b113962e709bfc6b0d6008db176b0d969e2e2a81d",
+        "sha256_in_prefix": "52bcb1f6958d0e7ae7d5901b113962e709bfc6b0d6008db176b0d969e2e2a81d",
+        "size_in_bytes": 1215
+      },
+      {
+        "_path": "lib/R/library/magic/data/magiccubes.rda",
+        "path_type": "hardlink",
+        "sha256": "f6d2051a3316624d2bb1235d246aeefa924c89af785e93ea03b58b530633a789",
+        "sha256_in_prefix": "f6d2051a3316624d2bb1235d246aeefa924c89af785e93ea03b58b530633a789",
+        "size_in_bytes": 302
+      },
+      {
+        "_path": "lib/R/library/magic/data/perfectcube5.rda",
+        "path_type": "hardlink",
+        "sha256": "b7ab6f133bf2b2435217228ca9bc7052e749c54612194e8092661a5d49f7a7aa",
+        "sha256_in_prefix": "b7ab6f133bf2b2435217228ca9bc7052e749c54612194e8092661a5d49f7a7aa",
+        "size_in_bytes": 371
+      },
+      {
+        "_path": "lib/R/library/magic/data/perfectcube6.rda",
+        "path_type": "hardlink",
+        "sha256": "7e61306a4e3dfe2276452605d830698917b0e95b1bef7aa389bad1181f105e86",
+        "sha256_in_prefix": "7e61306a4e3dfe2276452605d830698917b0e95b1bef7aa389bad1181f105e86",
+        "size_in_bytes": 568
+      },
+      {
+        "_path": "lib/R/library/magic/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "37f2f7582f9887406df74c0f05c6e0d09804cfaaaf35e0139ce0faabf57200a8",
+        "sha256_in_prefix": "37f2f7582f9887406df74c0f05c6e0d09804cfaaaf35e0139ce0faabf57200a8",
+        "size_in_bytes": 1345
+      },
+      {
+        "_path": "lib/R/library/magic/doc/magicpaper.R",
+        "path_type": "hardlink",
+        "sha256": "6378c36f4a5f5b1d9a33bf677fdb9a5aabbcd679a603bf2b8fcfc7c9ccbb0bba",
+        "sha256_in_prefix": "6378c36f4a5f5b1d9a33bf677fdb9a5aabbcd679a603bf2b8fcfc7c9ccbb0bba",
+        "size_in_bytes": 1809
+      },
+      {
+        "_path": "lib/R/library/magic/doc/magicpaper.Rnw",
+        "path_type": "hardlink",
+        "sha256": "8141612fe13f5d2d131252a2e9325fc21103734e42a1a5fb99540c927836ade9",
+        "sha256_in_prefix": "8141612fe13f5d2d131252a2e9325fc21103734e42a1a5fb99540c927836ade9",
+        "size_in_bytes": 14616
+      },
+      {
+        "_path": "lib/R/library/magic/doc/magicpaper.pdf",
+        "path_type": "hardlink",
+        "sha256": "f79f26a7ae23e6a0ae1b1fa268d09fec56aa7980722c8a0a9cadb2f4aee676c6",
+        "sha256_in_prefix": "f79f26a7ae23e6a0ae1b1fa268d09fec56aa7980722c8a0a9cadb2f4aee676c6",
+        "size_in_bytes": 310375
+      },
+      {
+        "_path": "lib/R/library/magic/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "1da6c197ef84c4d0b1407227a9fa6aa1ca6f2949588d6de07d5db46764a19006",
+        "sha256_in_prefix": "1da6c197ef84c4d0b1407227a9fa6aa1ca6f2949588d6de07d5db46764a19006",
+        "size_in_bytes": 2441
+      },
+      {
+        "_path": "lib/R/library/magic/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "b17787279e208e0cabc86fda78866441694705b63286a2db910a77abae7155f3",
+        "sha256_in_prefix": "b17787279e208e0cabc86fda78866441694705b63286a2db910a77abae7155f3",
+        "size_in_bytes": 949
+      },
+      {
+        "_path": "lib/R/library/magic/help/magic.rdb",
+        "path_type": "hardlink",
+        "sha256": "0b611f71c3c010c2048d927fe053378550408a6dd902dea84ad0d73b11342b67",
+        "sha256_in_prefix": "0b611f71c3c010c2048d927fe053378550408a6dd902dea84ad0d73b11342b67",
+        "size_in_bytes": 140011
+      },
+      {
+        "_path": "lib/R/library/magic/help/magic.rdx",
+        "path_type": "hardlink",
+        "sha256": "b6cc42a43d3b1c685222884f429a7e779349621038e3c3461930f482e183be40",
+        "sha256_in_prefix": "b6cc42a43d3b1c685222884f429a7e779349621038e3c3461930f482e183be40",
+        "size_in_bytes": 1340
+      },
+      {
+        "_path": "lib/R/library/magic/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "4d3f875fdec40f392777bf53613b8fc52530833ec4f8f83ade549042843fe73c",
+        "sha256_in_prefix": "4d3f875fdec40f392777bf53613b8fc52530833ec4f8f83ade549042843fe73c",
+        "size_in_bytes": 569
+      },
+      {
+        "_path": "lib/R/library/magic/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "7d4982d47c2facf8c240e2e6bb05a383d603f1d8793a756fd7a7e80cf717285c",
+        "sha256_in_prefix": "7d4982d47c2facf8c240e2e6bb05a383d603f1d8793a756fd7a7e80cf717285c",
+        "size_in_bytes": 17209
+      },
+      {
+        "_path": "lib/R/library/magic/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "5265bbfaa4f974c56d2904861a873ab380dc305e946a021c0895b5a28a3a1c85",
+  "size": 579213,
+  "subdir": "linux-64",
+  "timestamp": 1532053215000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-magic-1.5_8-mro350h576908c_0.conda",
+  "version": "1.5_8"
+}

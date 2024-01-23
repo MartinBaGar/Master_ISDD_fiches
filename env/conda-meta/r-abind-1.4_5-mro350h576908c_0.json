@@ -1,0 +1,202 @@
+{
+  "build": "mro350h576908c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "mro-base >=3.5.0,<3.5.1.0a0",
+    "_r-mutex 1.* mro_2"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-abind-1.4_5-mro350h576908c_0",
+  "files": [
+    "lib/R/library/abind/DESCRIPTION",
+    "lib/R/library/abind/INDEX",
+    "lib/R/library/abind/Meta/Rd.rds",
+    "lib/R/library/abind/Meta/features.rds",
+    "lib/R/library/abind/Meta/hsearch.rds",
+    "lib/R/library/abind/Meta/links.rds",
+    "lib/R/library/abind/Meta/nsInfo.rds",
+    "lib/R/library/abind/Meta/package.rds",
+    "lib/R/library/abind/NAMESPACE",
+    "lib/R/library/abind/R/abind",
+    "lib/R/library/abind/R/abind.rdb",
+    "lib/R/library/abind/R/abind.rdx",
+    "lib/R/library/abind/help/AnIndex",
+    "lib/R/library/abind/help/abind.rdb",
+    "lib/R/library/abind/help/abind.rdx",
+    "lib/R/library/abind/help/aliases.rds",
+    "lib/R/library/abind/help/paths.rds",
+    "lib/R/library/abind/html/00Index.html",
+    "lib/R/library/abind/html/R.css",
+    "lib/R/library/abind/sccversion.txt",
+    "lib/R/library/abind/svnversion.txt"
+  ],
+  "fn": "r-abind-1.4_5-mro350h576908c_0.conda",
+  "license": "LGPL (>= 2)",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-abind-1.4_5-mro350h576908c_0",
+    "type": 1
+  },
+  "md5": "7143a077738ff5cef53b281e878e49a7",
+  "name": "r-abind",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-abind-1.4_5-mro350h576908c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/abind/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "755451c1bada0a91d52a1700b20f9730aafae1c44cfbaec5e9d8fa9fa105fa46",
+        "sha256_in_prefix": "755451c1bada0a91d52a1700b20f9730aafae1c44cfbaec5e9d8fa9fa105fa46",
+        "size_in_bytes": 712
+      },
+      {
+        "_path": "lib/R/library/abind/INDEX",
+        "path_type": "hardlink",
+        "sha256": "3d2eb24130c617ac0425246a4e1b1749bd066c0661774349880f56eb2cb9c8c8",
+        "sha256_in_prefix": "3d2eb24130c617ac0425246a4e1b1749bd066c0661774349880f56eb2cb9c8c8",
+        "size_in_bytes": 352
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "988f7081168e66f1f539f019dc8522b46dd4b653b74ef45e2d90af98ea915729",
+        "sha256_in_prefix": "988f7081168e66f1f539f019dc8522b46dd4b653b74ef45e2d90af98ea915729",
+        "size_in_bytes": 428
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "sha256_in_prefix": "67b115601cd814233ec9c2e728201e1776cc9ba4fbb13a8a5e179270fee5f6db",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "60ccff9d94882c0ef66581f92470a310838aae6bd2942c84419471ef9eac7c19",
+        "sha256_in_prefix": "60ccff9d94882c0ef66581f92470a310838aae6bd2942c84419471ef9eac7c19",
+        "size_in_bytes": 479
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "a69faae4791e3f7c1e3383d91223cd0f6f98ee37a2b923839bf53da77afd5d12",
+        "sha256_in_prefix": "a69faae4791e3f7c1e3383d91223cd0f6f98ee37a2b923839bf53da77afd5d12",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "487c372df34ab2c80a08f57e03b82a46db4fea911502926f6393ff795e5d9dbd",
+        "sha256_in_prefix": "487c372df34ab2c80a08f57e03b82a46db4fea911502926f6393ff795e5d9dbd",
+        "size_in_bytes": 284
+      },
+      {
+        "_path": "lib/R/library/abind/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "4162071c9d130b8a55452d57f19e3401053e8179e7efcc9e3154f59ff7eb55f6",
+        "sha256_in_prefix": "4162071c9d130b8a55452d57f19e3401053e8179e7efcc9e3154f59ff7eb55f6",
+        "size_in_bytes": 816
+      },
+      {
+        "_path": "lib/R/library/abind/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "9c08b1cc67a6f78d8095d2984386cbc0249395e9ff2c2e141131ee818801fcb4",
+        "sha256_in_prefix": "9c08b1cc67a6f78d8095d2984386cbc0249395e9ff2c2e141131ee818801fcb4",
+        "size_in_bytes": 237
+      },
+      {
+        "_path": "lib/R/library/abind/R/abind",
+        "path_type": "hardlink",
+        "sha256": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "sha256_in_prefix": "2fb8b16be23c820daf2e51b7ddfef61ca4978e561b1d228d546d1b356041f79e",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/R/library/abind/R/abind.rdb",
+        "path_type": "hardlink",
+        "sha256": "002eee23825b323ceb99d599a5546ee493c0ca468f2862610322db3964b1822a",
+        "sha256_in_prefix": "002eee23825b323ceb99d599a5546ee493c0ca468f2862610322db3964b1822a",
+        "size_in_bytes": 31212
+      },
+      {
+        "_path": "lib/R/library/abind/R/abind.rdx",
+        "path_type": "hardlink",
+        "sha256": "47e598b8bd825fc098a6f0b16867e4fa818c256e1a8a9500f26cbbbc80b0ac9b",
+        "sha256_in_prefix": "47e598b8bd825fc098a6f0b16867e4fa818c256e1a8a9500f26cbbbc80b0ac9b",
+        "size_in_bytes": 351
+      },
+      {
+        "_path": "lib/R/library/abind/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "0ea54d8c9f4b2599ff1d45b78a9250bccd399f8508e424d256840605fca57ad1",
+        "sha256_in_prefix": "0ea54d8c9f4b2599ff1d45b78a9250bccd399f8508e424d256840605fca57ad1",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/R/library/abind/help/abind.rdb",
+        "path_type": "hardlink",
+        "sha256": "6b6e5fa6e2ff550f43abfe934a4e70ade9656922dfb70bd7de7c85f93ed015ec",
+        "sha256_in_prefix": "6b6e5fa6e2ff550f43abfe934a4e70ade9656922dfb70bd7de7c85f93ed015ec",
+        "size_in_bytes": 23299
+      },
+      {
+        "_path": "lib/R/library/abind/help/abind.rdx",
+        "path_type": "hardlink",
+        "sha256": "1c0aa58362674c12a9119060d5de55e7a7ffccc21bdb8ead28264a2b5c4ef867",
+        "sha256_in_prefix": "1c0aa58362674c12a9119060d5de55e7a7ffccc21bdb8ead28264a2b5c4ef867",
+        "size_in_bytes": 238
+      },
+      {
+        "_path": "lib/R/library/abind/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "e2f258b5d7e14768173ab34a778be9334c56d44fee4642a50b3825681150ab4e",
+        "sha256_in_prefix": "e2f258b5d7e14768173ab34a778be9334c56d44fee4642a50b3825681150ab4e",
+        "size_in_bytes": 141
+      },
+      {
+        "_path": "lib/R/library/abind/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "f2f7e66620ee27f1790efc9e2c7cb43a56f790e12d0c66cdd71d37fc424998e8",
+        "sha256_in_prefix": "f2f7e66620ee27f1790efc9e2c7cb43a56f790e12d0c66cdd71d37fc424998e8",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "lib/R/library/abind/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "2728561325e95cba260b6dbf3265d85581a6189080a6433625afb908739f6809",
+        "sha256_in_prefix": "2728561325e95cba260b6dbf3265d85581a6189080a6433625afb908739f6809",
+        "size_in_bytes": 2290
+      },
+      {
+        "_path": "lib/R/library/abind/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      },
+      {
+        "_path": "lib/R/library/abind/sccversion.txt",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/R/library/abind/svnversion.txt",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "89b81926bfb781fe2bbe88d2ee030a67006b09169eb07c0fed875b5591c94445",
+  "size": 65809,
+  "subdir": "linux-64",
+  "timestamp": 1532050231000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-abind-1.4_5-mro350h576908c_0.conda",
+  "version": "1.4_5"
+}
