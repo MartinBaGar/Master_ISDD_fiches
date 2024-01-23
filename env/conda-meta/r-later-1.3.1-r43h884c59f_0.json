@@ -1,0 +1,274 @@
+{
+  "build": "r43h884c59f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "r-base >=4.3,<4.4.0a0",
+    "r-rcpp >=0.12.9",
+    "r-rlang",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/usr/local/conda/pkgs/r-later-1.3.1-r43h884c59f_0",
+  "features": "",
+  "files": [
+    "lib/R/library/later/DESCRIPTION",
+    "lib/R/library/later/INDEX",
+    "lib/R/library/later/LICENSE",
+    "lib/R/library/later/Meta/Rd.rds",
+    "lib/R/library/later/Meta/features.rds",
+    "lib/R/library/later/Meta/hsearch.rds",
+    "lib/R/library/later/Meta/links.rds",
+    "lib/R/library/later/Meta/nsInfo.rds",
+    "lib/R/library/later/Meta/package.rds",
+    "lib/R/library/later/Meta/vignette.rds",
+    "lib/R/library/later/NAMESPACE",
+    "lib/R/library/later/NEWS.md",
+    "lib/R/library/later/R/later",
+    "lib/R/library/later/R/later.rdb",
+    "lib/R/library/later/R/later.rdx",
+    "lib/R/library/later/bgtest.cpp",
+    "lib/R/library/later/doc/index.html",
+    "lib/R/library/later/doc/later-cpp.Rmd",
+    "lib/R/library/later/doc/later-cpp.html",
+    "lib/R/library/later/help/AnIndex",
+    "lib/R/library/later/help/aliases.rds",
+    "lib/R/library/later/help/later.rdb",
+    "lib/R/library/later/help/later.rdx",
+    "lib/R/library/later/help/paths.rds",
+    "lib/R/library/later/html/00Index.html",
+    "lib/R/library/later/html/R.css",
+    "lib/R/library/later/include/later.h",
+    "lib/R/library/later/include/later_api.h",
+    "lib/R/library/later/libs/later.so"
+  ],
+  "fn": "r-later-1.3.1-r43h884c59f_0.conda",
+  "legacy_bz2_md5": "800a4e7b15adf3642d0e821f48e11e29",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/usr/local/conda/pkgs/r-later-1.3.1-r43h884c59f_0",
+    "type": 1
+  },
+  "md5": "fbe93eaef700cf6a336bfeebcc37c6bd",
+  "name": "r-later",
+  "package_tarball_full_path": "/usr/local/conda/pkgs/r-later-1.3.1-r43h884c59f_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/later/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "c6ea863d7ee05749e7d82da2178ebec435909919d08e66437817d2e889d928b3",
+        "sha256_in_prefix": "c6ea863d7ee05749e7d82da2178ebec435909919d08e66437817d2e889d928b3",
+        "size_in_bytes": 1560
+      },
+      {
+        "_path": "lib/R/library/later/INDEX",
+        "path_type": "hardlink",
+        "sha256": "be9579e0918c272b48e323bbda3091218f4192ac961f45cef4e83f4f35efbd84",
+        "sha256_in_prefix": "be9579e0918c272b48e323bbda3091218f4192ac961f45cef4e83f4f35efbd84",
+        "size_in_bytes": 213
+      },
+      {
+        "_path": "lib/R/library/later/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "a85526a4b6fea37ab032b0d5fa1c5983def588c7aef1a1c91c35feeaaadc16b9",
+        "sha256_in_prefix": "a85526a4b6fea37ab032b0d5fa1c5983def588c7aef1a1c91c35feeaaadc16b9",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/later/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "afa9973ee3488bab096f55d2d9d569f63b0a0771a3f57e25c2569c5f11254078",
+        "sha256_in_prefix": "afa9973ee3488bab096f55d2d9d569f63b0a0771a3f57e25c2569c5f11254078",
+        "size_in_bytes": 508
+      },
+      {
+        "_path": "lib/R/library/later/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/later/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "e40290713b6ef85c383a02332f27023e98993dee4ebcfe646666da2bb51e6dfe",
+        "sha256_in_prefix": "e40290713b6ef85c383a02332f27023e98993dee4ebcfe646666da2bb51e6dfe",
+        "size_in_bytes": 519
+      },
+      {
+        "_path": "lib/R/library/later/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "42fbafd8ebbdbe4b60e05e823f8db08570e156714ded37d2e30f956df79e4c7c",
+        "sha256_in_prefix": "42fbafd8ebbdbe4b60e05e823f8db08570e156714ded37d2e30f956df79e4c7c",
+        "size_in_bytes": 253
+      },
+      {
+        "_path": "lib/R/library/later/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "a89b7d2cfe472dbc324faa92860317996f8da4cd72647a9ac18321b43a92097c",
+        "sha256_in_prefix": "a89b7d2cfe472dbc324faa92860317996f8da4cd72647a9ac18321b43a92097c",
+        "size_in_bytes": 333
+      },
+      {
+        "_path": "lib/R/library/later/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "fff0aa16d595cdb74fbbff2a60a4b7b90b81f1703411b5160a6ed340139acbb8",
+        "sha256_in_prefix": "fff0aa16d595cdb74fbbff2a60a4b7b90b81f1703411b5160a6ed340139acbb8",
+        "size_in_bytes": 1196
+      },
+      {
+        "_path": "lib/R/library/later/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "a07899fb0ef7b50b4fe5977a5a1a7d28a41533b8fd8c0aca2d4664d57f58d8fb",
+        "sha256_in_prefix": "a07899fb0ef7b50b4fe5977a5a1a7d28a41533b8fd8c0aca2d4664d57f58d8fb",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "lib/R/library/later/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "d1735bd08b2ded0a6435da9337d67a7703ba78c2a55590e469aef45ba7da8bfa",
+        "sha256_in_prefix": "d1735bd08b2ded0a6435da9337d67a7703ba78c2a55590e469aef45ba7da8bfa",
+        "size_in_bytes": 369
+      },
+      {
+        "_path": "lib/R/library/later/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "1825e3613713cec25330ff8280397ed2f920943d1fe1f5a19b47e7f59957a1b2",
+        "sha256_in_prefix": "1825e3613713cec25330ff8280397ed2f920943d1fe1f5a19b47e7f59957a1b2",
+        "size_in_bytes": 7185
+      },
+      {
+        "_path": "lib/R/library/later/R/later",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/later/R/later.rdb",
+        "path_type": "hardlink",
+        "sha256": "eae1261eb2f147075f0ef0905f55e9ce19321f2b10f0cbd87593de9345c4516c",
+        "sha256_in_prefix": "eae1261eb2f147075f0ef0905f55e9ce19321f2b10f0cbd87593de9345c4516c",
+        "size_in_bytes": 15209
+      },
+      {
+        "_path": "lib/R/library/later/R/later.rdx",
+        "path_type": "hardlink",
+        "sha256": "3f44edbfe9c5272e4cd518576757671cad96c2d46975512538164a4959ea86cb",
+        "sha256_in_prefix": "3f44edbfe9c5272e4cd518576757671cad96c2d46975512538164a4959ea86cb",
+        "size_in_bytes": 765
+      },
+      {
+        "_path": "lib/R/library/later/bgtest.cpp",
+        "path_type": "hardlink",
+        "sha256": "82fa14ba620606b84b187de7f6f9eb1aec982397681b2d7c3057f206d0fe883f",
+        "sha256_in_prefix": "82fa14ba620606b84b187de7f6f9eb1aec982397681b2d7c3057f206d0fe883f",
+        "size_in_bytes": 892
+      },
+      {
+        "_path": "lib/R/library/later/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "8863d9cc987b2f6704b24f2e70388d940183984a89eabab1bbeb9787495f38cb",
+        "sha256_in_prefix": "8863d9cc987b2f6704b24f2e70388d940183984a89eabab1bbeb9787495f38cb",
+        "size_in_bytes": 1326
+      },
+      {
+        "_path": "lib/R/library/later/doc/later-cpp.Rmd",
+        "path_type": "hardlink",
+        "sha256": "ca95000a16bae9efbf7a0b59f8978f576558b72e587f61cb1debdaff7b04b731",
+        "sha256_in_prefix": "ca95000a16bae9efbf7a0b59f8978f576558b72e587f61cb1debdaff7b04b731",
+        "size_in_bytes": 4321
+      },
+      {
+        "_path": "lib/R/library/later/doc/later-cpp.html",
+        "path_type": "hardlink",
+        "sha256": "5f3cc0188307ff23369025213cd7ea7cbf0dc6659a2c8489b334a5eeb5979bc1",
+        "sha256_in_prefix": "5f3cc0188307ff23369025213cd7ea7cbf0dc6659a2c8489b334a5eeb5979bc1",
+        "size_in_bytes": 16459
+      },
+      {
+        "_path": "lib/R/library/later/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "f453e0d4bc0241ba71d539dcfc375683a628da622469cd196baff117535b3071",
+        "sha256_in_prefix": "f453e0d4bc0241ba71d539dcfc375683a628da622469cd196baff117535b3071",
+        "size_in_bytes": 287
+      },
+      {
+        "_path": "lib/R/library/later/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "c8f28f8e58432ddcf9c1a02b4f89428f228029d7dc105e177e3a8fdf4ba9da5d",
+        "sha256_in_prefix": "c8f28f8e58432ddcf9c1a02b4f89428f228029d7dc105e177e3a8fdf4ba9da5d",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/R/library/later/help/later.rdb",
+        "path_type": "hardlink",
+        "sha256": "7e6d3855700524135469196086acd6e7029807a90c027f3b5fcdafd77dc0651f",
+        "sha256_in_prefix": "7e6d3855700524135469196086acd6e7029807a90c027f3b5fcdafd77dc0651f",
+        "size_in_bytes": 13048
+      },
+      {
+        "_path": "lib/R/library/later/help/later.rdx",
+        "path_type": "hardlink",
+        "sha256": "8850d0129fcbc20f7d9065667189b994f021c7bc34a73ad7eedbaec9e820bace",
+        "sha256_in_prefix": "8850d0129fcbc20f7d9065667189b994f021c7bc34a73ad7eedbaec9e820bace",
+        "size_in_bytes": 323
+      },
+      {
+        "_path": "lib/R/library/later/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "9c48de99ed3f3c656e61e409af8665293124e9e2084d5060c1e27efead11bd51",
+        "sha256_in_prefix": "9c48de99ed3f3c656e61e409af8665293124e9e2084d5060c1e27efead11bd51",
+        "size_in_bytes": 206
+      },
+      {
+        "_path": "lib/R/library/later/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "f0f117fa3230f2bb8035fd7923a86981a75fbe3b7fb76b93f286e8f83a4818b5",
+        "sha256_in_prefix": "f0f117fa3230f2bb8035fd7923a86981a75fbe3b7fb76b93f286e8f83a4818b5",
+        "size_in_bytes": 2271
+      },
+      {
+        "_path": "lib/R/library/later/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/later/include/later.h",
+        "path_type": "hardlink",
+        "sha256": "a8961e7cbffa26b578afc8b2dfb39ce985dd8433918f3e42888b942c599e5a40",
+        "sha256_in_prefix": "a8961e7cbffa26b578afc8b2dfb39ce985dd8433918f3e42888b942c599e5a40",
+        "size_in_bytes": 4889
+      },
+      {
+        "_path": "lib/R/library/later/include/later_api.h",
+        "path_type": "hardlink",
+        "sha256": "1c084be7c230988f4e6fcc08e397a7c8a397a736ab9aa84a91388aa088c88272",
+        "sha256_in_prefix": "1c084be7c230988f4e6fcc08e397a7c8a397a736ab9aa84a91388aa088c88272",
+        "size_in_bytes": 393
+      },
+      {
+        "_path": "lib/R/library/later/libs/later.so",
+        "path_type": "hardlink",
+        "sha256": "dd8f6bcd6670dfa08661d795fb23db9900873f9429f0c39669100051b504933a",
+        "sha256_in_prefix": "dd8f6bcd6670dfa08661d795fb23db9900873f9429f0c39669100051b504933a",
+        "size_in_bytes": 249504
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "c41a7ddd81337bbdffb0891248a80d0ae1b5f389e4cb731b01e68bb57c838c28",
+  "size": 129816,
+  "subdir": "linux-64",
+  "timestamp": 1695438474375,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-later-1.3.1-r43h884c59f_0.conda",
+  "version": "1.3.1"
+}

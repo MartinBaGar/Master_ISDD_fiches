@@ -1,0 +1,445 @@
+{
+  "build": "r43h884c59f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "r-base >=4.3,<4.4.0a0",
+    "r-fs >=1.2.4",
+    "r-htmltools >=0.5.1",
+    "r-r6",
+    "r-rappdirs",
+    "r-rlang >=0.4.10",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/usr/local/conda/pkgs/r-sass-0.4.7-r43h884c59f_0",
+  "features": "",
+  "files": [
+    "lib/R/library/sass/DESCRIPTION",
+    "lib/R/library/sass/INDEX",
+    "lib/R/library/sass/LICENSE",
+    "lib/R/library/sass/Meta/Rd.rds",
+    "lib/R/library/sass/Meta/features.rds",
+    "lib/R/library/sass/Meta/hsearch.rds",
+    "lib/R/library/sass/Meta/links.rds",
+    "lib/R/library/sass/Meta/nsInfo.rds",
+    "lib/R/library/sass/Meta/package.rds",
+    "lib/R/library/sass/Meta/vignette.rds",
+    "lib/R/library/sass/NAMESPACE",
+    "lib/R/library/sass/NEWS.md",
+    "lib/R/library/sass/R/sass",
+    "lib/R/library/sass/R/sass.rdb",
+    "lib/R/library/sass/R/sass.rdx",
+    "lib/R/library/sass/doc/index.html",
+    "lib/R/library/sass/doc/sass.R",
+    "lib/R/library/sass/doc/sass.Rmd",
+    "lib/R/library/sass/doc/sass.html",
+    "lib/R/library/sass/examples/example-full.scss",
+    "lib/R/library/sass/examples/rules.scss",
+    "lib/R/library/sass/examples/variables.scss",
+    "lib/R/library/sass/help/AnIndex",
+    "lib/R/library/sass/help/aliases.rds",
+    "lib/R/library/sass/help/figures/logo.svg",
+    "lib/R/library/sass/help/figures/sass-logo-color.png",
+    "lib/R/library/sass/help/paths.rds",
+    "lib/R/library/sass/help/sass.rdb",
+    "lib/R/library/sass/help/sass.rdx",
+    "lib/R/library/sass/html/00Index.html",
+    "lib/R/library/sass/html/R.css",
+    "lib/R/library/sass/libs/sass.so",
+    "lib/R/library/sass/sass-color/DESCRIPTION",
+    "lib/R/library/sass/sass-color/README.md",
+    "lib/R/library/sass/sass-color/app.R",
+    "lib/R/library/sass/sass-color/rsconnect/shinyapps.io/gallery/sass-color.dcf",
+    "lib/R/library/sass/sass-font/DESCRIPTION",
+    "lib/R/library/sass/sass-font/README.md",
+    "lib/R/library/sass/sass-font/app.R",
+    "lib/R/library/sass/sass-font/rsconnect/shinyapps.io/gallery/sass-font.dcf",
+    "lib/R/library/sass/sass-font/sass-font.scss",
+    "lib/R/library/sass/sass-size/DESCRIPTION",
+    "lib/R/library/sass/sass-size/README.md",
+    "lib/R/library/sass/sass-size/app.R",
+    "lib/R/library/sass/sass-size/rsconnect/shinyapps.io/gallery/sass-size.dcf",
+    "lib/R/library/sass/sass-size/sass-size.scss",
+    "lib/R/library/sass/sass-theme/DESCRIPTION",
+    "lib/R/library/sass/sass-theme/README.md",
+    "lib/R/library/sass/sass-theme/app.R",
+    "lib/R/library/sass/sass-theme/rsconnect/shinyapps.io/gallery/sass-theme.dcf"
+  ],
+  "fn": "r-sass-0.4.7-r43h884c59f_0.conda",
+  "legacy_bz2_md5": "582efb21085388d1ab0e3655cea3a58a",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/usr/local/conda/pkgs/r-sass-0.4.7-r43h884c59f_0",
+    "type": 1
+  },
+  "md5": "19cd8b0d3954685ffb80893d7fea494c",
+  "name": "r-sass",
+  "package_tarball_full_path": "/usr/local/conda/pkgs/r-sass-0.4.7-r43h884c59f_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/sass/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "a89f0d0dad37a25ae078861e83077b3b8b93132a6cd46ce5da2c8bcb5a7a10f2",
+        "sha256_in_prefix": "a89f0d0dad37a25ae078861e83077b3b8b93132a6cd46ce5da2c8bcb5a7a10f2",
+        "size_in_bytes": 3222
+      },
+      {
+        "_path": "lib/R/library/sass/INDEX",
+        "path_type": "hardlink",
+        "sha256": "654029fa989fbe719afa29fdc7650b6c0cb98560cd63b482cb3c10625454c8cd",
+        "sha256_in_prefix": "654029fa989fbe719afa29fdc7650b6c0cb98560cd63b482cb3c10625454c8cd",
+        "size_in_bytes": 565
+      },
+      {
+        "_path": "lib/R/library/sass/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "68290c50150b90174b60d2d46e7c3a4d8a3087ae617c075e90b22667a6ab8fab",
+        "sha256_in_prefix": "68290c50150b90174b60d2d46e7c3a4d8a3087ae617c075e90b22667a6ab8fab",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/sass/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "f6431a80171202c310acafdc7b7b631d300008ce27514d6edf704eab087db70d",
+        "sha256_in_prefix": "f6431a80171202c310acafdc7b7b631d300008ce27514d6edf704eab087db70d",
+        "size_in_bytes": 900
+      },
+      {
+        "_path": "lib/R/library/sass/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/sass/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "ad73139daeb9275b21f81645d479779e3887631bda2e6f1561426625a6066dd7",
+        "sha256_in_prefix": "ad73139daeb9275b21f81645d479779e3887631bda2e6f1561426625a6066dd7",
+        "size_in_bytes": 883
+      },
+      {
+        "_path": "lib/R/library/sass/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "60d6b276e47ad4274ce0c96abf9bb9b84963d2db9cebcfc22638c9b599547510",
+        "sha256_in_prefix": "60d6b276e47ad4274ce0c96abf9bb9b84963d2db9cebcfc22638c9b599547510",
+        "size_in_bytes": 436
+      },
+      {
+        "_path": "lib/R/library/sass/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "1e8d008593eea057b2d44b1fa61ee9b8a4393f470c2acf358674c3a9f44856d0",
+        "sha256_in_prefix": "1e8d008593eea057b2d44b1fa61ee9b8a4393f470c2acf358674c3a9f44856d0",
+        "size_in_bytes": 658
+      },
+      {
+        "_path": "lib/R/library/sass/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "d73e6adc8622aee7e50f4aa7c68297cac8b5da7dbcefcf012b9c04f9776bc335",
+        "sha256_in_prefix": "d73e6adc8622aee7e50f4aa7c68297cac8b5da7dbcefcf012b9c04f9776bc335",
+        "size_in_bytes": 1742
+      },
+      {
+        "_path": "lib/R/library/sass/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "6f9f1ca35b00c67ea2cb08e7b6cf3cb429689fe730a7b3381c646b01093b4659",
+        "sha256_in_prefix": "6f9f1ca35b00c67ea2cb08e7b6cf3cb429689fe730a7b3381c646b01093b4659",
+        "size_in_bytes": 216
+      },
+      {
+        "_path": "lib/R/library/sass/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "96defcf1b9834f4f66099503925269ca66fe2e098cb8fc8fdede3e45c051d9c2",
+        "sha256_in_prefix": "96defcf1b9834f4f66099503925269ca66fe2e098cb8fc8fdede3e45c051d9c2",
+        "size_in_bytes": 1274
+      },
+      {
+        "_path": "lib/R/library/sass/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "2e0f66ef4d93084f6ffa9fc71bfe49c8649c84a0f380642b9de38e2b9c5fef9f",
+        "sha256_in_prefix": "2e0f66ef4d93084f6ffa9fc71bfe49c8649c84a0f380642b9de38e2b9c5fef9f",
+        "size_in_bytes": 7098
+      },
+      {
+        "_path": "lib/R/library/sass/R/sass",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/sass/R/sass.rdb",
+        "path_type": "hardlink",
+        "sha256": "13ed4f003606f500c2e4cc4a53969d4e5381b1f09df066adda4aacb3287595a6",
+        "sha256_in_prefix": "13ed4f003606f500c2e4cc4a53969d4e5381b1f09df066adda4aacb3287595a6",
+        "size_in_bytes": 124586
+      },
+      {
+        "_path": "lib/R/library/sass/R/sass.rdx",
+        "path_type": "hardlink",
+        "sha256": "99dbc95873c95d58c5a9bb602a9aa0842107edcdb3374cea444a2b4d6bc227cd",
+        "sha256_in_prefix": "99dbc95873c95d58c5a9bb602a9aa0842107edcdb3374cea444a2b4d6bc227cd",
+        "size_in_bytes": 1815
+      },
+      {
+        "_path": "lib/R/library/sass/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "c652d81c433e02fdbaae779a6137e97509e920c1f8c5e0c39f89dbbd315c0a3d",
+        "sha256_in_prefix": "c652d81c433e02fdbaae779a6137e97509e920c1f8c5e0c39f89dbbd315c0a3d",
+        "size_in_bytes": 1364
+      },
+      {
+        "_path": "lib/R/library/sass/doc/sass.R",
+        "path_type": "hardlink",
+        "sha256": "457cf809caf3a9f005fe8dcfb10eb91f3e7565f4e2a6f7822e9f6b5dd953a9b3",
+        "sha256_in_prefix": "457cf809caf3a9f005fe8dcfb10eb91f3e7565f4e2a6f7822e9f6b5dd953a9b3",
+        "size_in_bytes": 722
+      },
+      {
+        "_path": "lib/R/library/sass/doc/sass.Rmd",
+        "path_type": "hardlink",
+        "sha256": "d3a693f09854653258f097e08e007ee9a263f3a333b62e0aa5b93f53a3815aa7",
+        "sha256_in_prefix": "d3a693f09854653258f097e08e007ee9a263f3a333b62e0aa5b93f53a3815aa7",
+        "size_in_bytes": 21799
+      },
+      {
+        "_path": "lib/R/library/sass/doc/sass.html",
+        "path_type": "hardlink",
+        "sha256": "6744a66971296533563f0f4c9c4d7b5571907ab18f3494f820dd54c565e76247",
+        "sha256_in_prefix": "6744a66971296533563f0f4c9c4d7b5571907ab18f3494f820dd54c565e76247",
+        "size_in_bytes": 1732315
+      },
+      {
+        "_path": "lib/R/library/sass/examples/example-full.scss",
+        "path_type": "hardlink",
+        "sha256": "c7aaa5be3aa845e32239820933894df90f8de408431d738b6c97c764e07e53a1",
+        "sha256_in_prefix": "c7aaa5be3aa845e32239820933894df90f8de408431d738b6c97c764e07e53a1",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "lib/R/library/sass/examples/rules.scss",
+        "path_type": "hardlink",
+        "sha256": "6962dba4a20e81f88053bf2b843ab4d8049a6219ef367e6df67a2133e367e64c",
+        "sha256_in_prefix": "6962dba4a20e81f88053bf2b843ab4d8049a6219ef367e6df67a2133e367e64c",
+        "size_in_bytes": 72
+      },
+      {
+        "_path": "lib/R/library/sass/examples/variables.scss",
+        "path_type": "hardlink",
+        "sha256": "2f522619455311ce72dc10c591bc24bd2a82cfa85cbab6175bd4700d4f830ac2",
+        "sha256_in_prefix": "2f522619455311ce72dc10c591bc24bd2a82cfa85cbab6175bd4700d4f830ac2",
+        "size_in_bytes": 40
+      },
+      {
+        "_path": "lib/R/library/sass/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "ecb9a0de32bdfb27471263c0e0c05cc26925204cfe74d5a13882d487d747ccf2",
+        "sha256_in_prefix": "ecb9a0de32bdfb27471263c0e0c05cc26925204cfe74d5a13882d487d747ccf2",
+        "size_in_bytes": 842
+      },
+      {
+        "_path": "lib/R/library/sass/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "e03715e8538200eae07e3cf963275e543e0fb4fb67bcc4ffd66c78561240f0d8",
+        "sha256_in_prefix": "e03715e8538200eae07e3cf963275e543e0fb4fb67bcc4ffd66c78561240f0d8",
+        "size_in_bytes": 337
+      },
+      {
+        "_path": "lib/R/library/sass/help/figures/logo.svg",
+        "path_type": "hardlink",
+        "sha256": "f49ba502bcdeb2beb263b9c83212b72c93157023ff69ae8a71c84a32bce79bbd",
+        "sha256_in_prefix": "f49ba502bcdeb2beb263b9c83212b72c93157023ff69ae8a71c84a32bce79bbd",
+        "size_in_bytes": 7933
+      },
+      {
+        "_path": "lib/R/library/sass/help/figures/sass-logo-color.png",
+        "path_type": "hardlink",
+        "sha256": "e7f6926c2048d87a91ffe1256dbaf8319ac139829428ba474956999c6053c66b",
+        "sha256_in_prefix": "e7f6926c2048d87a91ffe1256dbaf8319ac139829428ba474956999c6053c66b",
+        "size_in_bytes": 21689
+      },
+      {
+        "_path": "lib/R/library/sass/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "f25913af81c8fba31ce87d9a633bce20a5b791f3b0bdb5b981cf7bfc5d7b3d56",
+        "sha256_in_prefix": "f25913af81c8fba31ce87d9a633bce20a5b791f3b0bdb5b981cf7bfc5d7b3d56",
+        "size_in_bytes": 298
+      },
+      {
+        "_path": "lib/R/library/sass/help/sass.rdb",
+        "path_type": "hardlink",
+        "sha256": "1f099017cd771fba35a447b9c3a9a4db2e7aacd0a9361530f3663a3961eb46f8",
+        "sha256_in_prefix": "1f099017cd771fba35a447b9c3a9a4db2e7aacd0a9361530f3663a3961eb46f8",
+        "size_in_bytes": 69863
+      },
+      {
+        "_path": "lib/R/library/sass/help/sass.rdx",
+        "path_type": "hardlink",
+        "sha256": "bd56ec2a6876308b1e3748c9097c9e37011aa3e70b275a04c7e0286e4312e9cf",
+        "sha256_in_prefix": "bd56ec2a6876308b1e3748c9097c9e37011aa3e70b275a04c7e0286e4312e9cf",
+        "size_in_bytes": 567
+      },
+      {
+        "_path": "lib/R/library/sass/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "1d331a7e1ee0af3be0e9efc689a610f15acb0a9e2d964dfe93175c055447d595",
+        "sha256_in_prefix": "1d331a7e1ee0af3be0e9efc689a610f15acb0a9e2d964dfe93175c055447d595",
+        "size_in_bytes": 3584
+      },
+      {
+        "_path": "lib/R/library/sass/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/sass/libs/sass.so",
+        "path_type": "hardlink",
+        "sha256": "fef5e1c4e4ccfbf1b43487c94c9cc570524d5778bd54dab347477f66fea2fc0d",
+        "sha256_in_prefix": "fef5e1c4e4ccfbf1b43487c94c9cc570524d5778bd54dab347477f66fea2fc0d",
+        "size_in_bytes": 3128888
+      },
+      {
+        "_path": "lib/R/library/sass/sass-color/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "179f9aeca7b4e5650c3f408d996144429e47b88527ea3658eb8194f89081c17a",
+        "sha256_in_prefix": "179f9aeca7b4e5650c3f408d996144429e47b88527ea3658eb8194f89081c17a",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "lib/R/library/sass/sass-color/README.md",
+        "path_type": "hardlink",
+        "sha256": "cfc59392640d004876ed1a8e2662f4be0ceb91acbb2871e2a82839bf6a1fcb3f",
+        "sha256_in_prefix": "cfc59392640d004876ed1a8e2662f4be0ceb91acbb2871e2a82839bf6a1fcb3f",
+        "size_in_bytes": 171
+      },
+      {
+        "_path": "lib/R/library/sass/sass-color/app.R",
+        "path_type": "hardlink",
+        "sha256": "bfb4faf3948a63bf3b0c25efce8622f1c38c80d3442db99474e6f128dbf90182",
+        "sha256_in_prefix": "bfb4faf3948a63bf3b0c25efce8622f1c38c80d3442db99474e6f128dbf90182",
+        "size_in_bytes": 1078
+      },
+      {
+        "_path": "lib/R/library/sass/sass-color/rsconnect/shinyapps.io/gallery/sass-color.dcf",
+        "path_type": "hardlink",
+        "sha256": "6288f528d3ee1f663be4c78e21b29cbec930121cdcdb3ef7e45e0aec4e5f29c2",
+        "sha256_in_prefix": "6288f528d3ee1f663be4c78e21b29cbec930121cdcdb3ef7e45e0aec4e5f29c2",
+        "size_in_bytes": 255
+      },
+      {
+        "_path": "lib/R/library/sass/sass-font/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "d8a68675f035a8d94ec755a63ef972198cb83d13645afccad12576360f5be733",
+        "sha256_in_prefix": "d8a68675f035a8d94ec755a63ef972198cb83d13645afccad12576360f5be733",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "lib/R/library/sass/sass-font/README.md",
+        "path_type": "hardlink",
+        "sha256": "4f57ae19ab03a94695cee3adaa47713b37d40b3c3107f871c99822c3f444538a",
+        "sha256_in_prefix": "4f57ae19ab03a94695cee3adaa47713b37d40b3c3107f871c99822c3f444538a",
+        "size_in_bytes": 271
+      },
+      {
+        "_path": "lib/R/library/sass/sass-font/app.R",
+        "path_type": "hardlink",
+        "sha256": "610e99b78ec659c41fe4ca1412a33a71cb3178bcb63c4b0d7fc1c87f1a79dbd8",
+        "sha256_in_prefix": "610e99b78ec659c41fe4ca1412a33a71cb3178bcb63c4b0d7fc1c87f1a79dbd8",
+        "size_in_bytes": 1183
+      },
+      {
+        "_path": "lib/R/library/sass/sass-font/rsconnect/shinyapps.io/gallery/sass-font.dcf",
+        "path_type": "hardlink",
+        "sha256": "2bb69c07653b046267ce82e767015491cf7b3351a3c615529890df2d979be698",
+        "sha256_in_prefix": "2bb69c07653b046267ce82e767015491cf7b3351a3c615529890df2d979be698",
+        "size_in_bytes": 252
+      },
+      {
+        "_path": "lib/R/library/sass/sass-font/sass-font.scss",
+        "path_type": "hardlink",
+        "sha256": "f88dfb56783a5b6cc8be54d811eebb67ad406543609d8192a3814d713e258ed2",
+        "sha256_in_prefix": "f88dfb56783a5b6cc8be54d811eebb67ad406543609d8192a3814d713e258ed2",
+        "size_in_bytes": 358
+      },
+      {
+        "_path": "lib/R/library/sass/sass-size/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "1b1d1d49e0bb0bbaf0b8c6149f07dd62bb65d97369d9913c27101218c3ca7734",
+        "sha256_in_prefix": "1b1d1d49e0bb0bbaf0b8c6149f07dd62bb65d97369d9913c27101218c3ca7734",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/R/library/sass/sass-size/README.md",
+        "path_type": "hardlink",
+        "sha256": "5145603935679aadb83a0f0ce9610975e3fc6c187c9c51429e0f9c6b1028d66c",
+        "sha256_in_prefix": "5145603935679aadb83a0f0ce9610975e3fc6c187c9c51429e0f9c6b1028d66c",
+        "size_in_bytes": 241
+      },
+      {
+        "_path": "lib/R/library/sass/sass-size/app.R",
+        "path_type": "hardlink",
+        "sha256": "1425e34bf1b8068df9303cdf5d8eed2874895858a69b3665a460883f04c920ce",
+        "sha256_in_prefix": "1425e34bf1b8068df9303cdf5d8eed2874895858a69b3665a460883f04c920ce",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "lib/R/library/sass/sass-size/rsconnect/shinyapps.io/gallery/sass-size.dcf",
+        "path_type": "hardlink",
+        "sha256": "a173f5e234fdcd43c9a7fa4b49c25753d32664b128a2feb9c5faf3db036298fb",
+        "sha256_in_prefix": "a173f5e234fdcd43c9a7fa4b49c25753d32664b128a2feb9c5faf3db036298fb",
+        "size_in_bytes": 252
+      },
+      {
+        "_path": "lib/R/library/sass/sass-size/sass-size.scss",
+        "path_type": "hardlink",
+        "sha256": "7712b0ffbdf9ee97fd49834a0161e2383ba63829228f91a29b3e6ce449901f74",
+        "sha256_in_prefix": "7712b0ffbdf9ee97fd49834a0161e2383ba63829228f91a29b3e6ce449901f74",
+        "size_in_bytes": 421
+      },
+      {
+        "_path": "lib/R/library/sass/sass-theme/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "23400d76431301aee6276710f89df648ca1e1f463112c94273d60f48991abcf1",
+        "sha256_in_prefix": "23400d76431301aee6276710f89df648ca1e1f463112c94273d60f48991abcf1",
+        "size_in_bytes": 152
+      },
+      {
+        "_path": "lib/R/library/sass/sass-theme/README.md",
+        "path_type": "hardlink",
+        "sha256": "d40941ffe2a00fc8121ac5dca96158bc085e9d11d05059893532b56d4480e700",
+        "sha256_in_prefix": "d40941ffe2a00fc8121ac5dca96158bc085e9d11d05059893532b56d4480e700",
+        "size_in_bytes": 581
+      },
+      {
+        "_path": "lib/R/library/sass/sass-theme/app.R",
+        "path_type": "hardlink",
+        "sha256": "ae9d6001528dfd053987cfe83daa5541f49bfe83e00f4350fce29c9f8885c3ad",
+        "sha256_in_prefix": "ae9d6001528dfd053987cfe83daa5541f49bfe83e00f4350fce29c9f8885c3ad",
+        "size_in_bytes": 3410
+      },
+      {
+        "_path": "lib/R/library/sass/sass-theme/rsconnect/shinyapps.io/gallery/sass-theme.dcf",
+        "path_type": "hardlink",
+        "sha256": "1e8518488f55da5b9dc2211899781a1e0763807ea73c6ba5e782489260ddbe84",
+        "sha256_in_prefix": "1e8518488f55da5b9dc2211899781a1e0763807ea73c6ba5e782489260ddbe84",
+        "size_in_bytes": 255
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "27622c1e90175c63d283878c362d104774a49f7685918fd213c2ecc442193048",
+  "size": 2264884,
+  "subdir": "linux-64",
+  "timestamp": 1695446773916,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-sass-0.4.7-r43h884c59f_0.conda",
+  "version": "0.4.7"
+}

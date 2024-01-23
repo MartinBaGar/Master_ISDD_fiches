@@ -1,0 +1,263 @@
+{
+  "build": "r43h76d94ec_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "r-base >=4.3,<4.4.0a0",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/usr/local/conda/pkgs/r-nnet-7.3_19-r43h76d94ec_0",
+  "features": "",
+  "files": [
+    "lib/R/library/nnet/CITATION",
+    "lib/R/library/nnet/DESCRIPTION",
+    "lib/R/library/nnet/INDEX",
+    "lib/R/library/nnet/Meta/Rd.rds",
+    "lib/R/library/nnet/Meta/features.rds",
+    "lib/R/library/nnet/Meta/hsearch.rds",
+    "lib/R/library/nnet/Meta/links.rds",
+    "lib/R/library/nnet/Meta/nsInfo.rds",
+    "lib/R/library/nnet/Meta/package.rds",
+    "lib/R/library/nnet/NAMESPACE",
+    "lib/R/library/nnet/NEWS",
+    "lib/R/library/nnet/R/nnet",
+    "lib/R/library/nnet/R/nnet.rdb",
+    "lib/R/library/nnet/R/nnet.rdx",
+    "lib/R/library/nnet/help/AnIndex",
+    "lib/R/library/nnet/help/aliases.rds",
+    "lib/R/library/nnet/help/nnet.rdb",
+    "lib/R/library/nnet/help/nnet.rdx",
+    "lib/R/library/nnet/help/paths.rds",
+    "lib/R/library/nnet/html/00Index.html",
+    "lib/R/library/nnet/html/R.css",
+    "lib/R/library/nnet/libs/nnet.so",
+    "lib/R/library/nnet/po/de/LC_MESSAGES/R-nnet.mo",
+    "lib/R/library/nnet/po/en@quot/LC_MESSAGES/R-nnet.mo",
+    "lib/R/library/nnet/po/fr/LC_MESSAGES/R-nnet.mo",
+    "lib/R/library/nnet/po/it/LC_MESSAGES/R-nnet.mo",
+    "lib/R/library/nnet/po/ko/LC_MESSAGES/R-nnet.mo",
+    "lib/R/library/nnet/po/pl/LC_MESSAGES/R-nnet.mo"
+  ],
+  "fn": "r-nnet-7.3_19-r43h76d94ec_0.conda",
+  "legacy_bz2_md5": "121e35af9e0f9a1968ed237fc8804020",
+  "license": "GPL-2 | GPL-3",
+  "license_family": "GPL3",
+  "link": {
+    "source": "/usr/local/conda/pkgs/r-nnet-7.3_19-r43h76d94ec_0",
+    "type": 1
+  },
+  "md5": "c16b72cfb8ce988f4b5c3e4663a49de6",
+  "name": "r-nnet",
+  "package_tarball_full_path": "/usr/local/conda/pkgs/r-nnet-7.3_19-r43h76d94ec_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/nnet/CITATION",
+        "path_type": "hardlink",
+        "sha256": "33496208e945dd2e87293350776bf3601e80cbf42a618ce3efea5f2d925e5860",
+        "sha256_in_prefix": "33496208e945dd2e87293350776bf3601e80cbf42a618ce3efea5f2d925e5860",
+        "size_in_bytes": 691
+      },
+      {
+        "_path": "lib/R/library/nnet/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "910fabcadb354123558a70e12bb5235c58da422bae6c0a44e6959ee794d0fe6c",
+        "sha256_in_prefix": "910fabcadb354123558a70e12bb5235c58da422bae6c0a44e6959ee794d0fe6c",
+        "size_in_bytes": 861
+      },
+      {
+        "_path": "lib/R/library/nnet/INDEX",
+        "path_type": "hardlink",
+        "sha256": "98bb0535439e7113643299515912e848a54ce762d6e54055d614fa185d3b0b0e",
+        "sha256_in_prefix": "98bb0535439e7113643299515912e848a54ce762d6e54055d614fa185d3b0b0e",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "lib/R/library/nnet/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "0715d52dd610561d314a79e1a0658b15c3ccae807a555bb24e2ec47117f9fdfc",
+        "sha256_in_prefix": "0715d52dd610561d314a79e1a0658b15c3ccae807a555bb24e2ec47117f9fdfc",
+        "size_in_bytes": 625
+      },
+      {
+        "_path": "lib/R/library/nnet/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/nnet/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "43843e185a43a8569d8ee223f4c6ea0435b9c7805bfe564014f269f0e0800142",
+        "sha256_in_prefix": "43843e185a43a8569d8ee223f4c6ea0435b9c7805bfe564014f269f0e0800142",
+        "size_in_bytes": 666
+      },
+      {
+        "_path": "lib/R/library/nnet/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "60000187872a4ad44dd686c74435eeafeaf4460d975415a7b81d47825b912489",
+        "sha256_in_prefix": "60000187872a4ad44dd686c74435eeafeaf4460d975415a7b81d47825b912489",
+        "size_in_bytes": 339
+      },
+      {
+        "_path": "lib/R/library/nnet/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "c3ea57aa5af5ad17390c3c92f72b2f6b9e86d4aea4d02090dcb229bb2e768041",
+        "sha256_in_prefix": "c3ea57aa5af5ad17390c3c92f72b2f6b9e86d4aea4d02090dcb229bb2e768041",
+        "size_in_bytes": 498
+      },
+      {
+        "_path": "lib/R/library/nnet/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "5264396b30ff719f6216cb5233d2f3c6dcb95ab2338ea85adcde0538db5b1742",
+        "sha256_in_prefix": "5264396b30ff719f6216cb5233d2f3c6dcb95ab2338ea85adcde0538db5b1742",
+        "size_in_bytes": 914
+      },
+      {
+        "_path": "lib/R/library/nnet/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "3fe42bed6645ef38420cc246631a800b43cd074b15575a5a1b7e9161a39830f1",
+        "sha256_in_prefix": "3fe42bed6645ef38420cc246631a800b43cd074b15575a5a1b7e9161a39830f1",
+        "size_in_bytes": 848
+      },
+      {
+        "_path": "lib/R/library/nnet/NEWS",
+        "path_type": "hardlink",
+        "sha256": "75def91c0e6a6260712a1fcfc3cb6d60fe8009b36fec925bee0609d064d0a78c",
+        "sha256_in_prefix": "75def91c0e6a6260712a1fcfc3cb6d60fe8009b36fec925bee0609d064d0a78c",
+        "size_in_bytes": 1276
+      },
+      {
+        "_path": "lib/R/library/nnet/R/nnet",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/nnet/R/nnet.rdb",
+        "path_type": "hardlink",
+        "sha256": "cf8701196425168cdfdbd614d6266002d6f92fbfb167916780b8e9071bd3d581",
+        "sha256_in_prefix": "cf8701196425168cdfdbd614d6266002d6f92fbfb167916780b8e9071bd3d581",
+        "size_in_bytes": 65330
+      },
+      {
+        "_path": "lib/R/library/nnet/R/nnet.rdx",
+        "path_type": "hardlink",
+        "sha256": "4c441cd60c0dface1aadc673274e19eb9a8ef67100f07b71f505f5fa832c21ba",
+        "sha256_in_prefix": "4c441cd60c0dface1aadc673274e19eb9a8ef67100f07b71f505f5fa832c21ba",
+        "size_in_bytes": 683
+      },
+      {
+        "_path": "lib/R/library/nnet/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "b897cd4bc570bcbbb2976b1cbd35c6f7649403228be0dcefc5983bc5cc939e8c",
+        "sha256_in_prefix": "b897cd4bc570bcbbb2976b1cbd35c6f7649403228be0dcefc5983bc5cc939e8c",
+        "size_in_bytes": 577
+      },
+      {
+        "_path": "lib/R/library/nnet/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "f06ea38ef2bbe830d811a0eca8cf997df26eedb9eb4b6565cd1372462eda476e",
+        "sha256_in_prefix": "f06ea38ef2bbe830d811a0eca8cf997df26eedb9eb4b6565cd1372462eda476e",
+        "size_in_bytes": 309
+      },
+      {
+        "_path": "lib/R/library/nnet/help/nnet.rdb",
+        "path_type": "hardlink",
+        "sha256": "fb2d3b983c095482b169b169cba49793d2efb2c889edc1b6d3a180c12c59d7ad",
+        "sha256_in_prefix": "fb2d3b983c095482b169b169cba49793d2efb2c889edc1b6d3a180c12c59d7ad",
+        "size_in_bytes": 20326
+      },
+      {
+        "_path": "lib/R/library/nnet/help/nnet.rdx",
+        "path_type": "hardlink",
+        "sha256": "862db4bd0e5a3274c2ba69279ab7db070e03bc114d909435672c29e0f7f41353",
+        "sha256_in_prefix": "862db4bd0e5a3274c2ba69279ab7db070e03bc114d909435672c29e0f7f41353",
+        "size_in_bytes": 287
+      },
+      {
+        "_path": "lib/R/library/nnet/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "6235293980f751775ea3526490bc25d93052b2db4e0ff932e2ec6cd5600026e4",
+        "sha256_in_prefix": "6235293980f751775ea3526490bc25d93052b2db4e0ff932e2ec6cd5600026e4",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/R/library/nnet/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "4c33f421f28a6ef8581250387bf85e81bba7805e98389ffd5e221dea40be7423",
+        "sha256_in_prefix": "4c33f421f28a6ef8581250387bf85e81bba7805e98389ffd5e221dea40be7423",
+        "size_in_bytes": 4204
+      },
+      {
+        "_path": "lib/R/library/nnet/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/nnet/libs/nnet.so",
+        "path_type": "hardlink",
+        "sha256": "0f4dd8e7b6e268a301ecfca26a810e12bd9584d714834e1b36103de801386858",
+        "sha256_in_prefix": "0f4dd8e7b6e268a301ecfca26a810e12bd9584d714834e1b36103de801386858",
+        "size_in_bytes": 29504
+      },
+      {
+        "_path": "lib/R/library/nnet/po/de/LC_MESSAGES/R-nnet.mo",
+        "path_type": "hardlink",
+        "sha256": "53c4158df1adbb80d849ea0b09851f1e8bb88b975f88bf939da0a44dfb7c46a7",
+        "sha256_in_prefix": "53c4158df1adbb80d849ea0b09851f1e8bb88b975f88bf939da0a44dfb7c46a7",
+        "size_in_bytes": 2936
+      },
+      {
+        "_path": "lib/R/library/nnet/po/en@quot/LC_MESSAGES/R-nnet.mo",
+        "path_type": "hardlink",
+        "sha256": "f93cbb7ec99c8313871eed394b736cb95b9d94824e9ec13a38d18d31dbc21dc3",
+        "sha256_in_prefix": "f93cbb7ec99c8313871eed394b736cb95b9d94824e9ec13a38d18d31dbc21dc3",
+        "size_in_bytes": 2634
+      },
+      {
+        "_path": "lib/R/library/nnet/po/fr/LC_MESSAGES/R-nnet.mo",
+        "path_type": "hardlink",
+        "sha256": "da6033df535a9fdef86c9b012234a249177f8f700b5c72978166747a468e2b47",
+        "sha256_in_prefix": "da6033df535a9fdef86c9b012234a249177f8f700b5c72978166747a468e2b47",
+        "size_in_bytes": 3058
+      },
+      {
+        "_path": "lib/R/library/nnet/po/it/LC_MESSAGES/R-nnet.mo",
+        "path_type": "hardlink",
+        "sha256": "1903904a7a9db873970b4df506d4462544d3d1718da07df0d4a64cfe1d53446a",
+        "sha256_in_prefix": "1903904a7a9db873970b4df506d4462544d3d1718da07df0d4a64cfe1d53446a",
+        "size_in_bytes": 2896
+      },
+      {
+        "_path": "lib/R/library/nnet/po/ko/LC_MESSAGES/R-nnet.mo",
+        "path_type": "hardlink",
+        "sha256": "1d1b8033379195e4d643bd1cc41f9e9ab0a19b3883410a41c9c153426efa0073",
+        "sha256_in_prefix": "1d1b8033379195e4d643bd1cc41f9e9ab0a19b3883410a41c9c153426efa0073",
+        "size_in_bytes": 3399
+      },
+      {
+        "_path": "lib/R/library/nnet/po/pl/LC_MESSAGES/R-nnet.mo",
+        "path_type": "hardlink",
+        "sha256": "0397903a2d30803a06b11fcf963318e3f322f7d3e9586725a8fb8b7f6309791c",
+        "sha256_in_prefix": "0397903a2d30803a06b11fcf963318e3f322f7d3e9586725a8fb8b7f6309791c",
+        "size_in_bytes": 3076
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "4698497bc9dcbe150cbca88bbe51ac3fa2287108a57d17b3f02d764631dfdadc",
+  "size": 132043,
+  "subdir": "linux-64",
+  "timestamp": 1695430247601,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-nnet-7.3_19-r43h76d94ec_0.conda",
+  "version": "7.3_19"
+}

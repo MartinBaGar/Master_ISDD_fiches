@@ -1,0 +1,273 @@
+{
+  "build": "r43h6115d3f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "r-colorspace",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/usr/local/conda/pkgs/r-munsell-0.5.0-r43h6115d3f_0",
+  "features": "",
+  "files": [
+    "lib/R/library/munsell/DESCRIPTION",
+    "lib/R/library/munsell/INDEX",
+    "lib/R/library/munsell/LICENSE",
+    "lib/R/library/munsell/Meta/Rd.rds",
+    "lib/R/library/munsell/Meta/features.rds",
+    "lib/R/library/munsell/Meta/hsearch.rds",
+    "lib/R/library/munsell/Meta/links.rds",
+    "lib/R/library/munsell/Meta/nsInfo.rds",
+    "lib/R/library/munsell/Meta/package.rds",
+    "lib/R/library/munsell/NAMESPACE",
+    "lib/R/library/munsell/NEWS.md",
+    "lib/R/library/munsell/R/munsell",
+    "lib/R/library/munsell/R/munsell.rdb",
+    "lib/R/library/munsell/R/munsell.rdx",
+    "lib/R/library/munsell/R/sysdata.rdb",
+    "lib/R/library/munsell/R/sysdata.rdx",
+    "lib/R/library/munsell/help/AnIndex",
+    "lib/R/library/munsell/help/aliases.rds",
+    "lib/R/library/munsell/help/figures/README-complement-slice-1.png",
+    "lib/R/library/munsell/help/figures/README-manipulate-blue-1.png",
+    "lib/R/library/munsell/help/figures/README-palette-1.png",
+    "lib/R/library/munsell/help/munsell.rdb",
+    "lib/R/library/munsell/help/munsell.rdx",
+    "lib/R/library/munsell/help/paths.rds",
+    "lib/R/library/munsell/html/00Index.html",
+    "lib/R/library/munsell/html/R.css",
+    "lib/R/library/munsell/raw/getmunsellmap.R",
+    "lib/R/library/munsell/raw/greys.dat",
+    "lib/R/library/munsell/raw/real.dat"
+  ],
+  "fn": "r-munsell-0.5.0-r43h6115d3f_0.conda",
+  "legacy_bz2_md5": "eee478c636f792b7b634a70eb7cca248",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/usr/local/conda/pkgs/r-munsell-0.5.0-r43h6115d3f_0",
+    "type": 1
+  },
+  "md5": "93e6a3e826e0e5890e479af4d731f900",
+  "name": "r-munsell",
+  "noarch": "generic",
+  "package_tarball_full_path": "/usr/local/conda/pkgs/r-munsell-0.5.0-r43h6115d3f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/munsell/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "37680855512c551df2a4dd38e58b37a1d79dd1648ef4de32af0299a229abb7ac",
+        "sha256_in_prefix": "37680855512c551df2a4dd38e58b37a1d79dd1648ef4de32af0299a229abb7ac",
+        "size_in_bytes": 932
+      },
+      {
+        "_path": "lib/R/library/munsell/INDEX",
+        "path_type": "hardlink",
+        "sha256": "4d63b7b08ae5641f459f49c8c9b0900cf6f80dd6e9f793d2822179c831f53c1c",
+        "sha256_in_prefix": "4d63b7b08ae5641f459f49c8c9b0900cf6f80dd6e9f793d2822179c831f53c1c",
+        "size_in_bytes": 1290
+      },
+      {
+        "_path": "lib/R/library/munsell/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "b6257df5f4bf973bb9f6dd480a400eb9dfb0747cf35e1085d8583c92e228f444",
+        "sha256_in_prefix": "b6257df5f4bf973bb9f6dd480a400eb9dfb0747cf35e1085d8583c92e228f444",
+        "size_in_bytes": 46
+      },
+      {
+        "_path": "lib/R/library/munsell/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "0007f0b11ec6cf7e270350ded1da588f0d72fe30bde20560cc1b466ad2a21a5e",
+        "sha256_in_prefix": "0007f0b11ec6cf7e270350ded1da588f0d72fe30bde20560cc1b466ad2a21a5e",
+        "size_in_bytes": 980
+      },
+      {
+        "_path": "lib/R/library/munsell/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/munsell/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "f63162d2f1d645093211088e73e145d6fa75b8be27fb8bb928de6afd173ed319",
+        "sha256_in_prefix": "f63162d2f1d645093211088e73e145d6fa75b8be27fb8bb928de6afd173ed319",
+        "size_in_bytes": 884
+      },
+      {
+        "_path": "lib/R/library/munsell/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "2b70f172e81a62d50bd8aaed3c78d7d01d38f4f6ecc5f3d8db9c59d1a2e5a90f",
+        "sha256_in_prefix": "2b70f172e81a62d50bd8aaed3c78d7d01d38f4f6ecc5f3d8db9c59d1a2e5a90f",
+        "size_in_bytes": 446
+      },
+      {
+        "_path": "lib/R/library/munsell/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "ad03ef43f6ecf097960d243b8e189415fd72e53bde251dde683356d07dcd4553",
+        "sha256_in_prefix": "ad03ef43f6ecf097960d243b8e189415fd72e53bde251dde683356d07dcd4553",
+        "size_in_bytes": 395
+      },
+      {
+        "_path": "lib/R/library/munsell/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "31d0e867590080cd905ecda5535562f938bb3153ae67be7092d773a723ae7e09",
+        "sha256_in_prefix": "31d0e867590080cd905ecda5535562f938bb3153ae67be7092d773a723ae7e09",
+        "size_in_bytes": 909
+      },
+      {
+        "_path": "lib/R/library/munsell/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "81979adb69603a2a5bcb1f7f5619b758343e8439be8824c6a2ee6db5c98f6eae",
+        "sha256_in_prefix": "81979adb69603a2a5bcb1f7f5619b758343e8439be8824c6a2ee6db5c98f6eae",
+        "size_in_bytes": 560
+      },
+      {
+        "_path": "lib/R/library/munsell/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "eb09e33beaef5210ad2ae171679e252a4def5522b2cdabe7edc442a889e16db8",
+        "sha256_in_prefix": "eb09e33beaef5210ad2ae171679e252a4def5522b2cdabe7edc442a889e16db8",
+        "size_in_bytes": 2025
+      },
+      {
+        "_path": "lib/R/library/munsell/R/munsell",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/munsell/R/munsell.rdb",
+        "path_type": "hardlink",
+        "sha256": "a1d495ce65979d64c00364a07ffad45344de58afdbfe3cb88a9a6c760c85b028",
+        "sha256_in_prefix": "a1d495ce65979d64c00364a07ffad45344de58afdbfe3cb88a9a6c760c85b028",
+        "size_in_bytes": 37393
+      },
+      {
+        "_path": "lib/R/library/munsell/R/munsell.rdx",
+        "path_type": "hardlink",
+        "sha256": "a07a55a4478c0b379b69789ad5e70aa6b304ec1ffa84b5e657073861809766e6",
+        "sha256_in_prefix": "a07a55a4478c0b379b69789ad5e70aa6b304ec1ffa84b5e657073861809766e6",
+        "size_in_bytes": 642
+      },
+      {
+        "_path": "lib/R/library/munsell/R/sysdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "c13dedfa7224337e85005a3d7501e7854d6e965b0133fc7d9f9e029150376e29",
+        "sha256_in_prefix": "c13dedfa7224337e85005a3d7501e7854d6e965b0133fc7d9f9e029150376e29",
+        "size_in_bytes": 52797
+      },
+      {
+        "_path": "lib/R/library/munsell/R/sysdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "abc178ad7eba2dee4cf4135cf2b37bcccdc3e8204fcfd5e77e4824d9519b8187",
+        "sha256_in_prefix": "abc178ad7eba2dee4cf4135cf2b37bcccdc3e8204fcfd5e77e4824d9519b8187",
+        "size_in_bytes": 152
+      },
+      {
+        "_path": "lib/R/library/munsell/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "717e3d062810e2abeae078dc910baa483cdb9fda93c27a2107dd63a6866ce161",
+        "sha256_in_prefix": "717e3d062810e2abeae078dc910baa483cdb9fda93c27a2107dd63a6866ce161",
+        "size_in_bytes": 574
+      },
+      {
+        "_path": "lib/R/library/munsell/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "0cd27d0218c8d5bffa501e0e57e95a0a0822d2602fb13a0f42cbcc1f609d3245",
+        "sha256_in_prefix": "0cd27d0218c8d5bffa501e0e57e95a0a0822d2602fb13a0f42cbcc1f609d3245",
+        "size_in_bytes": 296
+      },
+      {
+        "_path": "lib/R/library/munsell/help/figures/README-complement-slice-1.png",
+        "path_type": "hardlink",
+        "sha256": "acf71c3918f49e9e40a7a43ede88e35f6f4defe622da8947ca22a527783d02fd",
+        "sha256_in_prefix": "acf71c3918f49e9e40a7a43ede88e35f6f4defe622da8947ca22a527783d02fd",
+        "size_in_bytes": 62425
+      },
+      {
+        "_path": "lib/R/library/munsell/help/figures/README-manipulate-blue-1.png",
+        "path_type": "hardlink",
+        "sha256": "614bec77d3959b003d87b915b6d58a58ed0f15f3d483f009f3126c52d305a78a",
+        "sha256_in_prefix": "614bec77d3959b003d87b915b6d58a58ed0f15f3d483f009f3126c52d305a78a",
+        "size_in_bytes": 17150
+      },
+      {
+        "_path": "lib/R/library/munsell/help/figures/README-palette-1.png",
+        "path_type": "hardlink",
+        "sha256": "facfc3015e2e2f32a6a4eb95af63030b9071fceb840e2c4c063b6143c9d19255",
+        "sha256_in_prefix": "facfc3015e2e2f32a6a4eb95af63030b9071fceb840e2c4c063b6143c9d19255",
+        "size_in_bytes": 13477
+      },
+      {
+        "_path": "lib/R/library/munsell/help/munsell.rdb",
+        "path_type": "hardlink",
+        "sha256": "a6f1bfed22bba20dbf2a774036c9b12f86420a896ddfdd6cb532da49308ff6e6",
+        "sha256_in_prefix": "a6f1bfed22bba20dbf2a774036c9b12f86420a896ddfdd6cb532da49308ff6e6",
+        "size_in_bytes": 34549
+      },
+      {
+        "_path": "lib/R/library/munsell/help/munsell.rdx",
+        "path_type": "hardlink",
+        "sha256": "b073c298a42512f880729b2443be3ac763e7a459b995fdd91e6d2280906761fc",
+        "sha256_in_prefix": "b073c298a42512f880729b2443be3ac763e7a459b995fdd91e6d2280906761fc",
+        "size_in_bytes": 691
+      },
+      {
+        "_path": "lib/R/library/munsell/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "12f8794b070055d762748f56217db51d83585feb679b396b59cef8a7c93bdd9a",
+        "sha256_in_prefix": "12f8794b070055d762748f56217db51d83585feb679b396b59cef8a7c93bdd9a",
+        "size_in_bytes": 348
+      },
+      {
+        "_path": "lib/R/library/munsell/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "def7933c3a05f1aa094946cac25b354168ce30716724fce28fc129e28d4ace3a",
+        "sha256_in_prefix": "def7933c3a05f1aa094946cac25b354168ce30716724fce28fc129e28d4ace3a",
+        "size_in_bytes": 3853
+      },
+      {
+        "_path": "lib/R/library/munsell/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/munsell/raw/getmunsellmap.R",
+        "path_type": "hardlink",
+        "sha256": "a7ab997e73ea43685a31f1c97c25767ae5ce1c3c79884e09c5d74bfea1a66fea",
+        "sha256_in_prefix": "a7ab997e73ea43685a31f1c97c25767ae5ce1c3c79884e09c5d74bfea1a66fea",
+        "size_in_bytes": 2283
+      },
+      {
+        "_path": "lib/R/library/munsell/raw/greys.dat",
+        "path_type": "hardlink",
+        "sha256": "44d73db23d56d9d2c7b28628bb09f54bc640d69bf26a930af573a01518402c7b",
+        "sha256_in_prefix": "44d73db23d56d9d2c7b28628bb09f54bc640d69bf26a930af573a01518402c7b",
+        "size_in_bytes": 192
+      },
+      {
+        "_path": "lib/R/library/munsell/raw/real.dat",
+        "path_type": "hardlink",
+        "sha256": "167481598ca7e0119d2e792686151fe1a74e8da56553748d8f62e1351de1c9e8",
+        "sha256_in_prefix": "167481598ca7e0119d2e792686151fe1a74e8da56553748d8f62e1351de1c9e8",
+        "size_in_bytes": 92818
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "eb7f27185088fc81292d8df3816ed86e19cc68918c4bff25dfaef86a37f2588c",
+  "size": 241896,
+  "subdir": "noarch",
+  "timestamp": 1695439199796,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-munsell-0.5.0-r43h6115d3f_0.conda",
+  "version": "0.5.0"
+}

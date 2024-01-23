@@ -1,0 +1,2 @@
+#!/bin/sh
+/workspaces/Master_ISDD_fiches/env/bin/x86_64-conda-linux-gnu-gfortran.bin -specs=/workspaces/Master_ISDD_fiches/env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/specs "$@"

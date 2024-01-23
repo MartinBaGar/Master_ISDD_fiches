@@ -1,0 +1,318 @@
+{
+  "build": "r43h6115d3f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "r-broom",
+    "r-dplyr",
+    "r-lme4 >=1.1.31",
+    "r-mass",
+    "r-matrix >=1.2.3",
+    "r-numderiv",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/usr/local/conda/pkgs/r-pbkrtest-0.5.2-r43h6115d3f_0",
+  "features": "",
+  "files": [
+    "lib/R/library/pbkrtest/CITATION",
+    "lib/R/library/pbkrtest/DESCRIPTION",
+    "lib/R/library/pbkrtest/INDEX",
+    "lib/R/library/pbkrtest/Meta/Rd.rds",
+    "lib/R/library/pbkrtest/Meta/data.rds",
+    "lib/R/library/pbkrtest/Meta/features.rds",
+    "lib/R/library/pbkrtest/Meta/hsearch.rds",
+    "lib/R/library/pbkrtest/Meta/links.rds",
+    "lib/R/library/pbkrtest/Meta/nsInfo.rds",
+    "lib/R/library/pbkrtest/Meta/package.rds",
+    "lib/R/library/pbkrtest/Meta/vignette.rds",
+    "lib/R/library/pbkrtest/NAMESPACE",
+    "lib/R/library/pbkrtest/NEWS",
+    "lib/R/library/pbkrtest/R/pbkrtest",
+    "lib/R/library/pbkrtest/R/pbkrtest.rdb",
+    "lib/R/library/pbkrtest/R/pbkrtest.rdx",
+    "lib/R/library/pbkrtest/WORDLIST",
+    "lib/R/library/pbkrtest/data/Rdata.rdb",
+    "lib/R/library/pbkrtest/data/Rdata.rds",
+    "lib/R/library/pbkrtest/data/Rdata.rdx",
+    "lib/R/library/pbkrtest/doc/a01-pbkrtest.R",
+    "lib/R/library/pbkrtest/doc/a01-pbkrtest.html",
+    "lib/R/library/pbkrtest/doc/a01-pbkrtest.rmd",
+    "lib/R/library/pbkrtest/doc/a02-coercion.R",
+    "lib/R/library/pbkrtest/doc/a02-coercion.html",
+    "lib/R/library/pbkrtest/doc/a02-coercion.rmd",
+    "lib/R/library/pbkrtest/doc/index.html",
+    "lib/R/library/pbkrtest/help/AnIndex",
+    "lib/R/library/pbkrtest/help/aliases.rds",
+    "lib/R/library/pbkrtest/help/paths.rds",
+    "lib/R/library/pbkrtest/help/pbkrtest.rdb",
+    "lib/R/library/pbkrtest/help/pbkrtest.rdx",
+    "lib/R/library/pbkrtest/html/00Index.html",
+    "lib/R/library/pbkrtest/html/R.css"
+  ],
+  "fn": "r-pbkrtest-0.5.2-r43h6115d3f_0.conda",
+  "legacy_bz2_md5": "848c7b2b4935b0d6edafefe0e42d7f06",
+  "license": "GPL-2",
+  "license_family": "GPL2",
+  "link": {
+    "source": "/usr/local/conda/pkgs/r-pbkrtest-0.5.2-r43h6115d3f_0",
+    "type": 1
+  },
+  "md5": "0e1045072daad5e199ceba7779070b0b",
+  "name": "r-pbkrtest",
+  "noarch": "generic",
+  "package_tarball_full_path": "/usr/local/conda/pkgs/r-pbkrtest-0.5.2-r43h6115d3f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/pbkrtest/CITATION",
+        "path_type": "hardlink",
+        "sha256": "83d247cca695d2b92d1c4490685fbd9383c0301a04e1ac6012a3c379a7f84e41",
+        "sha256_in_prefix": "83d247cca695d2b92d1c4490685fbd9383c0301a04e1ac6012a3c379a7f84e41",
+        "size_in_bytes": 859
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "1c7923a1100dc4fb9d042ec5b8c2a6f658e82cdc6226b560c62d71b61ff97ebd",
+        "sha256_in_prefix": "1c7923a1100dc4fb9d042ec5b8c2a6f658e82cdc6226b560c62d71b61ff97ebd",
+        "size_in_bytes": 1508
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/INDEX",
+        "path_type": "hardlink",
+        "sha256": "a2ee1abde3dd22553fbe0b19c0ac3a2623203b409dff02548751403a573474d2",
+        "sha256_in_prefix": "a2ee1abde3dd22553fbe0b19c0ac3a2623203b409dff02548751403a573474d2",
+        "size_in_bytes": 1147
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "fcd0ea1470a311ebdf0976083fb3b8b8cb366679d858a509914da3617b70398a",
+        "sha256_in_prefix": "fcd0ea1470a311ebdf0976083fb3b8b8cb366679d858a509914da3617b70398a",
+        "size_in_bytes": 1297
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "4e962e47089d37e580b2e1d627070ff44344670b3ee31f5675925c2622e94689",
+        "sha256_in_prefix": "4e962e47089d37e580b2e1d627070ff44344670b3ee31f5675925c2622e94689",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "dc29bb9c948770a98c1f9a53ef71629e53f8ad6546c91966ab37dc4143a1a39f",
+        "sha256_in_prefix": "dc29bb9c948770a98c1f9a53ef71629e53f8ad6546c91966ab37dc4143a1a39f",
+        "size_in_bytes": 1322
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7108de6fb0025a806fb109c12742c0e64d24a4981becd5be21906cf4709cf167",
+        "sha256_in_prefix": "7108de6fb0025a806fb109c12742c0e64d24a4981becd5be21906cf4709cf167",
+        "size_in_bytes": 688
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "5eecd397ef5f7c99f14fd0e3d940afe09b8546731175cab4ef3ad14717f7e5a0",
+        "sha256_in_prefix": "5eecd397ef5f7c99f14fd0e3d940afe09b8546731175cab4ef3ad14717f7e5a0",
+        "size_in_bytes": 904
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "1a2f523e60926180fd75e8671a2ed20e90cccf5483b991c87f995bb71a54b6ba",
+        "sha256_in_prefix": "1a2f523e60926180fd75e8671a2ed20e90cccf5483b991c87f995bb71a54b6ba",
+        "size_in_bytes": 1307
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "73f1bca0bcc6281f1ab707cd3da0f5224403fe38cd7f3d410e38107009a97743",
+        "sha256_in_prefix": "73f1bca0bcc6281f1ab707cd3da0f5224403fe38cd7f3d410e38107009a97743",
+        "size_in_bytes": 281
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "7f8a8bce53ab7f87e865c61a9bc83c905895b580c681971d3d51bdd6aa0b716a",
+        "sha256_in_prefix": "7f8a8bce53ab7f87e865c61a9bc83c905895b580c681971d3d51bdd6aa0b716a",
+        "size_in_bytes": 2893
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/NEWS",
+        "path_type": "hardlink",
+        "sha256": "fe1ed0dacc4b7728c59424a3a0e02a5e636fe797c5ca5ee53d94e968699ff1b7",
+        "sha256_in_prefix": "fe1ed0dacc4b7728c59424a3a0e02a5e636fe797c5ca5ee53d94e968699ff1b7",
+        "size_in_bytes": 1459
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/R/pbkrtest",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/R/pbkrtest.rdb",
+        "path_type": "hardlink",
+        "sha256": "e4b2a455dff6c31f2666078c74079b16a7028f8acd12a7114566e2a081be096d",
+        "sha256_in_prefix": "e4b2a455dff6c31f2666078c74079b16a7028f8acd12a7114566e2a081be096d",
+        "size_in_bytes": 98634
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/R/pbkrtest.rdx",
+        "path_type": "hardlink",
+        "sha256": "f1df4bd3dfa4e3e18855d691a447deaf8169ad426e64eac483758d64cef40830",
+        "sha256_in_prefix": "f1df4bd3dfa4e3e18855d691a447deaf8169ad426e64eac483758d64cef40830",
+        "size_in_bytes": 1617
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/WORDLIST",
+        "path_type": "hardlink",
+        "sha256": "bf0bfc36cfaa6c450578d6edda7703e3b993699f599c6c4cc21cbcf85901c08e",
+        "sha256_in_prefix": "bf0bfc36cfaa6c450578d6edda7703e3b993699f599c6c4cc21cbcf85901c08e",
+        "size_in_bytes": 229
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "e3baa612d002afd7bacd6bd2f378567fcbb13b976f8b915ba94fdf176ed6672c",
+        "sha256_in_prefix": "e3baa612d002afd7bacd6bd2f378567fcbb13b976f8b915ba94fdf176ed6672c",
+        "size_in_bytes": 637
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "4f949791078c9e86673dab0f1c3272698d7443bd8d3e238aa6338b6fa9d34057",
+        "sha256_in_prefix": "4f949791078c9e86673dab0f1c3272698d7443bd8d3e238aa6338b6fa9d34057",
+        "size_in_bytes": 94
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "9b3fcd56e2388c6d389ebbeb67098e6b785abc99f6f8bec0aeafe5118a615079",
+        "sha256_in_prefix": "9b3fcd56e2388c6d389ebbeb67098e6b785abc99f6f8bec0aeafe5118a615079",
+        "size_in_bytes": 160
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/doc/a01-pbkrtest.R",
+        "path_type": "hardlink",
+        "sha256": "1780ccfb3d433dc9a6c25dc906bd76700cbc915cea2d98297023859e8a7ed595",
+        "sha256_in_prefix": "1780ccfb3d433dc9a6c25dc906bd76700cbc915cea2d98297023859e8a7ed595",
+        "size_in_bytes": 3725
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/doc/a01-pbkrtest.html",
+        "path_type": "hardlink",
+        "sha256": "b00e4c9f2b7729634b1c7422b5fb9d0eaafcc109a3cc18239978d3538df16ac4",
+        "sha256_in_prefix": "b00e4c9f2b7729634b1c7422b5fb9d0eaafcc109a3cc18239978d3538df16ac4",
+        "size_in_bytes": 43723
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/doc/a01-pbkrtest.rmd",
+        "path_type": "hardlink",
+        "sha256": "a31fbf902ca228bcb7e50bad436abe6f6ede8770e99e76d7328c78f3ace2fa6e",
+        "sha256_in_prefix": "a31fbf902ca228bcb7e50bad436abe6f6ede8770e99e76d7328c78f3ace2fa6e",
+        "size_in_bytes": 4324
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/doc/a02-coercion.R",
+        "path_type": "hardlink",
+        "sha256": "cb806e8517f67f7378713049391faa60c856444baf173c240325007db3b35ea9",
+        "sha256_in_prefix": "cb806e8517f67f7378713049391faa60c856444baf173c240325007db3b35ea9",
+        "size_in_bytes": 1639
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/doc/a02-coercion.html",
+        "path_type": "hardlink",
+        "sha256": "bd95f3b1422ad7818834342e8f7ac6fb11681ce77bc4b42ff16f08251a61a603",
+        "sha256_in_prefix": "bd95f3b1422ad7818834342e8f7ac6fb11681ce77bc4b42ff16f08251a61a603",
+        "size_in_bytes": 15126
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/doc/a02-coercion.rmd",
+        "path_type": "hardlink",
+        "sha256": "fc228b5698e6227c1eba6a39a0861e3fbc6a75bfc178c5eb02eb404dc8876c23",
+        "sha256_in_prefix": "fc228b5698e6227c1eba6a39a0861e3fbc6a75bfc178c5eb02eb404dc8876c23",
+        "size_in_bytes": 1993
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "c334dc12b44a05d3a2f088ee3d8e9002ed72cbe823d6dca1f36d6fa63430f228",
+        "sha256_in_prefix": "c334dc12b44a05d3a2f088ee3d8e9002ed72cbe823d6dca1f36d6fa63430f228",
+        "size_in_bytes": 2037
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "72cea3d2eae5957309005b20cc356c6a9e54c2d14286d9989579115affba1e10",
+        "sha256_in_prefix": "72cea3d2eae5957309005b20cc356c6a9e54c2d14286d9989579115affba1e10",
+        "size_in_bytes": 1769
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "aaab056b8ca7b7c0678f1aac56d8fbdc6f17b5b2aae09e34da9002173bde2197",
+        "sha256_in_prefix": "aaab056b8ca7b7c0678f1aac56d8fbdc6f17b5b2aae09e34da9002173bde2197",
+        "size_in_bytes": 619
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "a725f404a76077dcf3a1501e93d85a13b666db10d48e746dfb260e1f9734a052",
+        "sha256_in_prefix": "a725f404a76077dcf3a1501e93d85a13b666db10d48e746dfb260e1f9734a052",
+        "size_in_bytes": 306
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/help/pbkrtest.rdb",
+        "path_type": "hardlink",
+        "sha256": "3ad77fb351b926f290545eeeab1317e4a3cedd04bd1146281098f82ed3891a49",
+        "sha256_in_prefix": "3ad77fb351b926f290545eeeab1317e4a3cedd04bd1146281098f82ed3891a49",
+        "size_in_bytes": 48127
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/help/pbkrtest.rdx",
+        "path_type": "hardlink",
+        "sha256": "f6f2f23eea16668e1b2964f9cecc6c7810795bdbcb6d3f52dd03fb118278436e",
+        "sha256_in_prefix": "f6f2f23eea16668e1b2964f9cecc6c7810795bdbcb6d3f52dd03fb118278436e",
+        "size_in_bytes": 562
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "3a1754ba862f441762bbf7bce88590d4b38f7933cf2af1163d4e1a150f2bfed6",
+        "sha256_in_prefix": "3a1754ba862f441762bbf7bce88590d4b38f7933cf2af1163d4e1a150f2bfed6",
+        "size_in_bytes": 11076
+      },
+      {
+        "_path": "lib/R/library/pbkrtest/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "32737b9da8e4b5e5314ed927a6354de18858e2994efd959538fab111880c91f0",
+  "size": 192187,
+  "subdir": "noarch",
+  "timestamp": 1695453984639,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-pbkrtest-0.5.2-r43h6115d3f_0.conda",
+  "version": "0.5.2"
+}
