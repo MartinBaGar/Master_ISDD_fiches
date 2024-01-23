@@ -4,6 +4,8 @@ project:
 website:
   title: "Master ISDD fiches"
   navbar:
+    background: "#8a1538"
+    foreground: "black"
     logo: "images/UniversiteParisCite_logo_horizontal_noir_RVB.png"
     left: 
       - text: "MDA"
@@ -14,10 +16,13 @@ website:
         - mda/TP3/tp3.qmd
         - mda/TP4/tp4.qmd
       - about.qmd
-    right:
+    tools:
       - icon: github
         href: https://github.com/MartinBaGar/Master_ISDD_fiches
         aria-label: GitHub
+      - icon: envelope-at
+        href: mailto:martin.bari-garnier@etu.u-paris.fr
+        
   reader-mode: true
 
 format:
