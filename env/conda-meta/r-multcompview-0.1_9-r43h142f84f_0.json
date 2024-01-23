@@ -1,0 +1,188 @@
+{
+  "build": "r43h142f84f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-multcompview-0.1_9-r43h142f84f_0",
+  "files": [
+    "lib/R/library/multcompView/DESCRIPTION",
+    "lib/R/library/multcompView/INDEX",
+    "lib/R/library/multcompView/Meta/Rd.rds",
+    "lib/R/library/multcompView/Meta/features.rds",
+    "lib/R/library/multcompView/Meta/hsearch.rds",
+    "lib/R/library/multcompView/Meta/links.rds",
+    "lib/R/library/multcompView/Meta/nsInfo.rds",
+    "lib/R/library/multcompView/Meta/package.rds",
+    "lib/R/library/multcompView/NAMESPACE",
+    "lib/R/library/multcompView/R/multcompView",
+    "lib/R/library/multcompView/R/multcompView.rdb",
+    "lib/R/library/multcompView/R/multcompView.rdx",
+    "lib/R/library/multcompView/help/AnIndex",
+    "lib/R/library/multcompView/help/aliases.rds",
+    "lib/R/library/multcompView/help/multcompView.rdb",
+    "lib/R/library/multcompView/help/multcompView.rdx",
+    "lib/R/library/multcompView/help/paths.rds",
+    "lib/R/library/multcompView/html/00Index.html",
+    "lib/R/library/multcompView/html/R.css"
+  ],
+  "fn": "r-multcompview-0.1_9-r43h142f84f_0.conda",
+  "license": "GPL-3",
+  "link": {
+    "source": "/opt/conda/pkgs/r-multcompview-0.1_9-r43h142f84f_0",
+    "type": 1
+  },
+  "md5": "4ffde7184458f730e966663c53a00910",
+  "name": "r-multcompview",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-multcompview-0.1_9-r43h142f84f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/multcompView/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "59d7d94bbfb28be05988ff498e864c96e3899b85c2eeaca3b2b61e25c31697e1",
+        "sha256_in_prefix": "59d7d94bbfb28be05988ff498e864c96e3899b85c2eeaca3b2b61e25c31697e1",
+        "size_in_bytes": 920
+      },
+      {
+        "_path": "lib/R/library/multcompView/INDEX",
+        "path_type": "hardlink",
+        "sha256": "73415d20bf7dde98a70bea49fe0a542a7c80d5612f7d54672c517c2758eb9b41",
+        "sha256_in_prefix": "73415d20bf7dde98a70bea49fe0a542a7c80d5612f7d54672c517c2758eb9b41",
+        "size_in_bytes": 655
+      },
+      {
+        "_path": "lib/R/library/multcompView/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "02be0c70a86310143ce3afb8e30acdca2b678a70bbed35eb3d36962467411d5d",
+        "sha256_in_prefix": "02be0c70a86310143ce3afb8e30acdca2b678a70bbed35eb3d36962467411d5d",
+        "size_in_bytes": 728
+      },
+      {
+        "_path": "lib/R/library/multcompView/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/multcompView/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "aa13d68faa6bf65aa8b1026246bd44cbce5c2d58b17a723cdc58ee9f5fe92694",
+        "sha256_in_prefix": "aa13d68faa6bf65aa8b1026246bd44cbce5c2d58b17a723cdc58ee9f5fe92694",
+        "size_in_bytes": 736
+      },
+      {
+        "_path": "lib/R/library/multcompView/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "b72096e289ece8d72626a69a9e0f7633d9550ceae0bc5dee1c4f1f864556e97a",
+        "sha256_in_prefix": "b72096e289ece8d72626a69a9e0f7633d9550ceae0bc5dee1c4f1f864556e97a",
+        "size_in_bytes": 337
+      },
+      {
+        "_path": "lib/R/library/multcompView/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "5897754f04cb163de890ca223109f44327f0625ad60efe761be2e4ed64133820",
+        "sha256_in_prefix": "5897754f04cb163de890ca223109f44327f0625ad60efe761be2e4ed64133820",
+        "size_in_bytes": 500
+      },
+      {
+        "_path": "lib/R/library/multcompView/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "83cae72f3a316eba9310bd2e2b15338f5e9b6cba001213fca1564a890aaf5b15",
+        "sha256_in_prefix": "83cae72f3a316eba9310bd2e2b15338f5e9b6cba001213fca1564a890aaf5b15",
+        "size_in_bytes": 919
+      },
+      {
+        "_path": "lib/R/library/multcompView/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "7a8acc5e38fd3dbfc61c696bb863c0709873333e54671bbc8da2570c9d912fe1",
+        "sha256_in_prefix": "7a8acc5e38fd3dbfc61c696bb863c0709873333e54671bbc8da2570c9d912fe1",
+        "size_in_bytes": 1093
+      },
+      {
+        "_path": "lib/R/library/multcompView/R/multcompView",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/multcompView/R/multcompView.rdb",
+        "path_type": "hardlink",
+        "sha256": "1aad97ef5a8df480d9290859492403bb4e6e163537afdf21a40d34a76fb5a54d",
+        "sha256_in_prefix": "1aad97ef5a8df480d9290859492403bb4e6e163537afdf21a40d34a76fb5a54d",
+        "size_in_bytes": 49324
+      },
+      {
+        "_path": "lib/R/library/multcompView/R/multcompView.rdx",
+        "path_type": "hardlink",
+        "sha256": "4e14ad20635b5db74679a73211ea80cebc70c29b260a66ce14517e660fc71b77",
+        "sha256_in_prefix": "4e14ad20635b5db74679a73211ea80cebc70c29b260a66ce14517e660fc71b77",
+        "size_in_bytes": 500
+      },
+      {
+        "_path": "lib/R/library/multcompView/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "bd126fd9a538fcdc3f0d33f00b44aa46bd1bebb9af30dbb72a257b2794c64a33",
+        "sha256_in_prefix": "bd126fd9a538fcdc3f0d33f00b44aa46bd1bebb9af30dbb72a257b2794c64a33",
+        "size_in_bytes": 606
+      },
+      {
+        "_path": "lib/R/library/multcompView/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "4015a4348d13c37fb63549b8a5a13de133d62e0756c6921a4b379f19e6861cc1",
+        "sha256_in_prefix": "4015a4348d13c37fb63549b8a5a13de133d62e0756c6921a4b379f19e6861cc1",
+        "size_in_bytes": 246
+      },
+      {
+        "_path": "lib/R/library/multcompView/help/multcompView.rdb",
+        "path_type": "hardlink",
+        "sha256": "50999b7831b0021527c4dd31c22d9975f25e9df6a59a6874d7833e6678419da9",
+        "sha256_in_prefix": "50999b7831b0021527c4dd31c22d9975f25e9df6a59a6874d7833e6678419da9",
+        "size_in_bytes": 56006
+      },
+      {
+        "_path": "lib/R/library/multcompView/help/multcompView.rdx",
+        "path_type": "hardlink",
+        "sha256": "5f77c0173f7ff0281884320493965e57f24d30433af45e14150281f5e54e78ed",
+        "sha256_in_prefix": "5f77c0173f7ff0281884320493965e57f24d30433af45e14150281f5e54e78ed",
+        "size_in_bytes": 446
+      },
+      {
+        "_path": "lib/R/library/multcompView/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "f65f5c98fb2d080722baeb96c5eb777830370f4fb3de6b11ae53dc654be10d92",
+        "sha256_in_prefix": "f65f5c98fb2d080722baeb96c5eb777830370f4fb3de6b11ae53dc654be10d92",
+        "size_in_bytes": 248
+      },
+      {
+        "_path": "lib/R/library/multcompView/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "54f4b49746865914726602530f9447d2b6e020b8bc524a7fea54789877f668c7",
+        "sha256_in_prefix": "54f4b49746865914726602530f9447d2b6e020b8bc524a7fea54789877f668c7",
+        "size_in_bytes": 3309
+      },
+      {
+        "_path": "lib/R/library/multcompView/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "548976b2a6ab17c5696e1149e16d8f49d0ca02b8e12b0bbc0b5f129e6f4315ff",
+  "size": 131310,
+  "subdir": "noarch",
+  "timestamp": 1697814574000,
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-multcompview-0.1_9-r43h142f84f_0.conda",
+  "version": "0.1_9"
+}

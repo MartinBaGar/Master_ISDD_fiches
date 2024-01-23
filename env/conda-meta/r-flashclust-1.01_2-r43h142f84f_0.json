@@ -1,0 +1,204 @@
+{
+  "build": "r43h142f84f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-flashclust-1.01_2-r43h142f84f_0",
+  "files": [
+    "lib/R/library/flashClust/CITATION",
+    "lib/R/library/flashClust/DESCRIPTION",
+    "lib/R/library/flashClust/INDEX",
+    "lib/R/library/flashClust/Meta/Rd.rds",
+    "lib/R/library/flashClust/Meta/features.rds",
+    "lib/R/library/flashClust/Meta/hsearch.rds",
+    "lib/R/library/flashClust/Meta/links.rds",
+    "lib/R/library/flashClust/Meta/nsInfo.rds",
+    "lib/R/library/flashClust/Meta/package.rds",
+    "lib/R/library/flashClust/NAMESPACE",
+    "lib/R/library/flashClust/R/flashClust",
+    "lib/R/library/flashClust/R/flashClust.rdb",
+    "lib/R/library/flashClust/R/flashClust.rdx",
+    "lib/R/library/flashClust/help/AnIndex",
+    "lib/R/library/flashClust/help/aliases.rds",
+    "lib/R/library/flashClust/help/flashClust.rdb",
+    "lib/R/library/flashClust/help/flashClust.rdx",
+    "lib/R/library/flashClust/help/paths.rds",
+    "lib/R/library/flashClust/html/00Index.html",
+    "lib/R/library/flashClust/html/R.css",
+    "lib/R/library/flashClust/libs/flashClust.so"
+  ],
+  "fn": "r-flashclust-1.01_2-r43h142f84f_0.conda",
+  "license": "GPL-2",
+  "link": {
+    "source": "/opt/conda/pkgs/r-flashclust-1.01_2-r43h142f84f_0",
+    "type": 1
+  },
+  "md5": "400d1e8dc9f45896450f6877bf07a1ee",
+  "name": "r-flashclust",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-flashclust-1.01_2-r43h142f84f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/flashClust/CITATION",
+        "path_type": "hardlink",
+        "sha256": "20006769b277a3fbfab220a4ba4bfa0ab7f5a940de52f1d81f6d52f20a62dcbd",
+        "sha256_in_prefix": "20006769b277a3fbfab220a4ba4bfa0ab7f5a940de52f1d81f6d52f20a62dcbd",
+        "size_in_bytes": 764
+      },
+      {
+        "_path": "lib/R/library/flashClust/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "1f01cbc487e7d959d99478b1e033aef5a6bd448613abae150e0608414a43aa45",
+        "sha256_in_prefix": "1f01cbc487e7d959d99478b1e033aef5a6bd448613abae150e0608414a43aa45",
+        "size_in_bytes": 564
+      },
+      {
+        "_path": "lib/R/library/flashClust/INDEX",
+        "path_type": "hardlink",
+        "sha256": "f4b7064dc145a193746a5799a9a1a33a72aeff977359d454d1af8d5a4ac28e55",
+        "sha256_in_prefix": "f4b7064dc145a193746a5799a9a1a33a72aeff977359d454d1af8d5a4ac28e55",
+        "size_in_bytes": 53
+      },
+      {
+        "_path": "lib/R/library/flashClust/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "605d2a3157c967c0769f8053e146fb80347e2713c0f84782e47bb5d35e509861",
+        "sha256_in_prefix": "605d2a3157c967c0769f8053e146fb80347e2713c0f84782e47bb5d35e509861",
+        "size_in_bytes": 289
+      },
+      {
+        "_path": "lib/R/library/flashClust/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/flashClust/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "24bb72d060470d4b1b39ada806b5ec03001e14d2f52e3d5a729c3c33de9e2f56",
+        "sha256_in_prefix": "24bb72d060470d4b1b39ada806b5ec03001e14d2f52e3d5a729c3c33de9e2f56",
+        "size_in_bytes": 312
+      },
+      {
+        "_path": "lib/R/library/flashClust/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "d17e6697a8abbe2beaf68b029069daca9bbd44cff44ef4b247aa515239a3b9e6",
+        "sha256_in_prefix": "d17e6697a8abbe2beaf68b029069daca9bbd44cff44ef4b247aa515239a3b9e6",
+        "size_in_bytes": 132
+      },
+      {
+        "_path": "lib/R/library/flashClust/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "58db9160572723e5406cbbc1b9de94c1fb9e3f1ffcc9dd377f682817f5838cb2",
+        "sha256_in_prefix": "58db9160572723e5406cbbc1b9de94c1fb9e3f1ffcc9dd377f682817f5838cb2",
+        "size_in_bytes": 220
+      },
+      {
+        "_path": "lib/R/library/flashClust/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "934afa804a20141823cd8934b38283b878d8d2d1418cb8cdd33e9e992a421ff8",
+        "sha256_in_prefix": "934afa804a20141823cd8934b38283b878d8d2d1418cb8cdd33e9e992a421ff8",
+        "size_in_bytes": 702
+      },
+      {
+        "_path": "lib/R/library/flashClust/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "e2183e6e6db0fff3d8f60b172fd772af6e84773bc8647353ec3dd52ef09dcc5b",
+        "sha256_in_prefix": "e2183e6e6db0fff3d8f60b172fd772af6e84773bc8647353ec3dd52ef09dcc5b",
+        "size_in_bytes": 48
+      },
+      {
+        "_path": "lib/R/library/flashClust/R/flashClust",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/flashClust/R/flashClust.rdb",
+        "path_type": "hardlink",
+        "sha256": "abe9e18dee0716c9fb34a0e04eada994b98ad24e704cfc2d66da14504a108884",
+        "sha256_in_prefix": "abe9e18dee0716c9fb34a0e04eada994b98ad24e704cfc2d66da14504a108884",
+        "size_in_bytes": 3786
+      },
+      {
+        "_path": "lib/R/library/flashClust/R/flashClust.rdx",
+        "path_type": "hardlink",
+        "sha256": "5d832a96bbbf0db0ee0b7a29cb0052f79db16ade9895b5cbf02ed9b09765416b",
+        "sha256_in_prefix": "5d832a96bbbf0db0ee0b7a29cb0052f79db16ade9895b5cbf02ed9b09765416b",
+        "size_in_bytes": 274
+      },
+      {
+        "_path": "lib/R/library/flashClust/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "0aa059a834bf954e9a26daef4013851f7addd9305728af78474640b4367c4507",
+        "sha256_in_prefix": "0aa059a834bf954e9a26daef4013851f7addd9305728af78474640b4367c4507",
+        "size_in_bytes": 40
+      },
+      {
+        "_path": "lib/R/library/flashClust/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "ccf01a0b3b48973ec0276dfa76f478c7d8ef513c780828fc781d6cbefb909cef",
+        "sha256_in_prefix": "ccf01a0b3b48973ec0276dfa76f478c7d8ef513c780828fc781d6cbefb909cef",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "lib/R/library/flashClust/help/flashClust.rdb",
+        "path_type": "hardlink",
+        "sha256": "6f13e597e2a988d5201f183e5382cc9cc179da5da801a11a02a08f2f67836d81",
+        "sha256_in_prefix": "6f13e597e2a988d5201f183e5382cc9cc179da5da801a11a02a08f2f67836d81",
+        "size_in_bytes": 7078
+      },
+      {
+        "_path": "lib/R/library/flashClust/help/flashClust.rdx",
+        "path_type": "hardlink",
+        "sha256": "2f1497178df7caf6e5edc82992fdff932d24dd54f805971130fda26f0672609a",
+        "sha256_in_prefix": "2f1497178df7caf6e5edc82992fdff932d24dd54f805971130fda26f0672609a",
+        "size_in_bytes": 161
+      },
+      {
+        "_path": "lib/R/library/flashClust/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "a15de36665499debe9b433bdc2f9505f398c2d3e62f4f55abb2f83c208e7a4ae",
+        "sha256_in_prefix": "a15de36665499debe9b433bdc2f9505f398c2d3e62f4f55abb2f83c208e7a4ae",
+        "size_in_bytes": 135
+      },
+      {
+        "_path": "lib/R/library/flashClust/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "3fe19f3417fd1d808989a1ecbef310e6235fae09e15e354986ad962d09204b92",
+        "sha256_in_prefix": "3fe19f3417fd1d808989a1ecbef310e6235fae09e15e354986ad962d09204b92",
+        "size_in_bytes": 1205
+      },
+      {
+        "_path": "lib/R/library/flashClust/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/flashClust/libs/flashClust.so",
+        "path_type": "hardlink",
+        "sha256": "99df8a32b6d4342e100f9bca27c65a151e5bdf5ab755336c13a2e185de1715dc",
+        "sha256_in_prefix": "99df8a32b6d4342e100f9bca27c65a151e5bdf5ab755336c13a2e185de1715dc",
+        "size_in_bytes": 19632
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "9abcf64a1522a5398446b9eb7221dccd30cd36750ba14f5ee6f16aa9b46537ce",
+  "size": 33646,
+  "subdir": "noarch",
+  "timestamp": 1697782374000,
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-flashclust-1.01_2-r43h142f84f_0.conda",
+  "version": "1.01_2"
+}
