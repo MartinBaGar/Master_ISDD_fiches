@@ -1,7 +1,7 @@
 /*
  *  R : A Computer Language for Statistical Data Analysis
- *  Copyright (C) 1999--2023  The R Core Team.
  *  Copyright (C) 1995, 1996  Robert Gentleman and Ross Ihaka
+ *  Copyright (C) 1999-2017   The R Core Team.
  *
  *  This header file is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU Lesser General Public License as published by
@@ -11,7 +11,7 @@
  *  This file is part of R. R is distributed under the terms of the
  *  GNU General Public License, either Version 2, June 1991 or Version 3,
  *  June 2007. See doc/COPYRIGHTS for details of the copyright status of R.
- *
+ *  
  *  This program is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -89,12 +89,16 @@ typedef int R_len_t;
  *			--> TypeTable[] in ../main/util.c for  typeof()
  */
 
+/* UUID identifying the internals version -- packages using compiled
+   code should be re-installed when this changes */
+#define R_INTERNALS_UUID "2fdf6c18-697a-4ba7-b8ef-11c0d92f1327"
+
 /*  These exact numeric values are seldom used, but they are, e.g., in
  *  ../main/subassign.c, and they are serialized.
 */
 #ifndef enum_SEXPTYPE
 /* NOT YET using enum:
- *  1)	The internal SEXPREC struct has 'SEXPTYPE type : 5'
+ *  1)	The SEXPREC struct below has 'SEXPTYPE type : 5'
  *	(making FUNSXP and CLOSXP equivalent in there),
  *	giving (-Wall only ?) warnings all over the place
  * 2)	Many switch(type) { case ... } statements need a final `default:'
@@ -166,7 +170,7 @@ typedef enum {
     RAWSXP	= 24,	/* raw bytes */
     S4SXP	= 25,	/* S4 non-vector */
 
-    NEWSXP      = 30,   /* fresh node created in new page */
+    NEWSXP      = 30,   /* fresh node creaed in new page */
     FREESXP     = 31,   /* node released by GC */
 
     FUNSXP	= 99	/* Closure or Builtin */
@@ -179,12 +183,85 @@ typedef enum {
 
 typedef struct SEXPREC *SEXP;
 
+// ======================= USE_RINTERNALS section
+#ifdef USE_RINTERNALS
+/* This is intended for use only within R itself.
+ * It defines internal structures that are otherwise only accessible
+ * via SEXP, and macros to replace many (but not all) of accessor functions
+ * (which are always defined).
+ */
 
-/* Define SWITCH_TO_NAMED to use the 'NAMED' mechanism instead of
-   reference counting. */
-#if ! defined(SWITCH_TO_NAMED) && ! defined(SWITCH_TO_REFCNT)
-# define SWITCH_TO_REFCNT
-#endif
+#define NAMED_BITS 16
+
+/* Flags */
+
+
+struct sxpinfo_struct {
+    SEXPTYPE type      :  TYPE_BITS;
+                            /* ==> (FUNSXP == 99) %% 2^5 == 3 == CLOSXP
+			     * -> warning: `type' is narrower than values
+			     *              of its type
+			     * when SEXPTYPE was an enum */
+    unsigned int scalar:  1;
+    unsigned int obj   :  1;
+    unsigned int alt   :  1;
+    unsigned int gp    : 16;
+    unsigned int mark  :  1;
+    unsigned int debug :  1;
+    unsigned int trace :  1;  /* functions and memory tracing */
+    unsigned int spare :  1;  /* used on closures and when REFCNT is defined */
+    unsigned int gcgen :  1;  /* old generation number */
+    unsigned int gccls :  3;  /* node class */
+    unsigned int named : NAMED_BITS;
+    unsigned int extra : 32 - NAMED_BITS;
+}; /*		    Tot: 64 */
+
+struct vecsxp_struct {
+    R_xlen_t	length;
+    R_xlen_t	truelength;
+};
+
+struct primsxp_struct {
+    int offset;
+};
+
+struct symsxp_struct {
+    struct SEXPREC *pname;
+    struct SEXPREC *value;
+    struct SEXPREC *internal;
+};
+
+struct listsxp_struct {
+    struct SEXPREC *carval;
+    struct SEXPREC *cdrval;
+    struct SEXPREC *tagval;
+};
+
+struct envsxp_struct {
+    struct SEXPREC *frame;
+    struct SEXPREC *enclos;
+    struct SEXPREC *hashtab;
+};
+
+struct closxp_struct {
+    struct SEXPREC *formals;
+    struct SEXPREC *body;
+    struct SEXPREC *env;
+};
+
+struct promsxp_struct {
+    struct SEXPREC *value;
+    struct SEXPREC *expr;
+    struct SEXPREC *env;
+};
+
+/* Every node must start with a set of sxpinfo flags and an attribute
+   field. Under the generational collector these are followed by the
+   fields used to maintain the collector's linked list structures. */
+
+/* Define SWITH_TO_REFCNT to use reference counting instead of the
+   'NAMED' mechanism. */
+//#define SWITCH_TO_REFCNT
 
 #if defined(SWITCH_TO_REFCNT) && ! defined(COMPUTE_REFCNT_VALUES)
 # define COMPUTE_REFCNT_VALUES
@@ -192,12 +269,216 @@ typedef struct SEXPREC *SEXP;
 #if defined(SWITCH_TO_REFCNT) && ! defined(ADJUST_ENVIR_REFCNTS)
 # define ADJUST_ENVIR_REFCNTS
 #endif
+#define REFCNTMAX ((1 << NAMED_BITS) - 1)
 
+#define SEXPREC_HEADER \
+    struct sxpinfo_struct sxpinfo; \
+    struct SEXPREC *attrib; \
+    struct SEXPREC *gengc_next_node, *gengc_prev_node
 
-#define CHAR(x) R_CHAR(x)
+/* The standard node structure consists of a header followed by the
+   node data. */
+typedef struct SEXPREC {
+    SEXPREC_HEADER;
+    union {
+	struct primsxp_struct primsxp;
+	struct symsxp_struct symsxp;
+	struct listsxp_struct listsxp;
+	struct envsxp_struct envsxp;
+	struct closxp_struct closxp;
+	struct promsxp_struct promsxp;
+    } u;
+} SEXPREC;
+
+/* The generational collector uses a reduced version of SEXPREC as a
+   header in vector nodes.  The layout MUST be kept consistent with
+   the SEXPREC definition. The standard SEXPREC takes up 7 words
+   and the reduced version takes 6 words on most 64-bit systems. On most
+   32-bit systems, SEXPREC takes 8 words and the reduced version 7 words. */
+typedef struct VECTOR_SEXPREC {
+    SEXPREC_HEADER;
+    struct vecsxp_struct vecsxp;
+} VECTOR_SEXPREC, *VECSEXP;
+
+typedef union { VECTOR_SEXPREC s; double align; } SEXPREC_ALIGN;
+
+/* General Cons Cell Attributes */
+#define ATTRIB(x)	((x)->attrib)
+#define OBJECT(x)	((x)->sxpinfo.obj)
+#define MARK(x)		((x)->sxpinfo.mark)
+#define TYPEOF(x)	((x)->sxpinfo.type)
+#define NAMED(x)	((x)->sxpinfo.named)
+#define RTRACE(x)	((x)->sxpinfo.trace)
+#define LEVELS(x)	((x)->sxpinfo.gp)
+#define SET_OBJECT(x,v)	(((x)->sxpinfo.obj)=(v))
+#define SET_TYPEOF(x,v)	(((x)->sxpinfo.type)=(v))
+#define SET_NAMED(x,v)	(((x)->sxpinfo.named)=(v))
+#define SET_RTRACE(x,v)	(((x)->sxpinfo.trace)=(v))
+#define SETLEVELS(x,v)	(((x)->sxpinfo.gp)=((unsigned short)v))
+#define ALTREP(x)       ((x)->sxpinfo.alt)
+#define SETALTREP(x, v) (((x)->sxpinfo.alt) = (v))
+#define SETSCALAR(x, v) (((x)->sxpinfo.scalar) = (v))
+
+#if defined(COMPUTE_REFCNT_VALUES)
+# define REFCNT(x) ((x)->sxpinfo.named)
+# define TRACKREFS(x) (TYPEOF(x) == CLOSXP ? TRUE : ! (x)->sxpinfo.spare)
+#else
+# define REFCNT(x) 0
+# define TRACKREFS(x) FALSE
+#endif
+
+#ifdef SWITCH_TO_REFCNT
+# undef NAMED
+# undef SET_NAMED
+# define NAMED(x) REFCNT(x)
+# define SET_NAMED(x, v) do {} while (0)
+#endif
+
+#define ENSURE_NAMEDMAX(v) do {			\
+	SEXP __enm_v__ = (v);			\
+	if (NAMED(__enm_v__) < NAMEDMAX)	\
+	    SET_NAMED( __enm_v__, NAMEDMAX);	\
+    } while (0)
+#define ENSURE_NAMED(v) do { if (NAMED(v) == 0) SET_NAMED(v, 1); } while (0)
+#define SETTER_CLEAR_NAMED(x) do {				\
+	SEXP __x__ = (x);				\
+	if (NAMED(__x__) == 1) SET_NAMED(__x__, 0);	\
+    } while (0)
+#define RAISE_NAMED(x, n) do {			\
+	SEXP __x__ = (x);			\
+	int __n__ = (n);			\
+	if (NAMED(__x__) < __n__)		\
+	    SET_NAMED(__x__, __n__);		\
+    } while (0)
+
+/* S4 object bit, set by R_do_new_object for all new() calls */
+#define S4_OBJECT_MASK ((unsigned short)(1<<4))
+#define IS_S4_OBJECT(x) ((x)->sxpinfo.gp & S4_OBJECT_MASK)
+#define SET_S4_OBJECT(x) (((x)->sxpinfo.gp) |= S4_OBJECT_MASK)
+#define UNSET_S4_OBJECT(x) (((x)->sxpinfo.gp) &= ~S4_OBJECT_MASK)
+
+/* JIT optimization support */
+#define NOJIT_MASK ((unsigned short)(1<<5))
+#define NOJIT(x) ((x)->sxpinfo.gp & NOJIT_MASK)
+#define SET_NOJIT(x) (((x)->sxpinfo.gp) |= NOJIT_MASK)
+#define MAYBEJIT_MASK ((unsigned short)(1<<6))
+#define MAYBEJIT(x) ((x)->sxpinfo.gp & MAYBEJIT_MASK)
+#define SET_MAYBEJIT(x) (((x)->sxpinfo.gp) |= MAYBEJIT_MASK)
+#define UNSET_MAYBEJIT(x) (((x)->sxpinfo.gp) &= ~MAYBEJIT_MASK)
+
+/* Growable vector support */
+#define GROWABLE_MASK ((unsigned short)(1<<5))
+#define GROWABLE_BIT_SET(x) ((x)->sxpinfo.gp & GROWABLE_MASK)
+#define SET_GROWABLE_BIT(x) (((x)->sxpinfo.gp) |= GROWABLE_MASK)
+#define IS_GROWABLE(x) (GROWABLE_BIT_SET(x) && XLENGTH(x) < XTRUELENGTH(x))
+
+/* Vector Access Macros */
+#ifdef LONG_VECTOR_SUPPORT
+# define IS_LONG_VEC(x) (XLENGTH(x) > R_SHORT_LEN_MAX)
+#else
+# define IS_LONG_VEC(x) 0
+#endif
+#define STDVEC_LENGTH(x) (((VECSEXP) (x))->vecsxp.length)
+#define STDVEC_TRUELENGTH(x) (((VECSEXP) (x))->vecsxp.truelength)
+#define SET_STDVEC_TRUELENGTH(x, v) (STDVEC_TRUELENGTH(x)=(v))
+#define SET_TRUELENGTH(x,v) do {				\
+	SEXP sl__x__ = (x);					\
+	R_xlen_t sl__v__ = (v);					\
+	if (ALTREP(x)) error("can't set ALTREP truelength");	\
+	SET_STDVEC_TRUELENGTH(sl__x__, sl__v__);	\
+    } while (0)
+
+#define IS_SCALAR(x, t) (((x)->sxpinfo.type == (t)) && (x)->sxpinfo.scalar)
+#define LENGTH(x) LENGTH_EX(x, __FILE__, __LINE__)
+#define TRUELENGTH(x) XTRUELENGTH(x)
+
+/* defined as a macro since fastmatch packages tests for it */
+#define XLENGTH(x) XLENGTH_EX(x)
+
+/* THIS ABSOLUTELY MUST NOT BE USED IN PACKAGES !!! */
+#define SET_STDVEC_LENGTH(x,v) do {		\
+	SEXP __x__ = (x);			\
+	R_xlen_t __v__ = (v);			\
+	STDVEC_LENGTH(__x__) = __v__;		\
+	SETSCALAR(__x__, __v__ == 1 ? 1 : 0);	\
+    } while (0)
+
+/* Under the generational allocator the data for vector nodes comes
+   immediately after the node structure, so the data address is a
+   known offset from the node SEXP. */
+#define STDVEC_DATAPTR(x) ((void *) (((SEXPREC_ALIGN *) (x)) + 1))
+#define CHAR(x)		((const char *) STDVEC_DATAPTR(x))
+#define LOGICAL(x)	((int *) DATAPTR(x))
+#define INTEGER(x)	((int *) DATAPTR(x))
+#define RAW(x)		((Rbyte *) DATAPTR(x))
+#define COMPLEX(x)	((Rcomplex *) DATAPTR(x))
+#define REAL(x)		((double *) DATAPTR(x))
+#define VECTOR_ELT(x,i)	((SEXP *) DATAPTR(x))[i]
+#define STRING_PTR(x)	((SEXP *) DATAPTR(x))
+#define VECTOR_PTR(x)	((SEXP *) DATAPTR(x))
+#define LOGICAL_RO(x)	((const int *) DATAPTR_RO(x))
+#define INTEGER_RO(x)	((const int *) DATAPTR_RO(x))
+#define RAW_RO(x)	((const Rbyte *) DATAPTR_RO(x))
+#define COMPLEX_RO(x)	((const Rcomplex *) DATAPTR_RO(x))
+#define REAL_RO(x)	((const double *) DATAPTR_RO(x))
+#define STRING_PTR_RO(x)((const SEXP *) DATAPTR_RO(x))
+
+/* List Access Macros */
+/* These also work for ... objects */
+#define LISTVAL(x)	((x)->u.listsxp)
+#define TAG(e)		((e)->u.listsxp.tagval)
+#define CAR(e)		((e)->u.listsxp.carval)
+#define CDR(e)		((e)->u.listsxp.cdrval)
+#define CAAR(e)		CAR(CAR(e))
+#define CDAR(e)		CDR(CAR(e))
+#define CADR(e)		CAR(CDR(e))
+#define CDDR(e)		CDR(CDR(e))
+#define CDDDR(e)	CDR(CDR(CDR(e)))
+#define CADDR(e)	CAR(CDR(CDR(e)))
+#define CADDDR(e)	CAR(CDR(CDR(CDR(e))))
+#define CAD4R(e)	CAR(CDR(CDR(CDR(CDR(e)))))
+#define MISSING_MASK	15 /* reserve 4 bits--only 2 uses now */
+#define MISSING(x)	((x)->sxpinfo.gp & MISSING_MASK)/* for closure calls */
+#define SET_MISSING(x,v) do { \
+  SEXP __x__ = (x); \
+  int __v__ = (v); \
+  int __other_flags__ = __x__->sxpinfo.gp & ~MISSING_MASK; \
+  __x__->sxpinfo.gp = __other_flags__ | __v__; \
+} while (0)
+
+/* Closure Access Macros */
+#define FORMALS(x)	((x)->u.closxp.formals)
+#define BODY(x)		((x)->u.closxp.body)
+#define CLOENV(x)	((x)->u.closxp.env)
+#define RDEBUG(x)	((x)->sxpinfo.debug)
+#define SET_RDEBUG(x,v)	(((x)->sxpinfo.debug)=(v))
+#define RSTEP(x)	((x)->sxpinfo.spare)
+#define SET_RSTEP(x,v)	(((x)->sxpinfo.spare)=(v))
+
+/* Symbol Access Macros */
+#define PRINTNAME(x)	((x)->u.symsxp.pname)
+#define SYMVALUE(x)	((x)->u.symsxp.value)
+#define INTERNAL(x)	((x)->u.symsxp.internal)
+#define DDVAL_MASK	1
+#define DDVAL(x)	((x)->sxpinfo.gp & DDVAL_MASK) /* for ..1, ..2 etc */
+#define SET_DDVAL_BIT(x) (((x)->sxpinfo.gp) |= DDVAL_MASK)
+#define UNSET_DDVAL_BIT(x) (((x)->sxpinfo.gp) &= ~DDVAL_MASK)
+#define SET_DDVAL(x,v) ((v) ? SET_DDVAL_BIT(x) : UNSET_DDVAL_BIT(x)) /* for ..1, ..2 etc */
+
+/* Environment Access Macros */
+#define FRAME(x)	((x)->u.envsxp.frame)
+#define ENCLOS(x)	((x)->u.envsxp.enclos)
+#define HASHTAB(x)	((x)->u.envsxp.hashtab)
+#define ENVFLAGS(x)	((x)->sxpinfo.gp)	/* for environments */
+#define SET_ENVFLAGS(x,v)	(((x)->sxpinfo.gp)=(v))
+
+#else /* not USE_RINTERNALS */
+// ======================= not USE_RINTERNALS section
+
+#define CHAR(x)		R_CHAR(x)
 const char *(R_CHAR)(SEXP x);
 
-/* Various tests with macro versions in the internal headers */
+/* Various tests with macro versions in the second USE_RINTERNALS section */
 Rboolean (Rf_isNull)(SEXP s);
 Rboolean (Rf_isSymbol)(SEXP s);
 Rboolean (Rf_isLogical)(SEXP s);
@@ -208,40 +489,103 @@ Rboolean (Rf_isEnvironment)(SEXP s);
 Rboolean (Rf_isString)(SEXP s);
 Rboolean (Rf_isObject)(SEXP s);
 
+#endif /* USE_RINTERNALS */
+
 #define IS_SIMPLE_SCALAR(x, type) \
     (IS_SCALAR(x, type) && ATTRIB(x) == R_NilValue)
 
-#define NAMEDMAX 7
-#ifdef SWITCH_TO_REFCNT
-# define INCREMENT_NAMED(x) do { } while (0)
-# define DECREMENT_NAMED(x) do { } while (0)
-#else
-# define INCREMENT_NAMED(x) do {			\
+#define NAMEDMAX 3
+#define INCREMENT_NAMED(x) do {				\
 	SEXP __x__ = (x);				\
 	if (NAMED(__x__) != NAMEDMAX)			\
 	    SET_NAMED(__x__, NAMED(__x__) + 1);		\
     } while (0)
-# define DECREMENT_NAMED(x) do {			    \
+#define DECREMENT_NAMED(x) do {				    \
 	SEXP __x__ = (x);				    \
 	int __n__ = NAMED(__x__);			    \
 	if (__n__ > 0 && __n__ < NAMEDMAX)		    \
 	    SET_NAMED(__x__, __n__ - 1);		    \
     } while (0)
+
+#define INCREMENT_LINKS(x) do {			\
+	SEXP il__x__ = (x);			\
+	INCREMENT_NAMED(il__x__);		\
+	INCREMENT_REFCNT(il__x__);		\
+    } while (0)
+#define DECREMENT_LINKS(x) do {			\
+	SEXP dl__x__ = (x);			\
+	DECREMENT_NAMED(dl__x__);		\
+	DECREMENT_REFCNT(dl__x__);		\
+    } while (0)
+
+#if defined(COMPUTE_REFCNT_VALUES)
+# define SET_REFCNT(x,v) (REFCNT(x) = (v))
+# if defined(EXTRA_REFCNT_FIELDS)
+#  define SET_TRACKREFS(x,v) (TRACKREFS(x) = (v))
+# else
+#  define SET_TRACKREFS(x,v) ((x)->sxpinfo.spare = ! (v))
+# endif
+# define DECREMENT_REFCNT(x) do {					\
+	SEXP drc__x__ = (x);						\
+	if (REFCNT(drc__x__) > 0 && REFCNT(drc__x__) < REFCNTMAX)	\
+	    SET_REFCNT(drc__x__, REFCNT(drc__x__) - 1);			\
+    } while (0)
+# define INCREMENT_REFCNT(x) do {			      \
+	SEXP irc__x__ = (x);				      \
+	if (REFCNT(irc__x__) < REFCNTMAX)		      \
+	    SET_REFCNT(irc__x__, REFCNT(irc__x__) + 1);	      \
+    } while (0)
+#else
+# define SET_REFCNT(x,v) do {} while(0)
+# define SET_TRACKREFS(x,v) do {} while(0)
+# define DECREMENT_REFCNT(x) do {} while(0)
+# define INCREMENT_REFCNT(x) do {} while(0)
 #endif
+
+#define ENABLE_REFCNT(x) SET_TRACKREFS(x, TRUE)
+#define DISABLE_REFCNT(x) SET_TRACKREFS(x, FALSE)
 
 /* Macros for some common idioms. */
 #ifdef SWITCH_TO_REFCNT
 # define MAYBE_SHARED(x) (REFCNT(x) > 1)
 # define NO_REFERENCES(x) (REFCNT(x) == 0)
+# define MARK_NOT_MUTABLE(x) SET_REFCNT(x, REFCNTMAX)
 #else
 # define MAYBE_SHARED(x) (NAMED(x) > 1)
 # define NO_REFERENCES(x) (NAMED(x) == 0)
+# define MARK_NOT_MUTABLE(x) SET_NAMED(x, NAMEDMAX)
 #endif
 #define MAYBE_REFERENCED(x) (! NO_REFERENCES(x))
 #define NOT_SHARED(x) (! MAYBE_SHARED(x))
 
+/* ALTREP sorting support */
+enum {SORTED_DECR_NA_1ST = -2,
+      SORTED_DECR = -1,
+      UNKNOWN_SORTEDNESS = INT_MIN, /*INT_MIN is NA_INTEGER! */
+      SORTED_INCR = 1,
+      SORTED_INCR_NA_1ST = 2,
+      KNOWN_UNSORTED = 0};
+#define KNOWN_SORTED(sorted) (sorted == SORTED_DECR ||			\
+			      sorted == SORTED_INCR ||			\
+			      sorted == SORTED_DECR_NA_1ST ||		\
+			      sorted == SORTED_INCR_NA_1ST)
+
+#define KNOWN_NA_1ST(sorted) (sorted == SORTED_INCR_NA_1ST ||	\
+			      sorted == SORTED_DECR_NA_1ST)
+
+#define KNOWN_INCR(sorted) (sorted == SORTED_INCR ||		\
+			    sorted == SORTED_INCR_NA_1ST)
+
+#define KNOWN_DECR(sorted) (sorted == SORTED_DECR ||	\
+			    sorted == SORTED_DECR_NA_1ST)
+
+/* Complex assignment support */
+/* temporary definition that will need to be refined to distinguish
+   getter from setter calls */
+#define IS_GETTER_CALL(call) (CADR(call) == R_TmpvalSymbol)
+
 /* Accessor functions.  Many are declared using () to avoid the macro
-   definitions in the internal headers.
+   definitions in the USE_RINTERNALS section.
    The function STRING_ELT is used as an argument to arrayAssign even
    if the macro version is in use.
 */
@@ -253,20 +597,48 @@ int  (MARK)(SEXP x);
 int  (TYPEOF)(SEXP x);
 int  (NAMED)(SEXP x);
 int  (REFCNT)(SEXP x);
+int  (TRACKREFS)(SEXP x);
+void (SET_OBJECT)(SEXP x, int v);
+void (SET_TYPEOF)(SEXP x, int v);
+void (SET_NAMED)(SEXP x, int v);
 void SET_ATTRIB(SEXP x, SEXP v);
 void DUPLICATE_ATTRIB(SEXP to, SEXP from);
 void SHALLOW_DUPLICATE_ATTRIB(SEXP to, SEXP from);
-void (MARK_NOT_MUTABLE)(SEXP x);
+void (ENSURE_NAMEDMAX)(SEXP x);
+void (ENSURE_NAMED)(SEXP x);
+void (SETTER_CLEAR_NAMED)(SEXP x);
+void (RAISE_NAMED)(SEXP x, int n);
 
 /* S4 object testing */
 int (IS_S4_OBJECT)(SEXP x);
+void (SET_S4_OBJECT)(SEXP x);
+void (UNSET_S4_OBJECT)(SEXP x);
+
+/* JIT optimization support */
+int (NOJIT)(SEXP x);
+int (MAYBEJIT)(SEXP x);
+void (SET_NOJIT)(SEXP x);
+void (SET_MAYBEJIT)(SEXP x);
+void (UNSET_MAYBEJIT)(SEXP x);
+
+/* Growable vector support */
+int (IS_GROWABLE)(SEXP x);
+void (SET_GROWABLE_BIT)(SEXP x);
 
 /* Vector Access Functions */
 int  (LENGTH)(SEXP x);
 R_xlen_t (XLENGTH)(SEXP x);
 R_xlen_t  (TRUELENGTH)(SEXP x);
+void (SETLENGTH)(SEXP x, R_xlen_t v);
+void (SET_TRUELENGTH)(SEXP x, R_xlen_t v);
 int  (IS_LONG_VEC)(SEXP x);
 int  (LEVELS)(SEXP x);
+int  (SETLEVELS)(SEXP x, int v);
+#ifdef TESTING_WRITE_BARRIER
+R_xlen_t (STDVEC_LENGTH)(SEXP);
+R_xlen_t (STDVEC_TRUELENGTH)(SEXP);
+void (SETALTREP)(SEXP, int);
+#endif
 
 int  *(LOGICAL)(SEXP x);
 int  *(INTEGER)(SEXP x);
@@ -284,30 +656,69 @@ void SET_STRING_ELT(SEXP x, R_xlen_t i, SEXP v);
 SEXP SET_VECTOR_ELT(SEXP x, R_xlen_t i, SEXP v);
 SEXP *(STRING_PTR)(SEXP x);
 const SEXP *(STRING_PTR_RO)(SEXP x);
-NORET SEXP * (VECTOR_PTR)(SEXP x);
+SEXP * NORET (VECTOR_PTR)(SEXP x);
 
+/* ALTREP support */
+void *(STDVEC_DATAPTR)(SEXP x);
+int (IS_SCALAR)(SEXP x, int type);
+int (ALTREP)(SEXP x);
+SEXP ALTREP_DUPLICATE_EX(SEXP x, Rboolean deep);
+SEXP ALTREP_COERCE(SEXP x, int type);
+Rboolean ALTREP_INSPECT(SEXP, int, int, int, void (*)(SEXP, int, int, int));
+SEXP ALTREP_SERIALIZED_CLASS(SEXP);
+SEXP ALTREP_SERIALIZED_STATE(SEXP);
+SEXP ALTREP_UNSERIALIZE_EX(SEXP, SEXP, SEXP, int, int);
+R_xlen_t ALTREP_LENGTH(SEXP x);
+R_xlen_t ALTREP_TRUELENGTH(SEXP x);
+void *ALTVEC_DATAPTR(SEXP x);
+const void *ALTVEC_DATAPTR_RO(SEXP x);
+const void *ALTVEC_DATAPTR_OR_NULL(SEXP x);
+SEXP ALTVEC_EXTRACT_SUBSET(SEXP x, SEXP indx, SEXP call);
+int ALTINTEGER_ELT(SEXP x, R_xlen_t i);
+void ALTINTEGER_SET_ELT(SEXP x, R_xlen_t i, int v);
+int ALTLOGICAL_ELT(SEXP x, R_xlen_t i);
+void ALTLOGICAL_SET_ELT(SEXP x, R_xlen_t i, int v);
+double ALTREAL_ELT(SEXP x, R_xlen_t i);
+void ALTREAL_SET_ELT(SEXP x, R_xlen_t i, double v);
+SEXP ALTSTRING_ELT(SEXP, R_xlen_t);
+void ALTSTRING_SET_ELT(SEXP, R_xlen_t, SEXP);
+Rcomplex ALTCOMPLEX_ELT(SEXP x, R_xlen_t i);
+void ALTCOMPLEX_SET_ELT(SEXP x, R_xlen_t i, Rcomplex v);
+Rbyte ALTRAW_ELT(SEXP x, R_xlen_t i);
+void ALTRAW_SET_ELT(SEXP x, R_xlen_t i, int v);
 R_xlen_t INTEGER_GET_REGION(SEXP sx, R_xlen_t i, R_xlen_t n, int *buf);
-R_xlen_t REAL_GET_REGION(SEXP sx, R_xlen_t i, R_xlen_t n, double *buf);
-R_xlen_t LOGICAL_GET_REGION(SEXP sx, R_xlen_t i, R_xlen_t n, int *buf);
-R_xlen_t COMPLEX_GET_REGION(SEXP sx, R_xlen_t i, R_xlen_t n, Rcomplex *buf);
-R_xlen_t RAW_GET_REGION(SEXP sx, R_xlen_t i, R_xlen_t n, Rbyte *buf);
-
-/* metadata access */
 int INTEGER_IS_SORTED(SEXP x);
 int INTEGER_NO_NA(SEXP x);
+SEXP ALTINTEGER_SUM(SEXP x, Rboolean narm);
+SEXP ALTREAL_SUM(SEXP x, Rboolean narm);
+SEXP ALTINTEGER_MIN(SEXP x, Rboolean narm);
+SEXP ALTINTEGER_MAX(SEXP x, Rboolean narm);
+SEXP ALTREAL_MIN(SEXP x, Rboolean narm);
+SEXP ALTREAL_MAX(SEXP x, Rboolean narm);
+SEXP INTEGER_MATCH(SEXP, SEXP, int, SEXP, SEXP, Rboolean);
+SEXP INTEGER_IS_NA(SEXP x);
+SEXP REAL_MATCH(SEXP, SEXP, int, SEXP, SEXP, Rboolean);
+	
+R_xlen_t REAL_GET_REGION(SEXP sx, R_xlen_t i, R_xlen_t n, double *buf);
 int REAL_IS_SORTED(SEXP x);
 int REAL_NO_NA(SEXP x);
-int LOGICAL_IS_SORTED(SEXP x);
-int LOGICAL_NO_NA(SEXP x);
+SEXP REAL_IS_NA(SEXP x);
 int STRING_IS_SORTED(SEXP x);
 int STRING_NO_NA(SEXP x);
+SEXP R_compact_intrange(R_xlen_t n1, R_xlen_t n2);
+SEXP R_deferred_coerceToString(SEXP v, SEXP sp);
+SEXP R_virtrep_vec(SEXP, SEXP);
+
+#ifdef LONG_VECTOR_SUPPORT
+    R_len_t NORET R_BadLongVector(SEXP, const char *, int);
+#endif
 
 /* List Access Functions */
 /* These also work for ... objects */
 #define CONS(a, b)	cons((a), (b))		/* data lists */
 #define LCONS(a, b)	lcons((a), (b))		/* language lists */
-
 SEXP (TAG)(SEXP e);
+SEXP (CAR)(SEXP e);
 SEXP (CDR)(SEXP e);
 SEXP (CAAR)(SEXP e);
 SEXP (CDAR)(SEXP e);
@@ -317,8 +728,8 @@ SEXP (CDDDR)(SEXP e);
 SEXP (CADDR)(SEXP e);
 SEXP (CADDDR)(SEXP e);
 SEXP (CAD4R)(SEXP e);
-SEXP (CAD5R)(SEXP e);
 int  (MISSING)(SEXP x);
+void (SET_MISSING)(SEXP x, int v);
 void SET_TAG(SEXP x, SEXP y);
 SEXP SETCAR(SEXP x, SEXP y);
 SEXP SETCDR(SEXP x, SEXP y);
@@ -326,6 +737,8 @@ SEXP SETCADR(SEXP x, SEXP y);
 SEXP SETCADDR(SEXP x, SEXP y);
 SEXP SETCADDDR(SEXP x, SEXP y);
 SEXP SETCAD4R(SEXP e, SEXP y);
+
+SEXP CONS_NR(SEXP a, SEXP b);
 
 /* Closure Access Functions */
 SEXP (FORMALS)(SEXP x);
@@ -346,23 +759,51 @@ SEXP (PRINTNAME)(SEXP x);
 SEXP (SYMVALUE)(SEXP x);
 SEXP (INTERNAL)(SEXP x);
 int  (DDVAL)(SEXP x);
+void (SET_DDVAL)(SEXP x, int v);
+void SET_PRINTNAME(SEXP x, SEXP v);
+void SET_SYMVALUE(SEXP x, SEXP v);
+void SET_INTERNAL(SEXP x, SEXP v);
 
 /* Environment Access Functions */
 SEXP (FRAME)(SEXP x);
 SEXP (ENCLOS)(SEXP x);
 SEXP (HASHTAB)(SEXP x);
 int  (ENVFLAGS)(SEXP x);
+void (SET_ENVFLAGS)(SEXP x, int v);
+void SET_FRAME(SEXP x, SEXP v);
+void SET_ENCLOS(SEXP x, SEXP v);
+void SET_HASHTAB(SEXP x, SEXP v);
 
 /* Promise Access Functions */
+/* First five have macro versions in Defn.h */
 SEXP (PRCODE)(SEXP x);
 SEXP (PRENV)(SEXP x);
 SEXP (PRVALUE)(SEXP x);
 int  (PRSEEN)(SEXP x);
+void (SET_PRSEEN)(SEXP x, int v);
+void SET_PRENV(SEXP x, SEXP v);
+void SET_PRVALUE(SEXP x, SEXP v);
+void SET_PRCODE(SEXP x, SEXP v);
+void SET_PRSEEN(SEXP x, int v);
+
+/* Hashing Functions */
+/* There are macro versions in Defn.h */
+int  (HASHASH)(SEXP x);
+int  (HASHVALUE)(SEXP x);
+void (SET_HASHASH)(SEXP x, int v);
+void (SET_HASHVALUE)(SEXP x, int v);
+
 
 /* External pointer access macros */
-SEXP (EXTPTR_PROT)(SEXP);
-SEXP (EXTPTR_TAG)(SEXP);
-void *(EXTPTR_PTR)(SEXP);
+#define EXTPTR_PTR(x)	CAR(x)
+#define EXTPTR_PROT(x)	CDR(x)
+#define EXTPTR_TAG(x)	TAG(x)
+
+/* Bytecode access macros */
+#define BCODE_CODE(x)	CAR(x)
+#define BCODE_CONSTS(x) CDR(x)
+#define BCODE_EXPR(x)	TAG(x)
+#define isByteCode(x)	(TYPEOF(x)==BCODESXP)
 
 /* Pointer Protection and Unprotection */
 #define PROTECT(s)	Rf_protect(s)
@@ -404,7 +845,6 @@ SEXP	R_RestartToken;     /* Marker for restarted function calls */
 
 /* Symbol Table Shortcuts */
 LibExtern SEXP	R_AsCharacterSymbol;/* "as.character" */
-LibExtern SEXP	R_AtsignSymbol;	    /* "@" */
 LibExtern SEXP	R_baseSymbol; // <-- backcompatible version of:
 LibExtern SEXP	R_BaseSymbol;	// "base"
 LibExtern SEXP	R_BraceSymbol;	    /* "{" */
@@ -418,8 +858,6 @@ LibExtern SEXP	R_DollarSymbol;	    /* "$" */
 LibExtern SEXP	R_DotsSymbol;	    /* "..." */
 LibExtern SEXP	R_DoubleColonSymbol;// "::"
 LibExtern SEXP	R_DropSymbol;	    /* "drop" */
-LibExtern SEXP	R_EvalSymbol;	    /* "eval" */
-LibExtern SEXP	R_FunctionSymbol;   /* "function" */
 LibExtern SEXP	R_LastvalueSymbol;  /* ".Last.value" */
 LibExtern SEXP	R_LevelsSymbol;	    /* "levels" */
 LibExtern SEXP	R_ModeSymbol;	    /* "mode" */
@@ -448,7 +886,7 @@ LibExtern SEXP  R_dot_Generic;      /* ".Generic" */
 #define NA_STRING	R_NaString
 LibExtern SEXP	R_NaString;	    /* NA_STRING as a CHARSXP */
 LibExtern SEXP	R_BlankString;	    /* "" as a CHARSXP */
-LibExtern SEXP	R_BlankScalarString;/* "" as a STRSXP */
+LibExtern SEXP	R_BlankScalarString;	    /* "" as a STRSXP */
 
 /* srcref related functions */
 SEXP R_GetCurrentSrcref(int);
@@ -474,12 +912,17 @@ Rcomplex Rf_asComplex(SEXP x);
 typedef struct R_allocator R_allocator_t;
 #endif
 
-
 /* Other Internally Used Functions, excluding those which are inline-able*/
 
 char * Rf_acopy_string(const char *);
+void Rf_addMissingVarsToNewEnv(SEXP, SEXP);
 SEXP Rf_alloc3DArray(SEXPTYPE, int, int, int);
 SEXP Rf_allocArray(SEXPTYPE, SEXP);
+SEXP Rf_allocFormalsList2(SEXP sym1, SEXP sym2);
+SEXP Rf_allocFormalsList3(SEXP sym1, SEXP sym2, SEXP sym3);
+SEXP Rf_allocFormalsList4(SEXP sym1, SEXP sym2, SEXP sym3, SEXP sym4);
+SEXP Rf_allocFormalsList5(SEXP sym1, SEXP sym2, SEXP sym3, SEXP sym4, SEXP sym5);
+SEXP Rf_allocFormalsList6(SEXP sym1, SEXP sym2, SEXP sym3, SEXP sym4, SEXP sym5, SEXP sym6);
 SEXP Rf_allocMatrix(SEXPTYPE, int, int);
 SEXP Rf_allocList(int);
 SEXP Rf_allocS4Object(void);
@@ -488,29 +931,35 @@ SEXP Rf_allocVector3(SEXPTYPE, R_xlen_t, R_allocator_t*);
 R_xlen_t Rf_any_duplicated(SEXP x, Rboolean from_last);
 R_xlen_t Rf_any_duplicated3(SEXP x, SEXP incomp, Rboolean from_last);
 SEXP Rf_applyClosure(SEXP, SEXP, SEXP, SEXP, SEXP);
+SEXP Rf_arraySubscript(int, SEXP, SEXP, SEXP (*)(SEXP,SEXP),
+                       SEXP (*)(SEXP, int), SEXP);
 SEXP Rf_classgets(SEXP, SEXP);
 SEXP Rf_cons(SEXP, SEXP);
+SEXP Rf_fixSubset3Args(SEXP, SEXP, SEXP, SEXP*);
 void Rf_copyMatrix(SEXP, SEXP, Rboolean);
 void Rf_copyListMatrix(SEXP, SEXP, Rboolean);
 void Rf_copyMostAttrib(SEXP, SEXP);
 void Rf_copyVector(SEXP, SEXP);
+int Rf_countContexts(int, int);
+SEXP Rf_CreateTag(SEXP);
 void Rf_defineVar(SEXP, SEXP, SEXP);
 SEXP Rf_dimgets(SEXP, SEXP);
 SEXP Rf_dimnamesgets(SEXP, SEXP);
+SEXP Rf_DropDims(SEXP);
 SEXP Rf_duplicate(SEXP);
 SEXP Rf_shallow_duplicate(SEXP);
-SEXP R_duplicate_attr(SEXP);
-SEXP R_shallow_duplicate_attr(SEXP);
 SEXP Rf_lazy_duplicate(SEXP);
 /* the next really should not be here and is also in Defn.h */
 SEXP Rf_duplicated(SEXP, Rboolean);
+Rboolean R_envHasNoSpecialSymbols(SEXP);
 SEXP Rf_eval(SEXP, SEXP);
+SEXP Rf_ExtractSubset(SEXP, SEXP, SEXP);
 SEXP Rf_findFun(SEXP, SEXP);
+SEXP Rf_findFun3(SEXP, SEXP, SEXP);
+void Rf_findFunctionForBody(SEXP);
 SEXP Rf_findVar(SEXP, SEXP);
 SEXP Rf_findVarInFrame(SEXP, SEXP);
 SEXP Rf_findVarInFrame3(SEXP, SEXP, Rboolean);
-Rboolean R_existsVarInFrame(SEXP, SEXP);
-void R_removeVarFromFrame(SEXP, SEXP);
 SEXP Rf_getAttrib(SEXP, SEXP);
 SEXP Rf_GetArrayDimnames(SEXP);
 SEXP Rf_GetColNames(SEXP);
@@ -524,8 +973,11 @@ void Rf_gsetVar(SEXP, SEXP, SEXP);
 SEXP Rf_install(const char *);
 SEXP Rf_installChar(SEXP);
 SEXP Rf_installNoTrChar(SEXP);
-SEXP Rf_installTrChar(SEXP);
+SEXP Rf_installDDVAL(int i);
+SEXP Rf_installS3Signature(const char *, const char *);
+Rboolean Rf_isFree(SEXP);
 Rboolean Rf_isOrdered(SEXP);
+Rboolean Rf_isUnmodifiedSpecSym(SEXP sym, SEXP env);
 Rboolean Rf_isUnordered(SEXP);
 Rboolean Rf_isUnsorted(SEXP, Rboolean);
 SEXP Rf_lengthgets(SEXP, R_len_t);
@@ -533,6 +985,7 @@ SEXP Rf_xlengthgets(SEXP, R_xlen_t);
 SEXP R_lsInternal(SEXP, Rboolean);
 SEXP R_lsInternal3(SEXP, Rboolean, Rboolean);
 SEXP Rf_match(SEXP, SEXP, int);
+SEXP Rf_matchE(SEXP, SEXP, int, SEXP);
 SEXP Rf_namesgets(SEXP, SEXP);
 SEXP Rf_mkChar(const char *);
 SEXP Rf_mkCharLen(const char *, int);
@@ -546,19 +999,24 @@ typedef enum {Bytes, Chars, Width} nchar_type;
 int R_nchar(SEXP string, nchar_type type_,
 	    Rboolean allowNA, Rboolean keepNA, const char* msg_name);
 
+Rboolean Rf_pmatch(SEXP, SEXP, Rboolean);
+Rboolean Rf_psmatch(const char *, const char *, Rboolean);
 SEXP R_ParseEvalString(const char *, SEXP);
-SEXP R_ParseString(const char *);
 void Rf_PrintValue(SEXP);
 #ifndef INLINE_PROTECT
 SEXP Rf_protect(SEXP);
 #endif
+void Rf_readS3VarsFromFrame(SEXP, SEXP*, SEXP*, SEXP*, SEXP*, SEXP*, SEXP*);
 SEXP Rf_setAttrib(SEXP, SEXP, SEXP);
+void Rf_setSVector(SEXP*, int, SEXP);
 void Rf_setVar(SEXP, SEXP, SEXP);
+SEXP Rf_stringSuffix(SEXP, int);
 SEXPTYPE Rf_str2type(const char *);
 Rboolean Rf_StringBlank(SEXP);
 SEXP Rf_substitute(SEXP,SEXP);
 SEXP Rf_topenv(SEXP, SEXP);
 const char * Rf_translateChar(SEXP);
+const char * Rf_translateChar0(SEXP);
 const char * Rf_translateCharUTF8(SEXP);
 const char * Rf_type2char(SEXPTYPE);
 SEXP Rf_type2rstr(SEXPTYPE);
@@ -569,21 +1027,25 @@ void Rf_unprotect(int);
 #endif
 void Rf_unprotect_ptr(SEXP);
 
+void NORET R_signal_protect_error(void);
+void NORET R_signal_unprotect_error(void);
+void NORET R_signal_reprotect_error(PROTECT_INDEX i);
+
 #ifndef INLINE_PROTECT
 void R_ProtectWithIndex(SEXP, PROTECT_INDEX *);
 void R_Reprotect(SEXP, PROTECT_INDEX);
 #endif
 SEXP R_tryEval(SEXP, SEXP, int *);
 SEXP R_tryEvalSilent(SEXP, SEXP, int *);
-SEXP R_GetCurrentEnv(void);
+const char *R_curErrorBuf();
 
 Rboolean Rf_isS4(SEXP);
 SEXP Rf_asS4(SEXP, Rboolean, int);
 SEXP Rf_S3Class(SEXP);
 int Rf_isBasicClass(const char *);
 
-/* cetype_t is an identifier reseved by POSIX, but it is
-   well established as public.  Could remap by a #define though */
+Rboolean R_cycle_detected(SEXP s, SEXP child);
+
 typedef enum {
     CE_NATIVE = 0,
     CE_UTF8   = 1,
@@ -597,7 +1059,10 @@ cetype_t Rf_getCharCE(SEXP);
 SEXP Rf_mkCharCE(const char *, cetype_t);
 SEXP Rf_mkCharLenCE(const char *, int, cetype_t);
 const char *Rf_reEnc(const char *x, cetype_t ce_in, cetype_t ce_out, int subst);
-const char *Rf_reEnc3(const char *x, const char *fromcode, const char *tocode, int subst);
+
+				/* match(.) NOT reached : for -Wall */
+#define error_return(msg)	{ Rf_error(msg);	   return R_NilValue; }
+#define errorcall_return(cl,msg){ Rf_errorcall(cl, msg);   return R_NilValue; }
 
 #ifdef __MAIN__
 #undef extern
@@ -638,6 +1103,17 @@ void R_RunWeakRefFinalizer(SEXP w);
 SEXP R_PromiseExpr(SEXP);
 SEXP R_ClosureExpr(SEXP);
 SEXP R_BytecodeExpr(SEXP e);
+void R_initialize_bcode(void);
+SEXP R_bcEncode(SEXP);
+SEXP R_bcDecode(SEXP);
+void R_registerBC(SEXP, SEXP);
+Rboolean R_checkConstants(Rboolean);
+Rboolean R_BCVersionOK(SEXP);
+#define PREXPR(e) R_PromiseExpr(e)
+#define BODY_EXPR(e) R_ClosureExpr(e)
+
+void R_init_altrep();
+void R_reinit_altrep_classes(DllInfo *);
 
 /* Protected evaluation */
 Rboolean R_ToplevelExec(void (*fun)(void *), void *data);
@@ -649,16 +1125,14 @@ SEXP R_tryCatch(SEXP (*)(void *), void *,       /* body closure*/
 		void (*)(void *), void *);      /* finally closure */
 SEXP R_tryCatchError(SEXP (*)(void *), void *,        /* body closure*/
 		     SEXP (*)(SEXP, void *), void *); /* handler closure */
-SEXP R_withCallingErrorHandler(SEXP (*)(void *), void *, /* body closure*/
-			       SEXP (*)(SEXP, void *), void *); /* handler closure */
-SEXP R_MakeUnwindCont(void);
-NORET void R_ContinueUnwind(SEXP cont);
+SEXP R_MakeUnwindCont();
+void NORET R_ContinueUnwind(SEXP cont);
 SEXP R_UnwindProtect(SEXP (*fun)(void *data), void *data,
                      void (*cleanfun)(void *data, Rboolean jump),
                      void *cleandata, SEXP cont);
 
 /* Environment and Binding Features */
-SEXP R_NewEnv(SEXP, int, int);
+void R_RestoreHashCount(SEXP rho);
 Rboolean R_IsPackageEnv(SEXP rho);
 SEXP R_PackageEnvName(SEXP rho);
 SEXP R_FindPackageEnv(SEXP info);
@@ -672,13 +1146,16 @@ void R_unLockBinding(SEXP sym, SEXP env);
 void R_MakeActiveBinding(SEXP sym, SEXP fun, SEXP env);
 Rboolean R_BindingIsLocked(SEXP sym, SEXP env);
 Rboolean R_BindingIsActive(SEXP sym, SEXP env);
-SEXP R_ActiveBindingFunction(SEXP sym, SEXP env);
 Rboolean R_HasFancyBindings(SEXP rho);
 
 
 /* ../main/errors.c : */
 /* needed for R_load/savehistory handling in front ends */
-NORET void Rf_errorcall(SEXP, const char *, ...);
+#if defined(__GNUC__) && __GNUC__ >= 3
+void Rf_errorcall(SEXP, const char *, ...) __attribute__((noreturn));
+#else
+void Rf_errorcall(SEXP, const char *, ...);
+#endif
 void Rf_warningcall(SEXP, const char *, ...);
 void Rf_warningcall_immediate(SEXP, const char *, ...);
 
@@ -796,11 +1273,6 @@ int R_check_class_etc      (SEXP x, const char **valid);
 void R_PreserveObject(SEXP);
 void R_ReleaseObject(SEXP);
 
-SEXP R_NewPreciousMSet(int);
-void R_PreserveInMSet(SEXP x, SEXP mset);
-void R_ReleaseFromMSet(SEXP x, SEXP mset);
-void R_ReleaseMSet(SEXP mset, int keepSize);
-
 /* Shutdown actions */
 void R_dot_Last(void);		/* in main.c */
 void R_RunExitFinalizers(void);	/* in memory.c */
@@ -818,22 +1290,13 @@ int R_system(const char *);
 /* R_compute_identical:  C version of identical() function
    The third arg to R_compute_identical() consists of bitmapped flags for non-default options:
    currently the first 4 default to TRUE, so the flag is set for FALSE values:
-   1 = !NUM_EQ              = IDENT_NUM_AS_BITS
-   2 = !SINGLE_NA           = IDENT_NA_AS_BITS
-   4 = !ATTR_AS_SET         = IDENT_ATTR_BY_ORDER
-   8 = !IGNORE_BYTECODE     = IDENT_USE_BYTECODE
-  16 = !IGNORE_ENV          = IDENT_USE_CLOENV
-  32 = !IGNORE_SRCREF       = IDENT_USE_SRCREF
-  64                        = IDENT_EXTPTR_AS_REF
-  Default from R's default: 16 = IDENT_USE_CLOENV
+   1 = !NUM_EQ
+   2 = !SINGLE_NA
+   4 = !ATTR_AS_SET
+   8 = !IGNORE_BYTECODE
+  16 = !IGNORE_ENV
+  Default from R's default: 16
 */
-#define IDENT_NUM_AS_BITS      1
-#define IDENT_NA_AS_BITS       2
-#define IDENT_ATTR_BY_ORDER    4
-#define IDENT_USE_BYTECODE     8
-#define IDENT_USE_CLOENV      16
-#define IDENT_USE_SRCREF      32
-#define IDENT_EXTPTR_AS_REF   64
 Rboolean R_compute_identical(SEXP, SEXP, int);
 
 SEXP R_body_no_src(SEXP x); // body(x) without "srcref" etc, ../main/utils.c
@@ -869,7 +1332,6 @@ void R_orderVector1(int *indx, int n, SEXP x,       Rboolean nalast, Rboolean de
 #define asComplex		Rf_asComplex
 #define asInteger		Rf_asInteger
 #define asLogical		Rf_asLogical
-#define asLogical2		Rf_asLogical2
 #define asReal			Rf_asReal
 #define asS4			Rf_asS4
 #define classgets		Rf_classgets
@@ -899,8 +1361,6 @@ void R_orderVector1(int *indx, int n, SEXP x,       Rboolean nalast, Rboolean de
 #define findVar			Rf_findVar
 #define findVarInFrame		Rf_findVarInFrame
 #define findVarInFrame3		Rf_findVarInFrame3
-#define FixupDigits		Rf_FixupDigits
-#define FixupWidth		Rf_FixupWidth
 #define GetArrayDimnames	Rf_GetArrayDimnames
 #define getAttrib		Rf_getAttrib
 #define getCharCE		Rf_getCharCE
@@ -914,9 +1374,8 @@ void R_orderVector1(int *indx, int n, SEXP x,       Rboolean nalast, Rboolean de
 #define gsetVar			Rf_gsetVar
 #define inherits		Rf_inherits
 #define install			Rf_install
-#define installChar		Rf_installTrChar
+#define installChar		Rf_installChar
 #define installNoTrChar		Rf_installNoTrChar
-#define installTrChar		Rf_installTrChar
 #define installDDVAL		Rf_installDDVAL
 #define installS3Signature	Rf_installS3Signature
 #define isArray			Rf_isArray
@@ -992,11 +1451,9 @@ void R_orderVector1(int *indx, int n, SEXP x,       Rboolean nalast, Rboolean de
 #define pmatch			Rf_pmatch
 #define psmatch			Rf_psmatch
 #define PrintValue		Rf_PrintValue
-#define printwhere		Rf_printwhere
 #define protect			Rf_protect
 #define readS3VarsFromFrame	Rf_readS3VarsFromFrame
 #define reEnc			Rf_reEnc
-#define reEnc3			Rf_reEnc3
 #define rownamesgets		Rf_rownamesgets
 #define S3Class                 Rf_S3Class
 #define ScalarComplex		Rf_ScalarComplex
@@ -1034,13 +1491,15 @@ void R_orderVector1(int *indx, int n, SEXP x,       Rboolean nalast, Rboolean de
 
 /* Defining NO_RINLINEDFUNS disables use to simulate platforms where
    this is not available */
-#if ! (defined(CALLED_FROM_DEFN_H) && !defined(__MAIN__) && (defined(COMPILING_R) || ( __GNUC__ && !defined(__INTEL_COMPILER) )) && (defined(COMPILING_R) || !defined(NO_RINLINEDFUNS)))
+#if defined(CALLED_FROM_DEFN_H) && !defined(__MAIN__) && (defined(COMPILING_R) || ( __GNUC__ && !defined(__INTEL_COMPILER) )) && (defined(COMPILING_R) || !defined(NO_RINLINEDFUNS))
+#include "Rinlinedfuns.h"
+#else
 /* need remapped names here for use with R_NO_REMAP */
 
 /*
-   These are the public inlinable functions that are provided in
-   Rinlinedfuns.h It is *essential* that these do not appear in any
-   other header file, with or without the Rf_ prefix.
+   These are the inlinable functions that are provided in Rinlinedfuns.h
+   It is *essential* that these do not appear in any other header file,
+   with or without the Rf_ prefix.
 */
 SEXP     Rf_allocVector(SEXPTYPE, R_xlen_t);
 Rboolean Rf_conformable(SEXP, SEXP);
@@ -1104,7 +1563,7 @@ void Rf_unprotect(int);
 void R_ProtectWithIndex(SEXP, PROTECT_INDEX *);
 void R_Reprotect(SEXP, PROTECT_INDEX);
 # endif
-SEXP (CAR)(SEXP e);
+SEXP R_FixupRHS(SEXP x, SEXP y);
 void *(DATAPTR)(SEXP x);
 const void *(DATAPTR_RO)(SEXP x);
 const void *(DATAPTR_OR_NULL)(SEXP x);
@@ -1113,129 +1572,68 @@ const int *(INTEGER_OR_NULL)(SEXP x);
 const double *(REAL_OR_NULL)(SEXP x);
 const Rcomplex *(COMPLEX_OR_NULL)(SEXP x);
 const Rbyte *(RAW_OR_NULL)(SEXP x);
+void *(STDVEC_DATAPTR)(SEXP x);
 int (INTEGER_ELT)(SEXP x, R_xlen_t i);
 double (REAL_ELT)(SEXP x, R_xlen_t i);
 int (LOGICAL_ELT)(SEXP x, R_xlen_t i);
 Rcomplex (COMPLEX_ELT)(SEXP x, R_xlen_t i);
 Rbyte (RAW_ELT)(SEXP x, R_xlen_t i);
 SEXP (STRING_ELT)(SEXP x, R_xlen_t i);
-void SET_LOGICAL_ELT(SEXP x, R_xlen_t i, int v);
-void SET_INTEGER_ELT(SEXP x, R_xlen_t i, int v);
-void SET_REAL_ELT(SEXP x, R_xlen_t i, double v);
-void SET_COMPLEX_ELT(SEXP x, R_xlen_t i, Rcomplex v);
-void SET_RAW_ELT(SEXP x, R_xlen_t i, Rbyte v);
-
-/* ALTREP support */
-SEXP ALTREP_CLASS(SEXP x);
+double SCALAR_DVAL(SEXP x);
+int SCALAR_LVAL(SEXP x);
+int SCALAR_IVAL(SEXP x);
+void SET_SCALAR_DVAL(SEXP x, double v);
+void SET_SCALAR_LVAL(SEXP x, int v);
+void SET_SCALAR_IVAL(SEXP x, int v);
+void SET_SCALAR_CVAL(SEXP x, Rcomplex v);
+void SET_SCALAR_BVAL(SEXP x, Rbyte v);
 SEXP R_altrep_data1(SEXP x);
 SEXP R_altrep_data2(SEXP x);
 void R_set_altrep_data1(SEXP x, SEXP v);
 void R_set_altrep_data2(SEXP x, SEXP v);
-
+SEXP ALTREP_CLASS(SEXP x);
 int *LOGICAL0(SEXP x);
 int *INTEGER0(SEXP x);
 double *REAL0(SEXP x);
 Rcomplex *COMPLEX0(SEXP x);
 Rbyte *RAW0(SEXP x);
+void SET_LOGICAL_ELT(SEXP x, R_xlen_t i, int v);
+void SET_INTEGER_ELT(SEXP x, R_xlen_t i, int v);
+void SET_REAL_ELT(SEXP x, R_xlen_t i, double v);
 #endif
 
-int (ALTREP)(SEXP x);
+#ifdef USE_RINTERNALS
 
-/* ALTREP sorting support */
-enum {SORTED_DECR_NA_1ST = -2,
-      SORTED_DECR = -1,
-      UNKNOWN_SORTEDNESS = INT_MIN, /*INT_MIN is NA_INTEGER! */
-      SORTED_INCR = 1,
-      SORTED_INCR_NA_1ST = 2,
-      KNOWN_UNSORTED = 0};
-#define KNOWN_SORTED(sorted) (sorted == SORTED_DECR ||			\
-			      sorted == SORTED_INCR ||			\
-			      sorted == SORTED_DECR_NA_1ST ||		\
-			      sorted == SORTED_INCR_NA_1ST)
+/* Test macros with function versions above */
+#undef isNull
+#define isNull(s)	(TYPEOF(s) == NILSXP)
+#undef isSymbol
+#define isSymbol(s)	(TYPEOF(s) == SYMSXP)
+#undef isLogical
+#define isLogical(s)	(TYPEOF(s) == LGLSXP)
+#undef isReal
+#define isReal(s)	(TYPEOF(s) == REALSXP)
+#undef isComplex
+#define isComplex(s)	(TYPEOF(s) == CPLXSXP)
+#undef isExpression
+#define isExpression(s) (TYPEOF(s) == EXPRSXP)
+#undef isEnvironment
+#define isEnvironment(s) (TYPEOF(s) == ENVSXP)
+#undef isString
+#define isString(s)	(TYPEOF(s) == STRSXP)
+#undef isObject
+#define isObject(s)	(OBJECT(s) != 0)
 
-#define KNOWN_NA_1ST(sorted) (sorted == SORTED_INCR_NA_1ST ||	\
-			      sorted == SORTED_DECR_NA_1ST)
+/* macro version of R_CheckStack */
+#define R_CheckStack() do {						\
+	void NORET R_SignalCStackOverflow(intptr_t);				\
+	int dummy;							\
+	intptr_t usage = R_CStackDir * (R_CStackStart - (uintptr_t)&dummy); \
+	if(R_CStackLimit != (uintptr_t)(-1) && usage > ((intptr_t) R_CStackLimit)) \
+	    R_SignalCStackOverflow(usage);				\
+    } while (FALSE)
+#endif
 
-#define KNOWN_INCR(sorted) (sorted == SORTED_INCR ||		\
-			    sorted == SORTED_INCR_NA_1ST)
-
-#define KNOWN_DECR(sorted) (sorted == SORTED_DECR ||	\
-			    sorted == SORTED_DECR_NA_1ST)
-
-
-/* Experimental C interface for experimental hash table support
-
-   Not in the API (at least not yet) but declared here to allow some
-   experimenting */
-
-/* try to allow some type checking */
-typedef struct { SEXP cell; } R_hashtab_type;
-
-/* hash table types */
-#define HT_TYPE_IDENTICAL 0
-#define HT_TYPE_ADDRESS   1
-
-/* public C interface */
-R_hashtab_type R_asHashtable(SEXP h);
-SEXP R_HashtabSEXP(R_hashtab_type  h);
-int R_isHashtable(SEXP h);
-    R_hashtab_type R_mkhashtab(int type, int /*K*/);
-SEXP R_gethash(R_hashtab_type h, SEXP key, SEXP nomatch);
-SEXP R_sethash(R_hashtab_type h, SEXP key, SEXP value);
-int R_remhash(R_hashtab_type h, SEXP key);
-int R_numhash(R_hashtab_type h);
-int R_typhash(R_hashtab_type h);
-SEXP R_maphash(R_hashtab_type h, SEXP FUN);
-void R_maphashC(R_hashtab_type h, void (*FUN)(SEXP, SEXP, void *), void *data);
-void R_clrhash(R_hashtab_type h);
-
-
-/* stuff that probably shouldn't be in the API but is getting used */
-
-void (SET_TYPEOF)(SEXP x, int v); // used by Rcpp
-void (SET_OBJECT)(SEXP x, int v); // used by Rcpp
-void (SET_S4_OBJECT)(SEXP x); // used by Rcpp (maybe?)
-void (UNSET_S4_OBJECT)(SEXP x); // used by Rcpp (maybe?)
-const char *R_curErrorBuf(void); // used by unix */
-int (IS_SCALAR)(SEXP x, int type); // used by symengine */
-Rboolean Rf_psmatch(const char *, const char *, Rboolean); // used by rgl
-
-/* used in a couple of packages but should probably be dropped */
-				/* match(.) NOT reached : for -Wall */
-#define error_return(msg)	{ Rf_error(msg);	   return R_NilValue; }
-#define errorcall_return(cl,msg){ Rf_errorcall(cl, msg);   return R_NilValue; }
-
-void (SETLENGTH)(SEXP x, R_xlen_t v); // used by data.table and others
-void (SET_TRUELENGTH)(SEXP x, R_xlen_t v); // used by data.table and others
-int  (SETLEVELS)(SEXP x, int v); // used by quotedargs
-
-void (SET_ENVFLAGS)(SEXP x, int v); // used by rlang and others
-void SET_FRAME(SEXP x, SEXP v); // used by rlang and others
-void SET_ENCLOS(SEXP x, SEXP v); // used by rlang and others
-void SET_HASHTAB(SEXP x, SEXP v); // used by rlang and others
-
-void SET_PRENV(SEXP x, SEXP v); // used by dplyr, others
-void SET_PRVALUE(SEXP x, SEXP v); // used by dplyr, others
-void SET_PRCODE(SEXP x, SEXP v); // used by magrittr, others
-
-void *(STDVEC_DATAPTR)(SEXP x); // used by vroom
-
-/* Growable vector support */ // used by multbxxc
-int (IS_GROWABLE)(SEXP x);
-void (SET_GROWABLE_BIT)(SEXP x);
-
-// used by quotedargs
-#define BCODE_CONSTS(x) CDR(x) // re-enable in Defn.h after removing here
-void (SET_NAMED)(SEXP x, int v);
-
-// used by igraph, lazyeval, nseval, rlang
-#define PREXPR(e) R_PromiseExpr(e)
-
-// used by rlang
-#define BODY_EXPR(e) R_ClosureExpr(e)
-
-// used by BIOC::matter; mightbe reasonable to include in API
-SEXP R_tryWrap(SEXP);
 
 #ifdef __cplusplus
 }

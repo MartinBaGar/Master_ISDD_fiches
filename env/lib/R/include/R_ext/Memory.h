@@ -1,6 +1,6 @@
 /*
  *  R : A Computer Language for Statistical Data Analysis
- *  Copyright (C) 1998-2022  The R Core Team
+ *  Copyright (C) 1998-2016  The R Core Team
  *
  *  This header file is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU Lesser General Public License as published by
@@ -45,16 +45,12 @@ void*	vmaxget(void);
 void	vmaxset(const void *);
 
 void	R_gc(void);
-int	R_gc_running(void);
+int	R_gc_running();
 
 char*	R_alloc(R_SIZE_T, int);
 long double *R_allocLD(R_SIZE_T nelem);
 char*	S_alloc(long, int);
 char*	S_realloc(char *, long, long, int);
-
-void *  R_malloc_gc(size_t);
-void *  R_calloc_gc(size_t, size_t);
-void *  R_realloc_gc(void *, size_t);
 
 #ifdef  __cplusplus
 }
