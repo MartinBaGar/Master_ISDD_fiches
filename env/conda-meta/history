@@ -270,3 +270,9 @@
 # conda version: 23.11.0
 +conda-forge/noarch::r-rpart.plot-3.1.1-r43hc72bb7e_2
 # update specs: ['conda-forge::r-rpart.plot']
+==> 2024-01-23 21:06:50 <==
+# cmd: /home/mabagar/miniconda3/bin/conda install conda-forge::r-base
+# conda version: 23.11.0
+-defaults/linux-64::openssl-3.0.12-h7f8727e_0
++conda-forge/linux-64::openssl-3.2.0-hd590300_1
+# update specs: ['conda-forge::r-base']
