@@ -1,0 +1,556 @@
+{
+  "build": "r43hc72bb7e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "r-rpart >=4.1_15"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-rpart.plot-3.1.1-r43hc72bb7e_2",
+  "files": [
+    "lib/R/library/rpart.plot/DESCRIPTION",
+    "lib/R/library/rpart.plot/INDEX",
+    "lib/R/library/rpart.plot/Meta/Rd.rds",
+    "lib/R/library/rpart.plot/Meta/data.rds",
+    "lib/R/library/rpart.plot/Meta/features.rds",
+    "lib/R/library/rpart.plot/Meta/hsearch.rds",
+    "lib/R/library/rpart.plot/Meta/links.rds",
+    "lib/R/library/rpart.plot/Meta/nsInfo.rds",
+    "lib/R/library/rpart.plot/Meta/package.rds",
+    "lib/R/library/rpart.plot/NAMESPACE",
+    "lib/R/library/rpart.plot/NEWS",
+    "lib/R/library/rpart.plot/R/rpart.plot",
+    "lib/R/library/rpart.plot/R/rpart.plot.rdb",
+    "lib/R/library/rpart.plot/R/rpart.plot.rdx",
+    "lib/R/library/rpart.plot/data/Rdata.rdb",
+    "lib/R/library/rpart.plot/data/Rdata.rds",
+    "lib/R/library/rpart.plot/data/Rdata.rdx",
+    "lib/R/library/rpart.plot/doc/index.html",
+    "lib/R/library/rpart.plot/doc/prp.pdf",
+    "lib/R/library/rpart.plot/help/AnIndex",
+    "lib/R/library/rpart.plot/help/aliases.rds",
+    "lib/R/library/rpart.plot/help/paths.rds",
+    "lib/R/library/rpart.plot/help/rpart.plot.rdb",
+    "lib/R/library/rpart.plot/help/rpart.plot.rdx",
+    "lib/R/library/rpart.plot/html/00Index.html",
+    "lib/R/library/rpart.plot/html/R.css",
+    "lib/R/library/rpart.plot/slowtests/README.txt",
+    "lib/R/library/rpart.plot/slowtests/data.stagec",
+    "lib/R/library/rpart.plot/slowtests/make.bat",
+    "lib/R/library/rpart.plot/slowtests/makeclean.bat",
+    "lib/R/library/rpart.plot/slowtests/rpart.report.R",
+    "lib/R/library/rpart.plot/slowtests/rpart.report.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/rpart.report.bat",
+    "lib/R/library/rpart.plot/slowtests/test.describe.col.R",
+    "lib/R/library/rpart.plot/slowtests/test.describe.col.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/test.describe.col.bat",
+    "lib/R/library/rpart.plot/slowtests/test.epilog.R",
+    "lib/R/library/rpart.plot/slowtests/test.imports.R",
+    "lib/R/library/rpart.plot/slowtests/test.imports.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/test.imports.bat",
+    "lib/R/library/rpart.plot/slowtests/test.na.R",
+    "lib/R/library/rpart.plot/slowtests/test.na.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/test.na.bat",
+    "lib/R/library/rpart.plot/slowtests/test.palette.R",
+    "lib/R/library/rpart.plot/slowtests/test.palette.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/test.palette.bat",
+    "lib/R/library/rpart.plot/slowtests/test.prolog.R",
+    "lib/R/library/rpart.plot/slowtests/test.rpart.plot.R",
+    "lib/R/library/rpart.plot/slowtests/test.rpart.plot.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/test.rpart.plot.bat",
+    "lib/R/library/rpart.plot/slowtests/test.rpart.rules.R",
+    "lib/R/library/rpart.plot/slowtests/test.rpart.rules.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/test.rpart.rules.bat",
+    "lib/R/library/rpart.plot/slowtests/test.type5.R",
+    "lib/R/library/rpart.plot/slowtests/test.type5.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/test.type5.bat",
+    "lib/R/library/rpart.plot/slowtests/usersplits.R",
+    "lib/R/library/rpart.plot/slowtests/usersplits.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/usersplits.bat",
+    "lib/R/library/rpart.plot/slowtests/vignette.R",
+    "lib/R/library/rpart.plot/slowtests/vignette.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/vignette.bat",
+    "lib/R/library/rpart.plot/slowtests/webpage.figs.R",
+    "lib/R/library/rpart.plot/slowtests/webpage.figs.Rout.save",
+    "lib/R/library/rpart.plot/slowtests/webpage.figs.bat"
+  ],
+  "fn": "r-rpart.plot-3.1.1-r43hc72bb7e_2.conda",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/opt/conda/pkgs/r-rpart.plot-3.1.1-r43hc72bb7e_2",
+    "type": 1
+  },
+  "md5": "edbb3708f615298b126bd475bb469871",
+  "name": "r-rpart.plot",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-rpart.plot-3.1.1-r43hc72bb7e_2.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/rpart.plot/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "2a995cc592c8a033e4879e18f9e34aa076eee8e2772f1572fadee40233d01a67",
+        "sha256_in_prefix": "2a995cc592c8a033e4879e18f9e34aa076eee8e2772f1572fadee40233d01a67",
+        "size_in_bytes": 596
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/INDEX",
+        "path_type": "hardlink",
+        "sha256": "b4855da00c6b19977c4c161e9c7b844f27a46318dc825b61bca6964cdf93c18b",
+        "sha256_in_prefix": "b4855da00c6b19977c4c161e9c7b844f27a46318dc825b61bca6964cdf93c18b",
+        "size_in_bytes": 445
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "e54303b961fd5a2be81c096a6306e863e6022c9cb5558eb909ad8bd96136bc00",
+        "sha256_in_prefix": "e54303b961fd5a2be81c096a6306e863e6022c9cb5558eb909ad8bd96136bc00",
+        "size_in_bytes": 504
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "ae2f64f4669ad93167b85898f36d0692436b150894f222a9e05bcb09818d9e81",
+        "sha256_in_prefix": "ae2f64f4669ad93167b85898f36d0692436b150894f222a9e05bcb09818d9e81",
+        "size_in_bytes": 139
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "191716185c635b1be4653d0445ff95ba9c8c43649bba4f445d09f833ee324856",
+        "sha256_in_prefix": "191716185c635b1be4653d0445ff95ba9c8c43649bba4f445d09f833ee324856",
+        "size_in_bytes": 530
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "b2ef06f3b97db0462d935a17a5d8bd347f1d620b219d0b36551bbff693585d4b",
+        "sha256_in_prefix": "b2ef06f3b97db0462d935a17a5d8bd347f1d620b219d0b36551bbff693585d4b",
+        "size_in_bytes": 199
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "0100dfb0eb7b61e5143a8bbed4eb064ad9f5ce8835185cebea71cf554bf4c3f3",
+        "sha256_in_prefix": "0100dfb0eb7b61e5143a8bbed4eb064ad9f5ce8835185cebea71cf554bf4c3f3",
+        "size_in_bytes": 532
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "46cea2de5c72d006aa30ab1138594e1fc34fefcdf056b5b6427d020e4b8959d1",
+        "sha256_in_prefix": "46cea2de5c72d006aa30ab1138594e1fc34fefcdf056b5b6427d020e4b8959d1",
+        "size_in_bytes": 759
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "df9927a22ad8efc8482e639d82bd858571f2e6e054b9e4ef39604e6586734c68",
+        "sha256_in_prefix": "df9927a22ad8efc8482e639d82bd858571f2e6e054b9e4ef39604e6586734c68",
+        "size_in_bytes": 695
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/NEWS",
+        "path_type": "hardlink",
+        "sha256": "1fed5fa960f46e876976aab0bc68e0254016a2e447a39807c8022dfa371018c4",
+        "sha256_in_prefix": "1fed5fa960f46e876976aab0bc68e0254016a2e447a39807c8022dfa371018c4",
+        "size_in_bytes": 10191
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/R/rpart.plot",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/R/rpart.plot.rdb",
+        "path_type": "hardlink",
+        "sha256": "b3b18427695f913f9e3fc847d87d1f899a2b0daf79bff0d7784227a55aefdfea",
+        "sha256_in_prefix": "b3b18427695f913f9e3fc847d87d1f899a2b0daf79bff0d7784227a55aefdfea",
+        "size_in_bytes": 366703
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/R/rpart.plot.rdx",
+        "path_type": "hardlink",
+        "sha256": "b60592e39d56f96b0ddabdaeb137806efafe5165dda9a08f7d0df23844af9b6f",
+        "sha256_in_prefix": "b60592e39d56f96b0ddabdaeb137806efafe5165dda9a08f7d0df23844af9b6f",
+        "size_in_bytes": 4292
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "f884aec6491d15a43897ef264d350148ccc522035d7eb14e9be2d56699be59ca",
+        "sha256_in_prefix": "f884aec6491d15a43897ef264d350148ccc522035d7eb14e9be2d56699be59ca",
+        "size_in_bytes": 7011
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "d5805361eef267ad2175f6454fa7e74215b58c8090042fa2973f7e15710d1176",
+        "sha256_in_prefix": "d5805361eef267ad2175f6454fa7e74215b58c8090042fa2973f7e15710d1176",
+        "size_in_bytes": 81
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "d9453b77727f710b22337f29d24295e924c900b1bbae8cd6fcbca01d84d5d84f",
+        "sha256_in_prefix": "d9453b77727f710b22337f29d24295e924c900b1bbae8cd6fcbca01d84d5d84f",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "6c5d80af9eed290a0df22c00912bf165358f492be17cb2b01fd122f296effc89",
+        "sha256_in_prefix": "6c5d80af9eed290a0df22c00912bf165358f492be17cb2b01fd122f296effc89",
+        "size_in_bytes": 319
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/doc/prp.pdf",
+        "path_type": "hardlink",
+        "sha256": "92d8ca6915f4fb0e672157070eda39a54371a266347dab52848cc852f9777374",
+        "sha256_in_prefix": "92d8ca6915f4fb0e672157070eda39a54371a266347dab52848cc852f9777374",
+        "size_in_bytes": 467686
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "5a53463f2e5aaf8d972fc12fc75947a0aaae4d18043b5d514dc5b2f6502c3e38",
+        "sha256_in_prefix": "5a53463f2e5aaf8d972fc12fc75947a0aaae4d18043b5d514dc5b2f6502c3e38",
+        "size_in_bytes": 166
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "5df8d4b1e801697554585d7cf846f537e6e6c2fd607bad7c6324dd27977af8fb",
+        "sha256_in_prefix": "5df8d4b1e801697554585d7cf846f537e6e6c2fd607bad7c6324dd27977af8fb",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "5c638857300d3412f16f668b1eeac37addfd5db028a564403b8afc93af04bb92",
+        "sha256_in_prefix": "5c638857300d3412f16f668b1eeac37addfd5db028a564403b8afc93af04bb92",
+        "size_in_bytes": 210
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/help/rpart.plot.rdb",
+        "path_type": "hardlink",
+        "sha256": "86aeea5ce8a67a1dc75395a5ea2daaa9eb39e60d9f0ae5620c30e28ba02892c0",
+        "sha256_in_prefix": "86aeea5ce8a67a1dc75395a5ea2daaa9eb39e60d9f0ae5620c30e28ba02892c0",
+        "size_in_bytes": 82957
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/help/rpart.plot.rdx",
+        "path_type": "hardlink",
+        "sha256": "a0b329d342b2a89ca901d3face0b7d79247fefd618f4866587b1fb268382f1b7",
+        "sha256_in_prefix": "a0b329d342b2a89ca901d3face0b7d79247fefd618f4866587b1fb268382f1b7",
+        "size_in_bytes": 302
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "399388354bc0021db5f2b6e73bcab7ca85ed3cb8503ef6e01c63cf12b7c9d028",
+        "sha256_in_prefix": "399388354bc0021db5f2b6e73bcab7ca85ed3cb8503ef6e01c63cf12b7c9d028",
+        "size_in_bytes": 2051
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/README.txt",
+        "path_type": "hardlink",
+        "sha256": "2e752d24c85f560970c549a441c336df1064e54c8081724f397afa9c031108a6",
+        "sha256_in_prefix": "2e752d24c85f560970c549a441c336df1064e54c8081724f397afa9c031108a6",
+        "size_in_bytes": 622
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/data.stagec",
+        "path_type": "hardlink",
+        "sha256": "7e11ee39be2c7950a8337e97d9d94684e8c0e14d700af1e89a558795e404c8a9",
+        "sha256_in_prefix": "7e11ee39be2c7950a8337e97d9d94684e8c0e14d700af1e89a558795e404c8a9",
+        "size_in_bytes": 7592
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/make.bat",
+        "path_type": "hardlink",
+        "sha256": "f72d664b34c8f39a60a431ca10f7dbfe7efa7c5c45604178be3cd82ca0cdfd89",
+        "sha256_in_prefix": "f72d664b34c8f39a60a431ca10f7dbfe7efa7c5c45604178be3cd82ca0cdfd89",
+        "size_in_bytes": 1113
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/makeclean.bat",
+        "path_type": "hardlink",
+        "sha256": "0b9f17b58d1fcce9055bb8fcc33acd4e401d6e08c87a90bba2720e41e1719e15",
+        "sha256_in_prefix": "0b9f17b58d1fcce9055bb8fcc33acd4e401d6e08c87a90bba2720e41e1719e15",
+        "size_in_bytes": 503
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/rpart.report.R",
+        "path_type": "hardlink",
+        "sha256": "f9203bfdd534bab68574abadd657cb4023f00719451cb6eebced9409b563d8c2",
+        "sha256_in_prefix": "f9203bfdd534bab68574abadd657cb4023f00719451cb6eebced9409b563d8c2",
+        "size_in_bytes": 10736
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/rpart.report.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "6c87068b4b008036df0ebc54093de56929c6f5efcdf8a456ec9b136758aecb4f",
+        "sha256_in_prefix": "6c87068b4b008036df0ebc54093de56929c6f5efcdf8a456ec9b136758aecb4f",
+        "size_in_bytes": 66738
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/rpart.report.bat",
+        "path_type": "hardlink",
+        "sha256": "d4c1f0d958433ec18934ae0358141b3ae52a7bccf8449fff433672305bb681d7",
+        "sha256_in_prefix": "d4c1f0d958433ec18934ae0358141b3ae52a7bccf8449fff433672305bb681d7",
+        "size_in_bytes": 775
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.describe.col.R",
+        "path_type": "hardlink",
+        "sha256": "07c3fcaea9e9ee359819082f28378e58a036b66e758e502385bd88bdf9c20ef3",
+        "sha256_in_prefix": "07c3fcaea9e9ee359819082f28378e58a036b66e758e502385bd88bdf9c20ef3",
+        "size_in_bytes": 2494
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.describe.col.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "043bed91cbdab8b5683a2883cfd3b50b4cd7b2f2ed623756605d024474de007e",
+        "sha256_in_prefix": "043bed91cbdab8b5683a2883cfd3b50b4cd7b2f2ed623756605d024474de007e",
+        "size_in_bytes": 3437
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.describe.col.bat",
+        "path_type": "hardlink",
+        "sha256": "9ea36e22755528c5f937f279c72e3e224e45cd7cdf805bd3fc34996590004d62",
+        "sha256_in_prefix": "9ea36e22755528c5f937f279c72e3e224e45cd7cdf805bd3fc34996590004d62",
+        "size_in_bytes": 830
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.epilog.R",
+        "path_type": "hardlink",
+        "sha256": "5011a22e4f5967bdfd8b70ddd50962dcb056be3c5059619af4536847ccc7a80f",
+        "sha256_in_prefix": "5011a22e4f5967bdfd8b70ddd50962dcb056be3c5059619af4536847ccc7a80f",
+        "size_in_bytes": 224
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.imports.R",
+        "path_type": "hardlink",
+        "sha256": "dc470c9ac80483620bdc0b3d16b0c970f8251316f4037adbcb0194b83e3ca867",
+        "sha256_in_prefix": "dc470c9ac80483620bdc0b3d16b0c970f8251316f4037adbcb0194b83e3ca867",
+        "size_in_bytes": 561
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.imports.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "9cca8f43032f132090c9b06e08db64e14a1d98b7c6380ca992ea065646642dd4",
+        "sha256_in_prefix": "9cca8f43032f132090c9b06e08db64e14a1d98b7c6380ca992ea065646642dd4",
+        "size_in_bytes": 1683
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.imports.bat",
+        "path_type": "hardlink",
+        "sha256": "2320262f8c6fc50ebf739bda19c2ee70c11cb29f74e1b64eec37e7197b553621",
+        "sha256_in_prefix": "2320262f8c6fc50ebf739bda19c2ee70c11cb29f74e1b64eec37e7197b553621",
+        "size_in_bytes": 775
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.na.R",
+        "path_type": "hardlink",
+        "sha256": "c5fc8ac8620cab19dc1cfce748d7ed0dabcbb2f980d3c426659d1e6f2ff46c1d",
+        "sha256_in_prefix": "c5fc8ac8620cab19dc1cfce748d7ed0dabcbb2f980d3c426659d1e6f2ff46c1d",
+        "size_in_bytes": 2407
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.na.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "afba2fe30a6097ae0407a5b30245065d788bec9fd7b3b9480eb33c70307b972b",
+        "sha256_in_prefix": "afba2fe30a6097ae0407a5b30245065d788bec9fd7b3b9480eb33c70307b972b",
+        "size_in_bytes": 5014
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.na.bat",
+        "path_type": "hardlink",
+        "sha256": "94c498d9054fcae2960ab18b0cf95f72662279a21d8ca1d819bdf967d7b2e061",
+        "sha256_in_prefix": "94c498d9054fcae2960ab18b0cf95f72662279a21d8ca1d819bdf967d7b2e061",
+        "size_in_bytes": 720
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.palette.R",
+        "path_type": "hardlink",
+        "sha256": "cd23a55458e4ea493b81800acec66bfc155b4c7105725ed3678b68c88e601c8f",
+        "sha256_in_prefix": "cd23a55458e4ea493b81800acec66bfc155b4c7105725ed3678b68c88e601c8f",
+        "size_in_bytes": 35114
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.palette.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "288990cc8985fdf0cbc9b22b90db15baad38679cf5dc5d10cc0aef14aa836162",
+        "sha256_in_prefix": "288990cc8985fdf0cbc9b22b90db15baad38679cf5dc5d10cc0aef14aa836162",
+        "size_in_bytes": 53113
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.palette.bat",
+        "path_type": "hardlink",
+        "sha256": "36d3b80fb7bb480ab1c6326bd362b5a56282e883425fc7a5e1911f67147dd94a",
+        "sha256_in_prefix": "36d3b80fb7bb480ab1c6326bd362b5a56282e883425fc7a5e1911f67147dd94a",
+        "size_in_bytes": 775
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.prolog.R",
+        "path_type": "hardlink",
+        "sha256": "f2c74607cb5c580328d7f6f03325ff95dc69cd9a9ba10078677426fac27db59d",
+        "sha256_in_prefix": "f2c74607cb5c580328d7f6f03325ff95dc69cd9a9ba10078677426fac27db59d",
+        "size_in_bytes": 1749
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.rpart.plot.R",
+        "path_type": "hardlink",
+        "sha256": "c5a6aae950884faf58a4db6f94ca5358e386347f7a12c243cda0f5eab66dccb8",
+        "sha256_in_prefix": "c5a6aae950884faf58a4db6f94ca5358e386347f7a12c243cda0f5eab66dccb8",
+        "size_in_bytes": 43234
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.rpart.plot.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "137236aff382532d593fd60149554d56221851c964c212046275e028e069b48c",
+        "sha256_in_prefix": "137236aff382532d593fd60149554d56221851c964c212046275e028e069b48c",
+        "size_in_bytes": 97280
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.rpart.plot.bat",
+        "path_type": "hardlink",
+        "sha256": "384bb43f39095a3b70b920cce6466235fc39078c347ed4fb359f73316b991985",
+        "sha256_in_prefix": "384bb43f39095a3b70b920cce6466235fc39078c347ed4fb359f73316b991985",
+        "size_in_bytes": 916
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.rpart.rules.R",
+        "path_type": "hardlink",
+        "sha256": "5e220582bb914c84bbfd755b8dd2fa8ba53b71132f9498696c9bb8d3919c650d",
+        "sha256_in_prefix": "5e220582bb914c84bbfd755b8dd2fa8ba53b71132f9498696c9bb8d3919c650d",
+        "size_in_bytes": 37054
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.rpart.rules.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "b52d5b4cf92ae7b042c981aeb2d257443f67391d80d3fbf1bba27af8e35f98b0",
+        "sha256_in_prefix": "b52d5b4cf92ae7b042c981aeb2d257443f67391d80d3fbf1bba27af8e35f98b0",
+        "size_in_bytes": 230101
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.rpart.rules.bat",
+        "path_type": "hardlink",
+        "sha256": "94ef7d9fdb5a01449c6a741fd7228ce1420d6b141b976b4b509127894a6a19e2",
+        "sha256_in_prefix": "94ef7d9fdb5a01449c6a741fd7228ce1420d6b141b976b4b509127894a6a19e2",
+        "size_in_bytes": 819
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.type5.R",
+        "path_type": "hardlink",
+        "sha256": "dd88a8606ba163a9f762211cefd471edba55813514f8b04193969f1c5f3aa4bf",
+        "sha256_in_prefix": "dd88a8606ba163a9f762211cefd471edba55813514f8b04193969f1c5f3aa4bf",
+        "size_in_bytes": 2569
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.type5.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "6359b9533c1b46703f3764594f545b8d2e14f5714b2b71ce5ae62c08916b934b",
+        "sha256_in_prefix": "6359b9533c1b46703f3764594f545b8d2e14f5714b2b71ce5ae62c08916b934b",
+        "size_in_bytes": 3632
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/test.type5.bat",
+        "path_type": "hardlink",
+        "sha256": "9ff14f6ca997efa41aaf03255bc475e3e9539910dbecce8ec2c650fe428ef3df",
+        "sha256_in_prefix": "9ff14f6ca997efa41aaf03255bc475e3e9539910dbecce8ec2c650fe428ef3df",
+        "size_in_bytes": 753
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/usersplits.R",
+        "path_type": "hardlink",
+        "sha256": "a58e852cbbe26e03d5fbbbe529cf860584d62bb1d6452b90eaf948cdc639028b",
+        "sha256_in_prefix": "a58e852cbbe26e03d5fbbbe529cf860584d62bb1d6452b90eaf948cdc639028b",
+        "size_in_bytes": 14810
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/usersplits.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "c4cb4a33daeaf2333d03b50de28904a76e709d96b719f18916cd98a61a1ff8f6",
+        "sha256_in_prefix": "c4cb4a33daeaf2333d03b50de28904a76e709d96b719f18916cd98a61a1ff8f6",
+        "size_in_bytes": 25431
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/usersplits.bat",
+        "path_type": "hardlink",
+        "sha256": "a716957ccb543f679e16d684d0536c4efa7dfaa1c9904469a90268ad2316fb66",
+        "sha256_in_prefix": "a716957ccb543f679e16d684d0536c4efa7dfaa1c9904469a90268ad2316fb66",
+        "size_in_bytes": 753
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/vignette.R",
+        "path_type": "hardlink",
+        "sha256": "4d333860540f14f95c6d7ae142b1116fe15aa176a65fdc849ac8204dd2992dc8",
+        "sha256_in_prefix": "4d333860540f14f95c6d7ae142b1116fe15aa176a65fdc849ac8204dd2992dc8",
+        "size_in_bytes": 20064
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/vignette.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "65b7ecabdf5dabfa4ff2f6f98ee7dbd1454c880b8e3711c1eafcae8ea11925fc",
+        "sha256_in_prefix": "65b7ecabdf5dabfa4ff2f6f98ee7dbd1454c880b8e3711c1eafcae8ea11925fc",
+        "size_in_bytes": 23996
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/vignette.bat",
+        "path_type": "hardlink",
+        "sha256": "c2fd21cb83b875d3ed0893a29661ff2c9c87bb7f712015c072d402fadd04d175",
+        "sha256_in_prefix": "c2fd21cb83b875d3ed0893a29661ff2c9c87bb7f712015c072d402fadd04d175",
+        "size_in_bytes": 731
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/webpage.figs.R",
+        "path_type": "hardlink",
+        "sha256": "3a1cdbe372388c5c173234356e695097e02eff7e5dcab3e9b2cbf9ee6ee4cf4c",
+        "sha256_in_prefix": "3a1cdbe372388c5c173234356e695097e02eff7e5dcab3e9b2cbf9ee6ee4cf4c",
+        "size_in_bytes": 2447
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/webpage.figs.Rout.save",
+        "path_type": "hardlink",
+        "sha256": "a61dc1d62e2e2bc1a84b68062911209de8338911d310eb67e8b2b23fded04765",
+        "sha256_in_prefix": "a61dc1d62e2e2bc1a84b68062911209de8338911d310eb67e8b2b23fded04765",
+        "size_in_bytes": 2741
+      },
+      {
+        "_path": "lib/R/library/rpart.plot/slowtests/webpage.figs.bat",
+        "path_type": "hardlink",
+        "sha256": "8932c788e0ee367cc3bee6f61c23af22572a2387df751b0877819cd987ed82ed",
+        "sha256_in_prefix": "8932c788e0ee367cc3bee6f61c23af22572a2387df751b0877819cd987ed82ed",
+        "size_in_bytes": 775
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "conda-forge::r-rpart.plot",
+  "sha256": "0433e6b96b441ff132838e448f662b5c799687d1a7071df95864fea344f06f40",
+  "size": 1003993,
+  "subdir": "noarch",
+  "timestamp": 1686919353000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-rpart.plot-3.1.1-r43hc72bb7e_2.conda",
+  "version": "3.1.1"
+}

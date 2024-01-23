@@ -1,0 +1,205 @@
+{
+  "build": "r43h884c59f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "r-base >=4.3,<4.4.0a0",
+    "r-cpp11 >=0.2.7",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-timechange-0.2.0-r43h884c59f_0",
+  "files": [
+    "lib/R/library/timechange/DESCRIPTION",
+    "lib/R/library/timechange/INDEX",
+    "lib/R/library/timechange/Meta/Rd.rds",
+    "lib/R/library/timechange/Meta/features.rds",
+    "lib/R/library/timechange/Meta/hsearch.rds",
+    "lib/R/library/timechange/Meta/links.rds",
+    "lib/R/library/timechange/Meta/nsInfo.rds",
+    "lib/R/library/timechange/Meta/package.rds",
+    "lib/R/library/timechange/NAMESPACE",
+    "lib/R/library/timechange/NEWS.md",
+    "lib/R/library/timechange/R/timechange",
+    "lib/R/library/timechange/R/timechange.rdb",
+    "lib/R/library/timechange/R/timechange.rdx",
+    "lib/R/library/timechange/help/AnIndex",
+    "lib/R/library/timechange/help/aliases.rds",
+    "lib/R/library/timechange/help/paths.rds",
+    "lib/R/library/timechange/help/timechange.rdb",
+    "lib/R/library/timechange/help/timechange.rdx",
+    "lib/R/library/timechange/html/00Index.html",
+    "lib/R/library/timechange/html/R.css",
+    "lib/R/library/timechange/libs/timechange.so"
+  ],
+  "fn": "r-timechange-0.2.0-r43h884c59f_0.conda",
+  "license": "GPL-3",
+  "link": {
+    "source": "/opt/conda/pkgs/r-timechange-0.2.0-r43h884c59f_0",
+    "type": 1
+  },
+  "md5": "660538862e08de861eb0f76fdb84cee1",
+  "name": "r-timechange",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-timechange-0.2.0-r43h884c59f_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/timechange/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "4a21156753351ff7dc5d7edb45b662f77a1cf745eed29b7207569e029052c850",
+        "sha256_in_prefix": "4a21156753351ff7dc5d7edb45b662f77a1cf745eed29b7207569e029052c850",
+        "size_in_bytes": 1474
+      },
+      {
+        "_path": "lib/R/library/timechange/INDEX",
+        "path_type": "hardlink",
+        "sha256": "51c536f77ef178f388846b10886dee6bc4fcefabb618b4478044871ea01231b3",
+        "sha256_in_prefix": "51c536f77ef178f388846b10886dee6bc4fcefabb618b4478044871ea01231b3",
+        "size_in_bytes": 337
+      },
+      {
+        "_path": "lib/R/library/timechange/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "8cfc1cbbadcfa826c34d9a8efb88f1d4c2a60876b4a94f8882d6b7741972794e",
+        "sha256_in_prefix": "8cfc1cbbadcfa826c34d9a8efb88f1d4c2a60876b4a94f8882d6b7741972794e",
+        "size_in_bytes": 466
+      },
+      {
+        "_path": "lib/R/library/timechange/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/timechange/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "8c0ad5dde203fa1d557c16bc3b88f6e160f4295c20d7a823628ef962892f04b9",
+        "sha256_in_prefix": "8c0ad5dde203fa1d557c16bc3b88f6e160f4295c20d7a823628ef962892f04b9",
+        "size_in_bytes": 486
+      },
+      {
+        "_path": "lib/R/library/timechange/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "72691905192eae206a55d9d66ea4127aa359c1fdc08b0da771ff4ddd2fe1f381",
+        "sha256_in_prefix": "72691905192eae206a55d9d66ea4127aa359c1fdc08b0da771ff4ddd2fe1f381",
+        "size_in_bytes": 240
+      },
+      {
+        "_path": "lib/R/library/timechange/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "9724a95c19ad2d2f08db9c89d4ce7c72e84a1692db999cbda8185fe37c9515ed",
+        "sha256_in_prefix": "9724a95c19ad2d2f08db9c89d4ce7c72e84a1692db999cbda8185fe37c9515ed",
+        "size_in_bytes": 358
+      },
+      {
+        "_path": "lib/R/library/timechange/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "8c054e0e5b5dfba4839481cf7707d9facf5582e6e72d6c5a4e70d00063a97d8e",
+        "sha256_in_prefix": "8c054e0e5b5dfba4839481cf7707d9facf5582e6e72d6c5a4e70d00063a97d8e",
+        "size_in_bytes": 1266
+      },
+      {
+        "_path": "lib/R/library/timechange/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "07c77e338411313d41e5c36313ec348337386275b2a4d62f668b456b1b68d9cd",
+        "sha256_in_prefix": "07c77e338411313d41e5c36313ec348337386275b2a4d62f668b456b1b68d9cd",
+        "size_in_bytes": 289
+      },
+      {
+        "_path": "lib/R/library/timechange/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "0402ace9b629237a639ceddf07679c38129e8fb149600f32a90a8540f6ddf8c7",
+        "sha256_in_prefix": "0402ace9b629237a639ceddf07679c38129e8fb149600f32a90a8540f6ddf8c7",
+        "size_in_bytes": 1590
+      },
+      {
+        "_path": "lib/R/library/timechange/R/timechange",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/timechange/R/timechange.rdb",
+        "path_type": "hardlink",
+        "sha256": "fc5d7db46fd7e4c1ca8686bb2090a94f14d24b6346c5bc11d3847b1beabb4f39",
+        "sha256_in_prefix": "fc5d7db46fd7e4c1ca8686bb2090a94f14d24b6346c5bc11d3847b1beabb4f39",
+        "size_in_bytes": 31224
+      },
+      {
+        "_path": "lib/R/library/timechange/R/timechange.rdx",
+        "path_type": "hardlink",
+        "sha256": "6b5dc581c9412dffec9d6ecfc3f1d58f6bfef57a3d869c91a51355a0210b3186",
+        "sha256_in_prefix": "6b5dc581c9412dffec9d6ecfc3f1d58f6bfef57a3d869c91a51355a0210b3186",
+        "size_in_bytes": 870
+      },
+      {
+        "_path": "lib/R/library/timechange/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "253b1fae3c9e8dfee2ff32063ac9eb1b05a3ad9aa8ad7ace07331226b9416531",
+        "sha256_in_prefix": "253b1fae3c9e8dfee2ff32063ac9eb1b05a3ad9aa8ad7ace07331226b9416531",
+        "size_in_bytes": 316
+      },
+      {
+        "_path": "lib/R/library/timechange/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "f0fce400924e2d074948ed571109882c9c64ec4e527efb6fe2e66d7d719efe63",
+        "sha256_in_prefix": "f0fce400924e2d074948ed571109882c9c64ec4e527efb6fe2e66d7d719efe63",
+        "size_in_bytes": 203
+      },
+      {
+        "_path": "lib/R/library/timechange/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "c065fcf922ad4e569cadbcc97bc93667abc45232e82b8ac65ef657e377cf5dd5",
+        "sha256_in_prefix": "c065fcf922ad4e569cadbcc97bc93667abc45232e82b8ac65ef657e377cf5dd5",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/R/library/timechange/help/timechange.rdb",
+        "path_type": "hardlink",
+        "sha256": "9316cc8a5bfb4f85605a552a3dd8b3cccddf84426f9e78def37361996d8f786d",
+        "sha256_in_prefix": "9316cc8a5bfb4f85605a552a3dd8b3cccddf84426f9e78def37361996d8f786d",
+        "size_in_bytes": 27313
+      },
+      {
+        "_path": "lib/R/library/timechange/help/timechange.rdx",
+        "path_type": "hardlink",
+        "sha256": "35d114bbdb994bf31d67a12aeab74daf9d7b82657466e91ce248b1f48a3d4e39",
+        "sha256_in_prefix": "35d114bbdb994bf31d67a12aeab74daf9d7b82657466e91ce248b1f48a3d4e39",
+        "size_in_bytes": 294
+      },
+      {
+        "_path": "lib/R/library/timechange/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "745e9e052cabfe90400763790e43bd7fe7fe911b151c975f19aa39d1113a80ba",
+        "sha256_in_prefix": "745e9e052cabfe90400763790e43bd7fe7fe911b151c975f19aa39d1113a80ba",
+        "size_in_bytes": 2569
+      },
+      {
+        "_path": "lib/R/library/timechange/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/timechange/libs/timechange.so",
+        "path_type": "hardlink",
+        "sha256": "81b8da93d9bac38048bc5f7edd060a0f24583dc65879702c8264aee710c63e50",
+        "sha256_in_prefix": "81b8da93d9bac38048bc5f7edd060a0f24583dc65879702c8264aee710c63e50",
+        "size_in_bytes": 301472
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "5550737be376d18c0ba02f3d11fe1acb3cc219faea8ed757f5df7bb8d9bf43cc",
+  "size": 179114,
+  "subdir": "linux-64",
+  "timestamp": 1695439001000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-timechange-0.2.0-r43h884c59f_0.conda",
+  "version": "0.2.0"
+}

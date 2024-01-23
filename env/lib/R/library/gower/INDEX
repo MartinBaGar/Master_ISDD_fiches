@@ -1,0 +1,3 @@
+gower_dist              Gower's distance
+gower_topn              Find the top-n matches
+gower-package           Gower's distance/similarity measure.

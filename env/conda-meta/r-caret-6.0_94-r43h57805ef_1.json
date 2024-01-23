@@ -1,0 +1,389 @@
+{
+  "build": "r43h57805ef_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "r-base >=4.3,<4.4.0a0",
+    "r-e1071",
+    "r-foreach",
+    "r-ggplot2",
+    "r-lattice >=0.20",
+    "r-modelmetrics >=1.2.2.2",
+    "r-nlme",
+    "r-plyr",
+    "r-proc",
+    "r-recipes >=0.1.10",
+    "r-reshape2",
+    "r-withr >=2.0.0"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-caret-6.0_94-r43h57805ef_1",
+  "files": [
+    "lib/R/library/caret/CITATION",
+    "lib/R/library/caret/DESCRIPTION",
+    "lib/R/library/caret/INDEX",
+    "lib/R/library/caret/Meta/Rd.rds",
+    "lib/R/library/caret/Meta/data.rds",
+    "lib/R/library/caret/Meta/features.rds",
+    "lib/R/library/caret/Meta/hsearch.rds",
+    "lib/R/library/caret/Meta/links.rds",
+    "lib/R/library/caret/Meta/nsInfo.rds",
+    "lib/R/library/caret/Meta/package.rds",
+    "lib/R/library/caret/Meta/vignette.rds",
+    "lib/R/library/caret/NAMESPACE",
+    "lib/R/library/caret/NEWS.Rd",
+    "lib/R/library/caret/R/caret",
+    "lib/R/library/caret/R/caret.rdb",
+    "lib/R/library/caret/R/caret.rdx",
+    "lib/R/library/caret/data/BloodBrain.RData",
+    "lib/R/library/caret/data/GermanCredit.RData",
+    "lib/R/library/caret/data/Sacramento.RData",
+    "lib/R/library/caret/data/cars.RData",
+    "lib/R/library/caret/data/cox2.RData",
+    "lib/R/library/caret/data/datalist",
+    "lib/R/library/caret/data/dhfr.RData",
+    "lib/R/library/caret/data/mdrr.RData",
+    "lib/R/library/caret/data/oil.RData",
+    "lib/R/library/caret/data/pottery.RData",
+    "lib/R/library/caret/data/scat.RData",
+    "lib/R/library/caret/data/segmentationData.RData",
+    "lib/R/library/caret/data/tecator.RData",
+    "lib/R/library/caret/doc/caret.R",
+    "lib/R/library/caret/doc/caret.Rmd",
+    "lib/R/library/caret/doc/caret.html",
+    "lib/R/library/caret/doc/index.html",
+    "lib/R/library/caret/help/AnIndex",
+    "lib/R/library/caret/help/aliases.rds",
+    "lib/R/library/caret/help/caret.rdb",
+    "lib/R/library/caret/help/caret.rdx",
+    "lib/R/library/caret/help/paths.rds",
+    "lib/R/library/caret/html/00Index.html",
+    "lib/R/library/caret/html/R.css",
+    "lib/R/library/caret/libs/caret.so",
+    "lib/R/library/caret/models/models.RData",
+    "lib/R/library/caret/models/sampling.RData"
+  ],
+  "fn": "r-caret-6.0_94-r43h57805ef_1.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/opt/conda/pkgs/r-caret-6.0_94-r43h57805ef_1",
+    "type": 1
+  },
+  "md5": "36ebd054d542512d03bf364ce6cf658d",
+  "name": "r-caret",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-caret-6.0_94-r43h57805ef_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/caret/CITATION",
+        "path_type": "hardlink",
+        "sha256": "7db0802877140334d3766b54736c843e9ce3e93482724e31f5be184cd25938aa",
+        "sha256_in_prefix": "7db0802877140334d3766b54736c843e9ce3e93482724e31f5be184cd25938aa",
+        "size_in_bytes": 629
+      },
+      {
+        "_path": "lib/R/library/caret/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "a6b38b5aaf53ff8c64560f58d6a6a6f1ebb089f450af8b8b01f69f65183ddde0",
+        "sha256_in_prefix": "a6b38b5aaf53ff8c64560f58d6a6a6f1ebb089f450af8b8b01f69f65183ddde0",
+        "size_in_bytes": 3207
+      },
+      {
+        "_path": "lib/R/library/caret/INDEX",
+        "path_type": "hardlink",
+        "sha256": "8c60b63d40e40e5583050c3b9dd69963a454fc1d6694240f99bf1068e4d73a64",
+        "sha256_in_prefix": "8c60b63d40e40e5583050c3b9dd69963a454fc1d6694240f99bf1068e4d73a64",
+        "size_in_bytes": 6696
+      },
+      {
+        "_path": "lib/R/library/caret/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "4efb10396d00e85dcd6f538b867a06371c32a7eda0624e6b377d7d047bd569a7",
+        "sha256_in_prefix": "4efb10396d00e85dcd6f538b867a06371c32a7eda0624e6b377d7d047bd569a7",
+        "size_in_bytes": 5464
+      },
+      {
+        "_path": "lib/R/library/caret/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "5006de7e79a6bd54dc8fb65501bc904287d3269b2e3df10b034783e9131087b4",
+        "sha256_in_prefix": "5006de7e79a6bd54dc8fb65501bc904287d3269b2e3df10b034783e9131087b4",
+        "size_in_bytes": 561
+      },
+      {
+        "_path": "lib/R/library/caret/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/caret/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "6a56fe85a1e3b651874c3bbdbce60c438a527dc20e554d2d1c46adc6387f5489",
+        "sha256_in_prefix": "6a56fe85a1e3b651874c3bbdbce60c438a527dc20e554d2d1c46adc6387f5489",
+        "size_in_bytes": 5303
+      },
+      {
+        "_path": "lib/R/library/caret/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "828bdf621d377ac7fd2e6a30435badefd6ecbe120ce4635bb80b4bfa2587e1c7",
+        "sha256_in_prefix": "828bdf621d377ac7fd2e6a30435badefd6ecbe120ce4635bb80b4bfa2587e1c7",
+        "size_in_bytes": 3224
+      },
+      {
+        "_path": "lib/R/library/caret/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "d25b171ffa8981c66a0543f29f2f11e971a4569aabce69e9ee572a8cfcc7e076",
+        "sha256_in_prefix": "d25b171ffa8981c66a0543f29f2f11e971a4569aabce69e9ee572a8cfcc7e076",
+        "size_in_bytes": 2941
+      },
+      {
+        "_path": "lib/R/library/caret/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "7fe9b13fa755cbfca530e21afe213defbf70484d399a51c0d02e5db2914e96b4",
+        "sha256_in_prefix": "7fe9b13fa755cbfca530e21afe213defbf70484d399a51c0d02e5db2914e96b4",
+        "size_in_bytes": 2036
+      },
+      {
+        "_path": "lib/R/library/caret/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "a2098d36b2713abe23d45dfdecbef3df77dfc13df76f3be0512b641c2646cbd9",
+        "sha256_in_prefix": "a2098d36b2713abe23d45dfdecbef3df77dfc13df76f3be0512b641c2646cbd9",
+        "size_in_bytes": 223
+      },
+      {
+        "_path": "lib/R/library/caret/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "b4d91a1a60f6d73348a5f7c217a2fc3ac297a99ac2d07698a04339c76aefa744",
+        "sha256_in_prefix": "b4d91a1a60f6d73348a5f7c217a2fc3ac297a99ac2d07698a04339c76aefa744",
+        "size_in_bytes": 11732
+      },
+      {
+        "_path": "lib/R/library/caret/NEWS.Rd",
+        "path_type": "hardlink",
+        "sha256": "18caf3484b2591397e4fc6a3a101539e6ca2a0adbdf7545e6ce335f4fe964f57",
+        "sha256_in_prefix": "18caf3484b2591397e4fc6a3a101539e6ca2a0adbdf7545e6ce335f4fe964f57",
+        "size_in_bytes": 118443
+      },
+      {
+        "_path": "lib/R/library/caret/R/caret",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/caret/R/caret.rdb",
+        "path_type": "hardlink",
+        "sha256": "80dba398e9502023f6dd694d153c08f2ed7056a91bea9ef84d5b4fb121aacc5c",
+        "sha256_in_prefix": "80dba398e9502023f6dd694d153c08f2ed7056a91bea9ef84d5b4fb121aacc5c",
+        "size_in_bytes": 1175500
+      },
+      {
+        "_path": "lib/R/library/caret/R/caret.rdx",
+        "path_type": "hardlink",
+        "sha256": "347954869135c117a83681fc3450398dbd0f69309e0c80ddd2bc6bc55c536a38",
+        "sha256_in_prefix": "347954869135c117a83681fc3450398dbd0f69309e0c80ddd2bc6bc55c536a38",
+        "size_in_bytes": 7547
+      },
+      {
+        "_path": "lib/R/library/caret/data/BloodBrain.RData",
+        "path_type": "hardlink",
+        "sha256": "718360e20ece06e12d63c758b99b7e53133d3c323137c17e8bdb30938110f436",
+        "sha256_in_prefix": "718360e20ece06e12d63c758b99b7e53133d3c323137c17e8bdb30938110f436",
+        "size_in_bytes": 70156
+      },
+      {
+        "_path": "lib/R/library/caret/data/GermanCredit.RData",
+        "path_type": "hardlink",
+        "sha256": "177356bb474439655c700693159767ae5694a4c9709ae13c262bee56c1ea4bbe",
+        "sha256_in_prefix": "177356bb474439655c700693159767ae5694a4c9709ae13c262bee56c1ea4bbe",
+        "size_in_bytes": 11477
+      },
+      {
+        "_path": "lib/R/library/caret/data/Sacramento.RData",
+        "path_type": "hardlink",
+        "sha256": "71eb2d0b29b607c7b38d1b7ab33ddb3707c5b414fea2425a2c8eea56e9b827ea",
+        "sha256_in_prefix": "71eb2d0b29b607c7b38d1b7ab33ddb3707c5b414fea2425a2c8eea56e9b827ea",
+        "size_in_bytes": 18168
+      },
+      {
+        "_path": "lib/R/library/caret/data/cars.RData",
+        "path_type": "hardlink",
+        "sha256": "0b94592e463d8258b26af52ff1c0cf4cb557ab62c440110f6247d7287995367b",
+        "sha256_in_prefix": "0b94592e463d8258b26af52ff1c0cf4cb557ab62c440110f6247d7287995367b",
+        "size_in_bytes": 7598
+      },
+      {
+        "_path": "lib/R/library/caret/data/cox2.RData",
+        "path_type": "hardlink",
+        "sha256": "c24051a5e388795ca7c259d6724def9d3ad149a384cf33a23b27b89550b4b00c",
+        "sha256_in_prefix": "c24051a5e388795ca7c259d6724def9d3ad149a384cf33a23b27b89550b4b00c",
+        "size_in_bytes": 154572
+      },
+      {
+        "_path": "lib/R/library/caret/data/datalist",
+        "path_type": "hardlink",
+        "sha256": "f2e30fea0ca833a8422c74e3a09c5dd58751f3b748976d3b26a2890b7b1d8fc0",
+        "sha256_in_prefix": "f2e30fea0ca833a8422c74e3a09c5dd58751f3b748976d3b26a2890b7b1d8fc0",
+        "size_in_bytes": 232
+      },
+      {
+        "_path": "lib/R/library/caret/data/dhfr.RData",
+        "path_type": "hardlink",
+        "sha256": "47f0a31e1163416ee61cf62a614359f3fce5c6b2270916e7967ce0a47dbeb221",
+        "sha256_in_prefix": "47f0a31e1163416ee61cf62a614359f3fce5c6b2270916e7967ce0a47dbeb221",
+        "size_in_bytes": 228920
+      },
+      {
+        "_path": "lib/R/library/caret/data/mdrr.RData",
+        "path_type": "hardlink",
+        "sha256": "2f37a45deb08fc10821358a809fab4ef4dba702be4175a92e2d6aaf5b7ac41e1",
+        "sha256_in_prefix": "2f37a45deb08fc10821358a809fab4ef4dba702be4175a92e2d6aaf5b7ac41e1",
+        "size_in_bytes": 273540
+      },
+      {
+        "_path": "lib/R/library/caret/data/oil.RData",
+        "path_type": "hardlink",
+        "sha256": "0b077b9e806e77796ddf41409a5019601e1856776dbab56af0b126808d298758",
+        "sha256_in_prefix": "0b077b9e806e77796ddf41409a5019601e1856776dbab56af0b126808d298758",
+        "size_in_bytes": 1491
+      },
+      {
+        "_path": "lib/R/library/caret/data/pottery.RData",
+        "path_type": "hardlink",
+        "sha256": "dc636cf1e7fcbf699c72f191ba79eecd610f08befe8ca24cedcf2c1d1112bb81",
+        "sha256_in_prefix": "dc636cf1e7fcbf699c72f191ba79eecd610f08befe8ca24cedcf2c1d1112bb81",
+        "size_in_bytes": 118
+      },
+      {
+        "_path": "lib/R/library/caret/data/scat.RData",
+        "path_type": "hardlink",
+        "sha256": "7025574298140e03b1bcab374e35c4690f63b27fbe24a5d155bdcbdc89de2dcf",
+        "sha256_in_prefix": "7025574298140e03b1bcab374e35c4690f63b27fbe24a5d155bdcbdc89de2dcf",
+        "size_in_bytes": 5091
+      },
+      {
+        "_path": "lib/R/library/caret/data/segmentationData.RData",
+        "path_type": "hardlink",
+        "sha256": "b83f2e5cb6ba5da3d0dce60fb6bcb0256eb5f192ae5666ef8ba67f9314dddfd2",
+        "sha256_in_prefix": "b83f2e5cb6ba5da3d0dce60fb6bcb0256eb5f192ae5666ef8ba67f9314dddfd2",
+        "size_in_bytes": 742936
+      },
+      {
+        "_path": "lib/R/library/caret/data/tecator.RData",
+        "path_type": "hardlink",
+        "sha256": "a79fd7ced373576869709a2c746a414bc729be9a032838e3417a57ddf80c6cf5",
+        "sha256_in_prefix": "a79fd7ced373576869709a2c746a414bc729be9a032838e3417a57ddf80c6cf5",
+        "size_in_bytes": 69664
+      },
+      {
+        "_path": "lib/R/library/caret/doc/caret.R",
+        "path_type": "hardlink",
+        "sha256": "7c39762397c1ec0bc25b48b94fd997c7a3276bda5c8f8972fff4e3fe8e714145",
+        "sha256_in_prefix": "7c39762397c1ec0bc25b48b94fd997c7a3276bda5c8f8972fff4e3fe8e714145",
+        "size_in_bytes": 3211
+      },
+      {
+        "_path": "lib/R/library/caret/doc/caret.Rmd",
+        "path_type": "hardlink",
+        "sha256": "ecf29f3d3c943aed5f51653a8003d762f08254c2fcfa30f19f27eb8097b73007",
+        "sha256_in_prefix": "ecf29f3d3c943aed5f51653a8003d762f08254c2fcfa30f19f27eb8097b73007",
+        "size_in_bytes": 10955
+      },
+      {
+        "_path": "lib/R/library/caret/doc/caret.html",
+        "path_type": "hardlink",
+        "sha256": "9e12acbc8210e7bd58ca0975b46901e7279bcd703644d0c2687b054416370921",
+        "sha256_in_prefix": "9e12acbc8210e7bd58ca0975b46901e7279bcd703644d0c2687b054416370921",
+        "size_in_bytes": 260326
+      },
+      {
+        "_path": "lib/R/library/caret/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "8cfcf0d8abd190fc9a01b8c227e27d5dff25a25226dd5a0fef0cf13cde4146bc",
+        "sha256_in_prefix": "8cfcf0d8abd190fc9a01b8c227e27d5dff25a25226dd5a0fef0cf13cde4146bc",
+        "size_in_bytes": 1386
+      },
+      {
+        "_path": "lib/R/library/caret/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "e60b5521a604cd981d2157c251886d7a836d7ae9974e7e14486dc86b85b7c2b5",
+        "sha256_in_prefix": "e60b5521a604cd981d2157c251886d7a836d7ae9974e7e14486dc86b85b7c2b5",
+        "size_in_bytes": 9418
+      },
+      {
+        "_path": "lib/R/library/caret/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "23eeb37cc249482bd280cf7969938de7bbb837f89a230c3f11350e8a31b7f283",
+        "sha256_in_prefix": "23eeb37cc249482bd280cf7969938de7bbb837f89a230c3f11350e8a31b7f283",
+        "size_in_bytes": 2985
+      },
+      {
+        "_path": "lib/R/library/caret/help/caret.rdb",
+        "path_type": "hardlink",
+        "sha256": "3c60ea878ace7eb6a557a26b763aa82e2e3e6b4fe9f5ac27a87acafa1a8c41a9",
+        "sha256_in_prefix": "3c60ea878ace7eb6a557a26b763aa82e2e3e6b4fe9f5ac27a87acafa1a8c41a9",
+        "size_in_bytes": 496143
+      },
+      {
+        "_path": "lib/R/library/caret/help/caret.rdx",
+        "path_type": "hardlink",
+        "sha256": "33ccca409c89f668a32ff1bc2c4f13d10ce20f49829dd656860611c58c7848e4",
+        "sha256_in_prefix": "33ccca409c89f668a32ff1bc2c4f13d10ce20f49829dd656860611c58c7848e4",
+        "size_in_bytes": 2320
+      },
+      {
+        "_path": "lib/R/library/caret/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "580447fe5ad737f0e0013db131e8cf3139396e69954ee590a74f01b61c8baa0f",
+        "sha256_in_prefix": "580447fe5ad737f0e0013db131e8cf3139396e69954ee590a74f01b61c8baa0f",
+        "size_in_bytes": 1012
+      },
+      {
+        "_path": "lib/R/library/caret/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "2ba23a3438d9ae077642ecd922d61c97519adb4aae0e18706ffa3bb63564e429",
+        "sha256_in_prefix": "2ba23a3438d9ae077642ecd922d61c97519adb4aae0e18706ffa3bb63564e429",
+        "size_in_bytes": 52458
+      },
+      {
+        "_path": "lib/R/library/caret/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/caret/libs/caret.so",
+        "path_type": "hardlink",
+        "sha256": "a125ad5e665f7c4760e20cfdedcc6f88be302d50f5fa1e51cacc9d1d1c6b6729",
+        "sha256_in_prefix": "a125ad5e665f7c4760e20cfdedcc6f88be302d50f5fa1e51cacc9d1d1c6b6729",
+        "size_in_bytes": 19888
+      },
+      {
+        "_path": "lib/R/library/caret/models/models.RData",
+        "path_type": "hardlink",
+        "sha256": "093d9caa3427e4abd1ad83ef66a41a100c9cded9818453bd2b7d763ffc05714e",
+        "sha256_in_prefix": "093d9caa3427e4abd1ad83ef66a41a100c9cded9818453bd2b7d763ffc05714e",
+        "size_in_bytes": 103026
+      },
+      {
+        "_path": "lib/R/library/caret/models/sampling.RData",
+        "path_type": "hardlink",
+        "sha256": "0b6f3ad61e5e27ec9e0569f6d76e2ab62381c138050e5b97f42984f6b9a6a1f9",
+        "sha256_in_prefix": "0b6f3ad61e5e27ec9e0569f6d76e2ab62381c138050e5b97f42984f6b9a6a1f9",
+        "size_in_bytes": 1170
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "conda-forge::r-caret",
+  "sha256": "7b737ddad65069246a7873ec0172a0057a1aa580cedd0bc854ea62da115a5e18",
+  "size": 3562560,
+  "subdir": "linux-64",
+  "timestamp": 1687728864000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-caret-6.0_94-r43h57805ef_1.conda",
+  "version": "6.0_94"
+}

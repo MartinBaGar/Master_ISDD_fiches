@@ -1,0 +1,434 @@
+{
+  "build": "r43h884c59f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "r-base >=4.3,<4.4.0a0",
+    "r-cli >=3.6.1",
+    "r-cpp11 >=0.4.3",
+    "r-lifecycle >=1.0.3",
+    "r-rlang >=1.1.0",
+    "r-tzdb >=0.4.0",
+    "r-vctrs >=0.6.1",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-clock-0.7.0-r43h884c59f_0",
+  "files": [
+    "lib/R/library/clock/DESCRIPTION",
+    "lib/R/library/clock/INDEX",
+    "lib/R/library/clock/LICENSE",
+    "lib/R/library/clock/Meta/Rd.rds",
+    "lib/R/library/clock/Meta/data.rds",
+    "lib/R/library/clock/Meta/features.rds",
+    "lib/R/library/clock/Meta/hsearch.rds",
+    "lib/R/library/clock/Meta/links.rds",
+    "lib/R/library/clock/Meta/nsInfo.rds",
+    "lib/R/library/clock/Meta/package.rds",
+    "lib/R/library/clock/Meta/vignette.rds",
+    "lib/R/library/clock/NAMESPACE",
+    "lib/R/library/clock/NEWS.md",
+    "lib/R/library/clock/R/clock",
+    "lib/R/library/clock/R/clock.rdb",
+    "lib/R/library/clock/R/clock.rdx",
+    "lib/R/library/clock/R/sysdata.rdb",
+    "lib/R/library/clock/R/sysdata.rdx",
+    "lib/R/library/clock/data/Rdata.rdb",
+    "lib/R/library/clock/data/Rdata.rds",
+    "lib/R/library/clock/data/Rdata.rdx",
+    "lib/R/library/clock/doc/clock.R",
+    "lib/R/library/clock/doc/clock.Rmd",
+    "lib/R/library/clock/doc/clock.html",
+    "lib/R/library/clock/doc/faq.R",
+    "lib/R/library/clock/doc/faq.Rmd",
+    "lib/R/library/clock/doc/faq.html",
+    "lib/R/library/clock/doc/index.html",
+    "lib/R/library/clock/doc/recipes.R",
+    "lib/R/library/clock/doc/recipes.Rmd",
+    "lib/R/library/clock/doc/recipes.html",
+    "lib/R/library/clock/help/AnIndex",
+    "lib/R/library/clock/help/aliases.rds",
+    "lib/R/library/clock/help/clock.rdb",
+    "lib/R/library/clock/help/clock.rdx",
+    "lib/R/library/clock/help/figures/lifecycle-archived.svg",
+    "lib/R/library/clock/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/clock/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/clock/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/clock/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/clock/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/clock/help/figures/lifecycle-soft-deprecated.svg",
+    "lib/R/library/clock/help/figures/lifecycle-stable.svg",
+    "lib/R/library/clock/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/clock/help/figures/logo.png",
+    "lib/R/library/clock/help/paths.rds",
+    "lib/R/library/clock/html/00Index.html",
+    "lib/R/library/clock/html/R.css",
+    "lib/R/library/clock/libs/clock.so"
+  ],
+  "fn": "r-clock-0.7.0-r43h884c59f_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/conda/pkgs/r-clock-0.7.0-r43h884c59f_0",
+    "type": 1
+  },
+  "md5": "61a95c3d52a7214b749fbdd44a3dc29d",
+  "name": "r-clock",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-clock-0.7.0-r43h884c59f_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/clock/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "e3b301531593113fbcdf5d0a06bfd87c809d98c24949131b4e4a5ba4155510d2",
+        "sha256_in_prefix": "e3b301531593113fbcdf5d0a06bfd87c809d98c24949131b4e4a5ba4155510d2",
+        "size_in_bytes": 1528
+      },
+      {
+        "_path": "lib/R/library/clock/INDEX",
+        "path_type": "hardlink",
+        "sha256": "07c23e6dfff6b024ff5548982ea48e0eb0ef6395346bb04fb29907e2764269d3",
+        "sha256_in_prefix": "07c23e6dfff6b024ff5548982ea48e0eb0ef6395346bb04fb29907e2764269d3",
+        "size_in_bytes": 9830
+      },
+      {
+        "_path": "lib/R/library/clock/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "471f6e26828398f9a71ff0cdda24afa99d8de5b9bd1a570c609899a47aa35e78",
+        "sha256_in_prefix": "471f6e26828398f9a71ff0cdda24afa99d8de5b9bd1a570c609899a47aa35e78",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/clock/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "6b27b49203c456ee83b4e8523c62972aefabb8980ce25473c556aad14ba29604",
+        "sha256_in_prefix": "6b27b49203c456ee83b4e8523c62972aefabb8980ce25473c556aad14ba29604",
+        "size_in_bytes": 5736
+      },
+      {
+        "_path": "lib/R/library/clock/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "a4d76b8429fe28dc0a1e292f0d33f66cff7fd3869d7abc3bf4530e7288f6321b",
+        "sha256_in_prefix": "a4d76b8429fe28dc0a1e292f0d33f66cff7fd3869d7abc3bf4530e7288f6321b",
+        "size_in_bytes": 126
+      },
+      {
+        "_path": "lib/R/library/clock/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/clock/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "b4a3ea5237104c57721ca83f7ceea8985b77c63fb7a1f0318ea911c1cfd44ca6",
+        "sha256_in_prefix": "b4a3ea5237104c57721ca83f7ceea8985b77c63fb7a1f0318ea911c1cfd44ca6",
+        "size_in_bytes": 5568
+      },
+      {
+        "_path": "lib/R/library/clock/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "699ab6be999f90f49bd0d00ea42b7d6e223451c270dae069387575cba02ca702",
+        "sha256_in_prefix": "699ab6be999f90f49bd0d00ea42b7d6e223451c270dae069387575cba02ca702",
+        "size_in_bytes": 4117
+      },
+      {
+        "_path": "lib/R/library/clock/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "bea84cc17126145ab1f2da2be2bc1d87684775a469bcadec19bf9ced1ed218b4",
+        "sha256_in_prefix": "bea84cc17126145ab1f2da2be2bc1d87684775a469bcadec19bf9ced1ed218b4",
+        "size_in_bytes": 2558
+      },
+      {
+        "_path": "lib/R/library/clock/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "d49d52cf28e465b99bcbdef1d195941828e678466443b20407e16dd60d32b950",
+        "sha256_in_prefix": "d49d52cf28e465b99bcbdef1d195941828e678466443b20407e16dd60d32b950",
+        "size_in_bytes": 1477
+      },
+      {
+        "_path": "lib/R/library/clock/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "5ef51ac4a835590bb253fdb04d20575c85dc40a6c8ac1a6cb6ded8e4117c7e4a",
+        "sha256_in_prefix": "5ef51ac4a835590bb253fdb04d20575c85dc40a6c8ac1a6cb6ded8e4117c7e4a",
+        "size_in_bytes": 276
+      },
+      {
+        "_path": "lib/R/library/clock/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "c65f06975887f6d3cd8fe72c51847448e6b151be049a4089603eed5cf1830043",
+        "sha256_in_prefix": "c65f06975887f6d3cd8fe72c51847448e6b151be049a4089603eed5cf1830043",
+        "size_in_bytes": 30924
+      },
+      {
+        "_path": "lib/R/library/clock/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "6a298cb35892a71d8620f81a3ea703905ab682689733309302f19d70567ce2b5",
+        "sha256_in_prefix": "6a298cb35892a71d8620f81a3ea703905ab682689733309302f19d70567ce2b5",
+        "size_in_bytes": 13299
+      },
+      {
+        "_path": "lib/R/library/clock/R/clock",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/clock/R/clock.rdb",
+        "path_type": "hardlink",
+        "sha256": "27ad8fb88b250d463dcafc812b22aadfa50479be87e00c81a675946bb9dcd7dd",
+        "sha256_in_prefix": "27ad8fb88b250d463dcafc812b22aadfa50479be87e00c81a675946bb9dcd7dd",
+        "size_in_bytes": 598254
+      },
+      {
+        "_path": "lib/R/library/clock/R/clock.rdx",
+        "path_type": "hardlink",
+        "sha256": "9b588f8ddfe04f53313763b54342899201ede6dcaf01fa45aeca9f442eb5399e",
+        "sha256_in_prefix": "9b588f8ddfe04f53313763b54342899201ede6dcaf01fa45aeca9f442eb5399e",
+        "size_in_bytes": 15462
+      },
+      {
+        "_path": "lib/R/library/clock/R/sysdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "d3a9404ab9d1bbe32b5b4e5a64019bac3620a1bd217b66f8cbef457f5a1f7665",
+        "sha256_in_prefix": "d3a9404ab9d1bbe32b5b4e5a64019bac3620a1bd217b66f8cbef457f5a1f7665",
+        "size_in_bytes": 38824
+      },
+      {
+        "_path": "lib/R/library/clock/R/sysdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "b8cd1d0d503acb78276e9e9b81d6484da23bbc406e5df2e773e33807001c734a",
+        "sha256_in_prefix": "b8cd1d0d503acb78276e9e9b81d6484da23bbc406e5df2e773e33807001c734a",
+        "size_in_bytes": 158
+      },
+      {
+        "_path": "lib/R/library/clock/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "a29cf2fb3607591140c38a7ff1768d969ba1c77b536c1c3eff40c931834c5c19",
+        "sha256_in_prefix": "a29cf2fb3607591140c38a7ff1768d969ba1c77b536c1c3eff40c931834c5c19",
+        "size_in_bytes": 766
+      },
+      {
+        "_path": "lib/R/library/clock/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "54caa0854ecbb2c799463f67bd1a36466428bf52dd97b1682523e97e6b0a1a80",
+        "sha256_in_prefix": "54caa0854ecbb2c799463f67bd1a36466428bf52dd97b1682523e97e6b0a1a80",
+        "size_in_bytes": 116
+      },
+      {
+        "_path": "lib/R/library/clock/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "79dde6352b8167a89df943e94cf80926512c8c6f9d3197acf10f313e218c9f94",
+        "sha256_in_prefix": "79dde6352b8167a89df943e94cf80926512c8c6f9d3197acf10f313e218c9f94",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "lib/R/library/clock/doc/clock.R",
+        "path_type": "hardlink",
+        "sha256": "76190bd0f7efccf01be0fb7eea696e1ee24626745ad3c0eeb6409f277d33b98e",
+        "sha256_in_prefix": "76190bd0f7efccf01be0fb7eea696e1ee24626745ad3c0eeb6409f277d33b98e",
+        "size_in_bytes": 8200
+      },
+      {
+        "_path": "lib/R/library/clock/doc/clock.Rmd",
+        "path_type": "hardlink",
+        "sha256": "aff661a5c1065b59993073e2bce20199aa9bf07c143a435642d2b041b5afe3ae",
+        "sha256_in_prefix": "aff661a5c1065b59993073e2bce20199aa9bf07c143a435642d2b041b5afe3ae",
+        "size_in_bytes": 16562
+      },
+      {
+        "_path": "lib/R/library/clock/doc/clock.html",
+        "path_type": "hardlink",
+        "sha256": "dfc112c5b1e2c6206482bffa7fcc35e10f09fa7b0451896cc5e23ec5c57b37bb",
+        "sha256_in_prefix": "dfc112c5b1e2c6206482bffa7fcc35e10f09fa7b0451896cc5e23ec5c57b37bb",
+        "size_in_bytes": 69744
+      },
+      {
+        "_path": "lib/R/library/clock/doc/faq.R",
+        "path_type": "hardlink",
+        "sha256": "bb75d91bfe36973a1af1481c7690b1b0aa831a05dbb64b2afa4229875fd750cf",
+        "sha256_in_prefix": "bb75d91bfe36973a1af1481c7690b1b0aa831a05dbb64b2afa4229875fd750cf",
+        "size_in_bytes": 6789
+      },
+      {
+        "_path": "lib/R/library/clock/doc/faq.Rmd",
+        "path_type": "hardlink",
+        "sha256": "5871a906fc6d7fd55b3354d615502c5d03763c3265af3898822a707428c5715d",
+        "sha256_in_prefix": "5871a906fc6d7fd55b3354d615502c5d03763c3265af3898822a707428c5715d",
+        "size_in_bytes": 14690
+      },
+      {
+        "_path": "lib/R/library/clock/doc/faq.html",
+        "path_type": "hardlink",
+        "sha256": "8b19ae4cb312fef751cf9ce662b59fed7ff4566e4a7da710ced2d522c74b1481",
+        "sha256_in_prefix": "8b19ae4cb312fef751cf9ce662b59fed7ff4566e4a7da710ced2d522c74b1481",
+        "size_in_bytes": 62581
+      },
+      {
+        "_path": "lib/R/library/clock/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "caf67deefc09973c8d8442ee8de63d9a89bd97c92b5a1f4763fbf309c3f3da6a",
+        "sha256_in_prefix": "caf67deefc09973c8d8442ee8de63d9a89bd97c92b5a1f4763fbf309c3f3da6a",
+        "size_in_bytes": 2374
+      },
+      {
+        "_path": "lib/R/library/clock/doc/recipes.R",
+        "path_type": "hardlink",
+        "sha256": "fe9ca139fcd329d93b610b7ac1484cddf2d73bdbcc45e7d5f9c8a7a4ffa3901e",
+        "sha256_in_prefix": "fe9ca139fcd329d93b610b7ac1484cddf2d73bdbcc45e7d5f9c8a7a4ffa3901e",
+        "size_in_bytes": 14751
+      },
+      {
+        "_path": "lib/R/library/clock/doc/recipes.Rmd",
+        "path_type": "hardlink",
+        "sha256": "39717a25b0cf7277fdd18ab3db026806256fca7ab89a4d272e242c484be942c7",
+        "sha256_in_prefix": "39717a25b0cf7277fdd18ab3db026806256fca7ab89a4d272e242c484be942c7",
+        "size_in_bytes": 25931
+      },
+      {
+        "_path": "lib/R/library/clock/doc/recipes.html",
+        "path_type": "hardlink",
+        "sha256": "73d2a584043afc139c27eb8ef2a0955d0ff350aaccf1ca4b495ee07e7bbd1ca9",
+        "sha256_in_prefix": "73d2a584043afc139c27eb8ef2a0955d0ff350aaccf1ca4b495ee07e7bbd1ca9",
+        "size_in_bytes": 119732
+      },
+      {
+        "_path": "lib/R/library/clock/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "43762842903cafb60b967312d1235e25ba809661c8d5745d3a8f6e51184bb6d1",
+        "sha256_in_prefix": "43762842903cafb60b967312d1235e25ba809661c8d5745d3a8f6e51184bb6d1",
+        "size_in_bytes": 21899
+      },
+      {
+        "_path": "lib/R/library/clock/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "c3a223c41b54f269bcfc345d9453e3c01d4940c7e4e7e0e0a067e0c4f45bb4ce",
+        "sha256_in_prefix": "c3a223c41b54f269bcfc345d9453e3c01d4940c7e4e7e0e0a067e0c4f45bb4ce",
+        "size_in_bytes": 3278
+      },
+      {
+        "_path": "lib/R/library/clock/help/clock.rdb",
+        "path_type": "hardlink",
+        "sha256": "3e97670916c4098665010ae8b433d70b956082ad6228fd824c5cf9f34134c313",
+        "sha256_in_prefix": "3e97670916c4098665010ae8b433d70b956082ad6228fd824c5cf9f34134c313",
+        "size_in_bytes": 612402
+      },
+      {
+        "_path": "lib/R/library/clock/help/clock.rdx",
+        "path_type": "hardlink",
+        "sha256": "7f1d1c9eed9a686cf9569a962e9096f3cd88e0a18c359f53de86d52002e6d1dc",
+        "sha256_in_prefix": "7f1d1c9eed9a686cf9569a962e9096f3cd88e0a18c359f53de86d52002e6d1dc",
+        "size_in_bytes": 3670
+      },
+      {
+        "_path": "lib/R/library/clock/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "1f91adc5fc098480adc7ae083713d15e4e6d4915a5c6a1ed6488145c480917e9",
+        "sha256_in_prefix": "1f91adc5fc098480adc7ae083713d15e4e6d4915a5c6a1ed6488145c480917e9",
+        "size_in_bytes": 1304
+      },
+      {
+        "_path": "lib/R/library/clock/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "7d6559cb01f8d78aa1e1cb416167de90ace6d1441d3e088062dbedf9891fd69c",
+        "sha256_in_prefix": "7d6559cb01f8d78aa1e1cb416167de90ace6d1441d3e088062dbedf9891fd69c",
+        "size_in_bytes": 1300
+      },
+      {
+        "_path": "lib/R/library/clock/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "b325b309900c9843a235f147918eab4f3b9bcca228656ff16c48bfd067337481",
+        "sha256_in_prefix": "b325b309900c9843a235f147918eab4f3b9bcca228656ff16c48bfd067337481",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "lib/R/library/clock/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ee207407774f49e01a44c86370569aee540c468cfc00b4e1d7fa4c9c9ee626af",
+        "sha256_in_prefix": "ee207407774f49e01a44c86370569aee540c468cfc00b4e1d7fa4c9c9ee626af",
+        "size_in_bytes": 1320
+      },
+      {
+        "_path": "lib/R/library/clock/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "7edd59bc4d9fb8d901894a301aec9a9cc0b5e0144239074ae9da679c2a19003b",
+        "sha256_in_prefix": "7edd59bc4d9fb8d901894a301aec9a9cc0b5e0144239074ae9da679c2a19003b",
+        "size_in_bytes": 1304
+      },
+      {
+        "_path": "lib/R/library/clock/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "94ac10480d97a8bc0b8e625aeb38d85747c77648f0c85b18f119957545f47552",
+        "sha256_in_prefix": "94ac10480d97a8bc0b8e625aeb38d85747c77648f0c85b18f119957545f47552",
+        "size_in_bytes": 1316
+      },
+      {
+        "_path": "lib/R/library/clock/help/figures/lifecycle-soft-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "44f0804365bd36ebe44f91426029c4b11a66c389cbb9e1153cd1f69afa63b4c2",
+        "sha256_in_prefix": "44f0804365bd36ebe44f91426029c4b11a66c389cbb9e1153cd1f69afa63b4c2",
+        "size_in_bytes": 1334
+      },
+      {
+        "_path": "lib/R/library/clock/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "14e0bf4e2a6945ac25e73aa3324b47f414fc3055faec1ac20e8f7d2c1badacba",
+        "sha256_in_prefix": "14e0bf4e2a6945ac25e73aa3324b47f414fc3055faec1ac20e8f7d2c1badacba",
+        "size_in_bytes": 1338
+      },
+      {
+        "_path": "lib/R/library/clock/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "a471d61997868b34d1af241fb4195ab348118046f6df3af21fd8a961ea0c248c",
+        "sha256_in_prefix": "a471d61997868b34d1af241fb4195ab348118046f6df3af21fd8a961ea0c248c",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "lib/R/library/clock/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "c75f77ee4823643abc8a260007671c24f893903fcb1c2ea612a66806e2a276ce",
+        "sha256_in_prefix": "c75f77ee4823643abc8a260007671c24f893903fcb1c2ea612a66806e2a276ce",
+        "size_in_bytes": 21461
+      },
+      {
+        "_path": "lib/R/library/clock/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "a19422c59d9dc24fd836fec096837072039f7a3df87fa795c45bddb137f33a8f",
+        "sha256_in_prefix": "a19422c59d9dc24fd836fec096837072039f7a3df87fa795c45bddb137f33a8f",
+        "size_in_bytes": 1349
+      },
+      {
+        "_path": "lib/R/library/clock/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "9dd11d011389fb033d11201dc469ab27462fbb40d5047f7eb89f4b008400285f",
+        "sha256_in_prefix": "9dd11d011389fb033d11201dc469ab27462fbb40d5047f7eb89f4b008400285f",
+        "size_in_bytes": 69632
+      },
+      {
+        "_path": "lib/R/library/clock/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/clock/libs/clock.so",
+        "path_type": "hardlink",
+        "sha256": "7f2c5ee4ccdb680248098d46a3e133600650d7a6c2fba7a8549ef1716949b2ac",
+        "sha256_in_prefix": "7f2c5ee4ccdb680248098d46a3e133600650d7a6c2fba7a8549ef1716949b2ac",
+        "size_in_bytes": 1908192
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "861d8cd40402f7c9243681ab0836543a11729f11753eb0ef92ec719a03c63a8b",
+  "size": 1667395,
+  "subdir": "linux-64",
+  "timestamp": 1695446559000,
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-clock-0.7.0-r43h884c59f_0.conda",
+  "version": "0.7.0"
+}

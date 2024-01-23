@@ -1,0 +1,236 @@
+{
+  "build": "r43h142f84f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-listenv-0.9.0-r43h142f84f_0",
+  "files": [
+    "lib/R/library/listenv/DESCRIPTION",
+    "lib/R/library/listenv/INDEX",
+    "lib/R/library/listenv/Meta/Rd.rds",
+    "lib/R/library/listenv/Meta/features.rds",
+    "lib/R/library/listenv/Meta/hsearch.rds",
+    "lib/R/library/listenv/Meta/links.rds",
+    "lib/R/library/listenv/Meta/nsInfo.rds",
+    "lib/R/library/listenv/Meta/package.rds",
+    "lib/R/library/listenv/Meta/vignette.rds",
+    "lib/R/library/listenv/NAMESPACE",
+    "lib/R/library/listenv/NEWS.md",
+    "lib/R/library/listenv/R/listenv",
+    "lib/R/library/listenv/R/listenv.rdb",
+    "lib/R/library/listenv/R/listenv.rdx",
+    "lib/R/library/listenv/WORDLIST",
+    "lib/R/library/listenv/doc/index.html",
+    "lib/R/library/listenv/doc/listenv.html",
+    "lib/R/library/listenv/doc/listenv.md.rsp",
+    "lib/R/library/listenv/help/AnIndex",
+    "lib/R/library/listenv/help/aliases.rds",
+    "lib/R/library/listenv/help/listenv.rdb",
+    "lib/R/library/listenv/help/listenv.rdx",
+    "lib/R/library/listenv/help/paths.rds",
+    "lib/R/library/listenv/html/00Index.html",
+    "lib/R/library/listenv/html/R.css"
+  ],
+  "fn": "r-listenv-0.9.0-r43h142f84f_0.conda",
+  "license": "LGPL-2.1",
+  "link": {
+    "source": "/opt/conda/pkgs/r-listenv-0.9.0-r43h142f84f_0",
+    "type": 1
+  },
+  "md5": "cae1f90a6cb05a24c585da1932351f49",
+  "name": "r-listenv",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-listenv-0.9.0-r43h142f84f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/listenv/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "d6683abed90e0d4bf98e028291280f4a79c2085cc3bcf5303b964b809982c14d",
+        "sha256_in_prefix": "d6683abed90e0d4bf98e028291280f4a79c2085cc3bcf5303b964b809982c14d",
+        "size_in_bytes": 1069
+      },
+      {
+        "_path": "lib/R/library/listenv/INDEX",
+        "path_type": "hardlink",
+        "sha256": "7ea3d620f26de929daa841658f685e55da19707c5cd01b93528e8b3bdae6a552",
+        "sha256_in_prefix": "7ea3d620f26de929daa841658f685e55da19707c5cd01b93528e8b3bdae6a552",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "lib/R/library/listenv/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "5754d753e29a9566a9f7d9bb8d74cec3f9fc3ec0c71514b391197ec5d7c98e5d",
+        "sha256_in_prefix": "5754d753e29a9566a9f7d9bb8d74cec3f9fc3ec0c71514b391197ec5d7c98e5d",
+        "size_in_bytes": 697
+      },
+      {
+        "_path": "lib/R/library/listenv/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/listenv/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "2dbad6a8de1c1212b8346dac9b617e7209547bd187cce557ad936f8325597a1a",
+        "sha256_in_prefix": "2dbad6a8de1c1212b8346dac9b617e7209547bd187cce557ad936f8325597a1a",
+        "size_in_bytes": 722
+      },
+      {
+        "_path": "lib/R/library/listenv/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "6a3c8cb508dbe330d8344b779c2633b4e5f04852d1ff3def0e55271a3bc5394d",
+        "sha256_in_prefix": "6a3c8cb508dbe330d8344b779c2633b4e5f04852d1ff3def0e55271a3bc5394d",
+        "size_in_bytes": 342
+      },
+      {
+        "_path": "lib/R/library/listenv/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "4892051d8951de851835498eaf51b63e7d7c47f45eb2eeb6935d957b8b4663b7",
+        "sha256_in_prefix": "4892051d8951de851835498eaf51b63e7d7c47f45eb2eeb6935d957b8b4663b7",
+        "size_in_bytes": 431
+      },
+      {
+        "_path": "lib/R/library/listenv/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "2dcaec34e68d5e2826268e85a5c493b29cb667846b2a4a854f5e65e9f35b2d53",
+        "sha256_in_prefix": "2dcaec34e68d5e2826268e85a5c493b29cb667846b2a4a854f5e65e9f35b2d53",
+        "size_in_bytes": 1032
+      },
+      {
+        "_path": "lib/R/library/listenv/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "d68fa4c3b676293fa7f83d214838a67daf025d373d26461849870d9906675611",
+        "sha256_in_prefix": "d68fa4c3b676293fa7f83d214838a67daf025d373d26461849870d9906675611",
+        "size_in_bytes": 230
+      },
+      {
+        "_path": "lib/R/library/listenv/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "9b84a5569604fa138a6d924730974b53869f70c56026b929ebf224f455a2a5eb",
+        "sha256_in_prefix": "9b84a5569604fa138a6d924730974b53869f70c56026b929ebf224f455a2a5eb",
+        "size_in_bytes": 1020
+      },
+      {
+        "_path": "lib/R/library/listenv/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "85c8c6a294f00337bb9f389f64d990f3f9ed0374a88a0727d01d8f04670fa85d",
+        "sha256_in_prefix": "85c8c6a294f00337bb9f389f64d990f3f9ed0374a88a0727d01d8f04670fa85d",
+        "size_in_bytes": 5730
+      },
+      {
+        "_path": "lib/R/library/listenv/R/listenv",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/listenv/R/listenv.rdb",
+        "path_type": "hardlink",
+        "sha256": "c172994dd5be4f48ba1aca987251e0aff17c8c8f568da5bab627d22b871aa0c9",
+        "sha256_in_prefix": "c172994dd5be4f48ba1aca987251e0aff17c8c8f568da5bab627d22b871aa0c9",
+        "size_in_bytes": 69340
+      },
+      {
+        "_path": "lib/R/library/listenv/R/listenv.rdx",
+        "path_type": "hardlink",
+        "sha256": "7c531a42ce9fca2ffc66346d8a6b5502c78f6fe1be28ed356e5a6a89674d7d5a",
+        "sha256_in_prefix": "7c531a42ce9fca2ffc66346d8a6b5502c78f6fe1be28ed356e5a6a89674d7d5a",
+        "size_in_bytes": 896
+      },
+      {
+        "_path": "lib/R/library/listenv/WORDLIST",
+        "path_type": "hardlink",
+        "sha256": "def0ed2c9b93863eed274a6b92c838caed122bccfb996565cfa32385a9fa3b09",
+        "sha256_in_prefix": "def0ed2c9b93863eed274a6b92c838caed122bccfb996565cfa32385a9fa3b09",
+        "size_in_bytes": 27
+      },
+      {
+        "_path": "lib/R/library/listenv/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "bb20501b1aad18e080065743ad1be5fe4913c65f53e17b842b31364ea1df7d4a",
+        "sha256_in_prefix": "bb20501b1aad18e080065743ad1be5fe4913c65f53e17b842b31364ea1df7d4a",
+        "size_in_bytes": 1328
+      },
+      {
+        "_path": "lib/R/library/listenv/doc/listenv.html",
+        "path_type": "hardlink",
+        "sha256": "b6b15cd05263d2efb1592fbefd514249e38c048e608bd75abcb8b2613dab5fe3",
+        "sha256_in_prefix": "b6b15cd05263d2efb1592fbefd514249e38c048e608bd75abcb8b2613dab5fe3",
+        "size_in_bytes": 17552
+      },
+      {
+        "_path": "lib/R/library/listenv/doc/listenv.md.rsp",
+        "path_type": "hardlink",
+        "sha256": "31122d4f225a7c01052596421a069c656355a732abe69b6078bc04a4fe043282",
+        "sha256_in_prefix": "31122d4f225a7c01052596421a069c656355a732abe69b6078bc04a4fe043282",
+        "size_in_bytes": 10113
+      },
+      {
+        "_path": "lib/R/library/listenv/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "fb68835dfb69ad093c2076569440ecccd258cebc1aad9d90c06f23dff70f184f",
+        "sha256_in_prefix": "fb68835dfb69ad093c2076569440ecccd258cebc1aad9d90c06f23dff70f184f",
+        "size_in_bytes": 630
+      },
+      {
+        "_path": "lib/R/library/listenv/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "601526c52ccf5d914c95bc4f32a8b11942d23a9c80a0929ca032bbd7de65ecc0",
+        "sha256_in_prefix": "601526c52ccf5d914c95bc4f32a8b11942d23a9c80a0929ca032bbd7de65ecc0",
+        "size_in_bytes": 283
+      },
+      {
+        "_path": "lib/R/library/listenv/help/listenv.rdb",
+        "path_type": "hardlink",
+        "sha256": "0d47e9ba531f019c4f283343e2f0d0e00be8b125e45ed8349de4085673693660",
+        "sha256_in_prefix": "0d47e9ba531f019c4f283343e2f0d0e00be8b125e45ed8349de4085673693660",
+        "size_in_bytes": 16631
+      },
+      {
+        "_path": "lib/R/library/listenv/help/listenv.rdx",
+        "path_type": "hardlink",
+        "sha256": "023d31f9c3af07982e84259c86a860511d84d6aa9f6b59623e85c587f6588472",
+        "sha256_in_prefix": "023d31f9c3af07982e84259c86a860511d84d6aa9f6b59623e85c587f6588472",
+        "size_in_bytes": 410
+      },
+      {
+        "_path": "lib/R/library/listenv/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "dcaf20ea705c311f3a957770f22bc4508d59225cd9d44e94de0cb3fd4ffa62a3",
+        "sha256_in_prefix": "dcaf20ea705c311f3a957770f22bc4508d59225cd9d44e94de0cb3fd4ffa62a3",
+        "size_in_bytes": 250
+      },
+      {
+        "_path": "lib/R/library/listenv/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "bb4b3a5ede97734514ba64b4ba03e7553c4aa5d67f7498ea89beacd9319883fa",
+        "sha256_in_prefix": "bb4b3a5ede97734514ba64b4ba03e7553c4aa5d67f7498ea89beacd9319883fa",
+        "size_in_bytes": 1835
+      },
+      {
+        "_path": "lib/R/library/listenv/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "fa358846e0826e9858873ab8c506f1eebeeb9bff9642d6aff38de763364ac4c7",
+  "size": 117857,
+  "subdir": "noarch",
+  "timestamp": 1695436560000,
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-listenv-0.9.0-r43h142f84f_0.conda",
+  "version": "0.9.0"
+}

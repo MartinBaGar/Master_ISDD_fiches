@@ -1,0 +1,457 @@
+{
+  "build": "r43h6115d3f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "r-cli >=3.6.0",
+    "r-glue >=1.6.2",
+    "r-rlang >=1.1.0",
+    "r-tibble >=3.2.1",
+    "r-vctrs >=0.6.0",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-hardhat-1.3.0-r43h6115d3f_0",
+  "files": [
+    "lib/R/library/hardhat/DESCRIPTION",
+    "lib/R/library/hardhat/INDEX",
+    "lib/R/library/hardhat/LICENSE",
+    "lib/R/library/hardhat/Meta/Rd.rds",
+    "lib/R/library/hardhat/Meta/data.rds",
+    "lib/R/library/hardhat/Meta/features.rds",
+    "lib/R/library/hardhat/Meta/hsearch.rds",
+    "lib/R/library/hardhat/Meta/links.rds",
+    "lib/R/library/hardhat/Meta/nsInfo.rds",
+    "lib/R/library/hardhat/Meta/package.rds",
+    "lib/R/library/hardhat/Meta/vignette.rds",
+    "lib/R/library/hardhat/NAMESPACE",
+    "lib/R/library/hardhat/NEWS.md",
+    "lib/R/library/hardhat/R/hardhat",
+    "lib/R/library/hardhat/R/hardhat.rdb",
+    "lib/R/library/hardhat/R/hardhat.rdx",
+    "lib/R/library/hardhat/data/Rdata.rdb",
+    "lib/R/library/hardhat/data/Rdata.rds",
+    "lib/R/library/hardhat/data/Rdata.rdx",
+    "lib/R/library/hardhat/doc/forge.R",
+    "lib/R/library/hardhat/doc/forge.Rmd",
+    "lib/R/library/hardhat/doc/forge.html",
+    "lib/R/library/hardhat/doc/index.html",
+    "lib/R/library/hardhat/doc/mold.R",
+    "lib/R/library/hardhat/doc/mold.Rmd",
+    "lib/R/library/hardhat/doc/mold.html",
+    "lib/R/library/hardhat/doc/package.R",
+    "lib/R/library/hardhat/doc/package.Rmd",
+    "lib/R/library/hardhat/doc/package.html",
+    "lib/R/library/hardhat/help/AnIndex",
+    "lib/R/library/hardhat/help/aliases.rds",
+    "lib/R/library/hardhat/help/figures/Fitting.png",
+    "lib/R/library/hardhat/help/figures/Prediction.png",
+    "lib/R/library/hardhat/help/figures/factor-handling.png",
+    "lib/R/library/hardhat/help/figures/lifecycle-archived.svg",
+    "lib/R/library/hardhat/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/hardhat/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/hardhat/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/hardhat/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/hardhat/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/hardhat/help/figures/lifecycle-soft-deprecated.svg",
+    "lib/R/library/hardhat/help/figures/lifecycle-stable.svg",
+    "lib/R/library/hardhat/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/hardhat/help/figures/logo.png",
+    "lib/R/library/hardhat/help/hardhat.rdb",
+    "lib/R/library/hardhat/help/hardhat.rdx",
+    "lib/R/library/hardhat/help/paths.rds",
+    "lib/R/library/hardhat/html/00Index.html",
+    "lib/R/library/hardhat/html/R.css",
+    "lib/R/library/hardhat/templates/R/constructor.R",
+    "lib/R/library/hardhat/templates/R/fit.R",
+    "lib/R/library/hardhat/templates/R/predict.R"
+  ],
+  "fn": "r-hardhat-1.3.0-r43h6115d3f_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/conda/pkgs/r-hardhat-1.3.0-r43h6115d3f_0",
+    "type": 1
+  },
+  "md5": "cdc9575d90c7dbb59b4ab44a8b972992",
+  "name": "r-hardhat",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-hardhat-1.3.0-r43h6115d3f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/hardhat/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "95a3fc501bf7ebfac117fe0e6660dd4370005e16eb406a8f8a99b3af06ac4210",
+        "sha256_in_prefix": "95a3fc501bf7ebfac117fe0e6660dd4370005e16eb406a8f8a99b3af06ac4210",
+        "size_in_bytes": 1745
+      },
+      {
+        "_path": "lib/R/library/hardhat/INDEX",
+        "path_type": "hardlink",
+        "sha256": "62a4c107f0090c14a7729866af64f32d59def9fc24fc37afa4dcdd69db52dbb9",
+        "sha256_in_prefix": "62a4c107f0090c14a7729866af64f32d59def9fc24fc37afa4dcdd69db52dbb9",
+        "size_in_bytes": 3011
+      },
+      {
+        "_path": "lib/R/library/hardhat/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "aad3d9ad0adabef2277a67f1aa1dcbce099689af5aab4cd1c3ec436f8ccae2d8",
+        "sha256_in_prefix": "aad3d9ad0adabef2277a67f1aa1dcbce099689af5aab4cd1c3ec436f8ccae2d8",
+        "size_in_bytes": 45
+      },
+      {
+        "_path": "lib/R/library/hardhat/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "571fbcc962d3007c887f8152cfd48ca61e4076c05636ef5cff886161a1dc7423",
+        "sha256_in_prefix": "571fbcc962d3007c887f8152cfd48ca61e4076c05636ef5cff886161a1dc7423",
+        "size_in_bytes": 2157
+      },
+      {
+        "_path": "lib/R/library/hardhat/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "d959953cd79db241db746329d5352df94e26cc225b414db02e5b5f0eb51b2de1",
+        "sha256_in_prefix": "d959953cd79db241db746329d5352df94e26cc225b414db02e5b5f0eb51b2de1",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/R/library/hardhat/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/hardhat/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "21392af314e6e344733312ec326470405898dd2bef846c31658d8db883ff2fcf",
+        "sha256_in_prefix": "21392af314e6e344733312ec326470405898dd2bef846c31658d8db883ff2fcf",
+        "size_in_bytes": 2016
+      },
+      {
+        "_path": "lib/R/library/hardhat/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "bccc31820e1f0011814547423e9039748d7d59e7fabcbb8594a1b4f3a20c6820",
+        "sha256_in_prefix": "bccc31820e1f0011814547423e9039748d7d59e7fabcbb8594a1b4f3a20c6820",
+        "size_in_bytes": 1199
+      },
+      {
+        "_path": "lib/R/library/hardhat/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "6e48c2eb021862675f6eb8553204e16e9796cb84b6158447d2ce86f029562e86",
+        "sha256_in_prefix": "6e48c2eb021862675f6eb8553204e16e9796cb84b6158447d2ce86f029562e86",
+        "size_in_bytes": 1111
+      },
+      {
+        "_path": "lib/R/library/hardhat/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "0a417670cab55606d7115a12fd970deebf98945979bd55f2d05c9c8205044ec9",
+        "sha256_in_prefix": "0a417670cab55606d7115a12fd970deebf98945979bd55f2d05c9c8205044ec9",
+        "size_in_bytes": 1567
+      },
+      {
+        "_path": "lib/R/library/hardhat/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "736b4e5cb1f6fc9c71972a7b941eea179a4377df32394a32d5c88645f62bd281",
+        "sha256_in_prefix": "736b4e5cb1f6fc9c71972a7b941eea179a4377df32394a32d5c88645f62bd281",
+        "size_in_bytes": 286
+      },
+      {
+        "_path": "lib/R/library/hardhat/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "98aac04047d5075b6362c7cd5b336f51be00c9014a7ebab79d4349be4be9244b",
+        "sha256_in_prefix": "98aac04047d5075b6362c7cd5b336f51be00c9014a7ebab79d4349be4be9244b",
+        "size_in_bytes": 4234
+      },
+      {
+        "_path": "lib/R/library/hardhat/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "46fcc863e2b0a81daed0781292357f5700af24498db2999c3c90f939af3ef06a",
+        "sha256_in_prefix": "46fcc863e2b0a81daed0781292357f5700af24498db2999c3c90f939af3ef06a",
+        "size_in_bytes": 9363
+      },
+      {
+        "_path": "lib/R/library/hardhat/R/hardhat",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/hardhat/R/hardhat.rdb",
+        "path_type": "hardlink",
+        "sha256": "e6e6d06f8573fe06a9c8721e77c20fec2ed13e3acab75968f1a1b07b1df64dbf",
+        "sha256_in_prefix": "e6e6d06f8573fe06a9c8721e77c20fec2ed13e3acab75968f1a1b07b1df64dbf",
+        "size_in_bytes": 187767
+      },
+      {
+        "_path": "lib/R/library/hardhat/R/hardhat.rdx",
+        "path_type": "hardlink",
+        "sha256": "28202e5ccda43a08423c3cc10f270abead28d5f1486fc670b03cb869cbc4d069",
+        "sha256_in_prefix": "28202e5ccda43a08423c3cc10f270abead28d5f1486fc670b03cb869cbc4d069",
+        "size_in_bytes": 4616
+      },
+      {
+        "_path": "lib/R/library/hardhat/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "5ec47e7ab0ec80b6a3263720808246c5648d1b7a13582a2d9e15abf45d133523",
+        "sha256_in_prefix": "5ec47e7ab0ec80b6a3263720808246c5648d1b7a13582a2d9e15abf45d133523",
+        "size_in_bytes": 630
+      },
+      {
+        "_path": "lib/R/library/hardhat/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "db1853155c9af609ebb8f13b924ba7392e9b1e71a23d0af9f26cfd5e938abdc6",
+        "sha256_in_prefix": "db1853155c9af609ebb8f13b924ba7392e9b1e71a23d0af9f26cfd5e938abdc6",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "lib/R/library/hardhat/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "0d1cc39b32b7d837e79d49aaecb04f11db3bb2ac2fd07367cb838f70aaf60fa5",
+        "sha256_in_prefix": "0d1cc39b32b7d837e79d49aaecb04f11db3bb2ac2fd07367cb838f70aaf60fa5",
+        "size_in_bytes": 166
+      },
+      {
+        "_path": "lib/R/library/hardhat/doc/forge.R",
+        "path_type": "hardlink",
+        "sha256": "d56324963dc4e613041cff996d6d09f5c396f204d79b56c2396a49672cbae3fd",
+        "sha256_in_prefix": "d56324963dc4e613041cff996d6d09f5c396f204d79b56c2396a49672cbae3fd",
+        "size_in_bytes": 3863
+      },
+      {
+        "_path": "lib/R/library/hardhat/doc/forge.Rmd",
+        "path_type": "hardlink",
+        "sha256": "f904c7b9b060881197f72df61a3583553985172fe260f28117c7ccb2af4dbf61",
+        "sha256_in_prefix": "f904c7b9b060881197f72df61a3583553985172fe260f28117c7ccb2af4dbf61",
+        "size_in_bytes": 9669
+      },
+      {
+        "_path": "lib/R/library/hardhat/doc/forge.html",
+        "path_type": "hardlink",
+        "sha256": "6a8711d1b028590c73826f1ed3702b080b25af81a880511cc865d0e0de0ff103",
+        "sha256_in_prefix": "6a8711d1b028590c73826f1ed3702b080b25af81a880511cc865d0e0de0ff103",
+        "size_in_bytes": 51967
+      },
+      {
+        "_path": "lib/R/library/hardhat/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "c831dfb0d1bf93fd7a3c7d36fc243e08eb82568dd110c1587c422a7413e26a4b",
+        "sha256_in_prefix": "c831dfb0d1bf93fd7a3c7d36fc243e08eb82568dd110c1587c422a7413e26a4b",
+        "size_in_bytes": 2442
+      },
+      {
+        "_path": "lib/R/library/hardhat/doc/mold.R",
+        "path_type": "hardlink",
+        "sha256": "87a680f32fa17c2d75ebfe815f6875960372a4db44cc033bdf451357d59b1f84",
+        "sha256_in_prefix": "87a680f32fa17c2d75ebfe815f6875960372a4db44cc033bdf451357d59b1f84",
+        "size_in_bytes": 3994
+      },
+      {
+        "_path": "lib/R/library/hardhat/doc/mold.Rmd",
+        "path_type": "hardlink",
+        "sha256": "22b1b81c97247b5affe32bff337ed7c595a51c40b5b1e03a0055f8ee05407d30",
+        "sha256_in_prefix": "22b1b81c97247b5affe32bff337ed7c595a51c40b5b1e03a0055f8ee05407d30",
+        "size_in_bytes": 9885
+      },
+      {
+        "_path": "lib/R/library/hardhat/doc/mold.html",
+        "path_type": "hardlink",
+        "sha256": "75502fb64de837b2f3d43f5c4417f7727f2ade38b33b5c4f575a719e1fc3e1a0",
+        "sha256_in_prefix": "75502fb64de837b2f3d43f5c4417f7727f2ade38b33b5c4f575a719e1fc3e1a0",
+        "size_in_bytes": 60892
+      },
+      {
+        "_path": "lib/R/library/hardhat/doc/package.R",
+        "path_type": "hardlink",
+        "sha256": "b0d478aac5a55aaf9c8419dc97e4f6cc7e0bc76d32a5639bc4940cca6290b605",
+        "sha256_in_prefix": "b0d478aac5a55aaf9c8419dc97e4f6cc7e0bc76d32a5639bc4940cca6290b605",
+        "size_in_bytes": 8765
+      },
+      {
+        "_path": "lib/R/library/hardhat/doc/package.Rmd",
+        "path_type": "hardlink",
+        "sha256": "033c59470ee46cce27f591bb1afa5817b052459b287e024aa947c57794c228bd",
+        "sha256_in_prefix": "033c59470ee46cce27f591bb1afa5817b052459b287e024aa947c57794c228bd",
+        "size_in_bytes": 18784
+      },
+      {
+        "_path": "lib/R/library/hardhat/doc/package.html",
+        "path_type": "hardlink",
+        "sha256": "6175831b8c12da163e74fca986ce7fd344090a2bc9862a271dcc3da22af37604",
+        "sha256_in_prefix": "6175831b8c12da163e74fca986ce7fd344090a2bc9862a271dcc3da22af37604",
+        "size_in_bytes": 319360
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "1766cec2837cff8f60dfe15ff7dee842cab47d3258b5c77979c40dc7e5793dc6",
+        "sha256_in_prefix": "1766cec2837cff8f60dfe15ff7dee842cab47d3258b5c77979c40dc7e5793dc6",
+        "size_in_bytes": 3669
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "ba58b9a34db40a6b55f24a64c1cbebec84e8c627369dd01b8eacc349eda63b8b",
+        "sha256_in_prefix": "ba58b9a34db40a6b55f24a64c1cbebec84e8c627369dd01b8eacc349eda63b8b",
+        "size_in_bytes": 918
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/Fitting.png",
+        "path_type": "hardlink",
+        "sha256": "ac5a69373a56a8f23c1fb0457a1f7f841c38bb1b2631a17437b2b450c2f1856d",
+        "sha256_in_prefix": "ac5a69373a56a8f23c1fb0457a1f7f841c38bb1b2631a17437b2b450c2f1856d",
+        "size_in_bytes": 109988
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/Prediction.png",
+        "path_type": "hardlink",
+        "sha256": "db183a31c6921fe48b0f18a66a9e29eccbd5b8919089b8ca1a0f6bb3fa14a44a",
+        "sha256_in_prefix": "db183a31c6921fe48b0f18a66a9e29eccbd5b8919089b8ca1a0f6bb3fa14a44a",
+        "size_in_bytes": 75268
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/factor-handling.png",
+        "path_type": "hardlink",
+        "sha256": "09ca34050e4892efb7d73f1491bd60cb8055ecc10c6436b5f7d9632523140d7f",
+        "sha256_in_prefix": "09ca34050e4892efb7d73f1491bd60cb8055ecc10c6436b5f7d9632523140d7f",
+        "size_in_bytes": 49112
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "1f91adc5fc098480adc7ae083713d15e4e6d4915a5c6a1ed6488145c480917e9",
+        "sha256_in_prefix": "1f91adc5fc098480adc7ae083713d15e4e6d4915a5c6a1ed6488145c480917e9",
+        "size_in_bytes": 1304
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "7d6559cb01f8d78aa1e1cb416167de90ace6d1441d3e088062dbedf9891fd69c",
+        "sha256_in_prefix": "7d6559cb01f8d78aa1e1cb416167de90ace6d1441d3e088062dbedf9891fd69c",
+        "size_in_bytes": 1300
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "b325b309900c9843a235f147918eab4f3b9bcca228656ff16c48bfd067337481",
+        "sha256_in_prefix": "b325b309900c9843a235f147918eab4f3b9bcca228656ff16c48bfd067337481",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ee207407774f49e01a44c86370569aee540c468cfc00b4e1d7fa4c9c9ee626af",
+        "sha256_in_prefix": "ee207407774f49e01a44c86370569aee540c468cfc00b4e1d7fa4c9c9ee626af",
+        "size_in_bytes": 1320
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "7edd59bc4d9fb8d901894a301aec9a9cc0b5e0144239074ae9da679c2a19003b",
+        "sha256_in_prefix": "7edd59bc4d9fb8d901894a301aec9a9cc0b5e0144239074ae9da679c2a19003b",
+        "size_in_bytes": 1304
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "94ac10480d97a8bc0b8e625aeb38d85747c77648f0c85b18f119957545f47552",
+        "sha256_in_prefix": "94ac10480d97a8bc0b8e625aeb38d85747c77648f0c85b18f119957545f47552",
+        "size_in_bytes": 1316
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/lifecycle-soft-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "44f0804365bd36ebe44f91426029c4b11a66c389cbb9e1153cd1f69afa63b4c2",
+        "sha256_in_prefix": "44f0804365bd36ebe44f91426029c4b11a66c389cbb9e1153cd1f69afa63b4c2",
+        "size_in_bytes": 1334
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "14e0bf4e2a6945ac25e73aa3324b47f414fc3055faec1ac20e8f7d2c1badacba",
+        "sha256_in_prefix": "14e0bf4e2a6945ac25e73aa3324b47f414fc3055faec1ac20e8f7d2c1badacba",
+        "size_in_bytes": 1338
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "a471d61997868b34d1af241fb4195ab348118046f6df3af21fd8a961ea0c248c",
+        "sha256_in_prefix": "a471d61997868b34d1af241fb4195ab348118046f6df3af21fd8a961ea0c248c",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "15f1c4af999d9668af23636f18ad998b07cbec5923cb34b83cf98e59c9b544ed",
+        "sha256_in_prefix": "15f1c4af999d9668af23636f18ad998b07cbec5923cb34b83cf98e59c9b544ed",
+        "size_in_bytes": 32793
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/hardhat.rdb",
+        "path_type": "hardlink",
+        "sha256": "c9e151a59e1b0960a328e1ba85d3ebd0f5453f40304ef51a369e9d71a1918659",
+        "sha256_in_prefix": "c9e151a59e1b0960a328e1ba85d3ebd0f5453f40304ef51a369e9d71a1918659",
+        "size_in_bytes": 153030
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/hardhat.rdx",
+        "path_type": "hardlink",
+        "sha256": "035a8a0c113953eae8e32d064bd79c053bf6692575be0203c765b604acefedfb",
+        "sha256_in_prefix": "035a8a0c113953eae8e32d064bd79c053bf6692575be0203c765b604acefedfb",
+        "size_in_bytes": 1376
+      },
+      {
+        "_path": "lib/R/library/hardhat/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "705081e93d57c57fe5d0fac03838c1a780ce63b73cd6dd287ca299d05cf5c2d7",
+        "sha256_in_prefix": "705081e93d57c57fe5d0fac03838c1a780ce63b73cd6dd287ca299d05cf5c2d7",
+        "size_in_bytes": 636
+      },
+      {
+        "_path": "lib/R/library/hardhat/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "41b9ad5291f2666b5d6a6ca7ee21d9deedd63afb31dbbac9f6056df37affdf99",
+        "sha256_in_prefix": "41b9ad5291f2666b5d6a6ca7ee21d9deedd63afb31dbbac9f6056df37affdf99",
+        "size_in_bytes": 13950
+      },
+      {
+        "_path": "lib/R/library/hardhat/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/hardhat/templates/R/constructor.R",
+        "path_type": "hardlink",
+        "sha256": "2781bb36a7a0133c22ab1f5ea947a8c11bb8c0190676039518f6112d758eb394",
+        "sha256_in_prefix": "2781bb36a7a0133c22ab1f5ea947a8c11bb8c0190676039518f6112d758eb394",
+        "size_in_bytes": 128
+      },
+      {
+        "_path": "lib/R/library/hardhat/templates/R/fit.R",
+        "path_type": "hardlink",
+        "sha256": "ae0cfe03b1d00e6085d1d539d08c99f48ac0a47600ca3060a4d1ae0235f91378",
+        "sha256_in_prefix": "ae0cfe03b1d00e6085d1d539d08c99f48ac0a47600ca3060a4d1ae0235f91378",
+        "size_in_bytes": 2679
+      },
+      {
+        "_path": "lib/R/library/hardhat/templates/R/predict.R",
+        "path_type": "hardlink",
+        "sha256": "af9895c75cea8ec6b9dbbe313812cffbbf2651928dc835af8d64c71d2de40ed8",
+        "sha256_in_prefix": "af9895c75cea8ec6b9dbbe313812cffbbf2651928dc835af8d64c71d2de40ed8",
+        "size_in_bytes": 1756
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d983046d092991ab729f515b755c73af073538e952a694ffd9f0b7fb5a7c296a",
+  "size": 802362,
+  "subdir": "noarch",
+  "timestamp": 1695450013000,
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-hardhat-1.3.0-r43h6115d3f_0.conda",
+  "version": "1.3.0"
+}
