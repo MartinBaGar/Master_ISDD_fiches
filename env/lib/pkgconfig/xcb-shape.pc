@@ -1,0 +1,11 @@
+prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: XCB Shape
+Description: XCB Shape Extension
+Version: 1.15
+Requires.private: xcb
+Libs: -L${libdir} -lxcb-shape
+Cflags: -I${includedir}

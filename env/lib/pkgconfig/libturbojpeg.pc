@@ -1,0 +1,10 @@
+prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
+exec_prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
+libdir=/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib
+includedir=/home/mabagar/etudes/masters/Master_ISDD_fiches/env/include
+
+Name: libturbojpeg
+Description: A SIMD-accelerated JPEG codec that provides the TurboJPEG API
+Version: 3.0.0
+Libs: -L${libdir} -lturbojpeg
+Cflags: -I${includedir}
