@@ -186,10 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">TP4 : arbres de partitionnement, cart</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">../data</div>
-  </div>
-  </div>
+</div>
 
 
 
@@ -370,17 +367,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb19-5"><a href="#cb19-5"></a>  <span class="at">test_ness =</span> conf_test_ness<span class="sc">$</span>overall[<span class="dv">1</span>]</span>
 <span id="cb19-6"><a href="#cb19-6"></a>)</span>
 <span id="cb19-7"><a href="#cb19-7"></a></span>
-<span id="cb19-8"><a href="#cb19-8"></a>df_acc <span class="ot">&lt;-</span> <span class="fu">t</span>(df_acc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-8"><a href="#cb19-8"></a>df_acc <span class="ot">&lt;-</span> <span class="fu">t</span>(df_acc)</span>
+<span id="cb19-9"><a href="#cb19-9"></a>df_acc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Accuracy
+train_fit  1.0000000
+test_fit   0.7027027
+train_ness 0.9305556
+test_ness  0.7027027</code></pre>
+</div>
 </div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>train_score <span class="ot">&lt;-</span> train.dtf[, <span class="sc">-</span><span class="fu">which</span>(<span class="fu">colnames</span>(train.dtf) <span class="sc">==</span> <span class="st">"drugg"</span>)]</span>
-<span id="cb20-2"><a href="#cb20-2"></a>test_score <span class="ot">&lt;-</span> test.dtf[, <span class="sc">-</span><span class="fu">which</span>(<span class="fu">colnames</span>(test.dtf) <span class="sc">==</span> <span class="st">"drugg"</span>)]</span>
-<span id="cb20-3"><a href="#cb20-3"></a></span>
-<span id="cb20-4"><a href="#cb20-4"></a>Fit <span class="ot">&lt;-</span> <span class="fu">rpart</span>(score<span class="sc">~</span>., <span class="at">data =</span> train_score, <span class="at">control =</span> <span class="fu">rpart.control</span>(<span class="at">minsplit =</span> <span class="dv">2</span>))</span>
-<span id="cb20-5"><a href="#cb20-5"></a><span class="fu">rpart.plot</span>(Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>train_score <span class="ot">&lt;-</span> train.dtf[, <span class="sc">-</span><span class="fu">which</span>(<span class="fu">colnames</span>(train.dtf) <span class="sc">==</span> <span class="st">"drugg"</span>)]</span>
+<span id="cb21-2"><a href="#cb21-2"></a>test_score <span class="ot">&lt;-</span> test.dtf[, <span class="sc">-</span><span class="fu">which</span>(<span class="fu">colnames</span>(test.dtf) <span class="sc">==</span> <span class="st">"drugg"</span>)]</span>
+<span id="cb21-3"><a href="#cb21-3"></a></span>
+<span id="cb21-4"><a href="#cb21-4"></a>Fit <span class="ot">&lt;-</span> <span class="fu">rpart</span>(score<span class="sc">~</span>., <span class="at">data =</span> train_score, <span class="at">control =</span> <span class="fu">rpart.control</span>(<span class="at">minsplit =</span> <span class="dv">2</span>))</span>
+<span id="cb21-5"><a href="#cb21-5"></a><span class="fu">rpart.plot</span>(Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -393,18 +398,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">library</span>(caret)</span>
-<span id="cb21-2"><a href="#cb21-2"></a></span>
-<span id="cb21-3"><a href="#cb21-3"></a><span class="co"># Train set</span></span>
-<span id="cb21-4"><a href="#cb21-4"></a>fit_spred_train <span class="ot">&lt;-</span> <span class="fu">predict</span>(Fit, <span class="at">newdata =</span> train_score)</span>
-<span id="cb21-5"><a href="#cb21-5"></a>sperf_train_fit <span class="ot">&lt;-</span> <span class="fu">postResample</span>(fit_spred_train, train_score<span class="sc">$</span>score)</span>
-<span id="cb21-6"><a href="#cb21-6"></a></span>
-<span id="cb21-7"><a href="#cb21-7"></a><span class="co"># Test set</span></span>
-<span id="cb21-8"><a href="#cb21-8"></a>fit_spred_test <span class="ot">&lt;-</span> <span class="fu">predict</span>(Fit, <span class="at">newdata =</span> test_score)</span>
-<span id="cb21-9"><a href="#cb21-9"></a>sperf_test_fit <span class="ot">&lt;-</span> <span class="fu">postResample</span>(fit_spred_test, test_score<span class="sc">$</span>score)</span>
-<span id="cb21-10"><a href="#cb21-10"></a></span>
-<span id="cb21-11"><a href="#cb21-11"></a><span class="co"># Plot</span></span>
-<span id="cb21-12"><a href="#cb21-12"></a><span class="fu">plotcp</span>(Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb22-2"><a href="#cb22-2"></a></span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="co"># Train set</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>fit_spred_train <span class="ot">&lt;-</span> <span class="fu">predict</span>(Fit, <span class="at">newdata =</span> train_score)</span>
+<span id="cb22-5"><a href="#cb22-5"></a>sperf_train_fit <span class="ot">&lt;-</span> <span class="fu">postResample</span>(fit_spred_train, train_score<span class="sc">$</span>score)</span>
+<span id="cb22-6"><a href="#cb22-6"></a></span>
+<span id="cb22-7"><a href="#cb22-7"></a><span class="co"># Test set</span></span>
+<span id="cb22-8"><a href="#cb22-8"></a>fit_spred_test <span class="ot">&lt;-</span> <span class="fu">predict</span>(Fit, <span class="at">newdata =</span> test_score)</span>
+<span id="cb22-9"><a href="#cb22-9"></a>sperf_test_fit <span class="ot">&lt;-</span> <span class="fu">postResample</span>(fit_spred_test, test_score<span class="sc">$</span>score)</span>
+<span id="cb22-10"><a href="#cb22-10"></a></span>
+<span id="cb22-11"><a href="#cb22-11"></a><span class="co"># Plot</span></span>
+<span id="cb22-12"><a href="#cb22-12"></a><span class="fu">plotcp</span>(Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -417,8 +422,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>Ness <span class="ot">&lt;-</span> <span class="fu">prune</span>(Fit, <span class="at">cp =</span> <span class="fl">0.042</span>)</span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="fu">rpart.plot</span>(Ness)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>Ness <span class="ot">&lt;-</span> <span class="fu">prune</span>(Fit, <span class="at">cp =</span> <span class="fl">0.042</span>)</span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">rpart.plot</span>(Ness)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -431,31 +436,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Train set</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a>ness_spred_train <span class="ot">&lt;-</span> <span class="fu">predict</span>(Ness, <span class="at">newdata =</span> train_drugg)</span>
-<span id="cb23-3"><a href="#cb23-3"></a>sperf_train_ness <span class="ot">&lt;-</span> <span class="fu">postResample</span>(ness_spred_train, train_score<span class="sc">$</span>score)</span>
-<span id="cb23-4"><a href="#cb23-4"></a></span>
-<span id="cb23-5"><a href="#cb23-5"></a><span class="co"># Test set</span></span>
-<span id="cb23-6"><a href="#cb23-6"></a>ness_spred_test <span class="ot">&lt;-</span> <span class="fu">predict</span>(Ness, <span class="at">newdata =</span> test_drugg)</span>
-<span id="cb23-7"><a href="#cb23-7"></a>sperf_test_ness <span class="ot">&lt;-</span> <span class="fu">postResample</span>(ness_spred_test, test_score<span class="sc">$</span>score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># Train set</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>ness_spred_train <span class="ot">&lt;-</span> <span class="fu">predict</span>(Ness, <span class="at">newdata =</span> train_drugg)</span>
+<span id="cb24-3"><a href="#cb24-3"></a>sperf_train_ness <span class="ot">&lt;-</span> <span class="fu">postResample</span>(ness_spred_train, train_score<span class="sc">$</span>score)</span>
+<span id="cb24-4"><a href="#cb24-4"></a></span>
+<span id="cb24-5"><a href="#cb24-5"></a><span class="co"># Test set</span></span>
+<span id="cb24-6"><a href="#cb24-6"></a>ness_spred_test <span class="ot">&lt;-</span> <span class="fu">predict</span>(Ness, <span class="at">newdata =</span> test_drugg)</span>
+<span id="cb24-7"><a href="#cb24-7"></a>sperf_test_ness <span class="ot">&lt;-</span> <span class="fu">postResample</span>(ness_spred_test, test_score<span class="sc">$</span>score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># Create a dataframe</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a>results_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb24-3"><a href="#cb24-3"></a>  <span class="at">RMSE =</span> <span class="fu">c</span>(<span class="fl">41.3386484</span>, <span class="fl">50.6410931</span>, <span class="fl">46.5379404</span>, <span class="fl">50.6410931</span>),</span>
-<span id="cb24-4"><a href="#cb24-4"></a>  <span class="at">Rsquared =</span> <span class="fu">c</span>(<span class="fl">0.9229773</span>, <span class="fl">0.9299857</span>, <span class="fl">0.9023842</span>, <span class="fl">0.9299857</span>),</span>
-<span id="cb24-5"><a href="#cb24-5"></a>  <span class="at">MAE =</span> <span class="fu">c</span>(<span class="fl">33.3168518</span>, <span class="fl">39.2805625</span>, <span class="fl">37.7836200</span>, <span class="fl">39.2805625</span>),</span>
-<span id="cb24-6"><a href="#cb24-6"></a>  <span class="at">row.names =</span> <span class="fu">c</span>(<span class="st">"train_original"</span>, <span class="st">"test_original"</span>, <span class="st">"train_pruned"</span>, <span class="st">"test_pruned"</span>)</span>
-<span id="cb24-7"><a href="#cb24-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co"># Create a dataframe</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a>results_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb25-3"><a href="#cb25-3"></a>  <span class="at">RMSE =</span> <span class="fu">c</span>(<span class="fl">41.3386484</span>, <span class="fl">50.6410931</span>, <span class="fl">46.5379404</span>, <span class="fl">50.6410931</span>),</span>
+<span id="cb25-4"><a href="#cb25-4"></a>  <span class="at">Rsquared =</span> <span class="fu">c</span>(<span class="fl">0.9229773</span>, <span class="fl">0.9299857</span>, <span class="fl">0.9023842</span>, <span class="fl">0.9299857</span>),</span>
+<span id="cb25-5"><a href="#cb25-5"></a>  <span class="at">MAE =</span> <span class="fu">c</span>(<span class="fl">33.3168518</span>, <span class="fl">39.2805625</span>, <span class="fl">37.7836200</span>, <span class="fl">39.2805625</span>),</span>
+<span id="cb25-6"><a href="#cb25-6"></a>  <span class="at">row.names =</span> <span class="fu">c</span>(<span class="st">"train_original"</span>, <span class="st">"test_original"</span>, <span class="st">"train_pruned"</span>, <span class="st">"test_pruned"</span>)</span>
+<span id="cb25-7"><a href="#cb25-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">print</span>(<span class="st">"hello world!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">print</span>(<span class="st">"hello world!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 
