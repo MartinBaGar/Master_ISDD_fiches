@@ -2,7 +2,9 @@
 title: 'TP4 : arbres de partitionnement, cart'
 author: "Martin Bari Garnier"
 date: "2024-01-17"
-output: html_document
+format: 
+   html:
+     df-print: kable
 ---
 ```{r}
 load("../data/train.dtf.Rdata")
@@ -87,6 +89,7 @@ df_acc <- data.frame(
 )
 
 df_acc <- t(df_acc)
+df_acc
 ```
 
 ```{r}

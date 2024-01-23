@@ -3,7 +3,3 @@ code-fold: show
 code-line-numbers: true
 code-overflow: wrap
 code-copy: true
-
-# Set the category of the sheets
-categories:
-  - data

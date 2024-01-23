@@ -35,3 +35,6 @@ format:
 
 execute:
   freeze: auto
+
+# Path to the image of ISDD
+image: ../images/isdd_logo.png
