@@ -1,10 +1,10 @@
 ### R code from vignette source 'Intro2Matrix.Rnw'
+### Encoding: ASCII
 
 ###################################################
 ### code chunk number 1: preliminaries
 ###################################################
 options(width=75)
-library(utils) # for R_DEFAULT_PACKAGES=NULL
 
 
 ###################################################
@@ -20,7 +20,7 @@ tM <- t(M)
 ###################################################
 ### code chunk number 3: ex2
 ###################################################
-(M2 <- cbind(-1, M))
+(M2 <- cBind(-1, M))
 M[2, 1]
 M[4, ]
 
@@ -30,7 +30,7 @@ M[4, ]
 ###################################################
 M2[, c(2,4:6)] <- 0
 M2[2, ] <- 0
-M2 <- rbind(0, M2, 0)
+M2 <- rBind(0, M2, 0)
 M2[1:2,2] <- M2[3,4:5] <- NA
 
 
@@ -73,7 +73,7 @@ str(Mg2@x) # length 13, was 16
 ###################################################
 ### code chunk number 10: image
 ###################################################
-data(CAex, package = "Matrix")
+data(CAex)
 print(image(CAex, main = "image(CAex)")) # print(.) needed for Sweave
 
 

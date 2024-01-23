@@ -1,10 +1,9 @@
-
+// -*- mode: C++; c-indent-level: 4; c-basic-offset: 4; indent-tabs-mode: nil; -*-
 //
 // RcppCommon.h: Rcpp R/C++ interface class library -- common include and defines statements
 //
 // Copyright (C) 2008 - 2009  Dirk Eddelbuettel
-// Copyright (C) 2009 - 2020  Dirk Eddelbuettel and Romain Francois
-// Copyright (C) 2021         Dirk Eddelbuettel, Romain Francois and Iñaki Ucar
+// Copyright (C) 2009 - 2017  Dirk Eddelbuettel and Romain Francois
 //
 // This file is part of Rcpp.
 //
@@ -26,6 +25,15 @@
 
 // #define RCPP_DEBUG_LEVEL 1
 // #define RCPP_DEBUG_MODULE_LEVEL 1
+
+// PR #798 by Lionel seems to have created some side-effects possibly related to
+// UnwinProtect is currently implement in R-devel.  This #define needs to be set to
+// enable it, in most cases you want to be disabled.
+//   #define RCPP_USE_UNWIND_PROTECT 1
+// so here _explicitly_ disable it for now
+#ifdef RCPP_USE_UNWIND_PROTECT
+  #undef RCPP_USE_UNWIND_PROTECT
+#endif
 
 #include <Rcpp/r/headers.h>
 
@@ -63,10 +71,8 @@ namespace Rcpp {
 #include <numeric>
 #include <algorithm>
 #include <complex>
-#include <cfloat>
 #include <limits>
 #include <typeinfo>
-#include <utility>
 #include <Rcpp/sprintf.h>
 #include <R_ext/Callbacks.h>
 #include <R_ext/Visibility.h>
@@ -77,14 +83,12 @@ namespace Rcpp {
 
 namespace Rcpp {
 
-    SEXP Rcpp_fast_eval(SEXP expr_, SEXP env);
     SEXP Rcpp_eval(SEXP expr_, SEXP env = R_GlobalEnv);
 
-    SEXP Rcpp_precious_preserve(SEXP object);
-    void Rcpp_precious_remove(SEXP token);
-
+    // from PR#789 
+    SEXP Rcpp_fast_eval(SEXP expr_, SEXP env = R_GlobalEnv);
     namespace internal {
-        SEXP Rcpp_eval_impl(SEXP expr, SEXP env);
+        SEXP Rcpp_eval_impl(SEXP expr, SEXP env = R_GlobalEnv);
     }
 
     class Module;
@@ -93,32 +97,37 @@ namespace Rcpp {
         template <typename T> class named_object;
     }
 
-    // begin deprecated interface not using precious list
-    // use Rcpp_PreciousPreserve + Rcpp_PreciousRelease below it
     inline SEXP Rcpp_PreserveObject(SEXP x) {
-        if (x != R_NilValue) R_PreserveObject(x);
+        if (x != R_NilValue) {
+            R_PreserveObject(x);
+        }
         return x;
     }
+
     inline void Rcpp_ReleaseObject(SEXP x) {
-        if (x != R_NilValue) R_ReleaseObject(x);
+        if (x != R_NilValue) {
+            R_ReleaseObject(x);
+        }
     }
+
     inline SEXP Rcpp_ReplaceObject(SEXP x, SEXP y) {
-        // if we are setting to the same SEXP as we already have, do nothing
-        if (x != y) {
-            Rcpp_ReleaseObject(x);
+        if (Rf_isNull(x)) {
             Rcpp_PreserveObject(y);
+        } else if (Rf_isNull(y)) {
+            Rcpp_ReleaseObject(x); 	// #nocov
+        } else {
+            // if we are setting to the same SEXP as we already have, do nothing
+            if (x != y) {
+
+                // the previous SEXP was not NULL, so release it
+                Rcpp_ReleaseObject(x);
+
+                // the new SEXP is not NULL, so preserve it
+                Rcpp_PreserveObject(y);
+
+            }
         }
         return y;
-    }
-    // end deprecated interface not using precious list
-
-    // new preferred interface using token-based precious list
-    inline SEXP Rcpp_PreciousPreserve(SEXP object) {
-        return Rcpp_precious_preserve(object);
-    }
-
-    inline void Rcpp_PreciousRelease(SEXP token) {
-        Rcpp_precious_remove(token);
     }
 
 }
@@ -129,15 +138,13 @@ namespace Rcpp {
 #include <Rcpp/exceptions.h>
 #include <Rcpp/proxy/proxy.h>
 
-#ifdef RCPP_USING_UNWIND_PROTECT
-  #include <Rcpp/unwindProtect.h>
-#endif
-
 #include <Rcpp/lang.h>
 #include <Rcpp/complex.h>
 #include <Rcpp/barrier.h>
 
 #define RcppExport extern "C" attribute_visible
+
+#include <Rcpp/exceptions.h>
 
 #include <Rcpp/Interrupt.h>
 

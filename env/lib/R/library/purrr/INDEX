@@ -1,56 +1,40 @@
-accumulate              Accumulate intermediate results of a vector
-                        reduction
+accumulate              Accumulate recursive folds across a list
 array-coercion          Coerce array to list
 as_mapper               Convert an object into a mapper function
-attr_getter             Create an attribute getter function
-auto_browse             Wrap a function so it will automatically
-                        'browse()' on error
-chuck                   Get an element deep within a nested data
-                        structure, failing if it doesn't exist
-compose                 Compose multiple functions together to create a
-                        new function
-detect                  Find the value or position of the first match
-every                   Do every, some, or none of the elements of a
-                        list satisfy a predicate?
+as_vector               Coerce a list to a vector
+compose                 Compose multiple functions
+cross                   Produce all combinations of list elements
+detect                  Find the value or position of the first match.
+every                   Do every or some elements of a list satisfy a
+                        predicate?
+flatten                 Flatten a list of lists into a simple vector.
+get-attr                Infix attribute accessor
 has_element             Does a list contain an object?
 head_while              Find head/tail that all satisfies a predicate.
 imap                    Apply a function to each element of a vector,
                         and its index
-insistently             Transform a function to wait then retry after
-                        an error
-keep                    Keep/discard elements based on their values
-keep_at                 Keep/discard elements based on their
-                        name/position
-list_assign             Modify a list
-list_c                  Combine list elements into a single data
-                        structure
-list_flatten            Flatten a list
-list_simplify           Simplify a list to an atomic or S3 vector
-list_transpose          Transpose a list
+invoke                  Invoke functions.
+keep                    Keep or discard elements using a predicate
+                        function.
+lift                    Lift the domain of a function
+list_modify             Modify a list
 lmap                    Apply a function to list-elements of a list
 map                     Apply a function to each element of a vector
-map_depth               Map/modify elements at given depth
-map_if                  Apply a function to each element of a vector
-                        conditionally
-map2                    Map over two inputs
+map2                    Map over multiple inputs simultaneously.
 modify                  Modify elements selectively
-modify_in               Modify a pluck location
-modify_tree             Recursively modify a list
-negate                  Negate a predicate function so it selects what
-                        it previously rejected
-partial                 Partially apply a function, filling in some
-                        arguments
-pluck                   Safely get or set an element deep within a
-                        nested data structure
-pluck_depth             Compute the depth of a vector
-pmap                    Map over multiple input simultaneously (in
-                        "parallel")
-possibly                Wrap a function to return a value instead of an
-                        error
-progress_bars           Progress bars in purrr
-quietly                 Wrap a function to capture side-effects
-rate-helpers            Create delaying rate settings
+negate                  Negate a predicate function.
+null-default            Default value for 'NULL'.
+partial                 Partial apply a function, filling in some
+                        arguments.
+prepend                 Prepend a vector
+rbernoulli              Generate random sample from a Bernoulli
+                        distribution
+rdunif                  Generate random sample from a discrete uniform
+                        distribution
 reduce                  Reduce a list to a single value by iteratively
-                        applying a binary function
-safely                  Wrap a function to capture errors
-slowly                  Wrap a function to wait between executions
+                        applying a binary function.
+rerun                   Re-run expressions multiple times.
+safely                  Capture side effects.
+splice                  Splice objects and lists of objects into a list
+transpose               Transpose a list.
+vec_depth               Compute the depth of a vector

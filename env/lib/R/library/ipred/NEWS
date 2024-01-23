@@ -1,42 +1,5 @@
 # $Id: CHANGES,v 1.48 2009/09/09 15:40:28 hothorn Exp $
 
-	0.9-14 (09.03.2023)
-
-        S3 registration
-
-	0.9-13 (02.06.2022)
-
-        no need to escape &
-
-	0.9-12 (15.09.2021)
-
-        predict(, newdata) returned factors with set of levels depending on newdata, spotted by Max Kuhn
-
-	0.9-11 (12.03.2021)
-
-        suggest party
-
-	0.9-10 (03.03.2021)
-
-        suggest randomForest
-
-        RNGversion("3.5.3")
-
-	0.9-9 (29.04.2019)
-
-        RNGversion("3.5.3")
-
-        inbagg potentially treated the y ~ . case incorrectly
-
-	0.9-8 (05.11.2018)
-
-	test output update
-
-	0.9-7 (17.08.2018)
-
-	sbrier returned incorrect answers for unseen time points; reported and
-        fixed by Marvin Wright
-
 	0.9-6 (01.03.2017)
 
 	register C routines

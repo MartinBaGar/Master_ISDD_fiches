@@ -1,165 +1,108 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
 <meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<title>On skipping steps</title>
 
-<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
-// be compatible with the behavior of Pandoc < 2.8).
-document.addEventListener('DOMContentLoaded', function(e) {
-  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
-  var i, h, a;
-  for (i = 0; i < hs.length; i++) {
-    h = hs[i];
-    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
-    a = h.attributes;
-    while (a.length > 0) h.removeAttribute(a[0].name);
-  }
-});
-</script>
+<title>On Skipping Steps</title>
 
+
+
+<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-</style>
-
-
-
-<style type="text/css">
-code {
-white-space: pre;
-}
-.sourceCode {
-overflow: visible;
-}
-</style>
-<style type="text/css" data-origin="pandoc">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
 .sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-position: relative; left: -1em; text-align: right; vertical-align: baseline;
-border: none; display: inline-block;
--webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-padding: 0 4px; width: 4em;
-color: #aaaaaa;
-}
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
-div.sourceCode
-{ }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } 
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
-code span.at { color: #7d9029; } 
-code span.bn { color: #40a070; } 
-code span.bu { color: #008000; } 
-code span.cf { color: #007020; font-weight: bold; } 
-code span.ch { color: #4070a0; } 
-code span.cn { color: #880000; } 
-code span.co { color: #60a0b0; font-style: italic; } 
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
-code span.do { color: #ba2121; font-style: italic; } 
-code span.dt { color: #902000; } 
-code span.dv { color: #40a070; } 
-code span.er { color: #ff0000; font-weight: bold; } 
-code span.ex { } 
-code span.fl { color: #40a070; } 
-code span.fu { color: #06287e; } 
-code span.im { color: #008000; font-weight: bold; } 
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
-code span.kw { color: #007020; font-weight: bold; } 
-code span.op { color: #666666; } 
-code span.ot { color: #007020; } 
-code span.pp { color: #bc7a00; } 
-code span.sc { color: #4070a0; } 
-code span.ss { color: #bb6688; } 
-code span.st { color: #4070a0; } 
-code span.va { color: #19177c; } 
-code span.vs { color: #4070a0; } 
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
-</style>
-<script>
-// apply pandoc div.sourceCode style to pre.sourceCode instead
-(function() {
-  var sheets = document.styleSheets;
-  for (var i = 0; i < sheets.length; i++) {
-    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
-    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
-    var j = 0;
-    while (j < rules.length) {
-      var rule = rules[j];
-      // check if there is a div.sourceCode rule
-      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
-        j++;
-        continue;
-      }
-      var style = rule.style.cssText;
-      // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') {
-        j++;
-        continue;
-      }
-      // replace div.sourceCode by a pre.sourceCode rule
-      sheets[i].deleteRule(j);
-      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
-    }
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
   }
-})();
-</script>
-
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 
 <style type="text/css">body {
 background-color: #fff;
 margin: 1em auto;
-max-width: 700px;
+max-width: 800px;
 overflow: visible;
 padding-left: 2em;
 padding-right: 2em;
-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 14px;
-line-height: 1.35;
+line-height: 20px;
+}
+#header {
+text-align: center;
 }
 #TOC {
 clear: both;
-margin: 0 0 10px 10px;
+margin: 0 0 10px 0;
 padding: 4px;
-width: 400px;
 border: 1px solid #CCCCCC;
 border-radius: 5px;
 background-color: #f6f6f6;
@@ -183,29 +126,34 @@ margin-left: -2em;
 #TOC li {
 line-height: 16px;
 }
-table {
-margin: 1em auto;
+table:not([class]) {
+margin: auto;
+min-width: 40%;
 border-width: 1px;
 border-color: #DDDDDD;
 border-style: outset;
 border-collapse: collapse;
 }
-table th {
+table[summary="R argblock"] {
+width: 100%;
+border: none;
+}
+table:not([class]) th {
 border-width: 2px;
 padding: 5px;
 border-style: inset;
 }
-table td {
+table:not([class]) td {
 border-width: 1px;
 border-style: inset;
 line-height: 18px;
 padding: 5px 5px;
 }
-table, table th, table td {
+table:not([class]), table:not([class]) th, table:not([class]) td {
 border-left-style: none;
 border-right-style: none;
 }
-table thead, table tr.even {
+table:not([class]) tr.odd {
 background-color: #f7f7f7;
 }
 p {
@@ -213,7 +161,8 @@ margin: 0.5em 0;
 }
 blockquote {
 background-color: #f6f6f6;
-padding: 0.25em 0.75em;
+padding: 13px;
+padding-bottom: 1px;
 }
 hr {
 border-style: solid;
@@ -241,36 +190,57 @@ ul ul {
 margin-bottom: 0;
 }
 pre, code {
-background-color: #f7f7f7;
+background-color: #f5f5f5;
 border-radius: 3px;
 color: #333;
-white-space: pre-wrap; 
 }
 pre {
+overflow-x: auto;
 border-radius: 3px;
-margin: 5px 0px 10px 0px;
+margin: 5px 0 10px 0;
 padding: 10px;
 }
 pre:not([class]) {
-background-color: #f7f7f7;
+background-color: white;
+border: #f5f5f5 1px solid;
+}
+pre:not([class]) code {
+color: #444;
+background-color: white;
 }
 code {
-font-family: Consolas, Monaco, 'Courier New', monospace;
-font-size: 85%;
+font-family: monospace;
+font-size: 90%;
 }
 p > code, li > code {
-padding: 2px 0px;
+padding: 2px 4px;
+color: #d14;
+border: 1px solid #e1e1e8;
+white-space: inherit;
 }
 div.figure {
 text-align: center;
 }
-img {
+table > caption, div.figure p.caption {
+font-style: italic;
+}
+table > caption span, div.figure p.caption span {
+font-style: normal;
+font-weight: bold;
+}
+p {
+margin: 0 0 10px;
+}
+table:not([class]) {
+margin: auto auto 10px auto;
+}
+img:not([class]) {
 background-color: #FFFFFF;
 padding: 2px;
-border: 1px solid #DDDDDD;
 border-radius: 3px;
 border: 1px solid #CCCCCC;
 margin: 0 5px;
+max-width: 100%;
 }
 h1 {
 margin-top: 0;
@@ -278,18 +248,18 @@ font-size: 35px;
 line-height: 40px;
 }
 h2 {
-border-bottom: 4px solid #f7f7f7;
+border-bottom: 4px solid #f5f5f5;
 padding-top: 10px;
 padding-bottom: 2px;
 font-size: 145%;
 }
 h3 {
-border-bottom: 2px solid #f7f7f7;
+border-bottom: 2px solid #f5f5f5;
 padding-top: 10px;
 font-size: 120%;
 }
 h4 {
-border-bottom: 1px solid #f7f7f7;
+border-bottom: 1px solid #f5f5f5;
 margin-left: 8px;
 font-size: 105%;
 }
@@ -311,6 +281,15 @@ a[href^="http:"] {
 text-decoration: underline; }
 a[href^="https:"] {
 text-decoration: underline; }
+div.r-help-page {
+background-color: #f9f9f9;
+border-bottom: #ddd 1px solid;
+margin-bottom: 10px;
+padding: 10px;
+}
+div.r-help-page:hover {
+background-color: #f4f4f4;
+}
 
 code > span.kw { color: #555; font-weight: bold; } 
 code > span.dt { color: #902000; } 
@@ -326,9 +305,6 @@ code > span.fu { color: #900; font-weight: bold; }
 code > span.er { color: #a61717; background-color: #e3d2d2; } 
 </style>
 
-
-
-
 </head>
 
 <body>
@@ -336,139 +312,95 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<h1 class="title toc-ignore">On skipping steps</h1>
+<h1 class="title toc-ignore">On Skipping Steps</h1>
 
 
+<div id="TOC">
+<ul>
+<li><a href="#example-class-imbalance-sampling-and-skipping-steps">Example: Class Imbalance Sampling and Skipping Steps</a></li>
+<li><a href="#how-to-skip-steps">How To Skip Steps</a></li>
+<li><a href="#be-careful">Be Careful!</a></li>
+</ul>
+</div>
 
-<p>When steps are created in a recipe, they can be applied to data
-(i.e. baked) at two distinct times:</p>
-<ol style="list-style-type: decimal">
-<li>During the process of preparing the recipe, each step is estimated
-via <code>prep</code> and then applied to the training set using
-<code>bake</code> before proceeding to the next step.</li>
-<li>After the recipe has been prepared, <code>bake</code> can be used
-with any data set to apply the preprocessing to those data.</li>
+<p>When steps are created in a recipe, they can be applied to data (i.e. baked) at two distinct times:</p>
+<ol type="1">
+<li>During the process of preparing the recipe, each step is estimated via <code>prep</code> and then applied to the training set using <code>bake</code> before proceeding to the next step.</li>
+<li>After the recipe has been prepared, <code>bake</code> can be used with any data set to apply the preprocessing to those data.</li>
 </ol>
-<p>There are times where we would like to circumvent baking on a new
-data set (i.e., #2 above). For example:</p>
+<p>There are times where we would like to circumvent baking on a new data set (i.e., #2 above). For example:</p>
 <ul>
-<li>There are outcomes in the recipe that won’t be available when a
-recipe is baked in the future. For predictive modeling, this is common
-when you receive <em>new</em> data to be predicted.</li>
-<li>When doing resampling or a training/test split, certain operations
-make sense for the data to be used for modeling but are problematic for
-new samples or the test set.</li>
+<li>There are outcomes in the recipe that won’t be available when a recipe is baked in the future. For predictive modeling, this is common when you receive <em>new</em> data to be predicted.</li>
+<li>When doing resampling or a training/test split, certain operations make sense for the data to be used for modeling but are problematic for new samples or the test set.</li>
 </ul>
-<div id="example-class-imbalance-sampling-and-skipping-steps" class="section level1">
+<section id="example-class-imbalance-sampling-and-skipping-steps" class="level1">
 <h1>Example: Class Imbalance Sampling and Skipping Steps</h1>
-<p>As an example of the second case, consider the problem of a <a href="https://github.com/topepo/useR2016">severe class imbalance</a>.
-Suppose that there are two classes to be predicted and the event of
-interest occurs in only 5% of the time. Many models will quickly
-optimize accuracy by overfitting to the majority class by predicting
-everything to be a non-event. One method to compensate for this is to
-<em>down-sample</em> the <strong>training set</strong> so that the class
-frequencies are about equal. Although somewhat counter-intuitive, this
-can often lead to better models.</p>
-<p>The important consideration is that this preprocessing is <em>only
-applied to the training set</em> so that it can impact the model fit.
-The test set should be unaffected by this operation. If the recipe is
-used to create the design matrix for the model, down-sampling would
-remove rows. This would be a bad idea for the test set since these data
-should represent what the population of samples looks like “in the
-wild.”. Based on this, a recipe that included down-sample should
-<em>skip</em> this step when data are baked for the test set.</p>
-</div>
-<div id="other-examples" class="section level1">
-<h1>Other Examples</h1>
-<p>There are other steps that have a default value of
-<code>skip = TRUE</code>:</p>
-<ul>
-<li><code>step_filter()</code> allows for arbitrary filtering of
-rows.</li>
-<li><code>step_slice()</code> also removes (or adds) rows to the
-data.</li>
-<li><code>step_sample()</code> enables random sampling of the data
-set.</li>
-<li><code>step_naomit()</code> will remove rows with missing values in
-certain columns.</li>
-</ul>
-<p>The main issue with these steps being applied to new data (i.e. after
-the recipe has been trained) is that the non-outcome rows can become
-out-of-sync with the outcome data.</p>
-<p>For example, when <code>bake()</code> is run with
-<code>step_naomit(skip = FALSE)</code> and there are missing values, the
-predictors will have fewer rows than the outcome vector. When model
-predictions are produced and merged with the other data, their will be
-discordant rows. In this case, it would be better to have missing values
-in the predictions and a full data set than a subset of predictions from
-the complete data. The <a href="https://tidymodels.github.io/model-implementation-principles/model-predictions.html">general
-rule</a> in tidymodels is that, for models,</p>
-<blockquote>
-<p>The return value is a tibble with the <strong>same number of
-rows</strong> as the data being predicted and in the same order.</p>
-</blockquote>
-</div>
-<div id="how-to-skip-steps" class="section level1">
+<p>As an example of the second case, consider the problem of a <a href="https://github.com/topepo/useR2016">severe class imbalance</a>. Suppose that there are two classes to be predicted and the event of interest occurs in only 5% of the time. Many models will quickly optimize accuracy by overfitting to the majority class by predicting everything to be a non-event. One method to compensate for this is to <em>down-sample</em> the <strong>training set</strong> so that the class frequencies are about equal. Although somewhat counter-intuitive, this can often lead to better models.</p>
+<p>The important consideration is that this preprocessing is <em>only applied to the training set</em> so that it can impact the model fit. The test set should be unaffected by this operation. If the recipe is used to create the design matrix for the model, down-sampling would remove rows. This would be a bad idea for the test set since these data should represent what the population of samples looks like “in the wild.”. Based on this, a recipe that included down-sample should <em>skip</em> this step when data are baked for the test set.</p>
+</section>
+<section id="how-to-skip-steps" class="level1">
 <h1>How To Skip Steps</h1>
-<p>As of version recipes 0.1.2, each step has an optional logical
-argument called <code>skip</code>. In almost every case, the default is
-<code>FALSE</code>. When using this option:</p>
+<p>As of version recipes 0.1.2, each step has an optional logical argument called <code>skip</code>. In almost every case, the default is <code>TRUE</code>. When using this option:</p>
 <ul>
-<li>No steps are skipped during <code>prep()</code></li>
-<li>Steps with <code>skip = TRUE</code> are not applied to the data when
-<code>bake()</code> is called</li>
+<li>No steps are skipped during <code>prep</code></li>
+<li>Steps with <code>skip = TRUE</code> are not applied to the data when <code>bake</code> is called</li>
 </ul>
-<p>Recall that there are two ways of getting the results for the
-training set with recipes. First, <code>bake()</code> can be used as
-usual. Second, <code>bake(new_data = NULL)</code> is a shortcut that
-will use the already processed data that is contained in the recipe when
-<code>prep(recipe, retain = TRUE)</code> is used.
-<code>bake(new_data = NULL)</code> is much faster and would be the way
-to get the training set <em>with all of the steps applied to the
-data</em>. For this reason, you should almost always used
-<code>retain = TRUE</code> if any steps are skipped (and a warning is
-produced otherwise).</p>
-</div>
-<div id="be-careful" class="section level1">
+<p>Recall that there are two ways of getting the results for the training set with <code>recipes</code>. First, <code>bake</code> can be used as usual. Second, <code>juice</code> is a shortcut that will use the already processed data that is contained in the recipe when <code>prep(recipe, retain = TRUE)</code> is used. <code>juice</code> is much faster and would be the way to get the training set <em>with all of the steps applied to the data</em>. For this reason, you should almost always used <code>retain = TRUE</code> if any steps are skipped (and a warning is produced otherwise).</p>
+</section>
+<section id="be-careful" class="level1">
 <h1>Be Careful!</h1>
-<p>Skipping is a necessary feature but can be dangerous if used
-carelessly.</p>
-<p>As an example, skipping an operation whose variables are used later
-might be an issue:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(recipes)</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>car_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(mpg <span class="sc">~</span> ., <span class="at">data =</span> mtcars) <span class="sc">%&gt;%</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="fu">step_log</span>(disp, <span class="at">skip =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>  <span class="fu">step_center</span>(<span class="fu">all_numeric_predictors</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  <span class="fu">prep</span>(<span class="at">training =</span> mtcars)</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="co"># These *should* produce the same results (as they do for `hp`)</span></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="fu">bake</span>(car_recipe, <span class="at">new_data =</span> <span class="cn">NULL</span>)   <span class="sc">%&gt;%</span> <span class="fu">head</span>() <span class="sc">%&gt;%</span> <span class="fu">select</span>(disp, hp)</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 2</span></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="co">#&gt;     disp    hp</span></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="co">#&gt; 1 -0.210 -36.7</span></span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="co">#&gt; 2 -0.210 -36.7</span></span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="co">#&gt; 3 -0.603 -53.7</span></span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="co">#&gt; 4  0.268 -36.7</span></span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a><span class="co">#&gt; 5  0.601  28.3</span></span>
-<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a><span class="co">#&gt; 6  0.131 -41.7</span></span>
-<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a><span class="fu">bake</span>(car_recipe, <span class="at">new_data =</span> mtcars) <span class="sc">%&gt;%</span> <span class="fu">head</span>() <span class="sc">%&gt;%</span> <span class="fu">select</span>(disp, hp)</span>
-<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 2</span></span>
-<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a><span class="co">#&gt;    disp    hp</span></span>
-<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a><span class="co">#&gt;   &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a><span class="co">#&gt; 1  155. -36.7</span></span>
-<span id="cb1-23"><a href="#cb1-23" tabindex="-1"></a><span class="co">#&gt; 2  155. -36.7</span></span>
-<span id="cb1-24"><a href="#cb1-24" tabindex="-1"></a><span class="co">#&gt; 3  103. -53.7</span></span>
-<span id="cb1-25"><a href="#cb1-25" tabindex="-1"></a><span class="co">#&gt; 4  253. -36.7</span></span>
-<span id="cb1-26"><a href="#cb1-26" tabindex="-1"></a><span class="co">#&gt; 5  355.  28.3</span></span>
-<span id="cb1-27"><a href="#cb1-27" tabindex="-1"></a><span class="co">#&gt; 6  220. -41.7</span></span></code></pre></div>
-<p>This should emphasize that <code>bake(new_data = NULL)</code> should
-be used to get the training set values whenever a step is skipped.</p>
-</div>
+<p>Skipping is a necessary feature but can be dangerous if used carelessly.</p>
+<p>As an example, skipping an operation whose variables are used later might be an issue:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(recipes)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">car_recipe &lt;-<span class="st"> </span><span class="kw">recipe</span>(mpg <span class="op">~</span><span class="st"> </span>., <span class="dt">data =</span> mtcars) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="st">  </span><span class="kw">step_log</span>(disp, <span class="dt">skip =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="st">  </span><span class="kw">step_center</span>(<span class="kw">all_predictors</span>()) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="st">  </span><span class="kw">prep</span>(<span class="dt">training =</span> mtcars, <span class="dt">retain =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co"># These *should* produce the same results (as they do for `hp`)</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="kw">juice</span>(car_recipe) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(disp, hp)</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt; # A tibble: 6 x 2</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt;     disp    hp</span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#&gt; 1 -0.210 -36.7</span></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#&gt; 2 -0.210 -36.7</span></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#&gt; 3 -0.603 -53.7</span></a>
+<a class="sourceLine" id="cb1-15" data-line-number="15"><span class="co">#&gt; 4  0.268 -36.7</span></a>
+<a class="sourceLine" id="cb1-16" data-line-number="16"><span class="co">#&gt; 5  0.601  28.3</span></a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"><span class="co">#&gt; 6  0.131 -41.7</span></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18"><span class="kw">bake</span>(car_recipe, <span class="dt">newdata =</span> mtcars) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(disp, hp)</a>
+<a class="sourceLine" id="cb1-19" data-line-number="19"><span class="co">#&gt; # A tibble: 6 x 2</span></a>
+<a class="sourceLine" id="cb1-20" data-line-number="20"><span class="co">#&gt;    disp    hp</span></a>
+<a class="sourceLine" id="cb1-21" data-line-number="21"><span class="co">#&gt;   &lt;dbl&gt; &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb1-22" data-line-number="22"><span class="co">#&gt; 1   155 -36.7</span></a>
+<a class="sourceLine" id="cb1-23" data-line-number="23"><span class="co">#&gt; 2   155 -36.7</span></a>
+<a class="sourceLine" id="cb1-24" data-line-number="24"><span class="co">#&gt; 3   103 -53.7</span></a>
+<a class="sourceLine" id="cb1-25" data-line-number="25"><span class="co">#&gt; 4   253 -36.7</span></a>
+<a class="sourceLine" id="cb1-26" data-line-number="26"><span class="co">#&gt; 5   355  28.3</span></a>
+<a class="sourceLine" id="cb1-27" data-line-number="27"><span class="co">#&gt; 6   220 -41.7</span></a></code></pre></div>
+<p>This should emphasize that <code>juice</code> should be used to get the training set values whenever a step is skipped.</p>
+</section>
 
-
-
-<!-- code folding -->
+<script type="text/javascript">
+window.onload = function() {
+  var i, fig = 1, caps = document.getElementsByClassName('caption');
+  for (i = 0; i < caps.length; i++) {
+    var cap = caps[i];
+    if (cap.parentElement.className !== 'figure' || cap.nodeName !== 'P')
+      continue;
+    cap.innerHTML = '<span>Figure ' + fig + ':</span> ' + cap.innerHTML;
+    fig++;
+  }
+  fig = 1;
+  caps = document.getElementsByTagName('caption');
+  for (i = 0; i < caps.length; i++) {
+    var cap = caps[i];
+    if (cap.parentElement.nodeName !== 'TABLE') continue;
+    cap.innerHTML = '<span>Table ' + fig + ':</span> ' + cap.innerHTML;
+    fig++;
+  }
+}
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

@@ -1,6 +1,7 @@
 Package: nlme
-Version: 3.1-163
-Date: 2023-07-31
+Version: 3.1-137
+Date: 2018-04-07
+Priority: recommended
 Title: Linear and Nonlinear Mixed Effects Models
 Authors@R: c(person("José", "Pinheiro", role = "aut", comment = "S version"),
              person("Douglas", "Bates", role = "aut", comment = "up to 2007"),
@@ -9,22 +10,19 @@ Authors@R: c(person("José", "Pinheiro", role = "aut", comment = "S version"),
              person("EISPACK authors", role = "ctb", comment = "src/rs.f"),
 	     person("Siem", "Heisterkamp", role = "ctb", comment = "Author fixed sigma"),
              person("Bert", "Van Willigen",role = "ctb", comment = "Programmer fixed sigma"),
-             person("Johannes", "Ranke", role = "ctb", comment = "varConstProp()"),
-	     person("R Core Team", email = "R-core@R-project.org",
+	     person("R-core", email = "R-core@R-project.org",
                     role = c("aut", "cre")))
-Contact: see 'MailingList'
 Description: Fit and compare Gaussian linear and nonlinear mixed-effects models.
-Depends: R (>= 3.5.0)
+Depends: R (>= 3.4.0)
 Imports: graphics, stats, utils, lattice
-Suggests: Hmisc, MASS, SASmixed
+Suggests: Hmisc, MASS
 LazyData: yes
+ByteCompile: yes
 Encoding: UTF-8
-License: GPL (>= 2)
+License: GPL (>= 2) | file LICENCE
 BugReports: https://bugs.r-project.org
-MailingList: R-help@r-project.org
-URL: https://svn.r-project.org/R-packages/trunk/nlme/
 NeedsCompilation: yes
-Packaged: 2023-08-02 07:04:32 UTC; maechler
+Packaged: 2018-04-07 08:11:41 UTC; ripley
 Author: José Pinheiro [aut] (S version),
   Douglas Bates [aut] (up to 2007),
   Saikat DebRoy [ctb] (up to 2002),
@@ -32,9 +30,8 @@ Author: José Pinheiro [aut] (S version),
   EISPACK authors [ctb] (src/rs.f),
   Siem Heisterkamp [ctb] (Author fixed sigma),
   Bert Van Willigen [ctb] (Programmer fixed sigma),
-  Johannes Ranke [ctb] (varConstProp()),
-  R Core Team [aut, cre]
-Maintainer: R Core Team <R-core@R-project.org>
+  R-core [aut, cre]
+Maintainer: R-core <R-core@R-project.org>
 Repository: CRAN
-Date/Publication: 2023-08-09 11:20:02 UTC
-Built: R 4.3.1; x86_64-conda-linux-gnu; 2023-09-23 02:40:58 UTC; unix
+Date/Publication: 2018-04-07 12:20:09 UTC
+Built: R 3.5.0; x86_64-pc-linux-gnu; 2018-05-24 01:48:12 UTC; unix

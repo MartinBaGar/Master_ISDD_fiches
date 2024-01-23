@@ -1,8 +1,6 @@
 ---
 title: "Extending ggplot2"
 output: rmarkdown::html_vignette
-description: |
-  Official extension mechanism provided in ggplot2.
 vignette: >
   %\VignetteIndexEntry{Extending ggplot2}
   %\VignetteEngine{knitr::rmarkdown}
@@ -63,7 +61,7 @@ StatChull <- ggproto("StatChull", Stat,
 )
 ```
 
-The two most important components are the `compute_group()` method (which does the computation), and the `required_aes` field, which lists which aesthetics must be present in order for the stat to work.
+The two most important components are the `compute_group()` method (which does the computation), and the `required_aes` field, which lists which aesthetics must be present in order to for the stat to work.
 
 Next we write a layer function. Unfortunately, due to an early design mistake I called these either `stat_()` or `geom_()`. A better decision would have been to call them `layer_()` functions: that's a more accurate description because every layer involves a stat _and_ a geom. 
 
@@ -86,9 +84,6 @@ stat_chull <- function(mapping = NULL, data = NULL, geom = "polygon",
 Once we have a layer function we can try our new stat:
 
 ```{r}
-#| fig.alt = "Scatterplot of engine displacement versus highway miles per
-#|  gallon, for 234 cars. The convex hull of all the points is marked by a 
-#|  polygon with no fill."
 ggplot(mpg, aes(displ, hwy)) + 
   geom_point() + 
   stat_chull(fill = NA, colour = "black")
@@ -99,10 +94,6 @@ ggplot(mpg, aes(displ, hwy)) +
 Once we've written this basic object, ggplot2 gives a lot for free. For example, ggplot2 automatically preserves aesthetics that are constant within each group:
 
 ```{r}
-#| fig.alt = "Scatterplot of engine displacement versus highway miles per
-#|  gallon, for 234 cars. The convex hulls of points, grouped and coloured by 
-#|  three types of drive train, are marked by polygons with no fill but the
-#|  outline matches the colours of the points."
 ggplot(mpg, aes(displ, hwy, colour = drv)) + 
   geom_point() + 
   stat_chull(fill = NA)
@@ -111,9 +102,6 @@ ggplot(mpg, aes(displ, hwy, colour = drv)) +
 We can also override the default geom to display the convex hull in a different way:
 
 ```{r}
-#| fig.alt = "Scatterplot of engine displacement versus highway miles per
-#|  gallon, for 234 cars. The points that are part of the convex hull of all 
-#|  points are marked with a red outline."
 ggplot(mpg, aes(displ, hwy)) + 
   stat_chull(geom = "point", size = 4, colour = "red") +
   geom_point()
@@ -124,9 +112,6 @@ ggplot(mpg, aes(displ, hwy)) +
 A more complex stat will do some computation. Let's implement a simple version of `geom_smooth()` that adds a line of best fit to a plot. We create a `StatLm` that inherits from `Stat` and a layer function, `stat_lm()`:
 
 ```{r}
-#| fig.alt = "Scatterplot of engine displacement versus highway miles per
-#|  gallon, for 234 cars. A straight line with a negative slope passes through
-#|  the cloud of points."
 StatLm <- ggproto("StatLm", Stat, 
   required_aes = c("x", "y"),
   
@@ -159,10 +144,6 @@ ggplot(mpg, aes(displ, hwy)) +
 `StatLm` is inflexible because it has no parameters. We might want to allow the user to control the model formula and the number of points used to generate the grid. To do so, we add arguments to the `compute_group()` method and our wrapper function:
 
 ```{r}
-#| fig.alt = "Scatterplot of engine displacement versus highway miles per
-#|  gallon, for 234 cars. A wobbly line follows the point cloud over the 
-#|  horizontal direction. 20 points are placed on top of the line with constant
-#|  horizontal intervals."
 StatLm <- ggproto("StatLm", Stat, 
   required_aes = c("x", "y"),
   
@@ -197,7 +178,6 @@ ggplot(mpg, aes(displ, hwy)) +
 Note that we don't _have_ to explicitly include the new parameters in the arguments for the layer, `...` will get passed to the right place anyway. But you'll need to document them somewhere so the user knows about them. Here's a brief example. Note `@inheritParams ggplot2::stat_identity`: that will automatically inherit documentation for all the parameters also defined for `stat_identity()`.
 
 ```{r}
-#' @export
 #' @inheritParams ggplot2::stat_identity
 #' @param formula The modelling formula passed to \code{lm}. Should only 
 #'   involve \code{y} and \code{x}
@@ -215,8 +195,6 @@ stat_lm <- function(mapping = NULL, data = NULL, geom = "line",
 
 ```
 
-`stat_lm()` must be exported if you want other people to use it. You could also consider exporting `StatLm` if you want people to extend the underlying object; this should be done with care.
-
 ### Picking defaults
 
 Sometimes you have calculations that should be performed once for the complete dataset, not once for each group. This is useful for picking sensible default values. For example, if we want to do a density estimate, it's reasonable to pick one bandwidth for the whole plot. The following Stat creates a variation of the `stat_density()` that picks one bandwidth for all groups by choosing the mean of the "best" bandwidth for each group (I have no theoretical justification for this, but it doesn't seem unreasonable).
@@ -224,13 +202,6 @@ Sometimes you have calculations that should be performed once for the complete d
 To do this we override the `setup_params()` method. It's passed the data and a list of params, and returns an updated list.
 
 ```{r}
-#| fig.alt = c(
-#| "A line plot showing three kernel density estimates of engine displacement,
-#|  coloured for three types of drive trains. The lines are a little bit 
-#|  wobbly.",
-#| "A line plot showing three kernel density estimates of engine displacement,
-#|  coloured for three types of drive trains. The lines are fairly smooth."
-#| )
 StatDensityCommon <- ggproto("StatDensityCommon", Stat, 
   required_aes = "x",
   
@@ -278,13 +249,9 @@ I recommend using `NULL` as a default value. If you pick important parameters au
 This stat illustrates another important point. If we want to make this stat usable with other geoms, we should return a variable called `density` instead of `y`. Then we can set up the `default_aes` to automatically map `density` to `y`, which allows the user to override it to use with different geoms:
 
 ```{r}
-#| fig.alt = "A plot showing the engine displacement versus three types of drive 
-#|  trains. Every drive train is represented by a series of densely packed 
-#|  points that imitate a horizontal line, and their colour intensity indicates
-#|  the kernel density estimate of the displacement."
 StatDensityCommon <- ggproto("StatDensity2", Stat, 
   required_aes = "x",
-  default_aes = aes(y = stat(density)),
+  default_aes = aes(y = ..density..),
 
   compute_group = function(data, scales, bandwidth = 1) {
     d <- density(data$x, bw = bandwidth)
@@ -292,17 +259,13 @@ StatDensityCommon <- ggproto("StatDensity2", Stat,
   }  
 )
 
-ggplot(mpg, aes(displ, drv, colour = stat(density))) + 
+ggplot(mpg, aes(displ, drv, colour = ..density..)) + 
   stat_density_common(bandwidth = 1, geom = "point")
 ```
 
 However, using this stat with the area geom doesn't work quite right. The areas don't stack on top of each other:
 
 ```{r}
-#| fig.alt = "An area plot showing the kernel density estimates of 
-#|  engine displacement. Three areas are shown that indicate the estimates for
-#|  three types of drive trains separately. All areas are floored to the x-axis
-#|  and overlap one another."
 ggplot(mpg, aes(displ, fill = drv)) + 
   stat_density_common(bandwidth = 1, geom = "area", position = "stack")
 ```
@@ -310,19 +273,9 @@ ggplot(mpg, aes(displ, fill = drv)) +
 This is because each density is computed independently, and the estimated `x`s don't line up. We can resolve that issue by computing the range of the data once in `setup_params()`.
 
 ```{r}
-#| fig.alt = c(
-#| "A stacked area plot showing kernel density estimates of engine displacement.
-#|  Three areas are shown that indicate the estimates for three types of drive
-#|  trains separately. The areas are stacked on top of one another and show
-#|  no overlap.",
-#| "A heatmap showing the density of engine displacement for three types of 
-#|  drive trains. The heatmap has three rows for the drive trains, but are
-#|  continuous in the horizontal direction. The fill intensity of the heatmap
-#|  shows the kernel density estimates."   
-#| )
 StatDensityCommon <- ggproto("StatDensityCommon", Stat, 
   required_aes = "x",
-  default_aes = aes(y = stat(density)),
+  default_aes = aes(y = ..density..),
 
   setup_params = function(data, params) {
     min <- min(data$x) - 3 * params$bandwidth
@@ -344,7 +297,7 @@ StatDensityCommon <- ggproto("StatDensityCommon", Stat,
 
 ggplot(mpg, aes(displ, fill = drv)) + 
   stat_density_common(bandwidth = 1, geom = "area", position = "stack")
-ggplot(mpg, aes(displ, drv, fill = stat(density))) + 
+ggplot(mpg, aes(displ, drv, fill = ..density..)) + 
   stat_density_common(bandwidth = 1, geom = "raster")
 ```
 
@@ -357,35 +310,26 @@ ggplot(mpg, aes(displ, drv, fill = stat(density))) +
 1.  Modify the final version of `StatDensityCommon` to allow the user to 
     specify the `min` and `max` parameters. You'll need to modify both the
     layer function and the `compute_group()` method.
-    
-    Note: be careful when adding parameters to a layer function. The following 
-    names *col*, *color*, *pch*, *cex*, *lty*, *lwd*, *srt*, *adj*, *bg*, *fg*, 
-    *min*, and *max* are intentionally renamed to accomodate base graphical 
-    parameter names. For example, a value passed as *min* to a layer appears as 
-    *ymin* in the `setup_params` list of params. It is recommended you avoid 
-    using these names for layer parameters.
 
 1.  Compare and contrast `StatLm` to `ggplot2::StatSmooth`. What key
     differences make `StatSmooth` more complex than `StatLm`?
 
 ## Creating a new geom
 
-It's harder to create a new geom than a new stat because you also need to know some grid. ggplot2 is built on top of grid, so you'll need to know the basics of drawing with grid. If you're serious about adding a new geom, I'd recommend buying [R graphics](https://www.amazon.com/dp/B00I60M26G/ref=cm_sw_su_dp) by Paul Murrell. It tells you everything you need to know about drawing with grid.
+It's harder to create a new geom than a new stat because you also need to know some grid. ggplot2 is built on top of grid, so you'll need to know the basics of drawing with grid. If you're serious about adding a new geom, I'd recommend buying [R graphics](http://amzn.com/B00I60M26G) by Paul Murrell. It tells you everything you need to know about drawing with grid.
 
 ### A simple geom
 
 It's easiest to start with a simple example. The code below is a simplified version of `geom_point()`:
 
 ```{r GeomSimplePoint}
-#| fig.alt = "Scatterplot of engine displacement versus highway miles per
-#|  gallon, for 234 cars. The points are larger than the default."
 GeomSimplePoint <- ggproto("GeomSimplePoint", Geom,
   required_aes = c("x", "y"),
   default_aes = aes(shape = 19, colour = "black"),
   draw_key = draw_key_point,
 
-  draw_panel = function(data, panel_params, coord) {
-    coords <- coord$transform(data, panel_params)
+  draw_panel = function(data, panel_scales, coord) {
+    coords <- coord$transform(data, panel_scales)
     grid::pointsGrob(
       coords$x, coords$y,
       pch = coords$shape,
@@ -426,13 +370,12 @@ This is very similar to defining a new stat. You always need to provide fields/m
 
 * `data`: a data frame with one column for each aesthetic.
 
-* `panel_params`: a list of per-panel parameters generated by the coord.
-  You should consider this an opaque data structure: don't look inside 
-  it, just pass along to `coord` methods.
+* `panel_scales`: a list containing information about the x and y scales
+  for the current panel.
 
 * `coord`: an object describing the coordinate system.
 
-You need to use `panel_params` and `coord` together to transform the data  `coords <- coord$transform(data, panel_params)`. This creates a data frame where position variables are scaled to the range 0--1. You then take this data and call a grid grob function. (Transforming for non-Cartesian coordinate systems is quite complex - you're best off transforming your data to the form accepted by an existing ggplot2 geom and passing it.)
+Generally you won't use `panel_scales` and `coord` directly, but you will always use them to transform the data: `coords <- coord$transform(data, panel_scales)`. This creates a data frame where position variables are scaled to the range 0--1. You then take this data and call a grid grob function. (Transforming for non-Cartesian coordinate systems is quite complex - you're best off transforming your data to the form accepted by an existing ggplot2 geom and passing it.)
 
 ### Collective geoms
 
@@ -441,25 +384,21 @@ Overriding `draw_panel()` is most appropriate if there is one graphic element pe
 The following code makes a simplified version of `GeomPolygon`:
 
 ```{r}
-#| fig.alt = "Scatterplot of engine displacement versus highway miles per
-#|  gallon, for 234 cars. The convex hulls of points, grouped by 7 types of 
-#|  cars, are displayed as multiple polygons with no fill, but the outer line is 
-#|  coloured by the type."
 GeomSimplePolygon <- ggproto("GeomPolygon", Geom,
   required_aes = c("x", "y"),
   
   default_aes = aes(
-    colour = NA, fill = "grey20", linewidth = 0.5,
+    colour = NA, fill = "grey20", size = 0.5,
     linetype = 1, alpha = 1
   ),
 
   draw_key = draw_key_polygon,
 
-  draw_group = function(data, panel_params, coord) {
+  draw_group = function(data, panel_scales, coord) {
     n <- nrow(data)
     if (n <= 2) return(grid::nullGrob())
 
-    coords <- coord$transform(data, panel_params)
+    coords <- coord$transform(data, panel_scales)
     # A polygon can only have a single colour, fill, etc, so take from first row
     first_row <- coords[1, , drop = FALSE]
 
@@ -469,7 +408,7 @@ GeomSimplePolygon <- ggproto("GeomPolygon", Geom,
       gp = grid::gpar(
         col = first_row$colour,
         fill = scales::alpha(first_row$fill, first_row$alpha),
-        lwd = first_row$linewidth * .pt,
+        lwd = first_row$size * .pt,
         lty = first_row$linetype
       )
     )
@@ -512,11 +451,8 @@ You might want to compare this to the real `GeomPolygon`. You'll see it override
 Sometimes you just want to make a small modification to an existing geom. In this case, rather than inheriting from `Geom` you can inherit from an existing subclass. For example, we might want to change the defaults for `GeomPolygon` to work better with `StatChull`:
 
 ```{r}
-#| fig.alt = "Scatterplot of engine displacement versus highway miles per
-#|  gallon, for 234 cars. The convex hull of all the points is marked by a 
-#|  polygon with no fill."
 GeomPolygonHollow <- ggproto("GeomPolygonHollow", GeomPolygon,
-  default_aes = aes(colour = "black", fill = NA, linewidth = 0.5, linetype = 1,
+  default_aes = aes(colour = "black", fill = NA, size = 0.5, linetype = 1,
     alpha = NA)
   )
 geom_chull <- function(mapping = NULL, data = NULL, 
@@ -540,53 +476,7 @@ This doesn't allow you to use different geoms with the stat, but that seems appr
 
 1. Compare and contrast `GeomPoint` with `GeomSimplePoint`.
 
-1. Compare and contrast `GeomPolygon` with `GeomSimplePolygon`.
-
-## Geoms and Stats with multiple orientation
-Some layers have a specific orientation. `geom_bar()` e.g. have the bars along one axis, `geom_line()` will sort the input by one axis, etc. The original approach to using these geoms in the other orientation was to add `coord_flip()` to the plot to switch the position of the x and y axes. Following ggplot2 v3.3 all the geoms will natively work in both orientations without `coord_flip()`. The mechanism is that the layer will try to guess the orientation from the mapped data, or take direction from the user using the `orientation` parameter. To replicate this functionality in new stats and geoms there's a few steps to take. We will look at the boxplot layer as an example instead of creating a new one from scratch.
-
-### Omnidirectional stats
-The actual guessing of orientation will happen in `setup_params()` using the `has_flipped_aes()` helper:
-
-```{r}
-StatBoxplot$setup_params
-```
-
-Following this is a call to `flip_data()` which will make sure the data is in horizontal orientation. The rest of the code can then simply assume that the data is in a specific orientation. The same thing happens in `setup_data()`:
-
-```{r}
-StatBoxplot$setup_data
-```
-
-The data is flipped (if needed), manipulated, and flipped back as it is returned. 
-
-During the computation, this sandwiching between `flip_data()` is used as well, but right before the data is returned it will also get a `flipped_aes` column denoting if the data is flipped or not. This allows the
-stat to communicate to the geom that orientation has already been determined.
-
-### Omnidirecitonal geoms
-The setup for geoms is pretty much the same, with a few twists. `has_flipped_aes()` is also used in `setup_params()`, where it will usually be picked up from the `flipped_aes` column given by the stat. In `setup_data()` you will often see that `flipped_aes` is reassigned, to make sure it exist prior to position adjustment. This is needed if the geom is used together with a stat that doesn't handle orientation (often `stat_identity()`):
-
-```{r}
-GeomBoxplot$setup_data
-```
-
-In the `draw_*()` method you will once again sandwich any data manipulation between `flip_data()` calls. It is important to make sure that the data is flipped back prior to creating the grob or calling draw methods from other geoms.
-
-### Dealing with required aesthetics
-Omnidirectional layers usually have two different sets of required aesthetics. Which set is used is often how it knows the orientation. To handle this gracefully the `required_aes` field of `Stat` and `Geom` classes understands the `|` (or) operator. Looking at `GeomBoxplot` we can see how it is used:
-
-```{r}
-GeomBoxplot$required_aes
-```
-
-This tells ggplot2 that either all the aesthetics before `|` are required or all the aesthetics after are required.
-
-### Ambiguous layers
-Some layers will not have a clear interpretation of their data in terms of orientation. A classic example is `geom_line()` which just by convention runs along the x-axis. There is nothing in the data itself that indicates that. For these geoms the user must indicate a flipped orientation by setting `orientation = "y"`. The stat or geom will then call `has_flipped_aes()` with `ambiguous = TRUE` to cancel any guessing based on data format. As an example we can see the `setup_params()` method of `GeomLine`:
-
-```{r}
-GeomLine$setup_params
-```
+1. Compare and contract `GeomPolygon` with `GeomSimplePolygon`.
 
 ## Creating your own theme
 
@@ -628,12 +518,6 @@ title        | `element_text()`  | all text in title elements (plot, axes & lege
 These set default properties that are inherited by more specific settings. These are most useful for setting an overall "background" colour and overall font settings (e.g. family and size).
 
 ```{r axis-line-ex}
-#| fig.alt = c(
-#| "Scatterplot of three observations arranged diagonally. The axis titles 'x' 
-#|  and 'y' are coloured in black",
-#| "Scatterplot of three observations arranged diagonally. The axis titles 'x' 
-#|  and 'y' are coloured in red"
-#| )
 df <- data.frame(x = 1:3, y = 1:3)
 base <- ggplot(df, aes(x, y)) + 
   geom_point() + 
@@ -658,11 +542,11 @@ Complete and incomplete themes behave somewhat differently when added to a ggplo
   
 * Adding a complete theme wipes away the existing theme and applies the new theme.
 
-## Creating a new faceting
+## Creating a new facetting
 
-One of the more daunting exercises in ggplot2 extensions is to create a new faceting system. The reason for this is that when creating new facetings you take on the responsibility of how (almost) everything is drawn on the screen, and many do not have experience with directly using [gtable](https://cran.r-project.org/package=gtable) and [grid](https://cran.r-project.org/package=grid) upon which the ggplot2 rendering is built. If you decide to venture into faceting extensions, it is highly recommended to gain proficiency with the above-mentioned packages.
+One of the more daunting exercises in ggplot2 extensions is to create a new facetting system. The reason for this is that when creating new facettings you take on the responsibility of how (almost) everything is drawn on the screen, and many do not have experience with directly using [gtable](https://cran.r-project.org/package=gtable) and [grid](https://cran.r-project.org/package=grid) upon which the ggplot2 rendering is build. If you decide to venture into facetting extensions it is highly recommended to gain proficiency with the above-mentioned packages.
 
-The `Facet` class in ggplot2 is very powerful as it takes on responsibility of a wide range of tasks. The main tasks of a `Facet` object are:
+The `Facet` class in ggplot2 is very powerfull as it takes on responsibility of a wide range of tasks. The main tasks of a `Facet` object are:
 
 * Define a layout; that is, a partitioning of the data into different plot areas (panels) as well as which panels share position scales.
 
@@ -678,11 +562,11 @@ Apart from these three tasks, for which functionality must be implemented, there
 
 * Drawing of axis labels
 
-To show how a new faceting class is created we will start simple and go through each of the required methods in turn to build up `facet_duplicate()` that simply duplicate our plot into two panels. After this we will tinker with it a bit to show some of the more powerful possibilities.
+To show how a new facetting class is created we will start simple and go through each of the required methods in turn to build up `facet_duplicate()` that simply duplicate our plot into two panels. After this we will tinker with it a bit to show some of the more powerful possibilities.
 
 ### Creating a layout specification
 
-A layout in the context of facets is a `data.frame` that defines a mapping between data and the panels it should reside in as well as which positional scales should be used. The output should at least contain the columns `PANEL`, `SCALE_X`, and `SCALE_Y`, but will often contain more to help assign data to the correct panel (`facet_grid()` will e.g. also return the faceting variables associated with each panel). Let's make a function that defines a duplicate layout:
+A layout in the context of facets is a `data.frame` that defines a mapping between data and the panels it should reside in as well as which positional scales should be used. The output should at least contain the columns `PANEL`, `SCALE_X`, and `SCALE_Y`, but will often contain more to help assign data to the correct panel (`facet_grid()` will e.g. also return the facetting variables associated with each panel). Let's make a function that defines a duplicate layout:
 
 ```{r}
 layout <- function(data, params) {
@@ -690,7 +574,7 @@ layout <- function(data, params) {
 }
 ```
 
-This is quite simple as the faceting should just define two panels irrespectively of the input data and parameters.
+This is quite simple as the facetting should just define two panels irrespectively of the input data and parameters.
 
 ### Mapping data into panels
 
@@ -698,7 +582,7 @@ In order for ggplot2 to know which data should go where it needs the data to be 
 
 ```{r}
 mapping <- function(data, layout, params) {
-  if (is.null(data) || nrow(data) == 0) {
+  if (plyr::empty(data)) {
     return(cbind(data, PANEL = integer(0)))
   }
   rbind(
@@ -712,7 +596,7 @@ here we first investigate whether we have gotten an empty `data.frame` and if no
 
 ### Laying out the panels
 
-While the two functions above have been deceivingly simple, this last one is going to take some more work. Our goal is to draw two panels beside (or above) each other with axes etc.
+While the two functions above has been decievingly simple, this last one is going to take some more work. Our goal is to draw two panels beside (or above) each other with axes etc.
 
 ```{r}
 render <- function(panels, layout, x_scales, y_scales, ranges, coord, data,
@@ -813,11 +697,6 @@ FacetDuplicate <- ggproto("FacetDuplicate", Facet,
 Now with everything assembled, lets test it out:
 
 ```{r}
-#| fig.alt = c(
-#| "Scatterplot showing horsepower against miles per gallon for 32 cars.",
-#| "Scatterplot with two panels showing horsepower against miles per gallon for 
-#|  32 cars. The left and right panels are identical."
-#| )
 p <- ggplot(mtcars, aes(x = hp, y = mpg)) + geom_point()
 p
 p + facet_duplicate()
@@ -825,7 +704,7 @@ p + facet_duplicate()
 
 ### Doing more with facets
 
-The example above was pretty useless and we'll now try to expand on it to add some actual usability. We are going to make a faceting that adds panels with y-transformed axes:
+The example above was pretty useless and we'll now try to expand on it to add some actual usability. We are going to make a facetting that adds panels with y-transformed axes:
 
 ```{r}
 library(scales)
@@ -847,7 +726,7 @@ FacetTrans <- ggproto("FacetTrans", Facet,
   },
   # Same as before
   map_data = function(data, layout, params) {
-    if (is.null(data) || nrow(data) == 0) {
+    if (plyr::empty(data)) {
       return(cbind(data, PANEL = integer(0)))
     }
     rbind(
@@ -859,7 +738,7 @@ FacetTrans <- ggproto("FacetTrans", Facet,
   init_scales = function(layout, x_scale = NULL, y_scale = NULL, params) {
     scales <- list()
     if (!is.null(x_scale)) {
-      scales$x <- lapply(seq_len(max(layout$SCALE_X)), function(i) x_scale$clone())
+      scales$x <- plyr::rlply(max(layout$SCALE_X), x_scale$clone())
     }
     if (!is.null(y_scale)) {
       y_scale_orig <- y_scale$clone()
@@ -898,7 +777,7 @@ FacetTrans <- ggproto("FacetTrans", Facet,
     }
     data
   },
-  # A few changes from before to accommodate that axes are now not duplicate of each other
+  # A few changes from before to accomodate that axes are now not duplicate of each other
   # We also add a panel strip to annotate the different panels
   draw_panels = function(panels, layout, x_scales, y_scales, ranges, coord,
                          data, theme, params) {
@@ -945,29 +824,28 @@ FacetTrans <- ggproto("FacetTrans", Facet,
     axis_width_l <- grobWidths(axes$y$left)
     axis_width_r <- grobWidths(axes$y$right)
     ## We do it reverse so we don't change the position of panels when we add axes
-    if (params$horizontal) {
-      for (i in rev(seq_along(panel_pos_h))) {
-        panel_table <- gtable::gtable_add_cols(panel_table, axis_width_r[i], panel_pos_h[i])
-        panel_table <- gtable::gtable_add_grob(panel_table,
-          axes$y$right[i], t = panel_pos_v, l = panel_pos_h[i] + 1,
+    for (i in rev(seq_along(panel_pos_h))) {
+      panel_table <- gtable::gtable_add_cols(panel_table, axis_width_r[i], panel_pos_h[i])
+      if (params$horizontal) {
+        panel_table <- gtable::gtable_add_grob(panel_table, 
+          rep(axes$y$right[i], length(panel_pos_v)), t = panel_pos_v, l = panel_pos_h[i] + 1, 
           clip = "off")
-
-        panel_table <- gtable::gtable_add_cols(panel_table, axis_width_l[i], panel_pos_h[i] - 1)
-        panel_table <- gtable::gtable_add_grob(panel_table,
-          axes$y$left[i], t = panel_pos_v, l = panel_pos_h[i],
-          clip = "off")
-      }
-    } else {
-        panel_table <- gtable::gtable_add_cols(panel_table, axis_width_r[1], panel_pos_h)
-        panel_table <- gtable::gtable_add_grob(panel_table,
-          axes$y$right, t = panel_pos_v, l = panel_pos_h + 1,
-          clip = "off")
-        panel_table <- gtable::gtable_add_cols(panel_table, axis_width_l[1], panel_pos_h - 1)
-        panel_table <- gtable::gtable_add_grob(panel_table,
-          axes$y$left, t = panel_pos_v, l = panel_pos_h,
+      } else {
+        panel_table <- gtable::gtable_add_grob(panel_table, 
+          rep(axes$y$right, length(panel_pos_v)), t = panel_pos_v, l = panel_pos_h[i] + 1, 
           clip = "off")
       }
-
+      panel_table <- gtable::gtable_add_cols(panel_table, axis_width_l[i], panel_pos_h[i] - 1)
+      if (params$horizontal) {
+        panel_table <- gtable::gtable_add_grob(panel_table, 
+        rep(axes$y$left[i], length(panel_pos_v)), t = panel_pos_v, l = panel_pos_h[i], 
+        clip = "off")
+      } else {
+        panel_table <- gtable::gtable_add_grob(panel_table, 
+        rep(axes$y$left, length(panel_pos_v)), t = panel_pos_v, l = panel_pos_h[i], 
+        clip = "off")
+      }
+    }
     ## Recalculate as gtable has changed
     panel_pos_h <- panel_cols(panel_table)$l
     panel_pos_v <- panel_rows(panel_table)$t
@@ -1012,28 +890,19 @@ FacetTrans <- ggproto("FacetTrans", Facet,
 )
 ```
 
-As is very apparent, the `draw_panel` method can become very unwieldy once it begins to take multiple possibilities into account. The fact that we want to support both horizontal and vertical layout leads to a lot of if/else blocks in the above code. In general, this is the big challenge when writing facet extensions so be prepared to be very meticulous when writing these methods.
+As is very apparent, the `draw_panel` method can become very unwieldy once it begins to take multiple possibilities into account. The fact that we want to support both horizontal and vertical layout leads to a lot of if/else blocks in the above code. In general this is the big challenge when writing facet extensions so be prepared to be very meticulous when writing these methods.
 
-Enough talk - lets see if our new and powerful faceting extension works:
+Enough talk - lets see if our new and powerful facetting extension works:
 
 ```{r}
-#| fig.alt = "Scatterplot with two panels showing horsepower against miles per 
-#|  gallon for 32 cars. Both panels show the same datapoints. The left panel is 
-#|  titled 'original' and the right panel is titled 'transformed (sqrt)'. On the 
-#|  right panel, the miles per gallon are displayed on a square root 
-#|  transformed scale."
 ggplot(mtcars, aes(x = hp, y = mpg)) + geom_point() + facet_trans('sqrt')
 ```
 
 ## Extending existing facet function
 
-As the rendering part of a facet class is often the difficult development step, it is possible to piggyback on the existing faceting classes to achieve a range of new facetings. Below we will subclass `facet_wrap()` to make a `facet_bootstrap()` class that splits the input data into a number of panels at random.
+As the rendering part of a facet class is often the difficult development step, it is possible to piggyback on the existing facetting classes to achieve a range of new facettings. Below we will subclass `facet_wrap()` to make a `facet_bootstrap()` class that splits the input data into a number of panels at random.
 
 ```{r}
-#| fig.alt = "Scatterplot with three-by-three panels showing the weight versus
-#|  the price of about 10.000 diamonds in every panel. The panels are titled 1
-#|  to 9 and show different points, but are visually similar."
-
 facet_bootstrap <- function(n = 9, prop = 0.2, nrow = NULL, ncol = NULL, 
   scales = "fixed", shrink = TRUE, strip.position = "top") {
   

@@ -5,11 +5,11 @@ base-package	base-package
 !=	Comparison
 "	Quotes
 $	Extract
+$.data.frame	Extract.data.frame
 $.DLLInfo	getLoadedDLLs
 $.package_version	numeric_version
 $<-	Extract
 $<-.data.frame	Extract.data.frame
-$<-.POSIXlt	DateTimeClasses
 %%	Arithmetic
 %*%	matmult
 %/%	Arithmetic
@@ -36,14 +36,13 @@ $<-.POSIXlt	DateTimeClasses
 ...	dots
 ...elt	dots
 ...length	dots
-...names	dots
 ..1	dots
 ..2	dots
 ..deparseOpts	deparseOpts
 ..getNamespace	ns-internal
 .Alias	base-defunct
-.amatch_bounds	base-internal
-.amatch_costs	base-internal
+.amatch_bounds	agrep
+.amatch_costs	agrep
 .ArgsEnv	base-internal
 .Autoloaded	autoload
 .AutoloadEnv	autoload
@@ -53,9 +52,7 @@ $<-.POSIXlt	DateTimeClasses
 .cache_class	base-internal
 .Call	CallExternal
 .Call.graphics	Foreign-internal
-.check_tzones	base-internal
 .Class	UseMethod
-.class2	class
 .col	col
 .colMeans	colSums
 .colSums	colSums
@@ -67,7 +64,7 @@ $<-.POSIXlt	DateTimeClasses
 .C_R_startbcprof	base-internal
 .C_R_stopbcprof	base-internal
 .Date	base-internal
-.decode_numeric_version	base-internal
+.decode_numeric_version	numeric_version
 .Defunct	Defunct
 .deparseOpts	deparseOpts
 .Deprecated	Deprecated
@@ -80,8 +77,8 @@ $<-.POSIXlt	DateTimeClasses
 .doWrap	base-internal
 .Dyn.libs	base-defunct
 .dynLibs	library.dynam
-.encode_numeric_version	base-internal
-.expand_R_libs_env_var	base-internal
+.encode_numeric_version	numeric_version
+.expand_R_libs_env_var	libPaths
 .Export	base-defunct
 .External	CallExternal
 .External.graphics	Foreign-internal
@@ -91,10 +88,7 @@ $<-.POSIXlt	DateTimeClasses
 .First.lib	base-defunct
 .First.sys	Startup
 .Firstlib_as_onLoad	base-internal
-.fixupGFortranStderr	base-internal
-.fixupGFortranStdout	base-internal
 .format.zeros	formatc
-.formula2varlist	base-internal
 .Fortran	Foreign
 .F_dchdc	base-internal
 .F_dqrcf	base-internal
@@ -122,12 +116,11 @@ $<-.POSIXlt	DateTimeClasses
 .isOpen	srcfile
 .kappa_tri	kappa
 .knownS3Generics	ns-internal
-.kronecker	base-internal
+.kronecker	kronecker
 .Last	quit
 .Last.lib	ns-hooks
 .Last.sys	quit
 .Last.value	Last.value
-.LC.categories	locales
 .leap.seconds	DateTimeClasses
 .lib.loc	base-defunct
 .libPaths	libPaths
@@ -135,8 +128,8 @@ $<-.POSIXlt	DateTimeClasses
 .Library.site	libPaths
 .Machine	zMachine
 .makeMessage	message
-.make_numeric_version	base-internal
-.mapply	mapply
+.make_numeric_version	numeric_version
+.mapply	base-internal
 .maskedMsg	base-internal
 .mergeExportMethods	ns-internal
 .mergeImportMethods	ns-internal
@@ -152,13 +145,12 @@ $<-.POSIXlt	DateTimeClasses
 .Options	options
 .OptRequireMethods	Startup
 .packages	zpackages
-.packageStartupMessage	base-internal
+.packageStartupMessage	message
 .path.package	base-defunct
 .Platform	Platform
 .popath	base-internal
 .POSIXct	base-internal
 .POSIXlt	base-internal
-.pretty	pretty
 .Primitive	Primitive
 .primTrace	base-internal
 .primUntrace	base-internal
@@ -166,14 +158,14 @@ $<-.POSIXlt	DateTimeClasses
 .Random.seed	Random
 .readRDS	base-defunct
 .Renviron	Startup
-.rmpkg	base-internal
+.rmpkg	search
 .row	row
 .rowMeans	colSums
 .rowNamesDF<-	row.names
 .rowSums	colSums
 .row_names_info	base-internal
 .Rprofile	Startup
-.S3method	S3method
+.S3method	base-defunct
 .S3PrimitiveGenerics	InternalMethods
 .S3_methods_table	ns-internal
 .saveRDS	base-defunct
@@ -190,8 +182,8 @@ $<-.POSIXlt	DateTimeClasses
 .tryResumeInterrupt	conditions
 .userHooksEnv	userhooks
 .valid.factor	factor
-.__H__.cbind	base-defunct
-.__H__.rbind	base-defunct
+.__H__.cbind	cbind
+.__H__.rbind	cbind
 .__S3MethodsTable__.	ns-internal
 /	Arithmetic
 /.difftime	difftime
@@ -215,7 +207,6 @@ abbreviate	abbreviate
 abs	MathFun
 acos	Trig
 acosh	Hyperbolic
-activeBindingFunction	bindenv
 addNA	factor
 addTaskCallback	taskCallback
 agrep	agrep
@@ -229,7 +220,6 @@ all.equal.environment	all.equal
 all.equal.envRefClass	all.equal
 all.equal.factor	all.equal
 all.equal.formula	all.equal
-all.equal.function	all.equal
 all.equal.language	all.equal
 all.equal.list	all.equal
 all.equal.numeric	all.equal
@@ -246,7 +236,6 @@ anyDuplicated.default	duplicated
 anyDuplicated.matrix	duplicated
 anyMissing	NA
 anyNA	NA
-anyNA.data.frame	NA
 anyNA.numeric_version	numeric_version
 anyNA.POSIXlt	DateTimeClasses
 aperm	aperm
@@ -261,7 +250,6 @@ Arg	complex
 args	args
 Arithmetic	Arithmetic
 array	array
-array2DF	array2DF
 arrayInd	which
 as.array	array
 as.array.default	array
@@ -328,7 +316,6 @@ as.list	list
 as.list.data.frame	list
 as.list.Date	Dates
 as.list.default	list
-as.list.difftime	difftime
 as.list.environment	list
 as.list.factor	list
 as.list.function	list
@@ -376,14 +363,11 @@ as.symbol	name
 as.table	table
 as.table.default	table
 as.vector	vector
-as.vector.data.frame	vector
 as.vector.factor	vector
-as.vector.POSIXlt	vector
 asin	Trig
 asinh	Hyperbolic
 AsIs	AsIs
 asNamespace	ns-internal
-asplit	asplit
 asS3	isS4
 asS4	isS4
 assign	assign
@@ -405,7 +389,6 @@ Autoloads	autoload
 backquote	Quotes
 backsolve	backsolve
 backtick	Quotes
-balancePOSIXlt	balancePOSIXlt
 base	base-package
 base-defunct	base-defunct
 base-deprecated	base-deprecated
@@ -445,7 +428,6 @@ c	c
 c.Date	Dates
 c.default	c
 c.difftime	difftime
-c.factor	factor
 c.noquote	noquote
 c.numeric_version	numeric_version
 c.POSIXct	DateTimeClasses
@@ -465,13 +447,12 @@ character	character
 charmatch	charmatch
 charToRaw	rawConversion
 chartr	chartr
+check_tzones	DateTimeClasses
 chkDots	chkDots
 chol	chol
 chol.default	chol
 chol2inv	chol2inv
 choose	Special
-chooseOpsMethod	chooseOpsMethod
-chooseOpsMethod.default	chooseOpsMethod
 class	class
 class<-	class
 clearPushBack	pushBack
@@ -507,7 +488,6 @@ conditionCall.condition	conditions
 conditionMessage	conditions
 conditionMessage.condition	conditions
 conditions	conditions
-conflictRules	library
 conflicts	conflicts
 Conj	complex
 connection	connections
@@ -521,7 +501,6 @@ cos	Trig
 cosh	Hyperbolic
 cospi	Trig
 crossprod	crossprod
-CStackOverflowError	StackOverflows
 Cstack_info	Cstack_info
 cummax	cumsum
 cummin	cumsum
@@ -543,13 +522,12 @@ DateTimeClasses	DateTimeClasses
 debug	debug
 debuggingState	debug
 debugonce	debug
-default.stringsAsFactors	base-defunct
+default.stringsAsFactors	data.frame
 Defunct	Defunct
 defunct	Defunct
 delay	base-defunct
 delayedAssign	delayedAssign
 deparse	deparse
-deparse1	deparse
 Deprecated	Deprecated
 deprecated	Deprecated
 det	det
@@ -621,7 +599,6 @@ environment variables	EnvVar
 environment<-	environment
 environmentIsLocked	bindenv
 environmentName	environment
-errorCondition	conditions
 eval	eval
 eval.parent	eval
 evalq	eval
@@ -630,7 +607,6 @@ exp	Log
 expand.grid	expand.grid
 expm1	Log
 expression	expression
-expressionStackOverflowError	StackOverflows
 Extract	Extract
 extSoftVersion	extSoftVersion
 F	logical
@@ -639,7 +615,6 @@ factorial	Special
 FALSE	logical
 fifo	connections
 file	connections
-file path encoding	UTF8filepaths
 file.access	file.access
 file.append	files
 file.choose	file.choose
@@ -735,9 +710,7 @@ gettext	gettext
 gettextf	sprintf
 getwd	getwd
 gl	gl
-globalCallingHandlers	conditions
 globalenv	environment
-gregexec	grep
 gregexpr	grep
 grep	grep
 grepl	grep
@@ -745,7 +718,6 @@ grepRaw	grepRaw
 group generic	groupGeneric
 groupGeneric	groupGeneric
 grouping	grouping
-GSC	EnvVar
 gsub	grep
 gzcon	gzcon
 gzfile	connections
@@ -766,7 +738,6 @@ importIntoEnv	ns-internal
 in	Control
 Inf	is.finite
 infinite	is.finite
-infoRDS	readRDS
 inherits	class
 integer	integer
 interaction	interaction
@@ -794,10 +765,8 @@ is.environment	environment
 is.expression	expression
 is.factor	factor
 is.finite	is.finite
-is.finite.POSIXlt	DateTimeClasses
 is.function	is.function
 is.infinite	is.finite
-is.infinite.POSIXlt	DateTimeClasses
 is.integer	integer
 is.language	is.language
 is.list	list
@@ -814,7 +783,6 @@ is.na<-.factor	factor
 is.na<-.numeric_version	numeric_version
 is.name	name
 is.nan	is.finite
-is.nan.POSIXlt	DateTimeClasses
 is.null	NULL
 is.numeric	numeric
 is.numeric.Date	numeric
@@ -836,7 +804,6 @@ is.symbol	name
 is.table	table
 is.unsorted	is.unsorted
 is.vector	vector
-isa	class
 isatty	showConnections
 isBaseNamespace	ns-internal
 isdebugged	debug
@@ -870,7 +837,6 @@ La.svd	svd
 labels	labels
 labels.default	labels
 LANGUAGE	EnvVar
-language	is.language
 language object	is.language
 language objects	is.language
 lapply	lapply
@@ -917,7 +883,6 @@ license	license
 list	list
 list.dirs	list.files
 list.files	list.files
-list2DF	list2DF
 list2env	list2env
 load	load
 loadedNamespaces	ns-load
@@ -950,8 +915,7 @@ MAKEINDEX	EnvVar
 manglePackageName	base-defunct
 Map	funprog
 mapply	mapply
-margin.table	marginSums
-marginSums	marginSums
+margin.table	margin.table
 mat.or.vec	mat.or.vec
 match	match
 match.arg	match.arg
@@ -966,7 +930,6 @@ Math.POSIXlt	DateTimeClasses
 Math.POSIXt	DateTimeClasses
 matmult	matmult
 matrix	matrix
-matrixOps	groupGeneric
 max	Extremes
 max.col	maxCol
 MC_CORES	options
@@ -977,8 +940,6 @@ mean.difftime	difftime
 mean.POSIXct	DateTimeClasses
 mean.POSIXlt	DateTimeClasses
 mem.limits	base-defunct
-mem.maxNSize	memlimits
-mem.maxVSize	memlimits
 memCompress	memCompress
 memDecompress	memCompress
 Memory	Memory
@@ -1000,12 +961,8 @@ months	weekday.POSIXt
 months.Date	weekday.POSIXt
 months.POSIXt	weekday.POSIXt
 mostattributes<-	attributes
-mtfrm	mtfrm
-mtfrm.default	mtfrm
 NA	NA
 name	name
-nameOfClass	class
-nameOfClass.default	class
 names	names
 names.default	names
 names.POSIXlt	DateTimeClasses
@@ -1034,7 +991,6 @@ next	Control
 NextMethod	UseMethod
 ngettext	gettext
 nlevels	nlevels
-nodeStackOverflowError	StackOverflows
 noquote	noquote
 norm	norm
 normalizePath	normalizePath
@@ -1043,12 +999,9 @@ NotYetUsed	notyet
 NROW	nrow
 nrow	nrow
 NULL	NULL
-nullfile	showConnections
 numeric	numeric
 NumericConstants	NumericConstants
 numeric_version	numeric_version
-numToBits	rawConversion
-numToInts	rawConversion
 nzchar	nchar
 objects	ls
 octmode	octmode
@@ -1077,7 +1030,6 @@ outer	outer
 package.description	base-defunct
 packageEvent	userhooks
 packageHasNamespace	ns-internal
-packageNotFoundError	find.package
 packageStartupMessage	message
 package_version	numeric_version
 packBits	rawConversion
@@ -1098,9 +1050,7 @@ pcre_config	pcre_config
 pentagamma	base-defunct
 pi	Constants
 pipe	connections
-pipeOp	pipeOp
 Platform	base-defunct
-plot	plot
 pmatch	pmatch
 pmax	Extremes
 pmax.int	Extremes
@@ -1165,9 +1115,7 @@ proc.time	proc.time
 prod	prod
 promise	delayedAssign
 promises	delayedAssign
-prop.table	proportions
-proportions	proportions
-protectStackOverflowError	StackOverflows
+prop.table	prop.table
 provide	base-defunct
 provideDimnames	dimnames
 psigamma	Special
@@ -1242,7 +1190,6 @@ Renviron	Startup
 Renviron.site	Startup
 rep	rep
 rep.Date	rep
-rep.difftime	difftime
 rep.factor	rep
 rep.int	rep
 rep.numeric_version	numeric_version
@@ -1290,7 +1237,6 @@ Rprofile	Startup
 Rprofile.site	Startup
 R_BATCH	EnvVar
 R_BROWSER	EnvVar
-R_compiled_by	Version
 R_COMPLETION	EnvVar
 R_C_BOUNDS_CHECK	options
 R_DEFAULT_DEVICE	options
@@ -1322,12 +1268,9 @@ R_PROFILE	Startup
 R_PROFILE_USER	Startup
 R_RD4PDF	EnvVar
 R_SHARE_DIR	EnvVar
-R_SUPPORT_OLD_TARS	EnvVar
 R_system_version	numeric_version
 R_TEXI2DVICMD	EnvVar
-R_TIDYCMD	EnvVar
 R_UNZIPCMD	EnvVar
-R_USER	EnvVar
 R_ZIPCMD	EnvVar
 S3groupGeneric	groupGeneric
 S3Methods	UseMethod
@@ -1353,11 +1296,9 @@ seq.default	seq
 seq.int	seq
 seq.POSIXt	seq.POSIXt
 sequence	sequence
-sequence.default	sequence
 seq_along	seq
 seq_len	seq
 serialize	serialize
-serverSocket	connections
 set.seed	Random
 setdiff	sets
 setequal	sets
@@ -1385,10 +1326,8 @@ sink	sink
 sink.number	sink
 sinpi	Trig
 slice.index	slice.index
-socketAccept	connections
 socketConnection	connections
 socketSelect	socketSelect
-socketTimeout	connections
 solve	solve
 solve.default	solve
 solve.qr	qr
@@ -1419,8 +1358,6 @@ srcfilecopy	srcfile
 srcfilecopy-class	srcfile
 srcref	srcfile
 srcref-class	srcfile
-stackOverflowError	StackOverflows
-StackOverflows	StackOverflows
 standardGeneric	standardGeneric
 startsWith	startsWith
 Startup	Startup
@@ -1432,8 +1369,6 @@ stopifnot	stopifnot
 storage.mode	mode
 storage.mode<-	mode
 str.POSIXt	DateTimeClasses
-str2expression	parse
-str2lang	parse
 strftime	strptime
 strptime	strptime
 strrep	strrep
@@ -1484,7 +1419,6 @@ suspendInterrupts	conditions
 svd	svd
 sweep	sweep
 switch	switch
-symbol	name
 symbol.C	base-defunct
 symbol.For	base-defunct
 Syntax	Syntax
@@ -1511,7 +1445,6 @@ Sys.readlink	Sys.readlink
 sys.save.image	base-internal
 Sys.setenv	Sys.setenv
 Sys.setFileTime	Sys.setFileTime
-Sys.setLanguage	gettext
 Sys.setlocale	locales
 Sys.sleep	Sys.sleep
 sys.source	sys.source
@@ -1540,6 +1473,7 @@ taskCallbackManager	taskCallbackManager
 tcrossprod	crossprod
 tempdir	tempfile
 tempfile	tempfile
+testPlatformEquivalence	base-internal
 tetragamma	base-defunct
 textConnection	textconnections
 textConnectionValue	textconnections
@@ -1574,13 +1508,11 @@ truncate	seek
 truncate.connection	seek
 try	try
 tryCatch	conditions
-tryInvokeRestart	conditions
 type	typeof
 typeof	typeof
 TZ	timezones
 TZDIR	timezones
 umask	files2
-unCfillPOSIXlt	balancePOSIXlt
 unclass	class
 undebug	debug
 Unicode	utf8Conversion
@@ -1593,12 +1525,12 @@ unique.matrix	unique
 unique.numeric_version	numeric_version
 unique.POSIXlt	DateTimeClasses
 unique.warnings	warnings
-units	units
+units	difftime
 units.difftime	difftime
-units<-	units
+units<-	difftime
 units<-.difftime	difftime
 unix	base-defunct
-unix.time	base-defunct
+unix.time	system.time
 unlink	unlink
 unlist	unlist
 unloadNamespace	ns-load
@@ -1612,7 +1544,6 @@ unz	connections
 upper.tri	lower.tri
 url	connections
 UseMethod	UseMethod
-UTF-8 file path	UTF8filepaths
 utf8ToInt	utf8Conversion
 validEnc	validUTF8
 validUTF8	validUTF8
@@ -1622,7 +1553,6 @@ Vectorize	Vectorize
 Version	base-defunct
 version	Version
 warning	warning
-warningCondition	conditions
 warnings	warnings
 weekdays	weekday.POSIXt
 weekdays.Date	weekday.POSIXt
@@ -1650,7 +1580,6 @@ xor	Logic
 xpdrows.data.frame	dataframeHelpers
 xtfrm	xtfrm
 xtfrm.AsIs	xtfrm
-xtfrm.data.frame	xtfrm
 xtfrm.Date	xtfrm
 xtfrm.default	xtfrm
 xtfrm.difftime	xtfrm
@@ -1658,6 +1587,7 @@ xtfrm.factor	xtfrm
 xtfrm.numeric_version	numeric_version
 xtfrm.POSIXct	xtfrm
 xtfrm.POSIXlt	xtfrm
+xtfrm.Surv	xtfrm
 xzfile	connections
 zapsmall	zapsmall
 [	Extract
@@ -1681,7 +1611,6 @@ zapsmall	zapsmall
 [<-	Extract
 [<-.data.frame	Extract.data.frame
 [<-.Date	Dates
-[<-.difftime	difftime
 [<-.factor	Extract.factor
 [<-.numeric_version	numeric_version
 [<-.POSIXct	DateTimeClasses
@@ -1697,13 +1626,11 @@ zapsmall	zapsmall
 [[<-.data.frame	Extract.data.frame
 [[<-.factor	Extract.factor
 [[<-.numeric_version	numeric_version
-[[<-.POSIXlt	DateTimeClasses
 ^	Arithmetic
 `	Quotes
 {	Paren
 |	Logic
 |.hexmode	hexmode
 |.octmode	octmode
-|>	pipeOp
 ||	Logic
 ~	tilde

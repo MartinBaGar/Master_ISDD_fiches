@@ -3,126 +3,6 @@
 \newcommand{\cpkg}{\href{https://CRAN.R-project.org/package=#1}{\pkg{#1}}}
 \newcommand{\issue}{\href{https://github.com/topepo/caret/issues/#1}{(issue #1)}}
 
-\section{Changes in version 6.0-94}{
-  \itemize{
-   \item Bug fix in how some S3 signatures were designed (for R-devel).
-   \item Adrián Panella fixed a bug with `method = "svmRadial" that occured when the SVM probability model failed \issue{1327}
-   \item Theodore Pak fixed a bug in glmnet prediction when sparse matrices are used \issue{1315}
-      \item Carlos Cinelli fixed two bugs (one for GAMs and another for ranger models) where an error would occur when using \code{trainControl(method = "none")} \issue{1307} \issue{1308}
-   }
-}
-
-\section{Changes in version 6.0-93}{
-  \itemize{
-   \item CRAN required changes for legacy S typedef Sint.
-   \item Xabriel J. Collazo Mojica added check for class probabilities when PR curves are requested \issue{1274}.
-   }
-}
-
-\section{Changes in version 6.0-92}{
-  \itemize{
-   \item Small maintenance release with required C changes for R 4.2.
-   }
-}
-
-\section{Changes in version 6.0-91}{
-  \itemize{
-   \item Small maintenance release with required changes for R 4.2.
-   }
-}
-
-\section{Changes in version 6.0-90}{
-  \itemize{
-   \item A \code{ptype} element was added to \code{train} objects that records the trianing set predictor columns and their types using a zero-row slice.
-   \item Updated the internal object containing the subsampling information. The old package dependencies were being used.
-   }
-}
-
-\section{Changes in version 6.0-89}{
-  \itemize{
-   \item SMOTE subsampling is now computed via the \cpkg{themis} package \issue{1226}.
-   \item For SA feature selection, a better warning is given when there are too few iterations for computing differences \issue{1247}.
-   \item Better error message when pacakges are missing \issue{1246}.
-   \item \cpkg{e1071} was promoted from Suggests to Imports \issue{1238}.
-  }
-}
-
-
-\section{Changes in version 6.0-88}{
-  \itemize{
-   \item Fixed cases where the "corr" filter was not run in \code{preProcess()}.
-   \item Prediction type bug for Poisson glm model was fixed \issue{1231}.
-   \item Fixed a \code{PreProcess()} bug related to a single PCA component \issue{1181}.
-   \item Fixed random forest bugs related to \code{rfe()} \issue{#1077}, \issue{1062}.
-   \item RuleFit was added via the \cpkg{pre} package \issue{1218}.
-   \item Bugs were fixed where MAE was not treated as a minimization metric \issue{1224}.
-  }
-}
-
-\section{Changes in version 6.0-87}{
-  \itemize{
-    \item The \cpkg{ordinalNet} model was given an additional tuning parameter \code{modeltype}.
-  }
-}
-
-
-\section{Changes in version 6.0-86}{
-  \itemize{
-    \item Small release for \code{stringsAsFactors = TRUE} in R-4.0
-  }
-}
-
-\section{Changes in version 6.0-85}{
-  \itemize{
-    \item Internal changes required by r-devel for new matrix class structure.
-    \item Michael Mayer contributed a faster version of \code{groupKFold()}. \issue{1108}
-    \item A typo in a variable name was fixed. \issue{1087}
-    \item Removed some warnings related to contrasts.
-    \item Temporarily moved ROC calculations back to the \cpkg{pROC} package related to \code{JackStat/ModelMetrics#30}. \issue{1105}
-
-  }
-}
-
-\section{Changes in version 6.0-84}{
-  \itemize{
-    \item Another new version was related to character encodings.
-  }
-}
-
-\section{Changes in version 6.0-83}{
-  \itemize{
-    \item A new version was requested by CRAN since en dashes were used in the documentation.
-    \item A bug was fixed where, for some recipes that involve class imbalance sampling, the resampling indicies were computed incorrectly \issue{1030}.
-    \item code{train} now removes duplicate models in the tuning grid. Duplicates could occur for models with discrete parameters.
-  }
-}
-
-\section{Changes in version 6.0-82}{
-  \itemize{
-    \item Immediate and required updates related to the different behavior of \code{sample} in R >= 3.6.
-    \item \code{sbf}, \code{gafs}, and \code{safs} now accept recipes as inputs. A few sections of documentation were added to the \href{https://topepo.github.io/caret/}{bookdown site}
-    \item A bug was fixed in simulated annealing feature selection where the number of variables perturbed was based on the total number of variables instead of the more appropriate number of variables in the current subset.
-    \item Convenience functions \code{ggplot.gafs} and \code{ggplot.safs} were added.
-    \item \code{learning_curve_dat} now has a real name.
-    \item The \code{earth} and \code{ctree} models were udpdate to fix bugs \issue{1022}\issue{1018}.
-    \item When a model has the same value for its resamples, \code{plot.resamples} and \code{ggplot.resamples} now produce an estimate and missing values for the intervals (instead of failing) \issue{1007}
-  }
-}
-
-\section{Changes in version 6.0-81}{
-  \itemize{
-    \item The \code{blackboost} code gained a dependency on \cpkg{partykit} due to changes in \cpkg{mboost}.
-    \item The internals were updated to work with the latest version of the \cpkg{recipes} package.
-    \item Jason Muhlenkamp added better error messages for misspecified tuning parameters \issue{956}.
-    \item Two bugs in random forests with RFE were fixed in \issue{942}.
-    \item When correlation filters are used in \code{preProcess}, constant (i.e. zero-variance) columns are first removed to avoid errors \issue{966}.
-    \item A bug was fixed when \code{train} models using weights were updated \issue{935}.
-    \item Benjamin Allévius added more statistics to the output of \code{thresholder} \issue{938}.
-    \item A bug was fixed that occurred when \code{indexFinal} was used where the recipe that was saved was created using the entire training set \issue{928}.
-  }
-}
-
-
 \section{Changes in version 6.0-80}{
   \itemize{
     \item Two bugs associated with \code{varImp} in \code{lm} \issue{858} and in \code{bartMachine} were fixed by \code{hadjipantelis}.
@@ -191,7 +71,7 @@
     \item The parameter ranges for \code{AdaBag} and \code{AdaBoost.M1} were changed; the number of iterations in the default grids have been lowered.
     \item Switched to non-formula interface in ranger. Also, another tuning parameter was added to ranger (\code{splitrule}) that can be used to change the splitting procedure and includes extremely randomized trees. This requires version 0.8.0 of the \cpkg{ranger} package. \issue{581}
     \item A simple "null model" was added. For classification, it predictors using the most prevalent level and, for regression, fits an intercept only model. \issue{694}
-    \item A function \code{thresholder} was added to analyze the resample results for two class problems to choose an appropriate probability cutoff a la \url{https://topepo.github.io/caret//using-your-own-model-in-train.html#Illustration5} \issue{224}.
+    \item A function \code{thresholder} was added to analyze the resample results for two class problems to choose an appropriate probability cutoff a la \url{https://topepo.github.io/caret/using-your-own-model-in-train.html#Illustration5} \issue{224}.
     \item Two neural network models (containing a single hidden layers) using \code{tensorflow}/\code{keras} were added.  \code{mlpKerasDecay} uses standard weight decay while \code{mlpKerasDropout} uses dropout for regularization. Both use RMSProp optimizer and have a lot of tuning parameters. Two additional models, \code{mlpKerasDecayCost} and \code{mlpKerasDropoutCost}, are classification only and perform cost-sensitive learning. Note that these models will not run in parallel using \cpkg{caret}'s parallelism and also will not give reproducible results from run-to-run (see \url{https://github.com/rstudio/keras/issues/42}).
     \item The range for one parameter (\code{gamma}) was modified in the \code{mlpSGD} model code.
     \item A bug in classification models with all missing predictions was fixed (found by andzandz11). \issue{684}
@@ -251,7 +131,7 @@
 		\item A bug in \code{bdk} and \code{xyf} models was fixed where the appropriate number of parameter combinations are tested during random search.
 		\item A bug in \code{rfe} was fixed related to neural networks found by david-machinelearning \issue{485}
 		\item Neural networks via stochastic gradient descent (\code{method = "mlpSGD"}) was adapted for classification and a variable importance calculation was added.
-		\item  \href{https://h2o.ai/}{h2o} versions of glmnet and gradient boosting machines were added with methods \code{"glmnet\_h2o"} and \code{"gbm\_h2o"}. These methods are not currently optimized.  \issue{283}
+		\item \href{http://www.h2o.ai/}{h2o} versions of glmnet and gradient boosting machines were added with methods \code{"glmnet\_h2o"} and \code{"gbm\_h2o"}. These methods are not currently optimized.  \issue{283}
 		\item The fuzzy rule-based models (\code{WM}, \code{SLAVE}, \code{SBC}, \code{HYFIS}, \code{GFS.THRIFT}, \code{GFS.LT.RS}, \code{GFS.GCCL}, \code{GFS.FR.MOGUL}, \code{FS.HGD}, \code{FRBCS.W}, \code{FRBCS.CHI}, \code{FIR.DM}, \code{FH.GBML}, \code{DENFIS}, and \code{ANFIS}) were modified so that the user can pass in the predictor ranges using the \code{range.data} argument to those functions. \issue{498}
 		\item A variable importance method was added for boosted generalized linear models \issue{493}
 		\item \code{preProcess} now has an option to filter out highly correlated predictors.
@@ -404,7 +284,7 @@
 		\item When specifying your own resampling indices, a value of \code{method = "custom"} can be used with \code{trainControl} for better printing.
 		\item Tim Lucas fixed a bug in \code{avNNet} when \code{bag = TRUE}
 		\item Fixed a bug found by \code{ruggerorossi} in \code{method = "dnn"} with classification.
-		\item A new option called \code{sampling} was added to \code{trainControl} that allows users to subsample their data in the case of a class imbalance. Another \href{http://topepo.github.io/caret/subsampling-for-class-imbalances.html}{help page} was added to explain the features.
+		\item A new option called \code{sampling} was added to \code{trainControl} that allows users to subsample their data in the case of a class imbalance. Another \href{http://topepo.github.io/caret/sampling.html}{help page} was added to explain the features.
 		\item Class probabilities can be computed for \code{extraTrees} models now.
 		\item When PCA pre-processing is conducted, the variance trace is saved in an object called \code{trace}.
 		\item More error traps were added for common mistakes (e.g. bad factor levels in classification).
@@ -419,7 +299,7 @@
 
 \section{Changes in version 6.0-47}{
 	\itemize{
-		\item CHAID from the R-Forge package \pkg{CHAID}
+		\item CHAID from the R-Forge package \href{http://r-forge.r-project.org/projects/chaid/}{\pkg{CHAID}}
 		\item Models \code{xgbTree} amd \code{xgbLinear} from the \code{xgboost} package were added. That package is not on CRAN  and can be installed from github using the \cpkg{devtools} package and \code{install_github('dmlc/xgboost',subdir='R-package')}.
 		\item \code{dratewka} enabled \code{rbf} models for regression.
 		\item A summary function for the multinomial likelihood called \code{mnLogLoss} was added.
@@ -559,7 +439,7 @@ calculation for neural network models.
 
 \item When case weights are specified in \code{train}, the hold-out weights are exposed when computing the summary function.
 
-\item A check was made to convert a \code{data.table} given to \code{train} to a data frame (see \url{https://stackoverflow.com/questions/23256177/r-caret-renames-column-in-data-table-after-training}).
+\item A check was made to convert a \code{data.table} given to \code{train} to a data frame (see \url{http://stackoverflow.com/questions/23256177/r-caret-renames-column-in-data-table-after-training}).
 
 }
 }
@@ -595,7 +475,9 @@ more internal functions.
 
 \section{Changes in version 6.0-21}{
 \itemize{
-\item A new system for user-defined models has been added.
+\item A new system for user-defined models has been added. See
+\href{http://caret.r-forge.r-project.org/custom_models.html}{http://caret.r-forge.r-project.org/custom_models.html}.
+
 \item When creating the grid of tuning parameter values, the column
 names no longer need to be preceded by a period. Periods can still be
 used as before but are not required. This isn't guaranteed to break
@@ -887,7 +769,8 @@ finding it).
 \itemize{
 
 \item The three vignettes were removed and two things were added: a
-smaller vignette and a large collection of help pages.
+smaller vignette and a large collection of help pages at
+\url{http://caret.r-forge.r-project.org/}.
 
 \item Minkoo Seo found a bug where \code{na.action} was not being properly
 set with train.formula().

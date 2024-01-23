@@ -31,9 +31,8 @@ namespace Rcpp{
    - T has a SEXP constructor
 */
 template <typename T> T clone(const T& object) {
-    Shield<SEXP> x(const_cast<T&>(object));
-    Shield<SEXP> copy(Rf_duplicate(x));
-    return T((SEXP)copy);
+    SEXP x = const_cast<T&>(object) ;
+    return T( Rf_duplicate( x ) ) ;
 }
 
 } // namespace Rcpp

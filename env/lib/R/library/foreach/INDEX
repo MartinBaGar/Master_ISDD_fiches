@@ -1,5 +1,6 @@
 foreach                 foreach
-foreach-ext             foreach extension functions
+foreach-ext             Foreach Extension Functions
+foreach-package         The Foreach Package
 getDoParWorkers         Functions Providing Information on the doPar
                         Backend
 getDoSeqWorkers         Functions Providing Information on the doSeq

@@ -1,4 +1,3 @@
-[.pdMat                 Subscript a pdMat Object
 ACF                     Autocorrelation Function
 ACF.gls                 Autocorrelation Function for gls Residuals
 ACF.lme                 Autocorrelation Function for lme Residuals
@@ -15,8 +14,11 @@ asTable                 Convert groupedData to a matrix
 augPred                 Augmented Predictions
 balancedGrouped         Create a groupedData object from a matrix
 bdf                     Language scores
+BIC                     Bayesian Information Criterion
+BIC.logLik              BIC of a logLik Object
 BodyWeight              Rat weight over time for different diets
 Cefamandole             Pharmacokinetics of Cefamandole
+coef<-                  Assign Values to Coefficients
 coef.corStruct          Coefficients of a corStruct Object
 coef.gnls               Extract gnls Coefficients
 coef.lme                Extract lme Coefficients
@@ -25,7 +27,6 @@ coef.modelStruct        Extract modelStruct Object Coefficients
 coef.pdMat              pdMat Object Coefficients
 coef.reStruct           reStruct Object Coefficients
 coef.varFunc            varFunc Object Coefficients
-coef<-                  Assign Values to Coefficients
 collapse                Collapse According to Groups
 collapse.groupedData    Collapse a groupedData Object
 compareFits             Compare Fitted Objects
@@ -79,8 +80,8 @@ getCovariate.corStruct
                         Extract corStruct Object Covariate
 getCovariate.data.frame
                         Extract Data Frame Covariate
-getCovariate.varFunc    Extract varFunc Covariate
 getCovariateFormula     Extract Covariates Formula
+getCovariate.varFunc    Extract varFunc Covariate
 getData                 Extract Data from an Object
 getData.gls             Extract gls Object Data
 getData.lme             Extract lme Object Data
@@ -88,11 +89,11 @@ getData.lmList          Extract lmList Object Data
 getGroups               Extract Grouping Factors from an Object
 getGroups.corStruct     Extract corStruct Groups
 getGroups.data.frame    Extract Groups from a Data Frame
+getGroupsFormula        Extract Grouping Formula
 getGroups.gls           Extract gls Object Groups
 getGroups.lme           Extract lme Object Groups
 getGroups.lmList        Extract lmList Object Groups
 getGroups.varFunc       Extract varFunc Groups
-getGroupsFormula        Extract Grouping Formula
 getResponse             Extract Response Variable from an Object
 getResponseFormula      Extract Formula Specifying Response Variable
 getVarCov               Extract variance-covariance matrix
@@ -126,10 +127,11 @@ isBalanced              Check a Design for Balance
 isInitialized           Check if Object is Initialized
 LDEsysMat               Generate system matrix for LDEs
 lme                     Linear Mixed-Effects Models
+lmeControl              Control Values for lme Fit
 lme.groupedData         LME fit from groupedData Object
 lme.lmList              LME fit from lmList Object
-lmeControl              Specifying Control Values for lme Fit
 lmeObject               Fitted lme Object
+lmeScale                Scale for lme Optimization
 lmeStruct               Linear Mixed-Effects Structure
 lmList                  List of lm Objects with a Common Model
 lmList.groupedData      lmList Fit from a groupedData Object
@@ -150,7 +152,7 @@ Machines                Productivity Scores for Machines and Workers
 MathAchieve             Mathematics achievement scores
 MathAchSchool           School demographic data for MathAchieve
 matrix<-                Assign Matrix Values
-matrix<-.pdMat          Assign Matrix to a pdMat or pdBlocked Object
+matrix<-.pdMat          Assign Matrix to a pdMat Object
 matrix<-.reStruct       Assign reStruct Matrices
 Meat                    Tenderness of meat
 Milk                    Protein content of cows' milk
@@ -166,8 +168,8 @@ needUpdate.modelStruct
                         Check if a modelStruct Object Needs Updating
 Nitrendipene            Assay of nitrendipene
 nlme                    Nonlinear Mixed-Effects Models
-nlme.nlsList            NLME fit from nlsList Object
 nlmeControl             Control Values for nlme Fit
+nlme.nlsList            NLME fit from nlsList Object
 nlmeObject              Fitted nlme Object
 nlmeStruct              Nonlinear Mixed-Effects Structure
 nlsList                 List of nls Objects with a Common Model
@@ -196,6 +198,7 @@ pdIdent                 Multiple of the Identity Positive-Definite
                         Matrix
 pdLogChol               General Positive-Definite Matrix
 pdMat                   Positive-Definite Matrix
+[.pdMat                 Subscript a pdMat Object
 pdMatrix                Extract Matrix or Square-Root Factor from a
                         pdMat Object
 pdMatrix.reStruct       Extract Matrix or Square-Root Factor from
@@ -243,7 +246,7 @@ recalc.modelStruct      Recalculate for a modelStruct Object
 recalc.reStruct         Recalculate for an reStruct Object
 recalc.varFunc          Recalculate for varFunc Object
 Relaxin                 Assay for Relaxin
-Remifentanil            Pharmacokinetics of Remifentanil
+Remifentanil            Pharmacokinetics of remifentanil
 residuals.gls           Extract gls Residuals
 residuals.glsStruct     Calculate glsStruct Residuals
 residuals.gnlsStruct    Calculate gnlsStruct Residuals
@@ -252,21 +255,20 @@ residuals.lmeStruct     Calculate lmeStruct Residuals
 residuals.lmList        Extract lmList Residuals
 residuals.nlmeStruct    Calculate nlmeStruct Residuals
 reStruct                Random Effects Structure
-simulate.lme            Simulate Results from 'lme' Models
+simulate.lme            Simulate results from lme models
 solve.pdMat             Calculate Inverse of a Positive-Definite Matrix
 solve.reStruct          Apply Solve to an reStruct Object
 Soybean                 Growth of soybean plants
 splitFormula            Split a Formula
 Spruce                  Growth of Spruce Trees
 summary.corStruct       Summarize a corStruct Object
-summary.gls             Summarize a Generalized Least Squares 'gls'
-                        Object
+summary.gls             Summarize a gls Object
 summary.lme             Summarize an lme Object
 summary.lmList          Summarize an lmList Object
 summary.modelStruct     Summarize a modelStruct Object
 summary.nlsList         Summarize an nlsList Object
 summary.pdMat           Summarize a pdMat Object
-summary.varFunc         Summarize "varFunc" Object
+summary.varFunc         Summarize varFunc Object
 Tetracycline1           Pharmacokinetics of tetracycline
 Tetracycline2           Pharmacokinetics of tetracycline
 update.modelStruct      Update a modelStruct Object
@@ -274,7 +276,6 @@ update.varFunc          Update varFunc Object
 varClasses              Variance Function Classes
 varComb                 Combination of Variance Functions
 varConstPower           Constant Plus Power Variance Function
-varConstProp            Constant Plus Proportion Variance Function
 VarCorr                 Extract variance and correlation components
 varExp                  Exponential Variance Function
 varFixed                Fixed Variance Function

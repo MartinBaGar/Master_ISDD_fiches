@@ -1,91 +1,3 @@
-1.18.4 (2023-07-04):
-  * Fix broken 'legacy.axes' in 'ggroc'
-
-1.18.3 (2023-07-02):
-  * Fix warning about 'aes_string' in 'ggroc'
-  * Improvements in tests (thanks to Michael Chirico, pr #114, #115)
-  * Fix upcoming CRAN warning about numeric version comparisons
-
-1.18.2 (2023-05-13):
-  * Fix CRAN submission NOTE (issue #112)
-
-1.18.1 (2023-05-07):
-  * Fix 'print'ing some curves built from a formula (issue #101)
-  * Fix tests following upstream updates in density() (https://bugs.r-project.org/show_bug.cgi?id=18337)
-  * Improvements in documentation
-
-1.18.0 (2021-09-02):
-  * Add CI of the estimate for 'roc.test' (DeLong, paired only for now) (code contributed by Zane Billings) (pr #95) 
-  * Fix documentation and alternative hypothesis for Venkatraman test (issue #92)
-
-1.17.0.1 (2021-01-07):
-  * Fix CRAN incoming checks as requested by CRAN
-
-1.17.0 (2020-12-29)
-  * Accept more values in 'input' of coords (issue #67)
-  * Accept 'kappa' for the 'power.roc.test' of two ROC curves (issue #82)
-  * The 'input' argument to 'coords' for 'smooth.roc' curves no longer has a default
-  * The 'x' argument to 'coords' for 'smooth.roc' can now be set to 'all' (also the default)
-  * Fix bootstrap roc.test and cov with 'smooth.roc' curves
-  * The 'ggroc' function can now plot 'smooth.roc' curves (issue #86)
-  * Remove warnings with 'warnPartialMatchDollar' option (issue #87)
-  * Make tests depending on vdiffr conditional (issue #88)
-
-1.16.2 (2020-03-19)
-  * Skip test depending on Rcpp version
-
-1.16.1 (2020-01-13)
-  * Skip timing-dependent test failing occasionally on CRAN
-
-1.16.0 (2020-01-12)
-  * BACKWARD INCOMPATIBLE CHANGE: 'transpose' argument to 'coords' switched to FALSE by default (issue #54)
-  * BACKWARD INCOMPATIBLE CHANGE: 'ci.coords' return value is now of list type and easier to use
-  * Fix one-sided DeLong test for curves with 'direction=">"' (issue #64)
-  * Fix an error in 'ci.coords' due to expected NA values in some coords (like "precision") (issue #65)
-  * Ordrered predictors are converted to numeric in a more robust way (issue #63)
-  * Cleaned up 'power.roc.test' code (issue #50)
-  * Fix pairing with 'roc.formula' and warn if 'na.action' is not set to "na.pass" or "na.fail" (issue #68)
-  * Fix 'ci.coords' not working with 'smooth.roc' curves
-  
-1.15.3 (2019-07-21)
-  * Fix: previous version accidentally set transpose = FALSE, should only be for next major release
-
-1.15.2 (2019-07-20)
-  * Fix -Inf threshold in coords for curves with 'direction = ">"' (issue #60)
-  * Restore lazy loading of the data and fix an 'R CMD check' warning "Variables with usage in documentation object 'aSAH' not in code"
-
-1.15.1 (2019-07-17)
-  * Fix erroneous error in 'ci.coords' with 'ret="threshold"' (issue #57)
-  * Fix vdiffr unit tests with ggplot2 3.2.0 (issue #53)
-  * Keep list order in 'ggroc' (issue #58)
-
-1.15.0 (2019-06-01)
-  * 'roc' now prints messages when autodetecting 'levels' and 'direction' by default. Turn off with 'quiet = TRUE' or set these values explicitly
-  * Speedup with 'algorithm = 2' (issue #44) and in 'coords' (issue #52)
-  * New 'algorithm = 6' (used by default) uses 'algorithm = 2' for numeric data, and 'algorithm = 3' for ordered vectors
-  * New 'roc.data.frame' method and 'roc_' function for use in pipelines
-  * 'coords' can now returns 'youden' and 'closest.topleft" values (issue #48)
-  * New 'transpose' argument for 'coords', TRUE by default (issue #54)
-  * Use text instead of Tcl/Tk progress bar by default (issue #51)
-  * Fix 'method = "density"' smoothing when called directly from 'roc' (issue #49)
-  * Renamed 'roc' argument 'n' to 'smooth.n'
-  * Fixed 'are.paired' ignoring smoothing arguments of 'roc2' with 'return.paired.rocs'
-  * New 'ret' option "all" in 'coords' (issue #47)
-  * 'drop' in 'coords' now drops the dimension of 'ret' too (#issue 43)
-
-1.14.0 (2019-03-12)
-  * The 'multiclass.roc' function now accepts multivariate decision values (code contributed by Matthias Döring)
-  * 'ggroc' supports multiple aesthetics (issue #42)
-  * Make 'ggplot2' dependency optional
-  * CSuggested packages can be installed interactively when required
-  * Passing both 'cases' and 'controls' or 'response' and 'predictor' arguments is now an error
-  * Many small bug fixes
-
-1.13.0 (2018-09-23)
-  * 'roc' now returns 'NaN' when predictor contains infinite values (issue #30)
-  * Better handling of near-ties near +-Infinity and 0
-  * 'ggroc' supports aes="group" to allow curves with identical aesthetics
-
 1.12.1 (2018-05-06)
   * Fix a regression causing the allocation of a very large vector (issue #29)
 
@@ -115,7 +27,7 @@
   * Support 'xlim' and 'ylim' gracefully in 'plot.roc'
   * Improved validation of input class 'levels' and 'direction'; messages when auto-detecting, use 'quiet' to turn on
   * Removed extraneous 'name' attribute on the 'p.value' (thanks Paweł Kleka for the report)
-  * Faster DeLong algorithm (code contributed by Stefan Siegert)
+  * Faster DeLong algorithm (code contributed Stefan Siegert)
 
 1.8 (2015-05-04)
   * NAMESPACE now properly exports the methods as S3 methods.

@@ -1,9 +1,3 @@
-
-# lazyeval 0.2.2
-
-* Fix protection issues from rchk reports.
-
-
 # lazyeval 0.2.1
 
 This is a maintenance release. The lazyeval package is no longer

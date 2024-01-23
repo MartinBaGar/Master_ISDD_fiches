@@ -31,8 +31,7 @@ loadings(lcrabs.pca)
 lcrabs.pc <- predict(lcrabs.pca)
 dimnames(lcrabs.pc) <- list(NULL, paste("PC", 1:5, sep = ""))
 
-if(FALSE) { ## needs interaction with XGobi, or, better, rggobi
-    ## Both have been withdrawn for R.
+if(FALSE) { # needs interaction with XGobi, or, better, rggobi
 library(xgobi)
 xgobi(lcrabs, colors = c("SkyBlue", "SlateBlue", "Orange",
      "Red")[rep(1:4, each = 50)])

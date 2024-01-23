@@ -1,7 +1,7 @@
 #  File share/R/REMOVE.R
-#  Part of the R package, https://www.R-project.org
+#  Part of the R package, http://www.R-project.org
 #
-#  Copyright (C) 1995-2023 The R Core Team
+#  Copyright (C) 1995-2012 The R Core Team
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
 #  GNU General Public License for more details.
 #
 #  A copy of the GNU General Public License is available at
-#  https://www.r-project.org/Licenses/
+#  http://www.r-project.org/Licenses/
 
 Usage <- function() {
     cat("Usage: R CMD REMOVE [options] pkgs",
@@ -32,7 +32,7 @@ Usage <- function() {
         "Report bugs at <https://bugs.R-project.org>.", sep="\n")
 }
 
-options(showErrorCalls = FALSE, warn = 1) # deferred warnings will not be seen
+options(showErrorCalls=FALSE)
 pkgs <- character(0)
 lib <- ""
 args <- commandArgs(TRUE)
@@ -47,7 +47,7 @@ while(length(args)) {
             R.version[["major"]], ".",  R.version[["minor"]],
             " (r", R.version[["svn rev"]], ")\n", sep = "")
         cat("",
-            tools:::.R_copyright_msg(2000),
+            "Copyright (C) 2000-2009 The R Core Team.",
             "This is free software; see the GNU General Public License version 2",
             "or later for copying conditions.  There is NO warranty.",
             sep="\n")

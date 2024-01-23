@@ -1,12 +1,10 @@
 ### R code from vignette source 'sparseModels.Rnw'
+### Encoding: ASCII
 
 ###################################################
 ### code chunk number 1: preliminaries
 ###################################################
 options(width=75)
-library(grDevices) # for R_DEFAULT_PACKAGES=NULL
-library(stats)     # ditto
-library(utils)     # ditto
 
 
 ###################################################
@@ -51,7 +49,6 @@ t( Matrix(model.matrix(~ 0+ f1))) # model with*OUT* intercept
 ###################################################
 ### code chunk number 7: chickwts-ex
 ###################################################
-data(chickwts, package = "datasets")
 str(chickwts)# a standard R data set,  71 x 2
 x.feed <- as(chickwts$feed, "sparseMatrix")
 x.feed[ , (1:72)[c(TRUE,FALSE,FALSE)]] ## every  3rd  column:
@@ -61,7 +58,7 @@ x.feed[ , (1:72)[c(TRUE,FALSE,FALSE)]] ## every  3rd  column:
 ###################################################
 ### code chunk number 8: warpbreaks-data
 ###################################################
-data(warpbreaks, package = "datasets") # a standard R data set
+data(warpbreaks)# a standard R data set
 str(warpbreaks) # 2 x 3 (x 9) balanced two-way with 9 replicates:
 xtabs(~ wool + tension, data = warpbreaks)
 
@@ -70,7 +67,7 @@ xtabs(~ wool + tension, data = warpbreaks)
 ### code chunk number 9: modMat-warpbreaks
 ###################################################
 tmm <- with(warpbreaks,
-            rbind(as(tension, "sparseMatrix"),
+            rBind(as(tension, "sparseMatrix"),
                   as(wool,    "sparseMatrix")[-1,,drop=FALSE]))
 print(  image(tmm)  ) # print(.) the lattice object
 
@@ -78,12 +75,12 @@ print(  image(tmm)  ) # print(.) the lattice object
 ###################################################
 ### code chunk number 10: morley-data
 ###################################################
-data(morley, package = "datasets") # a standard R data set
+data(morley) # a standard R data set
 morley$Expt <- factor(morley$Expt)
 morley$Run <- factor(morley$Run)
 str(morley)
 t.mm <- with(morley,
-             rbind(as(Expt, "sparseMatrix"),
+             rBind(as(Expt, "sparseMatrix"),
                    as(Run,  "sparseMatrix")[-1,]))
 print(  image(t.mm)  ) # print(.) the lattice object
 
@@ -91,7 +88,7 @@ print(  image(t.mm)  ) # print(.) the lattice object
 ###################################################
 ### code chunk number 11: npk_ex
 ###################################################
-data(npk, package = "MASS")
+data(npk, package="MASS")
 npk.mf <- model.frame(yield ~ block + N*P*K, data = npk)
 ## str(npk.mf) # the data frame + "terms" attribute
 

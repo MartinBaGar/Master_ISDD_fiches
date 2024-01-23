@@ -1,11 +1,11 @@
 
 # Private configuration for R packages
 
-[![Linux Build Status](https://travis-ci.org/r-lib/pkgconfig.svg?branch=master)](https://travis-ci.org/r-lib/pkgconfig)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/r-lib/pkgconfig?svg=true)](https://ci.appveyor.com/project/gaborcsardi/pkgconfig)
+[![Linux Build Status](https://travis-ci.org/gaborcsardi/pkgconfig.svg?branch=master)](https://travis-ci.org/gaborcsardi/pkgconfig)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/gaborcsardi/pkgconfig?svg=true)](https://ci.appveyor.com/project/gaborcsardi/pkgconfig)
 [![](http://www.r-pkg.org/badges/version/pkgconfig)](http://www.r-pkg.org/pkg/pkgconfig)
 [![](http://cranlogs.r-pkg.org/badges/pkgconfig)](http://www.r-pkg.org/pkg/pkgconfig)
-[![Coverage Status](https://img.shields.io/codecov/c/github/r-lib/pkgconfig/master.svg)](https://codecov.io/github/r-lib/pkgconfig?branch=master)
+[![Coverage Status](https://img.shields.io/codecov/c/github/gaborcsardi/pkgconfig/master.svg)](https://codecov.io/github/gaborcsardi/pkgconfig?branch=master)
 
 Easy way to create configuration parameters in your R package. Configuration
 values set in different packages are independent.
@@ -15,8 +15,10 @@ Call `get_config()` to query it.
 
 ## Installation
 
+Use the `devtools` package:
+
 ```r
-install.packages("pkgconfig")
+devtools::install_github("gaborcsardi/pkgconfig")
 ```
 
 ## Typical usage
@@ -82,8 +84,8 @@ igraph_func <- function() {
 
 If `igraph_func` is called from `pkgA` (maybe through other packages),
 `get_config` will return `TRUE`, and if it is called from `pkgB`,
-`get_config` will return `FALSE`. If no package on the call stack
-sets the `igraph::return.vs.es` option, then its default value is used,
+`get_config` will return `FALSE`. For all other packages the
+`igraph::return.vs.es` option is not set, and the default value is used,
 as specified in `igraph`.
 
 ## What if `pkgA` calls `pkgB`?
@@ -103,7 +105,7 @@ not contain a call to `pkgA` of course.)
 ## Feedback
 
 Please comment in the
-[Github issue tracker](https://github.com/r-lib/pkgconfig/issues)
+[Github issue tracker](https://github.com/gaborcsardi/pkgconfig/issues)
 of the project.
 
 ## License

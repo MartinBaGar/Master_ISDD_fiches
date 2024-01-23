@@ -27,7 +27,6 @@ library(survival, quietly=TRUE)
 
 \title{Roundoff error and Tied Times}
 \author{Terry M Therneau}
-\date{Oct 2016}
 \begin{document}
 \maketitle
 

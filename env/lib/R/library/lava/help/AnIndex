@@ -12,11 +12,7 @@ as.sim	sim.default
 backdoor	backdoor
 baptize	baptize
 beta.lvm	sim
-Binary.lvm	sim
-binary.lvm	sim
 binomial.lvm	sim
-binomial.rd	binomial.rd
-binomial.rr	binomial.rd
 blockdiag	blockdiag
 bmd	bmd
 bmidata	bmidata
@@ -49,7 +45,6 @@ confband	confband
 confint.lvmfit	confint.lvmfit
 confint.multigroupfit	confint.lvmfit
 confpred	confpred
-constant.lvm	sim
 constrain	constrain-set
 constrain.default	constrain-set
 constrain<-	constrain-set
@@ -71,6 +66,7 @@ coxGompertz.lvm	sim
 coxWeibull.lvm	sim
 csplit	csplit
 curly	curly
+cv	cv
 decomp.specials	internal
 density.sim	plot.sim
 deriv	internal
@@ -83,7 +79,7 @@ distribution	sim
 distribution.lvm	sim
 distribution<-	sim
 distribution<-.lvm	sim
-dmvn0	internal
+dmvn	internal
 dsep	dsep.lvm
 dsep.lvm	dsep.lvm
 edgelabels	labels-set
@@ -142,13 +138,10 @@ heavytail	sim
 heavytail<-	sim
 hubble	hubble
 hubble2	hubble2
-IC	IC
-IC.default	IC
-id.lvm	sim
-Identical	internal
 idplot	click
 igraph.lvm	internal
 iid	iid
+iid.default	iid
 images	images
 index	internal
 index.lvm	internal
@@ -161,10 +154,6 @@ intercept	intercept
 intercept.lvm	intercept
 intercept<-	intercept
 intercept<-.lvm	intercept
-intervention	intervention.lvm
-intervention.lvm	intervention.lvm
-intervention<-	intervention.lvm
-intervention<-.lvm	intervention.lvm
 intfix	intercept
 intfix.lvm	intercept
 intfix<-	intercept
@@ -175,6 +164,7 @@ kappa.multinomial	multinomial
 kappa.table	multinomial
 kill	rmvar
 kill<-	rmvar
+km	km
 ksmooth2	ksmooth2
 labels	labels-set
 labels.graphNEL	labels-set
@@ -222,8 +212,6 @@ moments	gof
 moments.lvm	gof
 multigroup	internal
 multinomial	multinomial
-multinomial.lvm	sim
-mvn.lvm	sim
 mvnmix	mvnmix
 na.pass0	internal
 NA2x	NA2x
@@ -231,11 +219,10 @@ nldata	nldata
 nodecolor	labels-set
 nodecolor<-	labels-set
 nodecolor<-.default	labels-set
-none.lvm	sim
 nonlinear	twostage.lvmfit
 nonlinear<-	twostage.lvmfit
 normal.lvm	sim
-NR	NR
+NR	internal
 nsem	nsem
 odds	diagtest
 offdiag	revdiag
@@ -246,8 +233,8 @@ OR	diagtest
 ordinal	ordinal-set
 ordinal<-	ordinal-set
 ordreg	ordreg
+Org	Org
 p.correct	closed.testing
-pairwise.diff	contr
 parameter	internal
 parameter<-	constrain-set
 parents	children
@@ -272,7 +259,6 @@ plot.lvm	plot.lvm
 plot.lvmfit	plot.lvm
 plot.sim	plot.sim
 plotConf	plotConf
-plot_region	confband
 poisson.lvm	sim
 predict.lvm	predict.lvm
 predict.lvmfit	predict.lvm
@@ -286,7 +272,6 @@ randomslope	internal
 randomslope<-	internal
 Range.lvm	Range.lvm
 Ratio	diagtest
-rbind.Surv	rbind.Surv
 regfix	regression-set
 regfix.lvm	regression-set
 regfix<-	regression-set
@@ -302,7 +287,7 @@ revdiag<-	revdiag
 riskcomp	diagtest
 rmvar	rmvar
 rmvar<-	rmvar
-rmvn0	internal
+rmvn	internal
 roots	children
 rot2D	rotate2
 rot3D	rotate2
@@ -313,7 +298,7 @@ score	gof
 score.glm	internal
 score.lvmfit	gof
 semdata	semdata
-Sequence.lvm	sim
+sequence.lvm	sim
 serotonin	serotonin
 serotonin2	serotonin2
 sim	sim
@@ -356,7 +341,6 @@ twostage.estimate	twostage.lvmfit
 twostage.lvm	twostage.lvmfit
 twostage.lvm.mixture	twostage.lvmfit
 twostage.lvmfit	twostage.lvmfit
-twostageCV	twostageCV
 uniform.lvm	sim
 updatelvm	internal
 variance	covariance
@@ -367,13 +351,11 @@ variances	internal
 vars	vars
 vars.lvm	vars
 vars.lvmfit	vars
-var_ic	IC
 vec	vec
 wait	wait
 waitclick	wait
 weibull.lvm	sim
 Weights	internal
-wkm	wkm
 wrapvec	wrapvec
 x2NA	NA2x
 zibreg	zibreg

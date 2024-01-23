@@ -1,3 +1,5 @@
+require(iterators)
+
 test01 <- function() {
   if (require(foreach, quietly=TRUE)) {
     xcountn <- function(x) {

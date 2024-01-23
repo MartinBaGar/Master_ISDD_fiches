@@ -1,4 +1,4 @@
-## ---- echo = FALSE, message = FALSE---------------------------------------------------------------
+## ---- echo = FALSE, message = FALSE--------------------------------------
 require(data.table)
 knitr::opts_chunk$set(
   comment = "#",
@@ -32,7 +32,7 @@ DF["C", ]
 ## ----eval = FALSE---------------------------------------------------------------------------------
 #  rownames(DF) = sample(LETTERS[1:5], 10, TRUE)
 #  # Warning: non-unique values when setting 'row.names': 'C', 'D'
-#  # Error in `.rowNamesDF<-`(x, value = value): duplicate 'row.names' are not allowed
+#  # Error in `row.names<-.data.frame`(`*tmp*`, value = value): duplicate 'row.names' are not allowed
 
 ## -------------------------------------------------------------------------------------------------
 DT = as.data.table(DF)
@@ -125,7 +125,7 @@ flights[.("JFK", "MIA"), mult = "first"]
 flights[.(c("LGA", "JFK", "EWR"), "XNA"), mult = "last"]
 
 ## -------------------------------------------------------------------------------------------------
-flights[.(c("LGA", "JFK", "EWR"), "XNA"), mult = "last", nomatch = NULL]
+flights[.(c("LGA", "JFK", "EWR"), "XNA"), mult = "last", nomatch = 0L]
 
 ## ----eval = FALSE---------------------------------------------------------------------------------
 #  # key by origin,dest columns
@@ -134,20 +134,17 @@ flights[.(c("LGA", "JFK", "EWR"), "XNA"), mult = "last", nomatch = NULL]
 ## ----eval = FALSE---------------------------------------------------------------------------------
 #  flights[origin == "JFK" & dest == "MIA"]
 
-## ----eval = FALSE---------------------------------------------------------------------------------
-#  setkey(flights, NULL)
-#  flights[origin == "JFK" & dest == "MIA"]
-
 ## -------------------------------------------------------------------------------------------------
 set.seed(2L)
 N = 2e7L
 DT = data.table(x = sample(letters, N, TRUE),
                 y = sample(1000L, N, TRUE),
-                val = runif(N))
+              val = runif(N), key = c("x", "y"))
 print(object.size(DT), units = "Mb")
 
-## -------------------------------------------------------------------------------------------------
 key(DT)
+
+## -------------------------------------------------------------------------------------------------
 ## (1) Usual way of subsetting - vector scan approach
 t1 <- system.time(ans1 <- DT[x == "g" & y == 877L])
 t1
@@ -155,8 +152,6 @@ head(ans1)
 dim(ans1)
 
 ## -------------------------------------------------------------------------------------------------
-setkeyv(DT, c("x", "y"))
-key(DT)
 ## (2) Subsetting using keys
 t2 <- system.time(ans2 <- DT[.("g", 877L)])
 t2

@@ -1,11 +1,13 @@
-prefix=/workspaces/Master_ISDD_fiches/env
-includedir=${prefix}/include
-libdir=${prefix}/lib
+prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
+exec_prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
+libdir=/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib
+includedir=/home/mabagar/etudes/masters/Master_ISDD_fiches/env/include
 
-Name: harfbuzz-icu
+Name: harfbuzz
 Description: HarfBuzz text shaping library ICU integration
-Version: 4.3.0
-Requires: harfbuzz =  4.3.0
+Version: 2.4.0
+
+Requires: harfbuzz
 Requires.private: icu-uc
 Libs: -L${libdir} -lharfbuzz-icu
 Cflags: -I${includedir}/harfbuzz

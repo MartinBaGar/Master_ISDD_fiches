@@ -3,30 +3,26 @@
 # initialization
 
 library(nlme)
-options(width = 65,
-        ## reduce platform dependence in printed output when testing
-        digits = if(nzchar(Sys.getenv("R_TESTS"))) 3 else 5)
+options(width = 65, digits = 5)
 options(contrasts = c(unordered = "contr.helmert", ordered = "contr.poly"))
 pdf(file = "ch06.pdf")
 
 # Chapter 6    Nonlinear Mixed-Effects Models:
 #              Basic Concepts and Motivating Examples
 
-# 6.2 Indomethicin Kinetics
+# 6.1 Indomethicin Kinetics
 
 plot(Indometh)
 fm1Indom.nls <- nls(conc ~ SSbiexp(time, A1, lrc1, A2, lrc2),
-                    data = Indometh)
+  data = Indometh)
 summary(fm1Indom.nls)
 plot(fm1Indom.nls, Subject ~ resid(.), abline = 0)
 (fm1Indom.lis <- nlsList(conc ~ SSbiexp(time, A1, lrc1, A2, lrc2),
                         data = Indometh))
 plot(intervals(fm1Indom.lis))
-## IGNORE_RDIFF_BEGIN
 (fm1Indom.nlme <- nlme(fm1Indom.lis,
                       random = pdDiag(A1 + lrc1 + A2 + lrc2 ~ 1),
                       control = list(tolerance = 0.0001)))
-## IGNORE_RDIFF_END
 fm2Indom.nlme <- update(fm1Indom.nlme,
                         random = pdDiag(A1 + lrc1 + A2 ~ 1))
 anova(fm1Indom.nlme, fm2Indom.nlme)
@@ -34,9 +30,7 @@ anova(fm1Indom.nlme, fm2Indom.nlme)
 fm4Indom.nlme <-
     update(fm3Indom.nlme,
            random = pdBlocked(list(A1 + lrc1 ~ 1, A2 ~ 1)))
-## IGNORE_RDIFF_BEGIN
 anova(fm3Indom.nlme, fm4Indom.nlme)
-## IGNORE_RDIFF_END
 anova(fm2Indom.nlme, fm4Indom.nlme)
 plot(fm4Indom.nlme, id = 0.05, adj = -1)
 qqnorm(fm4Indom.nlme)
@@ -48,26 +42,18 @@ summary(fm4Indom.nlme)
 head(Soybean)
 plot(Soybean, outer = ~ Year * Variety)
 (fm1Soy.lis <- nlsList(weight ~ SSlogis(Time, Asym, xmid, scal),
-                       data = Soybean,
-                       ## in R >= 3.4.3, more iterations are needed for "1989P5"
-                       ## due to a change of initial values in SSlogis();
-                       ## control is passed to getInitial() only since R 4.1.0
-                       control = list(maxiter = 60)))
-## IGNORE_RDIFF_BEGIN
+                       data = Soybean))
 (fm1Soy.nlme <- nlme(fm1Soy.lis))
-## IGNORE_RDIFF_END
 fm2Soy.nlme <- update(fm1Soy.nlme, weights = varPower())
 anova(fm1Soy.nlme, fm2Soy.nlme)
 plot(ranef(fm2Soy.nlme, augFrame = TRUE),
      form = ~ Year * Variety, layout = c(3,1))
 soyFix <- fixef(fm2Soy.nlme)
 options(contrasts = c("contr.treatment", "contr.poly"))
-## IGNORE_RDIFF_BEGIN
 (fm3Soy.nlme <-
  update(fm2Soy.nlme,
         fixed = Asym + xmid + scal ~ Year,
         start = c(soyFix[1], 0, 0, soyFix[2], 0, 0, soyFix[3], 0, 0)))
-## IGNORE_RDIFF_END
 anova(fm3Soy.nlme)
 # The following line is not in the book but needed to fit the model
 fm4Soy.nlme <-
@@ -90,18 +76,17 @@ plot(augPred(fm4Soy.nlme))# Fig 6.14, p. 295
       random = pdDiag(lCl + lV ~ 1), start = c(-5, 0),
       na.action = NULL, naPattern = ~ !is.na(conc)))
 fm1Pheno.ranef <- ranef(fm1Pheno.nlme, augFrame = TRUE)
-# (These plots used to encounter difficulties, now fine):
+# FIXME: these plots encounter difficulties
 plot(fm1Pheno.ranef, form = lCl ~ Wt + ApgarInd)
-plot(fm1Pheno.ranef, form = lV  ~ Wt + ApgarInd)
-
+plot(fm1Pheno.ranef, form = lV ~ Wt + ApgarInd)
 options(contrasts = c("contr.treatment", "contr.poly"))
-if(FALSE)## This fit just "ping-pongs" until max.iterations error
-fm2Pheno.nlme <-
-   update(fm1Pheno.nlme,
-          fixed = list(lCl ~ Wt, lV ~ Wt + ApgarInd),
-          start = c(-5.0935, 0, 0.34259, 0, 0),
-          control = list(pnlsTol = 1e-4, maxIter = 500,
-          msVerbose = TRUE, opt = "nlm"))
+## This fit just ping-pongs
+##fm2Pheno.nlme <-
+##    update(fm1Pheno.nlme,
+##           fixed = list(lCl ~ Wt, lV ~ Wt + ApgarInd),
+##           start = c(-5.0935, 0, 0.34259, 0, 0),
+##           control = list(pnlsTol = 1e-4, maxIter = 500,
+##           msVerbose = TRUE))
 ##summary(fm2Pheno.nlme)
 ##fm3Pheno.nlme <-
 ##    update(fm2Pheno.nlme,
@@ -111,5 +96,5 @@ fm2Pheno.nlme <-
 
 # cleanup
 
-summary(warnings())
+proc.time()
 

@@ -1,6 +1,8 @@
+// -*- mode: C++; c-indent-level: 4; c-basic-offset: 4; tab-width: 8 -*-
+//
 // mean.h: Rcpp R/C++ interface class library -- mean
 //
-// Copyright (C) 2011 - 2023  Dirk Eddelbuettel and Romain Francois
+// Copyright (C) 2011 - 2015  Dirk Eddelbuettel and Romain Francois
 //
 // This file is part of Rcpp.
 //
@@ -78,8 +80,8 @@ public:
             si += ti/n;
         }
         Rcomplex z;
-        z.r = static_cast<double>(s);
-        z.i = static_cast<double>(si);
+        z.r = s;
+        z.i = si;
         return z;
     }
 private:
@@ -156,3 +158,5 @@ inline sugar::Mean<LGLSXP,NA,T> mean(const VectorBase<LGLSXP,NA,T>& t) {
 
 } // Rcpp
 #endif
+
+

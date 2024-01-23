@@ -1,4 +1,4 @@
-prefix=/workspaces/Master_ISDD_fiches/env
+prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -9,5 +9,5 @@ Version: 2.10.4
 Description: libXML library version2.
 Requires:
 Libs: -L${libdir} -lxml2
-Libs.private: -L/workspaces/Master_ISDD_fiches/env/lib -lz -L/workspaces/Master_ISDD_fiches/env/lib -llzma  -L/workspaces/Master_ISDD_fiches/env/lib -L/workspaces/Master_ISDD_fiches/env/lib -licui18n -licuuc -licudata -lm  
-Cflags: -I${includedir}/libxml2 -I/workspaces/Master_ISDD_fiches/env/include 
+Libs.private: -L/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib -lz -L/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib -llzma  -L/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib -L/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib -licui18n -licuuc -licudata -lm  
+Cflags: -I${includedir}/libxml2 -I/home/mabagar/etudes/masters/Master_ISDD_fiches/env/include 

@@ -30,7 +30,7 @@ template <typename CLASS>
 template <typename T>
 typename AttributeProxyPolicy<CLASS>::AttributeProxy&
 AttributeProxyPolicy<CLASS>::AttributeProxy::operator=(const T& rhs) {
-    set(wrap(rhs));
+    set(Shield<SEXP>(wrap(rhs)));
     return *this;
 }
 

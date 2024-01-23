@@ -31,8 +31,7 @@ namespace Rcpp {
             Armor<SEXP> res;
             try{
                 SEXP funSym = Rf_install(fun);
-                Shield<SEXP> call(Rf_lang2(funSym, x));
-                res = Rcpp_fast_eval(call, R_GlobalEnv);
+                res = Rcpp_eval(Rf_lang2(funSym, x));
             } catch( eval_error& e) {
                 const char* fmt = "Could not convert using R function: %s.";
                 throw not_compatible(fmt, fun);
@@ -68,16 +67,9 @@ namespace Rcpp {
             default:
                 const char* fmt = "Not compatible with requested type: "
                                   "[type=%s; target=%s].";
-#ifndef NDEBUG
-                REprintf(fmt,
-                         Rf_type2char(TYPEOF(x)),
-                         Rf_type2char(RTYPE));
-                abort();
-#else
                 throw ::Rcpp::not_compatible(fmt,
                                              Rf_type2char(TYPEOF(x)),
                                              Rf_type2char(RTYPE));
-#endif
             }							// #nocov end
             return R_NilValue; /* -Wall */
         }
@@ -115,7 +107,7 @@ namespace Rcpp {
                     // return Rf_coerceVector( x, STRSXP );
                     // coerceVector does not work for some reason
                     Shield<SEXP> call( Rf_lang2( Rf_install( "as.character" ), x ) );
-                    Shield<SEXP> res( Rcpp_fast_eval( call, R_GlobalEnv ) );
+                    Shield<SEXP> res( Rcpp_eval( call, R_GlobalEnv ) );
                     return res;
                 }
             case CHARSXP:
@@ -124,12 +116,7 @@ namespace Rcpp {
                 return Rf_ScalarString( PRINTNAME( x ) );
             default:
                 const char* fmt = "Not compatible with STRSXP: [type=%s].";
-#ifndef NDEBUG
-                REprintf(fmt, Rf_type2char(TYPEOF(x)));
-                abort();
-#else
                 throw ::Rcpp::not_compatible(fmt, Rf_type2char(TYPEOF(x)));
-#endif
             }
             return R_NilValue; /* -Wall */
         }

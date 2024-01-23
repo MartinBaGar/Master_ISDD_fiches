@@ -1,4 +1,6 @@
 # simple test of recycle
+require(iterators)
+
 test01 <- function() {
   if (require(foreach, quietly=TRUE)) {
     nr <- 21

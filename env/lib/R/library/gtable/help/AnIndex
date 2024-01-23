@@ -1,4 +1,4 @@
-gtable-package	gtable-package
+gtable-package	gtable
 bind	bind
 cbind.gtable	bind
 gtable	gtable
@@ -23,4 +23,5 @@ gtable_width	gtable_width
 is.gtable	is.gtable
 print.gtable	print.gtable
 rbind.gtable	bind
-_PACKAGE	gtable-package
+z_arrange_gtables	z_arrange_gtables
+z_normalise	z_normalise

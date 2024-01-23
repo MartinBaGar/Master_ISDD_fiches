@@ -1,8 +1,8 @@
-
+// -*- mode: C++; c-indent-level: 4; c-basic-offset: 4; indent-tabs-mode: nil; -*-
+//
 // exceptions.h: Rcpp R/C++ interface class library -- exceptions
 //
-// Copyright (C) 2010 - 2020  Dirk Eddelbuettel and Romain Francois
-// Copyright (C) 2021 - 2020  Dirk Eddelbuettel, Romain Francois and Iñaki Ucar
+// Copyright (C) 2010 - 2017  Dirk Eddelbuettel and Romain Francois
 //
 // This file is part of Rcpp.
 //
@@ -24,26 +24,22 @@
 
 #include <Rversion.h>
 
-#ifndef RCPP_DEFAULT_INCLUDE_CALL
-#define RCPP_DEFAULT_INCLUDE_CALL true
-#endif
 
-#define GET_STACKTRACE() R_NilValue
+#define GET_STACKTRACE() stack_trace( __FILE__, __LINE__ )
 
 namespace Rcpp {
 
-    // Throwing an exception must be thread-safe to avoid surprises w/ OpenMP.
     class exception : public std::exception {
     public:
-        explicit exception(const char* message_, bool include_call = RCPP_DEFAULT_INCLUDE_CALL) :	// #nocov start
+        explicit exception(const char* message_, bool include_call = true) :	// #nocov start
             message(message_),
-            include_call_(include_call) {
-            record_stack_trace();
+            include_call_(include_call){
+            rcpp_set_stack_trace(Shield<SEXP>(stack_trace()));
         }
-        exception(const char* message_, const char*, int, bool include_call = RCPP_DEFAULT_INCLUDE_CALL) :
+        exception(const char* message_, const char*, int, bool include_call = true) :
             message(message_),
-            include_call_(include_call) {
-            record_stack_trace();
+            include_call_(include_call){
+            rcpp_set_stack_trace(Shield<SEXP>(stack_trace()));
         }
         bool include_call() const {
             return include_call_;
@@ -52,12 +48,9 @@ namespace Rcpp {
         virtual const char* what() const throw() {
             return message.c_str();					// #nocov end
         }
-        inline void copy_stack_trace_to_r() const;
     private:
         std::string message;
         bool include_call_;
-        std::vector<std::string> stack;
-        inline void record_stack_trace();
     };
 
     // simple helper
@@ -109,66 +102,32 @@ namespace Rcpp {
 
     // Variadic / code generated version of the warning and stop functions
     // can be found within the respective C++11 or C++98 exceptions.h
-    // included below.
+    // included below
     inline void warning(const std::string& message) {        // #nocov start
-        ::Rf_warning("%s", message.c_str());
+        Rf_warning(message.c_str());
     }                                                        // #nocov end
 
     inline void NORET stop(const std::string& message) {     // #nocov start
         throw Rcpp::exception(message.c_str());
     }                                                        // #nocov end
 
-} // namespace Rcpp
+#if defined(RCPP_USE_UNWIND_PROTECT)
+    namespace internal {
 
+        struct LongjumpException {
+            SEXP token;
+            LongjumpException(SEXP token_) : token(token_) { }
+        };
 
-namespace Rcpp { namespace internal {
-
-inline SEXP longjumpSentinel(SEXP token) {
-    SEXP sentinel = PROTECT(Rf_allocVector(VECSXP, 1));
-    SET_VECTOR_ELT(sentinel, 0, token);
-
-    SEXP sentinelClass = PROTECT(Rf_mkString("Rcpp:longjumpSentinel"));
-    Rf_setAttrib(sentinel, R_ClassSymbol, sentinelClass) ;
-
-    UNPROTECT(2);
-    return sentinel;
-}
-
-inline bool isLongjumpSentinel(SEXP x) {					// #nocov start
-    return
-        Rf_inherits(x, "Rcpp:longjumpSentinel") &&
-        TYPEOF(x) == VECSXP &&
-        Rf_length(x) == 1;
-}
-
-inline SEXP getLongjumpToken(SEXP sentinel) {
-    return VECTOR_ELT(sentinel, 0);
-}
-
-inline void resumeJump(SEXP token) {
-    if (isLongjumpSentinel(token)) {
-        token = getLongjumpToken(token);
-    }
-    ::R_ReleaseObject(token);
-#if (defined(R_VERSION) && R_VERSION >= R_Version(3, 5, 0))
-    ::R_ContinueUnwind(token);
-#endif														// #nocov end
-    Rf_error("Internal error: Rcpp longjump failed to resume");
-}
-
-}} // namespace Rcpp::internal
-
-
-namespace Rcpp {
-
-struct LongjumpException {
-    SEXP token;
-    LongjumpException(SEXP token_) : token(token_) {
-        if (internal::isLongjumpSentinel(token)) {
-            token = internal::getLongjumpToken(token);
+        inline void resumeJump(SEXP token) {
+            ::R_ReleaseObject(token);
+#if (defined(RCPP_PROTECTED_EVAL) && defined(R_VERSION) && R_VERSION >= R_Version(3, 5, 0))
+            ::R_ContinueUnwind(token);
+#endif
         }
-    }
-};
+
+    } // namespace internal
+#endif
 
 } // namespace Rcpp
 
@@ -204,7 +163,7 @@ namespace Rcpp {
         virtual const char* what() const throw() { return __MESSAGE__ ; }          \
     } ;
 
-    RCPP_SIMPLE_EXCEPTION_CLASS(not_a_matrix, "Not a matrix.") 				// #nocov start
+    RCPP_SIMPLE_EXCEPTION_CLASS(not_a_matrix, "Not a matrix.") // #nocov start
     RCPP_SIMPLE_EXCEPTION_CLASS(parse_error, "Parse error.")
     RCPP_SIMPLE_EXCEPTION_CLASS(not_s4, "Not an S4 object.")
     RCPP_SIMPLE_EXCEPTION_CLASS(not_reference, "Not an S4 object of a reference class.")
@@ -212,7 +171,6 @@ namespace Rcpp {
     RCPP_SIMPLE_EXCEPTION_CLASS(no_such_field, "No such field.") // not used internally
     RCPP_SIMPLE_EXCEPTION_CLASS(no_such_function, "No such function.")
     RCPP_SIMPLE_EXCEPTION_CLASS(unevaluated_promise, "Promise not yet evaluated.")
-    RCPP_SIMPLE_EXCEPTION_CLASS(embedded_nul_in_string, "Embedded NUL in string.")
 
     // Promoted
     RCPP_EXCEPTION_CLASS(no_such_slot, "No such slot")
@@ -225,10 +183,10 @@ namespace Rcpp {
     RCPP_EXCEPTION_CLASS(binding_is_locked, "Binding is locked")
     RCPP_EXCEPTION_CLASS(no_such_namespace, "No such namespace")
     RCPP_EXCEPTION_CLASS(function_not_exported, "Function not exported")
-    RCPP_EXCEPTION_CLASS(eval_error, "Evaluation error")
+    RCPP_EXCEPTION_CLASS(eval_error, "Evaluation error")			     // #nocov end
 
     // Promoted
-    RCPP_ADVANCED_EXCEPTION_CLASS(not_compatible, "Not compatible" )		// #nocov end
+    RCPP_ADVANCED_EXCEPTION_CLASS(not_compatible, "Not compatible" )
     RCPP_ADVANCED_EXCEPTION_CLASS(index_out_of_bounds, "Index is out of bounds")
 
     #undef RCPP_SIMPLE_EXCEPTION_CLASS
@@ -248,7 +206,7 @@ namespace internal {
     inline bool is_Rcpp_eval_call(SEXP expr) {
         SEXP sys_calls_symbol = Rf_install("sys.calls");
         SEXP identity_symbol = Rf_install("identity");
-        Shield<SEXP> identity_fun(Rf_findFun(identity_symbol, R_BaseEnv));
+        SEXP identity_fun = Rf_findFun(identity_symbol, R_BaseEnv);
         SEXP tryCatch_symbol = Rf_install("tryCatch");
         SEXP evalq_symbol = Rf_install("evalq");
 
@@ -269,7 +227,7 @@ inline SEXP get_last_call(){
     SEXP sys_calls_symbol = Rf_install("sys.calls");
 
     Rcpp::Shield<SEXP> sys_calls_expr(Rf_lang1(sys_calls_symbol));
-    Rcpp::Shield<SEXP> calls(Rcpp_fast_eval(sys_calls_expr, R_GlobalEnv));
+    Rcpp::Shield<SEXP> calls(Rcpp_eval(sys_calls_expr, R_GlobalEnv));
 
     SEXP cur, prev;
     prev = cur = calls;
@@ -320,37 +278,34 @@ inline SEXP make_condition(const std::string& ex_msg, SEXP call, SEXP cppstack, 
     return res ;
 }
 
-template <typename Exception>
-inline SEXP exception_to_condition_template( const Exception& ex, bool include_call) {
-#ifndef RCPP_NO_RTTI
-  std::string ex_class = demangle( typeid(ex).name() ) ;
-#else
-  std::string ex_class = "<not available>";
-#endif
-  std::string ex_msg   = ex.what() ;
-
-  Rcpp::Shelter<SEXP> shelter;
-  SEXP call, cppstack;
-  if (include_call) {
-      call = shelter(get_last_call());
-      cppstack = shelter(rcpp_get_stack_trace());
-  } else {
-      call = R_NilValue;
-      cppstack = R_NilValue;
-  }
-  SEXP classes = shelter( get_exception_classes(ex_class) );
-  SEXP condition = shelter( make_condition( ex_msg, call, cppstack, classes) );
-  rcpp_set_stack_trace( R_NilValue ) ;
-  return condition ;
-}
-
 inline SEXP rcpp_exception_to_r_condition(const Rcpp::exception& ex) {
-    ex.copy_stack_trace_to_r();
-    return exception_to_condition_template(ex, ex.include_call());
+    std::string ex_class = demangle( typeid(ex).name() ) ;
+    std::string ex_msg   = ex.what() ;
+
+    SEXP call, cppstack;
+    if (ex.include_call()) {
+        call = Rcpp::Shield<SEXP>(get_last_call());
+        cppstack = Rcpp::Shield<SEXP>( rcpp_get_stack_trace());
+    } else {
+        call = R_NilValue;
+        cppstack = R_NilValue;
+    }
+    Rcpp::Shield<SEXP> classes( get_exception_classes(ex_class) );
+    Rcpp::Shield<SEXP> condition( make_condition( ex_msg, call, cppstack, classes) );
+    rcpp_set_stack_trace( R_NilValue ) ;
+    return condition ;
 }
 
 inline SEXP exception_to_r_condition( const std::exception& ex){
-  return exception_to_condition_template(ex, RCPP_DEFAULT_INCLUDE_CALL);
+    std::string ex_class = demangle( typeid(ex).name() ) ;
+    std::string ex_msg   = ex.what() ;
+
+    Rcpp::Shield<SEXP> cppstack( rcpp_get_stack_trace() );
+    Rcpp::Shield<SEXP> call( get_last_call() );
+    Rcpp::Shield<SEXP> classes( get_exception_classes(ex_class) );
+    Rcpp::Shield<SEXP> condition( make_condition( ex_msg, call, cppstack, classes) );
+    rcpp_set_stack_trace( R_NilValue ) ;
+    return condition ;
 }
 
 inline SEXP string_to_try_error( const std::string& str){
@@ -378,10 +333,7 @@ inline SEXP exception_to_try_error( const std::exception& ex){
 }
 
 std::string demangle( const std::string& name) ;
-#ifndef RCPP_NO_RTTI
 #define DEMANGLE(__TYPE__) demangle( typeid(__TYPE__).name() ).c_str()
-#endif
-
 
 inline void forward_exception_to_r(const std::exception& ex){
     SEXP stop_sym  = Rf_install( "stop" ) ;

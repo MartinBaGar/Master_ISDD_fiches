@@ -1,5 +1,3 @@
-importFrom("stats", "median", "runif")
-importFrom("graphics", "axis", "barplot", "hist", "par")
 export(heckbert)
 export(wilkinson)
 export(extended)

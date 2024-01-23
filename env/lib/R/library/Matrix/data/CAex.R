@@ -1,12 +1,12 @@
-stopifnot(requireNamespace("Matrix" , quietly = TRUE)) # includes 'methods'
+stopifnot(require(Matrix), require(methods)) # Matrix classes; new, slot<-
 
 CAex <-
     local({
 	load(system.file(file.path("external", "CAex_slots.rda"), package = "Matrix"))
 	## -> 'L'
-	r <- methods::new("dgCMatrix")
+	r <- new("dgCMatrix")
 	for (n in c("Dim", "i","p","x"))
-	    methods::slot(r, n) <- L[[n]]
+	    slot(r, n) <- L[[n]]
 	r
     })
 

@@ -47,16 +47,14 @@ public:
         }
 
         void set(SEXP x) {
-            Shield<SEXP> safe_x(x);
-
             /* check if we can use a fast version */
             if( TYPEOF(x) == STRSXP && parent.size() == Rf_length(x) ){
-                Rf_namesgets(parent, x);
+                SEXP y = parent.get__() ;
+                Rf_setAttrib( y, R_NamesSymbol, x ) ;
             } else {
                 /* use the slower and more flexible version (callback to R) */
                 SEXP namesSym = Rf_install( "names<-" );
-                Shield<SEXP> call(Rf_lang3(namesSym, parent, x));
-                Shield<SEXP> new_vec(Rcpp_fast_eval(call, R_GlobalEnv));
+                Shield<SEXP> new_vec( Rcpp_eval(Rf_lang3( namesSym, parent, x ))) ;
                 parent.set__(new_vec);
             }
 

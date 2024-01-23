@@ -11,7 +11,7 @@
 \begin{document}
 
 %\VignetteIndexEntry{Support Vector Machines---the Interface to libsvm in package e1071}
-%\VignetteDepends{e1071,randomForest,xtable}
+%\VignetteDepends{e1071,rpart,xtable}
 %\VignetteKeywords{classification, regression, machine learning, benchmarking, support vector machines}
 %\VignettePackage{e1071}
 
@@ -128,7 +128,7 @@ machine; if $y$ is omitted, the engine assumes a novelty detection task.
 
 In the following two examples, we demonstrate the practical use of
 \texttt{svm()} along with a comparison to classification and
-regression forests as implemented in \texttt{randomForest()}.
+regression trees as implemented in \texttt{rpart()}.
 
 \subsection*{Classification}
 
@@ -139,18 +139,17 @@ of its chemical analysis.
 We start by splitting the data into a train and test set:
 <<>>=
 library(e1071)
-library(randomForest)
+library(rpart)
 data(Glass, package="mlbench")
 
 ## split data into a train and test set
 index     <- 1:nrow(Glass)
-N         <- trunc(length(index)/3)
-testindex <- sample(index, N)
+testindex <- sample(index, trunc(length(index)/3))
 testset   <- Glass[testindex,]
 trainset  <- Glass[-testindex,]
 @ 
-Both for SVM and randomForest (via
-\texttt{randomForest()}), we fit the model and predict the test set
+Both for the SVM and the partitioning tree (via
+\texttt{rpart()}), we fit the model and try to predict the test set
 values:
 <<>>=
 ## svm
@@ -161,33 +160,32 @@ svm.pred  <- predict(svm.model, testset[,-10])
 10. \texttt{cost} is a general penalizing parameter for $C$-classification and
 \texttt{gamma} is the radial basis function-specific kernel parameter.)
 <<>>=
-## randomForest
-rf.model <- randomForest(Type ~ ., data = trainset)
-rf.pred  <- predict(rf.model, testset[,-10])
+## rpart
+rpart.model <- rpart(Type ~ ., data = trainset)
+rpart.pred  <- predict(rpart.model, testset[,-10], type = "class")
 @ 
 A cross-tabulation of the true versus the predicted values yields:
 <<>>=
 ## compute svm confusion matrix
 table(pred = svm.pred, true = testset[,10])
 
-## compute randomForest confusion matrix 
-table(pred = rf.pred, true = testset[,10])
+## compute rpart confusion matrix 
+table(pred = rpart.pred, true = testset[,10])
 @ 
 
 %% results table
 
 <<results=tex,echo=FALSE>>=
 library(xtable)
-rf.acc <- c()
+rp.acc <- c()
 sv.acc <- c()
-rf.kap <- c()
+rp.kap <- c()
 sv.kap <- c()
 reps <- 10
 for (i in 1:reps) {
   ## split data into a train and test set
   index     <- 1:nrow(Glass)
-  N         <- trunc(length(index)/3)
-  testindex <- sample(index, N)
+  testindex <- sample(index, trunc(length(index)/3))
   testset   <- na.omit(Glass[testindex,])
   trainset  <- na.omit(Glass[-testindex,])
   
@@ -198,21 +196,21 @@ for (i in 1:reps) {
   sv.acc[i] <- tab$diag
   sv.kap[i] <- tab$kappa
   
-  ## randomForest
-  rf.model <- randomForest(Type ~ ., data = trainset)
-  rf.pred  <- predict(rf.model, testset[,-10])
-  tab <- classAgreement(table(rf.pred, testset[,10]))
-  rf.acc[i] <- tab$diag
-  rf.kap[i] <- tab$kappa
+  ## rpart
+  rpart.model <- rpart(Type ~ ., data = trainset)
+  rpart.pred  <- predict(rpart.model, testset[,-10], type = "class")
+  tab <- classAgreement(table(rpart.pred, testset[,10]))
+  rp.acc[i] <- tab$diag
+  rp.kap[i] <- tab$kappa
 
 }
-x <- rbind(summary(sv.acc), summary(sv.kap), summary(rf.acc), summary(rf.kap))
+x <- rbind(summary(sv.acc), summary(sv.kap), summary(rp.acc), summary(rp.kap))
 rownames <- c()
-tab <- cbind(rep(c("svm","randomForest"),2), round(x,2))
+tab <- cbind(rep(c("svm","rpart"),2), round(x,2))
 colnames(tab)[1] <- "method"
 rownames(tab) <- c("Accuracy","","Kappa"," ")
 xtable(tab, label = "tab:class", caption = "Performance of \\texttt{svm()} and\
-       \\texttt{randomForest()} for classification (10 replications)")
+       \\texttt{rpart()} for classification (10 replications)")
 @ 
 \noindent Finally, we compare the performance of the two methods by computing the 
 respective accuracy rates and the kappa indices (as computed by \texttt{classAgreement()}
@@ -227,58 +225,56 @@ into a train and test set.
 
 <<>>=
 library(e1071)
-library(randomForest)
+library(rpart)
 data(Ozone, package="mlbench")
 
 ## split data into a train and test set
 index     <- 1:nrow(Ozone)
-N         <- trunc(length(index)/3)
-testindex <- sample(index, N)
+testindex <- sample(index, trunc(length(index)/3))
 testset   <- na.omit(Ozone[testindex,-3])
 trainset  <- na.omit(Ozone[-testindex,-3])
 
 ## svm
 svm.model <- svm(V4 ~ ., data = trainset, cost = 1000, gamma = 0.0001)
 svm.pred  <- predict(svm.model, testset[,-3])
-sqrt(crossprod(svm.pred - testset[,3]) / N)
+crossprod(svm.pred - testset[,3]) / length(testindex)
 
-## random Forest
-rf.model <- randomForest(V4 ~ ., data = trainset)
-rf.pred  <- predict(rf.model, testset[,-3])
-sqrt(crossprod(rf.pred - testset[,3]) / N)
+## rpart
+rpart.model <- rpart(V4 ~ ., data = trainset)
+rpart.pred  <- predict(rpart.model, testset[,-3])
+crossprod(rpart.pred - testset[,3]) / length(testindex)
 @ 
 
 <<results=tex,echo=FALSE>>=
-rf.res <- c()
+rp.res <- c()
 sv.res <- c()
 reps <- 10
 for (i in 1:reps) {
   ## split data into a train and test set
   index     <- 1:nrow(Ozone)
-  N         <- trunc(length(index)/3)
-  testindex <- sample(index, N)
+  testindex <- sample(index, trunc(length(index)/3))
   testset   <- na.omit(Ozone[testindex,-3])
   trainset  <- na.omit(Ozone[-testindex,-3])
   
   ## svm
   svm.model <- svm(V4 ~ ., data = trainset, cost = 1000, gamma = 0.0001)
   svm.pred  <- predict(svm.model, testset[,-3])
-  sv.res[i] <- sqrt(crossprod(svm.pred - testset[,3]) / N)
+  sv.res[i] <- crossprod(svm.pred - testset[,3]) / length(testindex)
   
-  ## randomForest
-  rf.model <- randomForest(V4 ~ ., data = trainset)
-  rf.pred  <- predict(rf.model, testset[,-3])
-  rf.res[i] <- sqrt(crossprod(rf.pred - testset[,3]) / N)
+  ## rpart
+  rpart.model <- rpart(V4 ~ ., data = trainset)
+  rpart.pred  <- predict(rpart.model, testset[,-3])
+  rp.res[i] <- crossprod(rpart.pred - testset[,3]) / length(testindex)
 }
-xtable(rbind(svm = summary(sv.res), randomForest = summary(rf.res)), 
+xtable(rbind(svm = summary(sv.res), rpart = summary(rp.res)), 
        label = "tab:reg", caption = "Performance of \\texttt{svm()} and\
-       \\texttt{randomForest()} for regression (Root Mean Squared Error, 10 replications)")
+       \\texttt{rpart()} for regression (Mean Squared Error, 10 replications)")
 @ 
 
-\noindent We compare the two methods by the root mean squared error (RMSE)---see Table
+\noindent We compare the two methods by the mean squared error (MSE)---see Table
 \ref{tab:reg} for a summary of \Sexpr{reps} replications. 
 Again, as for classification, \texttt{svm()}
-does a better job than \texttt{randomForest()}.
+does a better job than \texttt{rpart()}---in fact, much better.
 
 \section*{Elements of the \texttt{svm} object}
 
@@ -330,7 +326,7 @@ If the cross-classification feature is enabled, the
 \section*{Tips on practical use}
 \begin{itemize}
  \item Note that SVMs may be very
-  sensitive to the proper choice of parameters, so allways check a range
+  sensible to the proper choice of parameters, so allways check a range
   of parameter combinations, at least on a reasonable subset of your
   data.
  \item For classification tasks, you will most likely use
@@ -357,7 +353,7 @@ Dual representation of models implemented:
 \begin{itemize}
  \item $C$-classification:\\
   \begin{eqnarray}
-    \min_\alpha&&\frac{1}{2}\alpha^\top \mathbf{Q} \alpha-\mathbf{e}^\top\alpha \nonumber\\
+    \min_\alpha&&\frac{1}{2}\alpha^\top \mathbf{Q} \alpha-e^\top\alpha \nonumber\\
     \mbox{s.t.} &&0\le\alpha_i\le C,~i=1,\ldots,l,\\
     &&\mathbf{y}^\top\alpha=0~, \nonumber
   \end{eqnarray}
@@ -406,7 +402,7 @@ Dual representation of models implemented:
   \begin{tabular}{|l|l|l|} \hline
     kernel            & formula & parameters \\ \hline \hline
     linear            & $\bf u^\top v$& (none) \\
-    polynomial        & $(\gamma \mathbf{u^\top v}+c_0)^d$ & $\gamma, d, c_0$\\    
+    polynomial        & $\gamma (\mathbf{u^\top v}+c_0)^d$ & $\gamma, d, c_0$\\
     radial basis fct. & $\exp\{-\gamma|\mathbf{u-v}|^2\}$&$\gamma$\\
     sigmoid           & $\tanh\{\gamma \mathbf{u^\top v}+c_0\}$ &$\gamma, c_0$\\ \hline
   \end{tabular}

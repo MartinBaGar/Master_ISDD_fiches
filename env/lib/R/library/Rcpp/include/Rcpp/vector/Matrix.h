@@ -50,7 +50,7 @@ public:
 
     Matrix() : VECTOR(Dimension(0, 0)), nrows(0) {}
 
-    Matrix(SEXP x) : VECTOR(x), nrows( VECTOR::dims()[0] ) {}
+    Matrix(SEXP x) : VECTOR( r_cast<RTYPE>( x ) ), nrows( VECTOR::dims()[0] ) {}
 
     Matrix( const Dimension& dims) : VECTOR( Rf_allocMatrix( RTYPE, dims[0], dims[1] ) ), nrows(dims[0]) {
         if( dims.size() != 2 ) throw not_a_matrix();
@@ -89,7 +89,9 @@ public:
     }
     Matrix& operator=( const SubMatrix<RTYPE>& ) ;
 
-    explicit Matrix( const no_init_matrix& obj) : VECTOR(Rf_allocMatrix(RTYPE, obj.nrow(), obj.ncol())), nrows(obj.nrow()) {}
+    explicit Matrix( const no_init_matrix& obj) {
+        Storage::set__( Rf_allocMatrix( RTYPE, obj.nrow(), obj.ncol() ) );
+    }
 
     inline int ncol() const {
         return VECTOR::dims()[1];
@@ -269,7 +271,8 @@ RCPP_GENERATE_MATRIX_SCALAR_OPERATOR(/)
     inline typename traits::enable_if< traits::is_convertible< typename traits::remove_const_and_reference< T >::type,        \
          typename Matrix<RTYPE, StoragePolicy>::stored_type >::value, Matrix<RTYPE, StoragePolicy> >::type                    \
              operator __OPERATOR__ (const T &lhs, const Matrix<RTYPE, StoragePolicy> &rhs) {                                  \
-        Vector<RTYPE, StoragePolicy> v = lhs __OPERATOR__ static_cast<const Vector<RTYPE, StoragePolicy> &>(rhs);             \
+        Vector<RTYPE, StoragePolicy> v = static_cast<const Vector<RTYPE, StoragePolicy> &>(rhs);                              \
+        v = lhs __OPERATOR__ v;                                                                                               \
         v.attr("dim") = Vector<INTSXP>::create(rhs.nrow(), rhs.ncol());                                                       \
         return as< Matrix<RTYPE, StoragePolicy> >(v);                                                                         \
     }

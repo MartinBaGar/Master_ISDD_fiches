@@ -67,6 +67,8 @@ namespace Rcpp {
             m_d = tmp/(24*60*60);
         }
 
+        ~Date() {};
+
         double getDate(void) const {
             return m_d;
         }

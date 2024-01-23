@@ -8,7 +8,7 @@ set(prefix "${_harfbuzz_remove_string}")
 # location.
 get_filename_component(_harfbuzz_prefix "${CMAKE_CURRENT_LIST_DIR}" DIRECTORY)
 get_filename_component(_harfbuzz_prefix "${_harfbuzz_prefix}" DIRECTORY)
-set(_harfbuzz_libdir "${prefix}/lib")
+set(_harfbuzz_libdir "${exec_prefix}/lib")
 string(REPLACE "${_harfbuzz_remove_string}/" "" _harfbuzz_libdir "${_harfbuzz_libdir}")
 set(_harfbuzz_libdir_iter "${_harfbuzz_libdir}")
 while (_harfbuzz_libdir_iter)
@@ -26,7 +26,7 @@ set(_harfbuzz_includedir "${prefix}/include")
 string(REPLACE "${_harfbuzz_remove_string}/" "" _harfbuzz_includedir "${_harfbuzz_includedir}")
 
 # Extract version information from libtool.
-set(_harfbuzz_version_info "40300:0:40300")
+set(_harfbuzz_version_info "20400:0:20400")
 string(REPLACE ":" ";" _harfbuzz_version_info "${_harfbuzz_version_info}")
 list(GET _harfbuzz_version_info 0
   _harfbuzz_current)

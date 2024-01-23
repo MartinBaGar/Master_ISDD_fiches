@@ -1,41 +1,30 @@
-## ---- echo = FALSE, message = FALSE-------------------------------------------
+## ---- echo = FALSE, message = FALSE--------------------------------------
 require(data.table)
 knitr::opts_chunk$set(
   comment = "#",
     error = FALSE,
      tidy = FALSE,
     cache = FALSE,
- collapse = TRUE
-)
+ collapse = TRUE)
 
 ## ----echo = FALSE---------------------------------------------------------------------------------
 options(width = 100L)
 
 ## -------------------------------------------------------------------------------------------------
-input <- if (file.exists("flights14.csv")) {
-   "flights14.csv"
-} else {
-  "https://raw.githubusercontent.com/Rdatatable/data.table/master/vignettes/flights14.csv"
-}
-flights <- fread(input)
+flights <- fread("flights14.csv")
 flights
 dim(flights)
 
 ## -------------------------------------------------------------------------------------------------
-DT = data.table(
-  ID = c("b","b","b","a","a","c"),
-  a = 1:6,
-  b = 7:12,
-  c = 13:18
-)
+DT = data.table(ID = c("b","b","b","a","a","c"), a = 1:6, b = 7:12, c = 13:18)
 DT
 class(DT$ID)
 
 ## ----eval = FALSE---------------------------------------------------------------------------------
 #  DT[i, j, by]
 #  
-#  ##   R:                 i                 j        by
-#  ## SQL:  where | order by   select | update  group by
+#  ##   R:      i                 j        by
+#  ## SQL:  where   select | update  group by
 
 ## -------------------------------------------------------------------------------------------------
 ans <- flights[origin == "JFK" & month == 6L]
@@ -48,6 +37,15 @@ ans
 ## -------------------------------------------------------------------------------------------------
 ans <- flights[order(origin, -dest)]
 head(ans)
+
+## -------------------------------------------------------------------------------------------------
+odt = data.table(col = sample(1e7))
+(t1 <- system.time(ans1 <- odt[base::order(col)]))  ## uses order from base R
+(t2 <- system.time(ans2 <- odt[order(col)]))        ## uses data.table's forder
+(identical(ans1, ans2))
+
+## ----echo = FALSE---------------------------------------------------------------------------------
+rm(odt); rm(ans1); rm(ans2); rm(t1); rm(t2)
 
 ## -------------------------------------------------------------------------------------------------
 ans <- flights[, arr_delay]
@@ -69,7 +67,7 @@ ans <- flights[, .(delay_arr = arr_delay, delay_dep = dep_delay)]
 head(ans)
 
 ## -------------------------------------------------------------------------------------------------
-ans <- flights[, sum( (arr_delay + dep_delay) < 0 )]
+ans <- flights[, sum((arr_delay + dep_delay) < 0)]
 ans
 
 ## -------------------------------------------------------------------------------------------------
@@ -140,7 +138,7 @@ ans <- flights[carrier == "AA", .N, by = origin]
 ans
 
 ## -------------------------------------------------------------------------------------------------
-ans <- flights[carrier == "AA", .N, by = .(origin, dest)]
+ans <- flights[carrier == "AA", .N, by = .(origin,dest)]
 head(ans)
 
 ## or equivalently using a character vector in 'by'
@@ -171,9 +169,9 @@ head(ans, 10)
 
 ## ----eval = FALSE---------------------------------------------------------------------------------
 #  DT[ ...
-#     ][ ...
-#       ][ ...
-#         ]
+#   ][ ...
+#   ][ ...
+#   ]
 
 ## -------------------------------------------------------------------------------------------------
 ans <- flights[, .N, .(dep_delay>0, arr_delay>0)]

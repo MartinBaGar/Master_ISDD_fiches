@@ -6,7 +6,7 @@
 options(continue="  ", width=60)
 options(SweaveHooks=list(fig=function() par(mar=c(4.1, 4.1, .3, 1.1))))
 pdf.options(pointsize=8) #text in graph about the same as regular text
-library(survival, quietly=TRUE)
+require(survival, quietly=TRUE)
 
 
 ###################################################
@@ -34,11 +34,11 @@ iter <- matrix(0, nrow=6, ncol=4,
                              c("beta", "loglik", "U", "H")))
 # Exact Newton-Raphson
 beta <- 0
-for (i in 1:5) {
+for (i in 1:6) {
     iter[i,] <- breslow1(beta)
     beta <- beta + iter[i,"U"]/iter[i,"H"]
 }
-print(iter, digits=9)
+iter
 
 # coxph fits
 test1 <- data.frame(time=  c(1, 1, 6, 6, 8, 9),
@@ -177,16 +177,5 @@ wfun <- function(r) {
 temp <- matrix(c(wfun(1), wfun(rhat)), ncol=2, 
        dimnames=list(c("loglik", "U", "H"), c("beta=0", "beta-hat")))
 round(temp, 6)       
-
-
-###################################################
-### code chunk number 10: mstate1
-###################################################
-getOption("SweaveHooks")[["fig"]]()
-states <- c("Entry", "a", "b", "c")
-smat <- matrix(0, 4, 4, dimnames=list(states, states))
-smat[1,2:3] <- 1
-smat[2,3] <- smat[3,2] <- smat[3,4] <- smat[2,4] <- 1
-statefig(c(1,2,1), smat)
 
 

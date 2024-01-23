@@ -37,11 +37,7 @@ public:
 
     template <int RTYPE, template <class> class StoragePolicy >
     operator Vector<RTYPE, StoragePolicy>() const {
-        // Explicitly protect temporary vector to avoid false positive
-        // with rchk (#892)
-        Shield<SEXP> x(Rf_allocVector(RTYPE, size));
-        Vector<RTYPE, PreserveStorage> ret(x);
-        return ret;
+        return Rf_allocVector(RTYPE, size) ;
     }
 
 private:
@@ -62,11 +58,7 @@ public:
 
     template <int RTYPE, template <class> class StoragePolicy >
     operator Matrix<RTYPE, StoragePolicy>() const {
-        // Explicitly protect temporary matrix to avoid false positive
-        // with rchk (#892)
-        Shield<SEXP> x(Rf_allocMatrix(RTYPE, nr, nc));
-        Matrix<RTYPE, PreserveStorage> ret(x);
-        return ret;
+        return Rf_allocMatrix(RTYPE, nr, nc);
     }
 
 private:

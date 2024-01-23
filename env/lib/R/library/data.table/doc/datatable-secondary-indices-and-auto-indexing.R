@@ -1,4 +1,4 @@
-## ---- echo = FALSE, message = FALSE---------------------------------------------------------------
+## ---- echo = FALSE, message = FALSE--------------------------------------
 require(data.table)
 knitr::opts_chunk$set(
   comment = "#",
@@ -45,7 +45,7 @@ indices(flights)
 flights["JFK", on = "origin"]
 
 ## alternatively
-# flights[.("JFK"), on = "origin"] (or)
+# flights[.("JFK"), on = "origin"] (or) 
 # flights[list("JFK"), on = "origin"]
 
 ## -------------------------------------------------------------------------------------------------
@@ -85,7 +85,7 @@ flights[c("BOS", "DAY"), on = "dest", mult = "first"]
 flights[.(c("LGA", "JFK", "EWR"), "XNA"), on = c("origin", "dest"), mult = "last"]
 
 ## -------------------------------------------------------------------------------------------------
-flights[.(c("LGA", "JFK", "EWR"), "XNA"), mult = "last", on = c("origin", "dest"), nomatch = NULL]
+flights[.(c("LGA", "JFK", "EWR"), "XNA"), mult = "last", on = c("origin", "dest"), nomatch = 0L]
 
 ## -------------------------------------------------------------------------------------------------
 set.seed(1L)

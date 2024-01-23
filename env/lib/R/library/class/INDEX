@@ -1,3 +1,4 @@
+SOM                     Self-Organizing Maps: Online Algorithm
 batchSOM                Self-Organizing Maps: Batch Algorithm
 condense                Condense training set for k-NN classifier
 knn                     k-Nearest Neighbour Classification
@@ -12,5 +13,4 @@ lvqtest                 Classify Test Set from LVQ Codebook
 multiedit               Multiedit for k-NN Classifier
 olvq1                   Optimized Learning Vector Quantization 1
 reduce.nn               Reduce Training Set for a k-NN Classifier
-SOM                     Self-Organizing Maps: Online Algorithm
 somgrid                 Plot SOM Fits

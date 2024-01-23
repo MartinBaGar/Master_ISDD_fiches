@@ -1,16 +1,19 @@
 Package: labeling
 Type: Package
 Title: Axis Labeling
-Version: 0.4.3
-Date: 2023-08-29
-Author: Justin Talbot,
-Maintainer: Nuno Sempere <nuno.semperelh@gmail.com>
-Description: Functions which provide a range of axis labeling algorithms. 
+Version: 0.3
+Date: 2014-08-22
+Author: Justin Talbot
+Maintainer: Justin Talbot <justintalbot@gmail.com>
+Description: Provides a range of axis labeling algorithms
 License: MIT + file LICENSE | Unlimited
+LazyLoad: no
 Collate: 'labeling.R'
-NeedsCompilation: no
-Imports: stats, graphics
-Packaged: 2023-08-29 21:01:57 UTC; loki
 Repository: CRAN
-Date/Publication: 2023-08-29 22:20:02 UTC
-Built: R 4.3.1; ; 2023-09-23 01:39:43 UTC; unix
+Repository/R-Forge/Project: labeling
+Repository/R-Forge/Revision: 16
+Repository/R-Forge/DateTimeStamp: 2014-08-23 05:53:23
+Date/Publication: 2014-08-23 14:57:53
+Packaged: 2014-08-23 06:15:07 UTC; rforge
+NeedsCompilation: no
+Built: R 3.5.0; ; 2018-07-17 18:17:08 UTC; unix

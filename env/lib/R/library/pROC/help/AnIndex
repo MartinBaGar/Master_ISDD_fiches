@@ -15,8 +15,6 @@ ci.auc	ci.auc
 ci.auc.auc	ci.auc
 ci.auc.default	ci.auc
 ci.auc.formula	ci.auc
-ci.auc.multiclass.auc	ci.auc
-ci.auc.multiclass.roc	ci.auc
 ci.auc.roc	ci.auc
 ci.auc.smooth.roc	ci.auc
 ci.coords	ci.coords
@@ -26,8 +24,6 @@ ci.coords.roc	ci.coords
 ci.coords.smooth.roc	ci.coords
 ci.default	ci
 ci.formula	ci
-ci.multiclass.auc	ci
-ci.multiclass.roc	ci
 ci.roc	ci
 ci.se	ci.se
 ci.se.default	ci.se
@@ -48,7 +44,6 @@ ci.thresholds.smooth.roc	ci.thresholds
 coords	coords
 coords.roc	coords
 coords.smooth.roc	coords
-coords_transpose	coords_transpose
 cov	cov
 cov.auc	cov
 cov.default	cov
@@ -57,7 +52,6 @@ cov.smooth.roc	cov
 ggroc	ggroc
 ggroc.list	ggroc
 ggroc.roc	ggroc
-ggroc.smooth.roc	ggroc
 groupGeneric	groupGeneric
 groupGeneric.auc	groupGeneric
 groupGeneric.ci.coords	groupGeneric
@@ -91,7 +85,6 @@ Ops.ci.auc	groupGeneric
 Ops.ci.coords	groupGeneric
 Ops.ci.se	groupGeneric
 Ops.ci.sp	groupGeneric
-plot	plot.roc
 plot.ci	plot.ci
 plot.ci.se	plot.ci
 plot.ci.sp	plot.ci
@@ -114,12 +107,10 @@ print.ci.sp	print
 print.ci.thresholds	print
 print.multiclass.auc	print
 print.multiclass.roc	print
-print.mv.multiclass.roc	print
 print.roc	print
 print.smooth.roc	print
 pROC	pROC-package
 roc	roc
-roc.data.frame	roc
 roc.default	roc
 roc.formula	roc
 roc.test	roc.test
@@ -128,7 +119,6 @@ roc.test.default	roc.test
 roc.test.formula	roc.test
 roc.test.roc	roc.test
 roc.test.smooth.roc	roc.test
-roc_	roc
 smooth	smooth
 smooth.default	smooth
 smooth.roc	smooth
