@@ -1,0 +1,242 @@
+{
+  "build": "r43h57805ef_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-proxy-0.4_27-r43h57805ef_2",
+  "files": [
+    "lib/R/library/proxy/DESCRIPTION",
+    "lib/R/library/proxy/INDEX",
+    "lib/R/library/proxy/Meta/Rd.rds",
+    "lib/R/library/proxy/Meta/features.rds",
+    "lib/R/library/proxy/Meta/hsearch.rds",
+    "lib/R/library/proxy/Meta/links.rds",
+    "lib/R/library/proxy/Meta/nsInfo.rds",
+    "lib/R/library/proxy/Meta/package.rds",
+    "lib/R/library/proxy/Meta/vignette.rds",
+    "lib/R/library/proxy/NAMESPACE",
+    "lib/R/library/proxy/NEWS.Rd",
+    "lib/R/library/proxy/R/proxy",
+    "lib/R/library/proxy/R/proxy.rdb",
+    "lib/R/library/proxy/R/proxy.rdx",
+    "lib/R/library/proxy/doc/index.html",
+    "lib/R/library/proxy/doc/overview.R",
+    "lib/R/library/proxy/doc/overview.Rnw",
+    "lib/R/library/proxy/doc/overview.pdf",
+    "lib/R/library/proxy/help/AnIndex",
+    "lib/R/library/proxy/help/aliases.rds",
+    "lib/R/library/proxy/help/paths.rds",
+    "lib/R/library/proxy/help/proxy.rdb",
+    "lib/R/library/proxy/help/proxy.rdx",
+    "lib/R/library/proxy/html/00Index.html",
+    "lib/R/library/proxy/html/R.css",
+    "lib/R/library/proxy/libs/proxy.so"
+  ],
+  "fn": "r-proxy-0.4_27-r43h57805ef_2.conda",
+  "license": "GPL-2.0-only",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-proxy-0.4_27-r43h57805ef_2",
+    "type": 1
+  },
+  "md5": "742133e20563c7321e9d0cbd7e7102c7",
+  "name": "r-proxy",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-proxy-0.4_27-r43h57805ef_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/proxy/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "375f3e743b8492cb864ce6e7f480d513c7b60efe88dc882fc33c44bb9f45b98f",
+        "sha256_in_prefix": "375f3e743b8492cb864ce6e7f480d513c7b60efe88dc882fc33c44bb9f45b98f",
+        "size_in_bytes": 906
+      },
+      {
+        "_path": "lib/R/library/proxy/INDEX",
+        "path_type": "hardlink",
+        "sha256": "cf26be79530a00e998ebd0e0d2dbbcadcbb0bbc3eff21f8c01ba1ecbb59e5419",
+        "sha256_in_prefix": "cf26be79530a00e998ebd0e0d2dbbcadcbb0bbc3eff21f8c01ba1ecbb59e5419",
+        "size_in_bytes": 179
+      },
+      {
+        "_path": "lib/R/library/proxy/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "44af7203a16dd45cc776553205c15992ba4487cf85e6200402a6d9364272555d",
+        "sha256_in_prefix": "44af7203a16dd45cc776553205c15992ba4487cf85e6200402a6d9364272555d",
+        "size_in_bytes": 438
+      },
+      {
+        "_path": "lib/R/library/proxy/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/proxy/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "24b993a0f11dbfd835fb0752eb72370f47375488ebfc9a7d124e0552f0e17d03",
+        "sha256_in_prefix": "24b993a0f11dbfd835fb0752eb72370f47375488ebfc9a7d124e0552f0e17d03",
+        "size_in_bytes": 496
+      },
+      {
+        "_path": "lib/R/library/proxy/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "77a33f15d549f679e68fe0cdb147b4378a85fba9d58f34f25bd8b15dce77d86b",
+        "sha256_in_prefix": "77a33f15d549f679e68fe0cdb147b4378a85fba9d58f34f25bd8b15dce77d86b",
+        "size_in_bytes": 261
+      },
+      {
+        "_path": "lib/R/library/proxy/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "57632bb2dea57b239cfaaaac7baf9366983a3b6ded1711c855e1f136ebae8ad2",
+        "sha256_in_prefix": "57632bb2dea57b239cfaaaac7baf9366983a3b6ded1711c855e1f136ebae8ad2",
+        "size_in_bytes": 526
+      },
+      {
+        "_path": "lib/R/library/proxy/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "8a37abfcac620458ef4c90418b2b799bd7580a724b12284e28a13f44742cb06e",
+        "sha256_in_prefix": "8a37abfcac620458ef4c90418b2b799bd7580a724b12284e28a13f44742cb06e",
+        "size_in_bytes": 951
+      },
+      {
+        "_path": "lib/R/library/proxy/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "71dc9f05bd584f3134c85678fc6a382fbf309b65642ab547a173996518a9f853",
+        "sha256_in_prefix": "71dc9f05bd584f3134c85678fc6a382fbf309b65642ab547a173996518a9f853",
+        "size_in_bytes": 258
+      },
+      {
+        "_path": "lib/R/library/proxy/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "091d55f5f64c38352ee2a1f344e0e7320ebff9e4201a302b81f38e6e065d3990",
+        "sha256_in_prefix": "091d55f5f64c38352ee2a1f344e0e7320ebff9e4201a302b81f38e6e065d3990",
+        "size_in_bytes": 1000
+      },
+      {
+        "_path": "lib/R/library/proxy/NEWS.Rd",
+        "path_type": "hardlink",
+        "sha256": "7bcb7a009a3cffe531122206aafd5499d4822731e91032c86062707a69cde3ae",
+        "sha256_in_prefix": "7bcb7a009a3cffe531122206aafd5499d4822731e91032c86062707a69cde3ae",
+        "size_in_bytes": 4285
+      },
+      {
+        "_path": "lib/R/library/proxy/R/proxy",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/proxy/R/proxy.rdb",
+        "path_type": "hardlink",
+        "sha256": "ed140b992ef06ce73457bb5f13787b2996b30075270651e58e42f47ed05c7867",
+        "sha256_in_prefix": "ed140b992ef06ce73457bb5f13787b2996b30075270651e58e42f47ed05c7867",
+        "size_in_bytes": 96710
+      },
+      {
+        "_path": "lib/R/library/proxy/R/proxy.rdx",
+        "path_type": "hardlink",
+        "sha256": "e5e06f466dbb92ebc4b9552a852ab73673e92cbf5f27dacd08a89e1e133038db",
+        "sha256_in_prefix": "e5e06f466dbb92ebc4b9552a852ab73673e92cbf5f27dacd08a89e1e133038db",
+        "size_in_bytes": 1784
+      },
+      {
+        "_path": "lib/R/library/proxy/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "10e5b5009b1c318af05f6be84fa53f2e0901b9dbd2909bc4b30acfbe897d4df7",
+        "sha256_in_prefix": "10e5b5009b1c318af05f6be84fa53f2e0901b9dbd2909bc4b30acfbe897d4df7",
+        "size_in_bytes": 1402
+      },
+      {
+        "_path": "lib/R/library/proxy/doc/overview.R",
+        "path_type": "hardlink",
+        "sha256": "13fa8b3e3f8788f6fccab4059026a47075cd46ff7ae6016e047d4f16aca7773e",
+        "sha256_in_prefix": "13fa8b3e3f8788f6fccab4059026a47075cd46ff7ae6016e047d4f16aca7773e",
+        "size_in_bytes": 842
+      },
+      {
+        "_path": "lib/R/library/proxy/doc/overview.Rnw",
+        "path_type": "hardlink",
+        "sha256": "08d74eecc45d4e3a508fc6be272e44a082426c1e951bf551c6637461a9ccdc53",
+        "sha256_in_prefix": "08d74eecc45d4e3a508fc6be272e44a082426c1e951bf551c6637461a9ccdc53",
+        "size_in_bytes": 815
+      },
+      {
+        "_path": "lib/R/library/proxy/doc/overview.pdf",
+        "path_type": "hardlink",
+        "sha256": "0feca296d6bb306f6b1c769dd680d32e87ba2ea49ce8c2c4ee241f17f5e9672b",
+        "sha256_in_prefix": "0feca296d6bb306f6b1c769dd680d32e87ba2ea49ce8c2c4ee241f17f5e9672b",
+        "size_in_bytes": 41049
+      },
+      {
+        "_path": "lib/R/library/proxy/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "f79ceb7ce4927c563ccb2fc0e5192aeeccd9c2c4a2593e4f76fe213a1ecc97dc",
+        "sha256_in_prefix": "f79ceb7ce4927c563ccb2fc0e5192aeeccd9c2c4a2593e4f76fe213a1ecc97dc",
+        "size_in_bytes": 408
+      },
+      {
+        "_path": "lib/R/library/proxy/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "523c035b3172d5ebadf86549eb3fe133750736553e7784a311afdaf91fdbc653",
+        "sha256_in_prefix": "523c035b3172d5ebadf86549eb3fe133750736553e7784a311afdaf91fdbc653",
+        "size_in_bytes": 233
+      },
+      {
+        "_path": "lib/R/library/proxy/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "856cbdbb231ecae27dfff7cb6d8b5dc343439d2eec728075b0b8b3e7d885fa95",
+        "sha256_in_prefix": "856cbdbb231ecae27dfff7cb6d8b5dc343439d2eec728075b0b8b3e7d885fa95",
+        "size_in_bytes": 184
+      },
+      {
+        "_path": "lib/R/library/proxy/help/proxy.rdb",
+        "path_type": "hardlink",
+        "sha256": "9a268e9f48fafca676aa2475ed08a2b7eeea588be4947fa2261587ca5dc9a822",
+        "sha256_in_prefix": "9a268e9f48fafca676aa2475ed08a2b7eeea588be4947fa2261587ca5dc9a822",
+        "size_in_bytes": 21660
+      },
+      {
+        "_path": "lib/R/library/proxy/help/proxy.rdx",
+        "path_type": "hardlink",
+        "sha256": "da4ecb83ca126c6bccae85d6f5fb7ad8a9bce8b799a2377dac5f1d5238b8d085",
+        "sha256_in_prefix": "da4ecb83ca126c6bccae85d6f5fb7ad8a9bce8b799a2377dac5f1d5238b8d085",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "lib/R/library/proxy/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "267833527597a10fd98d71a7246f65c38c254bf453b39175ceb283df6a470d69",
+        "sha256_in_prefix": "267833527597a10fd98d71a7246f65c38c254bf453b39175ceb283df6a470d69",
+        "size_in_bytes": 3771
+      },
+      {
+        "_path": "lib/R/library/proxy/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/proxy/libs/proxy.so",
+        "path_type": "hardlink",
+        "sha256": "a0becb7e9d2c7e5940d03d23f3e1dc7e7676733ff39a53c249f29e90b8075e35",
+        "sha256_in_prefix": "a0becb7e9d2c7e5940d03d23f3e1dc7e7676733ff39a53c249f29e90b8075e35",
+        "size_in_bytes": 52112
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "6d0cb1fcf7f5ea1741a9144df0f481be1d221a15b215e57b13b83ebf6aeeecee",
+  "size": 184784,
+  "subdir": "linux-64",
+  "timestamp": 1686753613000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-proxy-0.4_27-r43h57805ef_2.conda",
+  "version": "0.4_27"
+}

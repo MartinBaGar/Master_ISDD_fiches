@@ -1,0 +1,422 @@
+{
+  "build": "r43h57805ef_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "r-base >=4.3,<4.4.0a0",
+    "r-car",
+    "r-cluster",
+    "r-dt",
+    "r-ellipse",
+    "r-emmeans",
+    "r-flashclust",
+    "r-ggplot2",
+    "r-ggrepel",
+    "r-lattice",
+    "r-leaps",
+    "r-mass",
+    "r-multcompview",
+    "r-scatterplot3d"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-factominer-2.9-r43h57805ef_0",
+  "files": [
+    "lib/R/library/FactoMineR/CITATION",
+    "lib/R/library/FactoMineR/DESCRIPTION",
+    "lib/R/library/FactoMineR/INDEX",
+    "lib/R/library/FactoMineR/Meta/Rd.rds",
+    "lib/R/library/FactoMineR/Meta/data.rds",
+    "lib/R/library/FactoMineR/Meta/features.rds",
+    "lib/R/library/FactoMineR/Meta/hsearch.rds",
+    "lib/R/library/FactoMineR/Meta/links.rds",
+    "lib/R/library/FactoMineR/Meta/nsInfo.rds",
+    "lib/R/library/FactoMineR/Meta/package.rds",
+    "lib/R/library/FactoMineR/Meta/vignette.rds",
+    "lib/R/library/FactoMineR/NAMESPACE",
+    "lib/R/library/FactoMineR/NEWS",
+    "lib/R/library/FactoMineR/R/FactoMineR",
+    "lib/R/library/FactoMineR/R/FactoMineR.rdb",
+    "lib/R/library/FactoMineR/R/FactoMineR.rdx",
+    "lib/R/library/FactoMineR/data/JO.rda",
+    "lib/R/library/FactoMineR/data/children.rda",
+    "lib/R/library/FactoMineR/data/datalist",
+    "lib/R/library/FactoMineR/data/decathlon.rda",
+    "lib/R/library/FactoMineR/data/footsize.rda",
+    "lib/R/library/FactoMineR/data/geomorphology.rda",
+    "lib/R/library/FactoMineR/data/health.rda",
+    "lib/R/library/FactoMineR/data/hobbies.rda",
+    "lib/R/library/FactoMineR/data/milk.rda",
+    "lib/R/library/FactoMineR/data/mortality.rda",
+    "lib/R/library/FactoMineR/data/poison.rda",
+    "lib/R/library/FactoMineR/data/poison.text.rda",
+    "lib/R/library/FactoMineR/data/poulet.rda",
+    "lib/R/library/FactoMineR/data/senso.rda",
+    "lib/R/library/FactoMineR/data/tea.rda",
+    "lib/R/library/FactoMineR/data/wine.rda",
+    "lib/R/library/FactoMineR/doc/FactoMineR.Rmd",
+    "lib/R/library/FactoMineR/doc/FactoMineR.pdf",
+    "lib/R/library/FactoMineR/doc/clustering.Rmd",
+    "lib/R/library/FactoMineR/doc/clustering.html",
+    "lib/R/library/FactoMineR/doc/index.html",
+    "lib/R/library/FactoMineR/help/AnIndex",
+    "lib/R/library/FactoMineR/help/FactoMineR.rdb",
+    "lib/R/library/FactoMineR/help/FactoMineR.rdx",
+    "lib/R/library/FactoMineR/help/aliases.rds",
+    "lib/R/library/FactoMineR/help/paths.rds",
+    "lib/R/library/FactoMineR/html/00Index.html",
+    "lib/R/library/FactoMineR/html/R.css",
+    "lib/R/library/FactoMineR/libs/FactoMineR.so",
+    "share/gdb/auto-load/home/conda/feedstock_root/build_artifacts/r-factominer_1697177924316/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/__pycache__/libarrow.so.1300.0.0-gdb.cpython-312.pyc",
+    "share/gdb/auto-load/home/conda/feedstock_root/build_artifacts/r-factominer_1697177924316/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/libarrow.so.1300.0.0-gdb.py"
+  ],
+  "fn": "r-factominer-2.9-r43h57805ef_0.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-factominer-2.9-r43h57805ef_0",
+    "type": 1
+  },
+  "md5": "f978a1a05983d02c750ccad817eaaa0d",
+  "name": "r-factominer",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-factominer-2.9-r43h57805ef_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/FactoMineR/CITATION",
+        "path_type": "hardlink",
+        "sha256": "e2ca8b05941a226c1a1ff6074d9f3a98d8da37b4218e319f6063e4df2ea38e6f",
+        "sha256_in_prefix": "e2ca8b05941a226c1a1ff6074d9f3a98d8da37b4218e319f6063e4df2ea38e6f",
+        "size_in_bytes": 934
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "0ad998dbe97c635882527bfa06e2167d8f21f0c5fb9c0ee09e445ce8accd5e97",
+        "sha256_in_prefix": "0ad998dbe97c635882527bfa06e2167d8f21f0c5fb9c0ee09e445ce8accd5e97",
+        "size_in_bytes": 1292
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/INDEX",
+        "path_type": "hardlink",
+        "sha256": "f408bd003b4d083e5ae46f7d8912f7fca9e98aef02f42f038000c32ba30d1300",
+        "sha256_in_prefix": "f408bd003b4d083e5ae46f7d8912f7fca9e98aef02f42f038000c32ba30d1300",
+        "size_in_bytes": 6718
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "3aa77c7c0c0bfa1fc467f90750361a723ad0d94a5efc6463c0d51d9880e29945",
+        "sha256_in_prefix": "3aa77c7c0c0bfa1fc467f90750361a723ad0d94a5efc6463c0d51d9880e29945",
+        "size_in_bytes": 2919
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "fd72443b0b95bef6346a3c633b44dd4eeffc5417b211e1219a9e3c5ae762ac9a",
+        "sha256_in_prefix": "fd72443b0b95bef6346a3c633b44dd4eeffc5417b211e1219a9e3c5ae762ac9a",
+        "size_in_bytes": 355
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "c99a0db0ec0e78ec28ae3b9dc56ffd91d9e3eea14000f50ce16a9174b177d3d8",
+        "sha256_in_prefix": "c99a0db0ec0e78ec28ae3b9dc56ffd91d9e3eea14000f50ce16a9174b177d3d8",
+        "size_in_bytes": 2511
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "71286d3aa94d12705ef3b022d55fd43fc54161180687bafc4ca03d0a1751ea00",
+        "sha256_in_prefix": "71286d3aa94d12705ef3b022d55fd43fc54161180687bafc4ca03d0a1751ea00",
+        "size_in_bytes": 1086
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "31cf0ed53302aa76dea09a6c8577842a5aceeeab9fe5f1e1408fe4584dba9cb3",
+        "sha256_in_prefix": "31cf0ed53302aa76dea09a6c8577842a5aceeeab9fe5f1e1408fe4584dba9cb3",
+        "size_in_bytes": 1564
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "cae7a5ce6b6fe8c18793b5bbda842673b92f49d775cba743f8ca3e709ae4faa4",
+        "sha256_in_prefix": "cae7a5ce6b6fe8c18793b5bbda842673b92f49d775cba743f8ca3e709ae4faa4",
+        "size_in_bytes": 1313
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "894652f00a0e5ee5a33b0f7af2af33af4461ed16809f158c5faf71fb99a69c70",
+        "sha256_in_prefix": "894652f00a0e5ee5a33b0f7af2af33af4461ed16809f158c5faf71fb99a69c70",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "d53a0227853fd5e3e45f33eb8cb0005fbdd670d05130d4438b5f2a0d36ff6e6f",
+        "sha256_in_prefix": "d53a0227853fd5e3e45f33eb8cb0005fbdd670d05130d4438b5f2a0d36ff6e6f",
+        "size_in_bytes": 2978
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/NEWS",
+        "path_type": "hardlink",
+        "sha256": "e8c42286b6921c7fdd33357e5fda1dc687aa7d06732b20c768f9e08511126a2a",
+        "sha256_in_prefix": "e8c42286b6921c7fdd33357e5fda1dc687aa7d06732b20c768f9e08511126a2a",
+        "size_in_bytes": 674
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/R/FactoMineR",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/R/FactoMineR.rdb",
+        "path_type": "hardlink",
+        "sha256": "2c62d73b79a32a7e9b67d5864d9d0aa0b713ece7c671163d308d0b0dee8113fe",
+        "sha256_in_prefix": "2c62d73b79a32a7e9b67d5864d9d0aa0b713ece7c671163d308d0b0dee8113fe",
+        "size_in_bytes": 900861
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/R/FactoMineR.rdx",
+        "path_type": "hardlink",
+        "sha256": "27bbbf299f92f960786c8af457bfa28f596be1c9346c864eec4bf2a690a9b04e",
+        "sha256_in_prefix": "27bbbf299f92f960786c8af457bfa28f596be1c9346c864eec4bf2a690a9b04e",
+        "size_in_bytes": 1274
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/JO.rda",
+        "path_type": "hardlink",
+        "sha256": "e926044e35e51995048ec5208ac1a63fa2a08937a6b958411978e529c5de67e5",
+        "sha256_in_prefix": "e926044e35e51995048ec5208ac1a63fa2a08937a6b958411978e529c5de67e5",
+        "size_in_bytes": 872
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/children.rda",
+        "path_type": "hardlink",
+        "sha256": "45f0ce1dff9e0d9b22d01271127881c31b8d381d2094bc499af39a76d9455123",
+        "sha256_in_prefix": "45f0ce1dff9e0d9b22d01271127881c31b8d381d2094bc499af39a76d9455123",
+        "size_in_bytes": 526
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/datalist",
+        "path_type": "hardlink",
+        "sha256": "edcf82dad6987804cd707be7b29152ac9217ce8873014736b4cbfc172a3c3ee0",
+        "sha256_in_prefix": "edcf82dad6987804cd707be7b29152ac9217ce8873014736b4cbfc172a3c3ee0",
+        "size_in_bytes": 131
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/decathlon.rda",
+        "path_type": "hardlink",
+        "sha256": "7f901b4f05756898e300002f4557a9592ef4d729204c33a487d6a58ac430396c",
+        "sha256_in_prefix": "7f901b4f05756898e300002f4557a9592ef4d729204c33a487d6a58ac430396c",
+        "size_in_bytes": 2030
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/footsize.rda",
+        "path_type": "hardlink",
+        "sha256": "c45abe9105bccd091bd666b614f100688a78f5976d2b6d39b64d29a73bbf2ab7",
+        "sha256_in_prefix": "c45abe9105bccd091bd666b614f100688a78f5976d2b6d39b64d29a73bbf2ab7",
+        "size_in_bytes": 454
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/geomorphology.rda",
+        "path_type": "hardlink",
+        "sha256": "4c198ea9bc73ed2044973d550a592990b4b30094417c76783954d9ed1975644e",
+        "sha256_in_prefix": "4c198ea9bc73ed2044973d550a592990b4b30094417c76783954d9ed1975644e",
+        "size_in_bytes": 4891
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/health.rda",
+        "path_type": "hardlink",
+        "sha256": "963af7407371279374a9408e49f2c5d385791aec01b149a021bc7c9a4a3b5b5e",
+        "sha256_in_prefix": "963af7407371279374a9408e49f2c5d385791aec01b149a021bc7c9a4a3b5b5e",
+        "size_in_bytes": 10330
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/hobbies.rda",
+        "path_type": "hardlink",
+        "sha256": "6ed2579e237a8252482f473611c4b174a76caa6f0369caaa8871c4168d3a808e",
+        "sha256_in_prefix": "6ed2579e237a8252482f473611c4b174a76caa6f0369caaa8871c4168d3a808e",
+        "size_in_bytes": 80914
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/milk.rda",
+        "path_type": "hardlink",
+        "sha256": "3c8f49111347196ee1a86957617c4cf8f005cc2e4d638497441f3ee4494d5563",
+        "sha256_in_prefix": "3c8f49111347196ee1a86957617c4cf8f005cc2e4d638497441f3ee4494d5563",
+        "size_in_bytes": 1317
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/mortality.rda",
+        "path_type": "hardlink",
+        "sha256": "26151236798d0d3cd983e879a021ea8d89cd6019763bcdf507e32f1f097c9e47",
+        "sha256_in_prefix": "26151236798d0d3cd983e879a021ea8d89cd6019763bcdf507e32f1f097c9e47",
+        "size_in_bytes": 3582
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/poison.rda",
+        "path_type": "hardlink",
+        "sha256": "0e487dfa6044d9f80aae8a297bea18dd015ed6555cd0c08d0a72144cdca19e34",
+        "sha256_in_prefix": "0e487dfa6044d9f80aae8a297bea18dd015ed6555cd0c08d0a72144cdca19e34",
+        "size_in_bytes": 838
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/poison.text.rda",
+        "path_type": "hardlink",
+        "sha256": "766043b417337541d46142fd4fe842d904d0b40b218806b2e0beebbd0692ebda",
+        "sha256_in_prefix": "766043b417337541d46142fd4fe842d904d0b40b218806b2e0beebbd0692ebda",
+        "size_in_bytes": 859
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/poulet.rda",
+        "path_type": "hardlink",
+        "sha256": "6630904522431ab275036918362eb5ffab39a9a553996d4fa45243dc596a557c",
+        "sha256_in_prefix": "6630904522431ab275036918362eb5ffab39a9a553996d4fa45243dc596a557c",
+        "size_in_bytes": 2476358
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/senso.rda",
+        "path_type": "hardlink",
+        "sha256": "3ff29f9abf33861d7c5a245e438ff7fa64d89ec672000df5ff9c9b6846f6bda2",
+        "sha256_in_prefix": "3ff29f9abf33861d7c5a245e438ff7fa64d89ec672000df5ff9c9b6846f6bda2",
+        "size_in_bytes": 317
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/tea.rda",
+        "path_type": "hardlink",
+        "sha256": "ee96a05bae3cbf319669d0212b8159cbd9f0b5d729bf1aa5f46ba704c2d5fbcd",
+        "sha256_in_prefix": "ee96a05bae3cbf319669d0212b8159cbd9f0b5d729bf1aa5f46ba704c2d5fbcd",
+        "size_in_bytes": 4693
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/data/wine.rda",
+        "path_type": "hardlink",
+        "sha256": "694785cd476af94a61f4fc1c0dcbfd853d462f81f0b5b345c748ec61824951ab",
+        "sha256_in_prefix": "694785cd476af94a61f4fc1c0dcbfd853d462f81f0b5b345c748ec61824951ab",
+        "size_in_bytes": 2252
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/doc/FactoMineR.Rmd",
+        "path_type": "hardlink",
+        "sha256": "5be461e13c058d687a94eff41e8d9878a0f1485bd36a44527e56621657d9442c",
+        "sha256_in_prefix": "5be461e13c058d687a94eff41e8d9878a0f1485bd36a44527e56621657d9442c",
+        "size_in_bytes": 1781
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/doc/FactoMineR.pdf",
+        "path_type": "hardlink",
+        "sha256": "e59a152cc6672a33d9977578a587af39abc466ef0d4f11b8b182b49983888514",
+        "sha256_in_prefix": "e59a152cc6672a33d9977578a587af39abc466ef0d4f11b8b182b49983888514",
+        "size_in_bytes": 59521
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/doc/clustering.Rmd",
+        "path_type": "hardlink",
+        "sha256": "c627262d7d850d8c594d2471663948fdb9061a79affb81e43d9b208546351467",
+        "sha256_in_prefix": "c627262d7d850d8c594d2471663948fdb9061a79affb81e43d9b208546351467",
+        "size_in_bytes": 443
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/doc/clustering.html",
+        "path_type": "hardlink",
+        "sha256": "1085fb1c9dc6380c0fde3982c82b80051ce91014eddc79e4d1e798189094fc80",
+        "sha256_in_prefix": "1085fb1c9dc6380c0fde3982c82b80051ce91014eddc79e4d1e798189094fc80",
+        "size_in_bytes": 3061
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "56f7302e7360db350a2d0238638ad48aec11458ba2329262c00f563d2ba13e15",
+        "sha256_in_prefix": "56f7302e7360db350a2d0238638ad48aec11458ba2329262c00f563d2ba13e15",
+        "size_in_bytes": 1821
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "f8c2dc93d17da574880911019c1d0e2e52167338cd7de052aee8534a4d9e4324",
+        "sha256_in_prefix": "f8c2dc93d17da574880911019c1d0e2e52167338cd7de052aee8534a4d9e4324",
+        "size_in_bytes": 1777
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/help/FactoMineR.rdb",
+        "path_type": "hardlink",
+        "sha256": "f141bc290617261cc23c04e9be125ce7ce89b13b5e353c49be7ef345181b4628",
+        "sha256_in_prefix": "f141bc290617261cc23c04e9be125ce7ce89b13b5e353c49be7ef345181b4628",
+        "size_in_bytes": 221998
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/help/FactoMineR.rdx",
+        "path_type": "hardlink",
+        "sha256": "6f29cc0997fe8c78c6eb8d2f5e821b6839e229482c72b35f66e8633b847d2483",
+        "sha256_in_prefix": "6f29cc0997fe8c78c6eb8d2f5e821b6839e229482c72b35f66e8633b847d2483",
+        "size_in_bytes": 1897
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "624a0555dae3a1160f1146e7fff30e067f19e9ba08f14c62109b6329e1f56614",
+        "sha256_in_prefix": "624a0555dae3a1160f1146e7fff30e067f19e9ba08f14c62109b6329e1f56614",
+        "size_in_bytes": 633
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "5e19dba8dc0cb6933dceb5f2ade4e1c9327f657737a47a6ebff00deb6cdd022c",
+        "sha256_in_prefix": "5e19dba8dc0cb6933dceb5f2ade4e1c9327f657737a47a6ebff00deb6cdd022c",
+        "size_in_bytes": 787
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "5f372839181df091fdb96d57fde2d93897f5396e6b35ddc2052a4320febdb84f",
+        "sha256_in_prefix": "5f372839181df091fdb96d57fde2d93897f5396e6b35ddc2052a4320febdb84f",
+        "size_in_bytes": 12579
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/FactoMineR/libs/FactoMineR.so",
+        "path_type": "hardlink",
+        "sha256": "b001bae16e1c3f60da8fdec7c6e64702030bc238e5c355dd6d0f5b2b4145b27a",
+        "sha256_in_prefix": "b001bae16e1c3f60da8fdec7c6e64702030bc238e5c355dd6d0f5b2b4145b27a",
+        "size_in_bytes": 15992
+      },
+      {
+        "_path": "share/gdb/auto-load/home/conda/feedstock_root/build_artifacts/r-factominer_1697177924316/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/__pycache__/libarrow.so.1300.0.0-gdb.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "b5b317c57e7677fae5c07e1bfb78ed19a394d7323810673622bc02907ae58c7c",
+        "sha256_in_prefix": "b5b317c57e7677fae5c07e1bfb78ed19a394d7323810673622bc02907ae58c7c",
+        "size_in_bytes": 922
+      },
+      {
+        "_path": "share/gdb/auto-load/home/conda/feedstock_root/build_artifacts/r-factominer_1697177924316/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/libarrow.so.1300.0.0-gdb.py",
+        "path_type": "softlink",
+        "sha256": "d67bd7aab8f3433b922b0d014b8d7a889eed677c3e1b03c66dd148f93fe906b8",
+        "size_in_bytes": 1198
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "conda-forge::r-factominer",
+  "sha256": "d31c435f469f863941f5f2160d8ba1796f6cf9071f325f4ab58aa0dadf7f0c24",
+  "size": 3808975,
+  "subdir": "linux-64",
+  "timestamp": 1697178228000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-factominer-2.9-r43h57805ef_0.conda",
+  "version": "2.9"
+}

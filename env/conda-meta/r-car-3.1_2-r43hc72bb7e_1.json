@@ -1,0 +1,262 @@
+{
+  "build": "r43hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-abind",
+    "r-base >=4.3,<4.4.0a0",
+    "r-cardata >=3.0_0",
+    "r-lme4",
+    "r-maptools",
+    "r-mass",
+    "r-mgcv",
+    "r-nlme",
+    "r-nnet",
+    "r-pbkrtest >=0.4_4",
+    "r-quantreg",
+    "r-rio"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-car-3.1_2-r43hc72bb7e_1",
+  "files": [
+    "lib/R/library/car/CITATION",
+    "lib/R/library/car/DESCRIPTION",
+    "lib/R/library/car/INDEX",
+    "lib/R/library/car/Meta/Rd.rds",
+    "lib/R/library/car/Meta/features.rds",
+    "lib/R/library/car/Meta/hsearch.rds",
+    "lib/R/library/car/Meta/links.rds",
+    "lib/R/library/car/Meta/nsInfo.rds",
+    "lib/R/library/car/Meta/package.rds",
+    "lib/R/library/car/Meta/vignette.rds",
+    "lib/R/library/car/NAMESPACE",
+    "lib/R/library/car/NEWS",
+    "lib/R/library/car/R/car",
+    "lib/R/library/car/R/car.rdb",
+    "lib/R/library/car/R/car.rdx",
+    "lib/R/library/car/doc/embedding.R",
+    "lib/R/library/car/doc/embedding.Rnw",
+    "lib/R/library/car/doc/embedding.pdf",
+    "lib/R/library/car/doc/index.html",
+    "lib/R/library/car/help/AnIndex",
+    "lib/R/library/car/help/aliases.rds",
+    "lib/R/library/car/help/car.rdb",
+    "lib/R/library/car/help/car.rdx",
+    "lib/R/library/car/help/paths.rds",
+    "lib/R/library/car/html/00Index.html",
+    "lib/R/library/car/html/R.css",
+    "lib/R/library/car/misc/car-hex.pdf"
+  ],
+  "fn": "r-car-3.1_2-r43hc72bb7e_1.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-car-3.1_2-r43hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "98dcccc0d7ca479d0d491411da529644",
+  "name": "r-car",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-car-3.1_2-r43hc72bb7e_1.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/car/CITATION",
+        "path_type": "hardlink",
+        "sha256": "ddae2d67db246ccf661c7350a3ca9c5c64822367dc8f5f5e3ac14c96cf280086",
+        "sha256_in_prefix": "ddae2d67db246ccf661c7350a3ca9c5c64822367dc8f5f5e3ac14c96cf280086",
+        "size_in_bytes": 411
+      },
+      {
+        "_path": "lib/R/library/car/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "bee72eb382d14f832610818e638c4a9426bcf0687a2e2aa82117f18304c70e60",
+        "sha256_in_prefix": "bee72eb382d14f832610818e638c4a9426bcf0687a2e2aa82117f18304c70e60",
+        "size_in_bytes": 3109
+      },
+      {
+        "_path": "lib/R/library/car/INDEX",
+        "path_type": "hardlink",
+        "sha256": "eadcd48bb953aad232d139d55fd8ad80678ba39191496fae45a9e3ac34f19f06",
+        "sha256_in_prefix": "eadcd48bb953aad232d139d55fd8ad80678ba39191496fae45a9e3ac34f19f06",
+        "size_in_bytes": 5227
+      },
+      {
+        "_path": "lib/R/library/car/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "29f4f4a70ceab9cbcbe1fafb0d00cab54c4f25c4154a90dab6f4d348e7854b82",
+        "sha256_in_prefix": "29f4f4a70ceab9cbcbe1fafb0d00cab54c4f25c4154a90dab6f4d348e7854b82",
+        "size_in_bytes": 4596
+      },
+      {
+        "_path": "lib/R/library/car/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/car/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "f0d19ae3e5f5fcdf21053327c94dd8d5b6f4daa648707916bb586e559667fb1a",
+        "sha256_in_prefix": "f0d19ae3e5f5fcdf21053327c94dd8d5b6f4daa648707916bb586e559667fb1a",
+        "size_in_bytes": 4655
+      },
+      {
+        "_path": "lib/R/library/car/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "6d693683aacae6fc674aa6e287a08d738023ae1b5d9d53c3279290b3e7bdc1a2",
+        "sha256_in_prefix": "6d693683aacae6fc674aa6e287a08d738023ae1b5d9d53c3279290b3e7bdc1a2",
+        "size_in_bytes": 2775
+      },
+      {
+        "_path": "lib/R/library/car/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "afca147726b0713f1d6ea22a83ccbe84edda73fbae377e8841e06f76ab2035d4",
+        "sha256_in_prefix": "afca147726b0713f1d6ea22a83ccbe84edda73fbae377e8841e06f76ab2035d4",
+        "size_in_bytes": 2778
+      },
+      {
+        "_path": "lib/R/library/car/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "9728d6fe3e1515da789a5c2593ac181149c948d786f11b8094cc0d86a38f8de2",
+        "sha256_in_prefix": "9728d6fe3e1515da789a5c2593ac181149c948d786f11b8094cc0d86a38f8de2",
+        "size_in_bytes": 1943
+      },
+      {
+        "_path": "lib/R/library/car/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "d7c47f06250336630aaa09d1f7151bfcfdc2acdf313898b256093cdd5b80507d",
+        "sha256_in_prefix": "d7c47f06250336630aaa09d1f7151bfcfdc2acdf313898b256093cdd5b80507d",
+        "size_in_bytes": 218
+      },
+      {
+        "_path": "lib/R/library/car/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "011b33e087432d5acbb4acc5548b38480154e3092e5b88a619d523b4c9269331",
+        "sha256_in_prefix": "011b33e087432d5acbb4acc5548b38480154e3092e5b88a619d523b4c9269331",
+        "size_in_bytes": 10896
+      },
+      {
+        "_path": "lib/R/library/car/NEWS",
+        "path_type": "hardlink",
+        "sha256": "d8ebd01a7586a4ef83d84a4db9bd3eca09781722c4f9eb4d6944547431d43ae5",
+        "sha256_in_prefix": "d8ebd01a7586a4ef83d84a4db9bd3eca09781722c4f9eb4d6944547431d43ae5",
+        "size_in_bytes": 44220
+      },
+      {
+        "_path": "lib/R/library/car/R/car",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/car/R/car.rdb",
+        "path_type": "hardlink",
+        "sha256": "8217472277784b477747d7e79b9107a1b1983112a281fed8e217a91761273a9d",
+        "sha256_in_prefix": "8217472277784b477747d7e79b9107a1b1983112a281fed8e217a91761273a9d",
+        "size_in_bytes": 933146
+      },
+      {
+        "_path": "lib/R/library/car/R/car.rdx",
+        "path_type": "hardlink",
+        "sha256": "c0297b6eac2ead64a54cea976d37822c9fa39b4833f821564d34f40727e7c9a7",
+        "sha256_in_prefix": "c0297b6eac2ead64a54cea976d37822c9fa39b4833f821564d34f40727e7c9a7",
+        "size_in_bytes": 6300
+      },
+      {
+        "_path": "lib/R/library/car/doc/embedding.R",
+        "path_type": "hardlink",
+        "sha256": "2a58ab4f16473207e8c6a1c199c0a0cdd7b23b182005f728f8caa3fe04395db1",
+        "sha256_in_prefix": "2a58ab4f16473207e8c6a1c199c0a0cdd7b23b182005f728f8caa3fe04395db1",
+        "size_in_bytes": 2358
+      },
+      {
+        "_path": "lib/R/library/car/doc/embedding.Rnw",
+        "path_type": "hardlink",
+        "sha256": "7ca638b2179160ef3cc8ec511162f526fd0d657ce483df8b1fe594b714e986c0",
+        "sha256_in_prefix": "7ca638b2179160ef3cc8ec511162f526fd0d657ce483df8b1fe594b714e986c0",
+        "size_in_bytes": 5259
+      },
+      {
+        "_path": "lib/R/library/car/doc/embedding.pdf",
+        "path_type": "hardlink",
+        "sha256": "94228eff5b587fedf742e18e4a7962cad59dab5bbd4c7238b3c8b1830f9aad19",
+        "sha256_in_prefix": "94228eff5b587fedf742e18e4a7962cad59dab5bbd4c7238b3c8b1830f9aad19",
+        "size_in_bytes": 255932
+      },
+      {
+        "_path": "lib/R/library/car/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "6cf72559d351c8371f65c1465381cc911e9b385683038edfcaf81c02619f619f",
+        "sha256_in_prefix": "6cf72559d351c8371f65c1465381cc911e9b385683038edfcaf81c02619f619f",
+        "size_in_bytes": 1391
+      },
+      {
+        "_path": "lib/R/library/car/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "bfba9890883fddee4ce10f7faf0765e3421f7d4768430d4671890565ed25aa63",
+        "sha256_in_prefix": "bfba9890883fddee4ce10f7faf0765e3421f7d4768430d4671890565ed25aa63",
+        "size_in_bytes": 9154
+      },
+      {
+        "_path": "lib/R/library/car/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "71e809bfaf4c942518d34bafb119cba022d8c7928b03ca4bb5bbd95c3b9976b1",
+        "sha256_in_prefix": "71e809bfaf4c942518d34bafb119cba022d8c7928b03ca4bb5bbd95c3b9976b1",
+        "size_in_bytes": 2574
+      },
+      {
+        "_path": "lib/R/library/car/help/car.rdb",
+        "path_type": "hardlink",
+        "sha256": "37cbb28d58f77792cc1f9c926093135b0d8f276abf5279fc3b5069035042faac",
+        "sha256_in_prefix": "37cbb28d58f77792cc1f9c926093135b0d8f276abf5279fc3b5069035042faac",
+        "size_in_bytes": 424553
+      },
+      {
+        "_path": "lib/R/library/car/help/car.rdx",
+        "path_type": "hardlink",
+        "sha256": "98eda553b70955a5a044e8b65453a1a285450b077d7d5c89dd4d4b4b24dedb20",
+        "sha256_in_prefix": "98eda553b70955a5a044e8b65453a1a285450b077d7d5c89dd4d4b4b24dedb20",
+        "size_in_bytes": 1716
+      },
+      {
+        "_path": "lib/R/library/car/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "f396e9bf71f79a82f947668194c4d540275072ed961809bd7a7f95456631014f",
+        "sha256_in_prefix": "f396e9bf71f79a82f947668194c4d540275072ed961809bd7a7f95456631014f",
+        "size_in_bytes": 772
+      },
+      {
+        "_path": "lib/R/library/car/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "c477eaf41dbf5fe2c389930fd7ac7c147f50feb2513193913ca1a755111c491c",
+        "sha256_in_prefix": "c477eaf41dbf5fe2c389930fd7ac7c147f50feb2513193913ca1a755111c491c",
+        "size_in_bytes": 53139
+      },
+      {
+        "_path": "lib/R/library/car/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/car/misc/car-hex.pdf",
+        "path_type": "hardlink",
+        "sha256": "0c5e82eefda60d8008c6f160bf0b079608e70e6b16106c48d56b37aa456172fb",
+        "sha256_in_prefix": "0c5e82eefda60d8008c6f160bf0b079608e70e6b16106c48d56b37aa456172fb",
+        "size_in_bytes": 49790
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f455d038ead2afcc0a0491d8d2ff039b6b290d627d0954c3258e046a3655add0",
+  "size": 1708781,
+  "subdir": "noarch",
+  "timestamp": 1688120521000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-car-3.1_2-r43hc72bb7e_1.conda",
+  "version": "3.1_2"
+}

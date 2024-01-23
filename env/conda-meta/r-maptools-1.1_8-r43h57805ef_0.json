@@ -1,0 +1,589 @@
+{
+  "build": "r43h57805ef_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "r-base >=4.3,<4.4.0a0",
+    "r-foreign >=0.8",
+    "r-lattice",
+    "r-sp >=1.0_11"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-maptools-1.1_8-r43h57805ef_0",
+  "files": [
+    "lib/R/library/maptools/ChangeLog",
+    "lib/R/library/maptools/DESCRIPTION",
+    "lib/R/library/maptools/INDEX",
+    "lib/R/library/maptools/Meta/Rd.rds",
+    "lib/R/library/maptools/Meta/data.rds",
+    "lib/R/library/maptools/Meta/features.rds",
+    "lib/R/library/maptools/Meta/hsearch.rds",
+    "lib/R/library/maptools/Meta/links.rds",
+    "lib/R/library/maptools/Meta/nsInfo.rds",
+    "lib/R/library/maptools/Meta/package.rds",
+    "lib/R/library/maptools/Meta/vignette.rds",
+    "lib/R/library/maptools/NAMESPACE",
+    "lib/R/library/maptools/NEWS.md",
+    "lib/R/library/maptools/R/maptools",
+    "lib/R/library/maptools/R/maptools.rdb",
+    "lib/R/library/maptools/R/maptools.rdx",
+    "lib/R/library/maptools/README",
+    "lib/R/library/maptools/changes",
+    "lib/R/library/maptools/data/SplashDams.rda",
+    "lib/R/library/maptools/data/datalist",
+    "lib/R/library/maptools/data/state.vbm.rda",
+    "lib/R/library/maptools/data/wrld_simpl.rda",
+    "lib/R/library/maptools/doc/combine_maptools.R",
+    "lib/R/library/maptools/doc/combine_maptools.Rnw",
+    "lib/R/library/maptools/doc/combine_maptools.pdf",
+    "lib/R/library/maptools/doc/index.html",
+    "lib/R/library/maptools/grids/simple.ag",
+    "lib/R/library/maptools/grids/test.ag",
+    "lib/R/library/maptools/help/AnIndex",
+    "lib/R/library/maptools/help/aliases.rds",
+    "lib/R/library/maptools/help/maptools.rdb",
+    "lib/R/library/maptools/help/maptools.rdx",
+    "lib/R/library/maptools/help/paths.rds",
+    "lib/R/library/maptools/html/00Index.html",
+    "lib/R/library/maptools/html/R.css",
+    "lib/R/library/maptools/libs/maptools.so",
+    "lib/R/library/maptools/shapes/Testing.kml",
+    "lib/R/library/maptools/shapes/baltim.dbf",
+    "lib/R/library/maptools/shapes/baltim.shp",
+    "lib/R/library/maptools/shapes/baltim.shx",
+    "lib/R/library/maptools/shapes/co37_d90.dbf",
+    "lib/R/library/maptools/shapes/co37_d90.shp",
+    "lib/R/library/maptools/shapes/co37_d90.shx",
+    "lib/R/library/maptools/shapes/co45_d90.dbf",
+    "lib/R/library/maptools/shapes/co45_d90.shp",
+    "lib/R/library/maptools/shapes/co45_d90.shx",
+    "lib/R/library/maptools/shapes/co51_d90.dbf",
+    "lib/R/library/maptools/shapes/co51_d90.shp",
+    "lib/R/library/maptools/shapes/co51_d90.shx",
+    "lib/R/library/maptools/shapes/columbus.dbf",
+    "lib/R/library/maptools/shapes/columbus.shp",
+    "lib/R/library/maptools/shapes/columbus.shx",
+    "lib/R/library/maptools/shapes/fylk-val-ll.dbf",
+    "lib/R/library/maptools/shapes/fylk-val-ll.shp",
+    "lib/R/library/maptools/shapes/fylk-val-ll.shx",
+    "lib/R/library/maptools/shapes/fylk-val.dbf",
+    "lib/R/library/maptools/shapes/fylk-val.shp",
+    "lib/R/library/maptools/shapes/fylk-val.shx",
+    "lib/R/library/maptools/shapes/pointZ.dbf",
+    "lib/R/library/maptools/shapes/pointZ.prj",
+    "lib/R/library/maptools/shapes/pointZ.shp",
+    "lib/R/library/maptools/shapes/pointZ.shx",
+    "lib/R/library/maptools/shapes/sids.dbf",
+    "lib/R/library/maptools/shapes/sids.shp",
+    "lib/R/library/maptools/shapes/sids.shx",
+    "lib/R/library/maptools/share/90mfips.txt",
+    "lib/R/library/maptools/share/Splus.map",
+    "lib/R/library/maptools/share/co37_d90.e00",
+    "lib/R/library/maptools/share/nc_xtra.dbf"
+  ],
+  "fn": "r-maptools-1.1_8-r43h57805ef_0.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-maptools-1.1_8-r43h57805ef_0",
+    "type": 1
+  },
+  "md5": "ea964a48c4a3e807a1e3fa29935c1a2d",
+  "name": "r-maptools",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-maptools-1.1_8-r43h57805ef_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/maptools/ChangeLog",
+        "path_type": "hardlink",
+        "sha256": "0ecf0f7ebc82ed2a995fdaed523c6bb57d73a8304563d1176f17c11c2b772142",
+        "sha256_in_prefix": "0ecf0f7ebc82ed2a995fdaed523c6bb57d73a8304563d1176f17c11c2b772142",
+        "size_in_bytes": 56390
+      },
+      {
+        "_path": "lib/R/library/maptools/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "7cee9073f3afec5d361c4d848e057de0229c81d9b8ef4f93b8fb1e91e2b8b13f",
+        "sha256_in_prefix": "7cee9073f3afec5d361c4d848e057de0229c81d9b8ef4f93b8fb1e91e2b8b13f",
+        "size_in_bytes": 3829
+      },
+      {
+        "_path": "lib/R/library/maptools/INDEX",
+        "path_type": "hardlink",
+        "sha256": "9797a4fc15a734b0b885b90c50d6ad4cfefc1dfd7d5607d42041437be7f610bb",
+        "sha256_in_prefix": "9797a4fc15a734b0b885b90c50d6ad4cfefc1dfd7d5607d42041437be7f610bb",
+        "size_in_bytes": 2854
+      },
+      {
+        "_path": "lib/R/library/maptools/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "3c2532eabff4414b7640a77e059feab4f65f5b0f8459aa753084fedf496a3e59",
+        "sha256_in_prefix": "3c2532eabff4414b7640a77e059feab4f65f5b0f8459aa753084fedf496a3e59",
+        "size_in_bytes": 2468
+      },
+      {
+        "_path": "lib/R/library/maptools/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "d14bb5056cb7d16347879a44e745d68682d91d0a8b2a9cfa0fe805a1e412858b",
+        "sha256_in_prefix": "d14bb5056cb7d16347879a44e745d68682d91d0a8b2a9cfa0fe805a1e412858b",
+        "size_in_bytes": 197
+      },
+      {
+        "_path": "lib/R/library/maptools/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/maptools/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "fd24206e6034061f48e0f3704f078bf9891680143948aaf4e7098fb4c866e06b",
+        "sha256_in_prefix": "fd24206e6034061f48e0f3704f078bf9891680143948aaf4e7098fb4c866e06b",
+        "size_in_bytes": 2421
+      },
+      {
+        "_path": "lib/R/library/maptools/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "cd1a4d49e3052a0ce42a3796f8a16824198c42b87a537bf44a55779060f2efbc",
+        "sha256_in_prefix": "cd1a4d49e3052a0ce42a3796f8a16824198c42b87a537bf44a55779060f2efbc",
+        "size_in_bytes": 1505
+      },
+      {
+        "_path": "lib/R/library/maptools/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "86d4f87a11339a593bd8d778f4cfc39978d095e6352a26a1483aefc100fd7e40",
+        "sha256_in_prefix": "86d4f87a11339a593bd8d778f4cfc39978d095e6352a26a1483aefc100fd7e40",
+        "size_in_bytes": 1251
+      },
+      {
+        "_path": "lib/R/library/maptools/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "1a66ca36257c71da4f78e255832c158a90a425087756ddc5cdb285be06a663d2",
+        "sha256_in_prefix": "1a66ca36257c71da4f78e255832c158a90a425087756ddc5cdb285be06a663d2",
+        "size_in_bytes": 2150
+      },
+      {
+        "_path": "lib/R/library/maptools/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "8e0c4dd79d6e0d498ac7af92089c460d5a3b8ed96d766ce0c0e9740f0688a9b1",
+        "sha256_in_prefix": "8e0c4dd79d6e0d498ac7af92089c460d5a3b8ed96d766ce0c0e9740f0688a9b1",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "lib/R/library/maptools/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "5c7a735ac30fe0652ee4f7244ec94629a46f5d0ad3d078ddc4cb399ae25f0f2a",
+        "sha256_in_prefix": "5c7a735ac30fe0652ee4f7244ec94629a46f5d0ad3d078ddc4cb399ae25f0f2a",
+        "size_in_bytes": 5547
+      },
+      {
+        "_path": "lib/R/library/maptools/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "b764d596c158d3aeb6d722c35b267db9b4d12b0de8e070a0cc685336cb226da1",
+        "sha256_in_prefix": "b764d596c158d3aeb6d722c35b267db9b4d12b0de8e070a0cc685336cb226da1",
+        "size_in_bytes": 1871
+      },
+      {
+        "_path": "lib/R/library/maptools/R/maptools",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/maptools/R/maptools.rdb",
+        "path_type": "hardlink",
+        "sha256": "cc28b048df65d06db61ba1dcc5ece3b702de4f6f1715f63f3f0a5a7a2ed97c24",
+        "sha256_in_prefix": "cc28b048df65d06db61ba1dcc5ece3b702de4f6f1715f63f3f0a5a7a2ed97c24",
+        "size_in_bytes": 519506
+      },
+      {
+        "_path": "lib/R/library/maptools/R/maptools.rdx",
+        "path_type": "hardlink",
+        "sha256": "f7491e8d9c5f70ae11f08d70145f3f6b7d21b6fa290fd5f9e20c2b3ccfbd1dbe",
+        "sha256_in_prefix": "f7491e8d9c5f70ae11f08d70145f3f6b7d21b6fa290fd5f9e20c2b3ccfbd1dbe",
+        "size_in_bytes": 3843
+      },
+      {
+        "_path": "lib/R/library/maptools/README",
+        "path_type": "hardlink",
+        "sha256": "cb9fd576fd6d6330a1350747ca27ab54b42c56cc65f25c71ebe81db6a5bd04ab",
+        "sha256_in_prefix": "cb9fd576fd6d6330a1350747ca27ab54b42c56cc65f25c71ebe81db6a5bd04ab",
+        "size_in_bytes": 4688
+      },
+      {
+        "_path": "lib/R/library/maptools/changes",
+        "path_type": "hardlink",
+        "sha256": "453b272c5b6ea30cd8f62bb1b71f8756a51d50be1bc423581e9e2cd6f0833fdb",
+        "sha256_in_prefix": "453b272c5b6ea30cd8f62bb1b71f8756a51d50be1bc423581e9e2cd6f0833fdb",
+        "size_in_bytes": 10021
+      },
+      {
+        "_path": "lib/R/library/maptools/data/SplashDams.rda",
+        "path_type": "hardlink",
+        "sha256": "3ab9d1b8cca279a9ae8737a241e4a0e4feb80bdd489c0acbfd36dbac4e07b3a0",
+        "sha256_in_prefix": "3ab9d1b8cca279a9ae8737a241e4a0e4feb80bdd489c0acbfd36dbac4e07b3a0",
+        "size_in_bytes": 8369
+      },
+      {
+        "_path": "lib/R/library/maptools/data/datalist",
+        "path_type": "hardlink",
+        "sha256": "cb0e56278ff7ac55301f8c70ba5358a0a788c7e52b44c1e7cdff15e7246342c1",
+        "sha256_in_prefix": "cb0e56278ff7ac55301f8c70ba5358a0a788c7e52b44c1e7cdff15e7246342c1",
+        "size_in_bytes": 32
+      },
+      {
+        "_path": "lib/R/library/maptools/data/state.vbm.rda",
+        "path_type": "hardlink",
+        "sha256": "2046766c81cda853b5e0d634eaa73a7b02d2ecd4a88470db4d5fb96bd8f9524c",
+        "sha256_in_prefix": "2046766c81cda853b5e0d634eaa73a7b02d2ecd4a88470db4d5fb96bd8f9524c",
+        "size_in_bytes": 4397
+      },
+      {
+        "_path": "lib/R/library/maptools/data/wrld_simpl.rda",
+        "path_type": "hardlink",
+        "sha256": "f1e1145a2dfa937cfdc80a925b7324c740bedfefb47c4e1c00d17cc828302fd2",
+        "sha256_in_prefix": "f1e1145a2dfa937cfdc80a925b7324c740bedfefb47c4e1c00d17cc828302fd2",
+        "size_in_bytes": 358716
+      },
+      {
+        "_path": "lib/R/library/maptools/doc/combine_maptools.R",
+        "path_type": "hardlink",
+        "sha256": "2499bf2aec6324bd278572078df99b305a7ce30c42d6c86235d5baf47b3ed65d",
+        "sha256_in_prefix": "2499bf2aec6324bd278572078df99b305a7ce30c42d6c86235d5baf47b3ed65d",
+        "size_in_bytes": 8726
+      },
+      {
+        "_path": "lib/R/library/maptools/doc/combine_maptools.Rnw",
+        "path_type": "hardlink",
+        "sha256": "e8737b0fa44a73b9933f1484cb3580eea618352231fb65846b8c2dc246af35ce",
+        "sha256_in_prefix": "e8737b0fa44a73b9933f1484cb3580eea618352231fb65846b8c2dc246af35ce",
+        "size_in_bytes": 15460
+      },
+      {
+        "_path": "lib/R/library/maptools/doc/combine_maptools.pdf",
+        "path_type": "hardlink",
+        "sha256": "8a3588a1a022b0d23b0e5a9983b5ce9bf582bddd58cafd06b50c391801ff8d8e",
+        "sha256_in_prefix": "8a3588a1a022b0d23b0e5a9983b5ce9bf582bddd58cafd06b50c391801ff8d8e",
+        "size_in_bytes": 433915
+      },
+      {
+        "_path": "lib/R/library/maptools/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "b5547f84b20f512e482edee3c1c92702e052f3d467251f67565bb7c3ea359cba",
+        "sha256_in_prefix": "b5547f84b20f512e482edee3c1c92702e052f3d467251f67565bb7c3ea359cba",
+        "size_in_bytes": 1437
+      },
+      {
+        "_path": "lib/R/library/maptools/grids/simple.ag",
+        "path_type": "hardlink",
+        "sha256": "0cb31f736df11ac333c8a3be398621d356169f7edfafd661bc7f47500ba598f8",
+        "sha256_in_prefix": "0cb31f736df11ac333c8a3be398621d356169f7edfafd661bc7f47500ba598f8",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/R/library/maptools/grids/test.ag",
+        "path_type": "hardlink",
+        "sha256": "84401dfe3e7edb8fe95449b74321cad49986b0918d8c04984ece4a1900d1084a",
+        "sha256_in_prefix": "84401dfe3e7edb8fe95449b74321cad49986b0918d8c04984ece4a1900d1084a",
+        "size_in_bytes": 73288
+      },
+      {
+        "_path": "lib/R/library/maptools/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "085d422406523253f49ba61fd719fca837a6afa28bf4bca9e5e7c7578d66b3f5",
+        "sha256_in_prefix": "085d422406523253f49ba61fd719fca837a6afa28bf4bca9e5e7c7578d66b3f5",
+        "size_in_bytes": 5531
+      },
+      {
+        "_path": "lib/R/library/maptools/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "41555e622074305e68a725e6a7052bde0b4d2cfa11ae2b610dcf5a57799c4f6d",
+        "sha256_in_prefix": "41555e622074305e68a725e6a7052bde0b4d2cfa11ae2b610dcf5a57799c4f6d",
+        "size_in_bytes": 1393
+      },
+      {
+        "_path": "lib/R/library/maptools/help/maptools.rdb",
+        "path_type": "hardlink",
+        "sha256": "9fd22660bafb4a4ee58d9d316100be6b6aa8d211fb8c54d6d9798dbf4a09a90e",
+        "sha256_in_prefix": "9fd22660bafb4a4ee58d9d316100be6b6aa8d211fb8c54d6d9798dbf4a09a90e",
+        "size_in_bytes": 123929
+      },
+      {
+        "_path": "lib/R/library/maptools/help/maptools.rdx",
+        "path_type": "hardlink",
+        "sha256": "f67b0e832eb3f8047edd7446df8255ee64b462f25418abb678da359f2a7efbb6",
+        "sha256_in_prefix": "f67b0e832eb3f8047edd7446df8255ee64b462f25418abb678da359f2a7efbb6",
+        "size_in_bytes": 1077
+      },
+      {
+        "_path": "lib/R/library/maptools/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "e2e45bddf917b2df5b449bd3171da0e9b25991e9461c318a3c4a0d7fbb037b54",
+        "sha256_in_prefix": "e2e45bddf917b2df5b449bd3171da0e9b25991e9461c318a3c4a0d7fbb037b54",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/R/library/maptools/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "51d3d9babbb3050b2a9498ef95626fb4d02099d281babfd37671734d1340f22d",
+        "sha256_in_prefix": "51d3d9babbb3050b2a9498ef95626fb4d02099d281babfd37671734d1340f22d",
+        "size_in_bytes": 18690
+      },
+      {
+        "_path": "lib/R/library/maptools/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/maptools/libs/maptools.so",
+        "path_type": "hardlink",
+        "sha256": "1948dc7c212e7a8f19036d5549d9c32e121047790be773a216ffdbc417e8be2a",
+        "sha256_in_prefix": "1948dc7c212e7a8f19036d5549d9c32e121047790be773a216ffdbc417e8be2a",
+        "size_in_bytes": 69288
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/Testing.kml",
+        "path_type": "hardlink",
+        "sha256": "5eb1bf541b3c6b966bf0804dbd52d3d201e8a75d77fb7f1f2a7441a6e5e546c1",
+        "sha256_in_prefix": "5eb1bf541b3c6b966bf0804dbd52d3d201e8a75d77fb7f1f2a7441a6e5e546c1",
+        "size_in_bytes": 674
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/baltim.dbf",
+        "path_type": "hardlink",
+        "sha256": "a2bead8464256387228e6b652014ae1e1658942cd97454a8318e3ec9e8b96340",
+        "sha256_in_prefix": "a2bead8464256387228e6b652014ae1e1658942cd97454a8318e3ec9e8b96340",
+        "size_in_bytes": 31595
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/baltim.shp",
+        "path_type": "hardlink",
+        "sha256": "bcce306ffc90e1aba07641d6d544bf26b22aac4ddc248b21cd3ed3581a12c5d8",
+        "sha256_in_prefix": "bcce306ffc90e1aba07641d6d544bf26b22aac4ddc248b21cd3ed3581a12c5d8",
+        "size_in_bytes": 6008
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/baltim.shx",
+        "path_type": "hardlink",
+        "sha256": "6f32bf5dadcd34daeab6064aece603192588bed8da9d77d9725c1d18fec87d84",
+        "sha256_in_prefix": "6f32bf5dadcd34daeab6064aece603192588bed8da9d77d9725c1d18fec87d84",
+        "size_in_bytes": 1788
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/co37_d90.dbf",
+        "path_type": "hardlink",
+        "sha256": "a7296fa18fdf27b2f3f0a1846574db8ab22c0d94ca1c1673df3503d2fa688c38",
+        "sha256_in_prefix": "a7296fa18fdf27b2f3f0a1846574db8ab22c0d94ca1c1673df3503d2fa688c38",
+        "size_in_bytes": 11906
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/co37_d90.shp",
+        "path_type": "hardlink",
+        "sha256": "a3283dabe8f72ef1d56532651112f4520b660dab3b200dda37537b58e08f6c9e",
+        "sha256_in_prefix": "a3283dabe8f72ef1d56532651112f4520b660dab3b200dda37537b58e08f6c9e",
+        "size_in_bytes": 168516
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/co37_d90.shx",
+        "path_type": "hardlink",
+        "sha256": "7f75ea0a8e430d95687fab3543ba54f90fd305e3edb199bd21635401c18ee7f8",
+        "sha256_in_prefix": "7f75ea0a8e430d95687fab3543ba54f90fd305e3edb199bd21635401c18ee7f8",
+        "size_in_bytes": 932
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/co45_d90.dbf",
+        "path_type": "hardlink",
+        "sha256": "8f64ae61931b0f6c49291601818ff3fa2d50bf55900c968bb4cf2ca571a96e89",
+        "sha256_in_prefix": "8f64ae61931b0f6c49291601818ff3fa2d50bf55900c968bb4cf2ca571a96e89",
+        "size_in_bytes": 5410
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/co45_d90.shp",
+        "path_type": "hardlink",
+        "sha256": "257ac10e195528020cf245062092a4b84ee0281389eaa875d9c26ce626bbf8d8",
+        "sha256_in_prefix": "257ac10e195528020cf245062092a4b84ee0281389eaa875d9c26ce626bbf8d8",
+        "size_in_bytes": 128708
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/co45_d90.shx",
+        "path_type": "hardlink",
+        "sha256": "c7708b9f444098d17fc4a76cf2e7113b807133132284bb1b6337c021dd599256",
+        "sha256_in_prefix": "c7708b9f444098d17fc4a76cf2e7113b807133132284bb1b6337c021dd599256",
+        "size_in_bytes": 468
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/co51_d90.dbf",
+        "path_type": "hardlink",
+        "sha256": "b560791470afd047cca56640ff53f0137d447bc0dd477b158fbff4b6b6213c32",
+        "sha256_in_prefix": "b560791470afd047cca56640ff53f0137d447bc0dd477b158fbff4b6b6213c32",
+        "size_in_bytes": 15490
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/co51_d90.shp",
+        "path_type": "hardlink",
+        "sha256": "f468c8da95a519db3e93ef76270d4c5eced0fa46ddb46814927985326b6b6ac2",
+        "sha256_in_prefix": "f468c8da95a519db3e93ef76270d4c5eced0fa46ddb46814927985326b6b6ac2",
+        "size_in_bytes": 218264
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/co51_d90.shx",
+        "path_type": "hardlink",
+        "sha256": "223096047cb37e1789f3fe0bcbe7d6e9df9f49f6308016f57ed1e251245d6576",
+        "sha256_in_prefix": "223096047cb37e1789f3fe0bcbe7d6e9df9f49f6308016f57ed1e251245d6576",
+        "size_in_bytes": 1188
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/columbus.dbf",
+        "path_type": "hardlink",
+        "sha256": "b82171027d294bec701f5a7732eeaf8e0eb6a075b6900daac91c7533bf80bda2",
+        "sha256_in_prefix": "b82171027d294bec701f5a7732eeaf8e0eb6a075b6900daac91c7533bf80bda2",
+        "size_in_bytes": 10082
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/columbus.shp",
+        "path_type": "hardlink",
+        "sha256": "f79a9a4ea814ef3abbc3780c6f91816a6ee56edf60b2c5592158e66b317a4da1",
+        "sha256_in_prefix": "f79a9a4ea814ef3abbc3780c6f91816a6ee56edf60b2c5592158e66b317a4da1",
+        "size_in_bytes": 21980
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/columbus.shx",
+        "path_type": "hardlink",
+        "sha256": "ce8fdc2a975081d686533e855d17032f2ddccabd5fd72021cb0d1f3ef8bde0c7",
+        "sha256_in_prefix": "ce8fdc2a975081d686533e855d17032f2ddccabd5fd72021cb0d1f3ef8bde0c7",
+        "size_in_bytes": 492
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/fylk-val-ll.dbf",
+        "path_type": "hardlink",
+        "sha256": "c06d0871d7b9846823f04e294c1664eaa5a540e7e86a1269abecdfa004b787f1",
+        "sha256_in_prefix": "c06d0871d7b9846823f04e294c1664eaa5a540e7e86a1269abecdfa004b787f1",
+        "size_in_bytes": 19397
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/fylk-val-ll.shp",
+        "path_type": "hardlink",
+        "sha256": "7b46edeaa2bf0236d4807775c8c9cbd32c04299b2585c9a154f698c4d5a635b0",
+        "sha256_in_prefix": "7b46edeaa2bf0236d4807775c8c9cbd32c04299b2585c9a154f698c4d5a635b0",
+        "size_in_bytes": 24588
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/fylk-val-ll.shx",
+        "path_type": "hardlink",
+        "sha256": "d34a0f1c464cc72d13a2d819a0e45ad106bc1f8178b2a5186900837034545fdc",
+        "sha256_in_prefix": "d34a0f1c464cc72d13a2d819a0e45ad106bc1f8178b2a5186900837034545fdc",
+        "size_in_bytes": 876
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/fylk-val.dbf",
+        "path_type": "hardlink",
+        "sha256": "9f6de35d272a1f718e41030940f8ded2736ad90f1a841feecc7ccc463643c4ab",
+        "sha256_in_prefix": "9f6de35d272a1f718e41030940f8ded2736ad90f1a841feecc7ccc463643c4ab",
+        "size_in_bytes": 10151
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/fylk-val.shp",
+        "path_type": "hardlink",
+        "sha256": "6ada41a9b284cedf221fdf88cfedc0a66afadfdc0d6e0da65b73c73c72bb44ba",
+        "sha256_in_prefix": "6ada41a9b284cedf221fdf88cfedc0a66afadfdc0d6e0da65b73c73c72bb44ba",
+        "size_in_bytes": 24588
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/fylk-val.shx",
+        "path_type": "hardlink",
+        "sha256": "fe6af25c7ea2b1b100b0c81b55315e403bdf48542f4b3d5020ea2e78a4d4f0b9",
+        "sha256_in_prefix": "fe6af25c7ea2b1b100b0c81b55315e403bdf48542f4b3d5020ea2e78a4d4f0b9",
+        "size_in_bytes": 876
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/pointZ.dbf",
+        "path_type": "hardlink",
+        "sha256": "fe1aa84af4e7b3d626be4e9da17cf419278dfe483ed01f40b148c01c7a94337d",
+        "sha256_in_prefix": "fe1aa84af4e7b3d626be4e9da17cf419278dfe483ed01f40b148c01c7a94337d",
+        "size_in_bytes": 38593
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/pointZ.prj",
+        "path_type": "hardlink",
+        "sha256": "9329dbd685559594edfd3938547ed692d71219faf6344040ce386ccd34a44c19",
+        "sha256_in_prefix": "9329dbd685559594edfd3938547ed692d71219faf6344040ce386ccd34a44c19",
+        "size_in_bytes": 414
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/pointZ.shp",
+        "path_type": "hardlink",
+        "sha256": "01dcf0307e29808b063e9c3fbe1415ee1b6866a289f74209db5862bd88ca85ba",
+        "sha256_in_prefix": "01dcf0307e29808b063e9c3fbe1415ee1b6866a289f74209db5862bd88ca85ba",
+        "size_in_bytes": 17700
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/pointZ.shx",
+        "path_type": "hardlink",
+        "sha256": "3009f41dd1e7139e51c797899a9e7782a833de5aa1a51b7112f841cc5c3f9995",
+        "sha256_in_prefix": "3009f41dd1e7139e51c797899a9e7782a833de5aa1a51b7112f841cc5c3f9995",
+        "size_in_bytes": 3300
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/sids.dbf",
+        "path_type": "hardlink",
+        "sha256": "22f28a22e2df2806d148faca86a075b5fa54be37ab8355d02eb43805e1f06e8e",
+        "sha256_in_prefix": "22f28a22e2df2806d148faca86a075b5fa54be37ab8355d02eb43805e1f06e8e",
+        "size_in_bytes": 17282
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/sids.shp",
+        "path_type": "hardlink",
+        "sha256": "265f1b1f926e3f8a6067689d3e570b7a6ff451271c27ea555ee3d597a8bc0cf4",
+        "sha256_in_prefix": "265f1b1f926e3f8a6067689d3e570b7a6ff451271c27ea555ee3d597a8bc0cf4",
+        "size_in_bytes": 46196
+      },
+      {
+        "_path": "lib/R/library/maptools/shapes/sids.shx",
+        "path_type": "hardlink",
+        "sha256": "fb620dca267a30f629ee9955c4f28bb9459310b8499b6113dc6015990df29e6c",
+        "sha256_in_prefix": "fb620dca267a30f629ee9955c4f28bb9459310b8499b6113dc6015990df29e6c",
+        "size_in_bytes": 900
+      },
+      {
+        "_path": "lib/R/library/maptools/share/90mfips.txt",
+        "path_type": "hardlink",
+        "sha256": "029c12f56cdb80ba783c1c704fe0dda55cb25ab0841bea39aeebe25ff6d1e212",
+        "sha256_in_prefix": "029c12f56cdb80ba783c1c704fe0dda55cb25ab0841bea39aeebe25ff6d1e212",
+        "size_in_bytes": 129633
+      },
+      {
+        "_path": "lib/R/library/maptools/share/Splus.map",
+        "path_type": "hardlink",
+        "sha256": "d3c90d40e1d886a1f793c7cea213ece4f44052326918ffa83c77a1308b4a8720",
+        "sha256_in_prefix": "d3c90d40e1d886a1f793c7cea213ece4f44052326918ffa83c77a1308b4a8720",
+        "size_in_bytes": 248
+      },
+      {
+        "_path": "lib/R/library/maptools/share/co37_d90.e00",
+        "path_type": "hardlink",
+        "sha256": "c3b0d2fda1b2b4c6f83de4827ab450cab71e652478c17ee2ebc5f2bbbab41ccf",
+        "sha256_in_prefix": "c3b0d2fda1b2b4c6f83de4827ab450cab71e652478c17ee2ebc5f2bbbab41ccf",
+        "size_in_bytes": 279215
+      },
+      {
+        "_path": "lib/R/library/maptools/share/nc_xtra.dbf",
+        "path_type": "hardlink",
+        "sha256": "95e72f7458aa20be170e1b7bf7b619f2ebde7b4830274ac65346247d60113d1c",
+        "sha256_in_prefix": "95e72f7458aa20be170e1b7bf7b619f2ebde7b4830274ac65346247d60113d1c",
+        "size_in_bytes": 11025
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "a69b478afa1d2594c84d9e3c4d6d6138530cbd1914d2c0059ccf807fef1e61cf",
+  "size": 1816280,
+  "subdir": "linux-64",
+  "timestamp": 1689715972000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-maptools-1.1_8-r43h57805ef_0.conda",
+  "version": "1.1_8"
+}

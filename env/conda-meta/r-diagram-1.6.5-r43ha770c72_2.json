@@ -1,0 +1,292 @@
+{
+  "build": "r43ha770c72_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "r-shape"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-diagram-1.6.5-r43ha770c72_2",
+  "files": [
+    "lib/R/library/diagram/DESCRIPTION",
+    "lib/R/library/diagram/INDEX",
+    "lib/R/library/diagram/Meta/Rd.rds",
+    "lib/R/library/diagram/Meta/data.rds",
+    "lib/R/library/diagram/Meta/demo.rds",
+    "lib/R/library/diagram/Meta/features.rds",
+    "lib/R/library/diagram/Meta/hsearch.rds",
+    "lib/R/library/diagram/Meta/links.rds",
+    "lib/R/library/diagram/Meta/nsInfo.rds",
+    "lib/R/library/diagram/Meta/package.rds",
+    "lib/R/library/diagram/Meta/vignette.rds",
+    "lib/R/library/diagram/NAMESPACE",
+    "lib/R/library/diagram/R/diagram",
+    "lib/R/library/diagram/R/diagram.rdb",
+    "lib/R/library/diagram/R/diagram.rdx",
+    "lib/R/library/diagram/data/Rdata.rdb",
+    "lib/R/library/diagram/data/Rdata.rds",
+    "lib/R/library/diagram/data/Rdata.rdx",
+    "lib/R/library/diagram/demo/flowchart.r",
+    "lib/R/library/diagram/demo/plotmat.r",
+    "lib/R/library/diagram/demo/plotweb.r",
+    "lib/R/library/diagram/doc/diagram.R",
+    "lib/R/library/diagram/doc/diagram.Rnw",
+    "lib/R/library/diagram/doc/diagram.pdf",
+    "lib/R/library/diagram/doc/index.html",
+    "lib/R/library/diagram/help/AnIndex",
+    "lib/R/library/diagram/help/aliases.rds",
+    "lib/R/library/diagram/help/diagram.rdb",
+    "lib/R/library/diagram/help/diagram.rdx",
+    "lib/R/library/diagram/help/paths.rds",
+    "lib/R/library/diagram/html/00Index.html",
+    "lib/R/library/diagram/html/R.css"
+  ],
+  "fn": "r-diagram-1.6.5-r43ha770c72_2.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-diagram-1.6.5-r43ha770c72_2",
+    "type": 1
+  },
+  "md5": "29a9f300f7ccca4b06eb8c3562bf78d1",
+  "name": "r-diagram",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-diagram-1.6.5-r43ha770c72_2.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/diagram/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "876ab65030c633c53d2e60efef89b9af49b0e85b87acfa7537abae78439c1314",
+        "sha256_in_prefix": "876ab65030c633c53d2e60efef89b9af49b0e85b87acfa7537abae78439c1314",
+        "size_in_bytes": 1018
+      },
+      {
+        "_path": "lib/R/library/diagram/INDEX",
+        "path_type": "hardlink",
+        "sha256": "6cebe5f8e8d8d942e02d4d3037e052be329024e55f6873453e9e24e93cb64b35",
+        "sha256_in_prefix": "6cebe5f8e8d8d942e02d4d3037e052be329024e55f6873453e9e24e93cb64b35",
+        "size_in_bytes": 2000
+      },
+      {
+        "_path": "lib/R/library/diagram/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "441e7783f634e0a294a7b02da8a6936449e2c9e20cfa83e775920ee98649dc07",
+        "sha256_in_prefix": "441e7783f634e0a294a7b02da8a6936449e2c9e20cfa83e775920ee98649dc07",
+        "size_in_bytes": 1160
+      },
+      {
+        "_path": "lib/R/library/diagram/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "6ee0e5155f78614e7a4bc28edf98ff7b4371b42c57d1c6261f60677c8181f156",
+        "sha256_in_prefix": "6ee0e5155f78614e7a4bc28edf98ff7b4371b42c57d1c6261f60677c8181f156",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "lib/R/library/diagram/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "9182e6de37fb3545d710940b2233c5582931cdf0a9996c7ed4dcfd27f16caded",
+        "sha256_in_prefix": "9182e6de37fb3545d710940b2233c5582931cdf0a9996c7ed4dcfd27f16caded",
+        "size_in_bytes": 199
+      },
+      {
+        "_path": "lib/R/library/diagram/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/diagram/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "246ac528ef2cf195e40d8637bf686a49b40e4a3e7c39f234e364e5c51c4b6cb0",
+        "sha256_in_prefix": "246ac528ef2cf195e40d8637bf686a49b40e4a3e7c39f234e364e5c51c4b6cb0",
+        "size_in_bytes": 1087
+      },
+      {
+        "_path": "lib/R/library/diagram/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "400d4db2143562ddc89c99b98466d31a67a3b85240bd1fb894797c1de0866d35",
+        "sha256_in_prefix": "400d4db2143562ddc89c99b98466d31a67a3b85240bd1fb894797c1de0866d35",
+        "size_in_bytes": 488
+      },
+      {
+        "_path": "lib/R/library/diagram/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "6afd4f6be2b401cd66b46fa6a8b4f0ac1f7a4f2d58548ac056d96beee1cd98f9",
+        "sha256_in_prefix": "6afd4f6be2b401cd66b46fa6a8b4f0ac1f7a4f2d58548ac056d96beee1cd98f9",
+        "size_in_bytes": 493
+      },
+      {
+        "_path": "lib/R/library/diagram/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "3c5af97cb84267b9bae67d420f21611d604da8ad6015d75abd3f9aef3ea335e3",
+        "sha256_in_prefix": "3c5af97cb84267b9bae67d420f21611d604da8ad6015d75abd3f9aef3ea335e3",
+        "size_in_bytes": 967
+      },
+      {
+        "_path": "lib/R/library/diagram/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "94692e1a16e3d8c4e9914a61adb02b178cd8aa40ce155ae443c5093fdb9d37b6",
+        "sha256_in_prefix": "94692e1a16e3d8c4e9914a61adb02b178cd8aa40ce155ae443c5093fdb9d37b6",
+        "size_in_bytes": 253
+      },
+      {
+        "_path": "lib/R/library/diagram/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "7eefa988723de2abfa3f3e4521cf2138606db6dcb6f7a7c669a7cc1da977f0b8",
+        "sha256_in_prefix": "7eefa988723de2abfa3f3e4521cf2138606db6dcb6f7a7c669a7cc1da977f0b8",
+        "size_in_bytes": 635
+      },
+      {
+        "_path": "lib/R/library/diagram/R/diagram",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/diagram/R/diagram.rdb",
+        "path_type": "hardlink",
+        "sha256": "ef1dd93a7fd0985f7b38d8488e042732899849d5e7f1679ebd952384e0c344d0",
+        "sha256_in_prefix": "ef1dd93a7fd0985f7b38d8488e042732899849d5e7f1679ebd952384e0c344d0",
+        "size_in_bytes": 63575
+      },
+      {
+        "_path": "lib/R/library/diagram/R/diagram.rdx",
+        "path_type": "hardlink",
+        "sha256": "8b4236b0b7565e1f4b2db02a67fa2f6b57933019e0d758a17180266f70d5d98c",
+        "sha256_in_prefix": "8b4236b0b7565e1f4b2db02a67fa2f6b57933019e0d758a17180266f70d5d98c",
+        "size_in_bytes": 665
+      },
+      {
+        "_path": "lib/R/library/diagram/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "0973b0aaf9be495ef5157577752f1187bf7a5e7e269dc0070ddecedc7c4a6903",
+        "sha256_in_prefix": "0973b0aaf9be495ef5157577752f1187bf7a5e7e269dc0070ddecedc7c4a6903",
+        "size_in_bytes": 1001
+      },
+      {
+        "_path": "lib/R/library/diagram/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "407b7f15435c7aa2a478d9fc93ab2b55476efe5285b3056506d5bcbf47aeba58",
+        "sha256_in_prefix": "407b7f15435c7aa2a478d9fc93ab2b55476efe5285b3056506d5bcbf47aeba58",
+        "size_in_bytes": 115
+      },
+      {
+        "_path": "lib/R/library/diagram/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "f99069b6353345ac7cfe9ed679843833caaa912283d61264a67a936b68144d63",
+        "sha256_in_prefix": "f99069b6353345ac7cfe9ed679843833caaa912283d61264a67a936b68144d63",
+        "size_in_bytes": 175
+      },
+      {
+        "_path": "lib/R/library/diagram/demo/flowchart.r",
+        "path_type": "hardlink",
+        "sha256": "4ccd531a7bc4768f1cbf2219ef25f0ab120581320a579f3a7f0045c94aa77c10",
+        "sha256_in_prefix": "4ccd531a7bc4768f1cbf2219ef25f0ab120581320a579f3a7f0045c94aa77c10",
+        "size_in_bytes": 6767
+      },
+      {
+        "_path": "lib/R/library/diagram/demo/plotmat.r",
+        "path_type": "hardlink",
+        "sha256": "a6fc3fab2447f27c556e562a02601422f5d5bcb2cfdcb281a8240cff0c204d70",
+        "sha256_in_prefix": "a6fc3fab2447f27c556e562a02601422f5d5bcb2cfdcb281a8240cff0c204d70",
+        "size_in_bytes": 6977
+      },
+      {
+        "_path": "lib/R/library/diagram/demo/plotweb.r",
+        "path_type": "hardlink",
+        "sha256": "a1765d6c18d595f7f0eaa9242c47944cb367084739579ac2826c95a48728ca9b",
+        "sha256_in_prefix": "a1765d6c18d595f7f0eaa9242c47944cb367084739579ac2826c95a48728ca9b",
+        "size_in_bytes": 591
+      },
+      {
+        "_path": "lib/R/library/diagram/doc/diagram.R",
+        "path_type": "hardlink",
+        "sha256": "9b1984ff15cde1f33fcfde1fc62edf302eede2910104471a6aeaea9fe1d68142",
+        "sha256_in_prefix": "9b1984ff15cde1f33fcfde1fc62edf302eede2910104471a6aeaea9fe1d68142",
+        "size_in_bytes": 26607
+      },
+      {
+        "_path": "lib/R/library/diagram/doc/diagram.Rnw",
+        "path_type": "hardlink",
+        "sha256": "5416fcced1a1d9c8291fa5c2bf65a2d314e37d07f3540e6df0e7920494c84a92",
+        "sha256_in_prefix": "5416fcced1a1d9c8291fa5c2bf65a2d314e37d07f3540e6df0e7920494c84a92",
+        "size_in_bytes": 22281
+      },
+      {
+        "_path": "lib/R/library/diagram/doc/diagram.pdf",
+        "path_type": "hardlink",
+        "sha256": "7ab63c14f885c60859c43ee30c6e63e38dbd13dba8dddd45aff18770f21827cf",
+        "sha256_in_prefix": "7ab63c14f885c60859c43ee30c6e63e38dbd13dba8dddd45aff18770f21827cf",
+        "size_in_bytes": 540516
+      },
+      {
+        "_path": "lib/R/library/diagram/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "d4f426f26aa5b174d40eb4b6dac8bf34b1babb943dd973e582bfc0f764ff92cf",
+        "sha256_in_prefix": "d4f426f26aa5b174d40eb4b6dac8bf34b1babb943dd973e582bfc0f764ff92cf",
+        "size_in_bytes": 1419
+      },
+      {
+        "_path": "lib/R/library/diagram/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "fb3b42d5b41da4192df02588c125778b6284622e8cf013c6debd1519ac0a56cb",
+        "sha256_in_prefix": "fb3b42d5b41da4192df02588c125778b6284622e8cf013c6debd1519ac0a56cb",
+        "size_in_bytes": 777
+      },
+      {
+        "_path": "lib/R/library/diagram/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "8508322f3d668c030d8af3edb09eac6a525f4fc17c4be6ba07850f57f91c55ce",
+        "sha256_in_prefix": "8508322f3d668c030d8af3edb09eac6a525f4fc17c4be6ba07850f57f91c55ce",
+        "size_in_bytes": 357
+      },
+      {
+        "_path": "lib/R/library/diagram/help/diagram.rdb",
+        "path_type": "hardlink",
+        "sha256": "8a06726b8f6bd8a3618dcb09b00700dee59350e940ac1d0c18a1e5631a8c01e8",
+        "sha256_in_prefix": "8a06726b8f6bd8a3618dcb09b00700dee59350e940ac1d0c18a1e5631a8c01e8",
+        "size_in_bytes": 103075
+      },
+      {
+        "_path": "lib/R/library/diagram/help/diagram.rdx",
+        "path_type": "hardlink",
+        "sha256": "7484e04d095755788de92a66a0422accec48eca1cdbd5b111480e7dabdb27772",
+        "sha256_in_prefix": "7484e04d095755788de92a66a0422accec48eca1cdbd5b111480e7dabdb27772",
+        "size_in_bytes": 705
+      },
+      {
+        "_path": "lib/R/library/diagram/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "919faad24930ae4ad1a9190d8b5fc6c45bdcf2947a906e82f3a174ce1935c860",
+        "sha256_in_prefix": "919faad24930ae4ad1a9190d8b5fc6c45bdcf2947a906e82f3a174ce1935c860",
+        "size_in_bytes": 356
+      },
+      {
+        "_path": "lib/R/library/diagram/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "27aac5f4bb7ad18a079149ff65751184619dfd909949489ef8bbabd653dbff1a",
+        "sha256_in_prefix": "27aac5f4bb7ad18a079149ff65751184619dfd909949489ef8bbabd653dbff1a",
+        "size_in_bytes": 5708
+      },
+      {
+        "_path": "lib/R/library/diagram/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "cdb60cea9b1c467190ac36fd11ffeb8e4d0d96063ca7dce695e25efdf3bf8db5",
+  "size": 671184,
+  "subdir": "noarch",
+  "timestamp": 1686763703000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-diagram-1.6.5-r43ha770c72_2.conda",
+  "version": "1.6.5"
+}

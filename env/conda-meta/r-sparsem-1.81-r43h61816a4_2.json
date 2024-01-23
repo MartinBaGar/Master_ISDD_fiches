@@ -1,0 +1,356 @@
+{
+  "build": "r43h61816a4_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libgfortran-ng",
+    "libgfortran5 >=12.3.0",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-sparsem-1.81-r43h61816a4_2",
+  "files": [
+    "lib/R/library/SparseM/ChangeLog",
+    "lib/R/library/SparseM/DESCRIPTION",
+    "lib/R/library/SparseM/INDEX",
+    "lib/R/library/SparseM/Meta/Rd.rds",
+    "lib/R/library/SparseM/Meta/data.rds",
+    "lib/R/library/SparseM/Meta/demo.rds",
+    "lib/R/library/SparseM/Meta/features.rds",
+    "lib/R/library/SparseM/Meta/hsearch.rds",
+    "lib/R/library/SparseM/Meta/links.rds",
+    "lib/R/library/SparseM/Meta/nsInfo.rds",
+    "lib/R/library/SparseM/Meta/package.rds",
+    "lib/R/library/SparseM/Meta/vignette.rds",
+    "lib/R/library/SparseM/NAMESPACE",
+    "lib/R/library/SparseM/R/SparseM",
+    "lib/R/library/SparseM/R/SparseM.rdb",
+    "lib/R/library/SparseM/R/SparseM.rdx",
+    "lib/R/library/SparseM/TODO",
+    "lib/R/library/SparseM/data/lsq.rda",
+    "lib/R/library/SparseM/data/triogramX.rda",
+    "lib/R/library/SparseM/demo/Binding.R",
+    "lib/R/library/SparseM/demo/Coercion.R",
+    "lib/R/library/SparseM/demo/LeastSquares.R",
+    "lib/R/library/SparseM/demo/LinearAlgebra.R",
+    "lib/R/library/SparseM/demo/Solve.R",
+    "lib/R/library/SparseM/demo/Visualization.R",
+    "lib/R/library/SparseM/doc/SparseM.R",
+    "lib/R/library/SparseM/doc/SparseM.Rnw",
+    "lib/R/library/SparseM/doc/SparseM.pdf",
+    "lib/R/library/SparseM/doc/index.html",
+    "lib/R/library/SparseM/extdata/lsq.out",
+    "lib/R/library/SparseM/extdata/lsq.rra",
+    "lib/R/library/SparseM/extdata/rua_32_ax.rua",
+    "lib/R/library/SparseM/help/AnIndex",
+    "lib/R/library/SparseM/help/SparseM.rdb",
+    "lib/R/library/SparseM/help/SparseM.rdx",
+    "lib/R/library/SparseM/help/aliases.rds",
+    "lib/R/library/SparseM/help/paths.rds",
+    "lib/R/library/SparseM/html/00Index.html",
+    "lib/R/library/SparseM/html/R.css",
+    "lib/R/library/SparseM/libs/SparseM.so"
+  ],
+  "fn": "r-sparsem-1.81-r43h61816a4_2.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-sparsem-1.81-r43h61816a4_2",
+    "type": 1
+  },
+  "md5": "edb67bed571362236933cdf704703672",
+  "name": "r-sparsem",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-sparsem-1.81-r43h61816a4_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/SparseM/ChangeLog",
+        "path_type": "hardlink",
+        "sha256": "db8d596aa8287df267dd33cec1dc285811d2bfaf2f7ae7a4b208207ea8fb06a4",
+        "sha256_in_prefix": "db8d596aa8287df267dd33cec1dc285811d2bfaf2f7ae7a4b208207ea8fb06a4",
+        "size_in_bytes": 22106
+      },
+      {
+        "_path": "lib/R/library/SparseM/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "78afd60f409783f2e2e2d70ce6531ada1d64ba361ff75bbbc81bf5b07679efe4",
+        "sha256_in_prefix": "78afd60f409783f2e2e2d70ce6531ada1d64ba361ff75bbbc81bf5b07679efe4",
+        "size_in_bytes": 1215
+      },
+      {
+        "_path": "lib/R/library/SparseM/INDEX",
+        "path_type": "hardlink",
+        "sha256": "a47517483249a30b906900ebec9b2136912ab7c7454580f6e8e39f1f93dc029f",
+        "sha256_in_prefix": "a47517483249a30b906900ebec9b2136912ab7c7454580f6e8e39f1f93dc029f",
+        "size_in_bytes": 1265
+      },
+      {
+        "_path": "lib/R/library/SparseM/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "f443b44c148bed8765620aec4885cf40cd4d7df1fc71ce1f437b20a71be1fb1d",
+        "sha256_in_prefix": "f443b44c148bed8765620aec4885cf40cd4d7df1fc71ce1f437b20a71be1fb1d",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/SparseM/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "52986614342dbd00f11122ad3180f2c49c16108eeea4ddfd667abef08328c89c",
+        "sha256_in_prefix": "52986614342dbd00f11122ad3180f2c49c16108eeea4ddfd667abef08328c89c",
+        "size_in_bytes": 156
+      },
+      {
+        "_path": "lib/R/library/SparseM/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "87d9d08fb9dadbd095478df0107bbefc42df8974a1c0072e9cad47e39a2d4ded",
+        "sha256_in_prefix": "87d9d08fb9dadbd095478df0107bbefc42df8974a1c0072e9cad47e39a2d4ded",
+        "size_in_bytes": 252
+      },
+      {
+        "_path": "lib/R/library/SparseM/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/SparseM/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "3209964b3bc5f590d92f42a2a2ce534728559186603f7e7c6880ff600a157307",
+        "sha256_in_prefix": "3209964b3bc5f590d92f42a2a2ce534728559186603f7e7c6880ff600a157307",
+        "size_in_bytes": 1855
+      },
+      {
+        "_path": "lib/R/library/SparseM/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "111ebe14a8b20a1d083e854e9537c92b0ad9bf08a476d68222da722f1a20a783",
+        "sha256_in_prefix": "111ebe14a8b20a1d083e854e9537c92b0ad9bf08a476d68222da722f1a20a783",
+        "size_in_bytes": 1399
+      },
+      {
+        "_path": "lib/R/library/SparseM/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "0ef5be0d36c9b87a62192f301c0332310aaeeb69ee0916fdc50a78b04f7fbd38",
+        "sha256_in_prefix": "0ef5be0d36c9b87a62192f301c0332310aaeeb69ee0916fdc50a78b04f7fbd38",
+        "size_in_bytes": 909
+      },
+      {
+        "_path": "lib/R/library/SparseM/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "bdd912a2e1998d6f64839b5207cd9befef9afd4b09662d5c7ea691e7828803ff",
+        "sha256_in_prefix": "bdd912a2e1998d6f64839b5207cd9befef9afd4b09662d5c7ea691e7828803ff",
+        "size_in_bytes": 1068
+      },
+      {
+        "_path": "lib/R/library/SparseM/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "ae6de64f12b83c7cfcebc598a5c1545c7aaf08868616ad58713757459fad89b0",
+        "sha256_in_prefix": "ae6de64f12b83c7cfcebc598a5c1545c7aaf08868616ad58713757459fad89b0",
+        "size_in_bytes": 236
+      },
+      {
+        "_path": "lib/R/library/SparseM/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "4036672428367a7b0b23b22f923fc9d06b8832a6dacd6db0f5bfbba3a2d49e51",
+        "sha256_in_prefix": "4036672428367a7b0b23b22f923fc9d06b8832a6dacd6db0f5bfbba3a2d49e51",
+        "size_in_bytes": 2333
+      },
+      {
+        "_path": "lib/R/library/SparseM/R/SparseM",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/SparseM/R/SparseM.rdb",
+        "path_type": "hardlink",
+        "sha256": "1779595e08b0c11edb1dc61cf3bd963bf8cb877969a107a725f07875879f1497",
+        "sha256_in_prefix": "1779595e08b0c11edb1dc61cf3bd963bf8cb877969a107a725f07875879f1497",
+        "size_in_bytes": 359484
+      },
+      {
+        "_path": "lib/R/library/SparseM/R/SparseM.rdx",
+        "path_type": "hardlink",
+        "sha256": "3a09c7f7c0df1a05fcdeb3779a01a63386bc7a554cda23f8cb2675d6f1ed6636",
+        "sha256_in_prefix": "3a09c7f7c0df1a05fcdeb3779a01a63386bc7a554cda23f8cb2675d6f1ed6636",
+        "size_in_bytes": 2570
+      },
+      {
+        "_path": "lib/R/library/SparseM/TODO",
+        "path_type": "hardlink",
+        "sha256": "45ee144edc742f29ec9f11d21175442d12dfcb85529db2868d4f0e5b05691798",
+        "sha256_in_prefix": "45ee144edc742f29ec9f11d21175442d12dfcb85529db2868d4f0e5b05691798",
+        "size_in_bytes": 779
+      },
+      {
+        "_path": "lib/R/library/SparseM/data/lsq.rda",
+        "path_type": "hardlink",
+        "sha256": "cc4614d12008037d09f4bba630eb73e16177512ec5888999f6d239767cecdd33",
+        "sha256_in_prefix": "cc4614d12008037d09f4bba630eb73e16177512ec5888999f6d239767cecdd33",
+        "size_in_bytes": 56814
+      },
+      {
+        "_path": "lib/R/library/SparseM/data/triogramX.rda",
+        "path_type": "hardlink",
+        "sha256": "63ee47de4a3a24455d2fbf485175a967aeb1dc7925e5cec85deb61e8e9083033",
+        "sha256_in_prefix": "63ee47de4a3a24455d2fbf485175a967aeb1dc7925e5cec85deb61e8e9083033",
+        "size_in_bytes": 10899
+      },
+      {
+        "_path": "lib/R/library/SparseM/demo/Binding.R",
+        "path_type": "hardlink",
+        "sha256": "03bc8b324c8bfc142f2f2282c860f859cc1f05efa7f5f15789b9d7a90a1835b9",
+        "sha256_in_prefix": "03bc8b324c8bfc142f2f2282c860f859cc1f05efa7f5f15789b9d7a90a1835b9",
+        "size_in_bytes": 358
+      },
+      {
+        "_path": "lib/R/library/SparseM/demo/Coercion.R",
+        "path_type": "hardlink",
+        "sha256": "c5e839f8539ed8ae930eb50d9afb536292e74f735f72b98fea5c7c6286549fda",
+        "sha256_in_prefix": "c5e839f8539ed8ae930eb50d9afb536292e74f735f72b98fea5c7c6286549fda",
+        "size_in_bytes": 429
+      },
+      {
+        "_path": "lib/R/library/SparseM/demo/LeastSquares.R",
+        "path_type": "hardlink",
+        "sha256": "7327a9805f23320ea31119b6aa141f688d6cb48dc3396dc6e46c6551c74b894d",
+        "sha256_in_prefix": "7327a9805f23320ea31119b6aa141f688d6cb48dc3396dc6e46c6551c74b894d",
+        "size_in_bytes": 770
+      },
+      {
+        "_path": "lib/R/library/SparseM/demo/LinearAlgebra.R",
+        "path_type": "hardlink",
+        "sha256": "22ab1b48944ab66ca5fdd0e5293ea16670121a26af4af2afd8e20f5ad4a6d550",
+        "sha256_in_prefix": "22ab1b48944ab66ca5fdd0e5293ea16670121a26af4af2afd8e20f5ad4a6d550",
+        "size_in_bytes": 658
+      },
+      {
+        "_path": "lib/R/library/SparseM/demo/Solve.R",
+        "path_type": "hardlink",
+        "sha256": "efe602b8ea64b8d6619dec222265ea39f50fa2c54436122dc434089272830e13",
+        "sha256_in_prefix": "efe602b8ea64b8d6619dec222265ea39f50fa2c54436122dc434089272830e13",
+        "size_in_bytes": 922
+      },
+      {
+        "_path": "lib/R/library/SparseM/demo/Visualization.R",
+        "path_type": "hardlink",
+        "sha256": "e8c835030c787575ac672c8b19a5bb40370d1709c4b9003c34cde43a37bd1225",
+        "sha256_in_prefix": "e8c835030c787575ac672c8b19a5bb40370d1709c4b9003c34cde43a37bd1225",
+        "size_in_bytes": 88
+      },
+      {
+        "_path": "lib/R/library/SparseM/doc/SparseM.R",
+        "path_type": "hardlink",
+        "sha256": "8db66ec8457d836f3efd8776a420b8912d6c50d4d1e1096ca7858277c0e2e358",
+        "sha256_in_prefix": "8db66ec8457d836f3efd8776a420b8912d6c50d4d1e1096ca7858277c0e2e358",
+        "size_in_bytes": 1553
+      },
+      {
+        "_path": "lib/R/library/SparseM/doc/SparseM.Rnw",
+        "path_type": "hardlink",
+        "sha256": "5d8b7c5eec366719effdef1efd3b8f754b631cfe40ac6520d3368bb602585fca",
+        "sha256_in_prefix": "5d8b7c5eec366719effdef1efd3b8f754b631cfe40ac6520d3368bb602585fca",
+        "size_in_bytes": 18859
+      },
+      {
+        "_path": "lib/R/library/SparseM/doc/SparseM.pdf",
+        "path_type": "hardlink",
+        "sha256": "a7a886104dbc19cdd536b687c731160bbe308da934f20a1edf5dc9b2f953c069",
+        "sha256_in_prefix": "a7a886104dbc19cdd536b687c731160bbe308da934f20a1edf5dc9b2f953c069",
+        "size_in_bytes": 437250
+      },
+      {
+        "_path": "lib/R/library/SparseM/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "6f28a0d853aaa07297957d7414c1d591aa95fc8dacdf4f13c9bc90f8bd2f3bb0",
+        "sha256_in_prefix": "6f28a0d853aaa07297957d7414c1d591aa95fc8dacdf4f13c9bc90f8bd2f3bb0",
+        "size_in_bytes": 1428
+      },
+      {
+        "_path": "lib/R/library/SparseM/extdata/lsq.out",
+        "path_type": "hardlink",
+        "sha256": "ca7094697d1cbaa1d4c62aebe0fca515f2e4647c7b7e32d221f69a95bf54988e",
+        "sha256_in_prefix": "ca7094697d1cbaa1d4c62aebe0fca515f2e4647c7b7e32d221f69a95bf54988e",
+        "size_in_bytes": 220096
+      },
+      {
+        "_path": "lib/R/library/SparseM/extdata/lsq.rra",
+        "path_type": "hardlink",
+        "sha256": "32ef3cf04c8eeb399e93945d68715b738a9bec60e1d14bc2476278406118ff3c",
+        "sha256_in_prefix": "32ef3cf04c8eeb399e93945d68715b738a9bec60e1d14bc2476278406118ff3c",
+        "size_in_bytes": 560196
+      },
+      {
+        "_path": "lib/R/library/SparseM/extdata/rua_32_ax.rua",
+        "path_type": "hardlink",
+        "sha256": "f3d59d28d7f19720996ed886711c804c29dadd12a68082d20e08abe73a661e07",
+        "sha256_in_prefix": "f3d59d28d7f19720996ed886711c804c29dadd12a68082d20e08abe73a661e07",
+        "size_in_bytes": 3455
+      },
+      {
+        "_path": "lib/R/library/SparseM/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "f5c689c9c48b5f12071747b166dd2d161df9eea82ee798c465e4af82a1f1a642",
+        "sha256_in_prefix": "f5c689c9c48b5f12071747b166dd2d161df9eea82ee798c465e4af82a1f1a642",
+        "size_in_bytes": 7586
+      },
+      {
+        "_path": "lib/R/library/SparseM/help/SparseM.rdb",
+        "path_type": "hardlink",
+        "sha256": "41818a00c8eeccf400a39141ce4e373735d3180c20419319b91bf186b5de6006",
+        "sha256_in_prefix": "41818a00c8eeccf400a39141ce4e373735d3180c20419319b91bf186b5de6006",
+        "size_in_bytes": 75981
+      },
+      {
+        "_path": "lib/R/library/SparseM/help/SparseM.rdx",
+        "path_type": "hardlink",
+        "sha256": "fd1cd6cc395e08716ce6bbf715f6a12fa5a8f60c9de604270a8326bb54d9188a",
+        "sha256_in_prefix": "fd1cd6cc395e08716ce6bbf715f6a12fa5a8f60c9de604270a8326bb54d9188a",
+        "size_in_bytes": 679
+      },
+      {
+        "_path": "lib/R/library/SparseM/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "7f6513714ab8715a9758178748d247ccf5ae98c4d3baf116dd57479340a04224",
+        "sha256_in_prefix": "7f6513714ab8715a9758178748d247ccf5ae98c4d3baf116dd57479340a04224",
+        "size_in_bytes": 1358
+      },
+      {
+        "_path": "lib/R/library/SparseM/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "57a4fd63e5b235361d7543d993eb7500cc524549fde46dfd29099232ed3f4673",
+        "sha256_in_prefix": "57a4fd63e5b235361d7543d993eb7500cc524549fde46dfd29099232ed3f4673",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/R/library/SparseM/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "0571351fc9f0b3da1da306dcc4b86aef0e1d7c03ca348c2a298395b1bf4b1cf4",
+        "sha256_in_prefix": "0571351fc9f0b3da1da306dcc4b86aef0e1d7c03ca348c2a298395b1bf4b1cf4",
+        "size_in_bytes": 19269
+      },
+      {
+        "_path": "lib/R/library/SparseM/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/SparseM/libs/SparseM.so",
+        "path_type": "hardlink",
+        "sha256": "9f0d14c73767c277be3fc0388ef507dcdc623319f189f0e6e8a1567b3f9cd3b4",
+        "sha256_in_prefix": "9f0d14c73767c277be3fc0388ef507dcdc623319f189f0e6e8a1567b3f9cd3b4",
+        "size_in_bytes": 92504
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "cc3b3c342198cc54ffeb0b95101eb5b4699ed78e3f1cc68dfd475794653149a4",
+  "size": 937445,
+  "subdir": "linux-64",
+  "timestamp": 1686758692000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-sparsem-1.81-r43h61816a4_2.conda",
+  "version": "1.81"
+}

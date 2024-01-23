@@ -1,0 +1,469 @@
+{
+  "build": "r43hc72bb7e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "r-codetools",
+    "r-iterators"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-foreach-1.5.2-r43hc72bb7e_2",
+  "files": [
+    "lib/R/library/foreach/DESCRIPTION",
+    "lib/R/library/foreach/INDEX",
+    "lib/R/library/foreach/Meta/Rd.rds",
+    "lib/R/library/foreach/Meta/demo.rds",
+    "lib/R/library/foreach/Meta/features.rds",
+    "lib/R/library/foreach/Meta/hsearch.rds",
+    "lib/R/library/foreach/Meta/links.rds",
+    "lib/R/library/foreach/Meta/nsInfo.rds",
+    "lib/R/library/foreach/Meta/package.rds",
+    "lib/R/library/foreach/Meta/vignette.rds",
+    "lib/R/library/foreach/NAMESPACE",
+    "lib/R/library/foreach/NEWS.md",
+    "lib/R/library/foreach/R/foreach",
+    "lib/R/library/foreach/R/foreach.rdb",
+    "lib/R/library/foreach/R/foreach.rdx",
+    "lib/R/library/foreach/demo/sincSEQ.R",
+    "lib/R/library/foreach/doc/foreach.R",
+    "lib/R/library/foreach/doc/foreach.Rmd",
+    "lib/R/library/foreach/doc/foreach.html",
+    "lib/R/library/foreach/doc/index.html",
+    "lib/R/library/foreach/doc/nested.R",
+    "lib/R/library/foreach/doc/nested.Rmd",
+    "lib/R/library/foreach/doc/nested.html",
+    "lib/R/library/foreach/examples/apply.R",
+    "lib/R/library/foreach/examples/bigmax.R",
+    "lib/R/library/foreach/examples/bigmean.R",
+    "lib/R/library/foreach/examples/bigmean2.R",
+    "lib/R/library/foreach/examples/bootpar.R",
+    "lib/R/library/foreach/examples/bootpar2.R",
+    "lib/R/library/foreach/examples/bootseq.R",
+    "lib/R/library/foreach/examples/colMeans.R",
+    "lib/R/library/foreach/examples/comprehensions.R",
+    "lib/R/library/foreach/examples/cross.R",
+    "lib/R/library/foreach/examples/feapply.R",
+    "lib/R/library/foreach/examples/for.R",
+    "lib/R/library/foreach/examples/germandata.txt",
+    "lib/R/library/foreach/examples/isplit.R",
+    "lib/R/library/foreach/examples/matmul.R",
+    "lib/R/library/foreach/examples/matmul2.R",
+    "lib/R/library/foreach/examples/output.R",
+    "lib/R/library/foreach/examples/pi.R",
+    "lib/R/library/foreach/examples/qsort.R",
+    "lib/R/library/foreach/examples/rf.R",
+    "lib/R/library/foreach/examples/sinc.R",
+    "lib/R/library/foreach/examples/sinc2.R",
+    "lib/R/library/foreach/examples/sqlite.R",
+    "lib/R/library/foreach/examples/tuneRF.R",
+    "lib/R/library/foreach/help/AnIndex",
+    "lib/R/library/foreach/help/aliases.rds",
+    "lib/R/library/foreach/help/foreach.rdb",
+    "lib/R/library/foreach/help/foreach.rdx",
+    "lib/R/library/foreach/help/paths.rds",
+    "lib/R/library/foreach/html/00Index.html",
+    "lib/R/library/foreach/html/R.css"
+  ],
+  "fn": "r-foreach-1.5.2-r43hc72bb7e_2.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-foreach-1.5.2-r43hc72bb7e_2",
+    "type": 1
+  },
+  "md5": "cf8d448c534caecc11d3999a041d4769",
+  "name": "r-foreach",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-foreach-1.5.2-r43hc72bb7e_2.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/foreach/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "6778f4a08a172fe59a9f3903250dd4c39abb4d9dadc309a0222cdf2def99566f",
+        "sha256_in_prefix": "6778f4a08a172fe59a9f3903250dd4c39abb4d9dadc309a0222cdf2def99566f",
+        "size_in_bytes": 1802
+      },
+      {
+        "_path": "lib/R/library/foreach/INDEX",
+        "path_type": "hardlink",
+        "sha256": "9e84a00cf70025b51484d5ab7e4f5de2e33ab78be6fe5b04fc6b612c46eddca8",
+        "sha256_in_prefix": "9e84a00cf70025b51484d5ab7e4f5de2e33ab78be6fe5b04fc6b612c46eddca8",
+        "size_in_bytes": 390
+      },
+      {
+        "_path": "lib/R/library/foreach/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "26d7e4a5e26721c0b860ef8930f3ccebb74845a5136d34beeab18385151042c8",
+        "sha256_in_prefix": "26d7e4a5e26721c0b860ef8930f3ccebb74845a5136d34beeab18385151042c8",
+        "size_in_bytes": 625
+      },
+      {
+        "_path": "lib/R/library/foreach/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "33558cbad92a8d3626d0e7d5496a97d1fbb2af7f1ae6ba2998e20bea5395c9d7",
+        "sha256_in_prefix": "33558cbad92a8d3626d0e7d5496a97d1fbb2af7f1ae6ba2998e20bea5395c9d7",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "lib/R/library/foreach/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/foreach/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "6500da9233b1c64e649b9ed9776690fd69678e78808878d6a3d1980cb5a57bf6",
+        "sha256_in_prefix": "6500da9233b1c64e649b9ed9776690fd69678e78808878d6a3d1980cb5a57bf6",
+        "size_in_bytes": 657
+      },
+      {
+        "_path": "lib/R/library/foreach/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "f9119c081855cd6a9a8975434e8d32e819f6900a5b89b61517ea72fc3cfe10e5",
+        "sha256_in_prefix": "f9119c081855cd6a9a8975434e8d32e819f6900a5b89b61517ea72fc3cfe10e5",
+        "size_in_bytes": 422
+      },
+      {
+        "_path": "lib/R/library/foreach/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "bf6b90011a5cdc842f75cff03c5115c046a7c788098a3dec601281b81777ddc3",
+        "sha256_in_prefix": "bf6b90011a5cdc842f75cff03c5115c046a7c788098a3dec601281b81777ddc3",
+        "size_in_bytes": 485
+      },
+      {
+        "_path": "lib/R/library/foreach/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "1690a2efa79918f9748997878faad6e0f1e905be0de2a192a712cc3ea5fd1523",
+        "sha256_in_prefix": "1690a2efa79918f9748997878faad6e0f1e905be0de2a192a712cc3ea5fd1523",
+        "size_in_bytes": 1379
+      },
+      {
+        "_path": "lib/R/library/foreach/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "cb0f27d35dd6dcfcae12a39408a324063cfa13834a06773132b4685d095cfecf",
+        "sha256_in_prefix": "cb0f27d35dd6dcfcae12a39408a324063cfa13834a06773132b4685d095cfecf",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "lib/R/library/foreach/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "7b74dc8ce976ebd10ad7b51c5e39ec0963238915bbce743cca0fbe804a044b76",
+        "sha256_in_prefix": "7b74dc8ce976ebd10ad7b51c5e39ec0963238915bbce743cca0fbe804a044b76",
+        "size_in_bytes": 1219
+      },
+      {
+        "_path": "lib/R/library/foreach/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "c1b6a407ea2c7b68071ac72dd3fe54a9272dbd89ce354eb1f0dbc07b5a9b3a31",
+        "sha256_in_prefix": "c1b6a407ea2c7b68071ac72dd3fe54a9272dbd89ce354eb1f0dbc07b5a9b3a31",
+        "size_in_bytes": 3351
+      },
+      {
+        "_path": "lib/R/library/foreach/R/foreach",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/foreach/R/foreach.rdb",
+        "path_type": "hardlink",
+        "sha256": "12e6929dab36e2df3b448622de08b3760344951b5534c085cd73b93c727d11eb",
+        "sha256_in_prefix": "12e6929dab36e2df3b448622de08b3760344951b5534c085cd73b93c727d11eb",
+        "size_in_bytes": 49424
+      },
+      {
+        "_path": "lib/R/library/foreach/R/foreach.rdx",
+        "path_type": "hardlink",
+        "sha256": "6573007cce39622101128caa922c9ec70b82e0f30f2b88205c233ef5257d41fe",
+        "sha256_in_prefix": "6573007cce39622101128caa922c9ec70b82e0f30f2b88205c233ef5257d41fe",
+        "size_in_bytes": 982
+      },
+      {
+        "_path": "lib/R/library/foreach/demo/sincSEQ.R",
+        "path_type": "hardlink",
+        "sha256": "9f16e6cd9fbee01d87a8567805f9e7c658caf672e7703c78aae16976745c0ec9",
+        "sha256_in_prefix": "9f16e6cd9fbee01d87a8567805f9e7c658caf672e7703c78aae16976745c0ec9",
+        "size_in_bytes": 943
+      },
+      {
+        "_path": "lib/R/library/foreach/doc/foreach.R",
+        "path_type": "hardlink",
+        "sha256": "54ae2574ead3b87586b042ac514ccd92d3cd7ff42ee3d8d7390fd531cf155d7e",
+        "sha256_in_prefix": "54ae2574ead3b87586b042ac514ccd92d3cd7ff42ee3d8d7390fd531cf155d7e",
+        "size_in_bytes": 5468
+      },
+      {
+        "_path": "lib/R/library/foreach/doc/foreach.Rmd",
+        "path_type": "hardlink",
+        "sha256": "af8f6ae6580fc9d61cf28c641c5e16f4880eccfc116f7839b677c7ac40cbb035",
+        "sha256_in_prefix": "af8f6ae6580fc9d61cf28c641c5e16f4880eccfc116f7839b677c7ac40cbb035",
+        "size_in_bytes": 18478
+      },
+      {
+        "_path": "lib/R/library/foreach/doc/foreach.html",
+        "path_type": "hardlink",
+        "sha256": "26fe71ba1be1861b68f818d647e02aa7c655946cbce71c7daa29859510cd81eb",
+        "sha256_in_prefix": "26fe71ba1be1861b68f818d647e02aa7c655946cbce71c7daa29859510cd81eb",
+        "size_in_bytes": 56694
+      },
+      {
+        "_path": "lib/R/library/foreach/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "bf68cf8db25ef589eed03762c212ba81664712ad1a926cff20605202acee17cc",
+        "sha256_in_prefix": "bf68cf8db25ef589eed03762c212ba81664712ad1a926cff20605202acee17cc",
+        "size_in_bytes": 1879
+      },
+      {
+        "_path": "lib/R/library/foreach/doc/nested.R",
+        "path_type": "hardlink",
+        "sha256": "23e80dfd5943afda2ef57a0b9393b803745c74c15207bbd2e39789377fab6030",
+        "sha256_in_prefix": "23e80dfd5943afda2ef57a0b9393b803745c74c15207bbd2e39789377fab6030",
+        "size_in_bytes": 2607
+      },
+      {
+        "_path": "lib/R/library/foreach/doc/nested.Rmd",
+        "path_type": "hardlink",
+        "sha256": "5660797b23bb4f51afe96d185fcf3e6775b23738872f5fc74a1c72e501a7eb8e",
+        "sha256_in_prefix": "5660797b23bb4f51afe96d185fcf3e6775b23738872f5fc74a1c72e501a7eb8e",
+        "size_in_bytes": 11197
+      },
+      {
+        "_path": "lib/R/library/foreach/doc/nested.html",
+        "path_type": "hardlink",
+        "sha256": "fb016daed489f7d85c619404e5eeea99a0735cf6825db2a6ca201854bdc4ac04",
+        "sha256_in_prefix": "fb016daed489f7d85c619404e5eeea99a0735cf6825db2a6ca201854bdc4ac04",
+        "size_in_bytes": 33703
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/apply.R",
+        "path_type": "hardlink",
+        "sha256": "cfa152b3ee745d49132647522e5ea3c2ad851240bf7be2d4bb39aebd092927d8",
+        "sha256_in_prefix": "cfa152b3ee745d49132647522e5ea3c2ad851240bf7be2d4bb39aebd092927d8",
+        "size_in_bytes": 4671
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/bigmax.R",
+        "path_type": "hardlink",
+        "sha256": "b25654e224e1b1035b6e786905e726b96fe7a97f818a8dd39eff102d1def01e1",
+        "sha256_in_prefix": "b25654e224e1b1035b6e786905e726b96fe7a97f818a8dd39eff102d1def01e1",
+        "size_in_bytes": 1252
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/bigmean.R",
+        "path_type": "hardlink",
+        "sha256": "9ecded398d862f291fea44a2e6ccc9b1bfa3e6fe7c1422498628a6c5c5aa60b4",
+        "sha256_in_prefix": "9ecded398d862f291fea44a2e6ccc9b1bfa3e6fe7c1422498628a6c5c5aa60b4",
+        "size_in_bytes": 1441
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/bigmean2.R",
+        "path_type": "hardlink",
+        "sha256": "34778c8bd710a6c86bfbef97f735bea67291e46e7bd915b294fb7bf244f53c7c",
+        "sha256_in_prefix": "34778c8bd710a6c86bfbef97f735bea67291e46e7bd915b294fb7bf244f53c7c",
+        "size_in_bytes": 922
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/bootpar.R",
+        "path_type": "hardlink",
+        "sha256": "36278d6f930165988996c3829c901731817f8c1b94e2dcd73ac032023a23f76f",
+        "sha256_in_prefix": "36278d6f930165988996c3829c901731817f8c1b94e2dcd73ac032023a23f76f",
+        "size_in_bytes": 568
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/bootpar2.R",
+        "path_type": "hardlink",
+        "sha256": "9d6c9fffa8355b1703e61120d99f0f365d6ea9ab729bf6b6f07090198825b965",
+        "sha256_in_prefix": "9d6c9fffa8355b1703e61120d99f0f365d6ea9ab729bf6b6f07090198825b965",
+        "size_in_bytes": 678
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/bootseq.R",
+        "path_type": "hardlink",
+        "sha256": "8a085776a0739be030e0cd67bec091607b84437504b23710b536b8678343a54a",
+        "sha256_in_prefix": "8a085776a0739be030e0cd67bec091607b84437504b23710b536b8678343a54a",
+        "size_in_bytes": 534
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/colMeans.R",
+        "path_type": "hardlink",
+        "sha256": "4c23d3398f1fb8229d125300bfe743f099823de755fd5089e57ff7051bb3322a",
+        "sha256_in_prefix": "4c23d3398f1fb8229d125300bfe743f099823de755fd5089e57ff7051bb3322a",
+        "size_in_bytes": 518
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/comprehensions.R",
+        "path_type": "hardlink",
+        "sha256": "9ad877e72a0d44af4699be67677b8f2950829fa1d028d965d550730d4edb82a5",
+        "sha256_in_prefix": "9ad877e72a0d44af4699be67677b8f2950829fa1d028d965d550730d4edb82a5",
+        "size_in_bytes": 764
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/cross.R",
+        "path_type": "hardlink",
+        "sha256": "4fae64fe4445066aba553d1bec0278ac0494f8f2dc9b02940dad301aa443b6ba",
+        "sha256_in_prefix": "4fae64fe4445066aba553d1bec0278ac0494f8f2dc9b02940dad301aa443b6ba",
+        "size_in_bytes": 833
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/feapply.R",
+        "path_type": "hardlink",
+        "sha256": "cf75d5fe2db53aaf8b743290fb6bf12e0aabd45dfeac0d69b69691ac6eab0e61",
+        "sha256_in_prefix": "cf75d5fe2db53aaf8b743290fb6bf12e0aabd45dfeac0d69b69691ac6eab0e61",
+        "size_in_bytes": 638
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/for.R",
+        "path_type": "hardlink",
+        "sha256": "acd4fb1432ddf1f41f8ed5f5e6368a14f87bbb1117ccf51bfb690e1caa2df29f",
+        "sha256_in_prefix": "acd4fb1432ddf1f41f8ed5f5e6368a14f87bbb1117ccf51bfb690e1caa2df29f",
+        "size_in_bytes": 3095
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/germandata.txt",
+        "path_type": "hardlink",
+        "sha256": "2c08a33975cd7b278896e6fa494fe624cdbe21be0305147a15aa86103299fefc",
+        "sha256_in_prefix": "2c08a33975cd7b278896e6fa494fe624cdbe21be0305147a15aa86103299fefc",
+        "size_in_bytes": 103000
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/isplit.R",
+        "path_type": "hardlink",
+        "sha256": "4ec6ee3f02342f9c9c5f13842e918d43c3a891c183a311eae90620ac3d97e0d1",
+        "sha256_in_prefix": "4ec6ee3f02342f9c9c5f13842e918d43c3a891c183a311eae90620ac3d97e0d1",
+        "size_in_bytes": 913
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/matmul.R",
+        "path_type": "hardlink",
+        "sha256": "38854c81ff42ee219eba9b2e16a97ed5102dcf6afceb5ab77be5b59a515f986a",
+        "sha256_in_prefix": "38854c81ff42ee219eba9b2e16a97ed5102dcf6afceb5ab77be5b59a515f986a",
+        "size_in_bytes": 342
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/matmul2.R",
+        "path_type": "hardlink",
+        "sha256": "f6f96389d3f887e9998e1748e8da7d13c45718c611977d19eded93c1b8d1bda8",
+        "sha256_in_prefix": "f6f96389d3f887e9998e1748e8da7d13c45718c611977d19eded93c1b8d1bda8",
+        "size_in_bytes": 827
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/output.R",
+        "path_type": "hardlink",
+        "sha256": "02697cbd9720ad4e7c120003f9ec712f0daccfd3f8deaa3094a24af5e4b5d946",
+        "sha256_in_prefix": "02697cbd9720ad4e7c120003f9ec712f0daccfd3f8deaa3094a24af5e4b5d946",
+        "size_in_bytes": 893
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/pi.R",
+        "path_type": "hardlink",
+        "sha256": "b916a1a49362b8741f7444b6c458c47aad64953010a54c7cc1c727a623e723fe",
+        "sha256_in_prefix": "b916a1a49362b8741f7444b6c458c47aad64953010a54c7cc1c727a623e723fe",
+        "size_in_bytes": 219
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/qsort.R",
+        "path_type": "hardlink",
+        "sha256": "119c7052ff5c6bf07ab7e15d6f2ce00fef281985d96e1ac5757e384075f533df",
+        "sha256_in_prefix": "119c7052ff5c6bf07ab7e15d6f2ce00fef281985d96e1ac5757e384075f533df",
+        "size_in_bytes": 385
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/rf.R",
+        "path_type": "hardlink",
+        "sha256": "b19d8fb627ba39e369e02a5c960d79b1628ff00a32c76907f766348443888f97",
+        "sha256_in_prefix": "b19d8fb627ba39e369e02a5c960d79b1628ff00a32c76907f766348443888f97",
+        "size_in_bytes": 649
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/sinc.R",
+        "path_type": "hardlink",
+        "sha256": "1771b095074ec3019d131d1c601f0c9130b1381f6cdbbfdb228d4a2c23d18139",
+        "sha256_in_prefix": "1771b095074ec3019d131d1c601f0c9130b1381f6cdbbfdb228d4a2c23d18139",
+        "size_in_bytes": 690
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/sinc2.R",
+        "path_type": "hardlink",
+        "sha256": "48ef606150dde2b4acd1c8afbe0d7f97529f2b011ef0f8bb2bc126b8432086e0",
+        "sha256_in_prefix": "48ef606150dde2b4acd1c8afbe0d7f97529f2b011ef0f8bb2bc126b8432086e0",
+        "size_in_bytes": 972
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/sqlite.R",
+        "path_type": "hardlink",
+        "sha256": "60e27575023f99ee7481e45c0140e6a89f0ee07de595d52808461e473af501df",
+        "sha256_in_prefix": "60e27575023f99ee7481e45c0140e6a89f0ee07de595d52808461e473af501df",
+        "size_in_bytes": 1087
+      },
+      {
+        "_path": "lib/R/library/foreach/examples/tuneRF.R",
+        "path_type": "hardlink",
+        "sha256": "8af15827f57eb331cce26c6fe7e062631dd2ec014fb227f778c686d4826584b9",
+        "sha256_in_prefix": "8af15827f57eb331cce26c6fe7e062631dd2ec014fb227f778c686d4826584b9",
+        "size_in_bytes": 1267
+      },
+      {
+        "_path": "lib/R/library/foreach/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "12c585ffb5513a31f673a4aeb97a1b18d7c744f8dcba8f38d245f65063e45ec1",
+        "sha256_in_prefix": "12c585ffb5513a31f673a4aeb97a1b18d7c744f8dcba8f38d245f65063e45ec1",
+        "size_in_bytes": 1094
+      },
+      {
+        "_path": "lib/R/library/foreach/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "eb4965337ea0aada4bb617bfd2653ad8d795577390ad077c7d1485cd808c4152",
+        "sha256_in_prefix": "eb4965337ea0aada4bb617bfd2653ad8d795577390ad077c7d1485cd808c4152",
+        "size_in_bytes": 387
+      },
+      {
+        "_path": "lib/R/library/foreach/help/foreach.rdb",
+        "path_type": "hardlink",
+        "sha256": "d78949d814f360881b9d77a28c81edee3ce106dc374eaeff26fcad081733d76a",
+        "sha256_in_prefix": "d78949d814f360881b9d77a28c81edee3ce106dc374eaeff26fcad081733d76a",
+        "size_in_bytes": 23279
+      },
+      {
+        "_path": "lib/R/library/foreach/help/foreach.rdx",
+        "path_type": "hardlink",
+        "sha256": "7c04359c903aa1ad453d14611b2944d23f77be6f5f59e2598a0aa8351f0acd83",
+        "sha256_in_prefix": "7c04359c903aa1ad453d14611b2944d23f77be6f5f59e2598a0aa8351f0acd83",
+        "size_in_bytes": 339
+      },
+      {
+        "_path": "lib/R/library/foreach/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "04f6e356fe530ff42477286f6a2924b9abccfbab55090e3d91619e217d17dd8e",
+        "sha256_in_prefix": "04f6e356fe530ff42477286f6a2924b9abccfbab55090e3d91619e217d17dd8e",
+        "size_in_bytes": 229
+      },
+      {
+        "_path": "lib/R/library/foreach/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "70e2b2388a836334fff0bb4c7bd42088eea8ed53af639bd223e64f87db4cf4c8",
+        "sha256_in_prefix": "70e2b2388a836334fff0bb4c7bd42088eea8ed53af639bd223e64f87db4cf4c8",
+        "size_in_bytes": 5604
+      },
+      {
+        "_path": "lib/R/library/foreach/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d7a44ca5660110269d3d2ed13dca29af464fe678f65075b712d2e5e6e26faa49",
+  "size": 138560,
+  "subdir": "noarch",
+  "timestamp": 1686763381000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-foreach-1.5.2-r43hc72bb7e_2.conda",
+  "version": "1.5.2"
+}

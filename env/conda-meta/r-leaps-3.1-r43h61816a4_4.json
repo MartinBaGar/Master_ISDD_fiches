@@ -1,0 +1,204 @@
+{
+  "build": "r43h61816a4_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libgfortran-ng",
+    "libgfortran5 >=12.3.0",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-leaps-3.1-r43h61816a4_4",
+  "files": [
+    "lib/R/library/leaps/DESCRIPTION",
+    "lib/R/library/leaps/INDEX",
+    "lib/R/library/leaps/Meta/Rd.rds",
+    "lib/R/library/leaps/Meta/features.rds",
+    "lib/R/library/leaps/Meta/hsearch.rds",
+    "lib/R/library/leaps/Meta/links.rds",
+    "lib/R/library/leaps/Meta/nsInfo.rds",
+    "lib/R/library/leaps/Meta/package.rds",
+    "lib/R/library/leaps/NAMESPACE",
+    "lib/R/library/leaps/NEWS",
+    "lib/R/library/leaps/R/leaps",
+    "lib/R/library/leaps/R/leaps.rdb",
+    "lib/R/library/leaps/R/leaps.rdx",
+    "lib/R/library/leaps/help/AnIndex",
+    "lib/R/library/leaps/help/aliases.rds",
+    "lib/R/library/leaps/help/leaps.rdb",
+    "lib/R/library/leaps/help/leaps.rdx",
+    "lib/R/library/leaps/help/paths.rds",
+    "lib/R/library/leaps/html/00Index.html",
+    "lib/R/library/leaps/html/R.css",
+    "lib/R/library/leaps/libs/leaps.so"
+  ],
+  "fn": "r-leaps-3.1-r43h61816a4_4.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-leaps-3.1-r43h61816a4_4",
+    "type": 1
+  },
+  "md5": "50c30d66dbd429b9c06e58a4ee20ab8c",
+  "name": "r-leaps",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-leaps-3.1-r43h61816a4_4.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/leaps/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "8454a80d85a5ef24ae45351a60640d8f2184ce46e4b8c6937f95d7ec6617b550",
+        "sha256_in_prefix": "8454a80d85a5ef24ae45351a60640d8f2184ce46e4b8c6937f95d7ec6617b550",
+        "size_in_bytes": 484
+      },
+      {
+        "_path": "lib/R/library/leaps/INDEX",
+        "path_type": "hardlink",
+        "sha256": "a8152fcd9c261933212b6b51c27da6220f324224e9c43199ccd1611023ee46db",
+        "sha256_in_prefix": "a8152fcd9c261933212b6b51c27da6220f324224e9c43199ccd1611023ee46db",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/R/library/leaps/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "712080bd8b94a428282a1a67c99b319ec2521c3b2f977f0be8aace4b60256bb4",
+        "sha256_in_prefix": "712080bd8b94a428282a1a67c99b319ec2521c3b2f977f0be8aace4b60256bb4",
+        "size_in_bytes": 448
+      },
+      {
+        "_path": "lib/R/library/leaps/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/leaps/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "cf3d101c286c78adf82a86ff63866610aa220dc6c553f55a268ef0a98b26c8c4",
+        "sha256_in_prefix": "cf3d101c286c78adf82a86ff63866610aa220dc6c553f55a268ef0a98b26c8c4",
+        "size_in_bytes": 494
+      },
+      {
+        "_path": "lib/R/library/leaps/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "95293b746e3f77db8fddb25e8f2d30b392cd5ac8c79ec3ed9495cfc000f1473f",
+        "sha256_in_prefix": "95293b746e3f77db8fddb25e8f2d30b392cd5ac8c79ec3ed9495cfc000f1473f",
+        "size_in_bytes": 257
+      },
+      {
+        "_path": "lib/R/library/leaps/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "ed73f89b261077db1e314b3450830a4d26ac6d0eddd12024d89b860a2e37a27d",
+        "sha256_in_prefix": "ed73f89b261077db1e314b3450830a4d26ac6d0eddd12024d89b860a2e37a27d",
+        "size_in_bytes": 381
+      },
+      {
+        "_path": "lib/R/library/leaps/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "e39b7ed99fc1c88b2517a604027195483383d9f1c4707dbc4fe05c8920f5afde",
+        "sha256_in_prefix": "e39b7ed99fc1c88b2517a604027195483383d9f1c4707dbc4fe05c8920f5afde",
+        "size_in_bytes": 654
+      },
+      {
+        "_path": "lib/R/library/leaps/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "b6dfe0ca611c9a01cd02164b07ee12c011ec87a0e6b8cacaaa151eb706d081a3",
+        "sha256_in_prefix": "b6dfe0ca611c9a01cd02164b07ee12c011ec87a0e6b8cacaaa151eb706d081a3",
+        "size_in_bytes": 464
+      },
+      {
+        "_path": "lib/R/library/leaps/NEWS",
+        "path_type": "hardlink",
+        "sha256": "b7923dd9d11cb8b71a78e9c7866906d94718b1e44a1c75d10a29dc75b8382155",
+        "sha256_in_prefix": "b7923dd9d11cb8b71a78e9c7866906d94718b1e44a1c75d10a29dc75b8382155",
+        "size_in_bytes": 679
+      },
+      {
+        "_path": "lib/R/library/leaps/R/leaps",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/leaps/R/leaps.rdb",
+        "path_type": "hardlink",
+        "sha256": "1de98cdf41f82dc2c2e739ca688840662edfa3ad8c84834cae9ea6578e904cc5",
+        "sha256_in_prefix": "1de98cdf41f82dc2c2e739ca688840662edfa3ad8c84834cae9ea6578e904cc5",
+        "size_in_bytes": 46629
+      },
+      {
+        "_path": "lib/R/library/leaps/R/leaps.rdx",
+        "path_type": "hardlink",
+        "sha256": "9649a76b2478f2c47097346065e10eacec4c65652e7c14a63ca68ef5e188586b",
+        "sha256_in_prefix": "9649a76b2478f2c47097346065e10eacec4c65652e7c14a63ca68ef5e188586b",
+        "size_in_bytes": 515
+      },
+      {
+        "_path": "lib/R/library/leaps/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "79554aba2b67dd0ab57511acd38850ceaa0c891042305f23d8f07b487fe375bf",
+        "sha256_in_prefix": "79554aba2b67dd0ab57511acd38850ceaa0c891042305f23d8f07b487fe375bf",
+        "size_in_bytes": 433
+      },
+      {
+        "_path": "lib/R/library/leaps/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "2f8d2ea7831130a938df603e58c2bc2b9bce1f1ced6828fabac8b8e0ddc1ace0",
+        "sha256_in_prefix": "2f8d2ea7831130a938df603e58c2bc2b9bce1f1ced6828fabac8b8e0ddc1ace0",
+        "size_in_bytes": 223
+      },
+      {
+        "_path": "lib/R/library/leaps/help/leaps.rdb",
+        "path_type": "hardlink",
+        "sha256": "ca1d0ffcdb2a71916b05b107044286a5a7af78f524c53a8db9994016bc8889d3",
+        "sha256_in_prefix": "ca1d0ffcdb2a71916b05b107044286a5a7af78f524c53a8db9994016bc8889d3",
+        "size_in_bytes": 14352
+      },
+      {
+        "_path": "lib/R/library/leaps/help/leaps.rdx",
+        "path_type": "hardlink",
+        "sha256": "2a21b9ed2339517c82217d4d19a5c9a6caceab534ce3102bc2e103beabdeb807",
+        "sha256_in_prefix": "2a21b9ed2339517c82217d4d19a5c9a6caceab534ce3102bc2e103beabdeb807",
+        "size_in_bytes": 238
+      },
+      {
+        "_path": "lib/R/library/leaps/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "4ce1af1c11ce62d7cf6f11c2b1339e4488f4acfb5c4b7c49087edcd3e71fe76e",
+        "sha256_in_prefix": "4ce1af1c11ce62d7cf6f11c2b1339e4488f4acfb5c4b7c49087edcd3e71fe76e",
+        "size_in_bytes": 190
+      },
+      {
+        "_path": "lib/R/library/leaps/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "4e9dba3da435d39e09f4a7475ad1ba73d98a1fd1174c151b06216ae6ff573511",
+        "sha256_in_prefix": "4e9dba3da435d39e09f4a7475ad1ba73d98a1fd1174c151b06216ae6ff573511",
+        "size_in_bytes": 2992
+      },
+      {
+        "_path": "lib/R/library/leaps/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/leaps/libs/leaps.so",
+        "path_type": "hardlink",
+        "sha256": "73e4e2c8ed9f76e0a8be902ed70b28e0002c89d942f11b5d0beeb4663395452b",
+        "sha256_in_prefix": "73e4e2c8ed9f76e0a8be902ed70b28e0002c89d942f11b5d0beeb4663395452b",
+        "size_in_bytes": 32568
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ca74b45110f682a5ba302ab8418d0e7c7de987302bcdedd6d3451a33d65929be",
+  "size": 97008,
+  "subdir": "linux-64",
+  "timestamp": 1686824984000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-leaps-3.1-r43h61816a4_4.conda",
+  "version": "3.1"
+}

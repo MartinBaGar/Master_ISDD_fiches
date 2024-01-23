@@ -1,0 +1,555 @@
+{
+  "build": "r43hc72bb7e_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-cpp11-0.4.7-r43hc72bb7e_0",
+  "files": [
+    "lib/R/library/cpp11/DESCRIPTION",
+    "lib/R/library/cpp11/INDEX",
+    "lib/R/library/cpp11/LICENSE",
+    "lib/R/library/cpp11/Meta/Rd.rds",
+    "lib/R/library/cpp11/Meta/features.rds",
+    "lib/R/library/cpp11/Meta/hsearch.rds",
+    "lib/R/library/cpp11/Meta/links.rds",
+    "lib/R/library/cpp11/Meta/nsInfo.rds",
+    "lib/R/library/cpp11/Meta/package.rds",
+    "lib/R/library/cpp11/Meta/vignette.rds",
+    "lib/R/library/cpp11/NAMESPACE",
+    "lib/R/library/cpp11/NEWS.md",
+    "lib/R/library/cpp11/R/cpp11",
+    "lib/R/library/cpp11/R/cpp11.rdb",
+    "lib/R/library/cpp11/R/cpp11.rdx",
+    "lib/R/library/cpp11/doc/FAQ.R",
+    "lib/R/library/cpp11/doc/FAQ.Rmd",
+    "lib/R/library/cpp11/doc/FAQ.html",
+    "lib/R/library/cpp11/doc/converting.R",
+    "lib/R/library/cpp11/doc/converting.Rmd",
+    "lib/R/library/cpp11/doc/converting.html",
+    "lib/R/library/cpp11/doc/cpp11.R",
+    "lib/R/library/cpp11/doc/cpp11.Rmd",
+    "lib/R/library/cpp11/doc/cpp11.html",
+    "lib/R/library/cpp11/doc/index.html",
+    "lib/R/library/cpp11/doc/internals.R",
+    "lib/R/library/cpp11/doc/internals.Rmd",
+    "lib/R/library/cpp11/doc/internals.html",
+    "lib/R/library/cpp11/doc/motivations.R",
+    "lib/R/library/cpp11/doc/motivations.Rmd",
+    "lib/R/library/cpp11/doc/motivations.html",
+    "lib/R/library/cpp11/help/AnIndex",
+    "lib/R/library/cpp11/help/aliases.rds",
+    "lib/R/library/cpp11/help/cpp11.rdb",
+    "lib/R/library/cpp11/help/cpp11.rdx",
+    "lib/R/library/cpp11/help/paths.rds",
+    "lib/R/library/cpp11/html/00Index.html",
+    "lib/R/library/cpp11/html/R.css",
+    "lib/R/library/cpp11/include/cpp11.hpp",
+    "lib/R/library/cpp11/include/cpp11/R.hpp",
+    "lib/R/library/cpp11/include/cpp11/altrep.hpp",
+    "lib/R/library/cpp11/include/cpp11/as.hpp",
+    "lib/R/library/cpp11/include/cpp11/attribute_proxy.hpp",
+    "lib/R/library/cpp11/include/cpp11/data_frame.hpp",
+    "lib/R/library/cpp11/include/cpp11/declarations.hpp",
+    "lib/R/library/cpp11/include/cpp11/doubles.hpp",
+    "lib/R/library/cpp11/include/cpp11/environment.hpp",
+    "lib/R/library/cpp11/include/cpp11/external_pointer.hpp",
+    "lib/R/library/cpp11/include/cpp11/function.hpp",
+    "lib/R/library/cpp11/include/cpp11/integers.hpp",
+    "lib/R/library/cpp11/include/cpp11/list.hpp",
+    "lib/R/library/cpp11/include/cpp11/list_of.hpp",
+    "lib/R/library/cpp11/include/cpp11/logicals.hpp",
+    "lib/R/library/cpp11/include/cpp11/matrix.hpp",
+    "lib/R/library/cpp11/include/cpp11/named_arg.hpp",
+    "lib/R/library/cpp11/include/cpp11/protect.hpp",
+    "lib/R/library/cpp11/include/cpp11/r_bool.hpp",
+    "lib/R/library/cpp11/include/cpp11/r_string.hpp",
+    "lib/R/library/cpp11/include/cpp11/r_vector.hpp",
+    "lib/R/library/cpp11/include/cpp11/raws.hpp",
+    "lib/R/library/cpp11/include/cpp11/sexp.hpp",
+    "lib/R/library/cpp11/include/cpp11/strings.hpp",
+    "lib/R/library/cpp11/include/fmt/core.h",
+    "lib/R/library/cpp11/include/fmt/format-inl.h",
+    "lib/R/library/cpp11/include/fmt/format.h"
+  ],
+  "fn": "r-cpp11-0.4.7-r43hc72bb7e_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-cpp11-0.4.7-r43hc72bb7e_0",
+    "type": 1
+  },
+  "md5": "c9ec548d90ba0c4de83a14dab499d015",
+  "name": "r-cpp11",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-cpp11-0.4.7-r43hc72bb7e_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/cpp11/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "a01b9f3451517f2ae375c5282981c8d32ce77f7e3a7c7868fe4058123f5ed281",
+        "sha256_in_prefix": "a01b9f3451517f2ae375c5282981c8d32ce77f7e3a7c7868fe4058123f5ed281",
+        "size_in_bytes": 1864
+      },
+      {
+        "_path": "lib/R/library/cpp11/INDEX",
+        "path_type": "hardlink",
+        "sha256": "fb87aca3c176244b8971af56bbd884e4190808b129e7bfd01577db59a609ccab",
+        "sha256_in_prefix": "fb87aca3c176244b8971af56bbd884e4190808b129e7bfd01577db59a609ccab",
+        "size_in_bytes": 165
+      },
+      {
+        "_path": "lib/R/library/cpp11/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "84119b56da00767ba3cd75a7a0b37dd9bf974b8760fb425cb36bd72dcf004612",
+        "sha256_in_prefix": "84119b56da00767ba3cd75a7a0b37dd9bf974b8760fb425cb36bd72dcf004612",
+        "size_in_bytes": 49
+      },
+      {
+        "_path": "lib/R/library/cpp11/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "d715fd61463683a43936628a4d07140d0b6369b578f65f2d42c761cbdc81c84f",
+        "sha256_in_prefix": "d715fd61463683a43936628a4d07140d0b6369b578f65f2d42c761cbdc81c84f",
+        "size_in_bytes": 399
+      },
+      {
+        "_path": "lib/R/library/cpp11/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "sha256_in_prefix": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/cpp11/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "833dd256dd8ecefd9cb4248282ae0ed9a7692cff2f9fb1e8bd48a1b910c3a3ed",
+        "sha256_in_prefix": "833dd256dd8ecefd9cb4248282ae0ed9a7692cff2f9fb1e8bd48a1b910c3a3ed",
+        "size_in_bytes": 422
+      },
+      {
+        "_path": "lib/R/library/cpp11/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "d75032bf71f1f9a045f6a0a074dd58cac348e4d55e119f99839bd3ec076e734f",
+        "sha256_in_prefix": "d75032bf71f1f9a045f6a0a074dd58cac348e4d55e119f99839bd3ec076e734f",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "lib/R/library/cpp11/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "c9246d2229c00b88b3808e9fe050a8531dd1afc8ec0bb4fa42fcffe65fe0ace0",
+        "sha256_in_prefix": "c9246d2229c00b88b3808e9fe050a8531dd1afc8ec0bb4fa42fcffe65fe0ace0",
+        "size_in_bytes": 239
+      },
+      {
+        "_path": "lib/R/library/cpp11/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "bcf86af19b1f942acf338c70ff066b5080e3ba0b754420eb61f97e650d386642",
+        "sha256_in_prefix": "bcf86af19b1f942acf338c70ff066b5080e3ba0b754420eb61f97e650d386642",
+        "size_in_bytes": 1549
+      },
+      {
+        "_path": "lib/R/library/cpp11/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "ef547d7be0ab80bef63f952b69e61de4f8cde89c83af38ec11ca64409486da23",
+        "sha256_in_prefix": "ef547d7be0ab80bef63f952b69e61de4f8cde89c83af38ec11ca64409486da23",
+        "size_in_bytes": 318
+      },
+      {
+        "_path": "lib/R/library/cpp11/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "68bf39d096d4f817961a716e81decc7a22d32667ffd4d9df1f72655c29e76d96",
+        "sha256_in_prefix": "68bf39d096d4f817961a716e81decc7a22d32667ffd4d9df1f72655c29e76d96",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/R/library/cpp11/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "100fa0dd6839aa5755c3bd00d596eab731b910f1e90e95a493322b6902940279",
+        "sha256_in_prefix": "100fa0dd6839aa5755c3bd00d596eab731b910f1e90e95a493322b6902940279",
+        "size_in_bytes": 9409
+      },
+      {
+        "_path": "lib/R/library/cpp11/R/cpp11",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/cpp11/R/cpp11.rdb",
+        "path_type": "hardlink",
+        "sha256": "7c9a475d9160812c242685d0f20fc5b40425e2ac28be896702220be41e421244",
+        "sha256_in_prefix": "7c9a475d9160812c242685d0f20fc5b40425e2ac28be896702220be41e421244",
+        "size_in_bytes": 31368
+      },
+      {
+        "_path": "lib/R/library/cpp11/R/cpp11.rdx",
+        "path_type": "hardlink",
+        "sha256": "bc284ef5a949bb27bcdf6d259fd4aaf70d91eafef1bbcc03ce4c591dd81df6a0",
+        "sha256_in_prefix": "bc284ef5a949bb27bcdf6d259fd4aaf70d91eafef1bbcc03ce4c591dd81df6a0",
+        "size_in_bytes": 748
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/FAQ.R",
+        "path_type": "hardlink",
+        "sha256": "815af7a6fd6fae6f9d9be20b90a2bb027905c40259d4cad5c54314a516d288ff",
+        "sha256_in_prefix": "815af7a6fd6fae6f9d9be20b90a2bb027905c40259d4cad5c54314a516d288ff",
+        "size_in_bytes": 1408
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/FAQ.Rmd",
+        "path_type": "hardlink",
+        "sha256": "dda357cb7a9dca494757b963e63d55e2b0567886f3a84bb99a034e6da305fa54",
+        "sha256_in_prefix": "dda357cb7a9dca494757b963e63d55e2b0567886f3a84bb99a034e6da305fa54",
+        "size_in_bytes": 13836
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/FAQ.html",
+        "path_type": "hardlink",
+        "sha256": "32d9ae97afc7cbd6221532728929b47ba37c90900928b8dffb84a2012fa9f98d",
+        "sha256_in_prefix": "32d9ae97afc7cbd6221532728929b47ba37c90900928b8dffb84a2012fa9f98d",
+        "size_in_bytes": 57546
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/converting.R",
+        "path_type": "hardlink",
+        "sha256": "02bb9f783793efe29e368c15a4a98c3f50be53f354b8e83e1e2d47dd2fc7972c",
+        "sha256_in_prefix": "02bb9f783793efe29e368c15a4a98c3f50be53f354b8e83e1e2d47dd2fc7972c",
+        "size_in_bytes": 292
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/converting.Rmd",
+        "path_type": "hardlink",
+        "sha256": "5080477e1f583536950a05e15758a833d80ab5714941f9b95eb61e4fe349bb66",
+        "sha256_in_prefix": "5080477e1f583536950a05e15758a833d80ab5714941f9b95eb61e4fe349bb66",
+        "size_in_bytes": 8950
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/converting.html",
+        "path_type": "hardlink",
+        "sha256": "dffddce0f6702df1def8fe6783ff3c913a3ecd975814382229f578ef3eede47d",
+        "sha256_in_prefix": "dffddce0f6702df1def8fe6783ff3c913a3ecd975814382229f578ef3eede47d",
+        "size_in_bytes": 23478
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/cpp11.R",
+        "path_type": "hardlink",
+        "sha256": "30f7c6b6b66fddf9cbb405411a8c8ba8885dedab0c0166b842b7b011b59dae89",
+        "sha256_in_prefix": "30f7c6b6b66fddf9cbb405411a8c8ba8885dedab0c0166b842b7b011b59dae89",
+        "size_in_bytes": 5791
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/cpp11.Rmd",
+        "path_type": "hardlink",
+        "sha256": "342cf0a44dc2e531cb21d88e55e338aa7f4f48a5f1cb1fa0ebf52feed8c8fab2",
+        "sha256_in_prefix": "342cf0a44dc2e531cb21d88e55e338aa7f4f48a5f1cb1fa0ebf52feed8c8fab2",
+        "size_in_bytes": 41940
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/cpp11.html",
+        "path_type": "hardlink",
+        "sha256": "9ba13a385d4fdd23bfb2dcc9f75013889728b4e12535df23608b3b62f381d25f",
+        "sha256_in_prefix": "9ba13a385d4fdd23bfb2dcc9f75013889728b4e12535df23608b3b62f381d25f",
+        "size_in_bytes": 123672
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "98cb4cc4d334479ba9d9b3fe528136138cc3c414f673d7cb43f4029fe65bf3cb",
+        "sha256_in_prefix": "98cb4cc4d334479ba9d9b3fe528136138cc3c414f673d7cb43f4029fe65bf3cb",
+        "size_in_bytes": 3427
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/internals.R",
+        "path_type": "hardlink",
+        "sha256": "aa4815a0e40b4fcda0ff81b151bd8fc410ac3fb26580519cabd8bc32a8c326b2",
+        "sha256_in_prefix": "aa4815a0e40b4fcda0ff81b151bd8fc410ac3fb26580519cabd8bc32a8c326b2",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/internals.Rmd",
+        "path_type": "hardlink",
+        "sha256": "e2d1cb442277a058fc8c968feb7bae8fbd83578c59cc6a3ee10ae22126f8b95b",
+        "sha256_in_prefix": "e2d1cb442277a058fc8c968feb7bae8fbd83578c59cc6a3ee10ae22126f8b95b",
+        "size_in_bytes": 8770
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/internals.html",
+        "path_type": "hardlink",
+        "sha256": "b55011e8bd26a3fc9a58cf30335277db9ffa1185d030f407c0ea99536037c605",
+        "sha256_in_prefix": "b55011e8bd26a3fc9a58cf30335277db9ffa1185d030f407c0ea99536037c605",
+        "size_in_bytes": 20192
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/motivations.R",
+        "path_type": "hardlink",
+        "sha256": "928799a1e49d07d359529ff714b819f3d264674bed94eed068b2138030e62d92",
+        "sha256_in_prefix": "928799a1e49d07d359529ff714b819f3d264674bed94eed068b2138030e62d92",
+        "size_in_bytes": 5553
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/motivations.Rmd",
+        "path_type": "hardlink",
+        "sha256": "52c9ca9b19535bce35faed78601348b1e033c418ea24f0979a754d88666965a9",
+        "sha256_in_prefix": "52c9ca9b19535bce35faed78601348b1e033c418ea24f0979a754d88666965a9",
+        "size_in_bytes": 21826
+      },
+      {
+        "_path": "lib/R/library/cpp11/doc/motivations.html",
+        "path_type": "hardlink",
+        "sha256": "76c6f97129509fc0b6651dcdee392fa1b78c29820db9275f62a76d878e5875f5",
+        "sha256_in_prefix": "76c6f97129509fc0b6651dcdee392fa1b78c29820db9275f62a76d878e5875f5",
+        "size_in_bytes": 177322
+      },
+      {
+        "_path": "lib/R/library/cpp11/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "f5f23520b8bbef5a7c7b7fe399c7750b66138a96023a2ce086dcadfa712763e0",
+        "sha256_in_prefix": "f5f23520b8bbef5a7c7b7fe399c7750b66138a96023a2ce086dcadfa712763e0",
+        "size_in_bytes": 162
+      },
+      {
+        "_path": "lib/R/library/cpp11/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "7c04ba2f99535be77eb2ac58c75ec993408cc072d3a6ae6a029bb589b70f8e05",
+        "sha256_in_prefix": "7c04ba2f99535be77eb2ac58c75ec993408cc072d3a6ae6a029bb589b70f8e05",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/R/library/cpp11/help/cpp11.rdb",
+        "path_type": "hardlink",
+        "sha256": "da6bcdbb93adf3b16efb216eba4b2522f8968499c941f0fe045a0b06baa026a1",
+        "sha256_in_prefix": "da6bcdbb93adf3b16efb216eba4b2522f8968499c941f0fe045a0b06baa026a1",
+        "size_in_bytes": 10686
+      },
+      {
+        "_path": "lib/R/library/cpp11/help/cpp11.rdx",
+        "path_type": "hardlink",
+        "sha256": "e56d76df43784704fd636dbe3a6a259a19ae340eb9331147d2db382463376415",
+        "sha256_in_prefix": "e56d76df43784704fd636dbe3a6a259a19ae340eb9331147d2db382463376415",
+        "size_in_bytes": 248
+      },
+      {
+        "_path": "lib/R/library/cpp11/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "2f902d215e3c0fa3092bd79c16f130961b3f816ca65b64e6d6b32eb01b019269",
+        "sha256_in_prefix": "2f902d215e3c0fa3092bd79c16f130961b3f816ca65b64e6d6b32eb01b019269",
+        "size_in_bytes": 194
+      },
+      {
+        "_path": "lib/R/library/cpp11/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "cf6d48db4dc02b3a8350ded51a19a40e218cabf6342b08392a08e9e90226b89b",
+        "sha256_in_prefix": "cf6d48db4dc02b3a8350ded51a19a40e218cabf6342b08392a08e9e90226b89b",
+        "size_in_bytes": 1658
+      },
+      {
+        "_path": "lib/R/library/cpp11/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11.hpp",
+        "path_type": "hardlink",
+        "sha256": "666d30509815c58d1f89b6e2cf7aac55ff1f8a86e26cc1a67c96512f97a83786",
+        "sha256_in_prefix": "666d30509815c58d1f89b6e2cf7aac55ff1f8a86e26cc1a67c96512f97a83786",
+        "size_in_bytes": 660
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/R.hpp",
+        "path_type": "hardlink",
+        "sha256": "b882fd9dc82f5016416211a49f7acdb28757afbdabdf809622cd321a65688714",
+        "sha256_in_prefix": "b882fd9dc82f5016416211a49f7acdb28757afbdabdf809622cd321a65688714",
+        "size_in_bytes": 1338
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/altrep.hpp",
+        "path_type": "hardlink",
+        "sha256": "7b09a30a8149915859d17c0a9efb706ba3091746d3e4b4664b68689e0de36138",
+        "sha256_in_prefix": "7b09a30a8149915859d17c0a9efb706ba3091746d3e4b4664b68689e0de36138",
+        "size_in_bytes": 952
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/as.hpp",
+        "path_type": "hardlink",
+        "sha256": "009e7cab13561d250ce44d298c22c92adea8c71b5949da1253d8d93869896f78",
+        "sha256_in_prefix": "009e7cab13561d250ce44d298c22c92adea8c71b5949da1253d8d93869896f78",
+        "size_in_bytes": 9853
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/attribute_proxy.hpp",
+        "path_type": "hardlink",
+        "sha256": "4948cbfaa5449dc741f8a783e41ae2396ed2b4a665dc4247add98d108838d87b",
+        "sha256_in_prefix": "4948cbfaa5449dc741f8a783e41ae2396ed2b4a665dc4247add98d108838d87b",
+        "size_in_bytes": 1302
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/data_frame.hpp",
+        "path_type": "hardlink",
+        "sha256": "40db138201b0b97e3f01056720313c8bf201c8ce7fbff40d4bbec7b0bde12d6f",
+        "sha256_in_prefix": "40db138201b0b97e3f01056720313c8bf201c8ce7fbff40d4bbec7b0bde12d6f",
+        "size_in_bytes": 2971
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/declarations.hpp",
+        "path_type": "hardlink",
+        "sha256": "93ed62ea5f42c72439dc8395dfd961e597e1bd370e7e0fd98796333e56fcee02",
+        "sha256_in_prefix": "93ed62ea5f42c72439dc8395dfd961e597e1bd370e7e0fd98796333e56fcee02",
+        "size_in_bytes": 2508
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/doubles.hpp",
+        "path_type": "hardlink",
+        "sha256": "777662f126a1547bb9431a63d9d77a64d9d27b0d5d85bbc674c37ed134a1ef0d",
+        "sha256_in_prefix": "777662f126a1547bb9431a63d9d77a64d9d27b0d5d85bbc674c37ed134a1ef0d",
+        "size_in_bytes": 4342
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/environment.hpp",
+        "path_type": "hardlink",
+        "sha256": "0ddc43a4acc9de7adb173e6ea3f2700061765d34984e425d8ad88ce3f450921f",
+        "sha256_in_prefix": "0ddc43a4acc9de7adb173e6ea3f2700061765d34984e425d8ad88ce3f450921f",
+        "size_in_bytes": 2041
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/external_pointer.hpp",
+        "path_type": "hardlink",
+        "sha256": "7a1fe80dadc3183840dae3f523c243f264670942856cc4fc0f924532b0e55516",
+        "sha256_in_prefix": "7a1fe80dadc3183840dae3f523c243f264670942856cc4fc0f924532b0e55516",
+        "size_in_bytes": 4216
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/function.hpp",
+        "path_type": "hardlink",
+        "sha256": "20204a6a624849d9c55eb6897e944c2b33f08ed4f77cee2119a160e1efbeeee8",
+        "sha256_in_prefix": "20204a6a624849d9c55eb6897e944c2b33f08ed4f77cee2119a160e1efbeeee8",
+        "size_in_bytes": 3184
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/integers.hpp",
+        "path_type": "hardlink",
+        "sha256": "32be27066f60211165bd4a7db18ff26c010c63abc8f9641c328bd4bc98dcfb8c",
+        "sha256_in_prefix": "32be27066f60211165bd4a7db18ff26c010c63abc8f9641c328bd4bc98dcfb8c",
+        "size_in_bytes": 4638
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/list.hpp",
+        "path_type": "hardlink",
+        "sha256": "dca35956c2324bce00aac77fd311ffb8f9f1e2cd0158a437a41342698e850cff",
+        "sha256_in_prefix": "dca35956c2324bce00aac77fd311ffb8f9f1e2cd0158a437a41342698e850cff",
+        "size_in_bytes": 3650
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/list_of.hpp",
+        "path_type": "hardlink",
+        "sha256": "c105657406d850df82ce5e1224696ee7ca800a0782fbfc3e79ae812e459b4f9b",
+        "sha256_in_prefix": "c105657406d850df82ce5e1224696ee7ca800a0782fbfc3e79ae812e459b4f9b",
+        "size_in_bytes": 2002
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/logicals.hpp",
+        "path_type": "hardlink",
+        "sha256": "8c19b02679ed3ea4660e59d9d7f04593069009419467858fb7da6572f6bb0ed9",
+        "sha256_in_prefix": "8c19b02679ed3ea4660e59d9d7f04593069009419467858fb7da6572f6bb0ed9",
+        "size_in_bytes": 3955
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/matrix.hpp",
+        "path_type": "hardlink",
+        "sha256": "2939be9e7495ddcf4f29d92ac75d160331dc19f0e3402fd9473461a657bf7620",
+        "sha256_in_prefix": "2939be9e7495ddcf4f29d92ac75d160331dc19f0e3402fd9473461a657bf7620",
+        "size_in_bytes": 6781
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/named_arg.hpp",
+        "path_type": "hardlink",
+        "sha256": "6e6a12c2ffc54ba09058d8f646e3a87697b18100f23b44f0b103d848136f635f",
+        "sha256_in_prefix": "6e6a12c2ffc54ba09058d8f646e3a87697b18100f23b44f0b103d848136f635f",
+        "size_in_bytes": 1030
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/protect.hpp",
+        "path_type": "hardlink",
+        "sha256": "904151727b8b3bcae075bb6819a434d41fda3f2050aa18192765c31da9f8e837",
+        "sha256_in_prefix": "904151727b8b3bcae075bb6819a434d41fda3f2050aa18192765c31da9f8e837",
+        "size_in_bytes": 10175
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/r_bool.hpp",
+        "path_type": "hardlink",
+        "sha256": "9d77b0ec13b0f1b7169009279ba2a015efd980d813108aa52c5f412241aeb901",
+        "sha256_in_prefix": "9d77b0ec13b0f1b7169009279ba2a015efd980d813108aa52c5f412241aeb901",
+        "size_in_bytes": 2181
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/r_string.hpp",
+        "path_type": "hardlink",
+        "sha256": "dc789fff3210ad28a86e41809e0a533f6d789a1c9dff5ba76ce3eebccb7798ea",
+        "sha256_in_prefix": "dc789fff3210ad28a86e41809e0a533f6d789a1c9dff5ba76ce3eebccb7798ea",
+        "size_in_bytes": 2614
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/r_vector.hpp",
+        "path_type": "hardlink",
+        "sha256": "a4a44589868ee800334e11db420e9fb7dab50fc67802fca6d88d265c3edea9ed",
+        "sha256_in_prefix": "a4a44589868ee800334e11db420e9fb7dab50fc67802fca6d88d265c3edea9ed",
+        "size_in_bytes": 26486
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/raws.hpp",
+        "path_type": "hardlink",
+        "sha256": "2fc68f2dd5059d18a59b98f0725c7515036d8f0dd1ca530a0976bea3eeba3287",
+        "sha256_in_prefix": "2fc68f2dd5059d18a59b98f0725c7515036d8f0dd1ca530a0976bea3eeba3287",
+        "size_in_bytes": 4154
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/sexp.hpp",
+        "path_type": "hardlink",
+        "sha256": "86918e61d7302d8645478a1971e968f2652b019fc209fa57f2ef7a5090b7580c",
+        "sha256_in_prefix": "86918e61d7302d8645478a1971e968f2652b019fc209fa57f2ef7a5090b7580c",
+        "size_in_bytes": 2221
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/cpp11/strings.hpp",
+        "path_type": "hardlink",
+        "sha256": "de1bfde628ff259d9d52e0c561b30621e066fc634272bc5b453dd518d88319de",
+        "sha256_in_prefix": "de1bfde628ff259d9d52e0c561b30621e066fc634272bc5b453dd518d88319de",
+        "size_in_bytes": 5157
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/fmt/core.h",
+        "path_type": "hardlink",
+        "sha256": "bc54dbc4d0293d225527aa557e4e15506a6e67d6463698b34a1ca2a15143f136",
+        "sha256_in_prefix": "bc54dbc4d0293d225527aa557e4e15506a6e67d6463698b34a1ca2a15143f136",
+        "size_in_bytes": 98242
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/fmt/format-inl.h",
+        "path_type": "hardlink",
+        "sha256": "3cb910127823eaa33c27b0d6c6190eb8f1eeee4aa0af710577a8518c3826387e",
+        "sha256_in_prefix": "3cb910127823eaa33c27b0d6c6190eb8f1eeee4aa0af710577a8518c3826387e",
+        "size_in_bytes": 103928
+      },
+      {
+        "_path": "lib/R/library/cpp11/include/fmt/format.h",
+        "path_type": "hardlink",
+        "sha256": "b08912fe2d49facf99b64172f5bdad66fe8ce48a6b7a72d4366504df0fae44b9",
+        "sha256_in_prefix": "b08912fe2d49facf99b64172f5bdad66fe8ce48a6b7a72d4366504df0fae44b9",
+        "size_in_bytes": 103569
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "addaa7972c59c5b07a77ee9dc41456a442b1ea93d9e7e20e28c05c0a4a01d976",
+  "size": 229308,
+  "subdir": "noarch",
+  "timestamp": 1701530319000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-cpp11-0.4.7-r43hc72bb7e_0.conda",
+  "version": "0.4.7"
+}

@@ -1,0 +1,16 @@
+#libevent pkg-config source file
+
+prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
+exec_prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
+libdir=/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib
+includedir=/home/mabagar/etudes/masters/Master_ISDD_fiches/env/include
+
+Name: libevent_pthreads
+Description: libevent_pthreads adds pthreads-based threading support to libevent
+Version: 2.1.12
+Requires: libevent
+Conflicts:
+Libs: -L${libdir} -levent_pthreads
+Libs.private:  
+Cflags: -I${includedir} 
+

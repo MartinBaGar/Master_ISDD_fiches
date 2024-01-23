@@ -1,0 +1,316 @@
+{
+  "build": "r43h57805ef_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "r-base >=4.3,<4.4.0a0",
+    "r-generics",
+    "r-timechange >=0.1.1"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-lubridate-1.9.3-r43h57805ef_0",
+  "files": [
+    "lib/R/library/lubridate/CITATION",
+    "lib/R/library/lubridate/DESCRIPTION",
+    "lib/R/library/lubridate/INDEX",
+    "lib/R/library/lubridate/Meta/Rd.rds",
+    "lib/R/library/lubridate/Meta/data.rds",
+    "lib/R/library/lubridate/Meta/features.rds",
+    "lib/R/library/lubridate/Meta/hsearch.rds",
+    "lib/R/library/lubridate/Meta/links.rds",
+    "lib/R/library/lubridate/Meta/nsInfo.rds",
+    "lib/R/library/lubridate/Meta/package.rds",
+    "lib/R/library/lubridate/Meta/vignette.rds",
+    "lib/R/library/lubridate/NAMESPACE",
+    "lib/R/library/lubridate/NEWS.md",
+    "lib/R/library/lubridate/R/lubridate",
+    "lib/R/library/lubridate/R/lubridate.rdb",
+    "lib/R/library/lubridate/R/lubridate.rdx",
+    "lib/R/library/lubridate/cctz.sh",
+    "lib/R/library/lubridate/data/Rdata.rdb",
+    "lib/R/library/lubridate/data/Rdata.rds",
+    "lib/R/library/lubridate/data/Rdata.rdx",
+    "lib/R/library/lubridate/doc/index.html",
+    "lib/R/library/lubridate/doc/lubridate.R",
+    "lib/R/library/lubridate/doc/lubridate.Rmd",
+    "lib/R/library/lubridate/doc/lubridate.html",
+    "lib/R/library/lubridate/help/AnIndex",
+    "lib/R/library/lubridate/help/aliases.rds",
+    "lib/R/library/lubridate/help/figures/logo.png",
+    "lib/R/library/lubridate/help/lubridate.rdb",
+    "lib/R/library/lubridate/help/lubridate.rdx",
+    "lib/R/library/lubridate/help/paths.rds",
+    "lib/R/library/lubridate/html/00Index.html",
+    "lib/R/library/lubridate/html/R.css",
+    "lib/R/library/lubridate/libs/lubridate.so",
+    "lib/R/library/lubridate/pkgdown/assets/tidyverse.css",
+    "lib/R/library/lubridate/pkgdown/assets/tidyverse.css.map"
+  ],
+  "fn": "r-lubridate-1.9.3-r43h57805ef_0.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-lubridate-1.9.3-r43h57805ef_0",
+    "type": 1
+  },
+  "md5": "48f220862d7b0ac7d1397f8c6601fb70",
+  "name": "r-lubridate",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-lubridate-1.9.3-r43h57805ef_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/lubridate/CITATION",
+        "path_type": "hardlink",
+        "sha256": "b7403117a01bf23c579efb3ba0d1a165a1dda493792dd010089e735091e77479",
+        "sha256_in_prefix": "b7403117a01bf23c579efb3ba0d1a165a1dda493792dd010089e735091e77479",
+        "size_in_bytes": 657
+      },
+      {
+        "_path": "lib/R/library/lubridate/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "5db7713c9fa2d47e4686483cee3570560a4f214d548132487eab6b4197fcc56d",
+        "sha256_in_prefix": "5db7713c9fa2d47e4686483cee3570560a4f214d548132487eab6b4197fcc56d",
+        "size_in_bytes": 3076
+      },
+      {
+        "_path": "lib/R/library/lubridate/INDEX",
+        "path_type": "hardlink",
+        "sha256": "c7e81c3bed7004aec01094df5f7c7848a6506d99c894548e344dc9b7b26cc9b3",
+        "sha256_in_prefix": "c7e81c3bed7004aec01094df5f7c7848a6506d99c894548e344dc9b7b26cc9b3",
+        "size_in_bytes": 4045
+      },
+      {
+        "_path": "lib/R/library/lubridate/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "370c1a64ad55c3bc3649911385a06349a19d0ca7fe852eac0e864474d260aab6",
+        "sha256_in_prefix": "370c1a64ad55c3bc3649911385a06349a19d0ca7fe852eac0e864474d260aab6",
+        "size_in_bytes": 4906
+      },
+      {
+        "_path": "lib/R/library/lubridate/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "27b5f4b0e5dd08f4655536c38ea82d1bec2dcac4fdbbb5c0036c4eeed9481350",
+        "sha256_in_prefix": "27b5f4b0e5dd08f4655536c38ea82d1bec2dcac4fdbbb5c0036c4eeed9481350",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "lib/R/library/lubridate/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/lubridate/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "fd8dfe0dec54210d95ada98f588572fe098278ad19e1cd48771c73472ccdbc56",
+        "sha256_in_prefix": "fd8dfe0dec54210d95ada98f588572fe098278ad19e1cd48771c73472ccdbc56",
+        "size_in_bytes": 4957
+      },
+      {
+        "_path": "lib/R/library/lubridate/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7f1806eb7c172cdcc293608f00caabd05dc207953fa7a9fcc1fa3e989d96d29e",
+        "sha256_in_prefix": "7f1806eb7c172cdcc293608f00caabd05dc207953fa7a9fcc1fa3e989d96d29e",
+        "size_in_bytes": 3426
+      },
+      {
+        "_path": "lib/R/library/lubridate/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "14f3c1bdacd623c0fa53a56c5194cf8a55b9a4b052a4e253b8742a619fd4763a",
+        "sha256_in_prefix": "14f3c1bdacd623c0fa53a56c5194cf8a55b9a4b052a4e253b8742a619fd4763a",
+        "size_in_bytes": 1790
+      },
+      {
+        "_path": "lib/R/library/lubridate/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "a5f9df90cceeb25d91b1ace3ead9524a4b53c6db61e274b18deec5a5e798dc5b",
+        "sha256_in_prefix": "a5f9df90cceeb25d91b1ace3ead9524a4b53c6db61e274b18deec5a5e798dc5b",
+        "size_in_bytes": 1894
+      },
+      {
+        "_path": "lib/R/library/lubridate/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "01a8a2f6cabb0afe3a8a07f52c3b87eea97332d658d29a8b3dd6f4b897ec1988",
+        "sha256_in_prefix": "01a8a2f6cabb0afe3a8a07f52c3b87eea97332d658d29a8b3dd6f4b897ec1988",
+        "size_in_bytes": 220
+      },
+      {
+        "_path": "lib/R/library/lubridate/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "3cc2b0c99fc4246d95a21d3e52a932678f065193b8386035fc16ea0b2f5ad7bb",
+        "sha256_in_prefix": "3cc2b0c99fc4246d95a21d3e52a932678f065193b8386035fc16ea0b2f5ad7bb",
+        "size_in_bytes": 6259
+      },
+      {
+        "_path": "lib/R/library/lubridate/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "4d36d80f570f1edcc2007adf6cd69e80e31a1814973c9b2350e4fab71b203976",
+        "sha256_in_prefix": "4d36d80f570f1edcc2007adf6cd69e80e31a1814973c9b2350e4fab71b203976",
+        "size_in_bytes": 45094
+      },
+      {
+        "_path": "lib/R/library/lubridate/R/lubridate",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/lubridate/R/lubridate.rdb",
+        "path_type": "hardlink",
+        "sha256": "6711bbce88e843fd08a47b79d380a26c13badc965c0258cc7a98a3dfd6df541c",
+        "sha256_in_prefix": "6711bbce88e843fd08a47b79d380a26c13badc965c0258cc7a98a3dfd6df541c",
+        "size_in_bytes": 503499
+      },
+      {
+        "_path": "lib/R/library/lubridate/R/lubridate.rdx",
+        "path_type": "hardlink",
+        "sha256": "bdabdf2025141169baaa9aee7e233df8bdfdeb62af013ce8bf3ef2210682ec80",
+        "sha256_in_prefix": "bdabdf2025141169baaa9aee7e233df8bdfdeb62af013ce8bf3ef2210682ec80",
+        "size_in_bytes": 7230
+      },
+      {
+        "_path": "lib/R/library/lubridate/cctz.sh",
+        "path_type": "hardlink",
+        "sha256": "03782ff609d633be11b61fdc300151db68880452d1705d4e143975b0fe465cc6",
+        "sha256_in_prefix": "03782ff609d633be11b61fdc300151db68880452d1705d4e143975b0fe465cc6",
+        "size_in_bytes": 371
+      },
+      {
+        "_path": "lib/R/library/lubridate/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "b5129a94376b0d3354f96a8fc3576f036f2b11b62e913cab178ceae183129fc6",
+        "sha256_in_prefix": "b5129a94376b0d3354f96a8fc3576f036f2b11b62e913cab178ceae183129fc6",
+        "size_in_bytes": 243705
+      },
+      {
+        "_path": "lib/R/library/lubridate/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "475fbbcfc55f9f560d8dd3a8b524c4093d2e2586575dc1bbbe079c265f0e7e77",
+        "sha256_in_prefix": "475fbbcfc55f9f560d8dd3a8b524c4093d2e2586575dc1bbbe079c265f0e7e77",
+        "size_in_bytes": 80
+      },
+      {
+        "_path": "lib/R/library/lubridate/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "dce3536b13212e5d07d65341235acab24e85381887aff4c9b92b152184e793e8",
+        "sha256_in_prefix": "dce3536b13212e5d07d65341235acab24e85381887aff4c9b92b152184e793e8",
+        "size_in_bytes": 148
+      },
+      {
+        "_path": "lib/R/library/lubridate/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "2731f9dc41bd2945e34bf30af11513689ecb37eb0c2ca39c1d84d1ddc4fd21d1",
+        "sha256_in_prefix": "2731f9dc41bd2945e34bf30af11513689ecb37eb0c2ca39c1d84d1ddc4fd21d1",
+        "size_in_bytes": 1422
+      },
+      {
+        "_path": "lib/R/library/lubridate/doc/lubridate.R",
+        "path_type": "hardlink",
+        "sha256": "b192051aa6876d236c3dc9b55ebb6553957f00ca1cfd006167536051d88d84d8",
+        "sha256_in_prefix": "b192051aa6876d236c3dc9b55ebb6553957f00ca1cfd006167536051d88d84d8",
+        "size_in_bytes": 2976
+      },
+      {
+        "_path": "lib/R/library/lubridate/doc/lubridate.Rmd",
+        "path_type": "hardlink",
+        "sha256": "06128758a4a7ff137484d5da66a498a78b093dce264d76d905afbe5a16dfb344",
+        "sha256_in_prefix": "06128758a4a7ff137484d5da66a498a78b093dce264d76d905afbe5a16dfb344",
+        "size_in_bytes": 8524
+      },
+      {
+        "_path": "lib/R/library/lubridate/doc/lubridate.html",
+        "path_type": "hardlink",
+        "sha256": "dcf06010521ef7d619d456bb73040e9c5a3ac932a97f72c66a19186dcf01ba6a",
+        "sha256_in_prefix": "dcf06010521ef7d619d456bb73040e9c5a3ac932a97f72c66a19186dcf01ba6a",
+        "size_in_bytes": 34544
+      },
+      {
+        "_path": "lib/R/library/lubridate/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "3dee22d80051e0a304d415325441b176d6ba138f65e3f873645f737961c11960",
+        "sha256_in_prefix": "3dee22d80051e0a304d415325441b176d6ba138f65e3f873645f737961c11960",
+        "size_in_bytes": 17612
+      },
+      {
+        "_path": "lib/R/library/lubridate/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "550479af28e7199d4aecd12faa465a0733f7354f12c995dc9833d5c867100ae7",
+        "sha256_in_prefix": "550479af28e7199d4aecd12faa465a0733f7354f12c995dc9833d5c867100ae7",
+        "size_in_bytes": 3217
+      },
+      {
+        "_path": "lib/R/library/lubridate/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "25aeb4743bb6a14bdfef41b2478bb5e7dbe1b87b8ce5e62819d668df03a1344f",
+        "sha256_in_prefix": "25aeb4743bb6a14bdfef41b2478bb5e7dbe1b87b8ce5e62819d668df03a1344f",
+        "size_in_bytes": 16876
+      },
+      {
+        "_path": "lib/R/library/lubridate/help/lubridate.rdb",
+        "path_type": "hardlink",
+        "sha256": "36e313e091ca5ac9e4c1ec60f13a1274d76427e9a42bcb63d08d4b5b91d48a08",
+        "sha256_in_prefix": "36e313e091ca5ac9e4c1ec60f13a1274d76427e9a42bcb63d08d4b5b91d48a08",
+        "size_in_bytes": 189209
+      },
+      {
+        "_path": "lib/R/library/lubridate/help/lubridate.rdx",
+        "path_type": "hardlink",
+        "sha256": "5610e951fa2839743dd98f35e60d5d6f114d5403b6cfb2d48725eb2167b85f04",
+        "sha256_in_prefix": "5610e951fa2839743dd98f35e60d5d6f114d5403b6cfb2d48725eb2167b85f04",
+        "size_in_bytes": 1575
+      },
+      {
+        "_path": "lib/R/library/lubridate/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "6f483b87d1392066ccab01936dddcb4ccee052d9f66d67b2f92b9cfa08e7067d",
+        "sha256_in_prefix": "6f483b87d1392066ccab01936dddcb4ccee052d9f66d67b2f92b9cfa08e7067d",
+        "size_in_bytes": 711
+      },
+      {
+        "_path": "lib/R/library/lubridate/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "97201384fa7c0117f9b865af495537e01de7f1f25994a8cda9021deb1c941fc3",
+        "sha256_in_prefix": "97201384fa7c0117f9b865af495537e01de7f1f25994a8cda9021deb1c941fc3",
+        "size_in_bytes": 26358
+      },
+      {
+        "_path": "lib/R/library/lubridate/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/lubridate/libs/lubridate.so",
+        "path_type": "hardlink",
+        "sha256": "ff722ed63ec431d7b5925e353207521a62a7be855666633d6c9f462a59be55cb",
+        "sha256_in_prefix": "ff722ed63ec431d7b5925e353207521a62a7be855666633d6c9f462a59be55cb",
+        "size_in_bytes": 34144
+      },
+      {
+        "_path": "lib/R/library/lubridate/pkgdown/assets/tidyverse.css",
+        "path_type": "hardlink",
+        "sha256": "41994b7ae9d6e77891aa447a367c26d1a4e9d64de80945a60c4d73996fb8ce50",
+        "sha256_in_prefix": "41994b7ae9d6e77891aa447a367c26d1a4e9d64de80945a60c4d73996fb8ce50",
+        "size_in_bytes": 175424
+      },
+      {
+        "_path": "lib/R/library/lubridate/pkgdown/assets/tidyverse.css.map",
+        "path_type": "hardlink",
+        "sha256": "3f6e6183eac8f3b491f10a840299d13eb9a848b84464e0e375444899a710390a",
+        "sha256_in_prefix": "3f6e6183eac8f3b491f10a840299d13eb9a848b84464e0e375444899a710390a",
+        "size_in_bytes": 94473
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "549e7c7b034cf6e66323cd1a02af57bbade1478bcaf5744e03d56b2ddad9e9a7",
+  "size": 984301,
+  "subdir": "linux-64",
+  "timestamp": 1695816555000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-lubridate-1.9.3-r43h57805ef_0.conda",
+  "version": "1.9.3"
+}

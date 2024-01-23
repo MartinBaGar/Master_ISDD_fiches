@@ -1,0 +1,195 @@
+{
+  "build": "r43hc72bb7e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-estimability-1.4.1-r43hc72bb7e_2",
+  "files": [
+    "lib/R/library/estimability/DESCRIPTION",
+    "lib/R/library/estimability/INDEX",
+    "lib/R/library/estimability/Meta/Rd.rds",
+    "lib/R/library/estimability/Meta/features.rds",
+    "lib/R/library/estimability/Meta/hsearch.rds",
+    "lib/R/library/estimability/Meta/links.rds",
+    "lib/R/library/estimability/Meta/nsInfo.rds",
+    "lib/R/library/estimability/Meta/package.rds",
+    "lib/R/library/estimability/NAMESPACE",
+    "lib/R/library/estimability/NEWS",
+    "lib/R/library/estimability/R/estimability",
+    "lib/R/library/estimability/R/estimability.rdb",
+    "lib/R/library/estimability/R/estimability.rdx",
+    "lib/R/library/estimability/help/AnIndex",
+    "lib/R/library/estimability/help/aliases.rds",
+    "lib/R/library/estimability/help/estimability.rdb",
+    "lib/R/library/estimability/help/estimability.rdx",
+    "lib/R/library/estimability/help/paths.rds",
+    "lib/R/library/estimability/html/00Index.html",
+    "lib/R/library/estimability/html/R.css"
+  ],
+  "fn": "r-estimability-1.4.1-r43hc72bb7e_2.conda",
+  "license": "GPL-3.0-or-later",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-estimability-1.4.1-r43hc72bb7e_2",
+    "type": 1
+  },
+  "md5": "6375d8ee1d0bbc1d2e74993498e3bac2",
+  "name": "r-estimability",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-estimability-1.4.1-r43hc72bb7e_2.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/estimability/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "641898e809d5ebb254d3306da00e4da18dc154e257dc9a88b9cb6093dc5089a6",
+        "sha256_in_prefix": "641898e809d5ebb254d3306da00e4da18dc154e257dc9a88b9cb6093dc5089a6",
+        "size_in_bytes": 916
+      },
+      {
+        "_path": "lib/R/library/estimability/INDEX",
+        "path_type": "hardlink",
+        "sha256": "7eaecabfc47c7bf58a7df899db91018773b0f7564443ec8ae1b6c7016f0275b1",
+        "sha256_in_prefix": "7eaecabfc47c7bf58a7df899db91018773b0f7564443ec8ae1b6c7016f0275b1",
+        "size_in_bytes": 252
+      },
+      {
+        "_path": "lib/R/library/estimability/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "55f7dd5142ce118b933465106260b3ddb3046f14b30a03412bc8b4620627e7ff",
+        "sha256_in_prefix": "55f7dd5142ce118b933465106260b3ddb3046f14b30a03412bc8b4620627e7ff",
+        "size_in_bytes": 467
+      },
+      {
+        "_path": "lib/R/library/estimability/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/estimability/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "ce0502e6760c85ef249463564ffa0a5f2d899a8d268d6cbd3021b5b65faed657",
+        "sha256_in_prefix": "ce0502e6760c85ef249463564ffa0a5f2d899a8d268d6cbd3021b5b65faed657",
+        "size_in_bytes": 513
+      },
+      {
+        "_path": "lib/R/library/estimability/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "b5f3cc63e911f57cfa4a6ecb080b8af5d10d2cbd83a0b2751755ce66f7d90e80",
+        "sha256_in_prefix": "b5f3cc63e911f57cfa4a6ecb080b8af5d10d2cbd83a0b2751755ce66f7d90e80",
+        "size_in_bytes": 265
+      },
+      {
+        "_path": "lib/R/library/estimability/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "419d971a2705e94298a8bfc052173ada8e0f44be38ba47db649e9feb5c74ad48",
+        "sha256_in_prefix": "419d971a2705e94298a8bfc052173ada8e0f44be38ba47db649e9feb5c74ad48",
+        "size_in_bytes": 362
+      },
+      {
+        "_path": "lib/R/library/estimability/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "f551393d341325c4084b9e889893313bb126b94252d266b4c5c03b24745d481f",
+        "sha256_in_prefix": "f551393d341325c4084b9e889893313bb126b94252d266b4c5c03b24745d481f",
+        "size_in_bytes": 891
+      },
+      {
+        "_path": "lib/R/library/estimability/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "0c988ee3e7f68e664504aef96b28717254f95190fbf071bcd90c626b176e3ef1",
+        "sha256_in_prefix": "0c988ee3e7f68e664504aef96b28717254f95190fbf071bcd90c626b176e3ef1",
+        "size_in_bytes": 679
+      },
+      {
+        "_path": "lib/R/library/estimability/NEWS",
+        "path_type": "hardlink",
+        "sha256": "568f2e63fcef0152201a74c9e96317119789a22fcaeb663506a68d18a63a797f",
+        "sha256_in_prefix": "568f2e63fcef0152201a74c9e96317119789a22fcaeb663506a68d18a63a797f",
+        "size_in_bytes": 1327
+      },
+      {
+        "_path": "lib/R/library/estimability/R/estimability",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/estimability/R/estimability.rdb",
+        "path_type": "hardlink",
+        "sha256": "39ef3583f1d4862e057b73d5976faead2db9f908d716f3799109713e7dd8243e",
+        "sha256_in_prefix": "39ef3583f1d4862e057b73d5976faead2db9f908d716f3799109713e7dd8243e",
+        "size_in_bytes": 12701
+      },
+      {
+        "_path": "lib/R/library/estimability/R/estimability.rdx",
+        "path_type": "hardlink",
+        "sha256": "a427554cebf143942a3235b75847383c44a4f122e965f8932bdbfba839e3cc0d",
+        "sha256_in_prefix": "a427554cebf143942a3235b75847383c44a4f122e965f8932bdbfba839e3cc0d",
+        "size_in_bytes": 474
+      },
+      {
+        "_path": "lib/R/library/estimability/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "e28e95a0fc2f74378bb7e0916ba240f58d9b7deba467510a6c969524621e5d83",
+        "sha256_in_prefix": "e28e95a0fc2f74378bb7e0916ba240f58d9b7deba467510a6c969524621e5d83",
+        "size_in_bytes": 474
+      },
+      {
+        "_path": "lib/R/library/estimability/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "dc2c2cc3a01dc6471f450149358992406b9dc710226c33acc3546cdff8a53843",
+        "sha256_in_prefix": "dc2c2cc3a01dc6471f450149358992406b9dc710226c33acc3546cdff8a53843",
+        "size_in_bytes": 231
+      },
+      {
+        "_path": "lib/R/library/estimability/help/estimability.rdb",
+        "path_type": "hardlink",
+        "sha256": "9686fc7ae68f474228555610d3f3437eb3a6898e94ea6ab37207b2bd48fe2ef1",
+        "sha256_in_prefix": "9686fc7ae68f474228555610d3f3437eb3a6898e94ea6ab37207b2bd48fe2ef1",
+        "size_in_bytes": 19693
+      },
+      {
+        "_path": "lib/R/library/estimability/help/estimability.rdx",
+        "path_type": "hardlink",
+        "sha256": "6754eaf1765703f2b37b87eb7d129bf669c616c30a45155d628c426815df5fbb",
+        "sha256_in_prefix": "6754eaf1765703f2b37b87eb7d129bf669c616c30a45155d628c426815df5fbb",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "lib/R/library/estimability/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "d02e600f45777bb7f109d82d957c25be85fe5f82a4efda59a7226265db4669ac",
+        "sha256_in_prefix": "d02e600f45777bb7f109d82d957c25be85fe5f82a4efda59a7226265db4669ac",
+        "size_in_bytes": 205
+      },
+      {
+        "_path": "lib/R/library/estimability/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "8aad922508f205de4905512f8617cddebca8ee320fe4e44ef3be9281af0011b2",
+        "sha256_in_prefix": "8aad922508f205de4905512f8617cddebca8ee320fe4e44ef3be9281af0011b2",
+        "size_in_bytes": 3174
+      },
+      {
+        "_path": "lib/R/library/estimability/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ca5b7d6e48646ce3793972226ac80d7a11d8d4f4cc24b6baf05219f92f4be197",
+  "size": 59729,
+  "subdir": "noarch",
+  "timestamp": 1686796182000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-estimability-1.4.1-r43hc72bb7e_2.conda",
+  "version": "1.4.1"
+}

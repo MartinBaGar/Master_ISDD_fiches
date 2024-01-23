@@ -1,0 +1,12 @@
+prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
+exec_prefix=${prefix}
+libdir=/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib
+includedir=/home/mabagar/etudes/masters/Master_ISDD_fiches/env/include
+
+Name: absl_pretty_function
+Description: Abseil pretty_function library
+URL: https://abseil.io/
+Version: 20230802
+Requires:
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

@@ -1,0 +1,203 @@
+{
+  "build": "r43hc72bb7e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-cardata-3.0_5-r43hc72bb7e_2",
+  "files": [
+    "lib/R/library/carData/DESCRIPTION",
+    "lib/R/library/carData/INDEX",
+    "lib/R/library/carData/Meta/Rd.rds",
+    "lib/R/library/carData/Meta/data.rds",
+    "lib/R/library/carData/Meta/features.rds",
+    "lib/R/library/carData/Meta/hsearch.rds",
+    "lib/R/library/carData/Meta/links.rds",
+    "lib/R/library/carData/Meta/nsInfo.rds",
+    "lib/R/library/carData/Meta/package.rds",
+    "lib/R/library/carData/NAMESPACE",
+    "lib/R/library/carData/NEWS",
+    "lib/R/library/carData/data/Rdata.rdb",
+    "lib/R/library/carData/data/Rdata.rds",
+    "lib/R/library/carData/data/Rdata.rdx",
+    "lib/R/library/carData/help/AnIndex",
+    "lib/R/library/carData/help/aliases.rds",
+    "lib/R/library/carData/help/carData.rdb",
+    "lib/R/library/carData/help/carData.rdx",
+    "lib/R/library/carData/help/paths.rds",
+    "lib/R/library/carData/html/00Index.html",
+    "lib/R/library/carData/html/R.css"
+  ],
+  "fn": "r-cardata-3.0_5-r43hc72bb7e_2.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-cardata-3.0_5-r43hc72bb7e_2",
+    "type": 1
+  },
+  "md5": "0935bc571d1d2fe5f61e66995c69d228",
+  "name": "r-cardata",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-cardata-3.0_5-r43hc72bb7e_2.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/carData/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "074552e2c54363d58377fd1391958d12e2a8ebb09ab123bdde868934b61c780a",
+        "sha256_in_prefix": "074552e2c54363d58377fd1391958d12e2a8ebb09ab123bdde868934b61c780a",
+        "size_in_bytes": 1141
+      },
+      {
+        "_path": "lib/R/library/carData/INDEX",
+        "path_type": "hardlink",
+        "sha256": "57b1c4be6bd7966bebe88b5cf4f4d781acf367c76be0e2a0b4fcd6b74796efe2",
+        "sha256_in_prefix": "57b1c4be6bd7966bebe88b5cf4f4d781acf367c76be0e2a0b4fcd6b74796efe2",
+        "size_in_bytes": 4183
+      },
+      {
+        "_path": "lib/R/library/carData/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "cb9473b2691920befa41ad76124f4115c7a1e26dc0fe2017a59199ebd7ed0e5a",
+        "sha256_in_prefix": "cb9473b2691920befa41ad76124f4115c7a1e26dc0fe2017a59199ebd7ed0e5a",
+        "size_in_bytes": 2542
+      },
+      {
+        "_path": "lib/R/library/carData/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "f75b4a209d0707c9890a5151ceacaebed934f0ef3ac1f6a1b6826e392639e989",
+        "sha256_in_prefix": "f75b4a209d0707c9890a5151ceacaebed934f0ef3ac1f6a1b6826e392639e989",
+        "size_in_bytes": 1803
+      },
+      {
+        "_path": "lib/R/library/carData/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/carData/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "926689d9cad3f266c94e8e55070582114f1979d394b58491a8fe5d5187cfb789",
+        "sha256_in_prefix": "926689d9cad3f266c94e8e55070582114f1979d394b58491a8fe5d5187cfb789",
+        "size_in_bytes": 2228
+      },
+      {
+        "_path": "lib/R/library/carData/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "1fd4b353198ccba96bbef83220bcc82b801ab291ae74f3735edb13d28417eaf8",
+        "sha256_in_prefix": "1fd4b353198ccba96bbef83220bcc82b801ab291ae74f3735edb13d28417eaf8",
+        "size_in_bytes": 846
+      },
+      {
+        "_path": "lib/R/library/carData/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "0f31f4f7fe6f03c921bb315771607152e1f0a4d7462365c119fd6173bb5e6527",
+        "sha256_in_prefix": "0f31f4f7fe6f03c921bb315771607152e1f0a4d7462365c119fd6173bb5e6527",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "lib/R/library/carData/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "bf33bae1b13b9738623d0d12724919e9275821a6cb05cb8898e9b9530456f65a",
+        "sha256_in_prefix": "bf33bae1b13b9738623d0d12724919e9275821a6cb05cb8898e9b9530456f65a",
+        "size_in_bytes": 999
+      },
+      {
+        "_path": "lib/R/library/carData/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "871f9f9bc3f0a0da1100a9cdebbbb27fb7e709eaa7053ef399ad64e1d3744848",
+        "sha256_in_prefix": "871f9f9bc3f0a0da1100a9cdebbbb27fb7e709eaa7053ef399ad64e1d3744848",
+        "size_in_bytes": 68
+      },
+      {
+        "_path": "lib/R/library/carData/NEWS",
+        "path_type": "hardlink",
+        "sha256": "e0bef95d456cfadc9da8ec4167a110bff0a7daced6de8655ee8fcba22c9803a4",
+        "sha256_in_prefix": "e0bef95d456cfadc9da8ec4167a110bff0a7daced6de8655ee8fcba22c9803a4",
+        "size_in_bytes": 804
+      },
+      {
+        "_path": "lib/R/library/carData/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "f063faf084128e4265cd44e6187e171c9a05cee1b164505e236c1897856f0679",
+        "sha256_in_prefix": "f063faf084128e4265cd44e6187e171c9a05cee1b164505e236c1897856f0679",
+        "size_in_bytes": 2000286
+      },
+      {
+        "_path": "lib/R/library/carData/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "f1cba60ab1e2c69662415e2de89f2a1e2a89a496eef86be578d31dffc9db325a",
+        "sha256_in_prefix": "f1cba60ab1e2c69662415e2de89f2a1e2a89a496eef86be578d31dffc9db325a",
+        "size_in_bytes": 655
+      },
+      {
+        "_path": "lib/R/library/carData/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "f4aac36ac58fd381fb68bb71400e11f3ca685a71e0a7971086de8b18f5fc9190",
+        "sha256_in_prefix": "f4aac36ac58fd381fb68bb71400e11f3ca685a71e0a7971086de8b18f5fc9190",
+        "size_in_bytes": 1022
+      },
+      {
+        "_path": "lib/R/library/carData/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "4471da361d77367572232ec1e5dc40d16f8c03530abfdc0e533998a6934cae75",
+        "sha256_in_prefix": "4471da361d77367572232ec1e5dc40d16f8c03530abfdc0e533998a6934cae75",
+        "size_in_bytes": 998
+      },
+      {
+        "_path": "lib/R/library/carData/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "b3a0acdb77b57b61401649d2598237885ddf6131d2d4b3033288f8eda79d4c4e",
+        "sha256_in_prefix": "b3a0acdb77b57b61401649d2598237885ddf6131d2d4b3033288f8eda79d4c4e",
+        "size_in_bytes": 511
+      },
+      {
+        "_path": "lib/R/library/carData/help/carData.rdb",
+        "path_type": "hardlink",
+        "sha256": "507e35700704c82064f70e5eb6d667b97b9702d5e888b26d574a203abd3d356e",
+        "sha256_in_prefix": "507e35700704c82064f70e5eb6d667b97b9702d5e888b26d574a203abd3d356e",
+        "size_in_bytes": 159244
+      },
+      {
+        "_path": "lib/R/library/carData/help/carData.rdx",
+        "path_type": "hardlink",
+        "sha256": "c3f9c2796e13e9725e3869ead9a126c0b89e019634933b475bb7331f727db0b8",
+        "sha256_in_prefix": "c3f9c2796e13e9725e3869ead9a126c0b89e019634933b475bb7331f727db0b8",
+        "size_in_bytes": 1486
+      },
+      {
+        "_path": "lib/R/library/carData/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "d12d2dc153b73585f6517d7f5e93a9ef179aa2375c893658a5bac561c6c36aae",
+        "sha256_in_prefix": "d12d2dc153b73585f6517d7f5e93a9ef179aa2375c893658a5bac561c6c36aae",
+        "size_in_bytes": 642
+      },
+      {
+        "_path": "lib/R/library/carData/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "28765b007a9cd5d86a442ee98162b97e2127313d545086a01edda8564b42da63",
+        "sha256_in_prefix": "28765b007a9cd5d86a442ee98162b97e2127313d545086a01edda8564b42da63",
+        "size_in_bytes": 8539
+      },
+      {
+        "_path": "lib/R/library/carData/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "89d57bd8516fb63433fcadfe3b6950a797b7969973dda066c3054e67358afe45",
+  "size": 1829644,
+  "subdir": "noarch",
+  "timestamp": 1686764616000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-cardata-3.0_5-r43hc72bb7e_2.conda",
+  "version": "3.0_5"
+}

@@ -1,0 +1,228 @@
+{
+  "build": "r43hd8f1df9_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libgfortran-ng",
+    "libgfortran5 >=12.3.0",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/mabagar/miniconda3/pkgs/r-statmod-1.5.0-r43hd8f1df9_1",
+  "files": [
+    "lib/R/library/statmod/CITATION",
+    "lib/R/library/statmod/DESCRIPTION",
+    "lib/R/library/statmod/INDEX",
+    "lib/R/library/statmod/Meta/Rd.rds",
+    "lib/R/library/statmod/Meta/data.rds",
+    "lib/R/library/statmod/Meta/features.rds",
+    "lib/R/library/statmod/Meta/hsearch.rds",
+    "lib/R/library/statmod/Meta/links.rds",
+    "lib/R/library/statmod/Meta/nsInfo.rds",
+    "lib/R/library/statmod/Meta/package.rds",
+    "lib/R/library/statmod/NAMESPACE",
+    "lib/R/library/statmod/NEWS",
+    "lib/R/library/statmod/R/statmod",
+    "lib/R/library/statmod/R/statmod.rdb",
+    "lib/R/library/statmod/R/statmod.rdx",
+    "lib/R/library/statmod/data/welding.rdata",
+    "lib/R/library/statmod/help/AnIndex",
+    "lib/R/library/statmod/help/aliases.rds",
+    "lib/R/library/statmod/help/paths.rds",
+    "lib/R/library/statmod/help/statmod.rdb",
+    "lib/R/library/statmod/help/statmod.rdx",
+    "lib/R/library/statmod/html/00Index.html",
+    "lib/R/library/statmod/html/R.css",
+    "lib/R/library/statmod/libs/statmod.so"
+  ],
+  "fn": "r-statmod-1.5.0-r43hd8f1df9_1.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/mabagar/miniconda3/pkgs/r-statmod-1.5.0-r43hd8f1df9_1",
+    "type": 1
+  },
+  "md5": "fa847df4bd5f17743b25de6b404fc3f2",
+  "name": "r-statmod",
+  "package_tarball_full_path": "/home/mabagar/miniconda3/pkgs/r-statmod-1.5.0-r43hd8f1df9_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/statmod/CITATION",
+        "path_type": "hardlink",
+        "sha256": "7ed4e90c8aefb9c4854f7d1bf6ce69bd9964b52f3428e35fee01fc0057e23754",
+        "sha256_in_prefix": "7ed4e90c8aefb9c4854f7d1bf6ce69bd9964b52f3428e35fee01fc0057e23754",
+        "size_in_bytes": 3471
+      },
+      {
+        "_path": "lib/R/library/statmod/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "f0c879e1e82d6da6a8db5fc26aa0c9764af5d328b7605fa767b1e52af12bbf72",
+        "sha256_in_prefix": "f0c879e1e82d6da6a8db5fc26aa0c9764af5d328b7605fa767b1e52af12bbf72",
+        "size_in_bytes": 1051
+      },
+      {
+        "_path": "lib/R/library/statmod/INDEX",
+        "path_type": "hardlink",
+        "sha256": "b091ae9de1e9a0628c7f2fb2e011bd9da65cd67b8bcd7ac21c74d310133905d3",
+        "sha256_in_prefix": "b091ae9de1e9a0628c7f2fb2e011bd9da65cd67b8bcd7ac21c74d310133905d3",
+        "size_in_bytes": 2148
+      },
+      {
+        "_path": "lib/R/library/statmod/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "396098b72dc05a16c9e2c59dbbbec0a1d0ede9cb51ebbdbc45f01df6ca4c6f7a",
+        "sha256_in_prefix": "396098b72dc05a16c9e2c59dbbbec0a1d0ede9cb51ebbdbc45f01df6ca4c6f7a",
+        "size_in_bytes": 1636
+      },
+      {
+        "_path": "lib/R/library/statmod/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "e4a0f1d8258dd1ee6cd76c63e34afa41bde010ea274050b31ebe90ea31073ae1",
+        "sha256_in_prefix": "e4a0f1d8258dd1ee6cd76c63e34afa41bde010ea274050b31ebe90ea31073ae1",
+        "size_in_bytes": 116
+      },
+      {
+        "_path": "lib/R/library/statmod/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/statmod/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "a0020c5fa3ff888f0e5861e0e37c19ca0661f1d46ae502ce6daf1ed58de1985a",
+        "sha256_in_prefix": "a0020c5fa3ff888f0e5861e0e37c19ca0661f1d46ae502ce6daf1ed58de1985a",
+        "size_in_bytes": 1581
+      },
+      {
+        "_path": "lib/R/library/statmod/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "e73489d3dd32e9c4f1c2def658535a0fd35a88751e365554932382393b3a9de4",
+        "sha256_in_prefix": "e73489d3dd32e9c4f1c2def658535a0fd35a88751e365554932382393b3a9de4",
+        "size_in_bytes": 713
+      },
+      {
+        "_path": "lib/R/library/statmod/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "fb0e0feced4e597078af5bc602f065006a7dc444803cd63cb6f99838a3e3b9c9",
+        "sha256_in_prefix": "fb0e0feced4e597078af5bc602f065006a7dc444803cd63cb6f99838a3e3b9c9",
+        "size_in_bytes": 898
+      },
+      {
+        "_path": "lib/R/library/statmod/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "e7af884396cfc7ff2a888bd05092649687fb9d54b123d5d3888675313f3b57d4",
+        "sha256_in_prefix": "e7af884396cfc7ff2a888bd05092649687fb9d54b123d5d3888675313f3b57d4",
+        "size_in_bytes": 1036
+      },
+      {
+        "_path": "lib/R/library/statmod/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "167189bb507181955d95ca92c3b2b8a0b903bd8ca4ffbf7662129f1f77b6b1e6",
+        "sha256_in_prefix": "167189bb507181955d95ca92c3b2b8a0b903bd8ca4ffbf7662129f1f77b6b1e6",
+        "size_in_bytes": 1495
+      },
+      {
+        "_path": "lib/R/library/statmod/NEWS",
+        "path_type": "hardlink",
+        "sha256": "a191312131b05fa4d830ff242243ba7f2c4bb74562d94f3300e084e8f628fa0a",
+        "sha256_in_prefix": "a191312131b05fa4d830ff242243ba7f2c4bb74562d94f3300e084e8f628fa0a",
+        "size_in_bytes": 17968
+      },
+      {
+        "_path": "lib/R/library/statmod/R/statmod",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/statmod/R/statmod.rdb",
+        "path_type": "hardlink",
+        "sha256": "62d60e0b8078218e986503ac67d0a9723795ba4b8aaa0dbe3039575d48dd81bb",
+        "sha256_in_prefix": "62d60e0b8078218e986503ac67d0a9723795ba4b8aaa0dbe3039575d48dd81bb",
+        "size_in_bytes": 151916
+      },
+      {
+        "_path": "lib/R/library/statmod/R/statmod.rdx",
+        "path_type": "hardlink",
+        "sha256": "a8cf192a04c289f2c3b7e2b83d3e421c458cff2cd2b4be4126fea219edd0e782",
+        "sha256_in_prefix": "a8cf192a04c289f2c3b7e2b83d3e421c458cff2cd2b4be4126fea219edd0e782",
+        "size_in_bytes": 1067
+      },
+      {
+        "_path": "lib/R/library/statmod/data/welding.rdata",
+        "path_type": "hardlink",
+        "sha256": "206af06f9a6b9c8ce3ffc42b15b09e4eca8048dcbae65989aeb90d4e27b507b6",
+        "sha256_in_prefix": "206af06f9a6b9c8ce3ffc42b15b09e4eca8048dcbae65989aeb90d4e27b507b6",
+        "size_in_bytes": 1252
+      },
+      {
+        "_path": "lib/R/library/statmod/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "9a52b4daf94f6e6e363066360d83b5c9b87b8053dddb8f18c334dcf0da66eb05",
+        "sha256_in_prefix": "9a52b4daf94f6e6e363066360d83b5c9b87b8053dddb8f18c334dcf0da66eb05",
+        "size_in_bytes": 1264
+      },
+      {
+        "_path": "lib/R/library/statmod/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "71d8a6d8165b64873a67987b96e9d1e116ba14e7f3c811b11d13121269c75e4b",
+        "sha256_in_prefix": "71d8a6d8165b64873a67987b96e9d1e116ba14e7f3c811b11d13121269c75e4b",
+        "size_in_bytes": 612
+      },
+      {
+        "_path": "lib/R/library/statmod/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "ab41e0d6c628e5d6b1a3014dd2e2fbca05eefb3b765d1284f42bd58f207f6766",
+        "sha256_in_prefix": "ab41e0d6c628e5d6b1a3014dd2e2fbca05eefb3b765d1284f42bd58f207f6766",
+        "size_in_bytes": 402
+      },
+      {
+        "_path": "lib/R/library/statmod/help/statmod.rdb",
+        "path_type": "hardlink",
+        "sha256": "1614a3b02b4d54fac37ee8d1c869be39f2cd1fd4910309f983aca2a60dc33e44",
+        "sha256_in_prefix": "1614a3b02b4d54fac37ee8d1c869be39f2cd1fd4910309f983aca2a60dc33e44",
+        "size_in_bytes": 108436
+      },
+      {
+        "_path": "lib/R/library/statmod/help/statmod.rdx",
+        "path_type": "hardlink",
+        "sha256": "a2e2e6abf2961a9a35b18a29cac0bd0de252f5de16cee36a350ee636321e3e0e",
+        "sha256_in_prefix": "a2e2e6abf2961a9a35b18a29cac0bd0de252f5de16cee36a350ee636321e3e0e",
+        "size_in_bytes": 788
+      },
+      {
+        "_path": "lib/R/library/statmod/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "8c16a3f84c05c50c7a036ca56aaa4a3cc1fdb98c2a7ced03831d9ead7915fb7b",
+        "sha256_in_prefix": "8c16a3f84c05c50c7a036ca56aaa4a3cc1fdb98c2a7ced03831d9ead7915fb7b",
+        "size_in_bytes": 8337
+      },
+      {
+        "_path": "lib/R/library/statmod/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/statmod/libs/statmod.so",
+        "path_type": "hardlink",
+        "sha256": "f60fd5475bbb081dbf50b4e456f34c4c5d825969ed80e42a0417fc9279b70768",
+        "sha256_in_prefix": "f60fd5475bbb081dbf50b4e456f34c4c5d825969ed80e42a0417fc9279b70768",
+        "size_in_bytes": 49424
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "79c2d983c2ab38810686a883dd1b7a7001cea9b43e3159095dba917520aed036",
+  "size": 312726,
+  "subdir": "linux-64",
+  "timestamp": 1686758782000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-statmod-1.5.0-r43hd8f1df9_1.conda",
+  "version": "1.5.0"
+}
