@@ -86,15 +86,11 @@ if [ "${CONDA_BUILD:-0}" = "1" ]; then
   env > /tmp/old-env-$$.txt
 fi
 
-# gold has not been (cannot be?) built for powerpc and s390x
+# gold has not been (cannot be?) built for powerpc
 if echo x86_64-conda-linux-gnu | grep powerpc > /dev/null; then
   GOLD_USED=
 else
-  if echo x86_64-conda-linux-gnu | grep s390x > /dev/null; then
-    GOLD_USED=
-  else
-    GOLD_USED=ld.gold
-  fi
+  GOLD_USED=ld.gold
 fi
 
 _tc_activation \

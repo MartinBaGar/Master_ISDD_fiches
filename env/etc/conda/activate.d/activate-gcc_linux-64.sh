@@ -103,7 +103,7 @@ if [ "${CONDA_BUILD:-0}" = "1" ]; then
   env > /tmp/old-env-$$.txt
 fi
 
-_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED=${_CONDA_PYTHON_SYSCONFIGDATA_NAME:-_sysconfigdata_x86_64_conda_cos7_linux_gnu}
+_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED=${_CONDA_PYTHON_SYSCONFIGDATA_NAME:-_sysconfigdata_x86_64_conda_cos6_linux_gnu}
 if [ -n "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED}" ] && [ -n "${SYS_SYSROOT}" ]; then
   if find "$(dirname $(dirname ${SYS_PYTHON}))/lib/"python* -type f -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED}.py" -exec false {} +; then
     echo ""
@@ -134,8 +134,9 @@ if [ -n "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED}" ] && [ -n "${SYS_SYSROOT}" ];
   fi
 fi
 
-_CMAKE_ARGS="-DCMAKE_AR=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-ar -DCMAKE_RANLIB=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-ranlib"
-_CMAKE_ARGS="-DCMAKE_LINKER=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-ld -DCMAKE_STRIP=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-strip"
+_CMAKE_ARGS="-DCMAKE_AR=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-ar -DCMAKE_CXX_COMPILER_AR=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-gcc-ar -DCMAKE_C_COMPILER_AR=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-gcc-ar"
+_CMAKE_ARGS="${_CMAKE_ARGS} -DCMAKE_RANLIB=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-ranlib -DCMAKE_CXX_COMPILER_RANLIB=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-gcc-ranlib -DCMAKE_C_COMPILER_RANLIB=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-gcc-ranlib"
+_CMAKE_ARGS="${_CMAKE_ARGS} -DCMAKE_LINKER=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-ld -DCMAKE_STRIP=${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-strip"
 
 if [ "${CONDA_BUILD:-0}" = "1" ]; then
   _CMAKE_ARGS="${_CMAKE_ARGS} -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM=NEVER -DCMAKE_FIND_ROOT_PATH_MODE_LIBRARY=ONLY -DCMAKE_FIND_ROOT_PATH_MODE_INCLUDE=ONLY"
@@ -149,6 +150,8 @@ fi
 
 _tc_activation \
   activate x86_64-conda-linux-gnu- "HOST,x86_64-conda-linux-gnu" "BUILD,x86_64-conda-linux-gnu" \
+  "CONDA_TOOLCHAIN_HOST,x86_64-conda-linux-gnu" \
+  "CONDA_TOOLCHAIN_BUILD,x86_64-conda-linux-gnu" \
   cc cpp gcc gcc-ar gcc-nm gcc-ranlib \
   "CPPFLAGS,${CPPFLAGS:-${CPPFLAGS_USED}}" \
   "CFLAGS,${CFLAGS:-${CFLAGS_USED}}" \
@@ -184,5 +187,20 @@ else
     echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
     diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
     rm -f /tmp/old-env-$$.txt /tmp/new-env-$$.txt || true
+  fi
+
+  # fix prompt for zsh
+  if [[ -n "${ZSH_NAME:-}" ]]; then
+    autoload -Uz add-zsh-hook
+
+    _conda_clang_precmd() {
+      HOST="${CONDA_BACKUP_HOST}"
+    }
+    add-zsh-hook -Uz precmd _conda_clang_precmd
+
+    _conda_clang_preexec() {
+      HOST="${CONDA_TOOLCHAIN_HOST}"
+    }
+    add-zsh-hook -Uz preexec _conda_clang_preexec
   fi
 fi

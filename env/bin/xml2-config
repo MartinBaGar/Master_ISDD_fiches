@@ -1,6 +1,6 @@
 #! /bin/sh
 
-prefix=/workspaces/Master_ISDD_fiches/env
+prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib
@@ -67,7 +67,7 @@ while test $# -gt 0; do
 	;;
 
     --cflags)
-        cflags="-I${includedir}/libxml2 -I/workspaces/Master_ISDD_fiches/env/include "
+        cflags="-I${includedir}/libxml2 -I/home/mabagar/etudes/masters/Master_ISDD_fiches/env/include "
        	;;
 
     --libtool-libs)
@@ -86,7 +86,7 @@ while test $# -gt 0; do
             shift
             libs="-lxml2"
         else
-            libs="-lxml2 -L/workspaces/Master_ISDD_fiches/env/lib -lz -L/workspaces/Master_ISDD_fiches/env/lib -llzma  -L/workspaces/Master_ISDD_fiches/env/lib -L/workspaces/Master_ISDD_fiches/env/lib -licui18n -licuuc -licudata -lm  -ldl "
+            libs="-lxml2 -L/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib -lz -L/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib -llzma  -L/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib -L/home/mabagar/etudes/masters/Master_ISDD_fiches/env/lib -licui18n -licuuc -licudata -lm  -ldl "
         fi
 
         if [ "-L${libdir}" != "-L/usr/lib" -a "-L${libdir}" != "-L/usr/lib64" ]; then
