@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 * Copyright (C) 1997-2005, International Business Machines Corporation and others. All Rights Reserved.
@@ -19,9 +19,6 @@
 #define PARSEPOS_H
 
 #include "unicode/utypes.h"
-
-#if U_SHOW_CPLUSPLUS_API
-
 #include "unicode/uobject.h"
 
  
@@ -93,26 +90,26 @@ public:
      * Assignment operator
      * @stable ICU 2.0
      */
-    inline ParsePosition&      operator=(const ParsePosition& copy);
+    ParsePosition&      operator=(const ParsePosition& copy);
 
     /**
      * Equality operator.
-     * @return true if the two parse positions are equal, false otherwise.
+     * @return TRUE if the two parse positions are equal, FALSE otherwise.
      * @stable ICU 2.0
      */
-    inline bool               operator==(const ParsePosition& that) const;
+    UBool              operator==(const ParsePosition& that) const;
 
     /**
      * Equality operator.
-     * @return true if the two parse positions are not equal, false otherwise.
+     * @return TRUE if the two parse positions are not equal, FALSE otherwise.
      * @stable ICU 2.0
      */
-    inline bool               operator!=(const ParsePosition& that) const;
+    UBool              operator!=(const ParsePosition& that) const;
 
     /**
      * Clone this object.
      * Clones can be used concurrently in multiple threads.
-     * If an error occurs, then nullptr is returned.
+     * If an error occurs, then NULL is returned.
      * The caller must delete the clone.
      *
      * @return a clone of this object
@@ -129,14 +126,14 @@ public:
      * @return the current index.
      * @stable ICU 2.0
      */
-    inline int32_t getIndex(void) const;
+    int32_t getIndex(void) const;
 
     /**
      * Set the current parse position.
      * @param index the new index.
      * @stable ICU 2.0
      */
-    inline void setIndex(int32_t index);
+    void setIndex(int32_t index);
 
     /**
      * Set the index at which a parse error occurred.  Formatters
@@ -145,14 +142,14 @@ public:
      * set.
      * @stable ICU 2.0
      */
-    inline void setErrorIndex(int32_t ei);
+    void setErrorIndex(int32_t ei);
 
     /**
      * Retrieve the index at which an error occurred, or -1 if the
      * error index has not been set.
      * @stable ICU 2.0
      */
-    inline int32_t getErrorIndex(void) const;
+    int32_t getErrorIndex(void) const;
 
     /**
      * ICU "poor man's RTTI", returns a UClassID for this class.
@@ -166,7 +163,7 @@ public:
      *
      * @stable ICU 2.2
      */
-    virtual UClassID getDynamicClassID() const override;
+    virtual UClassID getDynamicClassID() const;
 
 private:
     /**
@@ -192,16 +189,16 @@ ParsePosition::operator=(const ParsePosition& copy)
   return *this;
 }
 
-inline bool
+inline UBool
 ParsePosition::operator==(const ParsePosition& copy) const
 {
   if(index != copy.index || errorIndex != copy.errorIndex)
-  return false;
+  return FALSE;
   else
-  return true;
+  return TRUE;
 }
 
-inline bool
+inline UBool
 ParsePosition::operator!=(const ParsePosition& copy) const
 {
   return !operator==(copy);
@@ -231,7 +228,5 @@ ParsePosition::setErrorIndex(int32_t ei)
   this->errorIndex = ei;
 }
 U_NAMESPACE_END
-
-#endif /* U_SHOW_CPLUSPLUS_API */
 
 #endif

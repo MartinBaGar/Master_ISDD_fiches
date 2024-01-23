@@ -1,6 +1,6 @@
 #! /bin/sh
-# Generated automatically by config.status (R) 4.3.1
-# Libtool was configured on host aecf8f1294f5:
+# Generated automatically by config.status (R) 3.5.0
+# Libtool was configured on host 9a8f02c988f2:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.
@@ -30,7 +30,7 @@
 
 
 # The names of the tagged configurations supported by this script.
-available_tags='CXX FC '
+available_tags='CXX F77 FC '
 
 # Configured defaults for sys_lib_dlsearch_path munging.
 : ${LT_SYS_LIBRARY_PATH=""}
@@ -48,7 +48,7 @@ macro_revision=2.4.6
 build_libtool_libs=yes
 
 # What type of objects to build.
-pic_mode=yes
+pic_mode=default
 
 # Whether or not to optimize for fast installation.
 fast_install=yes
@@ -66,38 +66,38 @@ ECHO="printf %s\\n"
 PATH_SEPARATOR=":"
 
 # The host system.
-host_alias=x86_64-conda-linux-gnu
-host=x86_64-conda-linux-gnu
+host_alias=
+host=x86_64-pc-linux-gnu
 host_os=linux-gnu
 
 # The build system.
-build_alias=x86_64-conda-linux-gnu
-build=x86_64-conda-linux-gnu
+build_alias=
+build=x86_64-pc-linux-gnu
 build_os=linux-gnu
 
 # A sed program that does not truncate output.
-SED="/usr/bin/sed"
+SED="/bin/sed"
 
 # Sed that helps us avoid accidentally triggering echo(1) options like -n.
 Xsed="$SED -e 1s/^X//"
 
 # A grep program that handles long lines.
-GREP="/usr/bin/grep"
+GREP="/bin/grep"
 
 # An ERE matcher.
-EGREP="/usr/bin/grep -E"
+EGREP="/bin/grep -E"
 
 # A literal string matcher.
-FGREP="/usr/bin/grep -F"
+FGREP="/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
-NM="/workspace/croot/r-base_1695428141831/_build_env/bin/x86_64-conda-linux-gnu-nm"
+NM="/usr/bin/nm -B"
 
 # Whether we need soft or hard links.
 LN_S="ln -s"
 
 # What is the maximum length of a command?
-max_cmd_len=1966080
+max_cmd_len=98304
 
 # Object file suffix (normally "o").
 objext=o
@@ -121,7 +121,7 @@ to_host_file_cmd=func_convert_file_noop
 to_tool_file_cmd=func_convert_file_noop
 
 # An object symbol dumper.
-OBJDUMP="/workspace/croot/r-base_1695428141831/_build_env/bin/x86_64-conda-linux-gnu-objdump"
+OBJDUMP="objdump"
 
 # Method to check whether dependent libraries are shared objects.
 deplibs_check_method="pass_all"
@@ -142,7 +142,7 @@ DLLTOOL="false"
 sharedlib_from_linklib_cmd="printf %s\\n"
 
 # The archiver.
-AR="x86_64-conda-linux-gnu-ar"
+AR="ar"
 
 # Flags to create an archive.
 AR_FLAGS="cru"
@@ -151,10 +151,10 @@ AR_FLAGS="cru"
 archiver_list_spec="@"
 
 # A symbol stripping program.
-STRIP="x86_64-conda-linux-gnu-strip"
+STRIP="strip"
 
 # Commands used to install an old-style archive.
-RANLIB="x86_64-conda-linux-gnu-ranlib"
+RANLIB="ranlib"
 old_postinstall_cmds="chmod 644 \$oldlib~\$RANLIB \$tool_oldlib"
 old_postuninstall_cmds=""
 
@@ -162,10 +162,10 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=no
 
 # A C compiler.
-LTCC="x86_64-conda-linux-gnu-cc"
+LTCC="gcc -std=gnu99"
 
 # LTCC compiler flags.
-LTCFLAGS="-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /workspaces/Master_ISDD_fiches/env/include -fdebug-prefix-map=/workspace/croot/r-base_1695428141831/work=/usr/local/src/conda/r-base-4.3.1 -fdebug-prefix-map=/workspaces/Master_ISDD_fiches/env=/usr/local/src/conda-prefix"
+LTCFLAGS="-I/builddir/vendor/build/include -DU_STATIC_IMPLEMENTATION -O2 -g"
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe="sed -n -e 's/^.*[	 ]\\([ABCDGIRSTW][ABCDGIRSTW]*\\)[	 ][	 ]*\\([_A-Za-z][_A-Za-z0-9]*\\)\$/\\1 \\2 \\2/p' | sed '/ __gnu_lto/d'"
@@ -192,7 +192,7 @@ nm_file_list_spec="@"
 lt_sysroot=
 
 # Command to truncate a binary pipe.
-lt_truncate_bin="/usr/bin/dd bs=4096 count=1"
+lt_truncate_bin="/bin/dd bs=4096 count=1"
 
 # The name of the directory that contains temporary libtool files.
 objdir=.libs
@@ -282,7 +282,7 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/workspace/croot/r-base_1695428141831/_build_env/lib/gcc/x86_64-conda-linux-gnu/11.2.0 /workspace/croot/r-base_1695428141831/_build_env/lib/gcc /workspace/croot/r-base_1695428141831/_build_env/x86_64-conda-linux-gnu/lib64 /workspace/croot/r-base_1695428141831/_build_env/x86_64-conda-linux-gnu/sysroot/lib64 /workspace/croot/r-base_1695428141831/_build_env/x86_64-conda-linux-gnu/sysroot/usr/lib64 /workspace/croot/r-base_1695428141831/_build_env/x86_64-conda-linux-gnu/lib /workspace/croot/r-base_1695428141831/_build_env/x86_64-conda-linux-gnu/sysroot/lib /workspace/croot/r-base_1695428141831/_build_env/x86_64-conda-linux-gnu/sysroot/usr/lib "
+sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/4.1.2 /usr/lib64 /lib64 "
 
 # Detected run-time system search path for libraries.
 sys_lib_dlsearch_path_spec="/lib /usr/lib "
@@ -300,12 +300,12 @@ dlopen_self=unknown
 dlopen_self_static=unknown
 
 # Commands to strip libraries.
-old_striplib="x86_64-conda-linux-gnu-strip --strip-debug"
-striplib="x86_64-conda-linux-gnu-strip --strip-unneeded"
+old_striplib="strip --strip-debug"
+striplib="strip --strip-unneeded"
 
 
 # The linker used to build libraries.
-LD="x86_64-conda-linux-gnu-ld -m elf_x86_64"
+LD="/usr/bin/ld -m elf_x86_64"
 
 # How to create reloadable object files.
 reload_flag=" -r"
@@ -315,7 +315,7 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="x86_64-conda-linux-gnu-cc"
+CC="gcc"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes
@@ -330,7 +330,7 @@ pic_flag=" -fPIC -DPIC"
 wl="-Wl,"
 
 # Compiler flag to prevent dynamic linking.
-link_static_flag=""
+link_static_flag="-static"
 
 # Does compiler simultaneously support -c and -o options?
 compiler_c_o="yes"
@@ -11661,7 +11661,7 @@ build_old_libs=`case $build_libtool_libs in yes) echo no;; *) echo yes;; esac`
 # ### BEGIN LIBTOOL TAG CONFIG: CXX
 
 # The linker used to build libraries.
-LD="x86_64-conda-linux-gnu-ld -m elf_x86_64"
+LD="/usr/bin/ld -m elf_x86_64"
 
 # How to create reloadable object files.
 reload_flag=" -r"
@@ -11671,7 +11671,7 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="x86_64-conda-linux-gnu-c++"
+CC="g++"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes
@@ -11686,7 +11686,7 @@ pic_flag=" -fPIC -DPIC"
 wl="-Wl,"
 
 # Compiler flag to prevent dynamic linking.
-link_static_flag=""
+link_static_flag="-static"
 
 # Does compiler simultaneously support -c and -o options?
 compiler_c_o="yes"
@@ -11792,25 +11792,25 @@ file_list_spec=""
 hardcode_action=immediate
 
 # The directories searched by this compiler when creating a shared library.
-compiler_lib_search_dirs="/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0 /workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc /workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/../../../../x86_64-conda-linux-gnu/lib/../lib64 /workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib64 /workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib64 /workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/../../../../x86_64-conda-linux-gnu/lib /workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/lib /workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib"
+compiler_lib_search_dirs="/usr/lib/gcc/x86_64-redhat-linux/4.1.2 /usr/lib/gcc/x86_64-redhat-linux/4.1.2 /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 /lib/../lib64 /usr/lib/../lib64"
 
 # Dependencies to place before and after the objects being linked to
 # create a shared library.
-predep_objects="/workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib64/crti.o /workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/crtbeginS.o"
-postdep_objects="/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/crtendS.o /workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib64/crtn.o"
+predep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbeginS.o"
+postdep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o"
 predeps=""
 postdeps="-lstdc++ -lm -lgcc_s -lc -lgcc_s"
 
 # The library search path used internally by the compiler when linking
 # a shared library.
-compiler_lib_search_path="-L/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0 -L/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc -L/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/../../../../x86_64-conda-linux-gnu/lib/../lib64 -L/workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib64 -L/workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib64 -L/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/../../../../x86_64-conda-linux-gnu/lib -L/workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/lib -L/workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib"
+compiler_lib_search_path="-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64"
 
 # ### END LIBTOOL TAG CONFIG: CXX
 
-# ### BEGIN LIBTOOL TAG CONFIG: FC
+# ### BEGIN LIBTOOL TAG CONFIG: F77
 
 # The linker used to build libraries.
-LD="x86_64-conda-linux-gnu-ld -m elf_x86_64"
+LD="/usr/bin/ld -m elf_x86_64"
 
 # How to create reloadable object files.
 reload_flag=" -r"
@@ -11820,7 +11820,7 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="x86_64-conda-linux-gnu-gfortran"
+CC="gfortran"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes
@@ -11835,7 +11835,7 @@ pic_flag=" -fPIC"
 wl="-Wl,"
 
 # Compiler flag to prevent dynamic linking.
-link_static_flag=""
+link_static_flag="-static"
 
 # Does compiler simultaneously support -c and -o options?
 compiler_c_o="yes"
@@ -11944,17 +11944,169 @@ file_list_spec=""
 hardcode_action=immediate
 
 # The directories searched by this compiler when creating a shared library.
-compiler_lib_search_dirs="/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0 /workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc /workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/../../../../x86_64-conda-linux-gnu/lib/../lib64 /workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib64 /workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib64 /workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/../../../../x86_64-conda-linux-gnu/lib /workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/lib /workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib"
+compiler_lib_search_dirs=""
 
 # Dependencies to place before and after the objects being linked to
 # create a shared library.
-predep_objects="/workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib64/crti.o /workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/crtbeginS.o"
-postdep_objects="/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/crtendS.o /workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib64/crtn.o"
+predep_objects=""
+postdep_objects=""
 predeps=""
-postdeps="-lgfortran -lm -lgomp -lgcc_s -lquadmath -lm -lgcc_s -lpthread -lc -lgcc_s"
+postdeps=""
 
 # The library search path used internally by the compiler when linking
 # a shared library.
-compiler_lib_search_path="-L/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0 -L/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc -L/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/../../../../x86_64-conda-linux-gnu/lib/../lib64 -L/workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/lib/../lib64 -L/workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib64 -L/workspace/croot/r-base_1695428141831/_build_env/bin/../lib/gcc/x86_64-conda-linux-gnu/11.2.0/../../../../x86_64-conda-linux-gnu/lib -L/workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/lib -L/workspace/croot/r-base_1695428141831/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib"
+compiler_lib_search_path=""
+
+# ### END LIBTOOL TAG CONFIG: F77
+
+# ### BEGIN LIBTOOL TAG CONFIG: FC
+
+# The linker used to build libraries.
+LD="/usr/bin/ld -m elf_x86_64"
+
+# How to create reloadable object files.
+reload_flag=" -r"
+reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
+
+# Commands used to build an old-style archive.
+old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
+
+# A language specific compiler.
+CC="gfortran"
+
+# Is the compiler the GNU compiler?
+with_gcc=yes
+
+# Compiler flag to turn off builtin functions.
+no_builtin_flag=""
+
+# Additional compiler flags for building library objects.
+pic_flag=" -fPIC"
+
+# How to pass a linker flag through the compiler.
+wl="-Wl,"
+
+# Compiler flag to prevent dynamic linking.
+link_static_flag="-static"
+
+# Does compiler simultaneously support -c and -o options?
+compiler_c_o="yes"
+
+# Whether or not to add -lc for building shared libraries.
+build_libtool_need_lc=no
+
+# Whether or not to disallow shared libs when runtime libs are static.
+allow_libtool_libs_with_static_runtimes=no
+
+# Compiler flag to allow reflexive dlopens.
+export_dynamic_flag_spec="\$wl--export-dynamic"
+
+# Compiler flag to generate shared objects directly from archives.
+whole_archive_flag_spec="\$wl--whole-archive\$convenience \$wl--no-whole-archive"
+
+# Whether the compiler copes with passing no objects directly.
+compiler_needs_object="no"
+
+# Create an old-style archive from a shared archive.
+old_archive_from_new_cmds=""
+
+# Create a temporary old-style archive to link instead of a shared archive.
+old_archive_from_expsyms_cmds=""
+
+# Commands used to build a shared archive.
+archive_cmds="\$CC -shared \$pic_flag \$libobjs \$deplibs \$compiler_flags \$wl-soname \$wl\$soname -o \$lib"
+archive_expsym_cmds="echo \\\"{ global:\\\" > \$output_objdir/\$libname.ver~
+            cat \$export_symbols | sed -e \\\"s/\\\\(.*\\\\)/\\\\1;/\\\" >> \$output_objdir/\$libname.ver~
+            echo \\\"local: *; };\\\" >> \$output_objdir/\$libname.ver~
+            \$CC -shared \$pic_flag \$libobjs \$deplibs \$compiler_flags \$wl-soname \$wl\$soname \$wl-version-script \$wl\$output_objdir/\$libname.ver -o \$lib"
+
+# Commands used to build a loadable module if different from building
+# a shared archive.
+module_cmds=""
+module_expsym_cmds=""
+
+# Whether we are building with GNU ld or not.
+with_gnu_ld="yes"
+
+# Flag that allows shared libraries with undefined symbols to be built.
+allow_undefined_flag=""
+
+# Flag that enforces no undefined symbols.
+no_undefined_flag=""
+
+# Flag to hardcode $libdir into a binary during linking.
+# This must work even if $libdir does not exist
+hardcode_libdir_flag_spec="\$wl-rpath \$wl\$libdir"
+
+# Whether we need a single "-rpath" flag with a separated argument.
+hardcode_libdir_separator=""
+
+# Set to "yes" if using DIR/libNAME$shared_ext during linking hardcodes
+# DIR into the resulting binary.
+hardcode_direct=no
+
+# Set to "yes" if using DIR/libNAME$shared_ext during linking hardcodes
+# DIR into the resulting binary and the resulting library dependency is
+# "absolute",i.e impossible to change by setting $shlibpath_var if the
+# library is relocated.
+hardcode_direct_absolute=no
+
+# Set to "yes" if using the -LDIR flag during linking hardcodes DIR
+# into the resulting binary.
+hardcode_minus_L=no
+
+# Set to "yes" if using SHLIBPATH_VAR=DIR during linking hardcodes DIR
+# into the resulting binary.
+hardcode_shlibpath_var=unsupported
+
+# Set to "yes" if building a shared library automatically hardcodes DIR
+# into the library and all subsequent libraries and executables linked
+# against it.
+hardcode_automatic=no
+
+# Set to yes if linker adds runtime paths of dependent libraries
+# to runtime path list.
+inherit_rpath=no
+
+# Whether libtool must link a program against all its dependency libraries.
+link_all_deplibs=unknown
+
+# Set to "yes" if exported symbols are required.
+always_export_symbols=no
+
+# The commands to list exported symbols.
+export_symbols_cmds="\$NM \$libobjs \$convenience | \$global_symbol_pipe | \$SED 's/.* //' | sort | uniq > \$export_symbols"
+
+# Symbols that should not be listed in the preloaded symbols.
+exclude_expsyms="_GLOBAL_OFFSET_TABLE_|_GLOBAL__F[ID]_.*"
+
+# Symbols that must always be exported.
+include_expsyms=""
+
+# Commands necessary for linking programs (against libraries) with templates.
+prelink_cmds=""
+
+# Commands necessary for finishing linking programs.
+postlink_cmds=""
+
+# Specify filename containing input files.
+file_list_spec=""
+
+# How to hardcode a shared library path into an executable.
+hardcode_action=immediate
+
+# The directories searched by this compiler when creating a shared library.
+compiler_lib_search_dirs="/usr/lib/gcc/x86_64-redhat-linux/4.1.2 /usr/lib/gcc/x86_64-redhat-linux/4.1.2 /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 /lib/../lib64 /usr/lib/../lib64"
+
+# Dependencies to place before and after the objects being linked to
+# create a shared library.
+predep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbeginS.o"
+postdep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o"
+predeps=""
+postdeps="-lgfortranbegin -lgfortran -lm -lgcc_s -lc -lgcc_s"
+
+# The library search path used internally by the compiler when linking
+# a shared library.
+compiler_lib_search_path="-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64"
 
 # ### END LIBTOOL TAG CONFIG: FC

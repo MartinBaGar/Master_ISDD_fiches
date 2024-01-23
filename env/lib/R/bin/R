@@ -1,30 +1,15 @@
-#!/bin/sh
+#!/bin/bash
 # Shell wrapper for R executable.
 
-R_HOME_DIR=/workspaces/Master_ISDD_fiches/env/lib/R
-if test "${R_HOME_DIR}" = "/workspaces/Master_ISDD_fiches/env/lib/R"; then
-   case "linux-gnu" in
-   linux*)
-     run_arch=`uname -m`
-     case "$run_arch" in
-        x86_64|mips64|ppc64|powerpc64|sparc64|s390x)
-          libnn=lib64
-          libnn_fallback=lib
-        ;;
-        *)
-          libnn=lib
-          libnn_fallback=lib64
-        ;;
-     esac
-     if [ -x "/workspaces/Master_ISDD_fiches/env/${libnn}/R/bin/exec/R" ]; then
-        R_HOME_DIR="/workspaces/Master_ISDD_fiches/env/${libnn}/R"
-     elif [ -x "/workspaces/Master_ISDD_fiches/env/${libnn_fallback}/R/bin/exec/R" ]; then
-        R_HOME_DIR="/workspaces/Master_ISDD_fiches/env/${libnn_fallback}/R"
-     ## else -- leave alone (might be a sub-arch)
-     fi
-     ;;
-  esac
-fi
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+R_HOME_DIR=$(dirname ${DIR})
+
 
 if test -n "${R_HOME}" && \
    test "${R_HOME}" != "${R_HOME_DIR}"; then
@@ -32,11 +17,13 @@ if test -n "${R_HOME}" && \
 fi
 R_HOME="${R_HOME_DIR}"
 export R_HOME
-R_SHARE_DIR=/workspaces/Master_ISDD_fiches/env/lib/R/share
+R_SHARE_DIR="${R_HOME_DIR}/share"
 export R_SHARE_DIR
-R_INCLUDE_DIR=/workspaces/Master_ISDD_fiches/env/lib/R/include
+export TCL_LIBRARY=${R_SHARE_DIR}/tcl8.6/
+export CURL_CA_BUNDLE=${R_HOME_DIR}/lib/microsoft-r-cacert.pem
+R_INCLUDE_DIR="${R_HOME_DIR}/include"
 export R_INCLUDE_DIR
-R_DOC_DIR=/workspaces/Master_ISDD_fiches/env/lib/R/doc
+R_DOC_DIR="${R_HOME_DIR}/doc"
 export R_DOC_DIR
 
 # Since this script can be called recursively, we allow R_ARCH to
@@ -75,7 +62,7 @@ Options:
   --min-vsize=N         Set vector heap minimum to N bytes; '4M' = 4 MegaB
   -q, --quiet           Don't print startup message
   --silent              Same as --quiet
-  -s, --no-echo         Make R run as quietly as possible
+  --slave               Make R run as quietly as possible
   --interactive         Force an interactive session
   --verbose             Print more information about progress
   -d, --debugger=NAME   Run R through debugger NAME
@@ -117,7 +104,9 @@ can be placed between R and CMD, to apply to R processes run by 'command'
 
 Report bugs at <https://bugs.R-project.org>."
 
-SED=sed
+## some systems have a more portable sed, e.g. /usr/xpg4/bin/sed on Solaris,
+## so make sure that is used.
+SED=/bin/sed
 export SED
 
 error () {
@@ -188,11 +177,8 @@ while test -n "${1}"; do
       fi
       ;;
     -e)
-      TAB=`printf "\t"`
       if test -n "`echo ${2} | ${SED} 's/^-.*//'`"; then
-	a=`(echo "${2}" && echo) | ${SED} -e 's/ /~+~/g' | \
-          ${SED} -e :a -e N -e '$!ba' -e 's/\n/~n~/g' -e 's/~n~$//g' -e "s/$TAB/~t~/g"`
-        shift
+	a=`echo "${2}" | ${SED} -e 's/ /~+~/g'`; shift
       else
 	error "option '${1}' requires a non-empty argument"
       fi
@@ -211,31 +197,23 @@ while test -n "${1}"; do
       args="${args} --file=$a"
       ;;
     --no-environ)
-      R_ENVIRON=''
-      export R_ENVIRON
-      R_ENVIRON_USER=''
-      export R_ENVIRON_USER
+      export R_ENVIRON=''
+      export R_ENVIRON_USER=''
       args="${args} ${1}"
       ;;
     --no-site-file)
-      R_PROFILE=''
-      export R_PROFILE
+      export R_PROFILE=''
       args="${args} ${1}"
       ;;
     --no-init-file)
-      R_PROFILE_USER=''
-      export R_PROFILE_USER
+      export R_PROFILE_USER=''
       args="${args} ${1}"
       ;;
     --vanilla)
-      R_ENVIRON=''
-      export R_ENVIRON
-      R_ENVIRON_USER=''
-      export R_ENVIRON_USER
-      R_PROFILE=''
-      export R_PROFILE
-      R_PROFILE_USER=''
-      export R_PROFILE_USER
+      export R_ENVIRON=''
+      export R_ENVIRON_USER=''
+      export R_PROFILE=''
+      export R_PROFILE_USER=''
       args="${args} ${1}"
       ;;
     *)

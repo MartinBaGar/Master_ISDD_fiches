@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 ********************************************************************************
@@ -28,10 +28,6 @@
  * \file
  * \brief C++ API: Break Iterator.
  */
-
-#include "unicode/utypes.h"
-
-#if U_SHOW_CPLUSPLUS_API
 
 #if UCONFIG_NO_BREAK_ITERATION
 
@@ -99,7 +95,7 @@ U_NAMESPACE_BEGIN
  * <p>
  * Code snippets illustrating the use of the Break Iterator APIs
  * are available in the ICU User Guide,
- * https://unicode-org.github.io/icu/userguide/boundaryanalysis/
+ * http://icu-project.org/userguide/boundaryAnalysis.html
  * and in the sample program icu/source/samples/break/break.cpp
  *
  */
@@ -124,7 +120,7 @@ public:
      * object, and styles are not considered.
      * @stable ICU 2.0
      */
-    virtual bool operator==(const BreakIterator&) const = 0;
+    virtual UBool operator==(const BreakIterator&) const = 0;
 
     /**
      * Returns the complement of the result of operator==
@@ -132,21 +128,21 @@ public:
      * @return the complement of the result of operator==
      * @stable ICU 2.0
      */
-    bool operator!=(const BreakIterator& rhs) const { return !operator==(rhs); }
+    UBool operator!=(const BreakIterator& rhs) const { return !operator==(rhs); }
 
     /**
      * Return a polymorphic copy of this object.  This is an abstract
      * method which subclasses implement.
      * @stable ICU 2.0
      */
-    virtual BreakIterator* clone() const = 0;
+    virtual BreakIterator* clone(void) const = 0;
 
     /**
      * Return a polymorphic class ID for this object. Different subclasses
      * will return distinct unequal values.
      * @stable ICU 2.0
      */
-    virtual UClassID getDynamicClassID(void) const override = 0;
+    virtual UClassID getDynamicClassID(void) const = 0;
 
     /**
      * Return a CharacterIterator over the text being analyzed.
@@ -162,7 +158,7 @@ public:
       *  access the text without impacting any break iterator operations,
       *  but the underlying text itself must not be altered.
       *
-      * @param fillIn A UText to be filled in.  If nullptr, a new UText will be
+      * @param fillIn A UText to be filled in.  If NULL, a new UText will be
       *           allocated to hold the result.
       * @param status receives any error codes.
       * @return   The current UText for this break iterator.  If an input
@@ -254,7 +250,7 @@ public:
     virtual int32_t next(void) = 0;
 
     /**
-     * Return character index of the current iterator position within the text.
+     * Return character index of the current interator position within the text.
      * @return The boundary most recently returned.
      * @stable ICU 2.0
      */
@@ -281,7 +277,7 @@ public:
     virtual int32_t preceding(int32_t offset) = 0;
 
     /**
-     * Return true if the specified position is a boundary position.
+     * Return true if the specfied position is a boundary position.
      * As a side effect, the current position of the iterator is set
      * to the first boundary position at or following the specified offset.
      * @param offset the offset to check.
@@ -296,20 +292,21 @@ public:
      * does nothing.  Negative values move to previous boundaries
      * and positive values move to later boundaries.
      * @return The new iterator position, or
-     * DONE if there are fewer than |n| boundaries in the specified direction.
+     * DONE if there are fewer than |n| boundaries in the specfied direction.
      * @stable ICU 2.0
      */
     virtual int32_t next(int32_t n) = 0;
 
    /**
-     * For RuleBasedBreakIterators, return the status tag from the break rule
-     * that determined the boundary at the current iteration position.
+     * For RuleBasedBreakIterators, return the status tag from the
+     * break rule that determined the most recently
+     * returned break position.
      * <p>
      * For break iterator types that do not support a rule status,
      * a default value of 0 is returned.
      * <p>
-     * @return the status from the break rule that determined the boundary at
-     *         the current iteration position.
+     * @return the status from the break rule that determined the most recently
+     *         returned break position.
      * @see RuleBaseBreakIterator::getRuleStatus()
      * @see UWordBreak
      * @stable ICU 52
@@ -318,7 +315,7 @@ public:
 
    /**
     * For RuleBasedBreakIterators, get the status (tag) values from the break rule(s)
-    * that determined the boundary at the current iteration position.
+    * that determined the most recently returned break position.
     * <p>
     * For break iterator types that do not support rule status,
     * no values are returned.
@@ -334,10 +331,10 @@ public:
     * @param fillInVec an array to be filled in with the status values.
     * @param capacity  the length of the supplied vector.  A length of zero causes
     *                  the function to return the number of status values, in the
-    *                  normal way, without attempting to store any values.
+    *                  normal way, without attemtping to store any values.
     * @param status    receives error codes.
     * @return          The number of rule status values from rules that determined
-    *                  the boundary at the current iteration position.
+    *                  the most recent boundary returned by the break iterator.
     *                  In the event of a U_BUFFER_OVERFLOW_ERROR, the return value
     *                  is the total number of status values that were available,
     *                  not the reduced number that were actually returned.
@@ -435,13 +432,12 @@ public:
     static BreakIterator* U_EXPORT2
     createSentenceInstance(const Locale& where, UErrorCode& status);
 
-#ifndef U_HIDE_DEPRECATED_API
     /**
      * Create BreakIterator for title-casing breaks using the specified locale
      * Returns an instance of a BreakIterator implementing title breaks.
      * The iterator returned locates title boundaries as described for
      * Unicode 3.2 only. For Unicode 4.0 and above title boundary iteration,
-     * please use a word boundary iterator. See {@link #createWordInstance }.
+     * please use Word Boundary iterator.{@link #createWordInstance }
      *
      * @param where the locale.
      * @param status The error code.
@@ -456,11 +452,10 @@ public:
      * used; neither the requested locale nor any of its fall back locales
      * could be found.
      * The caller owns the returned object and is responsible for deleting it.
-     * @deprecated ICU 64 Use createWordInstance instead.
+     * @stable ICU 2.1
      */
     static BreakIterator* U_EXPORT2
     createTitleInstance(const Locale& where, UErrorCode& status);
-#endif /* U_HIDE_DEPRECATED_API */
 
     /**
      * Get the set of Locales for which TextBoundaries are installed.
@@ -474,7 +469,7 @@ public:
     static const Locale* U_EXPORT2 getAvailableLocales(int32_t& count);
 
     /**
-     * Get name of the object for the desired Locale, in the desired language.
+     * Get name of the object for the desired Locale, in the desired langauge.
      * @param objectLocale must be from getAvailableLocales.
      * @param displayLocale specifies the desired locale for output.
      * @param name the fill-in parameter of the return value
@@ -487,7 +482,7 @@ public:
                                          UnicodeString& name);
 
     /**
-     * Get name of the object for the desired Locale, in the language of the
+     * Get name of the object for the desired Locale, in the langauge of the
      * default locale.
      * @param objectLocale must be from getMatchingLocales
      * @param name the fill-in parameter of the return value
@@ -497,13 +492,12 @@ public:
     static UnicodeString& U_EXPORT2 getDisplayName(const Locale& objectLocale,
                                          UnicodeString& name);
 
-#ifndef U_FORCE_HIDE_DEPRECATED_API
     /**
      * Deprecated functionality. Use clone() instead.
      *
      * Thread safe client-buffer-based cloning operation
      *    Do NOT call delete on a safeclone, since 'new' is not used to create it.
-     * @param stackBuffer user allocated space for the new clone. If nullptr new memory will be allocated.
+     * @param stackBuffer user allocated space for the new clone. If NULL new memory will be allocated.
      * If buffer is not large enough, new memory will be allocated.
      * @param BufferSize reference to size of allocated space.
      * If BufferSize == 0, a sufficient size for use in cloning will
@@ -520,7 +514,6 @@ public:
     virtual BreakIterator *  createBufferClone(void *stackBuffer,
                                                int32_t &BufferSize,
                                                UErrorCode &status) = 0;
-#endif  // U_FORCE_HIDE_DEPRECATED_API
 
 #ifndef U_HIDE_DEPRECATED_API
 
@@ -564,7 +557,7 @@ public:
      * BreakIterator::createXXXInstance to avoid undefined behavior.
      * @param key the registry key returned by a previous call to registerInstance
      * @param status the in/out status code, no special meanings are assigned
-     * @return true if the iterator for the key was successfully unregistered
+     * @return TRUE if the iterator for the key was successfully unregistered
      * @stable ICU 2.4
      */
     static UBool U_EXPORT2 unregister(URegistryKey key, UErrorCode& status);
@@ -623,7 +616,7 @@ public:
     virtual BreakIterator &refreshInputText(UText *input, UErrorCode &status) = 0;
 
  private:
-    static BreakIterator* buildInstance(const Locale& loc, const char *type, UErrorCode& status);
+    static BreakIterator* buildInstance(const Locale& loc, const char *type, int32_t kind, UErrorCode& status);
     static BreakIterator* createInstance(const Locale& loc, int32_t kind, UErrorCode& status);
     static BreakIterator* makeInstance(const Locale& loc, int32_t kind, UErrorCode& status);
 
@@ -636,26 +629,30 @@ protected:
     /** @internal */
     BreakIterator();
     /** @internal */
-    BreakIterator (const BreakIterator &other);
+    BreakIterator (const BreakIterator &other) : UObject(other) {}
 #ifndef U_HIDE_INTERNAL_API
     /** @internal */
-    BreakIterator (const Locale& valid, const Locale &actual);
-    /** @internal. Assignment Operator, used by RuleBasedBreakIterator. */
-    BreakIterator &operator = (const BreakIterator &other);
+    BreakIterator (const Locale& valid, const Locale& actual);
 #endif  /* U_HIDE_INTERNAL_API */
 
 private:
 
-    /** @internal (private) */
+    /** @internal */
     char actualLocale[ULOC_FULLNAME_CAPACITY];
     char validLocale[ULOC_FULLNAME_CAPACITY];
+
+    /**
+     * The assignment operator has no real implementation.
+     * It's provided to make the compiler happy. Do not call.
+     */
+    BreakIterator& operator=(const BreakIterator&);
 };
 
 #ifndef U_HIDE_DEPRECATED_API
 
 inline UBool BreakIterator::isBufferClone()
 {
-    return false;
+    return FALSE;
 }
 
 #endif /* U_HIDE_DEPRECATED_API */
@@ -664,7 +661,5 @@ U_NAMESPACE_END
 
 #endif /* #if !UCONFIG_NO_BREAK_ITERATION */
 
-#endif /* U_SHOW_CPLUSPLUS_API */
-
-#endif // BRKITER_H
+#endif // _BRKITER
 //eof

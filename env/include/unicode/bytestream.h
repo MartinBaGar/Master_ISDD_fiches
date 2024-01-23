@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Copyright (C) 2009-2012, International Business Machines
 // Corporation and others. All Rights Reserved.
@@ -38,9 +38,6 @@
  */
 
 #include "unicode/utypes.h"
-
-#if U_SHOW_CPLUSPLUS_API
-
 #include "unicode/uobject.h"
 #include "unicode/std_string.h"
 
@@ -70,38 +67,6 @@ public:
    * @stable ICU 4.2
    */
   virtual void Append(const char* bytes, int32_t n) = 0;
-
-  /**
-   * Appends n bytes to this. Same as Append().
-   * Call AppendU8() with u8"string literals" which are const char * in C++11
-   * but const char8_t * in C++20.
-   * If the compiler does support char8_t as a distinct type,
-   * then an AppendU8() overload for that is defined and will be chosen.
-   *
-   * @param bytes the pointer to the bytes
-   * @param n the number of bytes; must be non-negative
-   * @stable ICU 67
-   */
-  inline void AppendU8(const char* bytes, int32_t n) {
-    Append(bytes, n);
-  }
-
-#if defined(__cpp_char8_t) || defined(U_IN_DOXYGEN)
-  /**
-   * Appends n bytes to this. Same as Append() but for a const char8_t * pointer.
-   * Call AppendU8() with u8"string literals" which are const char * in C++11
-   * but const char8_t * in C++20.
-   * If the compiler does support char8_t as a distinct type,
-   * then this AppendU8() overload for that is defined and will be chosen.
-   *
-   * @param bytes the pointer to the bytes
-   * @param n the number of bytes; must be non-negative
-   * @stable ICU 67
-   */
-  inline void AppendU8(const char8_t* bytes, int32_t n) {
-    Append(reinterpret_cast<const char*>(bytes), n);
-  }
-#endif
 
   /**
    * Returns a writable buffer for appending and writes the buffer's capacity to
@@ -161,8 +126,8 @@ public:
   virtual void Flush();
 
 private:
-  ByteSink(const ByteSink &) = delete;
-  ByteSink &operator=(const ByteSink &) = delete;
+  ByteSink(const ByteSink &); // copy constructor not implemented
+  ByteSink &operator=(const ByteSink &); // assignment operator not implemented
 };
 
 // -------------------------------------------------------------
@@ -195,7 +160,7 @@ public:
    * Returns the sink to its original state, without modifying the buffer.
    * Useful for reusing both the buffer and the sink for multiple streams.
    * Resets the state to NumberOfBytesWritten()=NumberOfBytesAppended()=0
-   * and Overflowed()=false.
+   * and Overflowed()=FALSE.
    * @return *this
    * @stable ICU 4.6
    */
@@ -206,7 +171,7 @@ public:
    * @param n the number of bytes; must be non-negative
    * @stable ICU 4.2
    */
-  virtual void Append(const char* bytes, int32_t n) override;
+  virtual void Append(const char* bytes, int32_t n);
   /**
    * Returns a writable buffer for appending and writes the buffer's capacity to
    * *result_capacity. For details see the base class documentation.
@@ -224,7 +189,7 @@ public:
   virtual char* GetAppendBuffer(int32_t min_capacity,
                                 int32_t desired_capacity_hint,
                                 char* scratch, int32_t scratch_capacity,
-                                int32_t* result_capacity) override;
+                                int32_t* result_capacity);
   /**
    * Returns the number of bytes actually written to the sink.
    * @return number of bytes written to the buffer
@@ -234,7 +199,7 @@ public:
   /**
    * Returns true if any bytes were discarded, i.e., if there was an
    * attempt to write more than 'capacity' bytes.
-   * @return true if more than 'capacity' bytes were Append()ed
+   * @return TRUE if more than 'capacity' bytes were Append()ed
    * @stable ICU 4.2
    */
   UBool Overflowed() const { return overflowed_; }
@@ -252,11 +217,12 @@ private:
   int32_t size_;
   int32_t appended_;
   UBool overflowed_;
-
-  CheckedArrayByteSink() = delete;
-  CheckedArrayByteSink(const CheckedArrayByteSink &) = delete;
-  CheckedArrayByteSink &operator=(const CheckedArrayByteSink &) = delete;
+  CheckedArrayByteSink(); ///< default constructor not implemented 
+  CheckedArrayByteSink(const CheckedArrayByteSink &); ///< copy constructor not implemented
+  CheckedArrayByteSink &operator=(const CheckedArrayByteSink &); ///< assignment operator not implemented
 };
+
+#if U_HAVE_STD_STRING
 
 /** 
  * Implementation of ByteSink that writes to a "string".
@@ -273,35 +239,21 @@ class StringByteSink : public ByteSink {
    */
   StringByteSink(StringClass* dest) : dest_(dest) { }
   /**
-   * Constructs a ByteSink that reserves append capacity and will append bytes to the dest string.
-   * 
-   * @param dest pointer to string object to append to
-   * @param initialAppendCapacity capacity beyond dest->length() to be reserve()d
-   * @stable ICU 60
-   */
-  StringByteSink(StringClass* dest, int32_t initialAppendCapacity) : dest_(dest) {
-    if (initialAppendCapacity > 0 &&
-        (uint32_t)initialAppendCapacity > (dest->capacity() - dest->length())) {
-      dest->reserve(dest->length() + initialAppendCapacity);
-    }
-  }
-  /**
    * Append "bytes[0,n-1]" to this.
    * @param data the pointer to the bytes
    * @param n the number of bytes; must be non-negative
    * @stable ICU 4.2
    */
-  virtual void Append(const char* data, int32_t n) override { dest_->append(data, n); }
+  virtual void Append(const char* data, int32_t n) { dest_->append(data, n); }
  private:
   StringClass* dest_;
-
-  StringByteSink() = delete;
-  StringByteSink(const StringByteSink &) = delete;
-  StringByteSink &operator=(const StringByteSink &) = delete;
+  StringByteSink(); ///< default constructor not implemented 
+  StringByteSink(const StringByteSink &); ///< copy constructor not implemented
+  StringByteSink &operator=(const StringByteSink &); ///< assignment operator not implemented
 };
 
-U_NAMESPACE_END
+#endif
 
-#endif /* U_SHOW_CPLUSPLUS_API */
+U_NAMESPACE_END
 
 #endif  // __BYTESTREAM_H__

@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 *******************************************************************************
@@ -15,8 +15,6 @@
 #define PLURFMT
 
 #include "unicode/utypes.h"
-
-#if U_SHOW_CPLUSPLUS_API
 
 /**
  * \file
@@ -70,7 +68,7 @@ class NFRule;
  *     use the predefined keywords. The whole plural formatting of messages can
  *     be done using localized patterns from resource bundles. For predefined plural
  *     rules, see the CLDR <i>Language Plural Rules</i> page at
- *     https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/language_plural_rules.html
+ *    http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html
  * </ul>
  * </p>
  * <h4>Usage of <code>PluralFormat</code></h4>
@@ -434,7 +432,7 @@ public:
       * @return         true if other is semantically equal to this.
       * @stable ICU 4.0
       */
-    virtual bool operator==(const Format& other) const override;
+    virtual UBool operator==(const Format& other) const;
 
     /**
      * Return true if another object is semantically unequal to this one.
@@ -443,14 +441,14 @@ public:
      * @return         true if other is semantically unequal to this.
      * @stable ICU 4.0
      */
-    virtual bool operator!=(const Format& other) const;
+    virtual UBool operator!=(const Format& other) const;
 
     /**
      * Clones this Format object polymorphically.  The caller owns the
      * result and should delete it when done.
      * @stable ICU 4.0
      */
-    virtual PluralFormat* clone() const override;
+    virtual Format* clone(void) const;
 
    /**
     * Formats a plural message for a number taken from a Formattable object.
@@ -469,7 +467,7 @@ public:
    UnicodeString& format(const Formattable& obj,
                          UnicodeString& appendTo,
                          FieldPosition& pos,
-                         UErrorCode& status) const override;
+                         UErrorCode& status) const;
 
    /**
     * Returns the pattern from applyPattern() or constructor().
@@ -505,7 +503,7 @@ public:
     */
    virtual void parseObject(const UnicodeString& source,
                             Formattable& result,
-                            ParsePosition& parse_pos) const override;
+                            ParsePosition& parse_pos) const;
 
     /**
      * ICU "poor man's RTTI", returns a UClassID for this class.
@@ -520,11 +518,19 @@ public:
      *
      * @stable ICU 4.0
      */
-     virtual UClassID getDynamicClassID() const override;
+     virtual UClassID getDynamicClassID() const;
 
+#if (defined(__xlC__) && (__xlC__ < 0x0C00)) || (U_PLATFORM == U_PF_OS390) || (U_PLATFORM ==U_PF_OS400)
+// Work around a compiler bug on xlC 11.1 on AIX 7.1 that would
+// prevent PluralSelectorAdapter from implementing private PluralSelector.
+// xlC error message:
+// 1540-0300 (S) The "private" member "class icu_49::PluralFormat::PluralSelector" cannot be accessed.
+public:
+#else
 private:
+#endif
      /**
-      * @internal (private)
+      * @internal
       */
     class U_I18N_API PluralSelector : public UMemory {
       public:
@@ -536,32 +542,39 @@ private:
          * @param number The number to be plural-formatted.
          * @param ec Error code.
          * @return The selected PluralFormat keyword.
-         * @internal (private)
+         * @internal
          */
         virtual UnicodeString select(void *context, double number, UErrorCode& ec) const = 0;
     };
 
+    /**
+     * @internal
+     */
     class U_I18N_API PluralSelectorAdapter : public PluralSelector {
       public:
-        PluralSelectorAdapter() : pluralRules(nullptr) {
+        PluralSelectorAdapter() : pluralRules(NULL) {
         }
 
         virtual ~PluralSelectorAdapter();
 
-        virtual UnicodeString select(void *context, double number, UErrorCode& /*ec*/) const override;
+        virtual UnicodeString select(void *context, double number, UErrorCode& /*ec*/) const; /**< @internal */
 
         void reset();
 
         PluralRules* pluralRules;
     };
 
+#if defined(__xlC__)
+// End of xlC bug workaround, keep remaining definitions private.
+private:
+#endif
     Locale  locale;
     MessagePattern msgPattern;
     NumberFormat*  numberFormat;
     double offset;
     PluralSelectorAdapter pluralRulesWrapper;
 
-    PluralFormat() = delete;   // default constructor not implemented
+    PluralFormat();   // default constructor not implemented
     void init(const PluralRules* rules, UPluralType type, UErrorCode& status);
     /**
      * Copies dynamically allocated values (pointer fields).
@@ -572,7 +585,7 @@ private:
     UnicodeString& format(const Formattable& numberObject, double number,
                           UnicodeString& appendTo,
                           FieldPosition& pos,
-                          UErrorCode& status) const;
+                          UErrorCode& status) const; /**< @internal */
 
     /**
      * Finds the PluralFormat sub-message for the given number, or the "other" sub-message.
@@ -587,7 +600,7 @@ private:
      */
     static int32_t findSubMessage(
          const MessagePattern& pattern, int32_t partIndex,
-         const PluralSelector& selector, void *context, double number, UErrorCode& ec);
+         const PluralSelector& selector, void *context, double number, UErrorCode& ec); /**< @internal */
 
     void parseType(const UnicodeString& source, const NFRule *rbnfLenientScanner,
         Formattable& result, FieldPosition& pos) const;
@@ -599,8 +612,6 @@ private:
 U_NAMESPACE_END
 
 #endif /* #if !UCONFIG_NO_FORMATTING */
-
-#endif /* U_SHOW_CPLUSPLUS_API */
 
 #endif // _PLURFMT
 //eof

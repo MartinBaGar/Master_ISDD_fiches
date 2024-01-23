@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 **********************************************************************
@@ -10,8 +10,6 @@
 #define SCINUMBERFORMATTER_H
 
 #include "unicode/utypes.h"
-
-#if U_SHOW_CPLUSPLUS_API
 
 #if !UCONFIG_NO_FORMATTING
 
@@ -26,6 +24,7 @@
 U_NAMESPACE_BEGIN
 
 class FieldPositionIterator;
+class DecimalFormatStaticSets;
 class DecimalFormatSymbols;
 class DecimalFormat;
 class Formattable;
@@ -151,6 +150,7 @@ public:
                 const UnicodeString &original,
                 FieldPositionIterator &fpi,
                 const UnicodeString &preExponent,
+                const DecimalFormatStaticSets &decimalFormatSets,
                 UnicodeString &appendTo,
                 UErrorCode &status) const = 0;
     private:
@@ -159,14 +159,15 @@ public:
 
     class U_I18N_API SuperscriptStyle : public Style {
     public:
-        virtual SuperscriptStyle *clone() const override;
+        virtual Style *clone() const;
     protected:
         virtual UnicodeString &format(
                 const UnicodeString &original,
                 FieldPositionIterator &fpi,
                 const UnicodeString &preExponent,
+                const DecimalFormatStaticSets &decimalFormatSets,
                 UnicodeString &appendTo,
-                UErrorCode &status) const override;
+                UErrorCode &status) const;
     };
 
     class U_I18N_API MarkupStyle : public Style {
@@ -177,14 +178,15 @@ public:
                 : Style(),
                   fBeginMarkup(beginMarkup),
                   fEndMarkup(endMarkup) { }
-        virtual MarkupStyle *clone() const override;
+        virtual Style *clone() const;
     protected:
         virtual UnicodeString &format(
                 const UnicodeString &original,
                 FieldPositionIterator &fpi,
                 const UnicodeString &preExponent,
+                const DecimalFormatStaticSets &decimalFormatSets,
                 UnicodeString &appendTo,
-                UErrorCode &status) const override;
+                UErrorCode &status) const;
     private:
         UnicodeString fBeginMarkup;
         UnicodeString fEndMarkup;
@@ -196,7 +198,7 @@ public:
             UErrorCode &status);
 
     ScientificNumberFormatter(const ScientificNumberFormatter &other);
-    ScientificNumberFormatter &operator=(const ScientificNumberFormatter &) = delete;
+    ScientificNumberFormatter &operator=(const ScientificNumberFormatter &);
 
     static void getPreExponent(
             const DecimalFormatSymbols &dfs, UnicodeString &preExponent);
@@ -209,6 +211,7 @@ public:
     UnicodeString fPreExponent;
     DecimalFormat *fDecimalFormat;
     Style *fStyle;
+    const DecimalFormatStaticSets *fStaticSets;
 
 };
 
@@ -216,7 +219,4 @@ U_NAMESPACE_END
 
 
 #endif /* !UCONFIG_NO_FORMATTING */
-
-#endif /* U_SHOW_CPLUSPLUS_API */
-
 #endif 

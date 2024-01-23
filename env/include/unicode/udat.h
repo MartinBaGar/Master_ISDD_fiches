@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
  *******************************************************************************
@@ -14,15 +14,11 @@
 
 #if !UCONFIG_NO_FORMATTING
 
+#include "unicode/localpointer.h"
 #include "unicode/ucal.h"
 #include "unicode/unum.h"
 #include "unicode/udisplaycontext.h"
 #include "unicode/ufieldpositer.h"
-
-#if U_SHOW_CPLUSPLUS_API
-#include "unicode/localpointer.h"
-#endif   // U_SHOW_CPLUSPLUS_API
-
 /**
  * \file
  * \brief C API: DateFormat
@@ -146,7 +142,7 @@
  * the date and time formatting algorithm and pattern letters defined by
  * <a href="http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table">UTS#35
  * Unicode Locale Data Markup Language (LDML)</a> and further documented for ICU in the
- * <a href="https://unicode-org.github.io/icu/userguide/format_parse/datetime#date-field-symbol-table">ICU
+ * <a href="https://sites.google.com/site/icuprojectuserguide/formatparse/datetime?pli=1#TOC-Date-Field-Symbol-Table">ICU
  * User Guide</a>.</p>
  */
 
@@ -486,27 +482,6 @@ typedef enum UDateFormatStyle {
 #define UDAT_HOUR_TZ                    "jz"
 #endif  /* U_HIDE_DEPRECATED_API */
 
-#ifndef U_HIDE_INTERNAL_API
-/**
- * Constant for Unicode string name of new (in 2019) Japanese calendar era,
- * root/English abbreviated version (ASCII-range characters).
- * @internal
- */
-#define JP_ERA_2019_ROOT                "Reiwa"
-/**
- * Constant for Unicode string name of new (in 2019) Japanese calendar era,
- * Japanese abbreviated version (Han, or fullwidth Latin for testing).
- * @internal
- */
-#define JP_ERA_2019_JA                  "\\u4EE4\\u548C"
-/**
- * Constant for Unicode string name of new (in 2019) Japanese calendar era,
- * root and Japanese narrow version (ASCII-range characters).
- * @internal
- */
-#define JP_ERA_2019_NARROW              "R"
-#endif  // U_HIDE_INTERNAL_API
-
 /**
  * FieldPosition and UFieldPosition selectors for format fields
  * defined by DateFormat and UDateFormat.
@@ -788,19 +763,21 @@ typedef enum UDateFormatField {
     UDAT_RELATED_YEAR_FIELD = 34,
 #endif  /* U_HIDE_INTERNAL_API */
 
+#ifndef U_HIDE_DRAFT_API
     /**
      * FieldPosition selector for 'b' field alignment.
      * Displays midnight and noon for 12am and 12pm, respectively, if available;
      * otherwise fall back to AM / PM.
-     * @stable ICU 57
+     * @draft ICU 57
      */
     UDAT_AM_PM_MIDNIGHT_NOON_FIELD = 35,
 
     /* FieldPosition selector for 'B' field alignment.
      * Displays flexible day periods, such as "in the morning", if available.
-     * @stable ICU 57
+     * @draft ICU 57
      */
     UDAT_FLEXIBLE_DAY_PERIOD_FIELD = 36,
+#endif /* U_HIDE_DRAFT_API */
 
 #ifndef U_HIDE_INTERNAL_API
     /**
@@ -820,7 +797,7 @@ typedef enum UDateFormatField {
      * @deprecated ICU 58 The numeric value may change over time, see ICU ticket #12420.
      */
     UDAT_FIELD_COUNT = 38
-#endif  /* U_HIDE_DEPRECATED_API */
+#endif  // U_HIDE_DEPRECATED_API
 } UDateFormatField;
 
 
@@ -836,27 +813,13 @@ typedef enum UDateFormatField {
 
 /**
  * Maps from a UDateFormatField to the corresponding UCalendarDateFields.
- *
- * Note 1: Since the mapping is many-to-one, there is no inverse mapping.
- *
- * Note 2: There is no UErrorCode parameter, so in case of error (UDateFormatField is
- * unknown or has no corresponding UCalendarDateFields value), the function returns the
- * current value of UCAL_FIELD_COUNT. However, that value may change from release to
- * release and is consequently deprecated. For a future-proof runtime way of checking
- * for errors:
- * a) First save the value returned by the function when it is passed an invalid value
- *    such as "(UDateFormatField)-1".
- * b) Then, to test for errors when passing some other UDateFormatField value, check
- *     whether the function returns that saved value.
- *
+ * Note: since the mapping is many-to-one, there is no inverse mapping.
  * @param field the UDateFormatField.
- * @return the UCalendarDateField. In case of error (UDateFormatField is unknown or has
- *   no corresponding UCalendarDateFields value) this will be the current value of
- *   UCAL_FIELD_COUNT, but that value may change from release to release.
- *   See Note 2 above.
+ * @return the UCalendarDateField.  This will be UCAL_FIELD_COUNT in case
+ * of error (e.g., the input field is UDAT_FIELD_COUNT).
  * @stable ICU 4.4
  */
-U_CAPI UCalendarDateFields U_EXPORT2
+U_STABLE UCalendarDateFields U_EXPORT2
 udat_toCalendarDateField(UDateFormatField field);
 
 
@@ -888,7 +851,7 @@ udat_toCalendarDateField(UDateFormatField field);
  * an error occurred.
  * @stable ICU 2.0
  */
-U_CAPI UDateFormat* U_EXPORT2
+U_STABLE UDateFormat* U_EXPORT2
 udat_open(UDateFormatStyle  timeStyle,
           UDateFormatStyle  dateStyle,
           const char        *locale,
@@ -905,7 +868,7 @@ udat_open(UDateFormatStyle  timeStyle,
 * @param format The formatter to close.
 * @stable ICU 2.0
 */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_close(UDateFormat* format);
 
 
@@ -939,15 +902,13 @@ typedef enum UDateFormatBooleanAttribute {
      */
     UDAT_PARSE_MULTIPLE_PATTERNS_FOR_MATCH = 3,
 
-    /* Do not conditionalize the following with #ifndef U_HIDE_DEPRECATED_API,
-     * it is needed for layout of DateFormat object. */
-#ifndef U_FORCE_HIDE_DEPRECATED_API
+    // Do not conditionalize the following with #ifndef U_HIDE_DEPRECATED_API,
+    // it is needed for layout of DateFormat object.
     /**
      * One more than the highest normal UDateFormatBooleanAttribute value.
      * @deprecated ICU 58 The numeric value may change over time, see ICU ticket #12420.
      */
     UDAT_BOOLEAN_ATTRIBUTE_COUNT = 4
-#endif  // U_FORCE_HIDE_DEPRECATED_API
 } UDateFormatBooleanAttribute;
 
 /**
@@ -960,7 +921,7 @@ typedef enum UDateFormatBooleanAttribute {
  * @return The value of attr.
  * @stable ICU 53
  */
-U_CAPI UBool U_EXPORT2
+U_STABLE UBool U_EXPORT2
 udat_getBooleanAttribute(const UDateFormat* fmt, UDateFormatBooleanAttribute attr, UErrorCode* status);
 
 /**
@@ -973,38 +934,10 @@ udat_getBooleanAttribute(const UDateFormat* fmt, UDateFormatBooleanAttribute att
  * @param status A pointer to an UErrorCode to receive any errors
  * @stable ICU 53
  */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_setBooleanAttribute(UDateFormat *fmt, UDateFormatBooleanAttribute attr, UBool newValue, UErrorCode* status);
 
-/**
- * Hour Cycle.
- * @stable ICU 67
- */
-typedef enum UDateFormatHourCycle {
-    /**
-     * Hour in am/pm (0~11)
-     * @stable ICU 67
-     */
-    UDAT_HOUR_CYCLE_11,
 
-    /**
-     * Hour in am/pm (1~12)
-     * @stable ICU 67
-     */
-    UDAT_HOUR_CYCLE_12,
-
-    /**
-     * Hour in day (0~23)
-     * @stable ICU 67
-     */
-    UDAT_HOUR_CYCLE_23,
-
-    /**
-     * Hour in day (1~24)
-     * @stable ICU 67
-     */
-    UDAT_HOUR_CYCLE_24
-} UDateFormatHourCycle;
 
 #if U_SHOW_CPLUSPLUS_API
 
@@ -1033,7 +966,7 @@ U_NAMESPACE_END
  * @return A pointer to a UDateFormat identical to fmt.
  * @stable ICU 2.0
  */
-U_CAPI UDateFormat* U_EXPORT2
+U_STABLE UDateFormat* U_EXPORT2
 udat_clone(const UDateFormat *fmt,
        UErrorCode *status);
 
@@ -1055,7 +988,7 @@ udat_clone(const UDateFormat *fmt,
 * @see UFieldPosition
 * @stable ICU 2.0
 */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 udat_format(    const    UDateFormat*    format,
                         UDate           dateToFormat,
                         UChar*          result,
@@ -1085,7 +1018,7 @@ udat_format(    const    UDateFormat*    format,
 * @see UFieldPosition
 * @stable ICU 55
 */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 udat_formatCalendar(    const UDateFormat*  format,
                         UCalendar*      calendar,
                         UChar*          result,
@@ -1120,7 +1053,7 @@ udat_formatCalendar(    const UDateFormat*  format,
 * @see UFieldPositionIterator
 * @stable ICU 55
 */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 udat_formatForFields(   const UDateFormat* format,
                         UDate           dateToFormat,
                         UChar*          result,
@@ -1158,7 +1091,7 @@ udat_formatForFields(   const UDateFormat* format,
 * @see UFieldPositionIterator
 * @stable ICU 55
 */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 udat_formatCalendarForFields( const UDateFormat* format,
                         UCalendar*      calendar,
                         UChar*          result,
@@ -1192,7 +1125,7 @@ udat_formatCalendarForFields( const UDateFormat* format,
 * @see udat_format
 * @stable ICU 2.0
 */
-U_CAPI UDate U_EXPORT2
+U_STABLE UDate U_EXPORT2
 udat_parse(const    UDateFormat*    format,
            const    UChar*          text,
                     int32_t         textLength,
@@ -1220,7 +1153,7 @@ udat_parse(const    UDateFormat*    format,
 * @see udat_format
 * @stable ICU 2.0
 */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_parseCalendar(const    UDateFormat*    format,
                             UCalendar*      calendar,
                    const    UChar*          text,
@@ -1233,11 +1166,11 @@ udat_parseCalendar(const    UDateFormat*    format,
 * With lenient parsing, the parser may use heuristics to interpret inputs that do not
 * precisely match the pattern. With strict parsing, inputs must match the pattern.
 * @param fmt The formatter to query
-* @return true if fmt is set to perform lenient parsing, false otherwise.
+* @return TRUE if fmt is set to perform lenient parsing, FALSE otherwise.
 * @see udat_setLenient
 * @stable ICU 2.0
 */
-U_CAPI UBool U_EXPORT2
+U_STABLE UBool U_EXPORT2
 udat_isLenient(const UDateFormat* fmt);
 
 /**
@@ -1245,11 +1178,11 @@ udat_isLenient(const UDateFormat* fmt);
 * With lenient parsing, the parser may use heuristics to interpret inputs that do not
 * precisely match the pattern. With strict parsing, inputs must match the pattern.
 * @param fmt The formatter to set
-* @param isLenient true if fmt should perform lenient parsing, false otherwise.
+* @param isLenient TRUE if fmt should perform lenient parsing, FALSE otherwise.
 * @see dat_isLenient
 * @stable ICU 2.0
 */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_setLenient(    UDateFormat*    fmt,
                     UBool          isLenient);
 
@@ -1262,7 +1195,7 @@ udat_setLenient(    UDateFormat*    fmt,
 * @see udat_setCalendar
 * @stable ICU 2.0
 */
-U_CAPI const UCalendar* U_EXPORT2
+U_STABLE const UCalendar* U_EXPORT2
 udat_getCalendar(const UDateFormat* fmt);
 
 /**
@@ -1274,7 +1207,7 @@ udat_getCalendar(const UDateFormat* fmt);
 * @see udat_setCalendar
 * @stable ICU 2.0
 */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_setCalendar(            UDateFormat*    fmt,
                     const   UCalendar*      calendarToSet);
 
@@ -1287,7 +1220,7 @@ udat_setCalendar(            UDateFormat*    fmt,
 * @see udat_setNumberFormat
 * @stable ICU 2.0
 */
-U_CAPI const UNumberFormat* U_EXPORT2
+U_STABLE const UNumberFormat* U_EXPORT2
 udat_getNumberFormat(const UDateFormat* fmt);
 
 /**
@@ -1299,7 +1232,7 @@ udat_getNumberFormat(const UDateFormat* fmt);
 * @see udat_setNumberFormatForField
 * @stable ICU 54
 */
-U_CAPI const UNumberFormat* U_EXPORT2
+U_STABLE const UNumberFormat* U_EXPORT2
 udat_getNumberFormatForField(const UDateFormat* fmt, UChar field);
 
 /**
@@ -1317,7 +1250,7 @@ udat_getNumberFormatForField(const UDateFormat* fmt, UChar field);
 * @see udat_getNumberFormatForField
 * @stable ICU 54
 */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_adoptNumberFormatForFields(  UDateFormat* fmt,
                             const UChar* fields,
                                   UNumberFormat*  numberFormatToSet,
@@ -1334,7 +1267,7 @@ udat_adoptNumberFormatForFields(  UDateFormat* fmt,
 * @see udat_setNumberFormatForField
 * @stable ICU 2.0
 */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_setNumberFormat(            UDateFormat*    fmt,
                         const   UNumberFormat*  numberFormatToSet);
 /**
@@ -1346,7 +1279,7 @@ udat_setNumberFormat(            UDateFormat*    fmt,
 * @see udat_getNumberFormat
 * @stable ICU 54
 */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_adoptNumberFormat(            UDateFormat*    fmt,
                                    UNumberFormat*  numberFormatToAdopt);
 /**
@@ -1358,7 +1291,7 @@ udat_adoptNumberFormat(            UDateFormat*    fmt,
 * @see udat_countAvailable
 * @stable ICU 2.0
 */
-U_CAPI const char* U_EXPORT2
+U_STABLE const char* U_EXPORT2
 udat_getAvailable(int32_t localeIndex);
 
 /**
@@ -1369,7 +1302,7 @@ udat_getAvailable(int32_t localeIndex);
 * @see udat_getAvailable
 * @stable ICU 2.0
 */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 udat_countAvailable(void);
 
 /**
@@ -1382,7 +1315,7 @@ udat_countAvailable(void);
 * @see udat_Set2DigitYearStart
 * @stable ICU 2.0
 */
-U_CAPI UDate U_EXPORT2
+U_STABLE UDate U_EXPORT2
 udat_get2DigitYearStart(    const   UDateFormat     *fmt,
                                     UErrorCode      *status);
 
@@ -1396,7 +1329,7 @@ udat_get2DigitYearStart(    const   UDateFormat     *fmt,
 * @see udat_Set2DigitYearStart
 * @stable ICU 2.0
 */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_set2DigitYearStart(    UDateFormat     *fmt,
                             UDate           d,
                             UErrorCode      *status);
@@ -1405,7 +1338,7 @@ udat_set2DigitYearStart(    UDateFormat     *fmt,
 * Extract the pattern from a UDateFormat.
 * The pattern will follow the pattern syntax rules.
 * @param fmt The formatter to query.
-* @param localized true if the pattern should be localized, false otherwise.
+* @param localized TRUE if the pattern should be localized, FALSE otherwise.
 * @param result A pointer to a buffer to receive the pattern.
 * @param resultLength The maximum size of result.
 * @param status A pointer to an UErrorCode to receive any errors
@@ -1413,7 +1346,7 @@ udat_set2DigitYearStart(    UDateFormat     *fmt,
 * @see udat_applyPattern
 * @stable ICU 2.0
 */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 udat_toPattern(    const   UDateFormat     *fmt,
                         UBool          localized,
                         UChar           *result,
@@ -1424,13 +1357,13 @@ udat_toPattern(    const   UDateFormat     *fmt,
 * Set the pattern used by an UDateFormat.
 * The pattern should follow the pattern syntax rules.
 * @param format The formatter to set.
-* @param localized true if the pattern is localized, false otherwise.
+* @param localized TRUE if the pattern is localized, FALSE otherwise.
 * @param pattern The new pattern
 * @param patternLength The length of pattern, or -1 if null-terminated.
 * @see udat_toPattern
 * @stable ICU 2.0
 */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_applyPattern(            UDateFormat     *format,
                             UBool          localized,
                     const   UChar           *pattern,
@@ -1530,19 +1463,7 @@ typedef enum UDateFormatSymbolType {
      * udat_setSymbols not supported for UDAT_ZODIAC_NAMES_NARROW)
      * @stable ICU 54
      */
-    UDAT_ZODIAC_NAMES_NARROW,
-    
-    /**
-     * The narrow quarter names, for example 1
-     * @stable ICU 70
-     */
-    UDAT_NARROW_QUARTERS,
-    
-    /**
-     * The narrow standalone quarter names, for example 1
-     * @stable ICU 70
-     */
-    UDAT_STANDALONE_NARROW_QUARTERS
+    UDAT_ZODIAC_NAMES_NARROW
 } UDateFormatSymbolType;
 
 struct UDateFormatSymbols;
@@ -1568,7 +1489,7 @@ typedef struct UDateFormatSymbols UDateFormatSymbols;
 * @see udat_setSymbols
 * @stable ICU 2.0
 */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 udat_getSymbols(const   UDateFormat             *fmt,
                         UDateFormatSymbolType   type,
                         int32_t                 symbolIndex,
@@ -1578,7 +1499,7 @@ udat_getSymbols(const   UDateFormat             *fmt,
 
 /**
 * Count the number of particular symbols for an UDateFormat.
-* This function is most useful as for determining the loop termination condition
+* This function is most useful as for detemining the loop termination condition
 * for calls to {@link #udat_getSymbols }.
 * @param fmt The formatter to query.
 * @param type The type of symbols to count.  One of UDAT_ERAS, UDAT_MONTHS, UDAT_SHORT_MONTHS,
@@ -1588,7 +1509,7 @@ udat_getSymbols(const   UDateFormat             *fmt,
 * @see udat_setSymbols
 * @stable ICU 2.0
 */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 udat_countSymbols(    const    UDateFormat                *fmt,
                             UDateFormatSymbolType    type);
 
@@ -1607,7 +1528,7 @@ udat_countSymbols(    const    UDateFormat                *fmt,
 * @see udat_countSymbols
 * @stable ICU 2.0
 */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 udat_setSymbols(    UDateFormat             *format,
                     UDateFormatSymbolType   type,
                     int32_t                 symbolIndex,
@@ -1624,7 +1545,7 @@ udat_setSymbols(    UDateFormat             *format,
  * @return the locale name
  * @stable ICU 2.8
  */
-U_CAPI const char* U_EXPORT2
+U_STABLE const char* U_EXPORT2
 udat_getLocaleByType(const UDateFormat *fmt,
                      ULocDataLocaleType type,
                      UErrorCode* status);
@@ -1637,7 +1558,7 @@ udat_getLocaleByType(const UDateFormat *fmt,
  * @param status A pointer to an UErrorCode to receive any errors
  * @stable ICU 51
  */
-U_CAPI void U_EXPORT2
+U_DRAFT void U_EXPORT2
 udat_setContext(UDateFormat* fmt, UDisplayContext value, UErrorCode* status);
 
 /**
@@ -1649,7 +1570,7 @@ udat_setContext(UDateFormat* fmt, UDisplayContext value, UErrorCode* status);
  * @return The UDisplayContextValue for the specified type.
  * @stable ICU 53
  */
-U_CAPI UDisplayContext U_EXPORT2
+U_STABLE UDisplayContext U_EXPORT2
 udat_getContext(const UDateFormat* fmt, UDisplayContextType type, UErrorCode* status);
 
 #ifndef U_HIDE_INTERNAL_API
@@ -1664,7 +1585,7 @@ udat_getContext(const UDateFormat* fmt, UDisplayContextType type, UErrorCode* st
 * @see udat_applyPatternRelative
 * @internal ICU 4.2 technology preview
 */
-U_CAPI int32_t U_EXPORT2
+U_INTERNAL int32_t U_EXPORT2
 udat_toPatternRelativeDate(const UDateFormat *fmt,
                            UChar             *result,
                            int32_t           resultLength,
@@ -1681,7 +1602,7 @@ udat_toPatternRelativeDate(const UDateFormat *fmt,
 * @see udat_applyPatternRelative
 * @internal ICU 4.2 technology preview
 */
-U_CAPI int32_t U_EXPORT2
+U_INTERNAL int32_t U_EXPORT2
 udat_toPatternRelativeTime(const UDateFormat *fmt,
                            UChar             *result,
                            int32_t           resultLength,
@@ -1699,7 +1620,7 @@ udat_toPatternRelativeTime(const UDateFormat *fmt,
 * @see udat_toPatternRelativeDate, udat_toPatternRelativeTime
 * @internal ICU 4.2 technology preview
 */
-U_CAPI void U_EXPORT2
+U_INTERNAL void U_EXPORT2
 udat_applyPatternRelative(UDateFormat *format,
                           const UChar *datePattern,
                           int32_t     datePatternLength,
@@ -1724,14 +1645,14 @@ typedef UDateFormat* (U_EXPORT2 *UDateFormatOpener) (UDateFormatStyle  timeStyle
  * Register a provider factory
  * @internal ICU 49
  */
-U_CAPI void U_EXPORT2
+U_INTERNAL void U_EXPORT2
 udat_registerOpener(UDateFormatOpener opener, UErrorCode *status);
 
 /**
  * Un-Register a provider factory
  * @internal ICU 49
  */
-U_CAPI UDateFormatOpener U_EXPORT2
+U_INTERNAL UDateFormatOpener U_EXPORT2
 udat_unregisterOpener(UDateFormatOpener opener, UErrorCode *status);
 #endif  /* U_HIDE_INTERNAL_API */
 

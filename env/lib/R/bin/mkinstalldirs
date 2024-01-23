@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # mkinstalldirs --- make directory hierarchy
 
 scriptversion=2008-11-05.08

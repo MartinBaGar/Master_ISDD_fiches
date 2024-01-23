@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 **********************************************************************
@@ -12,10 +12,6 @@
 
 #ifndef DBBI_H
 #define DBBI_H
-
-#include "unicode/utypes.h"
-
-#if U_SHOW_CPLUSPLUS_API
 
 #include "unicode/rbbi.h"
 
@@ -42,7 +38,5 @@ typedef RuleBasedBreakIterator DictionaryBasedBreakIterator;
 U_NAMESPACE_END
 
 #endif /* #if !UCONFIG_NO_BREAK_ITERATION */
-
-#endif /* U_SHOW_CPLUSPLUS_API */
 
 #endif

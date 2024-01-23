@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 *******************************************************************************
@@ -6,7 +6,7 @@
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  stringtriebuilder.h
-*   encoding:   UTF-8
+*   encoding:   US-ASCII
 *   tab size:   8 (not used)
 *   indentation:4
 *
@@ -18,9 +18,6 @@
 #define __STRINGTRIEBUILDER_H__
 
 #include "unicode/utypes.h"
-
-#if U_SHOW_CPLUSPLUS_API
-
 #include "unicode/uobject.h"
 
 /**
@@ -29,10 +26,8 @@
  */
 
 // Forward declaration.
-/// \cond
 struct UHashtable;
 typedef struct UHashtable UHashtable;
-/// \endcond
 
 /**
  * Build options for BytesTrieBuilder and CharsTrieBuilder.
@@ -69,7 +64,7 @@ class U_COMMON_API StringTrieBuilder : public UObject {
 public:
 #ifndef U_HIDE_INTERNAL_API
     /** @internal */
-    static int32_t hashNode(const void *node);
+    static UBool hashNode(const void *node);
     /** @internal */
     static UBool equalNodes(const void *left, const void *right);
 #endif  /* U_HIDE_INTERNAL_API */
@@ -110,7 +105,7 @@ protected:
     /** @internal */
     virtual int32_t getElementStringLength(int32_t i) const = 0;
     /** @internal */
-    virtual char16_t getElementUnit(int32_t i, int32_t unitIndex) const = 0;
+    virtual UChar getElementUnit(int32_t i, int32_t unitIndex) const = 0;
     /** @internal */
     virtual int32_t getElementValue(int32_t i) const = 0;
 
@@ -125,7 +120,7 @@ protected:
     /** @internal */
     virtual int32_t skipElementsBySomeUnits(int32_t i, int32_t unitIndex, int32_t count) const = 0;
     /** @internal */
-    virtual int32_t indexOfElementWithNextUnit(int32_t i, int32_t unitIndex, char16_t unit) const = 0;
+    virtual int32_t indexOfElementWithNextUnit(int32_t i, int32_t unitIndex, UChar unit) const = 0;
 
     /** @internal */
     virtual UBool matchNodesCanHaveValues() const = 0;
@@ -142,7 +137,7 @@ protected:
     /** @internal */
     static const int32_t kMaxBranchLinearSubNodeLength=5;
 
-    // Maximum number of nested split-branch levels for a branch on all 2^16 possible char16_t units.
+    // Maximum number of nested split-branch levels for a branch on all 2^16 possible UChar units.
     // log2(2^16/kMaxBranchLinearSubNodeLength) rounded up.
     /** @internal */
     static const int32_t kMaxSplitBranchLevels=14;
@@ -152,7 +147,7 @@ protected:
      * equivalent to newNode.
      * @param newNode Input node. The builder takes ownership.
      * @param errorCode ICU in/out UErrorCode.
-                        Set to U_MEMORY_ALLOCATION_ERROR if it was success but newNode==nullptr.
+                        Set to U_MEMORY_ALLOCATION_ERROR if it was success but newNode==NULL.
      * @return newNode if it is the first of its kind, or
      *         an equivalent node if newNode is a duplicate.
      * @internal
@@ -164,7 +159,7 @@ protected:
      * Avoids creating a node if the value is a duplicate.
      * @param value A final value.
      * @param errorCode ICU in/out UErrorCode.
-                        Set to U_MEMORY_ALLOCATION_ERROR if it was success but newNode==nullptr.
+                        Set to U_MEMORY_ALLOCATION_ERROR if it was success but newNode==NULL.
      * @return A FinalValueNode with the given value.
      * @internal
      */
@@ -176,11 +171,11 @@ protected:
      * registerNode() and registerFinalValue() take ownership of their input nodes,
      * and only return owned nodes.
      * If they see a failure UErrorCode, they will delete the input node.
-     * If they get a nullptr pointer, they will record a U_MEMORY_ALLOCATION_ERROR.
-     * If there is a failure, they return nullptr.
+     * If they get a NULL pointer, they will record a U_MEMORY_ALLOCATION_ERROR.
+     * If there is a failure, they return NULL.
      *
-     * nullptr Node pointers can be safely passed into other Nodes because
-     * they call the static Node::hashCode() which checks for a nullptr pointer first.
+     * NULL Node pointers can be safely passed into other Nodes because
+     * they call the static Node::hashCode() which checks for a NULL pointer first.
      *
      * Therefore, as long as builder functions register a new node,
      * they need to check for failures only before explicitly dereferencing
@@ -193,19 +188,16 @@ protected:
 
     // Do not conditionalize the following with #ifndef U_HIDE_INTERNAL_API,
     // it is needed for layout of other objects.
-    /**
-     * @internal
-     * \cond
-     */
+    /** @internal */
     class Node : public UObject {
     public:
         Node(int32_t initialHash) : hash(initialHash), offset(0) {}
         inline int32_t hashCode() const { return hash; }
-        // Handles node==nullptr.
-        static inline int32_t hashCode(const Node *node) { return node==nullptr ? 0 : node->hashCode(); }
+        // Handles node==NULL.
+        static inline int32_t hashCode(const Node *node) { return node==NULL ? 0 : node->hashCode(); }
         // Base class operator==() compares the actual class types.
-        virtual bool operator==(const Node &other) const;
-        inline bool operator!=(const Node &other) const { return !operator==(other); }
+        virtual UBool operator==(const Node &other) const;
+        inline UBool operator!=(const Node &other) const { return !operator==(other); }
         /**
          * Traverses the Node graph and numbers branch edges, with rightmost edges first.
          * This is to avoid writing a duplicate node twice.
@@ -264,9 +256,9 @@ protected:
     /** @internal */
     class FinalValueNode : public Node {
     public:
-        FinalValueNode(int32_t v) : Node(0x111111u*37u+v), value(v) {}
-        virtual bool operator==(const Node &other) const override;
-        virtual void write(StringTrieBuilder &builder) override;
+        FinalValueNode(int32_t v) : Node(0x111111*37+v), value(v) {}
+        virtual UBool operator==(const Node &other) const;
+        virtual void write(StringTrieBuilder &builder);
     protected:
         int32_t value;
     };
@@ -279,12 +271,12 @@ protected:
      */
     class ValueNode : public Node {
     public:
-        ValueNode(int32_t initialHash) : Node(initialHash), hasValue(false), value(0) {}
-        virtual bool operator==(const Node &other) const override;
+        ValueNode(int32_t initialHash) : Node(initialHash), hasValue(FALSE), value(0) {}
+        virtual UBool operator==(const Node &other) const;
         void setValue(int32_t v) {
-            hasValue=true;
+            hasValue=TRUE;
             value=v;
-            hash=hash*37u+v;
+            hash=hash*37+v;
         }
     protected:
         UBool hasValue;
@@ -298,10 +290,10 @@ protected:
     class IntermediateValueNode : public ValueNode {
     public:
         IntermediateValueNode(int32_t v, Node *nextNode)
-                : ValueNode(0x222222u*37u+hashCode(nextNode)), next(nextNode) { setValue(v); }
-        virtual bool operator==(const Node &other) const override;
-        virtual int32_t markRightEdgesFirst(int32_t edgeNumber) override;
-        virtual void write(StringTrieBuilder &builder) override;
+                : ValueNode(0x222222*37+hashCode(nextNode)), next(nextNode) { setValue(v); }
+        virtual UBool operator==(const Node &other) const;
+        virtual int32_t markRightEdgesFirst(int32_t edgeNumber);
+        virtual void write(StringTrieBuilder &builder);
     protected:
         Node *next;
     };
@@ -315,10 +307,10 @@ protected:
     class LinearMatchNode : public ValueNode {
     public:
         LinearMatchNode(int32_t len, Node *nextNode)
-                : ValueNode((0x333333u*37u+len)*37u+hashCode(nextNode)),
+                : ValueNode((0x333333*37+len)*37+hashCode(nextNode)),
                   length(len), next(nextNode) {}
-        virtual bool operator==(const Node &other) const override;
-        virtual int32_t markRightEdgesFirst(int32_t edgeNumber) override;
+        virtual UBool operator==(const Node &other) const;
+        virtual int32_t markRightEdgesFirst(int32_t edgeNumber);
     protected:
         int32_t length;
         Node *next;
@@ -341,30 +333,30 @@ protected:
     class ListBranchNode : public BranchNode {
     public:
         ListBranchNode() : BranchNode(0x444444), length(0) {}
-        virtual bool operator==(const Node &other) const override;
-        virtual int32_t markRightEdgesFirst(int32_t edgeNumber) override;
-        virtual void write(StringTrieBuilder &builder) override;
+        virtual UBool operator==(const Node &other) const;
+        virtual int32_t markRightEdgesFirst(int32_t edgeNumber);
+        virtual void write(StringTrieBuilder &builder);
         // Adds a unit with a final value.
         void add(int32_t c, int32_t value) {
-            units[length]=(char16_t)c;
-            equal[length]=nullptr;
+            units[length]=(UChar)c;
+            equal[length]=NULL;
             values[length]=value;
             ++length;
-            hash=(hash*37u+c)*37u+value;
+            hash=(hash*37+c)*37+value;
         }
         // Adds a unit which leads to another match node.
         void add(int32_t c, Node *node) {
-            units[length]=(char16_t)c;
+            units[length]=(UChar)c;
             equal[length]=node;
             values[length]=0;
             ++length;
-            hash=(hash*37u+c)*37u+hashCode(node);
+            hash=(hash*37+c)*37+hashCode(node);
         }
     protected:
-        Node *equal[kMaxBranchLinearSubNodeLength];  // nullptr means "has final value".
+        Node *equal[kMaxBranchLinearSubNodeLength];  // NULL means "has final value".
         int32_t length;
         int32_t values[kMaxBranchLinearSubNodeLength];
-        char16_t units[kMaxBranchLinearSubNodeLength];
+        UChar units[kMaxBranchLinearSubNodeLength];
     };
 
     /**
@@ -372,15 +364,15 @@ protected:
      */
     class SplitBranchNode : public BranchNode {
     public:
-        SplitBranchNode(char16_t middleUnit, Node *lessThanNode, Node *greaterOrEqualNode)
-                : BranchNode(((0x555555u*37u+middleUnit)*37u+
-                              hashCode(lessThanNode))*37u+hashCode(greaterOrEqualNode)),
+        SplitBranchNode(UChar middleUnit, Node *lessThanNode, Node *greaterOrEqualNode)
+                : BranchNode(((0x555555*37+middleUnit)*37+
+                              hashCode(lessThanNode))*37+hashCode(greaterOrEqualNode)),
                   unit(middleUnit), lessThan(lessThanNode), greaterOrEqual(greaterOrEqualNode) {}
-        virtual bool operator==(const Node &other) const override;
-        virtual int32_t markRightEdgesFirst(int32_t edgeNumber) override;
-        virtual void write(StringTrieBuilder &builder) override;
+        virtual UBool operator==(const Node &other) const;
+        virtual int32_t markRightEdgesFirst(int32_t edgeNumber);
+        virtual void write(StringTrieBuilder &builder);
     protected:
-        char16_t unit;
+        UChar unit;
         Node *lessThan;
         Node *greaterOrEqual;
     };
@@ -390,18 +382,16 @@ protected:
     class BranchHeadNode : public ValueNode {
     public:
         BranchHeadNode(int32_t len, Node *subNode)
-                : ValueNode((0x666666u*37u+len)*37u+hashCode(subNode)),
+                : ValueNode((0x666666*37+len)*37+hashCode(subNode)),
                   length(len), next(subNode) {}
-        virtual bool operator==(const Node &other) const override;
-        virtual int32_t markRightEdgesFirst(int32_t edgeNumber) override;
-        virtual void write(StringTrieBuilder &builder) override;
+        virtual UBool operator==(const Node &other) const;
+        virtual int32_t markRightEdgesFirst(int32_t edgeNumber);
+        virtual void write(StringTrieBuilder &builder);
     protected:
         int32_t length;
         Node *next;  // A branch sub-node.
     };
-
 #endif  /* U_HIDE_INTERNAL_API */
-    /// \endcond
 
     /** @internal */
     virtual Node *createLinearMatchNode(int32_t i, int32_t unitIndex, int32_t length,
@@ -420,7 +410,5 @@ protected:
 };
 
 U_NAMESPACE_END
-
-#endif /* U_SHOW_CPLUSPLUS_API */
 
 #endif  // __STRINGTRIEBUILDER_H__

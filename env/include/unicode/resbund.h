@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 ******************************************************************************
@@ -49,9 +49,6 @@
 #define RESBUND_H
 
 #include "unicode/utypes.h"
-
-#if U_SHOW_CPLUSPLUS_API
-
 #include "unicode/uobject.h"
 #include "unicode/ures.h"
 #include "unicode/unistr.h"
@@ -66,14 +63,14 @@ U_NAMESPACE_BEGIN
 
 /**
  * A class representing a collection of resource information pertaining to a given
- * locale. A resource bundle provides a way of accessing locale- specific information in
+ * locale. A resource bundle provides a way of accessing locale- specfic information in
  * a data file. You create a resource bundle that manages the resources for a given
  * locale and then ask it for individual resources.
  * <P>
  * Resource bundles in ICU4C are currently defined using text files which conform to the following
- * <a href="https://github.com/unicode-org/icu-docs/blob/main/design/bnf_rb.txt">BNF definition</a>.
+ * <a href="http://source.icu-project.org/repos/icu/icuhtml/trunk/design/bnf_rb.txt">BNF definition</a>.
  * More on resource bundle concepts and syntax can be found in the
- * <a href="https://unicode-org.github.io/icu/userguide/locale/resources">Users Guide</a>.
+ * <a href="http://icu-project.org/userguide/ResourceManagement.html">Users Guide</a>.
  * <P>
  *
  * The ResourceBundle class is not suitable for subclassing.
@@ -135,7 +132,7 @@ public:
     ResourceBundle(UErrorCode &err);
 
     /**
-     * Standard constructor, constructs a resource bundle for the locale-specific
+     * Standard constructor, onstructs a resource bundle for the locale-specific
      * bundle in the specified package.
      *
      * @param packageName   The packageName and locale together point to an ICU udata object, 
@@ -143,7 +140,7 @@ public:
      *                      or equivalent.  Typically, packageName will refer to a (.dat) file, or to
      *                      a package registered with udata_setAppData(). Using a full file or directory
      *                      pathname for packageName is deprecated.
-     *                      nullptr is used to refer to ICU data.
+     *                      NULL is used to refer to ICU data.
      * @param locale The locale for which to open a resource bundle.
      * @param err A UErrorCode value
      * @stable ICU 2.0
@@ -189,7 +186,7 @@ public:
     /**
      * Clone this object.
      * Clones can be used concurrently in multiple threads.
-     * If an error occurs, then nullptr is returned.
+     * If an error occurs, then NULL is returned.
      * The caller must delete the clone.
      *
      * @return a clone of this object
@@ -219,7 +216,7 @@ public:
      *                could be <TT>U_MISSING_RESOURCE_ERROR</TT> if the key is not found
      *                could be a warning
      *                e.g.: <TT>U_USING_FALLBACK_WARNING</TT>,<TT>U_USING_DEFAULT_WARNING </TT>
-     * @return a pointer to a zero-terminated char16_t array which lives in a memory mapped/DLL file.
+     * @return a pointer to a zero-terminated UChar array which lives in a memory mapped/DLL file.
      * @stable ICU 2.0
      */
     UnicodeString
@@ -286,7 +283,7 @@ public:
     /**
      * Checks whether the resource has another element to iterate over.
      *
-     * @return true if there are more elements, false if there is no more elements
+     * @return TRUE if there are more elements, FALSE if there is no more elements
      * @stable ICU 2.0
      */
     UBool
@@ -304,7 +301,7 @@ public:
      * Returns the key associated with this resource. Not all the resources have a key - only
      * those that are members of a table.
      *
-     * @return a key associated to this resource, or nullptr if it doesn't have a key
+     * @return a key associated to this resource, or NULL if it doesn't have a key
      * @stable ICU 2.0
      */
     const char*
@@ -331,7 +328,7 @@ public:
       getType(void) const;
 
     /**
-     * Returns the next resource in a given resource or nullptr if there are no more resources
+     * Returns the next resource in a given resource or NULL if there are no more resources
      *
      * @param status            fills in the outgoing error code
      * @return                  ResourceBundle object.
@@ -341,7 +338,7 @@ public:
       getNext(UErrorCode& status);
 
     /**
-     * Returns the next string in a resource or nullptr if there are no more resources
+     * Returns the next string in a resource or NULL if there are no more resources
      * to iterate over.
      *
      * @param status            fills in the outgoing error code
@@ -352,7 +349,7 @@ public:
       getNextString(UErrorCode& status);
 
     /**
-     * Returns the next string in a resource or nullptr if there are no more resources
+     * Returns the next string in a resource or NULL if there are no more resources
      * to iterate over.
      *
      * @param key               fill in for key associated with this string
@@ -474,7 +471,7 @@ public:
      *
      * @stable ICU 2.2
      */
-    virtual UClassID getDynamicClassID() const override;
+    virtual UClassID getDynamicClassID() const;
 
     /**
      * ICU "poor man's RTTI", returns a UClassID for this class.
@@ -484,7 +481,7 @@ public:
     static UClassID U_EXPORT2 getStaticClassID();
 
 private:
-    ResourceBundle() = delete; // default constructor not implemented
+    ResourceBundle(); // default constructor not implemented
 
     UResourceBundle *fResource;
     void constructForLocale(const UnicodeString& path, const Locale& locale, UErrorCode& error);
@@ -492,7 +489,4 @@ private:
 };
 
 U_NAMESPACE_END
-
-#endif /* U_SHOW_CPLUSPLUS_API */
-
 #endif

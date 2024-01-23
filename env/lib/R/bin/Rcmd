@@ -1,16 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 #
 # ${R_HOME}/bin/Rcmd
 
 ## Shell script wrapper for all R CMD commands.
 ## For internal use only.
 
-test ${#} -eq 0 && exec "${R_HOME}/bin/R" --help
-
 R_CMD="${R_HOME}/bin/Rcmd"
 export R_CMD
 
-R_VERSION=4.3.1
+R_VERSION=3.5.0
 export R_VERSION
 
 R_OSTYPE="unix"
@@ -37,7 +35,7 @@ fi
 export BSTINPUTS
 
 . "${R_HOME}/etc${R_ARCH}/Renviron"
-export `sed 's/^ *#.*//; s/^\([^=]*\)=.*/\1/' "${R_HOME}/etc${R_ARCH}/Renviron"`
+export `sed 's/^ *#.*//; s/^\(.*\)=.*/\1/' "${R_HOME}/etc${R_ARCH}/Renviron"`
 
 extra=
 case "${1}" in

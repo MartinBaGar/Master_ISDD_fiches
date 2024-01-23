@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 ********************************************************************************
@@ -19,8 +19,6 @@
 
 #include "unicode/utypes.h"
 
-#if U_SHOW_CPLUSPLUS_API
-
 /**
  * \file
  * \brief C++ API: Formattable is a thin wrapper for primitive types used for formatting and parsing
@@ -35,11 +33,17 @@
 U_NAMESPACE_BEGIN
 
 class CharString;
-namespace number {
-namespace impl {
-class DecimalQuantity;
-}
-}
+class DigitList;
+
+/**
+ * \def UNUM_INTERNAL_STACKARRAY_SIZE
+ * @internal
+ */
+#if U_PLATFORM == U_PF_OS400
+#define UNUM_INTERNAL_STACKARRAY_SIZE 144
+#else
+#define UNUM_INTERNAL_STACKARRAY_SIZE 128
+#endif
 
 /**
  * Formattable objects can be passed to the Format class or
@@ -179,18 +183,18 @@ public:
     /**
      * Equality comparison.
      * @param other    the object to be compared with.
-     * @return        true if other are equal to this, false otherwise.
+     * @return        TRUE if other are equal to this, FALSE otherwise.
      * @stable ICU 2.0
      */
-    bool           operator==(const Formattable &other) const;
+    UBool          operator==(const Formattable &other) const;
 
     /**
      * Equality operator.
      * @param other    the object to be compared with.
-     * @return        true if other are unequal to this, false otherwise.
+     * @return        TRUE if other are unequal to this, FALSE otherwise.
      * @stable ICU 2.0
      */
-    bool           operator!=(const Formattable& other) const
+    UBool          operator!=(const Formattable& other) const
       { return !operator==(other); }
 
     /**
@@ -202,7 +206,7 @@ public:
     /**
      * Clone this object.
      * Clones can be used concurrently in multiple threads.
-     * If an error occurs, then nullptr is returned.
+     * If an error occurs, then NULL is returned.
      * The caller must delete the clone.
      *
      * @return a clone of this object
@@ -277,9 +281,9 @@ public:
     Type            getType(void) const;
 
     /**
-     * Returns true if the data type of this Formattable object
+     * Returns TRUE if the data type of this Formattable object
      * is kDouble, kLong, or kInt64
-     * @return true if this is a pure numeric object
+     * @return TRUE if this is a pure numeric object
      * @stable ICU 3.0
      */
     UBool           isNumeric() const;
@@ -294,7 +298,7 @@ public:
 
     /**
      * Gets the double value of this object. If this object is of type
-     * long, int64 or Decimal Number then a conversion is performed, with
+     * long, int64 or Decimal Number then a conversion is peformed, with
      * possible loss of precision.  If the type is kObject and the
      * object is a Measure, then the result of
      * getNumber().getDouble(status) is returned.  If this object is
@@ -320,7 +324,7 @@ public:
      * as appropriate, is returned and the status is set to
      * U_INVALID_FORMAT_ERROR.  If this object is of type kInt64 and
      * it fits within a long, then no precision is lost.  If it is of
-     * type kDouble, then a conversion is performed, with
+     * type kDouble, then a conversion is peformed, with
      * truncation of any fractional part.  If the type is kObject and
      * the object is a Measure, then the result of
      * getNumber().getLong(status) is returned.  If this object is
@@ -346,7 +350,7 @@ public:
      * the maximum or minimum int64 value, as appropriate, is returned
      * and the status is set to U_INVALID_FORMAT_ERROR.  If the
      * magnitude fits in an int64, then a casting conversion is
-     * performed, with truncation of any fractional part.  If the type
+     * peformed, with truncation of any fractional part.  If the type
      * is kObject and the object is a Measure, then the result of
      * getNumber().getDouble(status) is returned.  If this object is
      * neither a numeric type nor a Measure, then 0 is returned and
@@ -446,7 +450,7 @@ public:
     /**
      * Gets the array value and count of this object. If the type is
      * not an array, status is set to U_INVALID_FORMAT_ERROR, count is
-     * set to 0, and the result is nullptr.
+     * set to 0, and the result is NULL.
      * @param count    fill-in with the count of this object.
      * @param status the error code.
      * @return         the array value of this object.
@@ -466,20 +470,20 @@ public:
 
     /**
      * Returns a pointer to the UObject contained within this
-     * formattable, or nullptr if this object does not contain a UObject.
-     * @return a UObject pointer, or nullptr
+     * formattable, or NULL if this object does not contain a UObject.
+     * @return a UObject pointer, or NULL
      * @stable ICU 3.0
      */
     const UObject*  getObject() const;
 
     /**
      * Returns a numeric string representation of the number contained within this
-     * formattable, or nullptr if this object does not contain numeric type.
+     * formattable, or NULL if this object does not contain numeric type.
      * For values obtained by parsing, the returned decimal number retains
      * the full precision and range of the original input, unconstrained by
      * the limits of a double floating point or a 64 bit int.
      *
-     * This function is not thread safe, and therefore is not declared const,
+     * This function is not thread safe, and therfore is not declared const,
      * even though it is logically const.
      *
      * Possible errors include U_MEMORY_ALLOCATION_ERROR, and
@@ -587,7 +591,7 @@ public:
      *
      * @stable ICU 2.2
      */
-    virtual UClassID getDynamicClassID() const override;
+    virtual UClassID getDynamicClassID() const;
 
     /**
      * ICU "poor man's RTTI", returns a UClassID for this class.
@@ -645,25 +649,24 @@ public:
      * Internal function, do not use.
      * TODO:  figure out how to make this be non-public.
      *        NumberFormat::format(Formattable, ...
-     *        needs to get at the DecimalQuantity, if it exists, for
+     *        needs to get at the DigitList, if it exists, for
      *        big decimal formatting.
      *  @internal
      */
-    number::impl::DecimalQuantity *getDecimalQuantity() const { return fDecimalQuantity;}
+    DigitList *getDigitList() const { return fDecimalNum;}
 
     /**
-     * Export the value of this Formattable to a DecimalQuantity.
-     * @internal
-     */
-    void populateDecimalQuantity(number::impl::DecimalQuantity& output, UErrorCode& status) const;
-
-    /**
-     *  Adopt, and set value from, a DecimalQuantity
-     *     Internal Function, do not use.
-     *  @param dq the DecimalQuantity to be adopted
      *  @internal
      */
-    void adoptDecimalQuantity(number::impl::DecimalQuantity *dq);
+    DigitList *getInternalDigitList();
+
+    /**
+     *  Adopt, and set value from, a DigitList
+     *     Internal Function, do not use.
+     *  @param dl the Digit List to be adopted
+     *  @internal
+     */
+    void adoptDigitList(DigitList *dl);
 
     /**
      * Internal function to return the CharString pointer.
@@ -703,7 +706,9 @@ private:
 
     CharString           *fDecimalStr;
 
-    number::impl::DecimalQuantity *fDecimalQuantity;
+    DigitList            *fDecimalNum;
+
+    char                fStackData[UNUM_INTERNAL_STACKARRAY_SIZE]; // must be big enough for DigitList
 
     Type                fType;
     UnicodeString       fBogus; // Bogus string when it's needed.
@@ -752,8 +757,6 @@ inline const Formattable* Formattable::fromUFormattable(const UFormattable *fmt)
 U_NAMESPACE_END
 
 #endif /* #if !UCONFIG_NO_FORMATTING */
-
-#endif /* U_SHOW_CPLUSPLUS_API */
 
 #endif //_FMTABLE
 //eof

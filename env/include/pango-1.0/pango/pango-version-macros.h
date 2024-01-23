@@ -235,62 +235,12 @@
 /**
  * PANGO_VERSION_1_42:
  *
- * A macro that evaluates to the 1.42 version of Pango, in a format
+ * A macro that evaluates to the 2.38 version of Pango, in a format
  * that can be used by the C pre-processor.
  *
  * Since: 1.42
  */
 #define PANGO_VERSION_1_42       (G_ENCODE_VERSION (1, 42))
-
-/**
- * PANGO_VERSION_1_44:
- *
- * A macro that evaluates to the 1.44 version of Pango, in a format
- * that can be used by the C pre-processor.
- *
- * Since: 1.44
- */
-#define PANGO_VERSION_1_44       (G_ENCODE_VERSION (1, 44))
-
-/**
- * PANGO_VERSION_1_46:
- *
- * A macro that evaluates to the 1.46 version of Pango, in a format
- * that can be used by the C pre-processor.
- *
- * Since: 1.46
- */
-#define PANGO_VERSION_1_46       (G_ENCODE_VERSION (1, 46))
-
-/**
- * PANGO_VERSION_1_48:
- *
- * A macro that evaluates to the 1.48 version of Pango, in a format
- * that can be used by the C pre-processor.
- *
- * Since: 1.48
- */
-#define PANGO_VERSION_1_48       (G_ENCODE_VERSION (1, 48))
-
-/**
- * PANGO_VERSION_1_50:
- *
- * A macro that evaluates to the 1.50 version of Pango, in a format
- * that can be used by the C pre-processor.
- *
- * Since: 1.50
- */
-#define PANGO_VERSION_1_50       (G_ENCODE_VERSION (1, 50))
-
-/**
- * PANGO_VERSION_1_52:
- *
- * A macro that evaluates to the 1.52 version of Pango, in a format
- * that can be used by the C pre-processor.
- *
- * Since: 1.52
- */
-#define PANGO_VERSION_1_52       (G_ENCODE_VERSION (1, 52))
 
 /* evaluates to the current stable version; for development cycles,
  * this means the next stable target
@@ -352,7 +302,7 @@
  * functions, then using functions added after version
  * %PANGO_VERSION_MAX_ALLOWED will cause warnings.
  *
- * Unless you are using PANGO_VERSION_CHECK() or the like to compile
+ * Unless you are using PANGO_CHECK_VERSION() or the like to compile
  * different code depending on the Pango version, then this should be
  * set to the same value as %PANGO_VERSION_MIN_REQUIRED.
  *
@@ -681,76 +631,6 @@
 # define PANGO_AVAILABLE_IN_1_42                PANGO_UNAVAILABLE(1, 42)
 #else
 # define PANGO_AVAILABLE_IN_1_42                _PANGO_EXTERN
-#endif
-
-#if PANGO_VERSION_MIN_REQUIRED >= PANGO_VERSION_1_44
-# define PANGO_DEPRECATED_IN_1_44               PANGO_DEPRECATED
-# define PANGO_DEPRECATED_IN_1_44_FOR(f)        PANGO_DEPRECATED_FOR(f)
-#else
-# define PANGO_DEPRECATED_IN_1_44               _PANGO_EXTERN
-# define PANGO_DEPRECATED_IN_1_44_FOR(f)        _PANGO_EXTERN
-#endif
-
-#if PANGO_VERSION_MAX_ALLOWED < PANGO_VERSION_1_44
-# define PANGO_AVAILABLE_IN_1_44                PANGO_UNAVAILABLE(1, 44)
-#else
-# define PANGO_AVAILABLE_IN_1_44                _PANGO_EXTERN
-#endif
-
-#if PANGO_VERSION_MIN_REQUIRED >= PANGO_VERSION_1_46
-# define PANGO_DEPRECATED_IN_1_46               PANGO_DEPRECATED
-# define PANGO_DEPRECATED_IN_1_46_FOR(f)        PANGO_DEPRECATED_FOR(f)
-#else
-# define PANGO_DEPRECATED_IN_1_46               _PANGO_EXTERN
-# define PANGO_DEPRECATED_IN_1_46_FOR(f)        _PANGO_EXTERN
-#endif
-
-#if PANGO_VERSION_MAX_ALLOWED < PANGO_VERSION_1_46
-# define PANGO_AVAILABLE_IN_1_46                PANGO_UNAVAILABLE(1, 46)
-#else
-# define PANGO_AVAILABLE_IN_1_46                _PANGO_EXTERN
-#endif
-
-#if PANGO_VERSION_MIN_REQUIRED >= PANGO_VERSION_1_48
-# define PANGO_DEPRECATED_IN_1_48               PANGO_DEPRECATED
-# define PANGO_DEPRECATED_IN_1_48_FOR(f)        PANGO_DEPRECATED_FOR(f)
-#else
-# define PANGO_DEPRECATED_IN_1_48               _PANGO_EXTERN
-# define PANGO_DEPRECATED_IN_1_48_FOR(f)        _PANGO_EXTERN
-#endif
-
-#if PANGO_VERSION_MAX_ALLOWED < PANGO_VERSION_1_48
-# define PANGO_AVAILABLE_IN_1_48                PANGO_UNAVAILABLE(1, 48)
-#else
-# define PANGO_AVAILABLE_IN_1_48                _PANGO_EXTERN
-#endif
-
-#if PANGO_VERSION_MIN_REQUIRED >= PANGO_VERSION_1_50
-# define PANGO_DEPRECATED_IN_1_50               PANGO_DEPRECATED
-# define PANGO_DEPRECATED_IN_1_50_FOR(f)        PANGO_DEPRECATED_FOR(f)
-#else
-# define PANGO_DEPRECATED_IN_1_50               _PANGO_EXTERN
-# define PANGO_DEPRECATED_IN_1_50_FOR(f)        _PANGO_EXTERN
-#endif
-
-#if PANGO_VERSION_MAX_ALLOWED < PANGO_VERSION_1_50
-# define PANGO_AVAILABLE_IN_1_50                PANGO_UNAVAILABLE(1, 50)
-#else
-# define PANGO_AVAILABLE_IN_1_50                _PANGO_EXTERN
-#endif
-
-#if PANGO_VERSION_MIN_REQUIRED >= PANGO_VERSION_1_52
-# define PANGO_DEPRECATED_IN_1_52               PANGO_DEPRECATED
-# define PANGO_DEPRECATED_IN_1_52_FOR(f)        PANGO_DEPRECATED_FOR(f)
-#else
-# define PANGO_DEPRECATED_IN_1_52               _PANGO_EXTERN
-# define PANGO_DEPRECATED_IN_1_52_FOR(f)        _PANGO_EXTERN
-#endif
-
-#if PANGO_VERSION_MAX_ALLOWED < PANGO_VERSION_1_52
-# define PANGO_AVAILABLE_IN_1_52                PANGO_UNAVAILABLE(1, 52)
-#else
-# define PANGO_AVAILABLE_IN_1_52                _PANGO_EXTERN
 #endif
 
 #endif /* __PANGO_VERSION_H__ */

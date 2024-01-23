@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 *******************************************************************************
@@ -10,8 +10,6 @@
 #define DTRULE_H
 
 #include "unicode/utypes.h"
-
-#if U_SHOW_CPLUSPLUS_API
 
 /**
  * \file 
@@ -40,11 +38,11 @@ public:
     enum DateRuleType {
         DOM = 0,        /**< The exact day of month,
                              for example, March 11. */
-        DOW,            /**< The Nth occurrence of the day of week,
+        DOW,            /**< The Nth occurence of the day of week,
                              for example, 2nd Sunday in March. */
-        DOW_GEQ_DOM,    /**< The first occurrence of the day of week on or after the day of monnth,
+        DOW_GEQ_DOM,    /**< The first occurence of the day of week on or after the day of monnth,
                              for example, first Sunday on or after March 8. */
-        DOW_LEQ_DOM     /**< The last occurrence of the day of week on or before the day of month,
+        DOW_LEQ_DOM     /**< The last occurence of the day of week on or before the day of month,
                              for example, first Sunday on or before March 14. */
     };
 
@@ -74,7 +72,7 @@ public:
         int32_t millisInDay, TimeRuleType timeType);
 
     /**
-     * Constructs a <code>DateTimeRule</code> by the day of week and its ordinal
+     * Constructs a <code>DateTimeRule</code> by the day of week and its oridinal
      * number and the time rule.  The date rule type for an instance created
      * by this constructor is <code>DOW</code>.
      * 
@@ -128,7 +126,7 @@ public:
      * @return    A copy of the object.
      * @stable ICU 3.8
      */
-    DateTimeRule* clone() const;
+    DateTimeRule* clone(void) const;
 
     /**
      * Assignment operator.
@@ -144,7 +142,7 @@ public:
      * @return  true if the given DateTimeRule objects are semantically equal.
      * @stable ICU 3.8
      */
-    bool operator==(const DateTimeRule& that) const;
+    UBool operator==(const DateTimeRule& that) const;
 
     /**
      * Return true if the given DateTimeRule objects are semantically unequal. Objects
@@ -153,7 +151,7 @@ public:
      * @return  true if the given DateTimeRule objects are semantically unequal.
      * @stable ICU 3.8
      */
-    bool operator!=(const DateTimeRule& that) const;
+    UBool operator!=(const DateTimeRule& that) const;
 
     /**
      * Gets the date rule type, such as <code>DOM</code>
@@ -194,7 +192,7 @@ public:
     int32_t getRuleDayOfWeek(void) const;
 
     /**
-     * Gets the ordinal number of the occurrence of the day of week
+     * Gets the ordinal number of the occurence of the day of week
      * in the month.  When the date rule type is not <code>DOW</code>,
      * the value is always 0.
      * @return The rule day of week ordinal number in the month.
@@ -243,14 +241,12 @@ public:
      *                  other classes have different class IDs.
      * @stable ICU 3.8
      */
-    virtual UClassID getDynamicClassID(void) const override;
+    virtual UClassID getDynamicClassID(void) const;
 };
 
 U_NAMESPACE_END
 
 #endif /* #if !UCONFIG_NO_FORMATTING */
-
-#endif /* U_SHOW_CPLUSPLUS_API */
 
 #endif // DTRULE_H
 //eof

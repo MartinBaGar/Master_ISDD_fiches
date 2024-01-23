@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 **********************************************************************
@@ -13,9 +13,6 @@
 #define UNIFUNCT_H
 
 #include "unicode/utypes.h"
-
-#if U_SHOW_CPLUSPLUS_API
-
 #include "unicode/uobject.h"
 
 /**
@@ -93,14 +90,14 @@ public:
      *
      * <p>Concrete subclasses of UnicodeFunctor should use the macro
      *    UOBJECT_DEFINE_RTTI_IMPLEMENTATION from uobject.h to
-     *    provide definitions getStaticClassID and getDynamicClassID.
+     *    provide definitios getStaticClassID and getDynamicClassID.
      *
      * @return The class ID for this object. All objects of a given
      * class have the same class ID.  Objects of other classes have
      * different class IDs.
      * @stable ICU 2.4
      */
-    virtual UClassID getDynamicClassID(void) const override = 0;
+    virtual UClassID getDynamicClassID(void) const = 0;
 
     /**
      * Set the data object associated with this functor.  The data
@@ -126,7 +123,5 @@ protected:
 /*inline UnicodeFunctor::UnicodeFunctor() {}*/
 
 U_NAMESPACE_END
-
-#endif /* U_SHOW_CPLUSPLUS_API */
 
 #endif

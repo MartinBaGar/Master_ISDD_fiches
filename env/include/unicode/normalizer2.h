@@ -1,4 +1,4 @@
-// © 2016 and later: Unicode, Inc. and others.
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 *******************************************************************************
@@ -8,7 +8,7 @@
 *
 *******************************************************************************
 *   file name:  normalizer2.h
-*   encoding:   UTF-8
+*   encoding:   US-ASCII
 *   tab size:   8 (not used)
 *   indentation:4
 *
@@ -26,18 +26,13 @@
 
 #include "unicode/utypes.h"
 
-#if U_SHOW_CPLUSPLUS_API
-
 #if !UCONFIG_NO_NORMALIZATION
 
-#include "unicode/stringpiece.h"
 #include "unicode/uniset.h"
 #include "unicode/unistr.h"
 #include "unicode/unorm2.h"
 
 U_NAMESPACE_BEGIN
-
-class ByteSink;
 
 /**
  * Unicode normalization functionality for standard Unicode normalization or
@@ -92,7 +87,7 @@ public:
 
     /**
      * Returns a Normalizer2 instance for Unicode NFC normalization.
-     * Same as getInstance(nullptr, "nfc", UNORM2_COMPOSE, errorCode).
+     * Same as getInstance(NULL, "nfc", UNORM2_COMPOSE, errorCode).
      * Returns an unmodifiable singleton instance. Do not delete it.
      * @param errorCode Standard ICU error code. Its input value must
      *                  pass the U_SUCCESS() test, or else the function returns
@@ -106,7 +101,7 @@ public:
 
     /**
      * Returns a Normalizer2 instance for Unicode NFD normalization.
-     * Same as getInstance(nullptr, "nfc", UNORM2_DECOMPOSE, errorCode).
+     * Same as getInstance(NULL, "nfc", UNORM2_DECOMPOSE, errorCode).
      * Returns an unmodifiable singleton instance. Do not delete it.
      * @param errorCode Standard ICU error code. Its input value must
      *                  pass the U_SUCCESS() test, or else the function returns
@@ -120,7 +115,7 @@ public:
 
     /**
      * Returns a Normalizer2 instance for Unicode NFKC normalization.
-     * Same as getInstance(nullptr, "nfkc", UNORM2_COMPOSE, errorCode).
+     * Same as getInstance(NULL, "nfkc", UNORM2_COMPOSE, errorCode).
      * Returns an unmodifiable singleton instance. Do not delete it.
      * @param errorCode Standard ICU error code. Its input value must
      *                  pass the U_SUCCESS() test, or else the function returns
@@ -134,7 +129,7 @@ public:
 
     /**
      * Returns a Normalizer2 instance for Unicode NFKD normalization.
-     * Same as getInstance(nullptr, "nfkc", UNORM2_DECOMPOSE, errorCode).
+     * Same as getInstance(NULL, "nfkc", UNORM2_DECOMPOSE, errorCode).
      * Returns an unmodifiable singleton instance. Do not delete it.
      * @param errorCode Standard ICU error code. Its input value must
      *                  pass the U_SUCCESS() test, or else the function returns
@@ -148,7 +143,7 @@ public:
 
     /**
      * Returns a Normalizer2 instance for Unicode NFKC_Casefold normalization.
-     * Same as getInstance(nullptr, "nfkc_cf", UNORM2_COMPOSE, errorCode).
+     * Same as getInstance(NULL, "nfkc_cf", UNORM2_COMPOSE, errorCode).
      * Returns an unmodifiable singleton instance. Do not delete it.
      * @param errorCode Standard ICU error code. Its input value must
      *                  pass the U_SUCCESS() test, or else the function returns
@@ -166,12 +161,12 @@ public:
      * and which composes or decomposes text according to the specified mode.
      * Returns an unmodifiable singleton instance. Do not delete it.
      *
-     * Use packageName=nullptr for data files that are part of ICU's own data.
+     * Use packageName=NULL for data files that are part of ICU's own data.
      * Use name="nfc" and UNORM2_COMPOSE/UNORM2_DECOMPOSE for Unicode standard NFC/NFD.
      * Use name="nfkc" and UNORM2_COMPOSE/UNORM2_DECOMPOSE for Unicode standard NFKC/NFKD.
      * Use name="nfkc_cf" and UNORM2_COMPOSE for Unicode standard NFKC_CF=NFKC_Casefold.
      *
-     * @param packageName nullptr for ICU built-in data, otherwise application data package name
+     * @param packageName NULL for ICU built-in data, otherwise application data package name
      * @param name "nfc" or "nfkc" or "nfkc_cf" or name of custom data file
      * @param mode normalization mode (compose or decompose etc.)
      * @param errorCode Standard ICU error code. Its input value must
@@ -220,33 +215,6 @@ public:
     normalize(const UnicodeString &src,
               UnicodeString &dest,
               UErrorCode &errorCode) const = 0;
-
-    /**
-     * Normalizes a UTF-8 string and optionally records how source substrings
-     * relate to changed and unchanged result substrings.
-     *
-     * Implemented completely for all built-in modes except for FCD.
-     * The base class implementation converts to & from UTF-16 and does not support edits.
-     *
-     * @param options   Options bit set, usually 0. See U_OMIT_UNCHANGED_TEXT and U_EDITS_NO_RESET.
-     * @param src       Source UTF-8 string.
-     * @param sink      A ByteSink to which the normalized UTF-8 result string is written.
-     *                  sink.Flush() is called at the end.
-     * @param edits     Records edits for index mapping, working with styled text,
-     *                  and getting only changes (if any).
-     *                  The Edits contents is undefined if any error occurs.
-     *                  This function calls edits->reset() first unless
-     *                  options includes U_EDITS_NO_RESET. edits can be nullptr.
-     * @param errorCode Standard ICU error code. Its input value must
-     *                  pass the U_SUCCESS() test, or else the function returns
-     *                  immediately. Check for U_FAILURE() on output or use with
-     *                  function chaining. (See User Guide for details.)
-     * @stable ICU 60
-     */
-    virtual void
-    normalizeUTF8(uint32_t options, StringPiece src, ByteSink &sink,
-                  Edits *edits, UErrorCode &errorCode) const;
-
     /**
      * Appends the normalized form of the second string to the first string
      * (merging them at the boundary) and returns the first string.
@@ -288,13 +256,13 @@ public:
      * Gets the decomposition mapping of c.
      * Roughly equivalent to normalizing the String form of c
      * on a UNORM2_DECOMPOSE Normalizer2 instance, but much faster, and except that this function
-     * returns false and does not write a string
+     * returns FALSE and does not write a string
      * if c does not have a decomposition mapping in this instance's data.
      * This function is independent of the mode of the Normalizer2.
      * @param c code point
      * @param decomposition String object which will be set to c's
      *                      decomposition mapping, if there is one.
-     * @return true if c has a decomposition, otherwise false
+     * @return TRUE if c has a decomposition, otherwise FALSE
      * @stable ICU 4.6
      */
     virtual UBool
@@ -314,14 +282,14 @@ public:
      *
      * When used on a standard NFC Normalizer2 instance,
      * it returns the Decomposition_Mapping only if the Decomposition_Type (dt) is Canonical (Can);
-     * in this case, the result contains either one or two code points (=1..4 char16_ts).
+     * in this case, the result contains either one or two code points (=1..4 UChars).
      *
      * This function is independent of the mode of the Normalizer2.
-     * The default implementation returns false.
+     * The default implementation returns FALSE.
      * @param c code point
      * @param decomposition String object which will be set to c's
      *                      raw decomposition mapping, if there is one.
-     * @return true if c has a decomposition, otherwise false
+     * @return TRUE if c has a decomposition, otherwise FALSE
      * @stable ICU 49
      */
     virtual UBool
@@ -367,33 +335,11 @@ public:
      *                  pass the U_SUCCESS() test, or else the function returns
      *                  immediately. Check for U_FAILURE() on output or use with
      *                  function chaining. (See User Guide for details.)
-     * @return true if s is normalized
+     * @return TRUE if s is normalized
      * @stable ICU 4.4
      */
     virtual UBool
     isNormalized(const UnicodeString &s, UErrorCode &errorCode) const = 0;
-    /**
-     * Tests if the UTF-8 string is normalized.
-     * Internally, in cases where the quickCheck() method would return "maybe"
-     * (which is only possible for the two COMPOSE modes) this method
-     * resolves to "yes" or "no" to provide a definitive result,
-     * at the cost of doing more work in those cases.
-     *
-     * This works for all normalization modes.
-     * It is optimized for UTF-8 for all built-in modes except for FCD.
-     * The base class implementation converts to UTF-16 and calls isNormalized().
-     *
-     * @param s UTF-8 input string
-     * @param errorCode Standard ICU error code. Its input value must
-     *                  pass the U_SUCCESS() test, or else the function returns
-     *                  immediately. Check for U_FAILURE() on output or use with
-     *                  function chaining. (See User Guide for details.)
-     * @return true if s is normalized
-     * @stable ICU 60
-     */
-    virtual UBool
-    isNormalizedUTF8(StringPiece s, UErrorCode &errorCode) const;
-
 
     /**
      * Tests if the string is normalized.
@@ -448,7 +394,7 @@ public:
      * character independently.
      * This is used for iterative normalization. See the class documentation for details.
      * @param c character to test
-     * @return true if c has a normalization boundary before it
+     * @return TRUE if c has a normalization boundary before it
      * @stable ICU 4.4
      */
     virtual UBool hasBoundaryBefore(UChar32 c) const = 0;
@@ -464,7 +410,7 @@ public:
      * This is used for iterative normalization. See the class documentation for details.
      * Note that this operation may be significantly slower than hasBoundaryBefore().
      * @param c character to test
-     * @return true if c has a normalization boundary after it
+     * @return TRUE if c has a normalization boundary after it
      * @stable ICU 4.4
      */
     virtual UBool hasBoundaryAfter(UChar32 c) const = 0;
@@ -479,7 +425,7 @@ public:
      * This is used for iterative normalization. See the class documentation for details.
      * Note that this operation may be significantly slower than hasBoundaryBefore().
      * @param c character to test
-     * @return true if c is normalization-inert
+     * @return TRUE if c is normalization-inert
      * @stable ICU 4.4
      */
     virtual UBool isInert(UChar32 c) const = 0;
@@ -533,34 +479,7 @@ public:
     virtual UnicodeString &
     normalize(const UnicodeString &src,
               UnicodeString &dest,
-              UErrorCode &errorCode) const override;
-
-    /**
-     * Normalizes a UTF-8 string and optionally records how source substrings
-     * relate to changed and unchanged result substrings.
-     *
-     * Implemented completely for most built-in modes except for FCD.
-     * The base class implementation converts to & from UTF-16 and does not support edits.
-     *
-     * @param options   Options bit set, usually 0. See U_OMIT_UNCHANGED_TEXT and U_EDITS_NO_RESET.
-     * @param src       Source UTF-8 string.
-     * @param sink      A ByteSink to which the normalized UTF-8 result string is written.
-     *                  sink.Flush() is called at the end.
-     * @param edits     Records edits for index mapping, working with styled text,
-     *                  and getting only changes (if any).
-     *                  The Edits contents is undefined if any error occurs.
-     *                  This function calls edits->reset() first unless
-     *                  options includes U_EDITS_NO_RESET. edits can be nullptr.
-     * @param errorCode Standard ICU error code. Its input value must
-     *                  pass the U_SUCCESS() test, or else the function returns
-     *                  immediately. Check for U_FAILURE() on output or use with
-     *                  function chaining. (See User Guide for details.)
-     * @stable ICU 60
-     */
-    virtual void
-    normalizeUTF8(uint32_t options, StringPiece src, ByteSink &sink,
-                  Edits *edits, UErrorCode &errorCode) const override;
-
+              UErrorCode &errorCode) const;
     /**
      * Appends the normalized form of the second string to the first string
      * (merging them at the boundary) and returns the first string.
@@ -578,7 +497,7 @@ public:
     virtual UnicodeString &
     normalizeSecondAndAppend(UnicodeString &first,
                              const UnicodeString &second,
-                             UErrorCode &errorCode) const override;
+                             UErrorCode &errorCode) const;
     /**
      * Appends the second string to the first string
      * (merging them at the boundary) and returns the first string.
@@ -596,7 +515,7 @@ public:
     virtual UnicodeString &
     append(UnicodeString &first,
            const UnicodeString &second,
-           UErrorCode &errorCode) const override;
+           UErrorCode &errorCode) const;
 
     /**
      * Gets the decomposition mapping of c.
@@ -606,11 +525,11 @@ public:
      * @param c code point
      * @param decomposition String object which will be set to c's
      *                      decomposition mapping, if there is one.
-     * @return true if c has a decomposition, otherwise false
+     * @return TRUE if c has a decomposition, otherwise FALSE
      * @stable ICU 4.6
      */
     virtual UBool
-    getDecomposition(UChar32 c, UnicodeString &decomposition) const override;
+    getDecomposition(UChar32 c, UnicodeString &decomposition) const;
 
     /**
      * Gets the raw decomposition mapping of c.
@@ -620,11 +539,11 @@ public:
      * @param c code point
      * @param decomposition String object which will be set to c's
      *                      raw decomposition mapping, if there is one.
-     * @return true if c has a decomposition, otherwise false
+     * @return TRUE if c has a decomposition, otherwise FALSE
      * @stable ICU 49
      */
     virtual UBool
-    getRawDecomposition(UChar32 c, UnicodeString &decomposition) const override;
+    getRawDecomposition(UChar32 c, UnicodeString &decomposition) const;
 
     /**
      * Performs pairwise composition of a & b and returns the composite if there is one.
@@ -637,7 +556,7 @@ public:
      * @stable ICU 49
      */
     virtual UChar32
-    composePair(UChar32 a, UChar32 b) const override;
+    composePair(UChar32 a, UChar32 b) const;
 
     /**
      * Gets the combining class of c.
@@ -648,7 +567,7 @@ public:
      * @stable ICU 49
      */
     virtual uint8_t
-    getCombiningClass(UChar32 c) const override;
+    getCombiningClass(UChar32 c) const;
 
     /**
      * Tests if the string is normalized.
@@ -658,32 +577,11 @@ public:
      *                  pass the U_SUCCESS() test, or else the function returns
      *                  immediately. Check for U_FAILURE() on output or use with
      *                  function chaining. (See User Guide for details.)
-     * @return true if s is normalized
+     * @return TRUE if s is normalized
      * @stable ICU 4.4
      */
     virtual UBool
-    isNormalized(const UnicodeString &s, UErrorCode &errorCode) const override;
-    /**
-     * Tests if the UTF-8 string is normalized.
-     * Internally, in cases where the quickCheck() method would return "maybe"
-     * (which is only possible for the two COMPOSE modes) this method
-     * resolves to "yes" or "no" to provide a definitive result,
-     * at the cost of doing more work in those cases.
-     *
-     * This works for all normalization modes.
-     * It is optimized for UTF-8 for all built-in modes except for FCD.
-     * The base class implementation converts to UTF-16 and calls isNormalized().
-     *
-     * @param s UTF-8 input string
-     * @param errorCode Standard ICU error code. Its input value must
-     *                  pass the U_SUCCESS() test, or else the function returns
-     *                  immediately. Check for U_FAILURE() on output or use with
-     *                  function chaining. (See User Guide for details.)
-     * @return true if s is normalized
-     * @stable ICU 60
-     */
-    virtual UBool
-    isNormalizedUTF8(StringPiece s, UErrorCode &errorCode) const override;
+    isNormalized(const UnicodeString &s, UErrorCode &errorCode) const;
     /**
      * Tests if the string is normalized.
      * For details see the Normalizer2 base class documentation.
@@ -696,7 +594,7 @@ public:
      * @stable ICU 4.4
      */
     virtual UNormalizationCheckResult
-    quickCheck(const UnicodeString &s, UErrorCode &errorCode) const override;
+    quickCheck(const UnicodeString &s, UErrorCode &errorCode) const;
     /**
      * Returns the end of the normalized substring of the input string.
      * For details see the Normalizer2 base class documentation.
@@ -709,48 +607,42 @@ public:
      * @stable ICU 4.4
      */
     virtual int32_t
-    spanQuickCheckYes(const UnicodeString &s, UErrorCode &errorCode) const override;
+    spanQuickCheckYes(const UnicodeString &s, UErrorCode &errorCode) const;
 
     /**
      * Tests if the character always has a normalization boundary before it,
      * regardless of context.
      * For details see the Normalizer2 base class documentation.
      * @param c character to test
-     * @return true if c has a normalization boundary before it
+     * @return TRUE if c has a normalization boundary before it
      * @stable ICU 4.4
      */
-    virtual UBool hasBoundaryBefore(UChar32 c) const override;
+    virtual UBool hasBoundaryBefore(UChar32 c) const;
 
     /**
      * Tests if the character always has a normalization boundary after it,
      * regardless of context.
      * For details see the Normalizer2 base class documentation.
      * @param c character to test
-     * @return true if c has a normalization boundary after it
+     * @return TRUE if c has a normalization boundary after it
      * @stable ICU 4.4
      */
-    virtual UBool hasBoundaryAfter(UChar32 c) const override;
+    virtual UBool hasBoundaryAfter(UChar32 c) const;
 
     /**
      * Tests if the character is normalization-inert.
      * For details see the Normalizer2 base class documentation.
      * @param c character to test
-     * @return true if c is normalization-inert
+     * @return TRUE if c is normalization-inert
      * @stable ICU 4.4
      */
-    virtual UBool isInert(UChar32 c) const override;
+    virtual UBool isInert(UChar32 c) const;
 private:
     UnicodeString &
     normalize(const UnicodeString &src,
               UnicodeString &dest,
               USetSpanCondition spanCondition,
               UErrorCode &errorCode) const;
-
-    void
-    normalizeUTF8(uint32_t options, const char *src, int32_t length,
-                  ByteSink &sink, Edits *edits,
-                  USetSpanCondition spanCondition,
-                  UErrorCode &errorCode) const;
 
     UnicodeString &
     normalizeSecondAndAppend(UnicodeString &first,
@@ -765,7 +657,4 @@ private:
 U_NAMESPACE_END
 
 #endif  // !UCONFIG_NO_NORMALIZATION
-
-#endif /* U_SHOW_CPLUSPLUS_API */
-
 #endif  // __NORMALIZER2_H__

@@ -26,12 +26,7 @@
 
 G_BEGIN_DECLS
 
-/* All of this is deprecated and entirely useless for bindings.
- * Leave it out of the gir file.
- */
-#ifndef __GI_SCANNER__
-
-#ifndef PANGO_DISABLE_DEPRECATED
+#ifdef PANGO_ENABLE_BACKEND
 
 typedef struct _PangoMap PangoMap;
 typedef struct _PangoMapEntry PangoMapEntry;
@@ -45,7 +40,7 @@ typedef struct _PangoIncludedModule PangoIncludedModule;
  * @exit: a function to finalize the module.
  * @create: a function to create an engine, given the engine name.
  *
- * The `PangoIncludedModule` structure for a statically linked module
+ * The #PangoIncludedModule structure for a statically linked module
  * contains the functions that would otherwise be loaded from a dynamically
  * loaded module.
  *
@@ -75,9 +70,7 @@ void           pango_map_get_engines (PangoMap            *map,
 PANGO_DEPRECATED_IN_1_38
 void           pango_module_register (PangoIncludedModule *module);
 
-#endif /* PANGO_DISABLE_DEPRECATED */
-
-#endif /* __GI_SCANNER__ */
+#endif /* PANGO_ENABLE_BACKEND */
 
 G_END_DECLS
 
