@@ -1,6 +1,5 @@
 ---
 title: 'TP4 : arbres de partitionnement, cart'
-author: "Martin Bari Garnier"
 date: "2024-01-17"
 ---
 ```{r}
