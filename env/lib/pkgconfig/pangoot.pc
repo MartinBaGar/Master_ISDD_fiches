@@ -1,8 +1,0 @@
-prefix=/home/mabagar/etudes/masters/Master_ISDD_fiches/env
-includedir=${prefix}/include
-
-Name: Pango OT
-Description: OpenType font support for Pango (deprecated)
-Version: 1.50.14
-Requires: pangoft2
-Cflags: -I${includedir}/pango-1.0

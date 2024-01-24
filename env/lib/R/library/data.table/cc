@@ -1,2 +1,0 @@
-CC=x86_64-conda-linux-gnu-cc
-CFLAGS=-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/mabagar/etudes/masters/Master_ISDD_fiches/env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1700316003380/work=/usr/local/src/conda/r-base-4.3.2 -fdebug-prefix-map=/home/mabagar/etudes/masters/Master_ISDD_fiches/env=/usr/local/src/conda-prefix
