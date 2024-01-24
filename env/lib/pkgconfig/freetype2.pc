@@ -1,0 +1,14 @@
+prefix=/workspaces/Master_ISDD_fiches/env
+exec_prefix=/workspaces/Master_ISDD_fiches/env
+libdir=/workspaces/Master_ISDD_fiches/env/lib
+includedir=/workspaces/Master_ISDD_fiches/env/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 24.3.18
+Requires: 
+Requires.private: zlib, libpng
+Libs: -L/workspaces/Master_ISDD_fiches/env/lib -lfreetype
+Libs.private: 
+Cflags: -I${includedir}/freetype2
