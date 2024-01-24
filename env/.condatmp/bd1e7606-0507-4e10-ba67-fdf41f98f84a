@@ -1,0 +1,13 @@
+prefix=/workspaces/Master_ISDD_fiches/env
+exec_prefix=/workspaces/Master_ISDD_fiches/env
+libdir=/workspaces/Master_ISDD_fiches/env/lib
+sharedlibdir=/workspaces/Master_ISDD_fiches/env/lib
+includedir=/workspaces/Master_ISDD_fiches/env/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
