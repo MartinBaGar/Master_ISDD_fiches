@@ -1,7 +1,13 @@
 ---
 title: "Massive Data Analysis"
+date: last-modified
 ---
 
-# Massive Data Analysis
+# Covered topics
 
-This is the index page for the Massive Data Analysis section.
+This is the index page for the Massive Data Analysis section.  
+
+- [Data Classification](TP1/tp1.qmd)
+- [Principal Component Analysis](TP2/tp2.qmd)
+- [Regression](TP3/tp3.qmd)
+- [Partitionning Trees](TP4/tp4.qmd)

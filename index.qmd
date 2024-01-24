@@ -1,16 +1,17 @@
 ---
 title: "Master ISDD fiches"
 listing:
-  type: table
-  contents: mda
-  fields: [image, title]
-  sort-ui: false
-  filter-ui: false
-  exclude:
-    author: "{Martin}*"
-  image-height: 100px
+  - id: topics
+    type: grid
+    contents: 
+      - mda/mda.qmd
+    fields: [image, title, date]
+    sort-ui: false
+    filter-ui: false
+    image-height: 100px
 --- 
 
 In this website (still in construction), I'll present various topics that were covered during my **Master Bio-Informatics: *In Silico Drug Design*** at the Université Paris-Cité.  
 This is not professional content so if you see that something isn't right and would like to volunteer, please contact me at this address: [martin.bari-garnier@etu.unistra.fr](mailto:martin.bari-garnier@etu.unistra.fr).
-Enjoy ! 
+Enjoy !  
+<br>
