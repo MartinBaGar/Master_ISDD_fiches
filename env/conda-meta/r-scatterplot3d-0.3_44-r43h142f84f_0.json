@@ -1,0 +1,244 @@
+{
+  "build": "r43h142f84f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-scatterplot3d-0.3_44-r43h142f84f_0",
+  "files": [
+    "lib/R/library/scatterplot3d/CITATION",
+    "lib/R/library/scatterplot3d/DESCRIPTION",
+    "lib/R/library/scatterplot3d/INDEX",
+    "lib/R/library/scatterplot3d/Meta/Rd.rds",
+    "lib/R/library/scatterplot3d/Meta/features.rds",
+    "lib/R/library/scatterplot3d/Meta/hsearch.rds",
+    "lib/R/library/scatterplot3d/Meta/links.rds",
+    "lib/R/library/scatterplot3d/Meta/nsInfo.rds",
+    "lib/R/library/scatterplot3d/Meta/package.rds",
+    "lib/R/library/scatterplot3d/Meta/vignette.rds",
+    "lib/R/library/scatterplot3d/NAMESPACE",
+    "lib/R/library/scatterplot3d/R/scatterplot3d",
+    "lib/R/library/scatterplot3d/R/scatterplot3d.rdb",
+    "lib/R/library/scatterplot3d/R/scatterplot3d.rdx",
+    "lib/R/library/scatterplot3d/doc/index.html",
+    "lib/R/library/scatterplot3d/doc/s3d.Rnw",
+    "lib/R/library/scatterplot3d/doc/s3d.pdf",
+    "lib/R/library/scatterplot3d/help/AnIndex",
+    "lib/R/library/scatterplot3d/help/aliases.rds",
+    "lib/R/library/scatterplot3d/help/paths.rds",
+    "lib/R/library/scatterplot3d/help/scatterplot3d.rdb",
+    "lib/R/library/scatterplot3d/help/scatterplot3d.rdx",
+    "lib/R/library/scatterplot3d/html/00Index.html",
+    "lib/R/library/scatterplot3d/html/R.css",
+    "lib/R/library/scatterplot3d/po/de/LC_MESSAGES/R-scatterplot3d.mo",
+    "lib/R/library/scatterplot3d/po/en/LC_MESSAGES/R-scatterplot3d.mo"
+  ],
+  "fn": "r-scatterplot3d-0.3_44-r43h142f84f_0.conda",
+  "license": "GPL-2",
+  "link": {
+    "source": "/opt/conda/pkgs/r-scatterplot3d-0.3_44-r43h142f84f_0",
+    "type": 1
+  },
+  "md5": "24bd38c054edf45dabb78c779a601927",
+  "name": "r-scatterplot3d",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-scatterplot3d-0.3_44-r43h142f84f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/scatterplot3d/CITATION",
+        "path_type": "hardlink",
+        "sha256": "63102544f1545a8929aed95046b53da058f0fa0a0b621392d0993e72dbf4126b",
+        "sha256_in_prefix": "63102544f1545a8929aed95046b53da058f0fa0a0b621392d0993e72dbf4126b",
+        "size_in_bytes": 743
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "b9a347d8490eb9534fc835dd5e775761ba495c08e84f0f47d9a1545018463124",
+        "sha256_in_prefix": "b9a347d8490eb9534fc835dd5e775761ba495c08e84f0f47d9a1545018463124",
+        "size_in_bytes": 543
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/INDEX",
+        "path_type": "hardlink",
+        "sha256": "a4bc2aa53fd88219dfd0749425e4cb1a5fbfff841ad237e094fb5762ecfb7725",
+        "sha256_in_prefix": "a4bc2aa53fd88219dfd0749425e4cb1a5fbfff841ad237e094fb5762ecfb7725",
+        "size_in_bytes": 40
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "2ff15f2c11f952a8b641ce7e8e01f25bd9fd100a976e606143a2dd9604ea8015",
+        "sha256_in_prefix": "2ff15f2c11f952a8b641ce7e8e01f25bd9fd100a976e606143a2dd9604ea8015",
+        "size_in_bytes": 263
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "345a6d4a3d6143b06336f162c8594fe564a1595e784aed2ed7922f255f004c3e",
+        "sha256_in_prefix": "345a6d4a3d6143b06336f162c8594fe564a1595e784aed2ed7922f255f004c3e",
+        "size_in_bytes": 270
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "5ad47c0173b608e11b60d85c1dd2b0378d95802ca0739b06ae8b4959449f360e",
+        "sha256_in_prefix": "5ad47c0173b608e11b60d85c1dd2b0378d95802ca0739b06ae8b4959449f360e",
+        "size_in_bytes": 119
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "6a9c686a33e8828b5187a8c5f7cf2d4e3cac6e571bb4e7ac3110a12dbff9aa94",
+        "sha256_in_prefix": "6a9c686a33e8828b5187a8c5f7cf2d4e3cac6e571bb4e7ac3110a12dbff9aa94",
+        "size_in_bytes": 343
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "7ea105a7e5236787f03f969916e26c956c3fdfdbb140cd62003f2c7280524496",
+        "sha256_in_prefix": "7ea105a7e5236787f03f969916e26c956c3fdfdbb140cd62003f2c7280524496",
+        "size_in_bytes": 745
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "e9b3ffaf6934054422e828586c48f8d1dd0cff08f0dadcbdededce893218ba93",
+        "sha256_in_prefix": "e9b3ffaf6934054422e828586c48f8d1dd0cff08f0dadcbdededce893218ba93",
+        "size_in_bytes": 234
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "563d8e6142ddff2ccd9465b382a3c4bd745b01ec5cdcb185397383318d218a25",
+        "sha256_in_prefix": "563d8e6142ddff2ccd9465b382a3c4bd745b01ec5cdcb185397383318d218a25",
+        "size_in_bytes": 271
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/R/scatterplot3d",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/R/scatterplot3d.rdb",
+        "path_type": "hardlink",
+        "sha256": "5b899fb0aa6b41c1eb47f1eee5b3d16d15b04822558eee77be4b70801a1d2ebc",
+        "sha256_in_prefix": "5b899fb0aa6b41c1eb47f1eee5b3d16d15b04822558eee77be4b70801a1d2ebc",
+        "size_in_bytes": 28007
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/R/scatterplot3d.rdx",
+        "path_type": "hardlink",
+        "sha256": "beed791be52cf5ecafb63293a3eba9ed6cf3760e429282aad23ba96e2f9ba369",
+        "sha256_in_prefix": "beed791be52cf5ecafb63293a3eba9ed6cf3760e429282aad23ba96e2f9ba369",
+        "size_in_bytes": 255
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "5f44c3121a2ee097e37b31c24206552bef92dfff869a4b0889a615ebb73d0647",
+        "sha256_in_prefix": "5f44c3121a2ee097e37b31c24206552bef92dfff869a4b0889a615ebb73d0647",
+        "size_in_bytes": 1381
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/doc/s3d.Rnw",
+        "path_type": "hardlink",
+        "sha256": "de171efe0fe93b30b9e2485e2ad934b8f997960d9adacb76a4ab5bda58898df5",
+        "sha256_in_prefix": "de171efe0fe93b30b9e2485e2ad934b8f997960d9adacb76a4ab5bda58898df5",
+        "size_in_bytes": 1842
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/doc/s3d.pdf",
+        "path_type": "hardlink",
+        "sha256": "bcd720edc2547ff3e47636b84a0c08c24be9502fa67a628d78d378cfb92517d7",
+        "sha256_in_prefix": "bcd720edc2547ff3e47636b84a0c08c24be9502fa67a628d78d378cfb92517d7",
+        "size_in_bytes": 304470
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "c96d790fb5e6c003de40542bce71d3080f449e0cf5fe0928f131db9a6db7ceaa",
+        "sha256_in_prefix": "c96d790fb5e6c003de40542bce71d3080f449e0cf5fe0928f131db9a6db7ceaa",
+        "size_in_bytes": 28
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "278d186b0c92f10a0e21a008c86d35d9d023d2654ffe82dcd9423a6863eaa4b2",
+        "sha256_in_prefix": "278d186b0c92f10a0e21a008c86d35d9d023d2654ffe82dcd9423a6863eaa4b2",
+        "size_in_bytes": 100
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "0981a8c78e5d1ffb0730f1d9fc9d61c50be7053d7f05db41a3b8955d260f1c5c",
+        "sha256_in_prefix": "0981a8c78e5d1ffb0730f1d9fc9d61c50be7053d7f05db41a3b8955d260f1c5c",
+        "size_in_bytes": 135
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/help/scatterplot3d.rdb",
+        "path_type": "hardlink",
+        "sha256": "a96a4753dffb1b7c92d6bc9a74ee9d91ffcca4fb18902e41b4bea1f7ff31ae25",
+        "sha256_in_prefix": "a96a4753dffb1b7c92d6bc9a74ee9d91ffcca4fb18902e41b4bea1f7ff31ae25",
+        "size_in_bytes": 12863
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/help/scatterplot3d.rdx",
+        "path_type": "hardlink",
+        "sha256": "14ee02e875de213b62c9b6c6c34cc4ad22e8dec0796e3e0c8eeb02f51931da91",
+        "sha256_in_prefix": "14ee02e875de213b62c9b6c6c34cc4ad22e8dec0796e3e0c8eeb02f51931da91",
+        "size_in_bytes": 165
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "3a483c97266fbf89432bcf9f628829ba63c6a42ef52dcf242cdf64e449160535",
+        "sha256_in_prefix": "3a483c97266fbf89432bcf9f628829ba63c6a42ef52dcf242cdf64e449160535",
+        "size_in_bytes": 1117
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/po/de/LC_MESSAGES/R-scatterplot3d.mo",
+        "path_type": "hardlink",
+        "sha256": "7db735446387db4742e6576722d784a14b37cdad98e08e8a0a0735a11950b3d2",
+        "sha256_in_prefix": "7db735446387db4742e6576722d784a14b37cdad98e08e8a0a0735a11950b3d2",
+        "size_in_bytes": 860
+      },
+      {
+        "_path": "lib/R/library/scatterplot3d/po/en/LC_MESSAGES/R-scatterplot3d.mo",
+        "path_type": "hardlink",
+        "sha256": "68968bf4b4db9cc46ab7e8b5ed5438575e5290660974d6269e4b86e383470379",
+        "sha256_in_prefix": "68968bf4b4db9cc46ab7e8b5ed5438575e5290660974d6269e4b86e383470379",
+        "size_in_bytes": 464
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "303e97f054326922204811363a011b62e95c9a755efc3d697603160414b7d901",
+  "size": 359718,
+  "subdir": "noarch",
+  "timestamp": 1697804122000,
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-scatterplot3d-0.3_44-r43h142f84f_0.conda",
+  "version": "0.3_44"
+}

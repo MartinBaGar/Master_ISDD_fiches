@@ -1,0 +1,391 @@
+{
+  "build": "r43h6115d3f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-backports",
+    "r-base >=4.3,<4.4.0a0",
+    "r-dplyr >=1.0.0",
+    "r-ellipsis",
+    "r-generics >=0.0.2",
+    "r-glue",
+    "r-lifecycle",
+    "r-purrr",
+    "r-rlang",
+    "r-stringr",
+    "r-tibble >=3.0.0",
+    "r-tidyr >=1.0.0",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-broom-1.0.5-r43h6115d3f_0",
+  "files": [
+    "lib/R/library/broom/DESCRIPTION",
+    "lib/R/library/broom/INDEX",
+    "lib/R/library/broom/LICENSE",
+    "lib/R/library/broom/Meta/Rd.rds",
+    "lib/R/library/broom/Meta/features.rds",
+    "lib/R/library/broom/Meta/hsearch.rds",
+    "lib/R/library/broom/Meta/links.rds",
+    "lib/R/library/broom/Meta/nsInfo.rds",
+    "lib/R/library/broom/Meta/package.rds",
+    "lib/R/library/broom/Meta/vignette.rds",
+    "lib/R/library/broom/NAMESPACE",
+    "lib/R/library/broom/NEWS.md",
+    "lib/R/library/broom/R/broom",
+    "lib/R/library/broom/R/broom.rdb",
+    "lib/R/library/broom/R/broom.rdx",
+    "lib/R/library/broom/R/sysdata.rdb",
+    "lib/R/library/broom/R/sysdata.rdx",
+    "lib/R/library/broom/WORDLIST",
+    "lib/R/library/broom/doc/adding-tidiers.Rmd",
+    "lib/R/library/broom/doc/adding-tidiers.html",
+    "lib/R/library/broom/doc/available-methods.R",
+    "lib/R/library/broom/doc/available-methods.Rmd",
+    "lib/R/library/broom/doc/available-methods.html",
+    "lib/R/library/broom/doc/bootstrapping.R",
+    "lib/R/library/broom/doc/bootstrapping.Rmd",
+    "lib/R/library/broom/doc/bootstrapping.html",
+    "lib/R/library/broom/doc/broom.R",
+    "lib/R/library/broom/doc/broom.Rmd",
+    "lib/R/library/broom/doc/broom.html",
+    "lib/R/library/broom/doc/broom_and_dplyr.R",
+    "lib/R/library/broom/doc/broom_and_dplyr.Rmd",
+    "lib/R/library/broom/doc/broom_and_dplyr.html",
+    "lib/R/library/broom/doc/index.html",
+    "lib/R/library/broom/doc/kmeans.Rmd",
+    "lib/R/library/broom/doc/kmeans.html",
+    "lib/R/library/broom/help/AnIndex",
+    "lib/R/library/broom/help/aliases.rds",
+    "lib/R/library/broom/help/broom.rdb",
+    "lib/R/library/broom/help/broom.rdx",
+    "lib/R/library/broom/help/figures/logo.png",
+    "lib/R/library/broom/help/paths.rds",
+    "lib/R/library/broom/html/00Index.html",
+    "lib/R/library/broom/html/R.css"
+  ],
+  "fn": "r-broom-1.0.5-r43h6115d3f_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/conda/pkgs/r-broom-1.0.5-r43h6115d3f_0",
+    "type": 1
+  },
+  "md5": "3505e713502e209b047d2bea46e99b64",
+  "name": "r-broom",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-broom-1.0.5-r43h6115d3f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/broom/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "e944b5b026eb0c3ca33f4b83115ef45202e736777c1a62427e68b6fad6ed2a2c",
+        "sha256_in_prefix": "e944b5b026eb0c3ca33f4b83115ef45202e736777c1a62427e68b6fad6ed2a2c",
+        "size_in_bytes": 27569
+      },
+      {
+        "_path": "lib/R/library/broom/INDEX",
+        "path_type": "hardlink",
+        "sha256": "64bbcbb1791435ba4d9d3790c3ff10d667b370745f176d8908df8a4a9dacd397",
+        "sha256_in_prefix": "64bbcbb1791435ba4d9d3790c3ff10d667b370745f176d8908df8a4a9dacd397",
+        "size_in_bytes": 14274
+      },
+      {
+        "_path": "lib/R/library/broom/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "5a20a496ad6163b43fe3efe027b51493170511c66cb22dc452702e29c7b25927",
+        "sha256_in_prefix": "5a20a496ad6163b43fe3efe027b51493170511c66cb22dc452702e29c7b25927",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/broom/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "5ec4e71b849c1bd7aba878125b340a51efb517ec978f89f6524994f994b59c56",
+        "sha256_in_prefix": "5ec4e71b849c1bd7aba878125b340a51efb517ec978f89f6524994f994b59c56",
+        "size_in_bytes": 6491
+      },
+      {
+        "_path": "lib/R/library/broom/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/broom/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "c741b837f701b8b31cf300d0b7fc490d24b341fd8ccf89378abad7c5907e69a1",
+        "sha256_in_prefix": "c741b837f701b8b31cf300d0b7fc490d24b341fd8ccf89378abad7c5907e69a1",
+        "size_in_bytes": 6107
+      },
+      {
+        "_path": "lib/R/library/broom/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "945623d44236f2f634450f01036035805f90cfc691f43c659e2ae87a1f1d491c",
+        "sha256_in_prefix": "945623d44236f2f634450f01036035805f90cfc691f43c659e2ae87a1f1d491c",
+        "size_in_bytes": 3434
+      },
+      {
+        "_path": "lib/R/library/broom/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "a544b132eb4ab4730de00d95a08f3501e103fd126fa79895917949bd95f4278c",
+        "sha256_in_prefix": "a544b132eb4ab4730de00d95a08f3501e103fd126fa79895917949bd95f4278c",
+        "size_in_bytes": 1568
+      },
+      {
+        "_path": "lib/R/library/broom/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "a46fd2830d2f7c8030a3b693c09cb1b8e54ed563cce2f61360029dd3c281c17f",
+        "sha256_in_prefix": "a46fd2830d2f7c8030a3b693c09cb1b8e54ed563cce2f61360029dd3c281c17f",
+        "size_in_bytes": 7431
+      },
+      {
+        "_path": "lib/R/library/broom/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "1873066277d5cfa55d2bf6399d0fb145acb6244d0f94b012f1daaf2c140768fc",
+        "sha256_in_prefix": "1873066277d5cfa55d2bf6399d0fb145acb6244d0f94b012f1daaf2c140768fc",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "lib/R/library/broom/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "e8b9a5f40d7b97f0a18649b382bea9b1f56527d09198e5a1ebc4661de7fa222c",
+        "sha256_in_prefix": "e8b9a5f40d7b97f0a18649b382bea9b1f56527d09198e5a1ebc4661de7fa222c",
+        "size_in_bytes": 7384
+      },
+      {
+        "_path": "lib/R/library/broom/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "ac82046032838b40eec780985082838970ef5bec8e47ea7868efca8d487ee63e",
+        "sha256_in_prefix": "ac82046032838b40eec780985082838970ef5bec8e47ea7868efca8d487ee63e",
+        "size_in_bytes": 43760
+      },
+      {
+        "_path": "lib/R/library/broom/R/broom",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/broom/R/broom.rdb",
+        "path_type": "hardlink",
+        "sha256": "a6accc5d5aad58dce621849657c2ac45b00a9a4dab10d2b850f5c995a0cdc76d",
+        "sha256_in_prefix": "a6accc5d5aad58dce621849657c2ac45b00a9a4dab10d2b850f5c995a0cdc76d",
+        "size_in_bytes": 326160
+      },
+      {
+        "_path": "lib/R/library/broom/R/broom.rdx",
+        "path_type": "hardlink",
+        "sha256": "0d2648668b2746cca5731f6fd9615f06008cea6684488b3da46a00a0b90b1e6d",
+        "sha256_in_prefix": "0d2648668b2746cca5731f6fd9615f06008cea6684488b3da46a00a0b90b1e6d",
+        "size_in_bytes": 4309
+      },
+      {
+        "_path": "lib/R/library/broom/R/sysdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "a8ab58342f0745bf7654a0f584b92928509b453a80bfe2c337ae326ffc605c8b",
+        "sha256_in_prefix": "a8ab58342f0745bf7654a0f584b92928509b453a80bfe2c337ae326ffc605c8b",
+        "size_in_bytes": 152595
+      },
+      {
+        "_path": "lib/R/library/broom/R/sysdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "8601c946c8d2d6da9f8dda614651b8cfacb04e322b95a9a8d0cf8705872464ef",
+        "sha256_in_prefix": "8601c946c8d2d6da9f8dda614651b8cfacb04e322b95a9a8d0cf8705872464ef",
+        "size_in_bytes": 232
+      },
+      {
+        "_path": "lib/R/library/broom/WORDLIST",
+        "path_type": "hardlink",
+        "sha256": "0e4b3d99c5061e918f81d70f1acc4f66307e0850c38d9f0bdef839af9ec69d05",
+        "sha256_in_prefix": "0e4b3d99c5061e918f81d70f1acc4f66307e0850c38d9f0bdef839af9ec69d05",
+        "size_in_bytes": 2160
+      },
+      {
+        "_path": "lib/R/library/broom/doc/adding-tidiers.Rmd",
+        "path_type": "hardlink",
+        "sha256": "b2c701afc7d7eb33056c0cadf09ad572cc3f80acac3d7d44f63816cb303cfc20",
+        "sha256_in_prefix": "b2c701afc7d7eb33056c0cadf09ad572cc3f80acac3d7d44f63816cb303cfc20",
+        "size_in_bytes": 1318
+      },
+      {
+        "_path": "lib/R/library/broom/doc/adding-tidiers.html",
+        "path_type": "hardlink",
+        "sha256": "d2f3a6cc49b20778d72872d7a8fa01812021416af854258a44cc45bd1f04bb81",
+        "sha256_in_prefix": "d2f3a6cc49b20778d72872d7a8fa01812021416af854258a44cc45bd1f04bb81",
+        "size_in_bytes": 6093
+      },
+      {
+        "_path": "lib/R/library/broom/doc/available-methods.R",
+        "path_type": "hardlink",
+        "sha256": "555d2e2cbe2faf3a273bd55ea8545856f32706d349c391063adcca9e8e065651",
+        "sha256_in_prefix": "555d2e2cbe2faf3a273bd55ea8545856f32706d349c391063adcca9e8e065651",
+        "size_in_bytes": 607
+      },
+      {
+        "_path": "lib/R/library/broom/doc/available-methods.Rmd",
+        "path_type": "hardlink",
+        "sha256": "2f8c0ed760598e0636ea6f43aa280b7e0298dc1919ac1176f1ef9f30f0579b9c",
+        "sha256_in_prefix": "2f8c0ed760598e0636ea6f43aa280b7e0298dc1919ac1176f1ef9f30f0579b9c",
+        "size_in_bytes": 791
+      },
+      {
+        "_path": "lib/R/library/broom/doc/available-methods.html",
+        "path_type": "hardlink",
+        "sha256": "9e3a8181ffaf83c31d05c90d6721293fb5293482071d286e5f211d73f72afacb",
+        "sha256_in_prefix": "9e3a8181ffaf83c31d05c90d6721293fb5293482071d286e5f211d73f72afacb",
+        "size_in_bytes": 21512
+      },
+      {
+        "_path": "lib/R/library/broom/doc/bootstrapping.R",
+        "path_type": "hardlink",
+        "sha256": "1b8fcccbd571a4ce1e1410f150d15da598383277e56942861626fff95196e591",
+        "sha256_in_prefix": "1b8fcccbd571a4ce1e1410f150d15da598383277e56942861626fff95196e591",
+        "size_in_bytes": 162
+      },
+      {
+        "_path": "lib/R/library/broom/doc/bootstrapping.Rmd",
+        "path_type": "hardlink",
+        "sha256": "b52119d16b57aa336a7f33af8622f0e2061a5a2996b2ebe46ed68aaba64a9678",
+        "sha256_in_prefix": "b52119d16b57aa336a7f33af8622f0e2061a5a2996b2ebe46ed68aaba64a9678",
+        "size_in_bytes": 469
+      },
+      {
+        "_path": "lib/R/library/broom/doc/bootstrapping.html",
+        "path_type": "hardlink",
+        "sha256": "a04aed99876c78e7fd075d087f98a3811349ee7daf07da75292b34bb83e01d34",
+        "sha256_in_prefix": "a04aed99876c78e7fd075d087f98a3811349ee7daf07da75292b34bb83e01d34",
+        "size_in_bytes": 4995
+      },
+      {
+        "_path": "lib/R/library/broom/doc/broom.R",
+        "path_type": "hardlink",
+        "sha256": "450db0e1b29c098f1c30c2faedc11f6828d070670c9e1297a4cfd430eb471745",
+        "sha256_in_prefix": "450db0e1b29c098f1c30c2faedc11f6828d070670c9e1297a4cfd430eb471745",
+        "size_in_bytes": 1499
+      },
+      {
+        "_path": "lib/R/library/broom/doc/broom.Rmd",
+        "path_type": "hardlink",
+        "sha256": "6f8bfdf2d8d2698fb673c76776666f9b29b819938ca35597a8c331c6bfd6378c",
+        "sha256_in_prefix": "6f8bfdf2d8d2698fb673c76776666f9b29b819938ca35597a8c331c6bfd6378c",
+        "size_in_bytes": 10072
+      },
+      {
+        "_path": "lib/R/library/broom/doc/broom.html",
+        "path_type": "hardlink",
+        "sha256": "b62a215a010cf7ff1d95eb0946f8f0914f08f6d58898bc46f3e6c60e8b54c225",
+        "sha256_in_prefix": "b62a215a010cf7ff1d95eb0946f8f0914f08f6d58898bc46f3e6c60e8b54c225",
+        "size_in_bytes": 34071
+      },
+      {
+        "_path": "lib/R/library/broom/doc/broom_and_dplyr.R",
+        "path_type": "hardlink",
+        "sha256": "9db4cf2740a25e213efea094b2c6d4e860f75e6a0409e14e1e610674e7fb5218",
+        "sha256_in_prefix": "9db4cf2740a25e213efea094b2c6d4e860f75e6a0409e14e1e610674e7fb5218",
+        "size_in_bytes": 3145
+      },
+      {
+        "_path": "lib/R/library/broom/doc/broom_and_dplyr.Rmd",
+        "path_type": "hardlink",
+        "sha256": "a8e5dad1ec345f77403d7d46eb68a04fad920fd5c8a88fe7c373ebae66a47ff7",
+        "sha256_in_prefix": "a8e5dad1ec345f77403d7d46eb68a04fad920fd5c8a88fe7c373ebae66a47ff7",
+        "size_in_bytes": 5865
+      },
+      {
+        "_path": "lib/R/library/broom/doc/broom_and_dplyr.html",
+        "path_type": "hardlink",
+        "sha256": "16b42d6b41f7899da97c9ae388604ef67d1e864ad41d7d1233432b9abd74f8d7",
+        "sha256_in_prefix": "16b42d6b41f7899da97c9ae388604ef67d1e864ad41d7d1233432b9abd74f8d7",
+        "size_in_bytes": 69429
+      },
+      {
+        "_path": "lib/R/library/broom/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "24303241c704ce95b022ca1af91f9846b7064556817a893cab3fc41b220af3a4",
+        "sha256_in_prefix": "24303241c704ce95b022ca1af91f9846b7064556817a893cab3fc41b220af3a4",
+        "size_in_bytes": 3969
+      },
+      {
+        "_path": "lib/R/library/broom/doc/kmeans.Rmd",
+        "path_type": "hardlink",
+        "sha256": "6c5af419fbdea89e8bfd517dc77d2a4102c515878a72639a611ac13f8da8523a",
+        "sha256_in_prefix": "6c5af419fbdea89e8bfd517dc77d2a4102c515878a72639a611ac13f8da8523a",
+        "size_in_bytes": 355
+      },
+      {
+        "_path": "lib/R/library/broom/doc/kmeans.html",
+        "path_type": "hardlink",
+        "sha256": "0a636d77a66dcdd17d231c4e3a6df49c6831784637ddc624e03cc78246939c2b",
+        "sha256_in_prefix": "0a636d77a66dcdd17d231c4e3a6df49c6831784637ddc624e03cc78246939c2b",
+        "size_in_bytes": 4952
+      },
+      {
+        "_path": "lib/R/library/broom/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "e5fde282662e50f9d22dc4531e0ac90830fbc64cd3ed95f8839e677e94dc950a",
+        "sha256_in_prefix": "e5fde282662e50f9d22dc4531e0ac90830fbc64cd3ed95f8839e677e94dc950a",
+        "size_in_bytes": 9982
+      },
+      {
+        "_path": "lib/R/library/broom/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "f3f8a18a814e7c6fb92b68f70483f3b3edc7535d52de12635e4a8781845295d6",
+        "sha256_in_prefix": "f3f8a18a814e7c6fb92b68f70483f3b3edc7535d52de12635e4a8781845295d6",
+        "size_in_bytes": 2559
+      },
+      {
+        "_path": "lib/R/library/broom/help/broom.rdb",
+        "path_type": "hardlink",
+        "sha256": "b6491b60679046cd55f112e8e9a931c1ed75d3fc35a3e3b2e325b00f363ddab0",
+        "sha256_in_prefix": "b6491b60679046cd55f112e8e9a931c1ed75d3fc35a3e3b2e325b00f363ddab0",
+        "size_in_bytes": 1107379
+      },
+      {
+        "_path": "lib/R/library/broom/help/broom.rdx",
+        "path_type": "hardlink",
+        "sha256": "b6d500ee0e491dea678613e6eb22a064f32ad61981a6d0a5ee62c27a95004ce3",
+        "sha256_in_prefix": "b6d500ee0e491dea678613e6eb22a064f32ad61981a6d0a5ee62c27a95004ce3",
+        "size_in_bytes": 4779
+      },
+      {
+        "_path": "lib/R/library/broom/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "947cd2a733772315a588e9df82cbe1d4eec6e26b21633449f06aba52b390e6d2",
+        "sha256_in_prefix": "947cd2a733772315a588e9df82cbe1d4eec6e26b21633449f06aba52b390e6d2",
+        "size_in_bytes": 195234
+      },
+      {
+        "_path": "lib/R/library/broom/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "2ebad6915421a849f6f962326bdfc9c0a751abed04c9d77417b23d86e5c67a35",
+        "sha256_in_prefix": "2ebad6915421a849f6f962326bdfc9c0a751abed04c9d77417b23d86e5c67a35",
+        "size_in_bytes": 1573
+      },
+      {
+        "_path": "lib/R/library/broom/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "3c47cc25552b9d1588247feb15f5ebda360228e611611b0afd324f3e5afa863c",
+        "sha256_in_prefix": "3c47cc25552b9d1588247feb15f5ebda360228e611611b0afd324f3e5afa863c",
+        "size_in_bytes": 49173
+      },
+      {
+        "_path": "lib/R/library/broom/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "96024ac09b19d2004c587535d14557ba65a9465287e0f1aee93552ad6da1dabf",
+  "size": 1788277,
+  "subdir": "noarch",
+  "timestamp": 1695451917000,
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-broom-1.0.5-r43h6115d3f_0.conda",
+  "version": "1.0.5"
+}

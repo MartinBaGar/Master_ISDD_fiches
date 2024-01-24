@@ -1,0 +1,236 @@
+{
+  "build": "r43h6115d3f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-numderiv-2016.8_1.1-r43h6115d3f_0",
+  "files": [
+    "lib/R/library/numDeriv/DESCRIPTION",
+    "lib/R/library/numDeriv/INDEX",
+    "lib/R/library/numDeriv/Meta/Rd.rds",
+    "lib/R/library/numDeriv/Meta/features.rds",
+    "lib/R/library/numDeriv/Meta/hsearch.rds",
+    "lib/R/library/numDeriv/Meta/links.rds",
+    "lib/R/library/numDeriv/Meta/nsInfo.rds",
+    "lib/R/library/numDeriv/Meta/package.rds",
+    "lib/R/library/numDeriv/Meta/vignette.rds",
+    "lib/R/library/numDeriv/NAMESPACE",
+    "lib/R/library/numDeriv/NEWS",
+    "lib/R/library/numDeriv/R/numDeriv",
+    "lib/R/library/numDeriv/R/numDeriv.rdb",
+    "lib/R/library/numDeriv/R/numDeriv.rdx",
+    "lib/R/library/numDeriv/doc/Guide.R",
+    "lib/R/library/numDeriv/doc/Guide.Stex",
+    "lib/R/library/numDeriv/doc/Guide.pdf",
+    "lib/R/library/numDeriv/doc/index.html",
+    "lib/R/library/numDeriv/help/AnIndex",
+    "lib/R/library/numDeriv/help/aliases.rds",
+    "lib/R/library/numDeriv/help/numDeriv.rdb",
+    "lib/R/library/numDeriv/help/numDeriv.rdx",
+    "lib/R/library/numDeriv/help/paths.rds",
+    "lib/R/library/numDeriv/html/00Index.html",
+    "lib/R/library/numDeriv/html/R.css"
+  ],
+  "fn": "r-numderiv-2016.8_1.1-r43h6115d3f_0.conda",
+  "license": "GPL-2",
+  "link": {
+    "source": "/opt/conda/pkgs/r-numderiv-2016.8_1.1-r43h6115d3f_0",
+    "type": 1
+  },
+  "md5": "bc59bd70be12f53e7eb5946963331e24",
+  "name": "r-numderiv",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-numderiv-2016.8_1.1-r43h6115d3f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/numDeriv/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "1d5ae670a9ccb322990f91c4d3ae9c8179f86881c9a15420ab975e4294e8b6ef",
+        "sha256_in_prefix": "1d5ae670a9ccb322990f91c4d3ae9c8179f86881c9a15420ab975e4294e8b6ef",
+        "size_in_bytes": 998
+      },
+      {
+        "_path": "lib/R/library/numDeriv/INDEX",
+        "path_type": "hardlink",
+        "sha256": "8b83ba226e86d670bd33c83164eb3744c264f751bae8bb5ca4ae9a139c90751a",
+        "sha256_in_prefix": "8b83ba226e86d670bd33c83164eb3744c264f751bae8bb5ca4ae9a139c90751a",
+        "size_in_bytes": 335
+      },
+      {
+        "_path": "lib/R/library/numDeriv/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "dbeee0cee3cf47e07b4d431c80704366adaf57c385f3140afbe517315e365b86",
+        "sha256_in_prefix": "dbeee0cee3cf47e07b4d431c80704366adaf57c385f3140afbe517315e365b86",
+        "size_in_bytes": 463
+      },
+      {
+        "_path": "lib/R/library/numDeriv/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/numDeriv/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "9db3f0934354e005adf72bb66a0ef162232a78bf1d9a5063949730d4c64e6198",
+        "sha256_in_prefix": "9db3f0934354e005adf72bb66a0ef162232a78bf1d9a5063949730d4c64e6198",
+        "size_in_bytes": 490
+      },
+      {
+        "_path": "lib/R/library/numDeriv/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "efe6bf7046ed38e1db76adebf1ea014d8971bc1ff364d10e57fae6d1d3ba9b7a",
+        "sha256_in_prefix": "efe6bf7046ed38e1db76adebf1ea014d8971bc1ff364d10e57fae6d1d3ba9b7a",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "lib/R/library/numDeriv/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "ae47886bf74743c730112c928fb1d3b348d126f3b8621ce8629b3f922c587824",
+        "sha256_in_prefix": "ae47886bf74743c730112c928fb1d3b348d126f3b8621ce8629b3f922c587824",
+        "size_in_bytes": 239
+      },
+      {
+        "_path": "lib/R/library/numDeriv/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "1b7c38764714107e474e98dee3d2c7c597b4266f750c75e94b7f6d3178c8bdab",
+        "sha256_in_prefix": "1b7c38764714107e474e98dee3d2c7c597b4266f750c75e94b7f6d3178c8bdab",
+        "size_in_bytes": 961
+      },
+      {
+        "_path": "lib/R/library/numDeriv/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "59bb212d443f44bc821e75b9b5ba00dcb506893766a12c5e1d4e98e3ae5f2099",
+        "sha256_in_prefix": "59bb212d443f44bc821e75b9b5ba00dcb506893766a12c5e1d4e98e3ae5f2099",
+        "size_in_bytes": 201
+      },
+      {
+        "_path": "lib/R/library/numDeriv/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "c868a74683e493dd1ed5516798dcd3c5b9cade2e2381e51416a0d02417bb19b3",
+        "sha256_in_prefix": "c868a74683e493dd1ed5516798dcd3c5b9cade2e2381e51416a0d02417bb19b3",
+        "size_in_bytes": 189
+      },
+      {
+        "_path": "lib/R/library/numDeriv/NEWS",
+        "path_type": "hardlink",
+        "sha256": "58a7539ddc0716f10245b85b8fa23d33ec5c84a5f67866360b0219f52b3fd9a4",
+        "sha256_in_prefix": "58a7539ddc0716f10245b85b8fa23d33ec5c84a5f67866360b0219f52b3fd9a4",
+        "size_in_bytes": 2924
+      },
+      {
+        "_path": "lib/R/library/numDeriv/R/numDeriv",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/numDeriv/R/numDeriv.rdb",
+        "path_type": "hardlink",
+        "sha256": "b6030cca4b32089f3bb454c5f88a10c05eb89dfc99a58d3ee11c2909172f3a45",
+        "sha256_in_prefix": "b6030cca4b32089f3bb454c5f88a10c05eb89dfc99a58d3ee11c2909172f3a45",
+        "size_in_bytes": 20538
+      },
+      {
+        "_path": "lib/R/library/numDeriv/R/numDeriv.rdx",
+        "path_type": "hardlink",
+        "sha256": "06bcaa94099ac4d1cc7f5a8930276ab19d370a4140a84295aa450a90b12094d2",
+        "sha256_in_prefix": "06bcaa94099ac4d1cc7f5a8930276ab19d370a4140a84295aa450a90b12094d2",
+        "size_in_bytes": 353
+      },
+      {
+        "_path": "lib/R/library/numDeriv/doc/Guide.R",
+        "path_type": "hardlink",
+        "sha256": "cb105cf15c9971132aa507654ad8d4589295c65d7795b1d9bdfe58a7e4275714",
+        "sha256_in_prefix": "cb105cf15c9971132aa507654ad8d4589295c65d7795b1d9bdfe58a7e4275714",
+        "size_in_bytes": 1693
+      },
+      {
+        "_path": "lib/R/library/numDeriv/doc/Guide.Stex",
+        "path_type": "hardlink",
+        "sha256": "9f7b0fae6d142c89645b8073f350b74084b28c1368fd9842d6e600eff49043dd",
+        "sha256_in_prefix": "9f7b0fae6d142c89645b8073f350b74084b28c1368fd9842d6e600eff49043dd",
+        "size_in_bytes": 1599
+      },
+      {
+        "_path": "lib/R/library/numDeriv/doc/Guide.pdf",
+        "path_type": "hardlink",
+        "sha256": "f4c9502107bc9b310d9fdcbf715e6c682eb0fedf04b6044423403e1eef3ad315",
+        "sha256_in_prefix": "f4c9502107bc9b310d9fdcbf715e6c682eb0fedf04b6044423403e1eef3ad315",
+        "size_in_bytes": 55235
+      },
+      {
+        "_path": "lib/R/library/numDeriv/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "e4d6d3b91e1327bcfc12206fecc63219737a2bd87d6882c26953d2b2117eb467",
+        "sha256_in_prefix": "e4d6d3b91e1327bcfc12206fecc63219737a2bd87d6882c26953d2b2117eb467",
+        "size_in_bytes": 1375
+      },
+      {
+        "_path": "lib/R/library/numDeriv/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "6b11300b9516201f46364f445a0237985f0dee92270ec6f2c3f0f63a828353ed",
+        "sha256_in_prefix": "6b11300b9516201f46364f445a0237985f0dee92270ec6f2c3f0f63a828353ed",
+        "size_in_bytes": 242
+      },
+      {
+        "_path": "lib/R/library/numDeriv/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "6c473411610457119f1dc18687cdbffe6ec17b70c42a536866f7054d273f1d3c",
+        "sha256_in_prefix": "6c473411610457119f1dc18687cdbffe6ec17b70c42a536866f7054d273f1d3c",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "lib/R/library/numDeriv/help/numDeriv.rdb",
+        "path_type": "hardlink",
+        "sha256": "19bdbc35e25eb58c7ee7da8c119021b6d0646aeb09d16af686eb6df5a9fb1958",
+        "sha256_in_prefix": "19bdbc35e25eb58c7ee7da8c119021b6d0646aeb09d16af686eb6df5a9fb1958",
+        "size_in_bytes": 27118
+      },
+      {
+        "_path": "lib/R/library/numDeriv/help/numDeriv.rdx",
+        "path_type": "hardlink",
+        "sha256": "8bb42a836452a973dc8e8dc911dbac85e2963822cd1f71aea51957905619ddfd",
+        "sha256_in_prefix": "8bb42a836452a973dc8e8dc911dbac85e2963822cd1f71aea51957905619ddfd",
+        "size_in_bytes": 296
+      },
+      {
+        "_path": "lib/R/library/numDeriv/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "37926bc4598ad2ac02a6092c3265f82949b9e9a1e9b5fca3ecd9783e7221f2bd",
+        "sha256_in_prefix": "37926bc4598ad2ac02a6092c3265f82949b9e9a1e9b5fca3ecd9783e7221f2bd",
+        "size_in_bytes": 197
+      },
+      {
+        "_path": "lib/R/library/numDeriv/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "4ed35e43424e7a070b744ce843324b8cdc1659063345290d60a0d535136eda3b",
+        "sha256_in_prefix": "4ed35e43424e7a070b744ce843324b8cdc1659063345290d60a0d535136eda3b",
+        "size_in_bytes": 2400
+      },
+      {
+        "_path": "lib/R/library/numDeriv/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f447c7220c30e9126b42cef927fb473e7df680ed6241569efd81d5ec68c989c2",
+  "size": 124598,
+  "subdir": "noarch",
+  "timestamp": 1695430922000,
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-numderiv-2016.8_1.1-r43h6115d3f_0.conda",
+  "version": "2016.8_1.1"
+}

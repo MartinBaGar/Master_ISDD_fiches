@@ -1,0 +1,260 @@
+{
+  "build": "r43h6115d3f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "r-cowplot >=1.1.1",
+    "r-dplyr >=0.7.1",
+    "r-ggplot2 >=3.4.0",
+    "r-ggrepel >=0.9.2",
+    "r-ggsci",
+    "r-ggsignif",
+    "r-glue",
+    "r-gridextra",
+    "r-magrittr",
+    "r-polynom",
+    "r-purrr",
+    "r-rlang >=0.4.6",
+    "r-rstatix >=0.7.2",
+    "r-scales",
+    "r-tibble",
+    "r-tidyr >=1.3.0",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-ggpubr-0.6.0-r43h6115d3f_0",
+  "files": [
+    "lib/R/library/ggpubr/DESCRIPTION",
+    "lib/R/library/ggpubr/INDEX",
+    "lib/R/library/ggpubr/Meta/Rd.rds",
+    "lib/R/library/ggpubr/Meta/data.rds",
+    "lib/R/library/ggpubr/Meta/features.rds",
+    "lib/R/library/ggpubr/Meta/hsearch.rds",
+    "lib/R/library/ggpubr/Meta/links.rds",
+    "lib/R/library/ggpubr/Meta/nsInfo.rds",
+    "lib/R/library/ggpubr/Meta/package.rds",
+    "lib/R/library/ggpubr/NAMESPACE",
+    "lib/R/library/ggpubr/NEWS.md",
+    "lib/R/library/ggpubr/R/ggpubr",
+    "lib/R/library/ggpubr/R/ggpubr.rdb",
+    "lib/R/library/ggpubr/R/ggpubr.rdx",
+    "lib/R/library/ggpubr/data/Rdata.rdb",
+    "lib/R/library/ggpubr/data/Rdata.rds",
+    "lib/R/library/ggpubr/data/Rdata.rdx",
+    "lib/R/library/ggpubr/demo-data/housetasks.txt",
+    "lib/R/library/ggpubr/help/AnIndex",
+    "lib/R/library/ggpubr/help/aliases.rds",
+    "lib/R/library/ggpubr/help/ggpubr.rdb",
+    "lib/R/library/ggpubr/help/ggpubr.rdx",
+    "lib/R/library/ggpubr/help/paths.rds",
+    "lib/R/library/ggpubr/html/00Index.html",
+    "lib/R/library/ggpubr/html/R.css",
+    "lib/R/library/ggpubr/images/background-image.png"
+  ],
+  "fn": "r-ggpubr-0.6.0-r43h6115d3f_0.conda",
+  "license": "GPL-2",
+  "link": {
+    "source": "/opt/conda/pkgs/r-ggpubr-0.6.0-r43h6115d3f_0",
+    "type": 1
+  },
+  "md5": "37e2bd80b475875284e9acfc4309f3d3",
+  "name": "r-ggpubr",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-ggpubr-0.6.0-r43h6115d3f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/ggpubr/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "f84905db97ff19d253382334e739e47511e7f37e5d823e3231e6e10c41de5161",
+        "sha256_in_prefix": "f84905db97ff19d253382334e739e47511e7f37e5d823e3231e6e10c41de5161",
+        "size_in_bytes": 3215
+      },
+      {
+        "_path": "lib/R/library/ggpubr/INDEX",
+        "path_type": "hardlink",
+        "sha256": "1c0f2e1618e13fb682b3a1e5f0cecf25c50b28eb12dbfaab1a2b6d52eec6214a",
+        "sha256_in_prefix": "1c0f2e1618e13fb682b3a1e5f0cecf25c50b28eb12dbfaab1a2b6d52eec6214a",
+        "size_in_bytes": 4374
+      },
+      {
+        "_path": "lib/R/library/ggpubr/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "40e95d16567ae54d05bf09fe05381dd33db390bb9632197f4db60cfa9d8da600",
+        "sha256_in_prefix": "40e95d16567ae54d05bf09fe05381dd33db390bb9632197f4db60cfa9d8da600",
+        "size_in_bytes": 3247
+      },
+      {
+        "_path": "lib/R/library/ggpubr/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "2ea602674b32382eb08623854e989600dd75ae20dcbb74dba6cff54d422650c2",
+        "sha256_in_prefix": "2ea602674b32382eb08623854e989600dd75ae20dcbb74dba6cff54d422650c2",
+        "size_in_bytes": 172
+      },
+      {
+        "_path": "lib/R/library/ggpubr/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/ggpubr/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "34e183e1415fc23cb581da604f4d6e054487c6a8b65aaaff2f2152eaf40362c3",
+        "sha256_in_prefix": "34e183e1415fc23cb581da604f4d6e054487c6a8b65aaaff2f2152eaf40362c3",
+        "size_in_bytes": 2862
+      },
+      {
+        "_path": "lib/R/library/ggpubr/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "4b4d1b65656eba550bae517276e2f86439f3623d435e08b384cbc0219ccbd279",
+        "sha256_in_prefix": "4b4d1b65656eba550bae517276e2f86439f3623d435e08b384cbc0219ccbd279",
+        "size_in_bytes": 1579
+      },
+      {
+        "_path": "lib/R/library/ggpubr/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "50dae2f891e07e5be7d5b127fd4e2a6424e64c738efb14a7f9ea01619038acea",
+        "sha256_in_prefix": "50dae2f891e07e5be7d5b127fd4e2a6424e64c738efb14a7f9ea01619038acea",
+        "size_in_bytes": 1336
+      },
+      {
+        "_path": "lib/R/library/ggpubr/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "3c5f5d2715bc8d748dcedd4db903f9c7af6896f0116f8e5205b98eaf238d151f",
+        "sha256_in_prefix": "3c5f5d2715bc8d748dcedd4db903f9c7af6896f0116f8e5205b98eaf238d151f",
+        "size_in_bytes": 2141
+      },
+      {
+        "_path": "lib/R/library/ggpubr/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "3952a503f59a514425d45724e2653f77d1fe9313afc37460b957875cdc8090e7",
+        "sha256_in_prefix": "3952a503f59a514425d45724e2653f77d1fe9313afc37460b957875cdc8090e7",
+        "size_in_bytes": 3471
+      },
+      {
+        "_path": "lib/R/library/ggpubr/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "adfd3b75209c247679667fa05e85877b33fd0abfe78f6e06ef3a50654017f57b",
+        "sha256_in_prefix": "adfd3b75209c247679667fa05e85877b33fd0abfe78f6e06ef3a50654017f57b",
+        "size_in_bytes": 34978
+      },
+      {
+        "_path": "lib/R/library/ggpubr/R/ggpubr",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/ggpubr/R/ggpubr.rdb",
+        "path_type": "hardlink",
+        "sha256": "da34cb1d7a0ae525cdc1813b47a7783c52a132ea6425da05d5135675bd7aaf94",
+        "sha256_in_prefix": "da34cb1d7a0ae525cdc1813b47a7783c52a132ea6425da05d5135675bd7aaf94",
+        "size_in_bytes": 516131
+      },
+      {
+        "_path": "lib/R/library/ggpubr/R/ggpubr.rdx",
+        "path_type": "hardlink",
+        "sha256": "634aea5554baa351d89b4ad86ce109bfd8ed30d7c770ef8880f7d72f0063d5b7",
+        "sha256_in_prefix": "634aea5554baa351d89b4ad86ce109bfd8ed30d7c770ef8880f7d72f0063d5b7",
+        "size_in_bytes": 5350
+      },
+      {
+        "_path": "lib/R/library/ggpubr/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "fa7fa574fc39a85d93186fd79e7728637c62e7eddb9510334c7d300c72be0202",
+        "sha256_in_prefix": "fa7fa574fc39a85d93186fd79e7728637c62e7eddb9510334c7d300c72be0202",
+        "size_in_bytes": 949867
+      },
+      {
+        "_path": "lib/R/library/ggpubr/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "950fa107f48103473faf86e350d3330b630d1436882bff8ee7b8e78c043d403a",
+        "sha256_in_prefix": "950fa107f48103473faf86e350d3330b630d1436882bff8ee7b8e78c043d403a",
+        "size_in_bytes": 118
+      },
+      {
+        "_path": "lib/R/library/ggpubr/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "2d1dbbd9081ed1075753f7c935ecb61965fe905e8a6f8ebd1828a77dfe8cd8c9",
+        "sha256_in_prefix": "2d1dbbd9081ed1075753f7c935ecb61965fe905e8a6f8ebd1828a77dfe8cd8c9",
+        "size_in_bytes": 188
+      },
+      {
+        "_path": "lib/R/library/ggpubr/demo-data/housetasks.txt",
+        "path_type": "hardlink",
+        "sha256": "0304d4a0565d591eac1887c3b6c0d8d0a952f68d79436753134cc4e4939baa2d",
+        "sha256_in_prefix": "0304d4a0565d591eac1887c3b6c0d8d0a952f68d79436753134cc4e4939baa2d",
+        "size_in_bytes": 325
+      },
+      {
+        "_path": "lib/R/library/ggpubr/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "241f760d19a57da605c2d6709b1fe9a383ca8d1c8aa171bb97e83fccc43f02b4",
+        "sha256_in_prefix": "241f760d19a57da605c2d6709b1fe9a383ca8d1c8aa171bb97e83fccc43f02b4",
+        "size_in_bytes": 3335
+      },
+      {
+        "_path": "lib/R/library/ggpubr/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "f8aa77ff2c44c7187701f0e05fce4f73444937a251560beeedc5d886f6a37ddc",
+        "sha256_in_prefix": "f8aa77ff2c44c7187701f0e05fce4f73444937a251560beeedc5d886f6a37ddc",
+        "size_in_bytes": 1179
+      },
+      {
+        "_path": "lib/R/library/ggpubr/help/ggpubr.rdb",
+        "path_type": "hardlink",
+        "sha256": "450df22660e43b89f8ff5c91d2e0008f03ac64fc1f684fa0a9b6d7b1910e5c28",
+        "sha256_in_prefix": "450df22660e43b89f8ff5c91d2e0008f03ac64fc1f684fa0a9b6d7b1910e5c28",
+        "size_in_bytes": 384023
+      },
+      {
+        "_path": "lib/R/library/ggpubr/help/ggpubr.rdx",
+        "path_type": "hardlink",
+        "sha256": "ba487d2c867b82bc0a54779b28e1762c142569b7249cab105a9bd65861802cc1",
+        "sha256_in_prefix": "ba487d2c867b82bc0a54779b28e1762c142569b7249cab105a9bd65861802cc1",
+        "size_in_bytes": 2018
+      },
+      {
+        "_path": "lib/R/library/ggpubr/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "622175029e69f5f9108fdccf1a6358141d416d25519989cbd07f941b164a3f28",
+        "sha256_in_prefix": "622175029e69f5f9108fdccf1a6358141d416d25519989cbd07f941b164a3f28",
+        "size_in_bytes": 847
+      },
+      {
+        "_path": "lib/R/library/ggpubr/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "6378587ad82336a56f00c17a03c41ba411155580ed47aad05a749d4dc70467d6",
+        "sha256_in_prefix": "6378587ad82336a56f00c17a03c41ba411155580ed47aad05a749d4dc70467d6",
+        "size_in_bytes": 17659
+      },
+      {
+        "_path": "lib/R/library/ggpubr/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/ggpubr/images/background-image.png",
+        "path_type": "hardlink",
+        "sha256": "4dad85555242e6a60fca7c5c2670e9e2286e28dc75c1e9a0ceabc5ffb3d6c3a5",
+        "sha256_in_prefix": "4dad85555242e6a60fca7c5c2670e9e2286e28dc75c1e9a0ceabc5ffb3d6c3a5",
+        "size_in_bytes": 203734
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "0eb40de6932e32eb8abc713e4bb1635fb2aa2e805bbd32a3ce3607fed1501034",
+  "size": 2087440,
+  "subdir": "noarch",
+  "timestamp": 1698125330000,
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-ggpubr-0.6.0-r43h6115d3f_0.conda",
+  "version": "0.6.0"
+}

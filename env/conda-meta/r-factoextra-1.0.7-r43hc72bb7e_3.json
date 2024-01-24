@@ -1,0 +1,236 @@
+{
+  "build": "r43hc72bb7e_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-abind",
+    "r-base >=4.3,<4.4.0a0",
+    "r-cluster",
+    "r-dendextend",
+    "r-factominer",
+    "r-ggplot2 >=2.2.0",
+    "r-ggpubr >=0.1.5",
+    "r-ggrepel",
+    "r-reshape2",
+    "r-tidyr"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-factoextra-1.0.7-r43hc72bb7e_3",
+  "files": [
+    "lib/R/library/factoextra/DESCRIPTION",
+    "lib/R/library/factoextra/INDEX",
+    "lib/R/library/factoextra/Meta/Rd.rds",
+    "lib/R/library/factoextra/Meta/data.rds",
+    "lib/R/library/factoextra/Meta/features.rds",
+    "lib/R/library/factoextra/Meta/hsearch.rds",
+    "lib/R/library/factoextra/Meta/links.rds",
+    "lib/R/library/factoextra/Meta/nsInfo.rds",
+    "lib/R/library/factoextra/Meta/package.rds",
+    "lib/R/library/factoextra/NAMESPACE",
+    "lib/R/library/factoextra/NEWS.md",
+    "lib/R/library/factoextra/R/factoextra",
+    "lib/R/library/factoextra/R/factoextra.rdb",
+    "lib/R/library/factoextra/R/factoextra.rdx",
+    "lib/R/library/factoextra/data/Rdata.rdb",
+    "lib/R/library/factoextra/data/Rdata.rds",
+    "lib/R/library/factoextra/data/Rdata.rdx",
+    "lib/R/library/factoextra/help/AnIndex",
+    "lib/R/library/factoextra/help/aliases.rds",
+    "lib/R/library/factoextra/help/factoextra.rdb",
+    "lib/R/library/factoextra/help/factoextra.rdx",
+    "lib/R/library/factoextra/help/paths.rds",
+    "lib/R/library/factoextra/html/00Index.html",
+    "lib/R/library/factoextra/html/R.css"
+  ],
+  "fn": "r-factoextra-1.0.7-r43hc72bb7e_3.conda",
+  "license": "GPL-2.0-only",
+  "link": {
+    "source": "/opt/conda/pkgs/r-factoextra-1.0.7-r43hc72bb7e_3",
+    "type": 1
+  },
+  "md5": "4e4191ffcb47bba1c16a9fb87b19c12a",
+  "name": "r-factoextra",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-factoextra-1.0.7-r43hc72bb7e_3.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/factoextra/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "e079046e96d70e62510001f6d100524940b39789809345337ac770c0feed1287",
+        "sha256_in_prefix": "e079046e96d70e62510001f6d100524940b39789809345337ac770c0feed1287",
+        "size_in_bytes": 2210
+      },
+      {
+        "_path": "lib/R/library/factoextra/INDEX",
+        "path_type": "hardlink",
+        "sha256": "15326c94e443d6a18b2bf05e3ae1178181570d40a797a3795bc57a831175a2a9",
+        "sha256_in_prefix": "15326c94e443d6a18b2bf05e3ae1178181570d40a797a3795bc57a831175a2a9",
+        "size_in_bytes": 2749
+      },
+      {
+        "_path": "lib/R/library/factoextra/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "7c88d44bc570c32ce430320dae14d2377bf8f27cd9ded740ff384f926b6bbbba",
+        "sha256_in_prefix": "7c88d44bc570c32ce430320dae14d2377bf8f27cd9ded740ff384f926b6bbbba",
+        "size_in_bytes": 1709
+      },
+      {
+        "_path": "lib/R/library/factoextra/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "2c672de197cd89784f06b7c36f79a2c04eafb45df50b2bf2d83d59c932bd2c84",
+        "sha256_in_prefix": "2c672de197cd89784f06b7c36f79a2c04eafb45df50b2bf2d83d59c932bd2c84",
+        "size_in_bytes": 203
+      },
+      {
+        "_path": "lib/R/library/factoextra/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "sha256_in_prefix": "7b3f95a83e94a785d087d4d4e95e3714ebae7b437b23384ca5227d56161f7600",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/factoextra/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "055905d1b126e2b7000074c9d18c13a9e60be947bf243f81e7acbd7d8bb2f9e4",
+        "sha256_in_prefix": "055905d1b126e2b7000074c9d18c13a9e60be947bf243f81e7acbd7d8bb2f9e4",
+        "size_in_bytes": 1682
+      },
+      {
+        "_path": "lib/R/library/factoextra/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "349026593fe6082071a27f817a349e8797b434332afeff3179fc138457c3c954",
+        "sha256_in_prefix": "349026593fe6082071a27f817a349e8797b434332afeff3179fc138457c3c954",
+        "size_in_bytes": 862
+      },
+      {
+        "_path": "lib/R/library/factoextra/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "2f4aa48504b7a853d7da09054e343b8ce615c7a3cb9e4b835c18573f21e6475b",
+        "sha256_in_prefix": "2f4aa48504b7a853d7da09054e343b8ce615c7a3cb9e4b835c18573f21e6475b",
+        "size_in_bytes": 783
+      },
+      {
+        "_path": "lib/R/library/factoextra/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "cc15fdb9321f17be8ecd1c434bcc8bcf5ee74153cbca9dc4680bdea48dd6bd4a",
+        "sha256_in_prefix": "cc15fdb9321f17be8ecd1c434bcc8bcf5ee74153cbca9dc4680bdea48dd6bd4a",
+        "size_in_bytes": 1620
+      },
+      {
+        "_path": "lib/R/library/factoextra/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "9d6b37b3cf1b6be459404949737f1cd0e19ad38099a28cfad7cd312da7f2224b",
+        "sha256_in_prefix": "9d6b37b3cf1b6be459404949737f1cd0e19ad38099a28cfad7cd312da7f2224b",
+        "size_in_bytes": 2203
+      },
+      {
+        "_path": "lib/R/library/factoextra/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "14cf93510f412858fb58c556bda9234a5aa85532166cbaca8725cae4a36caf42",
+        "sha256_in_prefix": "14cf93510f412858fb58c556bda9234a5aa85532166cbaca8725cae4a36caf42",
+        "size_in_bytes": 10853
+      },
+      {
+        "_path": "lib/R/library/factoextra/R/factoextra",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/factoextra/R/factoextra.rdb",
+        "path_type": "hardlink",
+        "sha256": "46f1371dbb386d5a1356d276551bb5daa64e9354b2cfa2b6f238a6f2454c7715",
+        "sha256_in_prefix": "46f1371dbb386d5a1356d276551bb5daa64e9354b2cfa2b6f238a6f2454c7715",
+        "size_in_bytes": 225120
+      },
+      {
+        "_path": "lib/R/library/factoextra/R/factoextra.rdx",
+        "path_type": "hardlink",
+        "sha256": "592ba80a9f8378c01d3ab6885be7862cacb3d809eccc38bafffa606be8601275",
+        "sha256_in_prefix": "592ba80a9f8378c01d3ab6885be7862cacb3d809eccc38bafffa606be8601275",
+        "size_in_bytes": 2043
+      },
+      {
+        "_path": "lib/R/library/factoextra/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "75252cd1dda1a21882bb0fce99d72daef357bfebe28de19f13533ae30ad4b664",
+        "sha256_in_prefix": "75252cd1dda1a21882bb0fce99d72daef357bfebe28de19f13533ae30ad4b664",
+        "size_in_bytes": 19424
+      },
+      {
+        "_path": "lib/R/library/factoextra/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "3600d00aa3b981b7031d77a936277a61c0da8101fd1589f4a4a152bad8b20575",
+        "sha256_in_prefix": "3600d00aa3b981b7031d77a936277a61c0da8101fd1589f4a4a152bad8b20575",
+        "size_in_bytes": 125
+      },
+      {
+        "_path": "lib/R/library/factoextra/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "a9061a1acf1286d83df8233befa9c3bb042faf1b94c589eec489bbd18cdaafe2",
+        "sha256_in_prefix": "a9061a1acf1286d83df8233befa9c3bb042faf1b94c589eec489bbd18cdaafe2",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "lib/R/library/factoextra/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "1e87ff63dfed73ae0b3c066fd4ac9e5f155fd5ed545248b7e4a3e222be9de277",
+        "sha256_in_prefix": "1e87ff63dfed73ae0b3c066fd4ac9e5f155fd5ed545248b7e4a3e222be9de277",
+        "size_in_bytes": 2108
+      },
+      {
+        "_path": "lib/R/library/factoextra/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "850904f7a983f5ef4fdcbcb1c627171b432190f64d297d1f8b6ebc754695acbe",
+        "sha256_in_prefix": "850904f7a983f5ef4fdcbcb1c627171b432190f64d297d1f8b6ebc754695acbe",
+        "size_in_bytes": 695
+      },
+      {
+        "_path": "lib/R/library/factoextra/help/factoextra.rdb",
+        "path_type": "hardlink",
+        "sha256": "d1c0e4908b776b6bf966f7b1fd2c04e76a36bf2d18f91c86ee9e174c498142e2",
+        "sha256_in_prefix": "d1c0e4908b776b6bf966f7b1fd2c04e76a36bf2d18f91c86ee9e174c498142e2",
+        "size_in_bytes": 150507
+      },
+      {
+        "_path": "lib/R/library/factoextra/help/factoextra.rdx",
+        "path_type": "hardlink",
+        "sha256": "7d0c07c5aec61f6f4ee996b2729594f0a145319dfa42d0f238cc69197ce45e4f",
+        "sha256_in_prefix": "7d0c07c5aec61f6f4ee996b2729594f0a145319dfa42d0f238cc69197ce45e4f",
+        "size_in_bytes": 902
+      },
+      {
+        "_path": "lib/R/library/factoextra/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "7a527e84fae04ccc6508748837485e236b153fb1eed566bf891927d21876c6c6",
+        "sha256_in_prefix": "7a527e84fae04ccc6508748837485e236b153fb1eed566bf891927d21876c6c6",
+        "size_in_bytes": 417
+      },
+      {
+        "_path": "lib/R/library/factoextra/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "e9fa112db167ecab68cb35b5f0a73bc377a6ae4c11143245fe39a391c275aa4d",
+        "sha256_in_prefix": "e9fa112db167ecab68cb35b5f0a73bc377a6ae4c11143245fe39a391c275aa4d",
+        "size_in_bytes": 13200
+      },
+      {
+        "_path": "lib/R/library/factoextra/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "conda-forge::r-factoextra",
+  "sha256": "4df60c709a93293b5564122748a959e44de9b97cbdfdaab9509f7fd88a3a6cbf",
+  "size": 427582,
+  "subdir": "noarch",
+  "timestamp": 1688155397000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-factoextra-1.0.7-r43hc72bb7e_3.conda",
+  "version": "1.0.7"
+}

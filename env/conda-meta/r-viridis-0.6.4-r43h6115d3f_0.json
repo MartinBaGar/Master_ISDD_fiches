@@ -1,0 +1,311 @@
+{
+  "build": "r43h6115d3f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "r-ggplot2 >=1.0.1",
+    "r-gridextra",
+    "r-viridislite >=0.4.0",
+    "_r-mutex 1.* anacondar_1"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/r-viridis-0.6.4-r43h6115d3f_0",
+  "files": [
+    "lib/R/library/viridis/CITATION",
+    "lib/R/library/viridis/DESCRIPTION",
+    "lib/R/library/viridis/INDEX",
+    "lib/R/library/viridis/LICENSE",
+    "lib/R/library/viridis/Meta/Rd.rds",
+    "lib/R/library/viridis/Meta/data.rds",
+    "lib/R/library/viridis/Meta/features.rds",
+    "lib/R/library/viridis/Meta/hsearch.rds",
+    "lib/R/library/viridis/Meta/links.rds",
+    "lib/R/library/viridis/Meta/nsInfo.rds",
+    "lib/R/library/viridis/Meta/package.rds",
+    "lib/R/library/viridis/Meta/vignette.rds",
+    "lib/R/library/viridis/NAMESPACE",
+    "lib/R/library/viridis/NEWS.md",
+    "lib/R/library/viridis/R/viridis",
+    "lib/R/library/viridis/R/viridis.rdb",
+    "lib/R/library/viridis/R/viridis.rdx",
+    "lib/R/library/viridis/data/Rdata.rdb",
+    "lib/R/library/viridis/data/Rdata.rds",
+    "lib/R/library/viridis/data/Rdata.rdx",
+    "lib/R/library/viridis/doc/index.html",
+    "lib/R/library/viridis/doc/intro-to-viridis.R",
+    "lib/R/library/viridis/doc/intro-to-viridis.Rmd",
+    "lib/R/library/viridis/doc/intro-to-viridis.html",
+    "lib/R/library/viridis/help/AnIndex",
+    "lib/R/library/viridis/help/aliases.rds",
+    "lib/R/library/viridis/help/figures/logo.png",
+    "lib/R/library/viridis/help/figures/maps.png",
+    "lib/R/library/viridis/help/figures/viridis-scales.png",
+    "lib/R/library/viridis/help/paths.rds",
+    "lib/R/library/viridis/help/viridis.rdb",
+    "lib/R/library/viridis/help/viridis.rdx",
+    "lib/R/library/viridis/html/00Index.html",
+    "lib/R/library/viridis/html/R.css"
+  ],
+  "fn": "r-viridis-0.6.4-r43h6115d3f_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/conda/pkgs/r-viridis-0.6.4-r43h6115d3f_0",
+    "type": 1
+  },
+  "md5": "c216619445be6f7a099c2eb053dd0fc0",
+  "name": "r-viridis",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/r-viridis-0.6.4-r43h6115d3f_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/viridis/CITATION",
+        "path_type": "hardlink",
+        "sha256": "2dfbf5613a2d9c34b6858fa4821c781a012c9a81e374dae74ca066cc71546baa",
+        "sha256_in_prefix": "2dfbf5613a2d9c34b6858fa4821c781a012c9a81e374dae74ca066cc71546baa",
+        "size_in_bytes": 818
+      },
+      {
+        "_path": "lib/R/library/viridis/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "9f0665047b92541b4a61a8c59599ea3144a3bed330a156d39fb52c962945d154",
+        "sha256_in_prefix": "9f0665047b92541b4a61a8c59599ea3144a3bed330a156d39fb52c962945d154",
+        "size_in_bytes": 2079
+      },
+      {
+        "_path": "lib/R/library/viridis/INDEX",
+        "path_type": "hardlink",
+        "sha256": "21e0df8c50428e62f19e69ae87bea0a81be3633daf5a26345f91002a7938af91",
+        "sha256_in_prefix": "21e0df8c50428e62f19e69ae87bea0a81be3633daf5a26345f91002a7938af91",
+        "size_in_bytes": 153
+      },
+      {
+        "_path": "lib/R/library/viridis/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "46baa7d65d49290680799b75af5378f2c5216b256465a5c8ebc90be5811c0183",
+        "sha256_in_prefix": "46baa7d65d49290680799b75af5378f2c5216b256465a5c8ebc90be5811c0183",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/viridis/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "bb419e30db292bf3b32da3327f020824b8007890b7d370c494e6bab9cb359362",
+        "sha256_in_prefix": "bb419e30db292bf3b32da3327f020824b8007890b7d370c494e6bab9cb359362",
+        "size_in_bytes": 454
+      },
+      {
+        "_path": "lib/R/library/viridis/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "6770acc0eaf9ba89bc6e3e11263b421631b901be9d0d14f88c12f7172fd5b6d3",
+        "sha256_in_prefix": "6770acc0eaf9ba89bc6e3e11263b421631b901be9d0d14f88c12f7172fd5b6d3",
+        "size_in_bytes": 106
+      },
+      {
+        "_path": "lib/R/library/viridis/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "sha256_in_prefix": "fa2a2705172e265b9c3191d7b068d3b61f901998bd4d49ffdabae552adab54b9",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/viridis/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "987fff66ef1683c81bfcb7b5b6eff2d5e3ecad314913d1e9433dde5323595332",
+        "sha256_in_prefix": "987fff66ef1683c81bfcb7b5b6eff2d5e3ecad314913d1e9433dde5323595332",
+        "size_in_bytes": 481
+      },
+      {
+        "_path": "lib/R/library/viridis/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "03c43009c7966330500612ffced86dd3e929688ecf6dc055f8c30fbeb429dbd6",
+        "sha256_in_prefix": "03c43009c7966330500612ffced86dd3e929688ecf6dc055f8c30fbeb429dbd6",
+        "size_in_bytes": 240
+      },
+      {
+        "_path": "lib/R/library/viridis/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "41640e699eee55cee42136b19a9c30d14fa6d4a621f14b1123cecd846d163009",
+        "sha256_in_prefix": "41640e699eee55cee42136b19a9c30d14fa6d4a621f14b1123cecd846d163009",
+        "size_in_bytes": 381
+      },
+      {
+        "_path": "lib/R/library/viridis/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "97f0a1e24ddf9082220567437c78dc8c9f2d98e6d051b786cc31f32f7da230e9",
+        "sha256_in_prefix": "97f0a1e24ddf9082220567437c78dc8c9f2d98e6d051b786cc31f32f7da230e9",
+        "size_in_bytes": 1614
+      },
+      {
+        "_path": "lib/R/library/viridis/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "b8732a44029512ece99ad97b8b430b2b7fdea13f2f297311b8700d73a465f7be",
+        "sha256_in_prefix": "b8732a44029512ece99ad97b8b430b2b7fdea13f2f297311b8700d73a465f7be",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "lib/R/library/viridis/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "ad39c2b833d37173a64519995d533029df41687b60606fe2dc19662239826c64",
+        "sha256_in_prefix": "ad39c2b833d37173a64519995d533029df41687b60606fe2dc19662239826c64",
+        "size_in_bytes": 725
+      },
+      {
+        "_path": "lib/R/library/viridis/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "a1542e80fc8d80a2a84ffb4e2809958c0e73cd49272f7f7b30e58ba7c62b05c5",
+        "sha256_in_prefix": "a1542e80fc8d80a2a84ffb4e2809958c0e73cd49272f7f7b30e58ba7c62b05c5",
+        "size_in_bytes": 907
+      },
+      {
+        "_path": "lib/R/library/viridis/R/viridis",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/viridis/R/viridis.rdb",
+        "path_type": "hardlink",
+        "sha256": "2f47df54c628b7ffc12c72483b76453ea7391c07ed224ea960b1b0ad75834861",
+        "sha256_in_prefix": "2f47df54c628b7ffc12c72483b76453ea7391c07ed224ea960b1b0ad75834861",
+        "size_in_bytes": 3499
+      },
+      {
+        "_path": "lib/R/library/viridis/R/viridis.rdx",
+        "path_type": "hardlink",
+        "sha256": "8f9378c26602e5eeeddfce5620c17e76b5c60034bdbff814b019081df2c5e751",
+        "sha256_in_prefix": "8f9378c26602e5eeeddfce5620c17e76b5c60034bdbff814b019081df2c5e751",
+        "size_in_bytes": 304
+      },
+      {
+        "_path": "lib/R/library/viridis/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "71d0a7396545e0810105feae243a26ce48644fb2bee422aed2e933b780967ff7",
+        "sha256_in_prefix": "71d0a7396545e0810105feae243a26ce48644fb2bee422aed2e933b780967ff7",
+        "size_in_bytes": 50946
+      },
+      {
+        "_path": "lib/R/library/viridis/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "32c53f5ad688459d79d2b42aa481d89a0293c4cf86d4f4a0595766eb1ca5089f",
+        "sha256_in_prefix": "32c53f5ad688459d79d2b42aa481d89a0293c4cf86d4f4a0595766eb1ca5089f",
+        "size_in_bytes": 78
+      },
+      {
+        "_path": "lib/R/library/viridis/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "170584121b3357ab270540c48bfe7ac3c1dbf7df356572a523a95484a9e56be3",
+        "sha256_in_prefix": "170584121b3357ab270540c48bfe7ac3c1dbf7df356572a523a95484a9e56be3",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "lib/R/library/viridis/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "33c3f0ca3901cf4805b6c16866fbedcc741ac34e645508585fb9e33db181ace9",
+        "sha256_in_prefix": "33c3f0ca3901cf4805b6c16866fbedcc741ac34e645508585fb9e33db181ace9",
+        "size_in_bytes": 1450
+      },
+      {
+        "_path": "lib/R/library/viridis/doc/intro-to-viridis.R",
+        "path_type": "hardlink",
+        "sha256": "a65469b4f05335e36bbb748b883e715a5e444ac671b62f63fa68da9c240cfddc",
+        "sha256_in_prefix": "a65469b4f05335e36bbb748b883e715a5e444ac671b62f63fa68da9c240cfddc",
+        "size_in_bytes": 6868
+      },
+      {
+        "_path": "lib/R/library/viridis/doc/intro-to-viridis.Rmd",
+        "path_type": "hardlink",
+        "sha256": "db6f1db134d778e67f8185130ba911a9ecf74c49fb4fa981b9700997ecf55a3e",
+        "sha256_in_prefix": "db6f1db134d778e67f8185130ba911a9ecf74c49fb4fa981b9700997ecf55a3e",
+        "size_in_bytes": 12991
+      },
+      {
+        "_path": "lib/R/library/viridis/doc/intro-to-viridis.html",
+        "path_type": "hardlink",
+        "sha256": "baf170bd644ad659d381ca3e23bf7d96a9bbc420632eaba864f2aef915fca1e6",
+        "sha256_in_prefix": "baf170bd644ad659d381ca3e23bf7d96a9bbc420632eaba864f2aef915fca1e6",
+        "size_in_bytes": 2525588
+      },
+      {
+        "_path": "lib/R/library/viridis/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "97d88e3337215fffea1637dd8b5ed0a277044a3bd7c091098e450509d2692fa5",
+        "sha256_in_prefix": "97d88e3337215fffea1637dd8b5ed0a277044a3bd7c091098e450509d2692fa5",
+        "size_in_bytes": 315
+      },
+      {
+        "_path": "lib/R/library/viridis/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "df118eab092fccc8b8a90c0da178bcbafb43c1acbcaf93a5555c7b5cd3409ffc",
+        "sha256_in_prefix": "df118eab092fccc8b8a90c0da178bcbafb43c1acbcaf93a5555c7b5cd3409ffc",
+        "size_in_bytes": 207
+      },
+      {
+        "_path": "lib/R/library/viridis/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "f19afbe3fac2de82d591ab3d151fc36460192c1c8960cb982c312068ab361c1a",
+        "sha256_in_prefix": "f19afbe3fac2de82d591ab3d151fc36460192c1c8960cb982c312068ab361c1a",
+        "size_in_bytes": 38548
+      },
+      {
+        "_path": "lib/R/library/viridis/help/figures/maps.png",
+        "path_type": "hardlink",
+        "sha256": "63b8d4c2236c1bc67eb00141e903b6c4dea21008b272f9c4126829ff0940d9a2",
+        "sha256_in_prefix": "63b8d4c2236c1bc67eb00141e903b6c4dea21008b272f9c4126829ff0940d9a2",
+        "size_in_bytes": 1164419
+      },
+      {
+        "_path": "lib/R/library/viridis/help/figures/viridis-scales.png",
+        "path_type": "hardlink",
+        "sha256": "45f03c3eecfc62b991c9212f5ce401e1f6d1948f2f420a3f78b9a7a4955bf4cb",
+        "sha256_in_prefix": "45f03c3eecfc62b991c9212f5ce401e1f6d1948f2f420a3f78b9a7a4955bf4cb",
+        "size_in_bytes": 75732
+      },
+      {
+        "_path": "lib/R/library/viridis/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "4eac33e5b8e42278afbcd18d4a017f7a918edf871637dd0d3005a400c6f44b9f",
+        "sha256_in_prefix": "4eac33e5b8e42278afbcd18d4a017f7a918edf871637dd0d3005a400c6f44b9f",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "lib/R/library/viridis/help/viridis.rdb",
+        "path_type": "hardlink",
+        "sha256": "27069381060656c1001a19a4976024881344bdba415bde6e3a4753c2f79c7a7c",
+        "sha256_in_prefix": "27069381060656c1001a19a4976024881344bdba415bde6e3a4753c2f79c7a7c",
+        "size_in_bytes": 11018
+      },
+      {
+        "_path": "lib/R/library/viridis/help/viridis.rdx",
+        "path_type": "hardlink",
+        "sha256": "d39e81813029e3b0d418e8c6c94a93a36f17a2cf3b4c7dacae978087d18452d4",
+        "sha256_in_prefix": "d39e81813029e3b0d418e8c6c94a93a36f17a2cf3b4c7dacae978087d18452d4",
+        "size_in_bytes": 246
+      },
+      {
+        "_path": "lib/R/library/viridis/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "f0bb8e63250353df3e8252242bd969f90b1c5c931746699a16430551ec2d5cdb",
+        "sha256_in_prefix": "f0bb8e63250353df3e8252242bd969f90b1c5c931746699a16430551ec2d5cdb",
+        "size_in_bytes": 1702
+      },
+      {
+        "_path": "lib/R/library/viridis/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2b36b05782de5a1fc538370a53ea12111b81fe753bfc2be2096a4bc73a8d9a59",
+  "size": 2998487,
+  "subdir": "noarch",
+  "timestamp": 1695450547000,
+  "url": "https://repo.anaconda.com/pkgs/r/noarch/r-viridis-0.6.4-r43h6115d3f_0.conda",
+  "version": "0.6.4"
+}
