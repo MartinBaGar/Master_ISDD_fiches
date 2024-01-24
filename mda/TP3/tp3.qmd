@@ -1,6 +1,5 @@
 ---
-title: "TP3"
-date: "2024-01-15"
+title: "Linear and Logistic Regression"
 ---
 
 # Régression linéaire sur les données initiales, non nettoyées

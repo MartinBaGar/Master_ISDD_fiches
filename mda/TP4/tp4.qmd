@@ -1,6 +1,5 @@
 ---
-title: 'TP4 : arbres de partitionnement, cart'
-date: "2024-01-17"
+title: 'Partitioning Trees'
 ---
 ```{r}
 load("../data/train.dtf.Rdata")

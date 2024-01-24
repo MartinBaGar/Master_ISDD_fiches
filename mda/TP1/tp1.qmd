@@ -1,9 +1,5 @@
 ---
 title: "Data Classification"
-author: 
-  - name: "Martin Bari Garnier"
-    affiliation: Université Paris-Cité
-    affiliation-url: https://u-paris.fr/
 ---
 
 Dans ce TP, l'objectif est d'utiliser des méthodes de classification non-supervisées sur des variables indépendantes de notre jeu de données. Ce dernier contient des poches de protéines décrites par 18 descripteurs, les variables indépendantes.

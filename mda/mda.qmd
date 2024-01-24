@@ -1,10 +1,5 @@
 ---
 title: "Massive Data Analysis"
-date: last-modified
-author: 
-  - name: "Martin Bari Garnier"
-    affiliation: Université Paris-Cité
-    affiliation-url: https://u-paris.fr/
 ---
 
 This work takes up what has been done in the course of practical work on the *Massive Data Analysis* teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques.
