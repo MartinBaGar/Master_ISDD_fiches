@@ -9,22 +9,22 @@
 			"addCondaForge": true,
 			"version": "latest"
 		},
-		"ghcr.io/devcontainers/features/python:1": {
-			"installTools": true,
-			"installJupyterlab": true,
-			"version": "os-provided"
-		},
+		// "ghcr.io/devcontainers/features/python:1": {
+		// 	"installTools": true,
+		// 	"installJupyterlab": true,
+		// 	"version": "os-provided"
+		// },
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
 			"installTinyTex": true,
 			"installChromium": true,
 			"version": "latest"
-		},
-		"ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
-			"installRMarkdown": true,
-			"installRadian": true,
-			"installVscDebugger": true,
-			"useTesting": true,
-			"vscodeRSupport": "full"
+		// },
+		// "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
+		// 	"installRMarkdown": true,
+		// 	"installRadian": true,
+		// 	"installVscDebugger": true,
+		// 	"useTesting": true,
+		// 	"vscodeRSupport": "full"
 		}
 	}
 
@@ -43,3 +43,4 @@
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
+
