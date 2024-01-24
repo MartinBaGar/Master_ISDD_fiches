@@ -2,7 +2,6 @@
 title: "TP3"
 author: "Martin Bari Garnier"
 date: "2024-01-15"
-output: html_document
 ---
 
 # Régression linéaire sur les données initiales, non nettoyées

@@ -1,7 +1,6 @@
 ---
 title: 'TP2 : Analyse en Composantes Principales'
 author: "Martin Bari Garnier"
-output: pdf_document
 ---
 
 Chargement de l'environnement

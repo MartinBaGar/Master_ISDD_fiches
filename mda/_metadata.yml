@@ -7,3 +7,9 @@ code-copy: true
 # Enable CC licence appendix
 license: "CC BY"
 citation: true
+
+# Default author metadata-files: 
+author: 
+  - name: "Martin Bari Garnier"
+    affiliation: Université Paris-Cité
+    affiliation-url: https://u-paris.fr/

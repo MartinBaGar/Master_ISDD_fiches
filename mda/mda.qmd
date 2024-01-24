@@ -5,9 +5,6 @@ author:
   - name: "Martin Bari Garnier"
     affiliation: Université Paris-Cité
     affiliation-url: https://u-paris.fr/
-citation:
-  url: https://martinbagar.github.io/Master_ISDD_fiches/mda/TP2/tp2.html
-appendix-cite-as: display
 ---
 
 This work takes up what has been done in the course of practical work on the *Massive Data Analysis* teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques.

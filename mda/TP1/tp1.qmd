@@ -4,8 +4,6 @@ author:
   - name: "Martin Bari Garnier"
     affiliation: Université Paris-Cité
     affiliation-url: https://u-paris.fr/
-citation:
-  url: https://martinbagar.github.io/Master_ISDD_fiches/mda/TP1/tp1.html
 ---
 
 Dans ce TP, l'objectif est d'utiliser des méthodes de classification non-supervisées sur des variables indépendantes de notre jeu de données. Ce dernier contient des poches de protéines décrites par 18 descripteurs, les variables indépendantes.
