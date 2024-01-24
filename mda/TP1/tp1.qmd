@@ -1,5 +1,5 @@
 ---
-title: "TP1 : Classification des données"
+title: "Data Classification"
 author: 
   - name: "Martin Bari Garnier"
     affiliation: Université Paris-Cité
@@ -10,25 +10,33 @@ citation:
 
 Dans ce TP, l'objectif est d'utiliser des méthodes de classification non-supervisées sur des variables indépendantes de notre jeu de données. Ce dernier contient des poches de protéines décrites par 18 descripteurs, les variables indépendantes.
 
-Chargeons les données dans un premier temps
+Chargeons les données 
+
 
 ```{r}
 load('../data/X.Rdata')
+x_scaled <- scale(X)
 ```
 
-Visualisation des données du dataframe X
+::: {.panel-tabset}
+
+# Raw data
+
 ```{r}
-par(mfrow = c(1, 2))
 boxplot(X, las = 2)
-boxplot(scale(X), las = 2)
 ```
+
+# Scaled data
+
+```{r}
+boxplot(x_scaled, las = 2)
+```
+
+:::
 
 # Hierarchical classification
 
 ```{r}
-# Mise à l'échelle des données
-x_scaled <- scale(X)
-
 # Justifier les méthodes
 mat_dist <- dist(x_scaled, method = "euclidian")
 x_classif <- hclust(mat_dist, method = "ward.D")
