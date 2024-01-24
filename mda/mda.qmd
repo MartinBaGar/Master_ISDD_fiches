@@ -1,13 +1,24 @@
 ---
 title: "Massive Data Analysis"
 date: last-modified
+author: 
+  - name: "Martin Bari Garnier"
+    affiliation: Université Paris-Cité
+    affiliation-url: https://u-paris.fr/
+citation:
+  url: https://martinbagar.github.io/Master_ISDD_fiches/mda/TP2/tp2.html
+html:
+  include-in-header: toggle.js
 ---
+
+This work takes up what has been done in the course of practical work on the *Massive Data Analysis* teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques.
 
 # Covered topics
 
-This is the index page for the Massive Data Analysis section.  
+The following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order.
 
 - [Data Classification](TP1/tp1.qmd)
 - [Principal Component Analysis](TP2/tp2.qmd)
 - [Regression](TP3/tp3.qmd)
 - [Partitionning Trees](TP4/tp4.qmd)
+
