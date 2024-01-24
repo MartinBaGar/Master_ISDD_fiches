@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.546">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -234,22 +234,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">load</span>(<span class="st">"../data/X.Rdata"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">load</span>(<span class="st">"../data/Y.Rdata"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">load</span>(<span class="st">"../data/train.dtf.Rdata"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">load</span>(<span class="st">"../data/test.dtf.Rdata"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"../data/X.Rdata"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"../data/Y.Rdata"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"../data/train.dtf.Rdata"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"../data/test.dtf.Rdata"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>train_score <span class="ot">&lt;-</span> train.dtf[, <span class="sc">-</span><span class="fu">which</span>(<span class="fu">colnames</span>(train.dtf)<span class="sc">==</span><span class="st">"drugg"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>train_score <span class="ot">&lt;-</span> train.dtf[, <span class="sc">-</span><span class="fu">which</span>(<span class="fu">colnames</span>(train.dtf)<span class="sc">==</span><span class="st">"drugg"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: ggplot2</code></pre>
@@ -259,8 +259,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>lm_score <span class="ot">&lt;-</span> <span class="fu">lm</span>(score<span class="sc">~</span>., <span class="at">data =</span> train_score)</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">summary</span>(lm_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>lm_score <span class="ot">&lt;-</span> <span class="fu">lm</span>(score<span class="sc">~</span>., <span class="at">data =</span> train_score)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -299,7 +299,7 @@ F-statistic: 68.74 on 15 and 56 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">plot</span>(lm_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(lm_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -331,7 +331,7 @@ F-statistic: 68.74 on 15 and 56 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># plot(lm_score$fitted.values, dtf_new$score)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot(lm_score$fitted.values, dtf_new$score)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Nous avons un modèle avec un R-carré ajusté à 0.9392 donc notre modèle est très performant. Il faut cependant avoir en tête que les données n’ont pas été normalisées. En effet, Real_volume prend toute la variabilité du fait de son ordre de grandeur bien supérieur aux autres descripteurs. Nous voyons aussi qu’il y a un descripteur avec des coefficients NA ce qui indique une corrélation ou une colinéarité avec un ou plusieurs autres descripteurs.</p>
@@ -347,11 +347,11 @@ F-statistic: 68.74 on 15 and 56 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Création de la matrice de corrélation</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>cor_x <span class="ot">&lt;-</span> <span class="fu">cor</span>(X)</span>
-<span id="cb10-3"><a href="#cb10-3"></a></span>
-<span id="cb10-4"><a href="#cb10-4"></a><span class="co"># Heatmap</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="fu">heatmap</span>(cor_x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la matrice de corrélation</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>cor_x <span class="ot">&lt;-</span> <span class="fu">cor</span>(X)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Heatmap</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(cor_x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -362,15 +362,15 @@ F-statistic: 68.74 on 15 and 56 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Mise en évidence des descripteurs corrélés et colinéaires</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">findCorrelation</span>(cor_x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mise en évidence des descripteurs corrélés et colinéaires</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">findCorrelation</span>(cor_x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 11 13</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">findLinearCombos</span>(cor_x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">findLinearCombos</span>(cor_x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>$linearCombos
@@ -383,7 +383,7 @@ $remove
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">colnames</span>(X[, <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">11</span>, <span class="dv">13</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(X[, <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">11</span>, <span class="dv">13</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "positive"    "C_RESIDUES"  "Real_volume"</code></pre>
@@ -397,19 +397,19 @@ $remove
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>clean_train_score <span class="ot">&lt;-</span> train_score[, <span class="fu">which</span>(<span class="sc">!</span><span class="fu">colnames</span>(train_score) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"C_RESIDUES"</span>, <span class="st">"positive"</span>, <span class="st">"Real_volume"</span>))]</span>
-<span id="cb17-2"><a href="#cb17-2"></a>p_values <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a></span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(clean_train_score)<span class="sc">-</span><span class="dv">1</span>)) {</span>
-<span id="cb17-5"><a href="#cb17-5"></a>  lm_tmp <span class="ot">&lt;-</span> <span class="fu">lm</span>(clean_train_score<span class="sc">$</span>score<span class="sc">~</span>clean_train_score[, i])</span>
-<span id="cb17-6"><a href="#cb17-6"></a>  summary_model <span class="ot">&lt;-</span> <span class="fu">summary</span>(lm_tmp)</span>
-<span id="cb17-7"><a href="#cb17-7"></a>  p_value <span class="ot">&lt;-</span> summary_model<span class="sc">$</span>coefficients[, <span class="st">"Pr(&gt;|t|)"</span>][<span class="dv">2</span>]</span>
-<span id="cb17-8"><a href="#cb17-8"></a>  p_values <span class="ot">&lt;-</span> <span class="fu">c</span>(p_values, p_value)</span>
-<span id="cb17-9"><a href="#cb17-9"></a>}</span>
-<span id="cb17-10"><a href="#cb17-10"></a></span>
-<span id="cb17-11"><a href="#cb17-11"></a><span class="fu">names</span>(p_values) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(clean_train_score)[<span class="dv">2</span><span class="sc">:</span><span class="dv">14</span>]</span>
-<span id="cb17-12"><a href="#cb17-12"></a>val_desc <span class="ot">&lt;-</span> <span class="fu">names</span>(p_values[<span class="fu">which</span>(p_values<span class="sc">&lt;</span><span class="fl">0.2</span>)])</span>
-<span id="cb17-13"><a href="#cb17-13"></a>dtf_final <span class="ot">&lt;-</span> dtf_new[<span class="fu">c</span>(<span class="st">"score"</span>, val_desc)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>clean_train_score <span class="ot">&lt;-</span> train_score[, <span class="fu">which</span>(<span class="sc">!</span><span class="fu">colnames</span>(train_score) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"C_RESIDUES"</span>, <span class="st">"positive"</span>, <span class="st">"Real_volume"</span>))]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>p_values <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(clean_train_score)<span class="sc">-</span><span class="dv">1</span>)) {</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  lm_tmp <span class="ot">&lt;-</span> <span class="fu">lm</span>(clean_train_score<span class="sc">$</span>score<span class="sc">~</span>clean_train_score[, i])</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  summary_model <span class="ot">&lt;-</span> <span class="fu">summary</span>(lm_tmp)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  p_value <span class="ot">&lt;-</span> summary_model<span class="sc">$</span>coefficients[, <span class="st">"Pr(&gt;|t|)"</span>][<span class="dv">2</span>]</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  p_values <span class="ot">&lt;-</span> <span class="fu">c</span>(p_values, p_value)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(p_values) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(clean_train_score)[<span class="dv">2</span><span class="sc">:</span><span class="dv">14</span>]</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>val_desc <span class="ot">&lt;-</span> <span class="fu">names</span>(p_values[<span class="fu">which</span>(p_values<span class="sc">&lt;</span><span class="fl">0.2</span>)])</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>dtf_final <span class="ot">&lt;-</span> dtf_new[<span class="fu">c</span>(<span class="st">"score"</span>, val_desc)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -421,9 +421,9 @@ $remove
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>slm_original <span class="ot">&lt;-</span> <span class="fu">lm</span>(score<span class="sc">~</span>., <span class="at">data =</span> train_score)</span>
-<span id="cb18-2"><a href="#cb18-2"></a>slm_original_res <span class="ot">&lt;-</span> slm_original<span class="sc">$</span>residuals</span>
-<span id="cb18-3"><a href="#cb18-3"></a>slm_stepped <span class="ot">&lt;-</span> <span class="fu">step</span>(slm_original, <span class="at">direction =</span> <span class="st">"both"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>slm_original <span class="ot">&lt;-</span> <span class="fu">lm</span>(score<span class="sc">~</span>., <span class="at">data =</span> train_score)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>slm_original_res <span class="ot">&lt;-</span> slm_original<span class="sc">$</span>residuals</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>slm_stepped <span class="ot">&lt;-</span> <span class="fu">step</span>(slm_original, <span class="at">direction =</span> <span class="st">"both"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Start:  AIC=538.98
@@ -671,7 +671,7 @@ score ~ charged + hydrophobic + Mean_alpha.sphere_radius + Real_volume +
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">summary</span>(slm_stepped)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(slm_stepped)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -701,7 +701,7 @@ F-statistic: 186.1 on 6 and 65 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">hist</span>(slm_original_res, <span class="at">breaks =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(slm_original_res, <span class="at">breaks =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -712,7 +712,7 @@ F-statistic: 186.1 on 6 and 65 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">plot</span>(slm_stepped)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(slm_stepped)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -747,7 +747,7 @@ F-statistic: 186.1 on 6 and 65 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>spred_train <span class="ot">&lt;-</span> <span class="fu">predict.lm</span>(slm_original, <span class="at">newdata =</span> train.dtf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>spred_train <span class="ot">&lt;-</span> <span class="fu">predict.lm</span>(slm_original, <span class="at">newdata =</span> train.dtf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in predict.lm(slm_original, newdata = train.dtf): prediction from
@@ -755,7 +755,7 @@ rank-deficient fit; attr(*, "non-estim") has doubtful cases</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>spred_test <span class="ot">&lt;-</span> <span class="fu">predict.lm</span>(slm_original, <span class="at">newdata =</span> test.dtf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>spred_test <span class="ot">&lt;-</span> <span class="fu">predict.lm</span>(slm_original, <span class="at">newdata =</span> test.dtf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in predict.lm(slm_original, newdata = test.dtf): prediction from
@@ -763,7 +763,7 @@ rank-deficient fit; attr(*, "non-estim") has doubtful cases</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">plot</span>(spred_train, train.dtf<span class="sc">$</span>score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(spred_train, train.dtf<span class="sc">$</span>score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -774,7 +774,7 @@ rank-deficient fit; attr(*, "non-estim") has doubtful cases</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">plot</span>(spred_test, test.dtf<span class="sc">$</span>score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(spred_test, test.dtf<span class="sc">$</span>score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -787,9 +787,9 @@ rank-deficient fit; attr(*, "non-estim") has doubtful cases</code></pre>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>sperf_train_lm <span class="ot">&lt;-</span> <span class="fu">postResample</span>(spred_train, train.dtf<span class="sc">$</span>score)</span>
-<span id="cb30-2"><a href="#cb30-2"></a>sperf_test_lm <span class="ot">&lt;-</span> <span class="fu">postResample</span>(spred_test, test.dtf<span class="sc">$</span>score)</span>
-<span id="cb30-3"><a href="#cb30-3"></a>sperf_train_lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>sperf_train_lm <span class="ot">&lt;-</span> <span class="fu">postResample</span>(spred_train, train.dtf<span class="sc">$</span>score)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>sperf_test_lm <span class="ot">&lt;-</span> <span class="fu">postResample</span>(spred_test, test.dtf<span class="sc">$</span>score)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>sperf_train_lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>      RMSE   Rsquared        MAE 
@@ -797,7 +797,7 @@ rank-deficient fit; attr(*, "non-estim") has doubtful cases</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>sperf_test_lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>sperf_test_lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>      RMSE   Rsquared        MAE 
@@ -811,11 +811,11 @@ rank-deficient fit; attr(*, "non-estim") has doubtful cases</code></pre>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>train_drugg <span class="ot">&lt;-</span> train.dtf[, <span class="sc">-</span><span class="fu">which</span>(<span class="fu">colnames</span>(train.dtf)<span class="sc">==</span><span class="st">"score"</span>)]</span>
-<span id="cb34-2"><a href="#cb34-2"></a>train_drugg<span class="sc">$</span>drugg <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(train_drugg<span class="sc">$</span>drugg)</span>
-<span id="cb34-3"><a href="#cb34-3"></a></span>
-<span id="cb34-4"><a href="#cb34-4"></a>glm_original <span class="ot">&lt;-</span> <span class="fu">glm</span>(drugg<span class="sc">~</span>., <span class="at">data =</span> train_drugg, <span class="at">family =</span> <span class="st">"binomial"</span>, <span class="at">maxit =</span> <span class="dv">1000</span>)</span>
-<span id="cb34-5"><a href="#cb34-5"></a>glm_stepped <span class="ot">&lt;-</span> <span class="fu">step</span>(glm_original, <span class="at">direction =</span> <span class="st">"both"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>train_drugg <span class="ot">&lt;-</span> train.dtf[, <span class="sc">-</span><span class="fu">which</span>(<span class="fu">colnames</span>(train.dtf)<span class="sc">==</span><span class="st">"score"</span>)]</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>train_drugg<span class="sc">$</span>drugg <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(train_drugg<span class="sc">$</span>drugg)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>glm_original <span class="ot">&lt;-</span> <span class="fu">glm</span>(drugg<span class="sc">~</span>., <span class="at">data =</span> train_drugg, <span class="at">family =</span> <span class="st">"binomial"</span>, <span class="at">maxit =</span> <span class="dv">1000</span>)</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>glm_stepped <span class="ot">&lt;-</span> <span class="fu">step</span>(glm_original, <span class="at">direction =</span> <span class="st">"both"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Start:  AIC=64.9
@@ -1039,7 +1039,7 @@ drugg ~ polar + aliphatic + charged + hydrophobic + Real_volume +
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">plot</span>(glm_original<span class="sc">$</span>fitted.values, train_drugg<span class="sc">$</span>drugg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(glm_original<span class="sc">$</span>fitted.values, train_drugg<span class="sc">$</span>drugg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1052,9 +1052,9 @@ drugg ~ polar + aliphatic + charged + hydrophobic + Real_volume +
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>glm_ori_res <span class="ot">&lt;-</span> glm_original<span class="sc">$</span>residuals</span>
-<span id="cb37-2"><a href="#cb37-2"></a>glm_stp_res <span class="ot">&lt;-</span> glm_stepped<span class="sc">$</span>residuals</span>
-<span id="cb37-3"><a href="#cb37-3"></a><span class="fu">hist</span>(glm_ori_res, <span class="at">breaks =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>glm_ori_res <span class="ot">&lt;-</span> glm_original<span class="sc">$</span>residuals</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>glm_stp_res <span class="ot">&lt;-</span> glm_stepped<span class="sc">$</span>residuals</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(glm_ori_res, <span class="at">breaks =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1065,7 +1065,7 @@ drugg ~ polar + aliphatic + charged + hydrophobic + Real_volume +
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">hist</span>(glm_stp_res, <span class="at">breaks =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(glm_stp_res, <span class="at">breaks =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1076,7 +1076,7 @@ drugg ~ polar + aliphatic + charged + hydrophobic + Real_volume +
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">plot</span>(glm_ori_res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(glm_ori_res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1087,7 +1087,7 @@ drugg ~ polar + aliphatic + charged + hydrophobic + Real_volume +
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">plot</span>(glm_stp_res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(glm_stp_res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1100,32 +1100,32 @@ drugg ~ polar + aliphatic + charged + hydrophobic + Real_volume +
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>dtf_train_clean <span class="ot">&lt;-</span> train.dtf[, <span class="fu">which</span>(<span class="sc">!</span><span class="fu">colnames</span>(dtf_new) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"C_RESIDUES"</span>, <span class="st">"positive"</span>, <span class="st">"Real_volume"</span>))]</span>
-<span id="cb41-2"><a href="#cb41-2"></a>p_values <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb41-3"><a href="#cb41-3"></a></span>
-<span id="cb41-4"><a href="#cb41-4"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(clean_dtf)<span class="sc">-</span><span class="dv">1</span>)) {</span>
-<span id="cb41-5"><a href="#cb41-5"></a>  glm_tmp <span class="ot">&lt;-</span> <span class="fu">glm</span>(dtf_train_clean<span class="sc">$</span>drugg<span class="sc">~</span>dtf_train_clean[, i], <span class="at">family =</span> <span class="st">"binomial"</span>, <span class="at">maxit =</span> <span class="dv">1000</span>)</span>
-<span id="cb41-6"><a href="#cb41-6"></a>  summary_model <span class="ot">&lt;-</span> <span class="fu">summary</span>(glm_tmp)</span>
-<span id="cb41-7"><a href="#cb41-7"></a>  p_value <span class="ot">&lt;-</span> summary_model<span class="sc">$</span>coefficients[, <span class="st">"Pr(&gt;|z|)"</span>][<span class="dv">2</span>]</span>
-<span id="cb41-8"><a href="#cb41-8"></a>  p_values <span class="ot">&lt;-</span> <span class="fu">c</span>(p_values, p_value)</span>
-<span id="cb41-9"><a href="#cb41-9"></a>}</span>
-<span id="cb41-10"><a href="#cb41-10"></a></span>
-<span id="cb41-11"><a href="#cb41-11"></a><span class="fu">names</span>(p_values) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(dtf_train_clean)[<span class="dv">2</span><span class="sc">:</span><span class="dv">14</span>]</span>
-<span id="cb41-12"><a href="#cb41-12"></a>val_desc <span class="ot">&lt;-</span> <span class="fu">names</span>(p_values[<span class="fu">which</span>(p_values<span class="sc">&lt;</span><span class="fl">0.05</span>)])</span>
-<span id="cb41-13"><a href="#cb41-13"></a>dtf_train_final <span class="ot">&lt;-</span> train_log[<span class="fu">c</span>(<span class="st">"drugg"</span>, val_desc)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>dtf_train_clean <span class="ot">&lt;-</span> train.dtf[, <span class="fu">which</span>(<span class="sc">!</span><span class="fu">colnames</span>(dtf_new) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"C_RESIDUES"</span>, <span class="st">"positive"</span>, <span class="st">"Real_volume"</span>))]</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>p_values <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(clean_dtf)<span class="sc">-</span><span class="dv">1</span>)) {</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>  glm_tmp <span class="ot">&lt;-</span> <span class="fu">glm</span>(dtf_train_clean<span class="sc">$</span>drugg<span class="sc">~</span>dtf_train_clean[, i], <span class="at">family =</span> <span class="st">"binomial"</span>, <span class="at">maxit =</span> <span class="dv">1000</span>)</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>  summary_model <span class="ot">&lt;-</span> <span class="fu">summary</span>(glm_tmp)</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>  p_value <span class="ot">&lt;-</span> summary_model<span class="sc">$</span>coefficients[, <span class="st">"Pr(&gt;|z|)"</span>][<span class="dv">2</span>]</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>  p_values <span class="ot">&lt;-</span> <span class="fu">c</span>(p_values, p_value)</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(p_values) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(dtf_train_clean)[<span class="dv">2</span><span class="sc">:</span><span class="dv">14</span>]</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>val_desc <span class="ot">&lt;-</span> <span class="fu">names</span>(p_values[<span class="fu">which</span>(p_values<span class="sc">&lt;</span><span class="fl">0.05</span>)])</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>dtf_train_final <span class="ot">&lt;-</span> train_log[<span class="fu">c</span>(<span class="st">"drugg"</span>, val_desc)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Nous pouvons voir deux lignes horizontales à -100 et 100 ce qui signifie que les variances sont égales et on est dans le cas d’homoscédasticité</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>dpred_train_logi <span class="ot">&lt;-</span> <span class="fu">predict.glm</span>(glm_stepped, <span class="at">newdata =</span> train.dtf, <span class="at">type =</span> <span class="st">"response"</span>)</span>
-<span id="cb42-2"><a href="#cb42-2"></a>dpred_test_logi <span class="ot">&lt;-</span> <span class="fu">predict.glm</span>(glm_stepped, <span class="at">newdata =</span> test.dtf, <span class="at">type =</span> <span class="st">"response"</span>)</span>
-<span id="cb42-3"><a href="#cb42-3"></a></span>
-<span id="cb42-4"><a href="#cb42-4"></a>dpred_train_logi_round <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">round</span>(dpred_train_logi))</span>
-<span id="cb42-5"><a href="#cb42-5"></a>dpred_test_logi_round <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">round</span>(dpred_test_logi))</span>
-<span id="cb42-6"><a href="#cb42-6"></a></span>
-<span id="cb42-7"><a href="#cb42-7"></a><span class="fu">plot</span>(dpred_train_logi, train.dtf<span class="sc">$</span>drugg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>dpred_train_logi <span class="ot">&lt;-</span> <span class="fu">predict.glm</span>(glm_stepped, <span class="at">newdata =</span> train.dtf, <span class="at">type =</span> <span class="st">"response"</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>dpred_test_logi <span class="ot">&lt;-</span> <span class="fu">predict.glm</span>(glm_stepped, <span class="at">newdata =</span> test.dtf, <span class="at">type =</span> <span class="st">"response"</span>)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>dpred_train_logi_round <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">round</span>(dpred_train_logi))</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>dpred_test_logi_round <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">round</span>(dpred_test_logi))</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dpred_train_logi, train.dtf<span class="sc">$</span>drugg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1136,7 +1136,7 @@ drugg ~ polar + aliphatic + charged + hydrophobic + Real_volume +
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">plot</span>(dpred_test_logi, test.dtf<span class="sc">$</span>drugg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dpred_test_logi, test.dtf<span class="sc">$</span>drugg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1149,7 +1149,7 @@ drugg ~ polar + aliphatic + charged + hydrophobic + Real_volume +
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">confusionMatrix</span>(dpred_train_logi_round, train.dtf<span class="sc">$</span>drugg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(dpred_train_logi_round, train.dtf<span class="sc">$</span>drugg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Confusion Matrix and Statistics
@@ -1182,7 +1182,7 @@ Prediction  0  1
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">confusionMatrix</span>(dpred_test_logi_round, test.dtf<span class="sc">$</span>drugg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(dpred_test_logi_round, test.dtf<span class="sc">$</span>drugg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Confusion Matrix and Statistics
@@ -1217,16 +1217,16 @@ Prediction  0  1
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="fu">library</span>(pROC)</span>
-<span id="cb48-2"><a href="#cb48-2"></a>roc_curve_test <span class="ot">&lt;-</span> <span class="fu">roc</span>(test.dtf<span class="sc">$</span>drugg, pred_test_logi)</span>
-<span id="cb48-3"><a href="#cb48-3"></a></span>
-<span id="cb48-4"><a href="#cb48-4"></a><span class="fu">plot</span>(roc_curve_test)</span>
-<span id="cb48-5"><a href="#cb48-5"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">legend =</span> <span class="fu">paste</span>(<span class="st">"AUC = "</span>, <span class="fu">round</span>(<span class="fu">auc</span>(roc_curve_test), <span class="dv">2</span>)), <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lty =</span> <span class="dv">1</span>)</span>
-<span id="cb48-6"><a href="#cb48-6"></a></span>
-<span id="cb48-7"><a href="#cb48-7"></a>roc_curve_train <span class="ot">&lt;-</span> <span class="fu">roc</span>(train.dtf<span class="sc">$</span>drugg, pred_train_logi)</span>
-<span id="cb48-8"><a href="#cb48-8"></a></span>
-<span id="cb48-9"><a href="#cb48-9"></a><span class="fu">plot</span>(roc_curve_train)</span>
-<span id="cb48-10"><a href="#cb48-10"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">legend =</span> <span class="fu">paste</span>(<span class="st">"AUC = "</span>, <span class="fu">round</span>(<span class="fu">auc</span>(roc_curve_train), <span class="dv">2</span>)), <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lty =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pROC)</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>roc_curve_test <span class="ot">&lt;-</span> <span class="fu">roc</span>(test.dtf<span class="sc">$</span>drugg, pred_test_logi)</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(roc_curve_test)</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">legend =</span> <span class="fu">paste</span>(<span class="st">"AUC = "</span>, <span class="fu">round</span>(<span class="fu">auc</span>(roc_curve_test), <span class="dv">2</span>)), <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lty =</span> <span class="dv">1</span>)</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>roc_curve_train <span class="ot">&lt;-</span> <span class="fu">roc</span>(train.dtf<span class="sc">$</span>drugg, pred_train_logi)</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(roc_curve_train)</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">legend =</span> <span class="fu">paste</span>(<span class="st">"AUC = "</span>, <span class="fu">round</span>(<span class="fu">auc</span>(roc_curve_train), <span class="dv">2</span>)), <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lty =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 

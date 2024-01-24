@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.546">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,20 +71,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-topics .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-topics'] = new List('listing-topics', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -227,33 +227,34 @@ window.Quarto = {
 
 
 <p>In this website (still in construction), I’ll present various topics that were covered during my <strong>Master Bio-Informatics: <em>In Silico Drug Design</em></strong> at the Université Paris-Cité.<br>
-This is not professional content so if you see that something isn’t right and would like to volunteer, please contact me at this address: <a href="mailto:martin.bari-garnier@etu.unistra.fr">martin.bari-garnier@etu.unistra.fr</a>. Enjoy !</p>
+This is not professional content so if you see that something isn’t right and would like to volunteer, please contact me at this address: <a href="mailto:martin.bari-garnier@etu.unistra.fr">martin.bari-garnier@etu.unistra.fr</a>. Enjoy !<br>
+<br></p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-</th>
-<th>
-Title
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-listing-file-modified-sort="1705788147597" data-listing-reading-time-sort="1" data-listing-word-count-sort="11" data-listing-title-sort="Massive Data Analysis" data-listing-filename-sort="mda.qmd">
-<td>
-<span class="listing-image"><img src="./images/isdd_logo.png" style="height: 100px;"></span>
-</td>
-<td>
-<a href="./mda/mda.html" class="title listing-title">Massive Data Analysis</a>
-</td>
-</tr>
-</tbody>
-</table>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-topics">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1706107736000" data-listing-file-modified-sort="1706107736942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
+<a href="./mda/mda.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./images/isdd_logo.png" class="thumbnail-image card-img" style="height: 100px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Massive Data Analysis
+</h5>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jan 24, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

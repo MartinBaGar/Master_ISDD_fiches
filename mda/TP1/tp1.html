@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.546">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -201,16 +201,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Martin Bari Garnier </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://u-paris.fr/">
+            Université Paris-Cité
+            </a>
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Martin Bari Garnier </p>
-          </div>
-  </div>
-    
+      
   
     
   </div>
@@ -225,16 +234,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">load</span>(<span class="st">'../data/X.Rdata'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">'../data/X.Rdata'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Visualisation des données du dataframe X</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">boxplot</span>(X, <span class="at">las =</span> <span class="dv">2</span>)</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">boxplot</span>(<span class="fu">scale</span>(X), <span class="at">las =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(X, <span class="at">las =</span> <span class="dv">2</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="fu">scale</span>(X), <span class="at">las =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -249,19 +258,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Mise à l'échelle des données</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>x_scaled <span class="ot">&lt;-</span> <span class="fu">scale</span>(X)</span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># Justifier les méthodes</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>mat_dist <span class="ot">&lt;-</span> <span class="fu">dist</span>(x_scaled, <span class="at">method =</span> <span class="st">"euclidian"</span>)</span>
-<span id="cb3-6"><a href="#cb3-6"></a>x_classif <span class="ot">&lt;-</span> <span class="fu">hclust</span>(mat_dist, <span class="at">method =</span> <span class="st">"ward.D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mise à l'échelle des données</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x_scaled <span class="ot">&lt;-</span> <span class="fu">scale</span>(X)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Justifier les méthodes</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>mat_dist <span class="ot">&lt;-</span> <span class="fu">dist</span>(x_scaled, <span class="at">method =</span> <span class="st">"euclidian"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>x_classif <span class="ot">&lt;-</span> <span class="fu">hclust</span>(mat_dist, <span class="at">method =</span> <span class="st">"ward.D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Nous utilisons une méthode euclidienne pour la matrice de distance car nous travaillons sur des grandeurs géométriques.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(factoextra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(factoextra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: ggplot2</code></pre>
@@ -271,9 +280,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="co"># Détermination du nombre optimal de clusters</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">fviz_nbclust</span>(x_scaled, <span class="at">method =</span> <span class="st">"wss"</span>, <span class="at">FUNcluster=</span>hcut)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Détermination du nombre optimal de clusters</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">fviz_nbclust</span>(x_scaled, <span class="at">method =</span> <span class="st">"wss"</span>, <span class="at">FUNcluster=</span>hcut)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -284,9 +293,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Représentation de l'arbre de classification</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">plot</span>(x_classif, <span class="at">labels =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">rect.hclust</span>(x_classif, <span class="at">k=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Représentation de l'arbre de classification</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x_classif, <span class="at">labels =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rect.hclust</span>(x_classif, <span class="at">k=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -297,8 +306,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Récupération des clusters</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">cutree</span>(x_classif, <span class="at">k=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Récupération des clusters</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cutree</span>(x_classif, <span class="at">k=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>1K8Q 3F0R 1PWM 1U30 3IA4 2CL5 1LOX 2IVU 1XM6 2I0E 1RV1 3F1Q 1UDT 1KE6 1GWR 1V4S 
@@ -318,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">table</span>(<span class="fu">cutree</span>(x_classif, <span class="at">k=</span><span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">cutree</span>(x_classif, <span class="at">k=</span><span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -329,14 +338,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>loc <span class="ot">&lt;-</span> <span class="fu">cmdscale</span>(mat_dist)</span>
-<span id="cb13-2"><a href="#cb13-2"></a>x <span class="ot">&lt;-</span> loc[, <span class="dv">1</span>]</span>
-<span id="cb13-3"><a href="#cb13-3"></a>y <span class="ot">&lt;-</span> loc[, <span class="dv">2</span>]</span>
-<span id="cb13-4"><a href="#cb13-4"></a></span>
-<span id="cb13-5"><a href="#cb13-5"></a><span class="do">## note asp = 1, to ensure Euclidean distances are represented correctly</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a><span class="fu">plot</span>(x, y, <span class="at">type =</span> <span class="st">"n"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">axes =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb13-7"><a href="#cb13-7"></a>     <span class="at">main =</span> <span class="st">"cmdscale(eurodist)"</span>)</span>
-<span id="cb13-8"><a href="#cb13-8"></a><span class="fu">text</span>(x, y, <span class="fu">rownames</span>(loc), <span class="at">cex =</span> <span class="fl">0.6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>loc <span class="ot">&lt;-</span> <span class="fu">cmdscale</span>(mat_dist)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> loc[, <span class="dv">1</span>]</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> loc[, <span class="dv">2</span>]</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="do">## note asp = 1, to ensure Euclidean distances are represented correctly</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">type =</span> <span class="st">"n"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">axes =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"cmdscale(eurodist)"</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(x, y, <span class="fu">rownames</span>(loc), <span class="at">cex =</span> <span class="fl">0.6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -352,10 +361,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Clustering des infividus</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>x_clust <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>)</span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="fu">plot</span>(x_scaled, <span class="at">col =</span> x_clust<span class="sc">$</span>cluster)</span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="fu">points</span>(x_clust<span class="sc">$</span>centers, <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">pch =</span> <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clustering des infividus</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>x_clust <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x_scaled, <span class="at">col =</span> x_clust<span class="sc">$</span>cluster)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(x_clust<span class="sc">$</span>centers, <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">pch =</span> <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -374,34 +383,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>x_clust_1 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>, <span class="at">nstart=</span><span class="dv">1</span>)</span>
-<span id="cb15-2"><a href="#cb15-2"></a>tb_1 <span class="ot">&lt;-</span> <span class="fu">table</span>(x_clust_1<span class="sc">$</span>cluster)</span>
-<span id="cb15-3"><a href="#cb15-3"></a></span>
-<span id="cb15-4"><a href="#cb15-4"></a>x_clust_5 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>, <span class="at">nstart=</span><span class="dv">5</span>)</span>
-<span id="cb15-5"><a href="#cb15-5"></a>tb_5 <span class="ot">&lt;-</span> <span class="fu">table</span>(x_clust_5<span class="sc">$</span>cluster)</span>
-<span id="cb15-6"><a href="#cb15-6"></a></span>
-<span id="cb15-7"><a href="#cb15-7"></a>x_clust_10 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>, <span class="at">nstart=</span><span class="dv">10</span>)</span>
-<span id="cb15-8"><a href="#cb15-8"></a>tb_10 <span class="ot">&lt;-</span> <span class="fu">table</span>(x_clust_10<span class="sc">$</span>cluster)</span>
-<span id="cb15-9"><a href="#cb15-9"></a></span>
-<span id="cb15-10"><a href="#cb15-10"></a>x_clust_25 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>, <span class="at">nstart=</span><span class="dv">25</span>)</span>
-<span id="cb15-11"><a href="#cb15-11"></a>tb_25 <span class="ot">&lt;-</span> <span class="fu">table</span>(x_clust_25<span class="sc">$</span>cluster)</span>
-<span id="cb15-12"><a href="#cb15-12"></a></span>
-<span id="cb15-13"><a href="#cb15-13"></a>x_clust_50 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>, <span class="at">nstart=</span><span class="dv">50</span>)</span>
-<span id="cb15-14"><a href="#cb15-14"></a>tb_50 <span class="ot">&lt;-</span> <span class="fu">table</span>(x_clust_50<span class="sc">$</span>cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x_clust_1 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>, <span class="at">nstart=</span><span class="dv">1</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>tb_1 <span class="ot">&lt;-</span> <span class="fu">table</span>(x_clust_1<span class="sc">$</span>cluster)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>x_clust_5 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>, <span class="at">nstart=</span><span class="dv">5</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>tb_5 <span class="ot">&lt;-</span> <span class="fu">table</span>(x_clust_5<span class="sc">$</span>cluster)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>x_clust_10 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>, <span class="at">nstart=</span><span class="dv">10</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>tb_10 <span class="ot">&lt;-</span> <span class="fu">table</span>(x_clust_10<span class="sc">$</span>cluster)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>x_clust_25 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>, <span class="at">nstart=</span><span class="dv">25</span>)</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>tb_25 <span class="ot">&lt;-</span> <span class="fu">table</span>(x_clust_25<span class="sc">$</span>cluster)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>x_clust_50 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(mat_dist, <span class="at">centers=</span><span class="dv">10</span>, <span class="at">nstart=</span><span class="dv">50</span>)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>tb_50 <span class="ot">&lt;-</span> <span class="fu">table</span>(x_clust_50<span class="sc">$</span>cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Différentes valeurs de nstart on été testées: 1, 5 10, 25, 50, 100. La répartition étant identique à partir de 5 donc nous allons continuer avec elle.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>loc <span class="ot">&lt;-</span> <span class="fu">cmdscale</span>(mat_dist)</span>
-<span id="cb16-2"><a href="#cb16-2"></a>x <span class="ot">&lt;-</span> loc[, <span class="dv">1</span>]</span>
-<span id="cb16-3"><a href="#cb16-3"></a>y <span class="ot">&lt;-</span> loc[, <span class="dv">2</span>]</span>
-<span id="cb16-4"><a href="#cb16-4"></a></span>
-<span id="cb16-5"><a href="#cb16-5"></a><span class="do">## note asp = 1, to ensure Euclidean distances are represented correctly</span></span>
-<span id="cb16-6"><a href="#cb16-6"></a><span class="fu">plot</span>(x, y, <span class="at">type =</span> <span class="st">"n"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">axes =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb16-7"><a href="#cb16-7"></a>     <span class="at">main =</span> <span class="st">"cmdscale(eurodist)"</span>)</span>
-<span id="cb16-8"><a href="#cb16-8"></a><span class="fu">text</span>(x, y, <span class="fu">rownames</span>(loc), <span class="at">cex =</span> <span class="fl">0.6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>loc <span class="ot">&lt;-</span> <span class="fu">cmdscale</span>(mat_dist)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> loc[, <span class="dv">1</span>]</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> loc[, <span class="dv">2</span>]</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="do">## note asp = 1, to ensure Euclidean distances are represented correctly</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">type =</span> <span class="st">"n"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">axes =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"cmdscale(eurodist)"</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(x, y, <span class="fu">rownames</span>(loc), <span class="at">cex =</span> <span class="fl">0.6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -414,9 +423,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Clustering des individus final</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="fu">plot</span>(x_scaled, <span class="at">col =</span> x_clust_5<span class="sc">$</span>cluster)</span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="fu">points</span>(x_clust<span class="sc">$</span>centers, <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">pch =</span> <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clustering des individus final</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x_scaled, <span class="at">col =</span> x_clust_5<span class="sc">$</span>cluster)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(x_clust<span class="sc">$</span>centers, <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">pch =</span> <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -430,7 +439,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">fviz_nbclust</span>(x_scaled, <span class="at">method =</span> <span class="st">"wss"</span>, <span class="at">FUNcluster=</span>hcut)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fviz_nbclust</span>(x_scaled, <span class="at">method =</span> <span class="st">"wss"</span>, <span class="at">FUNcluster=</span>hcut)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -450,22 +459,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>mat_cor <span class="ot">&lt;-</span> <span class="fu">cor</span>(X)</span>
-<span id="cb19-2"><a href="#cb19-2"></a>mat_cor_dist <span class="ot">&lt;-</span> <span class="fu">as.dist</span>(<span class="dv">1</span> <span class="sc">-</span> mat_cor<span class="sc">**</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>mat_cor <span class="ot">&lt;-</span> <span class="fu">cor</span>(X)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>mat_cor_dist <span class="ot">&lt;-</span> <span class="fu">as.dist</span>(<span class="dv">1</span> <span class="sc">-</span> mat_cor<span class="sc">**</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># library(gplots)</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a><span class="co"># heatmap.2(mat_cor_dist, hclustfun=hclust)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(gplots)</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># heatmap.2(mat_cor_dist, hclustfun=hclust)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bari garnier,
+  author = {Bari Garnier, Martin},
+  title = {TP1 : {Classification} Des Données},
+  url = {https://martinbagar.github.io/Master_ISDD_fiches/mda/TP1/tp1.html},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bari garnier" class="csl-entry quarto-appendix-citeas" role="listitem">
+Bari Garnier, Martin. n.d. <span>“TP1 : Classification Des
+Données.”</span> <a href="https://martinbagar.github.io/Master_ISDD_fiches/mda/TP1/tp1.html">https://martinbagar.github.io/Master_ISDD_fiches/mda/TP1/tp1.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
