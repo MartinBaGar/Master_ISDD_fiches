@@ -5,7 +5,7 @@ code-overflow: wrap
 code-copy: true
 
 # Enable CC licence appendix
-license: "CC BY"
+license: "CC-BY-SA-4.0"
 citation: true
 
 # Default author metadata-files: 
