@@ -30,9 +30,7 @@ format:
       - custom.scss
     css: styles.css
     toc: true
-    smooth-scroll: true
-    includes:
-      in_header: toggle.js    
+    smooth-scroll: true  
 
 execute:
   freeze: auto

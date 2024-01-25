@@ -2,6 +2,8 @@
 title: "Massive Data Analysis"
 citation: false
 license: ""
+filters: 
+    - custom_callout.lua
 ---
 
 This work takes up what has been done in the course of practical work on the *Massive Data Analysis* teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques. 
@@ -29,19 +31,18 @@ citation()
 
 </details> -->
 
-test
+:::{.callout-exercise icon="true"}
 
-:::{.solutionbox collapse="true"}
-
-::::{.solutionbox-header collapse="true"}
-:::::{.solutionbox-icon collapse="true"}
-:::::
-This is my test solution
-::::
-
-::::{.solutionbox-body collapse="true"}
-And some content inside of it
-::::
-
+Custom exercise callout
 :::
 
+::: {.callout-note}
+ok
+:::
+
+
+::: {.callout-note icon=false title="[hello]{style='color:black;'} $\hspace{1pt}$ [Recent Talks]{.dim-text}" collapse="false" style="text-align: left!important; width:100%; border-color: var(--dim-color)!important; background-color: white;"}
+
+You can get a live view of some of my recent talks
+
+:::
