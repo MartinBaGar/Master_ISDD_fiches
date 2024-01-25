@@ -31,18 +31,14 @@ citation()
 
 </details> -->
 
-:::{.callout-exercise icon="true"}
-
+:::{.callout-exercise}
 Custom exercise callout
 :::
 
-::: {.callout-note}
-ok
+:::{.callout-answer}
+Custom exercise callout
 :::
 
-
-::: {.callout-note icon=false title="[hello]{style='color:black;'} $\hspace{1pt}$ [Recent Talks]{.dim-text}" collapse="false" style="text-align: left!important; width:100%; border-color: var(--dim-color)!important; background-color: white;"}
-
-You can get a live view of some of my recent talks
-
+:::{.callout-hint}
+Custom exercise callout
 :::
