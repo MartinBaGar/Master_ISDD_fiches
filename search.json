@@ -60,7 +60,7 @@
     "href": "mda/mda.html",
     "title": "Massive Data Analysis",
     "section": "",
-    "text": "This work takes up what has been done in the course of practical work on the Massive Data Analysis teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques.\n\nCovered topics\nThe following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order. All manipulations were done with the R programmation language.\n\nData Classification\nPrincipal Component Analysis\nRegression\nPartitionning Trees\n\n\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\n\nCustom exercise callout\n\n\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\n\n\nCustom exercise callout\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\n\n\nCustom exercise callout"
+    "text": "This work takes up what has been done in the course of practical work on the Massive Data Analysis teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques.\n\nCovered topics\nThe following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order. All manipulations were done with the R programmation language.\n\nData Classification\nPrincipal Component Analysis\nRegression\nPartitionning Trees\n\n\n\n\n\n\n\n\nCitation"
   },
   {
     "objectID": "mda/pages/tp2.html",
@@ -144,6 +144,6 @@
     "href": "index.html",
     "title": "Master ISDD fiches",
     "section": "",
-    "text": "In this website (still in construction), I’ll present various topics that were covered during my Master Bio-Informatics: In Silico Drug Design at the Université Paris-Cité.\nThis is not professional content so if you see that something isn’t right and would like to volunteer, please contact me at this address: martin.bari-garnier@etu.unistra.fr. Enjoy !\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMassive Data Analysis\n\n\n\nJan 25, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "In this website (still in construction), I’ll present various topics that were covered during my Master Bio-Informatics: In Silico Drug Design at the Université Paris-Cité.\nThis is not professional content so if you see that something isn’t right and would like to volunteer, please contact me at this address: martin.bari-garnier@etu.unistra.fr. Enjoy !\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMassive Data Analysis\n\n\n\nJan 26, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
