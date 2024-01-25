@@ -2,8 +2,6 @@
 title: "Massive Data Analysis"
 citation: false
 license: ""
-filters: 
-    - custom_callout.lua
 ---
 
 This work takes up what has been done in the course of practical work on the *Massive Data Analysis* teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques. 
@@ -18,27 +16,15 @@ The following topics are presented here in the chronological order in which they
 - [Partitionning Trees](pages/tp4.qmd)
 
 
-<!-- <details>
-  <summary>ok</summary>
-::: {.callout-raw collapse="true"}
 
-```{r}
-#| code-fold: false
-citation()
-```
+::::: {.custom}
+
+::: {.notebook-link}
+
+
 
 :::
 
-</details> -->
+:::::
 
-:::{.callout-exercise}
-Custom exercise callout
-:::
-
-:::{.callout-answer}
-Custom exercise callout
-:::
-
-:::{.callout-hint}
-Custom exercise callout
-:::
+{{< fa r-project >}}

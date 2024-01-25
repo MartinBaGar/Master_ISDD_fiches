@@ -5,6 +5,8 @@
 $upcolour: #8a1538;
 
 /*-- scss:rules --*/
+
+// Navbar styling
 .navbar-title {
     font-weight: 700;
 }
@@ -13,12 +15,7 @@ $upcolour: #8a1538;
     font-weight: 600;
 }
 
-.navbar-logo {
-position: relative;
-top: 0px;
-left: -5px;
-}
-
+// Collapsible sections styling
 summary::marker {
     color: $upcolour;
 }
@@ -38,4 +35,21 @@ div.callout.callout-exercise .callout-header {
     font-family: "Font Awesome 5 Free"; /* or "Font Awesome 6 Free" */
     content: "\f303";
     margin-right: 10px;
-  }
+}
+
+// Custom callout styling
+div.custom .callout {
+    border-left: 5px solid $upcolour;
+}
+
+.custom .callout-header {
+    background-color: rgba(134, 31, 62, 0.5)!important;
+}
+
+.custom .callout-icon-container::before {
+    font-family: "Font Awesome 5 Free"; /* or "Font Awesome 6 Free" */
+    content: "\f4f7";
+    padding-right: 0.35em;
+}
+
+
