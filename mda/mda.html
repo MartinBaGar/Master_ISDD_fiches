@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Bari Garnier">
-<meta name="dcterms.date" content="2024-01-24">
+<meta name="dcterms.date" content="2024-01-25">
 
 <title>Master ISDD fiches - Massive Data Analysis</title>
 <style>
@@ -104,19 +104,19 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Massive Data Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../mda/TP1/tp1.html">
+    <a class="dropdown-item" href="../mda/pages/tp1.html">
  <span class="dropdown-text">Data Classification</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../mda/TP2/tp2.html">
+    <a class="dropdown-item" href="../mda/pages/tp2.html">
  <span class="dropdown-text">Principal Component Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../mda/TP3/tp3.html">
+    <a class="dropdown-item" href="../mda/pages/tp3.html">
  <span class="dropdown-text">Linear and Logistic Regression</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../mda/TP4/tp4.html">
+    <a class="dropdown-item" href="../mda/pages/tp4.html">
  <span class="dropdown-text">Partitioning Trees</span></a>
   </li>  
     </ul>
@@ -127,14 +127,9 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools tools-wide">
+          <div class="quarto-navbar-tools">
     <a href="https://github.com/MartinBaGar/Master_ISDD_fiches" title="" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
-    <a href="mailto:martin.bari-garnier@etu.u-paris.fr" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-envelope-at"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
+    <a href="mailto:martin.bari-garnier@etu.u-paris.fr" title="" class="quarto-navigation-tool px-1" aria-label="Email"><i class="bi bi-envelope-at"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -183,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 24, 2024</p>
+      <p class="date">January 25, 2024</p>
     </div>
   </div>
   
@@ -198,28 +193,94 @@ ul.task-list li input[type="checkbox"] {
 <p>This work takes up what has been done in the course of practical work on the <em>Massive Data Analysis</em> teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques.</p>
 <section id="covered-topics" class="level1">
 <h1>Covered topics</h1>
-<p>The following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order.</p>
+<p>The following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order. All manipulations were done with the R programmation language.</p>
 <ul>
-<li><a href="../mda/TP1/tp1.html">Data Classification</a></li>
-<li><a href="../mda/TP2/tp2.html">Principal Component Analysis</a></li>
-<li><a href="../mda/TP3/tp3.html">Regression</a></li>
-<li><a href="../mda/TP4/tp4.html">Partitionning Trees</a></li>
+<li><a href="../mda/pages/tp1.html">Data Classification</a></li>
+<li><a href="../mda/pages/tp2.html">Principal Component Analysis</a></li>
+<li><a href="../mda/pages/tp3.html">Regression</a></li>
+<li><a href="../mda/pages/tp4.html">Partitionning Trees</a></li>
 </ul>
+<!-- <details>
+  <summary>ok</summary>
+::: {.callout-raw collapse="true"}
+
+
+::: {.cell}
+
+```{.r .cell-code  code-fold="false"}
+citation()
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+To cite R in publications use:
+
+  R Core Team (2023). _R: A Language and Environment for Statistical
+  Computing_. R Foundation for Statistical Computing, Vienna, Austria.
+  <https://www.R-project.org/>.
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {R: A Language and Environment for Statistical Computing},
+    author = {{R Core Team}},
+    organization = {R Foundation for Statistical Computing},
+    address = {Vienna, Austria},
+    year = {2023},
+    url = {https://www.R-project.org/},
+  }
+
+We have invested a lot of time and effort in creating R, please cite it
+when using it for data analysis. See also 'citation("pkgname")' for
+citing R packages.
+```
+
+
+:::
+:::
+
+
+:::
+
+</details> -->
+<div class="callout-tweet">
+<p>Tweet from the callout tweet</p>
+</div>
+<div class="callout-tweet icon">
+<p>Tweet from the callout tweet with icon</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some wild callout</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some wild callout</p>
+</div>
+</div>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>CC-BY-SA-4.0</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bari garnier2024,
-  author = {Bari Garnier, Martin},
-  title = {Massive {Data} {Analysis}},
-  date = {2024-01-24},
-  url = {https://MartinBaGar.github.io/Master_ISDD_fiches//mda/mda.html},
-  langid = {en}
-}
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bari garnier2024" class="csl-entry quarto-appendix-citeas" role="listitem">
-Bari Garnier, Martin. 2024. <span>“Massive Data Analysis.”</span>
-January 24, 2024. <a href="https://MartinBaGar.github.io/Master_ISDD_fiches//mda/mda.html">https://MartinBaGar.github.io/Master_ISDD_fiches//mda/mda.html</a>.
-</div></div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
