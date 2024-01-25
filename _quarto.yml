@@ -11,10 +11,10 @@ website:
       - text: "MDA"
         menu:
         - mda/mda.qmd
-        - mda/TP1/tp1.qmd
-        - mda/TP2/tp2.qmd
-        - mda/TP3/tp3.qmd
-        - mda/TP4/tp4.qmd
+        - mda/pages/tp1.qmd
+        - mda/pages/tp2.qmd
+        - mda/pages/tp3.qmd
+        - mda/pages/tp4.qmd
       - about.qmd
     tools:
       - icon: github
