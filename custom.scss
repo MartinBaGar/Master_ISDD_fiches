@@ -1,3 +1,6 @@
+/*-- Importing fa icons --*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+
 /*-- scss:defaults --*/
 $upcolour: #8a1538;
 
@@ -31,7 +34,6 @@ div.callout.callout-exercise .callout-header {
 }
 
 .callout-exercise > .callout-header::before {
-    font-family: "Font Awesome 5 Free";
     content: "\f303";
     margin-right: 10px;
   }
