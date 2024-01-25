@@ -2,7 +2,7 @@
 title: "Data Classification"
 ---
 
-Dans ce TP, l'objectif est d'utiliser des méthodes de classification non-supervisées sur des variables indépendantes de notre jeu de données. Ce dernier contient des poches de protéines décrites par 18 descripteurs, les variables indépendantes.
+In this tutorial, we will be applying unsupervised classification techniques to the independent variables in our dataset. The dataset comprises protein pockets characterized by 18 descriptors, which serve as the independent variables.
 
 Chargeons les données 
 

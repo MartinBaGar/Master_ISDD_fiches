@@ -5,8 +5,8 @@ code-overflow: wrap
 code-copy: true
 
 # Enable CC licence appendix
-license: "CC-BY-SA-4.0"
 citation: true
+license: "CC-BY-SA-4.0"
 
 # Default author metadata-files: 
 author: 
@@ -14,4 +14,5 @@ author:
     affiliation: Université Paris-Cité
     affiliation-url: https://u-paris.fr/
 
+# Add last-modified date by default
 date: last-modified

@@ -22,9 +22,8 @@ website:
         aria-label: GitHub
       - icon: envelope-at
         href: mailto:martin.bari-garnier@etu.u-paris.fr
+        aria-label: Email
         
-  reader-mode: true
-
 format:
   html:
     theme: 

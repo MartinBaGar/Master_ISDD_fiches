@@ -1,0 +1,15 @@
+{
+  "hash": "eee3cf3545ce1aac6325ffc3b9d1a4b7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Massive Data Analysis\"\ncitation: false\nlicense: \"\"\n---\n\n\nThis work takes up what has been done in the course of practical work on the *Massive Data Analysis* teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques. \n\n# Covered topics\n\nThe following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order. All manipulations were done with the R programmation language.\n\n- [Data Classification](pages/tp1.qmd)\n- [Principal Component Analysis](pages/tp2.qmd)\n- [Regression](pages/tp3.qmd)\n- [Partitionning Trees](pages/tp4.qmd)\n\n\n<!-- <details>\n  <summary>ok</summary>\n::: {.callout-raw collapse=\"true\"}\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"false\"}\ncitation()\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\nTo cite R in publications use:\n\n  R Core Team (2023). _R: A Language and Environment for Statistical\n  Computing_. R Foundation for Statistical Computing, Vienna, Austria.\n  <https://www.R-project.org/>.\n\nA BibTeX entry for LaTeX users is\n\n  @Manual{,\n    title = {R: A Language and Environment for Statistical Computing},\n    author = {{R Core Team}},\n    organization = {R Foundation for Statistical Computing},\n    address = {Vienna, Austria},\n    year = {2023},\n    url = {https://www.R-project.org/},\n  }\n\nWe have invested a lot of time and effort in creating R, please cite it\nwhen using it for data analysis. See also 'citation(\"pkgname\")' for\nciting R packages.\n```\n\n\n:::\n:::\n\n\n:::\n\n</details> -->\n\n::: {.callout-tweet}\nTweet from the callout tweet\n:::\n\n::: {.callout-tweet .icon}\nTweet from the callout tweet with icon\n:::\n\n::: {.callout-tip}\nSome wild callout\n:::\n\n::: {.callout-warning}\nSome wild callout\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

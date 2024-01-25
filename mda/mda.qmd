@@ -1,16 +1,46 @@
 ---
 title: "Massive Data Analysis"
+citation: false
+license: ""
 ---
 
-This work takes up what has been done in the course of practical work on the *Massive Data Analysis* teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques.
+This work takes up what has been done in the course of practical work on the *Massive Data Analysis* teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques. 
 
 # Covered topics
 
-The following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order.
+The following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order. All manipulations were done with the R programmation language.
 
 - [Data Classification](pages/tp1.qmd)
 - [Principal Component Analysis](pages/tp2.qmd)
 - [Regression](pages/tp3.qmd)
 - [Partitionning Trees](pages/tp4.qmd)
 
- 
+
+<!-- <details>
+  <summary>ok</summary>
+::: {.callout-raw collapse="true"}
+
+```{r}
+#| code-fold: false
+citation()
+```
+
+:::
+
+</details> -->
+
+::: {.callout-tweet}
+Tweet from the callout tweet
+:::
+
+::: {.callout-tweet .icon}
+Tweet from the callout tweet with icon
+:::
+
+::: {.callout-tip}
+Some wild callout
+:::
+
+::: {.callout-warning}
+Some wild callout
+:::

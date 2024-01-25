@@ -1,3 +1,4 @@
 /.quarto/
 /_site/
 /git_lfs/
+/.luarc.json
