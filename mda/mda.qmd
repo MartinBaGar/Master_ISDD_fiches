@@ -29,18 +29,19 @@ citation()
 
 </details> -->
 
-::: {.callout-tweet}
-Tweet from the callout tweet
+test
+
+:::{.solutionbox collapse="true"}
+
+::::{.solutionbox-header collapse="true"}
+:::::{.solutionbox-icon collapse="true"}
+:::::
+This is my test solution
+::::
+
+::::{.solutionbox-body collapse="true"}
+And some content inside of it
+::::
+
 :::
 
-::: {.callout-tweet .icon}
-Tweet from the callout tweet with icon
-:::
-
-::: {.callout-tip}
-Some wild callout
-:::
-
-::: {.callout-warning}
-Some wild callout
-:::
