@@ -1,5 +1,11 @@
 /*-- Importing fa icons --*/
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    src: url('_extensions/fontawesome/assets/webfonts/fa-brands-400.woff2') format('woff2'),
+         url('_extensions/fontawesome/assets/webfonts/fa-brands-400.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*-- scss:defaults --*/
 $upcolour: #8a1538;
@@ -18,23 +24,7 @@ $upcolour: #8a1538;
 // Collapsible sections styling
 summary::marker {
     color: $upcolour;
-}
-
-// Exercise colour styling
-div.callout.callout-exercise {
-    border-left: 5px solid $upcolour;
-    color: black;
-}
-
-div.callout.callout-exercise .callout-header {
-    background-color: rgba(134, 31, 62, 0.5);
-    border-top-right-radius: .25rem;
-}
-
-.callout-exercise > .callout-header::before {
-    font-family: "Font Awesome 5 Free"; /* or "Font Awesome 6 Free" */
-    content: "\f303";
-    margin-right: 10px;
+    list-style-image: url("monkey.svg");
 }
 
 // Custom callout styling
@@ -47,7 +37,7 @@ div.custom .callout {
 }
 
 .custom .callout-icon-container::before {
-    font-family: "Font Awesome 5 Free"; /* or "Font Awesome 6 Free" */
+    font-family: "Font Awesome 6 Brands";
     content: "\f4f7";
     padding-right: 0.35em;
 }

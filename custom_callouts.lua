@@ -20,7 +20,7 @@
 -- end
 
 function Div(div)
-  if div.classes:includes("notebook-link") then
+  if div.classes:includes("callout-citation") then
     return quarto.Callout({
       type = "note",
       icon = false,

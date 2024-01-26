@@ -1,12 +1,15 @@
 {
-  "hash": "f1be3309df393cace40fac7dd45f6b05",
+  "hash": "2151384f2ffe002c8b19a8786535c4aa",
   "result": {
-    "engine": "jupyter",
-    "markdown": "---\ntitle: \"Massive Data Analysis\"\ncitation: false\nlicense: \"\"\n---\n\nThis work takes up what has been done in the course of practical work on the *Massive Data Analysis* teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques. \n\n# Covered topics\n\nThe following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order. All manipulations were done with the R programmation language.\n\n- [Data Classification](pages/tp1.qmd)\n- [Principal Component Analysis](pages/tp2.qmd)\n- [Regression](pages/tp3.qmd)\n- [Partitionning Trees](pages/tp4.qmd)\n\n\n:::{.callout-exercise}\ncustom callout test rerer\n:::\n\n::: {.callout-note}\nquarto callout test\n:::\n\n\n```{markdown}\n::: {.callout-tip icon=false title=`{{{< fa thumbs-up >}}}` collapse=\"true\" style=\"width:100%; border: 1px solid #1ED760!important;\"}\n\n[[![](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&cover_image=true&theme=novatorem&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&redirect=true)]{.stretch}\n\n:::\n```\n\n{{< iconify exploding-head >}}\n\n",
-    "supporting": [
-      "mda_files"
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Massive Data Analysis\"\ncitation: false\nlicense: \"\"\n---\n\n\nThis work takes up what has been done in the course of practical work on the *Massive Data Analysis* teaching unit. Think of it more as tutorials than as complete guides to fully mastery the presented techniques. \n\n# Covered topics\n\nThe following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order. All manipulations were done with the R programmation language.\n\n- [Data Classification](pages/tp1.qmd)\n- [Principal Component Analysis](pages/tp2.qmd)\n- [Regression](pages/tp3.qmd)\n- [Partitionning Trees](pages/tp4.qmd)\n\n::::: {.custom}\n::: {.callout-citation}\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"false\"}\ncitation()\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n\nTo cite R in publications use:\n\n  R Core Team (2021). R: A language and environment for statistical\n  computing. R Foundation for Statistical Computing, Vienna, Austria.\n  URL https://www.R-project.org/.\n\nA BibTeX entry for LaTeX users is\n\n  @Manual{,\n    title = {R: A Language and Environment for Statistical Computing},\n    author = {{R Core Team}},\n    organization = {R Foundation for Statistical Computing},\n    address = {Vienna, Austria},\n    year = {2021},\n    url = {https://www.R-project.org/},\n  }\n\nWe have invested a lot of time and effort in creating R, please cite it\nwhen using it for data analysis. See also 'citation(\"pkgname\")' for\nciting R packages.\n```\n\n\n:::\n:::\n\n\n:::\n:::::\n \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
     ],
-    "filters": [],
-    "includes": {}
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
   }
 }

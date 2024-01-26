@@ -15,16 +15,14 @@ The following topics are presented here in the chronological order in which they
 - [Regression](pages/tp3.qmd)
 - [Partitionning Trees](pages/tp4.qmd)
 
-
-
 ::::: {.custom}
+::: {.callout-citation}
 
-::: {.notebook-link}
-
-
+```{r}
+#| code-fold: false
+citation()
+```
 
 :::
-
 :::::
-
-{{< fa r-project >}}
+ 
