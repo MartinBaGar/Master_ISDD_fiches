@@ -4,13 +4,21 @@ title: "Data Classification"
 
 In this tutorial, we will be applying unsupervised classification techniques to the independent variables in our dataset. The dataset comprises protein pockets characterized by 18 descriptors, which serve as the independent variables.
 
-Chargeons les données 
-
+Let's load the data first.
 
 ```{r}
 load('../data/X.Rdata')
 x_scaled <- scale(X)
 ```
+
+In classification, scaling the data is a key step that can have beneficial impacts on the upcoming manipulations. For example it:
+
+
+- Normalises the data, hence prevents the domination of some features over others if they have different magnitudes.
+- Somtimes handles better outliers by readjusting the range of the value
+
+Here are two boxplots highlighting how the weight of one feature can dominate the others:
+
 
 ::: {.panel-tabset}
 
