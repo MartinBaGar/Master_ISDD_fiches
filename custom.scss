@@ -16,21 +16,17 @@ $upcolour: #8a1538;
 .navbar-title {
     color: white;
     font-weight: 700;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
 }
 
 .menu-text {
     color: white;
     font-weight: 600;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
 }
 
 // Collapsible sections styling
 summary::marker {
     color: $upcolour;
-    list-style-image: url("monkey.svg");
+    // list-style-image: url("monkey.svg");
 }
 
 // Custom callout styling

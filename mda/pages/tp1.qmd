@@ -3,9 +3,11 @@ title: "Data Classification"
 ---
 
 To do:
-- [ ] Justify scaling
-- [ ] Describe classification methods (ward2 etc)
-- [ ] Justify number of clusters
+
+- [ ] Justify scaling  
+- [ ] Describe classification methods (ward2 etc)  
+- [ ] Justify number of clusters  
+- [ ] More complete graphs
 
 In this tutorial, we will be applying unsupervised classification techniques to the independent variables in our dataset. The dataset comprises protein pockets characterized by 18 descriptors, which serve as the independent variables.
 
