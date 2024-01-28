@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/about.html</loc>
-    <lastmod>2024-01-24T21:58:53.931Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/pages/tp4.html</loc>
-    <lastmod>2024-01-24T21:58:09.883Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/pages/tp3.html</loc>
-    <lastmod>2024-01-24T21:57:26.008Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/mda.html</loc>
-    <lastmod>2024-01-26T00:55:09.074Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/pages/tp2.html</loc>
-    <lastmod>2024-01-24T21:56:56.195Z</lastmod>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/index.html</loc>
+    <lastmod>2024-01-24T14:52:05.000Z</lastmod>
   </url>
   <url>
     <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/pages/tp1.html</loc>
-    <lastmod>2024-01-25T13:14:14.965Z</lastmod>
+    <lastmod>2024-01-28T22:14:31.442Z</lastmod>
   </url>
   <url>
-    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/index.html</loc>
-    <lastmod>2024-01-24T14:52:05.699Z</lastmod>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/pages/tp4.html</loc>
+    <lastmod>2024-01-24T21:58:09.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/mda.html</loc>
+    <lastmod>2024-01-26T00:55:09.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/pages/tp3.html</loc>
+    <lastmod>2024-01-24T21:57:26.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/pages/tp2.html</loc>
+    <lastmod>2024-01-24T21:56:56.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/about.html</loc>
+    <lastmod>2024-01-24T21:58:53.000Z</lastmod>
   </url>
 </urlset>
