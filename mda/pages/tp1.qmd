@@ -5,6 +5,7 @@ title: "Data Classification"
 To do:
 
 - [ ] Justify scaling  
+Scalling permit features to vary in the same range and therefore makes comparisons and manipulations more efficient. However is it to note that chosing a scalling technique that doesn't suit our data can be more detrimental than not scalling the data.  
 - [ ] Describe classification methods (ward2 etc)  
 - [ ] Justify number of clusters  
 - [ ] More complete graphs
