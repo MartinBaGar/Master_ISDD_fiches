@@ -32,9 +32,6 @@ format:
     toc: true
     smooth-scroll: true  
 
-filters:
-  - custom_callouts.lua
-
 execute:
   freeze: auto
 
