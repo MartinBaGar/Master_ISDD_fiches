@@ -4,4 +4,5 @@ title-block: none
 engine: knitr
 ---
 
-Hi ! My name is Martin Bari Garnier, I'm currently in my first year in the Master ISDD (last run: `{r} format(Sys.Date(), "%B %Y")`).
+Hi ! My name is Martin Bari Garnier, I'm currently in my first year in the
+Master ISDD (last run: `{r} format(Sys.Date(), "%B %Y")`).

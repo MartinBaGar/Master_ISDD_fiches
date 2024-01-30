@@ -16,3 +16,7 @@ author:
 
 # Add last-modified date by default
 date: last-modified
+
+# Add custom callouts
+filters:
+  - custom_callouts.lua

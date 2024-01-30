@@ -1,8 +1,8 @@
 {
-  "hash": "30ade1d63ceae2a61371fb5b45a71789",
+  "hash": "5f7d462538babd882650761cc179abc7",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"About Me\"\ntitle-block: none\nengine: knitr\n---\n\n\nHi ! My name is Martin Bari Garnier, I'm currently in my first year in the Master ISDD (last run: January 2024).",
+    "markdown": "---\ntitle: \"About Me\"\ntitle-block: none\nengine: knitr\n---\n\n\nHi ! My name is Martin Bari Garnier, I'm currently in my first year in the\nMaster ISDD (last run: January 2024).\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

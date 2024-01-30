@@ -5,6 +5,7 @@ listing:
     type: grid
     contents: 
       - mda/mda.qmd
+      - bit/bit.qmd
     fields: [image, title, date]
     sort-ui: false
     filter-ui: false
