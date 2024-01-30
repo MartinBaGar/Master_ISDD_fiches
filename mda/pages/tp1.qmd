@@ -5,7 +5,7 @@ title: "Data Classification"
 To do:
 
 - [ ] Justify scaling  
-Scalling permit features to vary in the same range and therefore makes comparisons and manipulations more efficient. However is it to note that chosing a scalling technique that doesn't suit our data can be more detrimental than not scalling the data.  
+Scaling permit features to vary in the same range and therefore makes comparisons and manipulations more efficient. However is it to note that choosing a scaling technique that doesn't suit our data can be more detrimental than not scaling the data.  
 - [ ] Describe classification methods (ward2 etc)  
 - [ ] Justify number of clusters  
 - [ ] More complete graphs
@@ -19,10 +19,7 @@ load('../data/X.Rdata')
 x_scaled <- scale(X)
 ```
 
-In classification, scaling the data is a key step that can have beneficial impacts on the upcoming manipulations. For example it:
-
-- Normalises the data, hence prevents the domination of some features over others if they have different magnitudes.
-- Sometimes handles better outliers by readjusting the range of the value
+In classification, scalling the data is a key pre-processing step. A wise choice of the technique must be done depending on the dateset (is it homogeneous or heterogeneous ?). Ensuring the features vary in the same range can improve the performance of the classification of the dataset, as well as better handling the outliers. However if not adapted to the classification, the scalling technique can be detrimental to its performance. 
 
 Here are two boxplots highlighting how the weight of one feature can dominate the others:
 
