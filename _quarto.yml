@@ -41,3 +41,8 @@ execute:
 
 # Path to the image of ISDD
 image: ../images/isdd_logo.png
+
+# Bibliography configuration
+bibliography: citations/bibliography.bib
+link-citations: true
+csl: citations/elsevier-with-titles.csl
