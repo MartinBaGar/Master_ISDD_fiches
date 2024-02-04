@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-01-30">
+
+<title>Master ISDD fiches - TP Visualisation: Introduction à PyMOL</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/UniversiteParisCite_logo_horizontal_noir_RVB.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Master ISDD fiches</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">MDA</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mda">    
+        <li>
+    <a class="dropdown-item" href="../../mda/mda.html">
+ <span class="dropdown-text">Massive Data Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../mda/pages/tp1.html">
+ <span class="dropdown-text">Data Classification</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../mda/pages/tp2.html">
+ <span class="dropdown-text">Principal Component Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../mda/pages/tp3.html">
+ <span class="dropdown-text">Linear and Logistic Regression</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../mda/pages/tp4.html">
+ <span class="dropdown-text">Partitioning Trees</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bit" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">BIT</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bit">    
+        <li>
+    <a class="dropdown-item" href="../../bit/bit.html">
+ <span class="dropdown-text">Bio-informatics and Toxicology</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../bit/pages/tp1.html">
+ <span class="dropdown-text">TP Visualisation: Introduction à PyMOL</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About Me</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/MartinBaGar/Master_ISDD_fiches" title="" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="mailto:martin.bari-garnier@etu.u-paris.fr" title="" class="quarto-navigation-tool px-1" aria-label="Email"><i class="bi bi-envelope-at"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#q1-choix-de-la-bonne-représentation" id="toc-q1-choix-de-la-bonne-représentation" class="nav-link active" data-scroll-target="#q1-choix-de-la-bonne-représentation">Q1: Choix de la bonne représentation</a></li>
+  <li><a href="#q2-critique-de-la-reconstruction-des-atomes-de-h" id="toc-q2-critique-de-la-reconstruction-des-atomes-de-h" class="nav-link" data-scroll-target="#q2-critique-de-la-reconstruction-des-atomes-de-h">Q2: Critique de la reconstruction des atomes de H</a></li>
+  <li><a href="#q3-méthode-dobtention-de-la-structure-2bzw" id="toc-q3-méthode-dobtention-de-la-structure-2bzw" class="nav-link" data-scroll-target="#q3-méthode-dobtention-de-la-structure-2bzw">Q3 : Méthode d’obtention de la structure 2BZW</a></li>
+  <li><a href="#q4-représentation-de-linteraction-entre-bcl-xl-et-bad" id="toc-q4-représentation-de-linteraction-entre-bcl-xl-et-bad" class="nav-link" data-scroll-target="#q4-représentation-de-linteraction-entre-bcl-xl-et-bad">Q4: Représentation de l’interaction entre Bcl-xl et Bad</a></li>
+  <li><a href="#q5-étude-de-lamphiphilicité-de-bad-et-de-sa-position-par-rapport-à-bcl-xl" id="toc-q5-étude-de-lamphiphilicité-de-bad-et-de-sa-position-par-rapport-à-bcl-xl" class="nav-link" data-scroll-target="#q5-étude-de-lamphiphilicité-de-bad-et-de-sa-position-par-rapport-à-bcl-xl">Q5: Étude de l’amphiphilicité de Bad et de sa position par rapport à Bcl-xl</a></li>
+  <li><a href="#q6-impact-de-la-mutation-de-la-position-l109-de-bad-en-lysine" id="toc-q6-impact-de-la-mutation-de-la-position-l109-de-bad-en-lysine" class="nav-link" data-scroll-target="#q6-impact-de-la-mutation-de-la-position-l109-de-bad-en-lysine">Q6: Impact de la mutation de la position L109 de Bad en lysine</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">TP Visualisation: Introduction à PyMOL</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 30, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="q1-choix-de-la-bonne-représentation" class="level2">
+<h2 class="anchored" data-anchor-id="q1-choix-de-la-bonne-représentation">Q1: Choix de la bonne représentation</h2>
+<ul>
+<li>Acide aminé</li>
+</ul>
+<p>Un acide aminé est défini par une liaison peptidique et une chaîne latérale dont la composition en certains groupements chimiques définissent sa spécificité. Ce sont donc des caractéristiques chimiques qui seraient plus pertinemment vues avec une représentation <em>sticks</em> qui laissent voir les liaisons et les types d’atomes.</p>
+<ul>
+<li>Repliement d’une protéine</li>
+</ul>
+<p>Pour voir le repliement d’une protéine, nous cherchons à visualiser le mouvement global de sa structure. En général choisir l’échelle de la structure secondaire permet cela sans aller trop en détails. Cela correspond à la représentation <em>cartoon</em>.</p>
+<ul>
+<li>Cavité d’une protéine</li>
+</ul>
+<p>Pour voir la cavité d’une protéine, nous allons choisir la représentation <em>surface</em> car elle permet de voir le volume “réel” de la cavité.</p>
+</section>
+<section id="q2-critique-de-la-reconstruction-des-atomes-de-h" class="level2">
+<h2 class="anchored" data-anchor-id="q2-critique-de-la-reconstruction-des-atomes-de-h">Q2: Critique de la reconstruction des atomes de H</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tp1/hydrogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Observation de la construction des hydrogènes</figcaption>
+</figure>
+</div>
+<p>Nous voyons que la construction des hydrogènes n’est pas fiable car nous avons des clashs entre plusieurs atomes d’hydrogène. Cela est causé par la sélection aléatoire des atomes d’hydrogène sans prise en compte de l’énergie du système conduisant à des représentations non raisonnables.</p>
+</section>
+<section id="q3-méthode-dobtention-de-la-structure-2bzw" class="level2">
+<h2 class="anchored" data-anchor-id="q3-méthode-dobtention-de-la-structure-2bzw">Q3 : Méthode d’obtention de la structure 2BZW</h2>
+<p>Pour obtenir des informations plus complètes sur la protéine, j’ai consulté sa page dédiée sur dans la <a href="https://www.rcsb.org/structure/2BZW"><em>Protein Data Bank</em></a>.</p>
+<p>Nous trouvons ici les informations sur le type de méthode utilisée et la résolution obtenue pour la structure:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tp1/methode_2BZW.png" class="img-fluid figure-img"></p>
+<figcaption>Méthode d’obtention de 2BZW</figcaption>
+</figure>
+</div>
+<p>Sur cette même page, nous voyons que cette entrée PDB contient 2 chaînes:</p>
+<ul>
+<li>APOPTOSIS REGULATOR BCL-X - Chaîne A de 211 résidus.</li>
+<li>BCL2-ANTAGONIST OF CELL DEATH - Chaîne B de 27 résidus.</li>
+</ul>
+<p>Elles ont été colorées différemment et les molécules d’eau ont été cachées.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>PyMOL</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="PyMOL"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>color green, chain A</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>color orange, chain B</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>hide everything, solvent</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tp1/pdb_2bzw.png" class="img-fluid figure-img"></p>
+<figcaption>Structure de 2BZW</figcaption>
+</figure>
+</div>
+<p>Nous voyons que la structure est constituée d’hélices alpha et de random coils uniquement.</p>
+</section>
+<section id="q4-représentation-de-linteraction-entre-bcl-xl-et-bad" class="level2">
+<h2 class="anchored" data-anchor-id="q4-représentation-de-linteraction-entre-bcl-xl-et-bad">Q4: Représentation de l’interaction entre Bcl-xl et Bad</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>PyMOL</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="PyMOL"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Représentation de Bcl-xl en surface</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>show surface, chain A</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Coloration de la surface de Bcl-xl en fonction du type d'atome</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>util.cbaw <span class="dv">2</span><span class="er">bzw</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraction de la chaîne B dans un autre objet</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>extract bad, chain B</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage et coloration des sticks de bad en fonction du type d'atome</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>show sticks, bad</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>util.cbaw bad</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Nous obtenons la structure suivante:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tp1/interaction_2bzw.png" class="img-fluid figure-img"></p>
+<figcaption>Interaction Bcl-xl et Bad</figcaption>
+</figure>
+</div>
+</section>
+<section id="q5-étude-de-lamphiphilicité-de-bad-et-de-sa-position-par-rapport-à-bcl-xl" class="level2">
+<h2 class="anchored" data-anchor-id="q5-étude-de-lamphiphilicité-de-bad-et-de-sa-position-par-rapport-à-bcl-xl">Q5: Étude de l’amphiphilicité de Bad et de sa position par rapport à Bcl-xl</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>PyMOL</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="PyMOL"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Coloration des résidus polaires en représentation cartoon</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> cartoon_color, green, bad <span class="kw">and</span> resn Ser<span class="op">+</span>Thr<span class="op">+</span>Cys<span class="op">+</span>Asn<span class="op">+</span>Gln<span class="op">+</span>Tyr<span class="op">+</span>Trp</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Coloration des résidus chargés positivement en représentation cartoon</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> cartoon_color, blue, bad <span class="kw">and</span> resn Lys<span class="op">+</span>Arg<span class="op">+</span>His</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Coloration des résidus chargés négativement en représentation cartoon</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> cartoon_color, red, bad <span class="kw">and</span> resn Glu<span class="op">+</span>Asp</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Coloration des résidus hydrophobes en représentation cartoon</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> cartoon_color, yellow, bad <span class="kw">and</span> resn Ala<span class="op">+</span>Leu<span class="op">+</span>Ile<span class="op">+</span>Met<span class="op">+</span>Gly<span class="op">+</span>Pro<span class="op">+</span>Phe<span class="op">+</span>Val</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Répétition avec addition de surface pour bad et modification de Bcl-xl</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>show surface, bad</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> surface_color, green, resn Ser<span class="op">+</span>Thr<span class="op">+</span>Cys<span class="op">+</span>Asn<span class="op">+</span>Gln<span class="op">+</span>Tyr<span class="op">+</span>Trp</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> surface_color, blue, resn Lys<span class="op">+</span>Arg<span class="op">+</span>His</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> surface_color, red, resn Glu<span class="op">+</span>Asp</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> surface_color, yellow, resn Ala<span class="op">+</span>Leu<span class="op">+</span>Ile<span class="op">+</span>Met<span class="op">+</span>Gly<span class="op">+</span>Pro<span class="op">+</span>Phe<span class="op">+</span>Val</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout de transparence pour Bcl-xl</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> transparency, <span class="fl">0.3</span>, <span class="dv">2</span><span class="er">BZW</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Nous obtenons la structure suivante:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tp1/bad_cartoon.png" class="img-fluid figure-img"></p>
+<figcaption>Représentation cartoon de Bad</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+Coordonnées du point de vue 1
+</summary>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>PyMOL</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="PyMOL"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>set_view (<span class="op">\</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>     <span class="fl">0.362137228</span>,   <span class="op">-</span><span class="fl">0.636589170</span>,    <span class="fl">0.680887997</span>,<span class="op">\</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="fl">0.771259606</span>,    <span class="fl">0.205580443</span>,    <span class="fl">0.602406025</span>,<span class="op">\</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="fl">0.523465276</span>,   <span class="op">-</span><span class="fl">0.743292868</span>,   <span class="op">-</span><span class="fl">0.416527152</span>,<span class="op">\</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>     <span class="fl">0.000072557</span>,    <span class="fl">0.000105657</span>, <span class="op">-</span><span class="fl">139.344619751</span>,<span class="op">\</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fl">57.309600830</span>,   <span class="fl">33.745716095</span>,   <span class="op">-</span><span class="fl">2.188449860</span>,<span class="op">\</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>   <span class="fl">108.961479187</span>,  <span class="fl">169.697738647</span>,  <span class="op">-</span><span class="fl">20.000000000</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tp1/badcar_bcsur_col.png" class="img-fluid figure-img"></p>
+<figcaption>Bad en Cartoon et Bcl-xl en Surface</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tp1/badsur_bcsur_col.png" class="img-fluid figure-img"></p>
+<figcaption>Bad et Bcl-xl en surface</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>Property wise coloration of 2BZW</p>
+</div>
+</div>
+</div>
+<p>Tout d’abord, nous voyons que Bad se situe au niveau de la cavité de Bcl-xl, ce que nous pouvions attendre étant donné le caractère antagoniste de Bad envers Bcl-xl. Si nous nous penchons sur les caractéristiques physico-chimiques de Bad, nous voyons que la face qu’il présente à la protéine est constituée majoritairement de résidus hydrophobes (jaune) et minoritairement de résidus polaires (vert). Cela constitue une face à caractère hydrophobe, dont une proportion minoritaire est résidus polaire reste nécessaire pour la stabilité de Bad. Pour la face opposée à Bcl-xl, nous voyons une majorité de résidus chargés (positifs en bleu et négatifs en rouge) constituant ainsi une face à composante hydrophile majoritairement. Nous avons donc une hélice amphiphile présentant une face hydrophobe et une face hydrophile. Sur Bcl-xl, nous voyons que l’intérieur de la cavité présente une surface majoritairement hydrophobe et des bords présentant des résidus chargés donc hydrophiles. Cette adéquation avec Bad va donc permettre une interaction de la face hydrophobe de Bad avec le sein de Bcl-xl qui une fois insérée aura probablement une interaction supplémentaire avec les bords de la cavité de Bcl-xl.</p>
+</section>
+<section id="q6-impact-de-la-mutation-de-la-position-l109-de-bad-en-lysine" class="level2">
+<h2 class="anchored" data-anchor-id="q6-impact-de-la-mutation-de-la-position-l109-de-bad-en-lysine">Q6: Impact de la mutation de la position L109 de Bad en lysine</h2>
+<p>On nous a fourni des valeurs d’angles <span class="math inline">\(\phi=-58.3°\)</span> et <span class="math inline">\(\psi=-41.1°\)</span>. Ce sont des valeurs que l’on peut attribuer à une structure secondaire de type hélice <span class="math inline">\(\alpha\)</span> dont les valeurs de <span class="math inline">\(\phi\)</span> et <span class="math inline">\(\psi\)</span> varient autour de <span class="math inline">\(-60°\pm15°\)</span>. Nous voyons que Bad est effectivement constitué d’une hélice <span class="math inline">\(\alpha\)</span> donc les valeurs données sont normales.</p>
+<p>Établissement d’un nouveau point de vue:</p>
+<details>
+<summary>
+Coordonnées du point de vue 2
+</summary>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>PyMOL</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="PyMOL"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>set_view (<span class="op">\</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="fl">0.207732961</span>,   <span class="op">-</span><span class="fl">0.338437825</span>,    <span class="fl">0.917770863</span>,<span class="op">\</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="fl">0.963956296</span>,    <span class="fl">0.230260819</span>,   <span class="op">-</span><span class="fl">0.133277372</span>,<span class="op">\</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="fl">0.166222453</span>,   <span class="op">-</span><span class="fl">0.912376106</span>,   <span class="op">-</span><span class="fl">0.374076307</span>,<span class="op">\</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>     <span class="fl">0.000332914</span>,    <span class="fl">0.000134461</span>, <span class="op">-</span><span class="fl">139.348693848</span>,<span class="op">\</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="fl">57.559246063</span>,   <span class="fl">33.350948334</span>,   <span class="op">-</span><span class="fl">1.424201965</span>,<span class="op">\</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>   <span class="fl">108.961479187</span>,  <span class="fl">169.697738647</span>,  <span class="op">-</span><span class="fl">20.000000000</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>PyMOL</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename="PyMOL"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&nbsp;Sélection de la leucine 109</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>select leu109, resid <span class="dv">109</span> <span class="kw">and</span> bad</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sélection des résidus à 6A de la L109</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>select res_6A, byres leu109 around <span class="dv">6</span> <span class="kw">and</span> <span class="dv">2</span><span class="er">BZW</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

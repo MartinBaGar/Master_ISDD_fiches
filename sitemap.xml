@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/index.html</loc>
-    <lastmod>2024-01-24T14:52:05.000Z</lastmod>
+    <lastmod>2024-01-29T22:59:32.912Z</lastmod>
   </url>
   <url>
     <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/pages/tp1.html</loc>
-    <lastmod>2024-01-28T22:14:31.442Z</lastmod>
+    <lastmod>2024-02-04T18:20:04.247Z</lastmod>
   </url>
   <url>
     <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/pages/tp4.html</loc>
@@ -15,6 +15,14 @@
   <url>
     <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/mda.html</loc>
     <lastmod>2024-01-26T00:55:09.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/bit/bit.html</loc>
+    <lastmod>2024-01-29T23:12:21.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/bit/pages/tp1.html</loc>
+    <lastmod>2024-01-30T00:00:03.111Z</lastmod>
   </url>
   <url>
     <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/mda/pages/tp3.html</loc>
@@ -26,6 +34,6 @@
   </url>
   <url>
     <loc>https://MartinBaGar.github.io/Master_ISDD_fiches/about.html</loc>
-    <lastmod>2024-01-24T21:58:53.000Z</lastmod>
+    <lastmod>2024-01-29T22:59:09.402Z</lastmod>
   </url>
 </urlset>
