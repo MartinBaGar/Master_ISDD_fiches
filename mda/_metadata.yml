@@ -1,4 +1,4 @@
-# Options that will apply to all the files in the folder
+# Code chunks options
 code-fold: show
 code-line-numbers: false
 code-overflow: wrap

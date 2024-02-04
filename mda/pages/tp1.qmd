@@ -2,58 +2,130 @@
 title: "Data Classification"
 ---
 
+```{r}
+#| echo: false
+knitr::opts_chunk$set(message = NA)
+```
+
 To do:
 
 - [x] Justify scaling  
 - [ ] Describe classification methods (ward2 etc)  
 - [ ] Justify number of clusters  
-- [ ] More complete graphs
+- [ ] More complete plots
 
-In this tutorial, we will be applying unsupervised classification techniques to the independent variables in our dataset. The dataset comprises protein pockets characterized by 18 descriptors, which serve as the independent variables.
+## Introduction
 
-Let's load the data first.
+In this tutorial, we will be applying unsupervised classification techniques to
+the independent variables in our dataset. The dataset comprises protein pockets
+characterized by 18 descriptors, which serve as the independent variables. The
+objective is to evaluate the druggability of those pockets.
+
+## Preparing the workspace
+
+### Loading libraries
+
+We first load the libraries necessary to our project:
+
+- [factoextra](https://rpkgs.datanovia.com/factoextra/index.html)  
+
+> an R package making easy to extract and visualize the output of exploratory
+> multivariate data analyses
+
+- [ggplot2](https://ggplot2.tidyverse.org/)
+
+> a system for declaratively creating graphics, based on The Grammar of
+> Graphics.
 
 ```{r}
-load('../data/X.Rdata')
-x_scaled <- scale(X)
+#| code-fold: false
+library(factoextra)
+library(tidyverse)
+library(reshape2)
+library(ggplot2)
+library(plotly)
 ```
 
-In classification, scalling the data is a key pre-processing step. A wise choice of the technique must be done depending on the dateset (is it homogeneous or heterogeneous ?). Ensuring the features vary in the same range can improve the performance of the classification of the dataset, as well as better handling the outliers. However if not adapted to the classification, the scalling technique can be detrimental to its performance @deamorimChoiceScalingTechnique2023.
+### Loading data
 
-Here are two boxplots highlighting how the weight of one feature can dominate the others:
+```{r}
+#| code-fold: false
+load('../data/X.Rdata')
+```
+
+## Data pre-processing
+
+In classification, scalling the data is a key pre-processing step. A wise choice
+of the technique must be done depending on the dateset (is it homogeneous or
+heterogeneous ?). Ensuring the features vary in the same range can improve the
+performance of the classification of the dataset, as well as better handling the
+outliers. However if not adapted to the classification, the scalling technique
+can be detrimental to its performance @deamorimChoiceScalingTechnique2023.
+
+Here are two boxplots highlighting how the weight of one feature can dominate
+the others:
 
 ::: {.panel-tabset}
 
 # Raw data
 
 ```{r}
-boxplot(X, las = 2)
+melted_x <- melt(X, variable.name = "Descriptors")
+plot_ly(melted_x, x = ~Descriptors, y = ~value, type = "box")
 ```
 
 # Scaled data
 
+::: {.callout-warning}
+Be careful scale() returns a matrix with one column for the row names, one for 
+the column names and one for the values. Workarounds could be a transformation 
+into a *data.frame* or the column targetting.
+:::
+
 ```{r}
-boxplot(x_scaled, las = 2)
+scaled_x <- scale(X)
+scaled_mlt_x <- melt(as.data.frame(scaled_x), variable.name = "Descriptors")
+plot_ly(scaled_mlt_x, x = ~Descriptors, y = ~value, type = "box")
 ```
 
 :::
 
-# Hierarchical classification
+## Hierarchical classification
+
+This non-supervised technique is used to organize and categorize data into a
+hierarchical structure. The principle behind it is the creation of a system of
+nested categories. Organizing data in such way makes data easier to read,
+navigate and understand. It is an easy and fast way to get familiar with an
+unknown dataset.
+
+### Making the classification tree
+
+We performed a distance-wise classification between each pocket of our dataset.
+We used the base R `dist()` function to do so which uses the Euclidian distance
+metric by default. As our dataset is contstitued of continuous variables with
+[scaled]{style="text-decoration: underline;"} numerical values. It is the most
+commonly used metric as it is very intuitive and easily interpretable.  
+The distances calculated, a clustering is performed using the base R `hclust()`
+function which agglomerates our datased based on the distance dissimilarity. The
+default *complete linkage* method will produce well defined contours for the
+generated clusters but not necessarily compact repartition inside the cluster.
+Here we will prefer the *Ward.D* method as it produces more dense clusters while
+keeping them as far apart as possible.
 
 ```{r}
-# Justifier les méthodes
-mat_dist <- dist(x_scaled, method = "euclidian")
+# Computation of the distance matrix
+mat_dist <- dist(scaled_x, method = "euclidian")
+
+# Computation of the clusters
 x_classif <- hclust(mat_dist, method = "ward.D")
 ```
 
-Nous utilisons une méthode euclidienne pour la matrice de distance car nous travaillons sur des grandeurs géométriques.
+### Optimizing the clustering
 
 ```{r}
-library(factoextra)
-
 par(mfrow = c(1, 1))
 # Détermination du nombre optimal de clusters
-fviz_nbclust(x_scaled, method = "wss", FUNcluster=hcut)
+fviz_nbclust(scaled_x, method = "wss", FUNcluster=hcut)
 
 # Représentation de l'arbre de classification
 plot(x_classif, labels = FALSE)
@@ -80,7 +152,7 @@ text(x, y, rownames(loc), cex = 0.6)
 ```{r}
 # Clustering des infividus
 x_clust <- kmeans(mat_dist, centers=10)
-plot(x_scaled, col = x_clust$cluster)
+plot(scaled_x, col = x_clust$cluster)
 points(x_clust$centers, col = 1:5, pch = 8)
 ```
 
@@ -123,14 +195,14 @@ text(x, y, rownames(loc), cex = 0.6)
 
 ```{r}
 # Clustering des individus final
-plot(x_scaled, col = x_clust_5$cluster)
+plot(scaled_x, col = x_clust_5$cluster)
 points(x_clust$centers, col = 1:5, pch = 8)
 ```
 cmd
 Recherche du nombre optimal de clusters
 
 ```{r}
-fviz_nbclust(x_scaled, method = "wss", FUNcluster=hcut)
+fviz_nbclust(scaled_x, method = "wss", FUNcluster=hcut)
 ```
 
 # Comparaison classification et clusters
