@@ -10,7 +10,7 @@ knitr::opts_chunk$set(message = NA)
 To do:
 
 - [x] Justify scaling  
-- [ ] Describe classification methods (ward2 etc)  
+- [x] Describe classification methods (ward2 etc)  
 - [ ] Justify number of clusters  
 - [ ] More complete plots
 
@@ -98,29 +98,39 @@ nested categories. Organizing data in such way makes data easier to read,
 navigate and understand. It is an easy and fast way to get familiar with an
 unknown dataset.
 
-### Making the classification tree
+### Computing the distance matrix
 
 We performed a distance-wise classification between each pocket of our dataset.
 We used the base R `dist()` function to do so which uses the Euclidian distance
 metric by default. As our dataset is contstitued of continuous variables with
 [scaled]{style="text-decoration: underline;"} numerical values. It is the most
 commonly used metric as it is very intuitive and easily interpretable.  
-The distances calculated, a clustering is performed using the base R `hclust()`
-function which agglomerates our datased based on the distance dissimilarity. The
-default *complete linkage* method will produce well defined contours for the
-generated clusters but not necessarily compact repartition inside the cluster.
-Here we will prefer the *Ward.D* method as it produces more dense clusters while
-keeping them as far apart as possible.
 
 ```{r}
 # Computation of the distance matrix
 mat_dist <- dist(scaled_x, method = "euclidian")
-
-# Computation of the clusters
-x_classif <- hclust(mat_dist, method = "ward.D")
 ```
 
-### Optimizing the clustering
+### Clustering the data
+
+The clustering is performed using the base R `hclust()` function which
+agglomerates our datased based on the distance dissimilarity. The default
+*complete linkage* method will produce well defined contours for the generated
+clusters but not necessarily compact repartition inside the cluster. Here we
+will prefer the *Ward.D* method as it produces more dense clusters while keeping
+them as far apart as possible.
+
+```{r}
+# Computation of the clusters
+x_classif <- hclust(mat_dist, method = "ward.D")
+
+# Plot the dendogram
+plot(x_classif, labels = FALSE, xlab = "", sub = "")
+```
+
+We see that the resulting dendogram presents many subdivisions, going from one cluster containing the whole dataset to one cluster per entry. Depending on the study, on the properties that one wants to show, the clustering can be stopped at a selected level. We will see in the next section how to do that.
+
+### Choosing the number of clusters
 
 ```{r}
 par(mfrow = c(1, 1))
