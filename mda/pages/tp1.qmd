@@ -128,33 +128,118 @@ x_classif <- hclust(mat_dist, method = "ward.D")
 plot(x_classif, labels = FALSE, xlab = "", sub = "")
 ```
 
-We see that the resulting dendogram presents many subdivisions, going from one cluster containing the whole dataset to one cluster per entry. Depending on the study, on the properties that one wants to show, the clustering can be stopped at a selected level. We will see in the next section how to do that.
+We see that the resulting dendogram presents many subdivisions, going from one
+cluster containing the whole dataset to one cluster per entry. Depending on the
+study, on the properties that one wants to show, the clustering can be stopped
+at a selected level.
 
 ### Choosing the number of clusters
 
+To determine the optimal number of clusters we will use the `factoextra` package
+function `fviz_nbclust()`. Before fine-tuning the parameters, a theory review is
+necessary and luckily, the `factoextra` documentation provides a
+[handy explanation](https://www.datanovia.com/en/lessons/determining-the-optimal-number-of-clusters-3-must-know-methods/).
+
+#### The *elbow* method
+
+We will first use the *elbow* method which sets the within-cluster sum of square
+(WSS), in other words the compacity of the cluster, against the number of
+clusters. By plotting this, we aim to find a *bend* that corresponds to a minor
+decrease of the WSS meaning the compacity doesn't improve much beyond a certain
+number of clusters.
+
 ```{r}
-par(mfrow = c(1, 1))
-# Détermination du nombre optimal de clusters
+# Choose FUNcluster depending on the type of clustering you want to perform,
+# here hcut corresponds to hierarchical clustering
 fviz_nbclust(scaled_x, method = "wss", FUNcluster=hcut)
+```
 
-# Représentation de l'arbre de classification
+In the generated plot, we do not a see proper bending, meaning that the *elbow*
+method couldn't provide an optimized criterion to choose the optimal number of
+clusters. We can estimate an optimal number of clusters between 3 and 5 but
+testing other methods will be necessary to ensure it.
+
+#### The *silhouette* method
+
+This method measures the quality of the clustering by assessing how well an
+object fit into its assigned cluster. It calculates a silhouette coefficient
+which is the difference between the *inter-cluster* distance and the
+*intra-cluster* distance, higher values indicating a good clustering and
+therefore the optimal number of clusters.
+
+```{r}
+# Optimal number of clusters using the silhouette method
+fviz_nbclust(scaled_x, method = "silhouette", FUNcluster=hcut)
+```
+
+This method gave us more usable results, indicating an optimal number of
+clusters of 3 or 5, which is in line with the results obtained above. Another
+validation would be usefull to ensure 3 and 5 are really the optimal number of
+clusters and luckily, another method can be used with this package: the *gap*
+method.
+
+#### The *gap* method
+
+This method determines the optimal number of clusters in a dataset by comparing
+the within-cluster dispersion of the dataset to a reference uniform
+distribution. For each $k$, a gap representing the distance of the cluster to
+the reference is calculated, higher values indicating that the clustering
+structure is far from a random distribution fo points.
+
+```{r}
+# Optimal number of clusters using the gap method
+fviz_nbclust(scaled_x, method = "gap_stat", FUNcluster = hcut)
+```
+
+We can see this time that the optimal number of clusters is of 3.
+
+#### Comparison of the methods and choice for our dataset
+
+While the *elbow* method gives the optimal number of clusters through a visual
+inspection of the plot, which can be subjective, the *silhouette* and the *gap*
+methods give more quantitative results thus being more objective and more
+reliable.
+
+These two last showed that the optimal number of clusters is either 3 or 5, the
+results being very similar. The choice now depends on the dataset and the
+relevance to produce more clusters or not. Our goal being determining the
+druggability of protein pockets, it might not be necessary to split the dataset
+into many clusters as the properties of those cavities might not highly differ
+in general so we will continue with an optimal number of cluster of 3.
+
+### Retrieving the clusters
+
+We can now see visualize our clusters in the dendogram. 
+
+```{r}
+# Visualization of the clusters in the dendogram
 plot(x_classif, labels = FALSE)
-rect.hclust(x_classif, k=5)
+rect.hclust(x_classif, k=3)
+```
 
-# Récupération des clusters
-cutree(x_classif, k=10)
-table(cutree(x_classif, k=10))
+We can also plot our clusters either by performing a Multidimensional Scaling
+(MDS) or by using `fviz_cluster()` the dedicated function of the `factoextra`
+package.
+
+```{r}
+# Retrieval of the clusters
+cluster_cut <- cutree(x_classif, k = 3)
+
+# Multidimensional scaling
+mds <- cmdscale(mat_dist)
+df <- data.frame(mds, cluster = factor(cluster_cut))
+colors <- rainbow(length(unique(df$cluster)))
+
+plot(df$X1, df$X2,
+  col = colors[df$cluster], xlab = "Coordinate 1",
+  ylab = "Coordinate 2", main = "Multidimensional Scaling Plot"
+)
+legend("topright", legend = levels(df$cluster), fill = colors)
 ```
 
 ```{r}
-loc <- cmdscale(mat_dist)
-x <- loc[, 1]
-y <- loc[, 2]
-
-## note asp = 1, to ensure Euclidean distances are represented correctly
-plot(x, y, type = "n", xlab = "", ylab = "", asp = 1, axes = FALSE,
-     main = "cmdscale(eurodist)")
-text(x, y, rownames(loc), cex = 0.6)
+# If your original data is 'data', use it in the following way:
+fviz_cluster(list(data = X, cluster = cluster_cut), geom = "point")
 ```
 
 # kmeans
