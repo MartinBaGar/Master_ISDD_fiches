@@ -248,7 +248,7 @@ fviz_cluster(list(data = X, cluster = cluster_cut), geom = "point")
 ## K-means
 
 This classification method aims to produce clusters with a minimial WSS. This is
-achieved through a process that can be break down into 5 steps:
+achieved through a process that can be broken down into 5 steps:
 
 - Random selection of a number of $k$ points as initial centroid clusters.
 - Assignment of the remaining points to the closest cluster (e.g. using the
@@ -292,6 +292,7 @@ We tested `nstart` values going from 1 to 50 to see how the composition of our
 clusters is affected.
 
 ```{r}
+#| results: hold
 km_res_1 <- kmeans(mat_dist, centers = 10, nstart = 1)
 sort(table(km_res_1$cluster))
 
@@ -308,22 +309,119 @@ km_res_50 <- kmeans(mat_dist, centers = 10, nstart = 50)
 sort(table(km_res_50$cluster))
 ```
 
+Before analyzing the results, we must keep in mind that increasing the number of
+clusters increases the degree of randomness. In our case, choosing 10 clusters
+will be hardly producing identical results for the different tested values. By
+observing the results we see that the generated clusters have a similar
+composition, meaning that our dataset is not too sensitive to randomnes,
+probably because of its small size or its distribution in space. Now if we
+compare the results with a value of 1 with the others we still see a slight
+change, meaning the randomness can be corrected. However starting from 10 or 25
+we don't see majors changes, therefore we will continue with a `nstart = 25`.
 
+### Choosing the optimal number of clusters
 
-Before analyzing the results, we must keep in mind that increasing the number of clusters increases the degree of randomness. In our case, choosing 10 clusters will be hardly producing identical results for the different tested values.
-By observing the results we see that the generated clusters have a similar composition, meaning that our dataset is not too sensitive to randomnes, probably because of its small size or its distribution in space. Now if we compare the results with a value of 1 with the others we still see a slight change, meaning the randomness can be corrected. However starting from 10 or 25 we don't see majors changes, therefore we will continue with a `nstart = 25`.
+We used the same protocol as we did with the hierarchical classification.
 
+::: {.panel-tabset}
 
-# Comparaison classification et clusters
+# wss
+```{r}
+fviz_nbclust(scaled_x, FUN = kmeans, method = "wss")
+```
+
+# silhouette
+```{r}
+fviz_nbclust(scaled_x, FUN = kmeans, method = "silhouette")
+```
+
+# gap-stat
+```{r}
+fviz_nbclust(scaled_x, FUN = kmeans, method = "gap_stat")
+```
+
+:::
+
+The *wss* plot seems to indicate 3 or 5, the *silhouette* 4 and the *gap-stat*
+1. Since the latter has a similar gap value for a number of 4 clusters, we set
+the optimal number of clusters to 4.  
+We can now plot our clusters:
+
+::: {.panel-tabset}
+
+# fviz
+
+```{r}
+km_res <- kmeans(mat_dist, centers = 3, nstart = 25)
+fviz_cluster(km_res, data = X, geom = "point")
+```
+
+# MDS
+```{r}
+# Multidimensional scaling
+df_km <- data.frame(mds, cluster = factor(km_res$cluster))
+colors <- rainbow(length(unique(df_km$cluster)))
+
+plot(df_km$X1, df_km$X2,
+  col = colors[df_km$cluster], xlab = "Coordinate 1",
+  ylab = "Coordinate 2", main = "Multidimensional Scaling Plot"
+)
+legend("topright", legend = levels(df_km$cluster), fill = colors)
+```
+
+:::
+
+# Comparaison of the clustering methods
+
+::: {.panel-tabset}
+
+# Multidimensional scaling
+
+```{r}
+#| echo: false
+par(mfrow = c(1, 2))
+cluster_cut <- cutree(x_classif, k = 3)
+
+# Hierarchical classification
+df <- data.frame(mds, cluster = factor(cluster_cut))
+colors <- rainbow(length(unique(df$cluster)))
+
+plot(df$X1, df$X2,
+  col = colors[df$cluster], xlab = "Coordinate 1",
+  ylab = "Coordinate 2"
+)
+legend("topright", legend = levels(df$cluster), fill = colors)
+
+# kmeans
+df_km <- data.frame(mds, cluster = factor(km_res$cluster))
+colors <- rainbow(length(unique(df_km$cluster)))
+
+plot(df_km$X1, df_km$X2,
+  col = colors[df_km$cluster], xlab = "Coordinate 1",
+  ylab = "Coordinate 2"
+)
+legend("topright", legend = levels(df_km$cluster), fill = colors)
+```
+
+# PCA
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+fviz_cluster(list(data = X, cluster = cluster_cut), geom = "point")
+fviz_cluster(km_res, data = X, geom = "point")
+```
+
+:::
+
 
 # Classification des descripteurs
 
 ```{r}
 mat_cor <- cor(X)
 mat_cor_dist <- as.dist(1 - mat_cor**2)
-```
+mat_cor_dist_matrix <- as.matrix(mat_cor_dist)
 
-```{r}
-# library(gplots)
-# heatmap.2(mat_cor_dist, hclustfun=hclust)
+library(gplots)
+heatmap.2(mat_cor_dist_matrix, hclustfun = hclust)
 ```
