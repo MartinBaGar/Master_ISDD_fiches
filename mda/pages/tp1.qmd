@@ -11,8 +11,8 @@ To do:
 
 - [x] Justify scaling  
 - [x] Describe classification methods (ward2 etc)  
-- [ ] Justify number of clusters  
-- [ ] More complete plots
+- [x] Justify number of clusters  
+- [ ] More aesthetic plots
 
 ## Introduction
 

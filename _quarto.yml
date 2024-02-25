@@ -15,11 +15,11 @@ website:
         - mda/pages/tp2.qmd
         - mda/pages/tp3.qmd
         - mda/pages/tp4.qmd
-      - text: "BIT"
-        menu:
-        - bit/bit.qmd
-        - bit/pages/tp1.qmd
-      - about.qmd
+      # - text: "BIT"
+      #   menu:
+      #   - bit/bit.qmd
+      #   - bit/pages/tp1.qmd
+      # - about.qmd
     tools:
       - icon: github
         href: https://github.com/MartinBaGar/Master_ISDD_fiches
