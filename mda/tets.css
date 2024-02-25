@@ -1,7 +1,0 @@
-#quarto-citation details {
-    display: none;
-}
-
-#quarto-citation details[open] {
-    display: block;
-}
