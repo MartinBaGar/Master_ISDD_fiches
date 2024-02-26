@@ -11,9 +11,9 @@ This work takes up what has been done in the course of practical work on the *Ma
 The following topics are presented here in the chronological order in which they were studied. If you are new to all of them, please respect this order. All manipulations were done with the R programmation language.
 
 - [Data Classification](pages/tp1.qmd)
-- [Principal Component Analysis](pages/tp2.qmd)
-- [Regression](pages/tp3.qmd)
-- [Partitionning Trees](pages/tp4.qmd)
+- [Principal Component Analysis](pages/tp2.qmd) - Incomplete
+- [Regression](pages/tp3.qmd) - Incomplete
+- [Partitionning Trees](pages/tp4.qmd) - Incomplete
 
 ::::: {.custom}
 ::: {.callout-citation}
